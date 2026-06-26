@@ -2,9 +2,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <http://example.org/ai-ethics#> .
+@prefix : <https://w3id.org/aief/> .
 
-<http://example.org/ai-ethics> rdf:type owl:Ontology ;
+<https://w3id.org/aief/> rdf:type owl:Ontology ;
     rdfs:label "AI-Assisted Ethics Assessment Framework" ;
     rdfs:comment "Ontology for multi-framework AI ethics compliance assessment" .
 
@@ -1065,7 +1065,7 @@
 
 
 
-@prefix : <http://example.org/ai-ethics#> .
+@prefix : <https://w3id.org/aief/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 
