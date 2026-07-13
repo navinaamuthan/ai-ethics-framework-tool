@@ -1,6 +1,6 @@
 # AIEF — AI Ethics Impact Framework (web app)
 
-Free-text AI research proposal in → structured ethics assessment out, grounded in a KG of 217 requirements (REAMS / EU AI Act / Horizon Europe / ACM-NeurIPS), 70 AIAAIC incidents, and EU Charter rights mappings.
+Free-text AI research proposal in → structured ethics assessment out, grounded in a KG of 207 requirements (REAMS / EU AI Act / Horizon Europe / ACM-NeurIPS), 70 AIAAIC incidents, and EU Charter rights mappings.
 
 ## Deploy to Vercel (5 minutes)
 

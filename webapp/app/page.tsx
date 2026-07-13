@@ -65,7 +65,7 @@ export default function Home() {
                 From free-text proposal to structured ethics assessment
               </h2>
               <p className="text-sm text-stone-500 max-w-xl mx-auto">
-                Grounded in a knowledge graph of 217 requirements across REAMS, the EU AI Act, Horizon Europe and
+                Grounded in a knowledge graph of 207 requirements across REAMS, the EU AI Act, Horizon Europe and
                 ACM/NeurIPS guidelines, 70 real AI incidents, and EU Charter of Fundamental Rights mappings.
               </p>
             </div>

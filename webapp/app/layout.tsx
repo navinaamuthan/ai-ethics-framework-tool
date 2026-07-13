@@ -4,7 +4,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "AIEF — AI Ethics Impact Framework",
   description:
-    "Automated ethics assessment for AI research proposals, grounded in a knowledge graph of 217 regulatory requirements, 70 AI incidents, and EU Charter rights mappings.",
+    "Automated ethics assessment for AI research proposals, grounded in a knowledge graph of 207 regulatory requirements, 70 AI incidents, and EU Charter rights mappings.",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

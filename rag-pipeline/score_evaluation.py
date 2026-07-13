@@ -162,7 +162,7 @@ def print_confusion_matrix(results):
 
 def print_requirement_coverage(output_dir, all_requirement_ids):
     """
-    all_requirement_ids: set of all 217 req IDs (e.g. {'R001', 'AI001', ...})
+    all_requirement_ids: set of all 207 req IDs (e.g. {'R001', 'AI001', ...})
     Reads all *_full.json files and finds which reqs were cited at least once.
     """
     triggered = set()
