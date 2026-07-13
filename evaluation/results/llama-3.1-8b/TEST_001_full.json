@@ -1,0 +1,134 @@
+{
+  "proposal_id": "TEST_001",
+  "mode": "full",
+  "timestamp": "2026-06-26T23:29:32.188410",
+  "proposal_text": "\n    This research proposes to develop a facial recognition system for\n    automated attendance tracking in university lecture halls. The system\n    will capture and process biometric facial data of students without\n    explicit opt-in consent, relying on implied consent through university\n    enrollment terms. The system will store facial embeddings indefinitely\n    and may share anonymised aggregate data with third-party education\n    analytics providers. The research team has not conducted a Data\n    Protection Impact Assessment.\n    ",
+  "keywords": [
+    "data",
+    "consent",
+    "student",
+    "track",
+    "facial recogn",
+    "biometric"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity",
+    "Art21_NonDiscrimination",
+    "Art24_RightsOfChild",
+    "Art3_RightToIntegrity",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 191,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The proposal for a facial recognition system in university lecture halls raises significant ethical concerns regarding data protection, surveillance, and potential harm to students.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Invasion of Students' Right to Private Life (Article 7)",
+        "severity": "High",
+        "explanation": "The system captures and processes biometric facial data without explicit opt-in consent, potentially infringing on students' right to private life."
+      },
+      {
+        "risk": "Potential for Discrimination and Bias (Article 21)",
+        "severity": "Medium",
+        "explanation": "Facial recognition systems have been known to perpetuate biases and discriminate against certain groups; the proposal does not address these concerns adequately."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment to identify potential harms and implement mitigations."
+      },
+      {
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Determine if the university is required to conduct a FRIA and implement necessary measures."
+      },
+      {
+        "requirement_id": "HE001",
+        "requirement_text": "AI system must not deprive end-users or affected persons of ability to make decisions about their own lives or remove basic freedoms",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure the facial recognition system does not compromise students' autonomy and freedom."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 7",
+        "right_name": "Right to Private Life",
+        "relevance": "The proposal's reliance on biometric data collection without explicit consent puts students' right to private life at risk."
+      },
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "Facial recognition systems have been known to perpetuate biases and discriminate against certain groups; the proposal does not address these concerns adequately."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The incident highlights the potential for facial recognition systems to lead to false arrests and discrimination; the proposal should address these concerns through robust testing and validation."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement robust data protection measures, including explicit opt-in consent and transparent data handling practices.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct thorough risk assessments and testing to identify potential biases and harms.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a Data Protection Impact Assessment (DPIA) as required by the EU AI Act.",
+      "Implement robust data protection measures, including explicit opt-in consent and transparent data handling practices."
+    ],
+    "tier2_reflective_prompts": [
+      "How will you ensure that the facial recognition system is fair and unbiased?",
+      "What measures will you take to prevent potential harms and mitigate risks?"
+    ],
+    "reams_clearance_likely": false,
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "consent",
+        "student",
+        "track",
+        "facial recogn",
+        "biometric"
+      ],
+      "rights_matched": 7,
+      "requirements_retrieved": 191,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "incidents_sample": [
+        "AIAAIC-003",
+        "AIAAIC-005",
+        "AIAAIC-009",
+        "AIAAIC-001",
+        "AIAAIC-002"
+      ]
+    }
+  }
+}

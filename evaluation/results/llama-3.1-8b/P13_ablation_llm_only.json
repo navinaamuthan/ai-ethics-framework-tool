@@ -1,0 +1,80 @@
+{
+  "proposal_id": "P13_ablation",
+  "mode": "llm_only",
+  "timestamp": "2026-06-27T14:01:08.872068",
+  "proposal_text": "This research proposes to conduct a bibliometric analysis of peer-reviewed publications on AI ethics from 2018-2025. The study will use the Scopus and Web of Science databases to identify all publications containing keywords related to AI ethics, responsible AI, algorithmic fairness, and AI governance. The analysis will examine publication trends, citation networks, geographic distribution of research groups, and thematic clustering using topic modelling. All data is publicly available metadata from academic databases. No personal data about individual researchers will be collected beyond publicly listed author names and institutional affiliations. The analysis will use standard bibliometric tools including VOSviewer and Bibliometrix. Results will identify gaps in the AI ethics literature to inform future research directions. No AI systems will be developed or deployed as part of this research.",
+  "keywords": [],
+  "matched_rights": [],
+  "retrieved_requirements": [],
+  "retrieved_incidents": [],
+  "assessment": {
+    "risk_summary": "The primary ethical risks in this research proposal are related to data protection, intellectual property, and potential biases in bibliometric analysis.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Data Protection",
+        "severity": "Medium",
+        "explanation": "The study will collect publicly available metadata from academic databases, but there is a risk that sensitive information may be inadvertently collected or misinterpreted."
+      },
+      {
+        "risk": "Intellectual Property",
+        "severity": "Low",
+        "explanation": "The research proposal does not explicitly address intellectual property rights of the authors and institutions involved in the publications being analyzed."
+      },
+      {
+        "risk": "Bias in Bibliometric Analysis",
+        "severity": "Medium",
+        "explanation": "The use of bibliometric tools may introduce biases in the analysis, such as over-representation of certain research groups or topics."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "GDPR/2016/679 Article 5(1)",
+        "requirement_text": "Personal data must be processed lawfully, fairly and in a transparent manner.",
+        "framework": "General Data Protection Regulation (GDPR)",
+        "tier": "Mandatory",
+        "action_needed": "The researcher must ensure that the collection and processing of metadata comply with GDPR requirements."
+      },
+      {
+        "requirement_id": "OECD Principles on Access to Research Data in the Public Interest",
+        "requirement_text": "Research data should be made available for sharing, reuse, and citation.",
+        "framework": "OECD Principles on Access to Research Data in the Public Interest",
+        "tier": "Reflective",
+        "action_needed": "The researcher should consider making the metadata used in the analysis publicly available."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 8 (Right to Protection of Personal Data)",
+        "right_name": "Data Protection",
+        "relevance": "The collection and processing of metadata may infringe on individuals' right to protection of personal data."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "None known",
+        "incident_title": "None known",
+        "lesson": "None known"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement data protection measures, such as anonymization and encryption, to ensure the confidentiality of metadata.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Use bibliometric tools that are transparent about their methods and biases.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Implement data protection measures",
+      "Comply with GDPR requirements"
+    ],
+    "tier2_reflective_prompts": [
+      "What potential biases may be introduced by the use of bibliometric tools?",
+      "How will the researcher ensure that the metadata used in the analysis is accurate and reliable?"
+    ],
+    "reams_clearance_likely": true
+  }
+}

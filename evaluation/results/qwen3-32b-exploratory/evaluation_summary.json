@@ -1,0 +1,70 @@
+{
+  "run_timestamp": "2026-07-06T00:11:44.011626",
+  "llm_backend": "groq",
+  "llm_model": "qwen/qwen3-32b",
+  "max_requirements": 22,
+  "output_dir": "outputs_qwen27b",
+  "total_proposals": 5,
+  "results": [
+    {
+      "id": "P02",
+      "title": "COMPAS Recidivism Risk Assessment Tool",
+      "expected_risk": "High",
+      "predicted_risk": "High",
+      "risk_match": "MATCH",
+      "confidence_flag": "HIGH",
+      "requirements_cited": 8,
+      "rights_flagged": 4,
+      "precedents_cited": 4,
+      "mitigations": 5
+    },
+    {
+      "id": "P03",
+      "title": "Amazon Rekognition Law Enforcement Facial Recognition",
+      "expected_risk": "High",
+      "predicted_risk": "High",
+      "risk_match": "MATCH",
+      "confidence_flag": "HIGH",
+      "requirements_cited": 8,
+      "rights_flagged": 5,
+      "precedents_cited": 6,
+      "mitigations": 5
+    },
+    {
+      "id": "P04",
+      "title": "Facebook Ad Delivery Discriminatory Optimisation",
+      "expected_risk": "High",
+      "predicted_risk": "High",
+      "risk_match": "MATCH",
+      "confidence_flag": "HIGH",
+      "requirements_cited": 8,
+      "rights_flagged": 5,
+      "precedents_cited": 6,
+      "mitigations": 5
+    },
+    {
+      "id": "P05",
+      "title": "NHS Sepsis Prediction Algorithm with Racial Bias",
+      "expected_risk": "High",
+      "predicted_risk": "High",
+      "risk_match": "MATCH",
+      "confidence_flag": "HIGH",
+      "requirements_cited": 8,
+      "rights_flagged": 4,
+      "precedents_cited": 5,
+      "mitigations": 5
+    },
+    {
+      "id": "P17",
+      "title": "Dual-Use AI for Detecting Online Extremist Content",
+      "expected_risk": "High",
+      "predicted_risk": "High",
+      "risk_match": "MATCH",
+      "confidence_flag": "HIGH",
+      "requirements_cited": 8,
+      "rights_flagged": 5,
+      "precedents_cited": 5,
+      "mitigations": 4
+    }
+  ]
+}

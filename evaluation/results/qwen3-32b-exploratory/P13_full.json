@@ -1,0 +1,370 @@
+{
+  "proposal_id": "P13",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-05T19:06:36.776080",
+  "proposal_text": "This research proposes to conduct a bibliometric analysis of peer-reviewed publications on AI ethics from 2018-2025. The study will use the Scopus and Web of Science databases to identify all publications containing keywords related to AI ethics, responsible AI, algorithmic fairness, and AI governance. The analysis will examine publication trends, citation networks, geographic distribution of research groups, and thematic clustering using topic modelling. All data is publicly available metadata from academic databases. No personal data about individual researchers will be collected beyond publicly listed author names and institutional affiliations. The analysis will use standard bibliometric tools including VOSviewer and Bibliometrix. Results will identify gaps in the AI ethics literature to inform future research directions. No AI systems will be developed or deployed as part of this research.",
+  "llm_model": "qwen/qwen3-32b",
+  "keywords": [
+    "data",
+    "personal data",
+    "fairness"
+  ],
+  "matched_rights": [
+    "Art20_EqualityBeforeLaw",
+    "Art21_NonDiscrimination",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 154,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The research involves processing publicly available author metadata (names, affiliations) from academic databases, which raises medium-level ethical risks related to potential biases in bibliometric analysis, data representativeness, and misuse of findings. While no sensitive personal data is collected, the study must address algorithmic bias in topic modeling and ensure compliance with dataset licensing terms.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Algorithmic bias in topic modeling could produce skewed interpretations of AI ethics literature trends",
+        "severity": "Medium",
+        "explanation": "Thematic clustering methods may inherit biases from keyword selection or database coverage, potentially underrepresenting non-English or non-Western research"
+      },
+      {
+        "risk": "Inadequate mitigation of dual-use risks if findings are misinterpreted to justify exclusionary research agendas",
+        "severity": "Medium",
+        "explanation": "The study's output could be misused to reinforce existing power imbalances in AI ethics research funding or collaboration networks"
+      },
+      {
+        "risk": "Non-compliance with dataset licensing terms for Scopus/Web of Science metadata",
+        "severity": "Medium",
+        "explanation": "Failure to adhere to database usage agreements could result in legal or reputational risks for the institution"
+      },
+      {
+        "risk": "Lack of transparency in inclusion/exclusion criteria for publication selection",
+        "severity": "Medium",
+        "explanation": "Ambiguous keyword definitions or database filters might introduce researcher bias into the analysis"
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM019",
+        "requirement_text": "Respect terms of datasets with defined licences (CC 4.0, MIT etc)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Verify Scopus/Web of Science licensing terms for research reuse and document compliance"
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct bias audit of topic modeling outputs to prevent misrepresentation of research communities"
+      },
+      {
+        "requirement_id": "HE012",
+        "requirement_text": "Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Document methodology for addressing potential geographic/linguistic biases in database coverage"
+      },
+      {
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement name anonymization protocols for author metadata analysis"
+      },
+      {
+        "requirement_id": "R028",
+        "requirement_text": "List inclusion/exclusion criteria for participant selection",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Formalize keyword selection process and database filtering parameters"
+      },
+      {
+        "requirement_id": "HE013",
+        "requirement_text": "Document how bias in input data and algorithmic design will be identified and avoided",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Include bias mitigation strategies for VOSviewer/Bibliometrix analysis"
+      },
+      {
+        "requirement_id": "ACM013",
+        "requirement_text": "Discuss dual use potential — ways research could be misused and mitigations",
+        "framework": "ACMConference",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Add ethical discussion section addressing potential misuse scenarios"
+      },
+      {
+        "requirement_id": "R085",
+        "requirement_text": "Have you considered anti-discrimination and bias implications of your AI/technology research?",
+        "framework": "REAMS",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Include sensitivity analysis for geographic/institutional representation gaps"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "Potential underrepresentation of non-English or developing-world research in analysis outcomes"
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "Processing of author names and institutional affiliations as personal data"
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Respect for Private Life",
+        "relevance": "Exposure of researcher publication histories through metadata analysis"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "Keyword-based selection processes can inherit societal biases"
+      },
+      {
+        "incident_id": "AIAAIC-034",
+        "incident_title": "China Social Credit System AI Scoring",
+        "lesson": "Algorithmic analysis of public data can reinforce systemic inequalities"
+      },
+      {
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
+        "lesson": "Biases in training data can produce misleading analytical outputs"
+      },
+      {
+        "incident_id": "AIAAIC-007",
+        "incident_title": "Clearview AI Mass Facial Recognition Scraping",
+        "lesson": "Aggregation of publicly available data can create privacy risks"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement multilingual keyword expansion to address language bias",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Add geographic diversity metrics to citation network analysis",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Create open-access repository for replication with clear usage guidelines",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Include sensitivity analysis for database coverage limitations",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Formalize dataset licensing compliance documentation",
+      "Implement name anonymization protocols",
+      "Document bias mitigation strategies for topic modeling",
+      "Define explicit inclusion/exclusion criteria for publication selection"
+    ],
+    "tier2_reflective_prompts": [
+      "How might the study's findings be misinterpreted to justify research funding disparities?",
+      "What steps can be taken to ensure equitable representation of non-Western AI ethics research?"
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "personal data",
+        "fairness"
+      ],
+      "rights_matched": 5,
+      "requirements_retrieved": 154,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "HE014",
+        "HE038",
+        "R028",
+        "R085",
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028"
+      ],
+      "requirements_retrieved_ids": [
+        "HE014",
+        "HE038",
+        "R028",
+        "R085",
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R054",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM019",
+        "ACM002",
+        "HE012",
+        "ACM016",
+        "R028",
+        "HE013",
+        "ACM013",
+        "R085"
+      ],
+      "incidents_sample": [
+        "AIAAIC-001",
+        "AIAAIC-002",
+        "AIAAIC-003",
+        "AIAAIC-022",
+        "AIAAIC-034"
+      ]
+    }
+  }
+}

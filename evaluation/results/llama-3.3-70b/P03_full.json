@@ -1,0 +1,461 @@
+{
+  "proposal_id": "P03",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-05T19:01:17.342119",
+  "proposal_text": "This research proposes to deploy Amazon Rekognition, a cloud-based facial recognition system, for use by law enforcement agencies across the United States to identify individuals in real-time surveillance footage, body camera recordings, and crime scene images. The system can identify and track up to 100 faces in a single image and match them against databases of tens of millions of faces drawn from arrest records and public sources. The system will be marketed to local police departments as a tool for identifying persons of interest in criminal investigations. The default confidence threshold of 80% will be used for initial deployment, with Amazon recommending a 99% threshold for law enforcement use — a discrepancy between default settings and recommended settings that has not been addressed in the deployment contract. An ACLU audit found that at 80% confidence, Rekognition falsely matched 28 members of the US Congress to criminal mugshots, with disproportionate false positives for people of colour including six members of the Congressional Black Caucus. No independent demographic bias audit has been conducted prior to law enforcement deployment. No independent oversight mechanism or accountability framework for false match consequences has been established.",
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "bias",
+    "data",
+    "surveil",
+    "track",
+    "accountab",
+    "facial recogn",
+    "criminal",
+    "polic",
+    "law enforce",
+    "recommend"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art1_HumanDignity",
+    "Art20_EqualityBeforeLaw",
+    "Art21_NonDiscrimination",
+    "Art23_GenderEquality",
+    "Art41_GoodAdministration",
+    "Art47_RightToEffectiveRemedy",
+    "Art48_PresumptionOfInnocence",
+    "Art6_RightToLiberty",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 190,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The proposed deployment of Amazon Rekognition for law enforcement agencies poses significant ethical risks, including potential misidentification of individuals, particularly people of color, and the lack of independent oversight mechanisms. The system's default confidence threshold of 80% has been shown to produce false positives, which could lead to wrongful arrests and convictions. Furthermore, the deployment of this technology raises concerns about mass surveillance, privacy, and the potential for biased decision-making. The absence of explicit consent from individuals whose faces are being matched against databases also raises concerns about the processing of special category data.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Misidentification of individuals",
+        "severity": "High",
+        "explanation": "The system's default confidence threshold of 80% has been shown to produce false positives, particularly for people of color."
+      },
+      {
+        "risk": "Lack of independent oversight mechanisms",
+        "severity": "High",
+        "explanation": "There is no established mechanism for addressing false match consequences or ensuring accountability for the system's decisions."
+      },
+      {
+        "risk": "Mass surveillance and privacy concerns",
+        "severity": "High",
+        "explanation": "The deployment of this technology raises concerns about the potential for widespread surveillance and the impact on individuals' right to privacy."
+      },
+      {
+        "risk": "Biased decision-making",
+        "severity": "High",
+        "explanation": "The system's potential for biased decision-making, particularly against vulnerable groups, is a significant concern."
+      },
+      {
+        "risk": "Processing of special category data without consent",
+        "severity": "High",
+        "explanation": "The deployment of this technology involves the processing of special category data, including biometric data, without explicit consent from individuals."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM020",
+        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough assessment of the datasets used to train the system and ensure they are representative of the intended population."
+      },
+      {
+        "requirement_id": "ACM025",
+        "requirement_text": "Communicate whether approach could facilitate deceptive interactions causing harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Evaluate the potential for the system to facilitate deceptive interactions or cause harm, and implement measures to mitigate these risks."
+      },
+      {
+        "requirement_id": "ACM027",
+        "requirement_text": "Research must not build upon or facilitate illegal activity",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the system is not used to facilitate illegal activity or build upon existing illegal activities."
+      },
+      {
+        "requirement_id": "HE019",
+        "requirement_text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct an assessment of the system's potential impact on democratic processes and social relations, and implement measures to mitigate any negative effects."
+      },
+      {
+        "requirement_id": "HE021",
+        "requirement_text": "It must be made clear to end-users they are interacting with an AI system",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that end-users are aware they are interacting with an AI system, and provide clear information about the system's capabilities and limitations."
+      },
+      {
+        "requirement_id": "EUAIAct001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a FRIA to assess the system's risks and implement measures to mitigate them."
+      },
+      {
+        "requirement_id": "EUAIAct008",
+        "requirement_text": "State the intended purpose of the AI system",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Clearly state the intended purpose of the system and ensure it is aligned with the organization's goals and values."
+      },
+      {
+        "requirement_id": "EUAIAct010",
+        "requirement_text": "Describe the intended use — specific deployment scenarios distinct from intended purpose",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Provide a detailed description of the intended use of the system, including specific deployment scenarios and potential use cases."
+      },
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the system is designed and deployed in a way that contributes to society and human well-being, and does not cause harm to individuals or groups."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The deployment of this technology raises concerns about the potential for mass surveillance and the impact on individuals' right to privacy."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The system involves the processing of special category data, including biometric data, without explicit consent from individuals."
+      },
+      {
+        "article": "Article 20",
+        "right_name": "Equality Before Law",
+        "relevance": "The system's potential for biased decision-making, particularly against vulnerable groups, is a significant concern."
+      },
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The system's potential for biased decision-making, particularly against vulnerable groups, is a significant concern."
+      },
+      {
+        "article": "Article 47",
+        "right_name": "Right to Effective Remedy",
+        "relevance": "The lack of independent oversight mechanisms and accountability framework for false match consequences raises concerns about the right to effective remedy."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The deployment of facial recognition technology by law enforcement agencies can lead to false arrests and convictions, particularly if the system is not properly validated or if there is a lack of oversight."
+      },
+      {
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "AI systems can perpetuate and amplify existing biases, particularly if the training data is not diverse or if the system is not properly validated."
+      },
+      {
+        "incident_id": "AIAAIC-009",
+        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
+        "lesson": "The deployment of AI systems in high-stakes environments, such as law enforcement or transportation, requires careful consideration of the potential risks and consequences."
+      },
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "AI systems can perpetuate and amplify existing biases, particularly if the training data is not diverse or if the system is not properly validated."
+      },
+      {
+        "incident_id": "AIAAIC-014",
+        "incident_title": "YouTube Recommendation Radicalisation",
+        "lesson": "AI systems can have unintended consequences, particularly if they are not designed with consideration for the potential risks and consequences."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct a thorough assessment of the system's potential biases and implement measures to mitigate them",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Establish an independent oversight mechanism to address false match consequences and ensure accountability",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Provide clear information to end-users about the system's capabilities and limitations",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Ensure that the system is designed and deployed in a way that contributes to society and human well-being",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Implement measures to prevent the system from being used to facilitate illegal activity or build upon existing illegal activities",
+        "priority": "High"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough assessment of the system's potential biases and implement measures to mitigate them",
+      "Establish an independent oversight mechanism to address false match consequences and ensure accountability",
+      "Ensure that the system is designed and deployed in a way that contributes to society and human well-being",
+      "Implement measures to prevent the system from being used to facilitate illegal activity or build upon existing illegal activities",
+      "Provide clear information to end-users about the system's capabilities and limitations"
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential consequences of deploying this technology, and how can they be mitigated?",
+      "How can we ensure that the system is fair and unbiased, and that it does not perpetuate existing social inequalities?",
+      "What are the potential risks and consequences of using this technology in law enforcement, and how can they be addressed?",
+      "How can we ensure that the system is transparent and explainable, and that end-users understand how it works and what it can do?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "bias",
+        "data",
+        "surveil",
+        "track",
+        "accountab",
+        "facial recogn",
+        "criminal",
+        "polic",
+        "law enforce",
+        "recommend"
+      ],
+      "rights_matched": 11,
+      "requirements_retrieved": 190,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM024",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE049",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "HE014",
+        "HE038",
+        "R028",
+        "R085",
+        "ACM012",
+        "ACM023",
+        "ACM028",
+        "AI016",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE032",
+        "HE033",
+        "HE037",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI009",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE011",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM035",
+        "AI019",
+        "AI022",
+        "HE029",
+        "HE048",
+        "R055",
+        "R074",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073"
+      ],
+      "requirements_cited": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "EUAIAct001",
+        "EUAIAct008",
+        "EUAIAct010",
+        "ACM001"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-003",
+        "AIAAIC-005"
+      ]
+    }
+  }
+}

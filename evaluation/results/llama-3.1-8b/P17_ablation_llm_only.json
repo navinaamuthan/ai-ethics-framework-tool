@@ -1,0 +1,80 @@
+{
+  "proposal_id": "P17_ablation",
+  "mode": "llm_only",
+  "timestamp": "2026-06-27T14:03:26.615931",
+  "proposal_text": "This research proposes to develop an NLP classifier to detect extremist recruitment content on social media platforms including Telegram, Twitter/X, and encrypted messaging forums. The classifier will be trained on a dataset of 20,000 annotated posts collected from known extremist channels alongside 20,000 non-extremist posts covering political activism, religious discussion, and protest organisation. The system must distinguish between legitimate political expression and genuine incitement to violence. The training data includes content in English, Arabic, and Irish. The researchers acknowledge the dual-use risk that the classifier could be repurposed for political censorship or suppression of minority viewpoints by authoritarian actors. The tool will be developed as open-source software. No content moderation decisions will be automated. The research does not include engagement with affected communities or civil liberties organisations in the design process.",
+  "keywords": [],
+  "matched_rights": [],
+  "retrieved_requirements": [],
+  "retrieved_incidents": [],
+  "assessment": {
+    "risk_summary": "The primary ethical risks in this research proposal include the potential for biased or discriminatory classification, misuse by authoritarian actors, and infringement on individual rights such as freedom of expression.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Biased or Discriminatory Classification",
+        "severity": "High",
+        "explanation": "The classifier may perpetuate existing biases in the training data, leading to discriminatory outcomes. This is particularly concerning given the diverse languages and cultures represented in the dataset."
+      },
+      {
+        "risk": "Misuse by Authoritarian Actors",
+        "severity": "High",
+        "explanation": "As acknowledged by the researchers, the classifier could be repurposed for political censorship or suppression of minority viewpoints. This raises concerns about the potential impact on human rights and democratic processes."
+      },
+      {
+        "risk": "Infringement on Individual Rights",
+        "severity": "Medium",
+        "explanation": "The research may inadvertently infringe on individual rights such as freedom of expression, particularly if the classifier is used to censor or suppress certain types of content."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "GDPR Article 22 (Right to Explanation)",
+        "requirement_text": "The data subject shall have the right not to be subject to a decision, which may produce legal effects concerning him or significantly affect him, and is based solely on automated processing.",
+        "framework": "General Data Protection Regulation",
+        "tier": "Mandatory",
+        "action_needed": "Develop a transparent and explainable classifier that provides clear reasons for its decisions."
+      },
+      {
+        "requirement_id": "UN Guiding Principles on Business and Human Rights (UNGPs)",
+        "requirement_text": "Businesses should respect human rights by conducting thorough human rights impact assessments, engaging with affected communities, and taking steps to prevent harm.",
+        "framework": "United Nations",
+        "tier": "Mandatory",
+        "action_needed": "Engage with affected communities and civil liberties organizations in the design process to ensure that the classifier respects human rights."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 10 (Freedom of Expression)",
+        "right_name": "Freedom of Expression",
+        "relevance": "The research may inadvertently infringe on individual rights such as freedom of expression, particularly if the classifier is used to censor or suppress certain types of content."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "NSA Surveillance (2013)",
+        "incident_title": "Mass surveillance and data collection",
+        "lesson": "The importance of transparency, oversight, and human rights considerations in the development of technologies with potential for mass surveillance or censorship."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Develop a transparent and explainable classifier that provides clear reasons for its decisions.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Engage with affected communities and civil liberties organizations in the design process to ensure that the classifier respects human rights.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Develop a transparent and explainable classifier",
+      "Engage with affected communities and civil liberties organizations"
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential biases in the training data, and how can they be mitigated?",
+      "How will the classifier be used to ensure that it respects human rights?"
+    ],
+    "reams_clearance_likely": false
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "reviewers": ["R1", "R2"],
+  "proposals": [
+    {
+      "id": "P01",
+      "ratings": {
+        "R1": {
+          "risk_level": "High",
+          "requirements": ["R042", "R054", "AI001", "AI021"]
+        },
+        "R2": {
+          "risk_level": "High",
+          "requirements": ["R042", "R071", "AI001", "HE012"]
+        }
+      }
+    },
+    {
+      "id": "P07",
+      "ratings": {
+        "R1": {
+          "risk_level": "Medium",
+          "requirements": ["R005", "R027", "HE007"]
+        },
+        "R2": {
+          "risk_level": "High",
+          "requirements": ["R005", "R042", "HE012"]
+        }
+      }
+    }
+  ]
+}

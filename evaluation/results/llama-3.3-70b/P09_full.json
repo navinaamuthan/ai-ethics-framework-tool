@@ -1,0 +1,447 @@
+{
+  "proposal_id": "P09",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-05T19:04:01.766024",
+  "proposal_text": "This research proposes to build a recommendation system for academic module selection at Trinity College Dublin. The system will analyse historical student records including module choices, grades achieved, attendance patterns, and degree outcomes to recommend optimal module combinations for current students. The dataset covers 20,000 student records from the past ten years. Students will receive personalised module recommendations through the student portal alongside existing manual advising. The system will use collaborative filtering to identify students with similar academic profiles and recommend modules that led to positive outcomes for comparable students. The researchers acknowledge that historical patterns may reflect systemic inequalities in module access and outcomes. The model will not account for disability accommodations or students who changed programmes. Student consent for the use of historical academic records in the training dataset has not been explicitly obtained.",
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "data",
+    "consent",
+    "student",
+    "profil",
+    "disabilit",
+    "recommend"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art1_HumanDignity",
+    "Art21_NonDiscrimination",
+    "Art24_RightsOfChild",
+    "Art26_DisabilityIntegration",
+    "Art3_RightToIntegrity",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 193,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The proposed research involves the development of a recommendation system for academic module selection, which may perpetuate existing biases and inequalities in the dataset. The system's reliance on historical student records, including grades and attendance patterns, raises concerns about data protection and potential discrimination. Furthermore, the lack of explicit consent from students for the use of their historical academic records in the training dataset is a significant ethical concern. The system's potential to influence students' academic choices and outcomes also raises questions about its impact on their future prospects and well-being.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Bias and discrimination",
+        "severity": "Medium",
+        "explanation": "The system may perpetuate existing biases and inequalities in the dataset, potentially leading to discriminatory outcomes for certain student groups."
+      },
+      {
+        "risk": "Data protection",
+        "severity": "Medium",
+        "explanation": "The use of historical student records, including sensitive information such as grades and attendance patterns, raises concerns about data protection and potential misuse."
+      },
+      {
+        "risk": "Lack of transparency and accountability",
+        "severity": "Medium",
+        "explanation": "The system's decision-making process may not be transparent, and students may not be aware of the factors influencing the recommendations they receive."
+      },
+      {
+        "risk": "Influence on students' academic choices and outcomes",
+        "severity": "Medium",
+        "explanation": "The system's recommendations may have a significant impact on students' academic choices and outcomes, potentially affecting their future prospects and well-being."
+      },
+      {
+        "risk": "Potential for function creep",
+        "severity": "Low",
+        "explanation": "The system may be used for purposes beyond its original intention, such as monitoring student behavior or predicting academic success."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM020",
+        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of the dataset to ensure it is representative of the intended population and communicate the results transparently."
+      },
+      {
+        "requirement_id": "ACM025",
+        "requirement_text": "Communicate whether approach could facilitate deceptive interactions causing harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Assess the potential for the system to facilitate deceptive interactions and communicate the results transparently."
+      },
+      {
+        "requirement_id": "HE019",
+        "requirement_text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough assessment of the system's potential impact on democratic processes and social relations."
+      },
+      {
+        "requirement_id": "HE021",
+        "requirement_text": "It must be made clear to end-users they are interacting with an AI system",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that students are aware they are interacting with an AI system and provide clear information about the system's capabilities and limitations."
+      },
+      {
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough assessment to determine whether the organisation is obligated to conduct a FRIA."
+      },
+      {
+        "requirement_id": "AI008",
+        "requirement_text": "State the intended purpose of the AI system",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Clearly state the intended purpose of the AI system and ensure it aligns with the organisation's goals and values."
+      },
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the research contributes to society and human well-being, and discuss potential applications and mitigations for harm."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis to identify potential harms and take steps to mitigate them."
+      },
+      {
+        "requirement_id": "HE050",
+        "requirement_text": "Have you considered whether your AI system could be misused or diverted from its original purpose",
+        "framework": "HorizonEurope",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Reflect on the potential for the system to be misused or diverted from its original purpose and consider strategies to prevent this."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The system may perpetuate existing biases and inequalities in the dataset, potentially leading to discriminatory outcomes for certain student groups."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The use of historical student records, including sensitive information such as grades and attendance patterns, raises concerns about data protection and potential misuse."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The system's use of personal data, including historical academic records, raises concerns about data protection and potential misuse."
+      },
+      {
+        "article": "Article 41",
+        "right_name": "Good Administration",
+        "relevance": "The system's decision-making process may not be transparent, and students may not be aware of the factors influencing the recommendations they receive."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of ensuring that AI systems do not perpetuate existing biases and inequalities, particularly in high-stakes decision-making contexts such as hiring."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The potential for AI systems to be used in ways that infringe on individuals' rights, particularly in contexts where accuracy and fairness are critical, such as law enforcement."
+      },
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The importance of ensuring that AI systems are designed and tested to avoid causing harm, particularly in contexts where they may interact with vulnerable individuals or groups."
+      },
+      {
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "The potential for AI systems to perpetuate existing biases and inequalities, particularly in contexts where they are used to classify or categorize individuals or groups."
+      },
+      {
+        "incident_id": "AIAAIC-009",
+        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
+        "lesson": "The importance of ensuring that AI systems are designed and tested to prioritize safety and avoid causing harm, particularly in contexts where they may interact with human life or well-being."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct a thorough analysis of the dataset to ensure it is representative of the intended population",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Ensure that students are aware they are interacting with an AI system and provide clear information about the system's capabilities and limitations",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement strategies to prevent bias and discrimination in the system's decision-making process",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Ensure that the system is transparent and accountable, and that students have access to information about the factors influencing the recommendations they receive",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Consider strategies to prevent the system from being misused or diverted from its original purpose",
+        "priority": "Low"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough analysis of the dataset to ensure it is representative of the intended population",
+      "Ensure that students are aware they are interacting with an AI system and provide clear information about the system's capabilities and limitations",
+      "Implement strategies to prevent bias and discrimination in the system's decision-making process",
+      "Ensure that the system is transparent and accountable, and that students have access to information about the factors influencing the recommendations they receive"
+    ],
+    "tier2_reflective_prompts": [
+      "Reflect on the potential for the system to be misused or diverted from its original purpose",
+      "Consider the potential impact of the system on democratic processes and social relations",
+      "Reflect on the potential for the system to perpetuate existing biases and inequalities, particularly in high-stakes decision-making contexts"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "consent",
+        "student",
+        "profil",
+        "disabilit",
+        "recommend"
+      ],
+      "rights_matched": 9,
+      "requirements_retrieved": 193,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM024",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE049",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "ACM012",
+        "ACM023",
+        "ACM028",
+        "AI016",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R028",
+        "R085",
+        "R043",
+        "R044",
+        "R045",
+        "R055",
+        "HE014",
+        "HE038",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "R009",
+        "R015",
+        "R019",
+        "R022",
+        "R034",
+        "R039",
+        "R042",
+        "R046",
+        "R048",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI009",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE011",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM003",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R023",
+        "R026",
+        "R047",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM020",
+        "ACM025",
+        "HE019",
+        "HE021",
+        "AI001",
+        "AI008",
+        "ACM001",
+        "ACM002",
+        "HE050"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-003",
+        "AIAAIC-005"
+      ]
+    }
+  }
+}

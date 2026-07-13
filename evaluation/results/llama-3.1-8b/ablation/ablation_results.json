@@ -1,0 +1,155 @@
+{
+  "run_timestamp": "2026-06-27T14:06:37.665922",
+  "results": [
+    {
+      "id": "P01",
+      "title": "Facial Recognition for Campus Security",
+      "expected_risk": "High",
+      "conditions": {
+        "A_llm_only": {
+          "risk_level": "High",
+          "risks_count": 2,
+          "requirements_count": 2,
+          "rights_count": 2,
+          "precedents_count": 1,
+          "has_specific_req_ids": false
+        },
+        "B_kg_only": {
+          "requirements_retrieved": 193,
+          "incidents_retrieved": 8,
+          "rights_matched": 9
+        },
+        "C_full_pipeline": {
+          "risk_level": "High",
+          "risks_count": 2,
+          "requirements_count": 3,
+          "rights_count": 2,
+          "precedents_count": 1,
+          "has_specific_req_ids": true,
+          "kg_requirements_retrieved": 193,
+          "kg_incidents_retrieved": 8
+        }
+      }
+    },
+    {
+      "id": "P03",
+      "title": "AI-Assisted Cancer Diagnosis from Medical Imaging",
+      "expected_risk": "High",
+      "conditions": {
+        "A_llm_only": {
+          "risk_level": "High",
+          "risks_count": 3,
+          "requirements_count": 2,
+          "rights_count": 2,
+          "precedents_count": 1,
+          "has_specific_req_ids": false
+        },
+        "B_kg_only": {
+          "requirements_retrieved": 188,
+          "incidents_retrieved": 8,
+          "rights_matched": 8
+        },
+        "C_full_pipeline": {
+          "risk_level": "High",
+          "risks_count": 2,
+          "requirements_count": 3,
+          "rights_count": 2,
+          "precedents_count": 1,
+          "has_specific_req_ids": true,
+          "kg_requirements_retrieved": 188,
+          "kg_incidents_retrieved": 8
+        }
+      }
+    },
+    {
+      "id": "P07",
+      "title": "NLP Sentiment Analysis on Student Essay Submissions",
+      "expected_risk": "Medium",
+      "conditions": {
+        "A_llm_only": {
+          "risk_level": "Medium",
+          "risks_count": 3,
+          "requirements_count": 2,
+          "rights_count": 2,
+          "precedents_count": 1,
+          "has_specific_req_ids": false
+        },
+        "B_kg_only": {
+          "requirements_retrieved": 196,
+          "incidents_retrieved": 8,
+          "rights_matched": 10
+        },
+        "C_full_pipeline": {
+          "risk_level": "High",
+          "risks_count": 2,
+          "requirements_count": 3,
+          "rights_count": 2,
+          "precedents_count": 2,
+          "has_specific_req_ids": true,
+          "kg_requirements_retrieved": 196,
+          "kg_incidents_retrieved": 8
+        }
+      }
+    },
+    {
+      "id": "P13",
+      "title": "Bibliometric Analysis of Open Access AI Ethics Publications",
+      "expected_risk": "Low",
+      "conditions": {
+        "A_llm_only": {
+          "risk_level": "Medium",
+          "risks_count": 3,
+          "requirements_count": 2,
+          "rights_count": 1,
+          "precedents_count": 1,
+          "has_specific_req_ids": false
+        },
+        "B_kg_only": {
+          "requirements_retrieved": 154,
+          "incidents_retrieved": 8,
+          "rights_matched": 5
+        },
+        "C_full_pipeline": {
+          "risk_level": "Medium",
+          "risks_count": 2,
+          "requirements_count": 3,
+          "rights_count": 1,
+          "precedents_count": 1,
+          "has_specific_req_ids": true,
+          "kg_requirements_retrieved": 154,
+          "kg_incidents_retrieved": 8
+        }
+      }
+    },
+    {
+      "id": "P17",
+      "title": "Dual-Use AI for Detecting Online Extremist Content",
+      "expected_risk": "High",
+      "conditions": {
+        "A_llm_only": {
+          "risk_level": "High",
+          "risks_count": 3,
+          "requirements_count": 2,
+          "rights_count": 1,
+          "precedents_count": 1,
+          "has_specific_req_ids": false
+        },
+        "B_kg_only": {
+          "requirements_retrieved": 191,
+          "incidents_retrieved": 8,
+          "rights_matched": 11
+        },
+        "C_full_pipeline": {
+          "risk_level": "High",
+          "risks_count": 2,
+          "requirements_count": 3,
+          "rights_count": 2,
+          "precedents_count": 2,
+          "has_specific_req_ids": true,
+          "kg_requirements_retrieved": 191,
+          "kg_incidents_retrieved": 8
+        }
+      }
+    }
+  ]
+}

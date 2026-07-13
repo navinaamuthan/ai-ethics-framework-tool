@@ -1,0 +1,353 @@
+{
+  "proposal_id": "P15",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-05T19:05:41.989805",
+  "proposal_text": "This research proposes to analyse anonymised Dublin Bus and Luas smart card tap-on data to model public transport usage patterns across different times of day, routes, and weather conditions. The dataset consists of aggregated journey counts per route per hour provided by the National Transport Authority under an open data licence. No individual passenger records are included and no re-identification is possible from the aggregated data. The analysis will use time series forecasting and clustering algorithms to identify underserved routes and peak demand periods. Results will be shared with Dublin City Council to inform transport planning decisions. The environmental impact of the computational resources required for the analysis will be documented. No AI system will be deployed in any operational context.",
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "data",
+    "environment"
+  ],
+  "matched_rights": [
+    "Art37_EnvironmentalProtection",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 139,
+  "retrieved_incidents_count": 7,
+  "assessment": {
+    "risk_summary": "The research proposal involves analyzing anonymized public transport data to model usage patterns, which poses minimal risks to individuals but may have environmental implications due to computational resource usage. The analysis does not involve personal data, biometric data, or autonomous decision-making, reducing the risk level. However, considerations regarding environmental sustainability, data documentation, and transparency are necessary. The project's impact on social cohesion and democratic processes is minimal, given its focus on transport planning.",
+    "overall_risk_level": "Low",
+    "identified_risks": [
+      {
+        "risk": "Environmental impact of computational resources",
+        "severity": "Low",
+        "explanation": "The research may consume significant computational resources, contributing to environmental degradation."
+      },
+      {
+        "risk": "Data privacy and security",
+        "severity": "Low",
+        "explanation": "Although the data is anonymized, ensuring its security and privacy during analysis is crucial."
+      },
+      {
+        "risk": "Lack of transparency in methodology",
+        "severity": "Low",
+        "explanation": "Clear documentation of the analysis methodology and data handling is necessary for reproducibility and trust."
+      },
+      {
+        "risk": "Inaccurate forecasting",
+        "severity": "Low",
+        "explanation": "Inaccurate forecasting could lead to inefficient transport planning decisions, but this is mitigated by the use of established time series forecasting and clustering algorithms."
+      },
+      {
+        "risk": "Insufficient consideration of social impact",
+        "severity": "Low",
+        "explanation": "While the project aims to improve transport planning, it should also consider broader social implications, such as accessibility and equity."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM026",
+        "requirement_text": "Consider whether research negatively impacts environment — fossil fuel extraction, consumption, greenhouse gas production",
+        "framework": "ACMConference",
+        "tier": "Mandatory",
+        "action_needed": "Document environmental impact and mitigation strategies"
+      },
+      {
+        "requirement_id": "HE018",
+        "requirement_text": "AI development must be mindful of environmental sustainability — document environmental impact and mitigation steps",
+        "framework": "HorizonEurope",
+        "tier": "Mandatory",
+        "action_needed": "Assess and report on the environmental sustainability of the project"
+      },
+      {
+        "requirement_id": "R052",
+        "requirement_text": "Identify risks to site, environment, or society",
+        "framework": "REAMS",
+        "tier": "Mandatory",
+        "action_needed": "Conduct a risk assessment focusing on environmental and societal impacts"
+      },
+      {
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
+        "framework": "ACMConference",
+        "tier": "Mandatory",
+        "action_needed": "Verify that the anonymized data does not contain personally identifiable information"
+      },
+      {
+        "requirement_id": "ACM029",
+        "requirement_text": "Provide data and model documentation via structured templates (Model Cards, Datasheets for Datasets)",
+        "framework": "ACMConference",
+        "tier": "Mandatory",
+        "action_needed": "Use structured templates for documentation to ensure transparency and reproducibility"
+      },
+      {
+        "requirement_id": "R087",
+        "requirement_text": "Have you considered environmental impact of compute-intensive AI research?",
+        "framework": "REAMS",
+        "tier": "Reflective",
+        "action_needed": "Reflect on the environmental impact of the computational resources used and explore more sustainable options"
+      },
+      {
+        "requirement_id": "HE051",
+        "requirement_text": "Have you considered the system's impact on social cohesion and democratic processes?",
+        "framework": "HorizonEurope",
+        "tier": "Reflective",
+        "action_needed": "Consider the broader social implications of the project, including effects on social cohesion and democratic processes"
+      },
+      {
+        "requirement_id": "ACM038",
+        "requirement_text": "Have you considered the carbon footprint of training and deploying your model?",
+        "framework": "ACMConference",
+        "tier": "Reflective",
+        "action_needed": "Estimate the carbon footprint of the analysis and consider strategies to minimize it"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 37",
+        "right_name": "Environmental Protection",
+        "relevance": "The project's computational resource usage may impact the environment, thus requiring consideration of environmental protection."
+      },
+      {
+        "article": "Article 41",
+        "right_name": "Good Administration",
+        "relevance": "The project involves collaboration with public entities (Dublin City Council) and should adhere to principles of good administration, including transparency and accountability."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-036",
+        "incident_title": "Netherlands SyRI Welfare Surveillance System",
+        "lesson": "The importance of transparency and accountability in data-driven decision-making systems, especially when they may impact social services and individual rights."
+      },
+      {
+        "incident_id": "AIAAIC-022",
+        "incident_title": "Deliveroo Algorithmic Dismissal",
+        "lesson": "The potential for algorithmic decisions to unfairly impact individuals, highlighting the need for careful consideration of how data analysis outcomes are used in decision-making processes."
+      },
+      {
+        "incident_id": "AIAAIC-016",
+        "incident_title": "Palantir ICE Surveillance System",
+        "lesson": "The ethical implications of data analysis and AI systems in surveillance and law enforcement, emphasizing the need for rigorous ethical assessments and safeguards to prevent misuse."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct a thorough environmental impact assessment",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Implement transparent and reproducible data analysis methodologies",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Ensure compliance with all relevant data protection regulations",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Regularly review and update the project's ethical considerations",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Explore sustainable computational resources and practices",
+        "priority": "Low"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Document environmental impact and mitigation strategies",
+      "Assess and report on the environmental sustainability of the project",
+      "Conduct a risk assessment focusing on environmental and societal impacts",
+      "Verify that the anonymized data does not contain personally identifiable information",
+      "Use structured templates for documentation to ensure transparency and reproducibility"
+    ],
+    "tier2_reflective_prompts": [
+      "Reflect on the environmental impact of the computational resources used and explore more sustainable options",
+      "Consider the broader social implications of the project, including effects on social cohesion and democratic processes",
+      "Estimate the carbon footprint of the analysis and consider strategies to minimize it"
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "environment"
+      ],
+      "rights_matched": 4,
+      "requirements_retrieved": 139,
+      "incidents_retrieved": 7,
+      "requirements_sample": [
+        "ACM026",
+        "ACM038",
+        "HE018",
+        "HE051",
+        "R052",
+        "R087",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM026",
+        "ACM038",
+        "HE018",
+        "HE051",
+        "R052",
+        "R087",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R054",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE013",
+        "HE033",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM026",
+        "HE018",
+        "R052",
+        "ACM016",
+        "ACM029",
+        "R087",
+        "HE051",
+        "ACM038"
+      ],
+      "incidents_sample": [
+        "AIAAIC-022",
+        "AIAAIC-034",
+        "AIAAIC-036",
+        "AIAAIC-002",
+        "AIAAIC-007"
+      ]
+    }
+  }
+}

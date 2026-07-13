@@ -1,0 +1,406 @@
+{
+  "proposal_id": "P10",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-05T19:04:29.929932",
+  "proposal_text": "This project aims to develop an NLP-based tool for detecting health-related misinformation on Irish social media platforms. The system will collect public posts from Twitter/X, Reddit, and Facebook groups discussing topics including vaccination, cancer treatments, and mental health remedies. The tool will classify posts as verified, unverified, or misleading using a combination of source credibility scoring and claim verification against WHO and HSE published guidelines. The dataset will include approximately 500,000 public posts collected via platform APIs. While posts are publicly available, the tool will process usernames and account metadata to assess source credibility patterns. The researchers plan to publish a list of accounts identified as frequent misinformation sources. The tool does not account for satire, cultural context, or legitimate medical debate where scientific consensus has not been established.",
+  "llm_model": "qwen/qwen3-32b",
+  "keywords": [
+    "data",
+    "health",
+    "medical",
+    "classif",
+    "scor",
+    "social media"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art21_NonDiscrimination",
+    "Art2_RightToLife",
+    "Art35_HealthCare",
+    "Art41_GoodAdministration",
+    "Art47_RightToEffectiveRemedy",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 174,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The proposal involves processing public social media data for health misinformation detection, raising risks of misclassification, reputational harm, and algorithmic bias. The system's use of usernames and metadata for credibility scoring could infringe on privacy rights, while its potential to suppress legitimate debate conflicts with freedom of expression. Biases in training data or algorithmic design may lead to discriminatory outcomes against specific demographic groups.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Misclassification of legitimate health discussions as misinformation",
+        "severity": "High",
+        "explanation": "Failure to account for satire, cultural context, or scientific debate may lead to reputational harm and suppression of valid discourse"
+      },
+      {
+        "risk": "Algorithmic bias in credibility scoring",
+        "severity": "Medium",
+        "explanation": "Username and metadata analysis could encode gender, racial, or socioeconomic biases present in training data"
+      },
+      {
+        "risk": "Reputational harm to individuals/organizations",
+        "severity": "High",
+        "explanation": "Public publication of 'frequent misinformation sources' list without appeal mechanism risks permanent damage to accounts"
+      },
+      {
+        "risk": "Amplification of existing misinformation through flawed detection",
+        "severity": "Medium",
+        "explanation": "Inaccurate flagging may draw attention to borderline content rather than suppressing it"
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM020",
+        "requirement_text": "Assess and communicate dataset representativeness",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct demographic analysis of 500k post dataset to ensure Irish population representation"
+      },
+      {
+        "requirement_id": "HE032",
+        "requirement_text": "Analyze input data for diversity in gender, race, etc.",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement bias audits for training data covering protected characteristics"
+      },
+      {
+        "requirement_id": "AI001",
+        "requirement_text": "Assess FRIA obligation for high-risk AI systems",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct fundamental rights impact assessment for data processing activities"
+      },
+      {
+        "requirement_id": "ACM028",
+        "requirement_text": "Inspect models/datasets for encoded bias",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Perform counterfactual evaluation for protected class discrimination"
+      },
+      {
+        "requirement_id": "HE013",
+        "requirement_text": "Document bias identification methods",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Specify algorithmic bias detection protocols for source credibility scoring"
+      },
+      {
+        "requirement_id": "AI023",
+        "requirement_text": "Specify categories of discrimination impact",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Define mitigation strategies for potential gender/racial bias in output classifications"
+      },
+      {
+        "requirement_id": "ACM025",
+        "requirement_text": "Assess potential for deceptive interactions",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Evaluate risks of content suppression influencing public health discourse"
+      },
+      {
+        "requirement_id": "HE050",
+        "requirement_text": "Test for function creep/misuse potential",
+        "framework": "HorizonEurope",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Scenario analysis for tool repurposing for political censorship"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 7",
+        "right_name": "Right to Private Life",
+        "relevance": "Processing of social media metadata constitutes personal data handling"
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "Collection of usernames and account metadata requires GDPR compliance"
+      },
+      {
+        "article": "Article 11",
+        "right_name": "Freedom of Expression",
+        "relevance": "Risk of suppressing legitimate health discussions through overzealous flagging"
+      },
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "Algorithmic bias may disproportionately impact minority groups"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "Content moderation systems can unintentionally amplify harmful narratives"
+      },
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "Training data biases can encode discrimination in classification outcomes"
+      },
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "Failure to account for contextual understanding leads to harmful content generation"
+      },
+      {
+        "incident_id": "AIAAIC-014",
+        "incident_title": "YouTube Recommendation Radicalisation",
+        "lesson": "Content filtering systems may create echo chambers that exacerbate misinformation"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement human-in-the-loop review for high-impact classifications",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Add contextual analysis module for satire/legitimate debate detection",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Establish appeal process for accounts flagged as misinformation sources",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Publish transparency report detailing false positive/negative rates by demographic",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct GDPR-compliant data processing impact assessment",
+      "Implement bias mitigation techniques in source credibility scoring algorithm",
+      "Develop clear user notification protocol for content classification",
+      "Establish independent oversight committee for output validation"
+    ],
+    "tier2_reflective_prompts": [
+      "How might cultural differences in health communication affect classification accuracy?",
+      "What long-term societal impacts could arise from public shaming of flagged accounts?",
+      "Should the system differentiate between health misinformation and alternative medicine views?",
+      "How to balance public health goals with individual free speech protections?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "health",
+        "medical",
+        "classif",
+        "scor",
+        "social media"
+      ],
+      "rights_matched": 8,
+      "requirements_retrieved": 174,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM002",
+        "ACM012",
+        "ACM013"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "R028",
+        "R085",
+        "ACM001",
+        "ACM014",
+        "ACM032",
+        "HE049",
+        "R080",
+        "R021",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM035",
+        "AI017",
+        "AI019",
+        "AI022",
+        "HE005",
+        "HE027",
+        "HE029",
+        "HE048",
+        "R010",
+        "R054",
+        "R055",
+        "R074",
+        "R082",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073"
+      ],
+      "requirements_cited": [
+        "ACM020",
+        "HE032",
+        "AI001",
+        "ACM028",
+        "HE013",
+        "AI023",
+        "ACM025",
+        "HE050"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-001",
+        "AIAAIC-002"
+      ]
+    }
+  }
+}

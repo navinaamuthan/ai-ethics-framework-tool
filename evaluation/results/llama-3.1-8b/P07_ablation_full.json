@@ -1,0 +1,146 @@
+{
+  "proposal_id": "P07_ablation",
+  "mode": "full",
+  "timestamp": "2026-06-27T13:59:47.666224",
+  "proposal_text": "This research proposes to apply sentiment analysis and linguistic style detection to a corpus of 5,000 anonymised undergraduate essays submitted to the School of English at Trinity College Dublin. The aim is to investigate whether emotional tone and writing style correlate with academic grade outcomes. Essays will be collected from the past three academic years with student consent obtained retrospectively via email. The NLP pipeline will extract features including sentiment polarity, subjectivity scores, vocabulary complexity, and sentence structure patterns. The researchers will investigate whether detectable stylistic differences correlate with students' first language, gender, or socioeconomic background as indicated by fee status. All analysis will be performed on pseudonymised data with student IDs replaced by random codes. Results will be published in aggregate form only.",
+  "keywords": [
+    "data",
+    "consent",
+    "student",
+    "school",
+    "scor",
+    "gender",
+    "emotion",
+    "sentiment"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art1_HumanDignity",
+    "Art21_NonDiscrimination",
+    "Art23_GenderEquality",
+    "Art24_RightsOfChild",
+    "Art3_RightToIntegrity",
+    "Art41_GoodAdministration",
+    "Art47_RightToEffectiveRemedy",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 196,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "This proposal poses risks to students' privacy, freedom of expression, and non-discrimination. The use of sentiment analysis and linguistic style detection may lead to biased results and potentially harm individuals or groups.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Bias in AI system",
+        "severity": "High",
+        "explanation": "The proposal's reliance on NLP pipeline features, such as sentiment polarity and vocabulary complexity, may lead to biased results that correlate with students' first language, gender, or socioeconomic background."
+      },
+      {
+        "risk": "Infringement of students' privacy",
+        "severity": "High",
+        "explanation": "The proposal involves collecting and analyzing anonymized undergraduate essays, which may contain sensitive information about students' personal lives and opinions."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM020",
+        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of the dataset's representativeness and provide evidence for any claims of diversity."
+      },
+      {
+        "requirement_id": "HE019",
+        "requirement_text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations (Mandatory)",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Assess the potential impact of this research on democratic processes and social relations."
+      },
+      {
+        "requirement_id": "AI008",
+        "requirement_text": "State the intended purpose of the AI system (Mandatory)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Clearly state the intended purpose of this research and its potential applications."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 11 FreedomOfExpression",
+        "right_name": "Freedom of Expression",
+        "relevance": "The proposal's analysis of students' essays may infringe on their freedom of expression, particularly if the results are used to make decisions about their academic outcomes."
+      },
+      {
+        "article": "Article 21 NonDiscrimination",
+        "right_name": "Non-Discrimination",
+        "relevance": "The proposal's reliance on NLP pipeline features may lead to biased results that discriminate against certain groups of students, such as those with a specific first language or socioeconomic background."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "This incident highlights the potential for AI systems to perpetuate biases and discriminate against certain groups. The researcher should be aware of this risk and take steps to mitigate it."
+      },
+      {
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "This incident demonstrates the potential for AI systems to perpetuate racist stereotypes. The researcher should be aware of this risk and take steps to prevent similar incidents."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Use debiasing techniques in NLP pipeline",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Anonymize data thoroughly, including removing any identifiable information",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Obtain explicit consent from students before collecting and analyzing their essays.",
+      "Ensure that the dataset is representative of the intended population."
+    ],
+    "tier2_reflective_prompts": [
+      "How will you ensure that the NLP pipeline features used in this research do not perpetuate biases?",
+      "What measures will you take to prevent the use of this research for discriminatory purposes?"
+    ],
+    "reams_clearance_likely": false,
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "consent",
+        "student",
+        "school",
+        "scor",
+        "gender",
+        "emotion",
+        "sentiment"
+      ],
+      "rights_matched": 10,
+      "requirements_retrieved": 196,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-003",
+        "AIAAIC-005"
+      ]
+    }
+  }
+}

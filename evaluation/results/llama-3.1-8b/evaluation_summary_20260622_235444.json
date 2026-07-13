@@ -1,0 +1,370 @@
+{
+  "evaluation_timestamp": "2026-06-22T23:54:44.506303",
+  "config": {
+    "llm_model": "llama-3.3-70b-versatile",
+    "graphdb_endpoint": "http://localhost:7200/repositories/ai-ethics-kg"
+  },
+  "results": [
+    {
+      "success": true,
+      "proposal_name": "facial_recognition_law_enforcement",
+      "timestamp": "2026-06-22T23:54:18.330243",
+      "processing_time_seconds": 3.66,
+      "extracted_keywords": [
+        "facial recognition",
+        "biometric",
+        "surveillance",
+        "law enforcement",
+        "police",
+        "profiling",
+        "deep learning",
+        "computer vision"
+      ],
+      "mapped_charter_articles": [
+        "Art1",
+        "Art3",
+        "Art6",
+        "Art7",
+        "Art8",
+        "Art21",
+        "Art47",
+        "Art48"
+      ],
+      "kg_retrieval_success": true,
+      "kg_items_retrieved": {
+        "requirements_by_keyword": 3,
+        "requirements_by_charter": 0,
+        "incidents": 9,
+        "charter_rights": 0
+      },
+      "assessment": {
+        "risk_summary": "The proposed facial recognition system for law enforcement poses significant ethical risks, including potential biases in profiling, invasion of privacy, and misuse of biometric data. The system's ability to predict suspects based on behavioral patterns and demographic data raises concerns about discrimination and wrongful arrests. The collection of bulk surveillance data without proper oversight and transparency exacerbates these risks.",
+        "identified_risks": [
+          {
+            "risk": "Bias in Profiling",
+            "severity": "High",
+            "explanation": "The system's predictive profiling capabilities may perpetuate existing biases and discriminate against certain groups, leading to wrongful arrests and erosion of trust in law enforcement."
+          },
+          {
+            "risk": "Invasion of Privacy",
+            "severity": "High",
+            "explanation": "The collection and analysis of facial images from public spaces and social media profiles without consent may infringe upon individuals' right to privacy and anonymity."
+          },
+          {
+            "risk": "Misuse of Biometric Data",
+            "severity": "Medium",
+            "explanation": "The storage and sharing of biometric data, including facial geometry measurements, may be vulnerable to data breaches or unauthorized access, compromising individuals' sensitive information."
+          },
+          {
+            "risk": "Lack of Transparency and Oversight",
+            "severity": "High",
+            "explanation": "The system's development and deployment may lack sufficient transparency and oversight, potentially leading to unchecked surveillance and abuse of power."
+          }
+        ],
+        "applicable_requirements": [
+          {
+            "requirement": "Consult local laws before collecting or analysing bulk surveillance data",
+            "framework": "ACM",
+            "tier": "Tier1",
+            "action_needed": "Researchers must consult with local authorities and ensure compliance with relevant laws and regulations."
+          },
+          {
+            "requirement": "Assess whether notification to market surveillance authority is required or exempt under Art 46-1",
+            "framework": "EUAIAct",
+            "tier": "Tier1",
+            "action_needed": "Researchers must determine if notification is required and submit the necessary documentation to the relevant authorities."
+          },
+          {
+            "requirement": "Notify market surveillance authority of FRIA results",
+            "framework": "EUAIAct",
+            "tier": "Tier1",
+            "action_needed": "Researchers must notify the market surveillance authority of the results of the Facial Recognition Impact Assessment (FRIA)."
+          }
+        ],
+        "charter_rights_at_risk": [
+          {
+            "article": "Art7",
+            "right": "Respect for Private and Family Life",
+            "relevance": "The system's collection and analysis of facial images from public spaces and social media profiles may infringe upon individuals' right to privacy and anonymity."
+          },
+          {
+            "article": "Art8",
+            "right": "Protection of Personal Data",
+            "relevance": "The storage and sharing of biometric data, including facial geometry measurements, may compromise individuals' right to protection of their personal data."
+          },
+          {
+            "article": "Art21",
+            "right": "Non-Discrimination",
+            "relevance": "The system's predictive profiling capabilities may perpetuate existing biases and discriminate against certain groups, violating the principle of non-discrimination."
+          }
+        ],
+        "historical_precedents": [
+          {
+            "incident": "Detroit Police Facial Recognition False Arrest",
+            "lesson": "The importance of ensuring the accuracy and reliability of facial recognition systems to prevent wrongful arrests and protect individuals' rights."
+          },
+          {
+            "incident": "Clearview AI Mass Facial Recognition Scraping",
+            "lesson": "The need for transparency and oversight in the collection and use of facial recognition data to prevent misuse and protect individuals' privacy."
+          },
+          {
+            "incident": "Palantir ICE Surveillance System",
+            "lesson": "The potential risks and consequences of using surveillance systems for immigration enforcement, including the potential for discrimination and human rights violations."
+          }
+        ],
+        "recommended_mitigations": [
+          {
+            "mitigation": "Implement robust testing and validation protocols to ensure the accuracy and reliability of the facial recognition system",
+            "priority": "High"
+          },
+          {
+            "mitigation": "Develop and implement transparent and auditable data collection and storage practices",
+            "priority": "High"
+          },
+          {
+            "mitigation": "Establish clear guidelines and protocols for the use of predictive profiling capabilities",
+            "priority": "Medium"
+          },
+          {
+            "mitigation": "Provide individuals with notice and consent mechanisms for the collection and use of their biometric data",
+            "priority": "Medium"
+          }
+        ],
+        "tier1_mandatory_actions": [
+          "Consult with local authorities and ensure compliance with relevant laws and regulations",
+          "Determine if notification to the market surveillance authority is required and submit the necessary documentation",
+          "Notify the market surveillance authority of the results of the Facial Recognition Impact Assessment (FRIA)"
+        ],
+        "tier2_reflective_prompts": [
+          "How will the system ensure that predictive profiling capabilities do not perpetuate existing biases and discriminate against certain groups?",
+          "What measures will be taken to protect individuals' right to privacy and anonymity in the collection and analysis of facial images from public spaces and social media profiles?",
+          "How will the system ensure the accuracy and reliability of facial recognition results, and what protocols will be in place to address potential errors or misidentifications?"
+        ],
+        "overall_risk_level": "High",
+        "reams_clearance_likely": false
+      },
+      "expected_risk_level": "HIGH"
+    },
+    {
+      "success": true,
+      "proposal_name": "student_sentiment_analysis",
+      "timestamp": "2026-06-22T23:54:20.966587",
+      "processing_time_seconds": 2.64,
+      "extracted_keywords": [
+        "sentiment analysis",
+        "privacy",
+        "consent",
+        "student",
+        "nlp",
+        "natural language processing"
+      ],
+      "mapped_charter_articles": [
+        "Art1",
+        "Art3",
+        "Art7",
+        "Art8",
+        "Art11",
+        "Art14",
+        "Art21",
+        "Art25"
+      ],
+      "kg_retrieval_success": true,
+      "kg_items_retrieved": {
+        "requirements_by_keyword": 19,
+        "requirements_by_charter": 0,
+        "incidents": 1,
+        "charter_rights": 0
+      },
+      "assessment": {
+        "risk_summary": "The proposed research project on automated sentiment analysis of student essays poses risks to student privacy, consent, and potential misidentification of emotional distress. The project's use of natural language processing and sentiment analysis may also raise concerns about bias and accuracy. Furthermore, the collection of demographic data and historical grades may increase the risk of re-identification of individual students.",
+        "identified_risks": [
+          {
+            "risk": "Invasion of student privacy",
+            "severity": "High",
+            "explanation": "The project involves collecting and analyzing student essays, which may contain sensitive personal information, without explicit consent from students themselves."
+          },
+          {
+            "risk": "Misidentification of emotional distress",
+            "severity": "Medium",
+            "explanation": "The sentiment analysis tool may not accurately identify students who are struggling emotionally or academically, potentially leading to false positives or false negatives."
+          },
+          {
+            "risk": "Bias in NLP models",
+            "severity": "Medium",
+            "explanation": "The use of transformer-based language models may perpetuate existing biases in language data, affecting the accuracy and fairness of the sentiment analysis results."
+          }
+        ],
+        "applicable_requirements": [
+          {
+            "requirement": "Obtain informed consent from students and parents",
+            "framework": "REAMS",
+            "tier": "Tier1",
+            "action_needed": "Develop a clear and concise consent form that explains the purpose, risks, and benefits of the project, and obtain signatures from students and parents before collecting essays."
+          },
+          {
+            "requirement": "Protect personally identifiable information",
+            "framework": "ACM",
+            "tier": "Tier1",
+            "action_needed": "Implement robust anonymization and encryption methods to safeguard student data and prevent re-identification."
+          },
+          {
+            "requirement": "Minimize exposure of personally identifiable information",
+            "framework": "ACM",
+            "tier": "Tier1",
+            "action_needed": "Limit the collection of demographic data to only what is necessary for the project, and ensure that all data is stored securely and accessed only by authorized personnel."
+          }
+        ],
+        "charter_rights_at_risk": [
+          {
+            "article": "Art7",
+            "right": "Respect for private and family life",
+            "relevance": "The project's collection and analysis of student essays may infringe on students' right to privacy, particularly if consent is not properly obtained or if data is not adequately protected."
+          },
+          {
+            "article": "Art8",
+            "right": "Protection of personal data",
+            "relevance": "The project's handling of student data, including demographic information and essay content, must comply with data protection regulations and ensure that students' personal data is not misused or compromised."
+          }
+        ],
+        "historical_precedents": [
+          {
+            "incident": "Amazon Alexa Recording Children Without Consent",
+            "lesson": "The importance of obtaining explicit consent from parents or guardians before collecting data from minors, and ensuring that data collection and storage practices are transparent and secure."
+          }
+        ],
+        "recommended_mitigations": [
+          {
+            "mitigation": "Develop a comprehensive data protection plan",
+            "priority": "High"
+          },
+          {
+            "mitigation": "Establish an independent review board to monitor project progress and address concerns",
+            "priority": "Medium"
+          },
+          {
+            "mitigation": "Provide students and parents with clear information about the project's purpose, risks, and benefits",
+            "priority": "High"
+          }
+        ],
+        "tier1_mandatory_actions": [
+          "Obtain informed consent from students and parents",
+          "Develop a clear and concise consent form",
+          "Implement robust anonymization and encryption methods",
+          "Limit the collection of demographic data to only what is necessary"
+        ],
+        "tier2_reflective_prompts": [
+          "How might the project's findings be used to support or stigmatize students who are struggling emotionally or academically?",
+          "What are the potential consequences of misidentifying emotional distress in students, and how can these risks be mitigated?",
+          "How can the project ensure that the sentiment analysis tool is fair, accurate, and unbiased?"
+        ],
+        "overall_risk_level": "High",
+        "reams_clearance_likely": false
+      },
+      "expected_risk_level": "MEDIUM"
+    },
+    {
+      "success": true,
+      "proposal_name": "bibliometric_analysis",
+      "timestamp": "2026-06-22T23:54:44.504670",
+      "processing_time_seconds": 23.54,
+      "extracted_keywords": [
+        "personal data"
+      ],
+      "mapped_charter_articles": [
+        "Art7",
+        "Art8"
+      ],
+      "kg_retrieval_success": true,
+      "kg_items_retrieved": {
+        "requirements_by_keyword": 14,
+        "requirements_by_charter": 0,
+        "incidents": 0,
+        "charter_rights": 0
+      },
+      "assessment": {
+        "risk_summary": "The research proposal involves the collection and analysis of publicly available academic publication data, which may pose risks related to personal data protection and privacy. The project's use of bibliometric methods and topic modeling may also raise concerns about data anonymization and potential re-identification. However, the proposal explicitly states that no personal data will be collected beyond publicly available academic authorship information.",
+        "identified_risks": [
+          {
+            "risk": "Personal data protection",
+            "severity": "Low",
+            "explanation": "The project only collects publicly available data, but still requires careful handling to ensure compliance with GDPR and other regulations."
+          },
+          {
+            "risk": "Data anonymization",
+            "severity": "Medium",
+            "explanation": "The use of topic modeling and other bibliometric methods may potentially allow for re-identification of authors or institutions, which could compromise anonymity."
+          },
+          {
+            "risk": "Bias in data analysis",
+            "severity": "Medium",
+            "explanation": "The project's reliance on computational methods and citation networks may introduce biases in the analysis, which could impact the validity of the results."
+          }
+        ],
+        "applicable_requirements": [
+          {
+            "requirement": "AI system must process personal data lawfully, fairly and transparently",
+            "framework": "HorizonEurope",
+            "tier": "Tier1_Mandatory",
+            "action_needed": "Ensure that all data collection and analysis methods comply with GDPR and other relevant regulations."
+          },
+          {
+            "requirement": "Ensure processing of personal data complies with GDPR \u2014 prepare specific data protection policy",
+            "framework": "HorizonEurope",
+            "tier": "Tier1_Mandatory",
+            "action_needed": "Develop a data protection policy that outlines procedures for handling personal data and ensuring compliance with GDPR."
+          },
+          {
+            "requirement": "Are you processing any personal data for your research project?",
+            "framework": "REAMS",
+            "tier": "Tier1_Mandatory",
+            "action_needed": "Confirm that the project only collects publicly available data and does not involve the processing of personal data beyond academic authorship information."
+          }
+        ],
+        "charter_rights_at_risk": [
+          {
+            "article": "Art7",
+            "right": "Respect for private life",
+            "relevance": "The project's collection and analysis of publication data may potentially impact authors' right to private life, particularly if anonymization methods are inadequate."
+          },
+          {
+            "article": "Art8",
+            "right": "Protection of personal data",
+            "relevance": "The project's handling of personal data, even if only publicly available, must comply with regulations and ensure the protection of authors' personal data."
+          }
+        ],
+        "historical_precedents": [
+          {
+            "incident": "Cambridge Analytica data scandal",
+            "lesson": "The importance of ensuring transparency and compliance with regulations when handling personal data, even in the context of publicly available information."
+          }
+        ],
+        "recommended_mitigations": [
+          {
+            "mitigation": "Implement robust anonymization methods for publication data",
+            "priority": "High"
+          },
+          {
+            "mitigation": "Develop a comprehensive data protection policy",
+            "priority": "High"
+          },
+          {
+            "mitigation": "Regularly review and update data analysis methods to minimize bias",
+            "priority": "Medium"
+          }
+        ],
+        "tier1_mandatory_actions": [
+          "Confirm that the project only collects publicly available data",
+          "Develop a data protection policy",
+          "Ensure compliance with GDPR and other relevant regulations"
+        ],
+        "tier2_reflective_prompts": [
+          "How might the project's methods and results impact authors' right to private life?",
+          "What measures can be taken to minimize bias in data analysis and ensure the validity of results?"
+        ],
+        "overall_risk_level": "Low",
+        "reams_clearance_likely": true
+      },
+      "expected_risk_level": "LOW"
+    }
+  ]
+}

@@ -1,0 +1,1381 @@
+{
+  "proposal_id": "P03_ablation",
+  "mode": "kg_only",
+  "timestamp": "2026-06-27T13:57:34.405965",
+  "proposal_text": "This research aims to develop a deep learning model for early-stage lung cancer detection from chest CT scans. The model will be trained on a dataset of 50,000 anonymised CT scans obtained from three European hospitals under data sharing agreements. The system is intended to assist radiologists by highlighting suspicious regions and providing a probability score for malignancy. The training dataset is predominantly composed of scans from patients of European descent aged 50-80, which may limit the model's accuracy for younger patients and those from other ethnic backgrounds. The model's output will be presented alongside the radiologist's assessment but the interface does not clearly distinguish between AI-generated and clinician-generated findings. No clinical validation trial has been planned. The researchers intend to make the trained model available as open-source software for use in low-resource healthcare settings without local validation.",
+  "keywords": [
+    "data",
+    "health",
+    "patient",
+    "scor",
+    "generat"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity",
+    "Art21_NonDiscrimination",
+    "Art2_RightToLife",
+    "Art35_HealthCare",
+    "Art41_GoodAdministration",
+    "Art47_RightToEffectiveRemedy",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements": [
+    {
+      "id": "ACM001",
+      "text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM002",
+      "text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM011",
+      "text": "Manage personnel and resources to enhance quality of working life — consider how participation of annotators/crowdworkers may cause benefits or harms",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM013",
+      "text": "Discuss dual use potential — ways research could be misused and mitigations",
+      "framework": "ACMConference",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "ACM014",
+      "text": "All human research subjects or participants must receive appropriate compensation — respect minimum hourly rate in region where work is carried out",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM019",
+      "text": "Respect terms of datasets with defined licences (CC 4.0, MIT etc)",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM020",
+      "text": "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM024",
+      "text": "Consult local laws before collecting or analysing bulk surveillance data — surveillance must not predict protected categories or endanger individual well-being",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM025",
+      "text": "Communicate whether approach could facilitate deceptive interactions causing harm (theft, fraud, harassment), impersonate public figures, influence political processes, or promote hate speech",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM032",
+      "text": "High-risk models must be released with safeguards for controlled use (e.g. code of conduct for access)",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM036",
+      "text": "Have you considered whether your NLP/ML system could out, profile or endanger vulnerable individuals?",
+      "framework": "ACMConference",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "AI001",
+      "text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI008",
+      "text": "State the intended purpose of the AI system",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI010",
+      "text": "Describe the intended use — specific deployment scenarios distinct from intended purpose",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI017",
+      "text": "Reference instructions for use provided by the AI system provider",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI021",
+      "text": "Determine FRIA outcome status: Unacceptable Risk / High Residual Risk / Risks Acceptable / Risks Mitigated",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE001",
+      "text": "AI system must not deprive end-users or affected persons of ability to make decisions about their own lives or remove basic freedoms",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE002",
+      "text": "AI system must not autonomously make decisions about fundamental personal, economic, social or political issues normally decided by humans, without human oversight and redress",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE003",
+      "text": "AI system must not subordinate, coerce, deceive, manipulate, objectify or dehumanize end-users or affected persons",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE004",
+      "text": "AI system must not purposely stimulate attachment or addiction",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE005",
+      "text": "AI system should give operators and end-users ability to control, direct and intervene in basic operations",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE006",
+      "text": "End-users and affected persons must receive comprehensible information about the AI logic, significance and envisaged consequences",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE015",
+      "text": "Possible negative social impacts on certain groups must be mitigated, including impacts beyond algorithmic bias",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE016",
+      "text": "Methods to identify and mitigate negative social impacts in medium and longer term must be documented in proposal",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE017",
+      "text": "AI system must not unduly or unfairly reduce psychological and emotional well-being of end-users and stakeholders",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE019",
+      "text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE021",
+      "text": "It must be made clear to end-users they are interacting with an AI system",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE022",
+      "text": "Purpose, capabilities, limitations, benefits and risks of AI system must be openly communicated to end-users and stakeholders",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE027",
+      "text": "AI system must allow for human oversight and control over decision cycles and operation, unless compelling justification provided",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE041",
+      "text": "Use formal methodologies for explainability where possible (XAI, Transparency by Design, Model Cards)",
+      "framework": "HorizonEurope",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "HE042",
+      "text": "Test whether users understand they are interacting with non-human agent",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE049",
+      "text": "Ensure AI stakeholders, users and subjects have ethical complaint communication channels",
+      "framework": "HorizonEurope",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "HE050",
+      "text": "Have you considered whether your AI system could be misused or diverted from its original purpose (function creep)?",
+      "framework": "HorizonEurope",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "R010",
+      "text": "Assess whether research could have detrimental legal, economic or social consequences for participants",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R011",
+      "text": "Declare intentions of study: deception, illegal activity, intrusive/harmful topics, military role, dual purpose",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R027",
+      "text": "Describe general characteristics of target population (vulnerability status, children, staff/students)",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R040",
+      "text": "Will research use a gatekeeper? If yes: role, position, dependent relationship?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R050",
+      "text": "Identify risks to researcher: intrusive topic, emotional, physical, other, none",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R051",
+      "text": "For each researcher risk: estimate impact, likelihood, detail mitigation",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R053",
+      "text": "Declare if dependent relationship exists between researcher and participants",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R054",
+      "text": "Identify risks to participants: inconvenience, physical, emotional, reputational, financial, privacy, intrusive, harmful",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R056",
+      "text": "Outline direct benefits of participation",
+      "framework": "REAMS",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "R076",
+      "text": "Participant Information Leaflet appropriate for target audience (plain English, accessible format)",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R080",
+      "text": "Have you considered whether research could be misdirected for dual purpose / harm?",
+      "framework": "REAMS",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "R081",
+      "text": "Have you considered whether your recruitment could unintentionally include vulnerable participants?",
+      "framework": "REAMS",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "R082",
+      "text": "Have you considered the worst-case scenario for each identified risk?",
+      "framework": "REAMS",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "R086",
+      "text": "Have you considered the impact on personal autonomy of the technology being researched?",
+      "framework": "REAMS",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "ACM012",
+      "text": "Consider and ameliorate negative impacts of approach on political, social or natural environment",
+      "framework": "ACMConference",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "ACM023",
+      "text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM028",
+      "text": "Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI016",
+      "text": "Specify what humans can and cannot do — ability to correct outputs, ability to opt out, override capability",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI023",
+      "text": "For granular impacts (e.g. discrimination based on sex, race, gender under Art 21), specify the category of impact",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI024",
+      "text": "Assess whether notification to market surveillance authority is required or exempt under Art 46-1",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE012",
+      "text": "Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity or is sufficiently neutral",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE013",
+      "text": "Document how bias in input data and algorithmic design will be identified and avoided",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE032",
+      "text": "Input, training and output data must all be analysed for bias — verify data accounts for diversity in gender, race, age, sexual orientation, national origin, religion, health, disability",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE033",
+      "text": "Analyse training data for relevance and representativeness — undertake formal bias assessment",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE037",
+      "text": "Check for algorithmic bias during detailed development phase using methods such as counterfactual evaluation",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R028",
+      "text": "List inclusion/exclusion criteria for participant selection",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R085",
+      "text": "Have you considered anti-discrimination and bias implications of your AI/technology research?",
+      "framework": "REAMS",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "ACM027",
+      "text": "Research must not build upon or facilitate illegal activity — strongly discourage work that denies rights to privacy, speech, health, liberty, security, legal personhood, freedom of conscience/religion",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R021",
+      "text": "Is the project Health Research under HRR 2018?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM016",
+      "text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM017",
+      "text": "Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM018",
+      "text": "Authors must confirm datasets are still available for use — deprecated datasets should not be used except for audit or critical assessment",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM021",
+      "text": "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM029",
+      "text": "Provide data and model documentation via structured templates (Model Cards, Datasheets for Datasets)",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM030",
+      "text": "Provide licences for released data or models including intended use and limitations",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM033",
+      "text": "Make accessible all information required to understand research artefacts (code, environment, weights, hyperparameters) to enable external scrutiny",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM034",
+      "text": "Disclose information sufficient for reproduction of results",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI002",
+      "text": "Record necessity status: FRIA Required or FRIA Not Required",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI003",
+      "text": "Record when FRIA was created, modified, submitted, accepted",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI004",
+      "text": "Record who conducted the FRIA (organisation, personnel, contributors)",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI005",
+      "text": "Record identifier/version of FRIA — must be regularly updated",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI006",
+      "text": "Record conformance to any codes of conduct",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI007",
+      "text": "Describe deployer's processes in which the AI system will be used",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI009",
+      "text": "Specify the period of time and frequency the AI system is intended to be used",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI012",
+      "text": "Assess the likelihood that those persons/groups will be affected",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI015",
+      "text": "Describe human oversight measures in place",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI018",
+      "text": "Specify measures to be taken if risks materialise — internal governance arrangements and complaint mechanisms",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI020",
+      "text": "If a DPIA already exists under GDPR, document how it complements the FRIA — what it covers and what gaps remain",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI026",
+      "text": "Complete the FRIA questionnaire template provided by the AI Office",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI027",
+      "text": "Document whether an automated tool was used to support the FRIA process",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI028",
+      "text": "Have you considered whether the same AI system with one intended purpose could have different intended uses causing different rights impacts?",
+      "framework": "EUAIAct",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "AI029",
+      "text": "Have you considered whether pseudonymised or anonymised data could still lead to identification of affected individuals?",
+      "framework": "EUAIAct",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "AI030",
+      "text": "Have you assessed impact at the granular level — not just non-discrimination but which specific grounds (sex, race, disability, age)?",
+      "framework": "EUAIAct",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "HE011",
+      "text": "Data must be acquired, stored and used in a manner auditable by humans",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE023",
+      "text": "Traceability measures must be considered for the AI system's entire lifecycle",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE024",
+      "text": "Research proposal should explain how decisions made by system will be explainable to users, including reasons for decisions",
+      "framework": "HorizonEurope",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "HE025",
+      "text": "Development processes must keep records of all relevant decisions regarding ethical compliance",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE026",
+      "text": "Document how ethically and socially undesirable effects will be detected, stopped and prevented from reoccurring",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE028",
+      "text": "Research proposal should include evaluation of possible ethics risks including risk assessment procedures and post-deployment mitigation",
+      "framework": "HorizonEurope",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "HE030",
+      "text": "All AI systems should be auditable by independent third parties — system should generate human-accessible logs",
+      "framework": "HorizonEurope",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "HE034",
+      "text": "Ensure ability to go back to each state the system has been in to determine training data used at any point",
+      "framework": "HorizonEurope",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "HE039",
+      "text": "Establish traceability and accountability measures covering: design methods, testing methods, system outcomes, and alternative decision scenarios",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE040",
+      "text": "Code must be documented and explained within software and ancillary documentation",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE043",
+      "text": "Ensure audit controls check performance and record decisions about system purpose and functioning",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE044",
+      "text": "Communicate system capabilities and limitations to stakeholders in clear, understandable and proactive manner",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE045",
+      "text": "Establish processes to obtain user feedback and mechanisms to adapt system in response",
+      "framework": "HorizonEurope",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "HE046",
+      "text": "Establish and implement plans supporting operational compliance with ethical requirements",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE047",
+      "text": "Update data, access, security and risk management policies to account for ethical requirements",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE052",
+      "text": "Have you assessed the environmental footprint of your AI system's compute and supply chain?",
+      "framework": "HorizonEurope",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "R001",
+      "text": "Applicant must be identified with name, staff/student number, email, school/department",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R002",
+      "text": "Applicant must confirm role on project (PI / Non-PI / Other)",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R003",
+      "text": "Applicant must have read and understood Trinity Policy on Good Research Practice",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R004",
+      "text": "Applicant must have completed Research Integrity Training Module",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R006",
+      "text": "All Trinity collaborators must be listed with role, name, email, school",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R007",
+      "text": "All non-Trinity collaborators must be listed with role, name, affiliation, country",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R008",
+      "text": "Project title, data collection start/end dates, project end date must be specified",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R012",
+      "text": "State research aims, objectives, research question or hypothesis (100 words)",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R013",
+      "text": "Lay summary including background, rationale, research approach, study design (250 words)",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R016",
+      "text": "Declare whether project is funded",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R017",
+      "text": "Declare if study is phased",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R030",
+      "text": "For each site: licence, permission, or ethics approval status",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R032",
+      "text": "Outline data collection methods",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R035",
+      "text": "Approximate target population size and proposed sample size",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R036",
+      "text": "Justification for sample size",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R037",
+      "text": "Outline method of analysis (100 words)",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R038",
+      "text": "Outline sampling method",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R041",
+      "text": "Step-by-step description of participant recruitment process",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R057",
+      "text": "Declare any conflict of interest from PI or collaborators",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R058",
+      "text": "RPAMS number if applicable",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R059",
+      "text": "List all sources of funding with type (industrial, state, philanthropic, other)",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R060",
+      "text": "Funder-specific requirements or obligations for ethics committee attention",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R061",
+      "text": "Will results be used/disclosed for commercial purposes?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R062",
+      "text": "Conflict of interest from funding or commercialisation",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R075",
+      "text": "All required attachments uploaded (consent forms, certificates, PIL, recruitment material, methods instruments, DPO letter)",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R077",
+      "text": "Applicant declaration: accuracy, compliance with Good Research Practice, GDPR, HRR, TCD policies",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R078",
+      "text": "PI declaration and approval (if applicant ≠ PI)",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R079",
+      "text": "Supervisor declaration and approval (all student applications)",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM035",
+      "text": "Ensure adequate awareness of regional legal requirements — additional justification required where compliance could not be met due to human rights issues",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI019",
+      "text": "If relying on a previously conducted FRIA, document which prior FRIA is being reused and what has changed",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI022",
+      "text": "For each affected fundamental right, state whether there is an impact and its severity",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE029",
+      "text": "Consider how end-users, data subjects and third parties can report complaints, ethical concerns or adverse events",
+      "framework": "HorizonEurope",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "HE048",
+      "text": "Establish monitoring goals and metrics for ethics compliance — periodically monitor and improve",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R055",
+      "text": "Could participants reveal legally disclosable information (child protection, malpractice)?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R074",
+      "text": "For each processing risk: list risk, severity/impact, likelihood, mitigation actions",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM003",
+      "text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM004",
+      "text": "Consider and ameliorate biases in data and biased code/model outputs",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM005",
+      "text": "Respect intellectual property and data/code ownership — cite creators of artefacts used and use them as intended (respect licences)",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM007",
+      "text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM008",
+      "text": "Consider possible risks and impacts of the research approach itself (not just applications)",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM010",
+      "text": "Design and implement systems that are robustly and usably secure — especially systems close to production deployment",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM015",
+      "text": "Research involving human participants must follow existing institutional protocols (IRB or equivalent) — if no formal process exists, undergo equivalent informal ethics review",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM022",
+      "text": "Consider risk that applications could open security vulnerabilities or cause serious accidents — recommend or implement protections",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM031",
+      "text": "Use privacy protocols, encryption and anonymisation to reduce risk of data leakage — stronger measures for sensitive data",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI011",
+      "text": "Identify categories of natural persons and groups likely to be affected by the AI system in the specific context",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI013",
+      "text": "Identify consequences and impacts on affected persons/groups",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI025",
+      "text": "If required: notify market surveillance authority of FRIA results",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE007",
+      "text": "AI system must process personal data lawfully, fairly and transparently",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE008",
+      "text": "Data minimisation and data protection by design and by default must be integrated",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE009",
+      "text": "Appropriate technical and organisational measures must be in place to safeguard rights of data subjects (anonymisation, pseudonymisation, encryption, aggregation)",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE031",
+      "text": "Ensure processing of personal data complies with GDPR — prepare specific data protection policy",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE036",
+      "text": "Ensure no new personal data collected or created during development or use unless necessary",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R019",
+      "text": "Will consent be obtained from participants (or proxy/guardian)?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R023",
+      "text": "Are you processing any personal data for your research project?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R026",
+      "text": "If processing recruitment data: outline storage, confidentiality, destruction plan",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R042",
+      "text": "How will consent be obtained and by whom?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R047",
+      "text": "How will participants be informed about use of their personal data?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R048",
+      "text": "How can participants withdraw consent and/or their data?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R049",
+      "text": "Specify data collection setting(s)",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R067",
+      "text": "List all types of personal data processed (including special category)",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R068",
+      "text": "Does project involve special category data or criminal conviction data?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R071",
+      "text": "Describe security measures for data access, storage, transfer",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R083",
+      "text": "Have you considered indirect identifiability from participant profiles in small populations?",
+      "framework": "REAMS",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "R084",
+      "text": "Have you considered whether anonymised data could be re-identified?",
+      "framework": "REAMS",
+      "tier": "Tier2_Reflective",
+      "mandatory": "false"
+    },
+    {
+      "id": "ACM006",
+      "text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "ACM009",
+      "text": "Access computing and communication resources only when authorised or compelled by public good",
+      "framework": "ACMConference",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "AI014",
+      "text": "Identify specific risks of harm to fundamental rights",
+      "framework": "EUAIAct",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE010",
+      "text": "Strong security measures must prevent data breaches and leakages",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "HE035",
+      "text": "If creating inferred personal data or aggregating datasets, new data must receive same protection level as original data",
+      "framework": "HorizonEurope",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R005",
+      "text": "Applicant must have completed Data Protection Training within last 24 months",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R014",
+      "text": "Identify all countries where data is collected or processed",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R018",
+      "text": "Specify data sources: primary only, secondary only, or both",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R022",
+      "text": "Does the project require a Consent Declaration under HRR?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R024",
+      "text": "Are you processing any pseudonymised (coded) data?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R025",
+      "text": "Are you processing personal data for participant recruitment?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R029",
+      "text": "Name each data collection site/source",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R031",
+      "text": "Was a DPIA required at each site/source?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R033",
+      "text": "Specify if methods are exclusively low-risk (quality assurance, anonymous surveys, public observation, audits, public domain data)",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R063",
+      "text": "All Trinity researchers completed GDPR training?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R064",
+      "text": "All Trinity staff/students familiar with Personal Data Breach Procedural Guidelines?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R065",
+      "text": "What is Trinity's role: Controller, Joint Controller, or Processor?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R066",
+      "text": "Number of participants whose personal data is processed (≥100 or <100)",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R069",
+      "text": "Is personal data shared within Trinity (outside research team)?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R070",
+      "text": "Is personal data shared with third parties outside Trinity?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R072",
+      "text": "Are personal data transferred outside UK/EEA?",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    },
+    {
+      "id": "R073",
+      "text": "Detail how long personal data retained in identifiable/coded format",
+      "framework": "REAMS",
+      "tier": "Tier1_Mandatory",
+      "mandatory": "true"
+    }
+  ],
+  "retrieved_incidents": [
+    {
+      "id": "AIAAIC-003",
+      "title": "Microsoft Tay Chatbot Harmful Outputs"
+    },
+    {
+      "id": "AIAAIC-005",
+      "title": "Google Photos Labeled Black People as Gorillas"
+    },
+    {
+      "id": "AIAAIC-009",
+      "title": "Uber Self-Driving Car Fatal Pedestrian Crash"
+    },
+    {
+      "id": "AIAAIC-001",
+      "title": "Amazon Hiring Algorithm Gender Bias"
+    },
+    {
+      "id": "AIAAIC-002",
+      "title": "Detroit Police Facial Recognition False Arrest"
+    },
+    {
+      "id": "AIAAIC-017",
+      "title": "IBM Watson Oncology Unsafe Recommendations"
+    },
+    {
+      "id": "AIAAIC-018",
+      "title": "Facebook Sri Lanka Hate Speech Amplification"
+    },
+    {
+      "id": "AIAAIC-006",
+      "title": "Healthcare Algorithm Racial Bias (Optum)"
+    }
+  ],
+  "assessment": {
+    "note": "KG-only mode — no LLM interpretation",
+    "requirements_count": 188,
+    "incidents_count": 8,
+    "rights_count": 8
+  }
+}

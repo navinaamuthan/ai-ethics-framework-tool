@@ -1,0 +1,136 @@
+{
+  "proposal_id": "P01_ablation",
+  "mode": "full",
+  "timestamp": "2026-06-27T13:55:58.652119",
+  "proposal_text": "This research proposes to deploy a real-time facial recognition system across Trinity College Dublin campus buildings for automated security screening. The system will use CCTV feeds to identify individuals entering buildings by matching their faces against a database of enrolled students and staff. Facial biometric data will be collected during student registration without separate opt-in consent. The system will flag unrecognised individuals to campus security for manual review. No Data Protection Impact Assessment has been conducted. The facial recognition model will be sourced from a commercial provider and has not been independently audited for demographic bias. Historical studies have shown that such systems exhibit significantly higher error rates for women and people of colour. The research team plans to retain facial embeddings for the duration of each academic year.",
+  "keywords": [
+    "bias",
+    "data",
+    "consent",
+    "student",
+    "facial recogn",
+    "biometric"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity",
+    "Art20_EqualityBeforeLaw",
+    "Art21_NonDiscrimination",
+    "Art23_GenderEquality",
+    "Art24_RightsOfChild",
+    "Art3_RightToIntegrity",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 193,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The proposed facial recognition system poses significant risks to individuals' privacy, non-discrimination, and human dignity. The lack of opt-in consent for data collection, potential demographic bias in the model, and retention of facial embeddings for an academic year all contribute to these concerns.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Data Protection",
+        "severity": "High",
+        "explanation": "The system collects biometric data without explicit consent, which is a clear violation of individuals' right to privacy (Article 8)."
+      },
+      {
+        "risk": "Non-Discrimination",
+        "severity": "High",
+        "explanation": "Historical studies have shown that facial recognition systems exhibit higher error rates for women and people of color, posing a significant risk of discrimination (Article 21)."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm.",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment to identify potential harms and develop strategies to mitigate them."
+      },
+      {
+        "requirement_id": "AI008",
+        "requirement_text": "State the intended purpose of the AI system.",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Clearly articulate the purpose and scope of the facial recognition system in the proposal."
+      },
+      {
+        "requirement_id": "HE015",
+        "requirement_text": "Possible negative social impacts on certain groups must be mitigated, including impacts beyond algorithmic bias.",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of potential social impacts and develop strategies to mitigate them."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The system collects biometric data without explicit consent, which is a clear violation of individuals' right to privacy."
+      },
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "Historical studies have shown that facial recognition systems exhibit higher error rates for women and people of color, posing a significant risk of discrimination."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The incident highlights the potential for facial recognition systems to lead to false arrests and miscarriages of justice, emphasizing the need for careful consideration of potential social impacts."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct a thorough risk assessment to identify potential harms and develop strategies to mitigate them.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement measures to ensure the accuracy and fairness of the facial recognition system, such as regular auditing and testing.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough risk assessment to identify potential harms and develop strategies to mitigate them.",
+      "Clearly articulate the purpose and scope of the facial recognition system in the proposal."
+    ],
+    "tier2_reflective_prompts": [
+      "How will you ensure that the facial recognition system is fair and unbiased?",
+      "What measures will you take to prevent false arrests or miscarriages of justice?"
+    ],
+    "reams_clearance_likely": false,
+    "_retrieval_metadata": {
+      "keywords": [
+        "bias",
+        "data",
+        "consent",
+        "student",
+        "facial recogn",
+        "biometric"
+      ],
+      "rights_matched": 9,
+      "requirements_retrieved": 193,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "incidents_sample": [
+        "AIAAIC-003",
+        "AIAAIC-005",
+        "AIAAIC-009",
+        "AIAAIC-001",
+        "AIAAIC-002"
+      ]
+    }
+  }
+}

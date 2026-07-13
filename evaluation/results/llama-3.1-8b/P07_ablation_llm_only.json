@@ -1,0 +1,87 @@
+{
+  "proposal_id": "P07_ablation",
+  "mode": "llm_only",
+  "timestamp": "2026-06-27T13:58:43.472680",
+  "proposal_text": "This research proposes to apply sentiment analysis and linguistic style detection to a corpus of 5,000 anonymised undergraduate essays submitted to the School of English at Trinity College Dublin. The aim is to investigate whether emotional tone and writing style correlate with academic grade outcomes. Essays will be collected from the past three academic years with student consent obtained retrospectively via email. The NLP pipeline will extract features including sentiment polarity, subjectivity scores, vocabulary complexity, and sentence structure patterns. The researchers will investigate whether detectable stylistic differences correlate with students' first language, gender, or socioeconomic background as indicated by fee status. All analysis will be performed on pseudonymised data with student IDs replaced by random codes. Results will be published in aggregate form only.",
+  "keywords": [],
+  "matched_rights": [],
+  "retrieved_requirements": [],
+  "retrieved_incidents": [],
+  "assessment": {
+    "risk_summary": "The primary ethical risks in this research proposal are related to data protection, informed consent, and potential biases in sentiment analysis.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Inadequate Informed Consent",
+        "severity": "High",
+        "explanation": "The researchers will be collecting student essays from the past three academic years, but they are obtaining consent retrospectively via email. This may not meet the requirements of informed consent, particularly if students did not explicitly agree to their data being used for research purposes."
+      },
+      {
+        "risk": "Data Protection Breaches",
+        "severity": "Medium",
+        "explanation": "The researchers will be handling large amounts of student data, including identifiable information such as fee status. There is a risk that this data could be compromised or misused if proper safeguards are not in place."
+      },
+      {
+        "risk": "Bias in Sentiment Analysis",
+        "severity": "Medium",
+        "explanation": "The researchers will be using NLP to analyze the emotional tone and writing style of student essays. There is a risk that this analysis could be biased towards certain groups or individuals, particularly if the training data is not representative."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "GDPR/2016/679",
+        "requirement_text": "Article 5(1)(a): Personal data shall be processed lawfully, fairly and in a transparent manner.",
+        "framework": "EU General Data Protection Regulation (GDPR)",
+        "tier": "Mandatory",
+        "action_needed": "Ensure that students are fully informed about how their data will be used for research purposes and obtain explicit consent."
+      },
+      {
+        "requirement_id": "GDPR/2016/679",
+        "requirement_text": "Article 32: Security of processing.",
+        "framework": "EU General Data Protection Regulation (GDPR)",
+        "tier": "Mandatory",
+        "action_needed": "Implement appropriate technical and organizational measures to ensure the security of student data."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 8",
+        "right_name": "Right to Respect for Private Life",
+        "relevance": "The researchers will be handling large amounts of personal data, including identifiable information such as fee status."
+      },
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The researchers may inadvertently perpetuate biases in sentiment analysis if the training data is not representative."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "Cambridge Analytica (2018)",
+        "incident_title": "Misuse of personal data for research purposes",
+        "lesson": "The importance of obtaining explicit consent and ensuring that personal data is handled securely."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement a robust informed consent process, including clear information about how student data will be used for research purposes.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Use pseudonymized data to protect student identities and implement appropriate technical measures to ensure the security of personal data.",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Regularly audit and review the NLP pipeline to ensure that it is not perpetuating biases or discriminating against certain groups.",
+        "priority": "Low"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Ensure that students are fully informed about how their data will be used for research purposes and obtain explicit consent."
+    ],
+    "tier2_reflective_prompts": [
+      "What measures can be taken to ensure that the NLP pipeline is not perpetuating biases or discriminating against certain groups?"
+    ],
+    "reams_clearance_likely": true
+  }
+}

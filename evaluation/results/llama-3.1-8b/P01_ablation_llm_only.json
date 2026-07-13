@@ -1,0 +1,80 @@
+{
+  "proposal_id": "P01_ablation",
+  "mode": "llm_only",
+  "timestamp": "2026-06-27T13:55:15.003607",
+  "proposal_text": "This research proposes to deploy a real-time facial recognition system across Trinity College Dublin campus buildings for automated security screening. The system will use CCTV feeds to identify individuals entering buildings by matching their faces against a database of enrolled students and staff. Facial biometric data will be collected during student registration without separate opt-in consent. The system will flag unrecognised individuals to campus security for manual review. No Data Protection Impact Assessment has been conducted. The facial recognition model will be sourced from a commercial provider and has not been independently audited for demographic bias. Historical studies have shown that such systems exhibit significantly higher error rates for women and people of colour. The research team plans to retain facial embeddings for the duration of each academic year.",
+  "keywords": [],
+  "matched_rights": [],
+  "retrieved_requirements": [],
+  "retrieved_incidents": [],
+  "assessment": {
+    "risk_summary": "The deployment of a real-time facial recognition system raises concerns about biometric data collection, consent, and potential biases in the facial recognition model.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Biometric Data Collection without Consent",
+        "severity": "High",
+        "explanation": "The system will collect facial biometric data from students and staff during registration without separate opt-in consent, which may be in breach of data protection laws."
+      },
+      {
+        "risk": "Potential Biases in Facial Recognition Model",
+        "severity": "Medium",
+        "explanation": "Historical studies have shown that facial recognition systems exhibit higher error rates for women and people of colour, which could lead to discriminatory outcomes."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "GDPR/2016/679",
+        "requirement_text": "Article 9: Processing of special categories of personal data (e.g. biometric data)",
+        "framework": "General Data Protection Regulation (EU) 2016/679",
+        "tier": "Mandatory",
+        "action_needed": "Conduct a Data Protection Impact Assessment (DPIA) and obtain explicit consent for the collection of facial biometric data."
+      },
+      {
+        "requirement_id": "GDPR/2016/679",
+        "requirement_text": "Article 25: Data protection by design and default",
+        "framework": "General Data Protection Regulation (EU) 2016/679",
+        "tier": "Mandatory",
+        "action_needed": "Implement measures to mitigate potential biases in the facial recognition model, such as independent auditing for demographic bias."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 8: Right to respect for private life",
+        "right_name": "Right to privacy and data protection",
+        "relevance": "The collection of facial biometric data without consent may infringe on the right to respect for private life."
+      },
+      {
+        "article": "Article 21: Non-discrimination",
+        "right_name": "Non-Discrimination",
+        "relevance": "The potential biases in the facial recognition model could lead to discriminatory outcomes, violating the principle of non-discrimination."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "Cambridge Analytica scandal (2018)",
+        "incident_title": "Misuse of personal data for targeted advertising",
+        "lesson": "The importance of transparent and responsible data collection, processing, and use to prevent similar scandals."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct a thorough DPIA and obtain explicit consent from students and staff for the collection of facial biometric data.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement measures to mitigate potential biases in the facial recognition model, such as independent auditing for demographic bias.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a DPIA",
+      "Obtain explicit consent from students and staff"
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential consequences of deploying this system without addressing the identified risks?",
+      "How can we ensure that the facial recognition model is fair, transparent, and unbiased?"
+    ],
+    "reams_clearance_likely": false
+  }
+}

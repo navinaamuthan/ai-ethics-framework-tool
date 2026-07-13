@@ -1,0 +1,89 @@
+{
+  "proposal_id": "P03_ablation",
+  "mode": "llm_only",
+  "timestamp": "2026-06-27T13:56:49.654001",
+  "proposal_text": "This research aims to develop a deep learning model for early-stage lung cancer detection from chest CT scans. The model will be trained on a dataset of 50,000 anonymised CT scans obtained from three European hospitals under data sharing agreements. The system is intended to assist radiologists by highlighting suspicious regions and providing a probability score for malignancy. The training dataset is predominantly composed of scans from patients of European descent aged 50-80, which may limit the model's accuracy for younger patients and those from other ethnic backgrounds. The model's output will be presented alongside the radiologist's assessment but the interface does not clearly distinguish between AI-generated and clinician-generated findings. No clinical validation trial has been planned. The researchers intend to make the trained model available as open-source software for use in low-resource healthcare settings without local validation.",
+  "keywords": [],
+  "matched_rights": [],
+  "retrieved_requirements": [],
+  "retrieved_incidents": [],
+  "assessment": {
+    "risk_summary": "The primary ethical risks in this research proposal include biased model performance due to limited data diversity, unclear distinction between AI-generated and clinician-generated findings, and potential harm from unvalidated use of the model in low-resource settings.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Bias in Model Performance",
+        "severity": "High",
+        "explanation": "The training dataset is predominantly composed of scans from patients of European descent aged 50-80, which may limit the model's accuracy for younger patients and those from other ethnic backgrounds."
+      },
+      {
+        "risk": "Lack of Transparency in Model Output",
+        "severity": "Medium",
+        "explanation": "The interface does not clearly distinguish between AI-generated and clinician-generated findings, which may lead to confusion or misinterpretation by radiologists."
+      },
+      {
+        "risk": "Potential Harm from Unvalidated Use",
+        "severity": "High",
+        "explanation": "No clinical validation trial has been planned, and the model is intended for use in low-resource settings without local validation, which may lead to harm or incorrect diagnoses."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "GDPR/2016/679 Article 9(2)(h)",
+        "requirement_text": "Health data must be processed in accordance with the principles of confidentiality and security.",
+        "framework": "General Data Protection Regulation (GDPR)",
+        "tier": "Mandatory",
+        "action_needed": "Ensure that the dataset is anonymized and processed in accordance with GDPR principles."
+      },
+      {
+        "requirement_id": "ISO 27799:2016 Clause 5.2.1",
+        "requirement_text": "Organizations must implement measures to ensure confidentiality, integrity, and availability of health information systems.",
+        "framework": "International Organization for Standardization (ISO) 27799",
+        "tier": "Mandatory",
+        "action_needed": "Implement measures to ensure the security and confidentiality of the dataset and model output."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The biased model performance may discriminate against certain patient groups, such as those from non-European backgrounds or younger patients."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Right to Protection of Personal Data",
+        "relevance": "The processing and storage of health data raises concerns about the protection of personal data."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "2019-01-01",
+        "incident_title": "Google's AI-powered breast cancer screening tool failed to detect tumors in women with darker skin tones.",
+        "lesson": "The incident highlights the importance of ensuring model diversity and fairness, particularly when working with health data."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Collect and incorporate diverse datasets to improve model performance and fairness.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement clear labeling of AI-generated findings in the interface.",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Conduct clinical validation trials before deploying the model in low-resource settings.",
+        "priority": "High"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Ensure GDPR compliance",
+      "Implement security measures"
+    ],
+    "tier2_reflective_prompts": [
+      "How will you ensure that the model is fair and unbiased for all patient groups?",
+      "What measures will you take to prevent harm from unvalidated use of the model in low-resource settings?"
+    ],
+    "reams_clearance_likely": false
+  }
+}

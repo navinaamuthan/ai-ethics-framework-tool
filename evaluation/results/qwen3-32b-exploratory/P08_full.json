@@ -1,0 +1,410 @@
+{
+  "proposal_id": "P08",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-05T19:02:27.507859",
+  "proposal_text": "This project proposes to develop a conversational AI chatbot to provide initial mental health support triage for university students. The chatbot will conduct a structured conversational assessment to evaluate symptoms of anxiety and depression using validated clinical screening instruments (PHQ-9, GAD-7) adapted into conversational format. Based on the assessment, the chatbot will recommend one of three pathways: self-help resources, a scheduled counselling appointment, or immediate crisis intervention referral. The chatbot will store conversation logs for quality improvement purposes. Student data will be pseudonymised but linked to student records to enable follow-up. The chatbot will include a disclaimer that it is not a substitute for professional mental health care. The system has not been validated against clinical assessments performed by qualified professionals. Conversations will be processed by an external cloud-based NLP service.",
+  "llm_model": "qwen/qwen3-32b",
+  "keywords": [
+    "data",
+    "health",
+    "student",
+    "recommend",
+    "chatbot"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art1_HumanDignity",
+    "Art24_RightsOfChild",
+    "Art2_RightToLife",
+    "Art35_HealthCare",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 176,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The project involves high-risk processing of sensitive mental health data linked to student identities, with potential for misdiagnosis, function creep, and psychological harm. The chatbot's unvalidated decision-making could lead to inappropriate referrals, while external NLP processing introduces data privacy vulnerabilities. Pseudonymisation without full anonymisation increases risks of re-identification and misuse.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Inaccurate mental health triage leading to delayed professional care",
+        "severity": "High",
+        "explanation": "Unvalidated clinical screening instruments may produce unreliable assessments, risking harm to vulnerable students"
+      },
+      {
+        "risk": "Data privacy breaches via external cloud NLP service",
+        "severity": "High",
+        "explanation": "Pseudonymised data linked to student records increases exposure to re-identification risks if third-party systems are compromised"
+      },
+      {
+        "risk": "Function creep enabling non-medical use of mental health data",
+        "severity": "Medium",
+        "explanation": "Conversation logs stored for quality improvement could be repurposed for behavioral profiling or insurance underwriting"
+      },
+      {
+        "risk": "Psychological manipulation through conversational design",
+        "severity": "Medium",
+        "explanation": "Structured assessments may inadvertently normalize harmful self-diagnosis behaviors or create dependency on AI triage"
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM020",
+        "requirement_text": "Assess dataset representativeness",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct demographic analysis of training data to ensure equitable representation across student populations"
+      },
+      {
+        "requirement_id": "HE021",
+        "requirement_text": "Disclose AI interaction to users",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement unambiguous interface elements indicating AI nature of interactions during triage"
+      },
+      {
+        "requirement_id": "AI001",
+        "requirement_text": "FRIA obligation for high-risk systems",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct formal Fundamental Rights Impact Assessment for mental health data processing"
+      },
+      {
+        "requirement_id": "ACM025",
+        "requirement_text": "Assess deceptive interaction risks",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement safeguards against chatbot responses that could be misinterpreted as professional medical advice"
+      },
+      {
+        "requirement_id": "HE050",
+        "requirement_text": "Test for function creep potential",
+        "framework": "HorizonEurope",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Develop data usage policy restricting conversation logs to quality improvement purposes"
+      },
+      {
+        "requirement_id": "ACM036",
+        "requirement_text": "Assess vulnerability exposure",
+        "framework": "ACMConference",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Evaluate risks of chatbot profiling students with pre-existing mental health conditions"
+      },
+      {
+        "requirement_id": "AI021",
+        "requirement_text": "Determine risk mitigation status",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Document residual risks after implementing clinical validation protocols"
+      },
+      {
+        "requirement_id": "HE002",
+        "requirement_text": "Human oversight requirements",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Establish mandatory human review for all crisis intervention referrals"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 7",
+        "right_name": "Right to Private Life",
+        "relevance": "Processing of sensitive mental health data linked to student identities"
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "Pseudonymised data storage with potential re-identification risks"
+      },
+      {
+        "article": "Article 35",
+        "right_name": "Healthcare",
+        "relevance": "Automated mental health triage affecting access to appropriate care"
+      },
+      {
+        "article": "Article 1",
+        "right_name": "Human Dignity",
+        "relevance": "Potential dehumanization through algorithmic assessment of psychological distress"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "Unmoderated conversational AI can generate harmful content that normalizes mental health stigma"
+      },
+      {
+        "incident_id": "AIAAIC-025",
+        "incident_title": "Amazon Alexa Recording Children Without Consent",
+        "lesson": "Voice data collection systems may inadvertently capture sensitive mental health disclosures from minors"
+      },
+      {
+        "incident_id": "AIAAIC-009",
+        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
+        "lesson": "Automated decision-making systems require rigorous validation to prevent catastrophic failures"
+      },
+      {
+        "incident_id": "AIAAIC-027",
+        "incident_title": "Spotify Mood Inference Patent",
+        "lesson": "Mental state inference from conversational data raises risks of psychological profiling without consent"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement clinical validation protocols with licensed mental health professionals",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Establish data anonymization pipeline for conversation logs",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop real-time human oversight for crisis intervention referrals",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct regular bias audits of screening instruments across demographic groups",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Create opt-out mechanism for data collection with clear opt-in consent",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct FRIA with clinical ethics board approval",
+      "Implement GDPR-compliant data encryption for cloud storage",
+      "Develop clear user interface distinguishing AI from human professionals",
+      "Establish data retention policy with automatic deletion after 12 months"
+    ],
+    "tier2_reflective_prompts": [
+      "What safeguards are needed to prevent chatbot responses from being used as evidence in disciplinary proceedings?",
+      "How might the system's triage recommendations be misinterpreted as medical diagnoses?",
+      "What long-term psychological effects could result from students relying on AI for mental health support?",
+      "How can we ensure equitable access to crisis intervention resources across socioeconomic groups?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "health",
+        "student",
+        "recommend",
+        "chatbot"
+      ],
+      "rights_matched": 8,
+      "requirements_retrieved": 176,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM024",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE049",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "R043",
+        "R044",
+        "R045",
+        "R055",
+        "AI024",
+        "R021",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI009",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE011",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE013",
+        "HE033",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM020",
+        "HE021",
+        "AI001",
+        "ACM025",
+        "HE050",
+        "ACM036",
+        "AI021",
+        "HE002"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-003",
+        "AIAAIC-005"
+      ]
+    }
+  }
+}

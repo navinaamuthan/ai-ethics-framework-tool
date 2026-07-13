@@ -1,0 +1,133 @@
+{
+  "proposal_id": "P03_ablation",
+  "mode": "full",
+  "timestamp": "2026-06-27T13:57:34.582498",
+  "proposal_text": "This research aims to develop a deep learning model for early-stage lung cancer detection from chest CT scans. The model will be trained on a dataset of 50,000 anonymised CT scans obtained from three European hospitals under data sharing agreements. The system is intended to assist radiologists by highlighting suspicious regions and providing a probability score for malignancy. The training dataset is predominantly composed of scans from patients of European descent aged 50-80, which may limit the model's accuracy for younger patients and those from other ethnic backgrounds. The model's output will be presented alongside the radiologist's assessment but the interface does not clearly distinguish between AI-generated and clinician-generated findings. No clinical validation trial has been planned. The researchers intend to make the trained model available as open-source software for use in low-resource healthcare settings without local validation.",
+  "keywords": [
+    "data",
+    "health",
+    "patient",
+    "scor",
+    "generat"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity",
+    "Art21_NonDiscrimination",
+    "Art2_RightToLife",
+    "Art35_HealthCare",
+    "Art41_GoodAdministration",
+    "Art47_RightToEffectiveRemedy",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 188,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The proposal poses risks to human dignity, non-discrimination, and data protection due to potential biases in the model's accuracy for younger patients and those from other ethnic backgrounds, lack of clinical validation, and unclear distinction between AI-generated and clinician-generated findings.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Bias in Model Accuracy",
+        "severity": "High",
+        "explanation": "The model's training dataset is predominantly composed of scans from patients of European descent aged 50-80, which may limit the model's accuracy for younger patients and those from other ethnic backgrounds."
+      },
+      {
+        "risk": "Lack of Clinical Validation",
+        "severity": "High",
+        "explanation": "No clinical validation trial has been planned, which increases the risk of deploying an untested AI system in healthcare settings."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Discuss potential biases in the model's accuracy and mitigation strategies"
+      },
+      {
+        "requirement_id": "HE015",
+        "requirement_text": "Possible negative social impacts on certain groups must be mitigated, including impacts beyond algorithmic bias (Mandatory)",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Assess and mitigate potential biases in the model's accuracy"
+      },
+      {
+        "requirement_id": "AI008",
+        "requirement_text": "State the intended purpose of the AI system (Mandatory)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Clearly state the intended purpose of the AI system"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The model's potential biases in accuracy may discriminate against certain groups, including younger patients and those from other ethnic backgrounds."
+      },
+      {
+        "article": "Article 1",
+        "right_name": "Human Dignity",
+        "relevance": "The deployment of an untested AI system in healthcare settings may compromise human dignity"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
+        "lesson": "This incident highlights the importance of assessing and mitigating potential biases in AI systems, particularly in healthcare settings"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct a thorough clinical validation trial before deploying the AI system",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement measures to ensure transparency and explainability of the AI system's decision-making process",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough clinical validation trial before deploying the AI system",
+      "Clearly state the intended purpose of the AI system in accordance with EUAIAct requirements"
+    ],
+    "tier2_reflective_prompts": [
+      "How will you ensure that the model's accuracy is not compromised by biases in the training dataset?",
+      "What measures will you take to mitigate potential biases in the model's accuracy?"
+    ],
+    "reams_clearance_likely": false,
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "health",
+        "patient",
+        "scor",
+        "generat"
+      ],
+      "rights_matched": 8,
+      "requirements_retrieved": 188,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "incidents_sample": [
+        "AIAAIC-003",
+        "AIAAIC-005",
+        "AIAAIC-009",
+        "AIAAIC-001",
+        "AIAAIC-002"
+      ]
+    }
+  }
+}

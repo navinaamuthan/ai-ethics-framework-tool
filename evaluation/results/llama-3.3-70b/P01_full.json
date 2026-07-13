@@ -1,0 +1,424 @@
+{
+  "proposal_id": "P01",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-05T19:01:02.790751",
+  "proposal_text": "This research proposes to develop a commercial health risk stratification algorithm to identify high-need patients for enrolment in care management programmes across a network of US hospital systems. The algorithm will use insurance claims data as a proxy for health need, predicting which patients require additional clinical resources based on historical healthcare costs, prior diagnoses, medication use, and utilisation patterns from electronic health records covering approximately 200 million patients annually. Patients scoring in the top 3 percentile will automatically be referred to care management; those in the top 45 percentile will be assessed for referral. The algorithm will not explicitly use race as a predictive variable. However, because Black patients have historically incurred lower healthcare costs than white patients with equivalent chronic disease burden — due to structural barriers to healthcare access including cost, discrimination, and geographic distance — the cost proxy will systematically underestimate the health needs of Black patients. The algorithm has not undergone independent bias auditing prior to deployment. No mechanism for algorithmic review or patient appeal of care management non-referral decisions is planned.",
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "bias",
+    "discriminat",
+    "data",
+    "health",
+    "diagnos",
+    "patient",
+    "predict",
+    "scor",
+    "race"
+  ],
+  "matched_rights": [
+    "Art20_EqualityBeforeLaw",
+    "Art21_NonDiscrimination",
+    "Art23_GenderEquality",
+    "Art26_DisabilityIntegration",
+    "Art2_RightToLife",
+    "Art35_HealthCare",
+    "Art41_GoodAdministration",
+    "Art47_RightToEffectiveRemedy",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 170,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The proposed health risk stratification algorithm poses significant ethical risks due to its potential to perpetuate existing healthcare disparities, particularly against Black patients. The algorithm's reliance on insurance claims data as a proxy for health need may systematically underestimate the health needs of Black patients, leading to inadequate care management referrals. Furthermore, the lack of independent bias auditing and mechanisms for algorithmic review or patient appeal raises concerns about fairness, transparency, and accountability. The proposed system also involves the processing of sensitive health data, which is a high-risk activity.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Perpetuation of healthcare disparities",
+        "severity": "High",
+        "explanation": "The algorithm's reliance on insurance claims data may systematically underestimate the health needs of Black patients, leading to inadequate care management referrals."
+      },
+      {
+        "risk": "Lack of transparency and accountability",
+        "severity": "High",
+        "explanation": "The absence of independent bias auditing and mechanisms for algorithmic review or patient appeal raises concerns about fairness and accountability."
+      },
+      {
+        "risk": "Inadequate protection of sensitive health data",
+        "severity": "High",
+        "explanation": "The proposed system involves the processing of sensitive health data, which is a high-risk activity."
+      },
+      {
+        "risk": "Insufficient consideration of bias and discrimination",
+        "severity": "High",
+        "explanation": "The proposal does not adequately address the potential for bias and discrimination in the algorithm's design and deployment."
+      },
+      {
+        "risk": "Inadequate mechanisms for addressing adverse outcomes",
+        "severity": "Medium",
+        "explanation": "The proposal does not provide sufficient mechanisms for addressing adverse outcomes or providing recourse for patients who may be negatively impacted by the algorithm's decisions."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "R085",
+        "requirement_text": "Have you considered anti-discrimination and bias implications of your AI/technology research?",
+        "framework": "REAMS",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Conduct a thorough analysis of the potential for bias and discrimination in the algorithm's design and deployment."
+      },
+      {
+        "requirement_id": "ACM023",
+        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Assess the potential for the algorithm to discriminate or negatively impact certain groups, particularly Black patients."
+      },
+      {
+        "requirement_id": "HE012",
+        "requirement_text": "Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity or is sufficiently neutral",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the data used to train and validate the algorithm is representative of the target population and reflects diversity."
+      },
+      {
+        "requirement_id": "HE013",
+        "requirement_text": "Document how bias in input data and algorithmic design will be identified and avoided",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Document the steps taken to identify and avoid bias in the input data and algorithmic design."
+      },
+      {
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a FRIA to assess the risks associated with the deployment of the algorithm."
+      },
+      {
+        "requirement_id": "AI016",
+        "requirement_text": "Specify what humans can and cannot do — ability to correct outputs, ability to opt out, override capability",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Specify the capabilities and limitations of human oversight and intervention in the algorithm's decision-making process."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider the potential harms associated with the algorithm's deployment and take steps to mitigate them."
+      },
+      {
+        "requirement_id": "ACM028",
+        "requirement_text": "Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Inspect the algorithm and data for suspected biases or limitations and take steps to address them."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The algorithm's potential to perpetuate healthcare disparities and discriminate against Black patients raises concerns about non-discrimination."
+      },
+      {
+        "article": "Article 35",
+        "right_name": "Health Care",
+        "relevance": "The algorithm's deployment may impact the right to health care, particularly for vulnerable populations."
+      },
+      {
+        "article": "Article 41",
+        "right_name": "Good Administration",
+        "relevance": "The lack of transparency and accountability in the algorithm's decision-making process raises concerns about good administration."
+      },
+      {
+        "article": "Article 47",
+        "right_name": "Right to Effective Remedy",
+        "relevance": "The absence of mechanisms for addressing adverse outcomes and providing recourse for patients raises concerns about the right to effective remedy."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The processing of sensitive health data raises concerns about the right to private life."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of addressing bias and discrimination in AI systems, particularly in high-stakes decision-making contexts."
+      },
+      {
+        "incident_id": "AIAAIC-011",
+        "incident_title": "Facebook Discriminatory Ad Targeting",
+        "lesson": "The potential for AI systems to perpetuate and amplify existing social biases and discrimination."
+      },
+      {
+        "incident_id": "AIAAIC-013",
+        "incident_title": "Apple Card Gender Discrimination",
+        "lesson": "The need for transparency and accountability in AI-driven decision-making processes, particularly in contexts where they may impact vulnerable populations."
+      },
+      {
+        "incident_id": "AIAAIC-017",
+        "incident_title": "IBM Watson Oncology Unsafe Recommendations",
+        "lesson": "The importance of ensuring that AI systems are safe, effective, and transparent, particularly in high-stakes contexts such as healthcare."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct a thorough analysis of the potential for bias and discrimination in the algorithm's design and deployment",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement mechanisms for addressing adverse outcomes and providing recourse for patients",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Ensure that the data used to train and validate the algorithm is representative of the target population and reflects diversity",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Document the steps taken to identify and avoid bias in the input data and algorithmic design",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Specify the capabilities and limitations of human oversight and intervention in the algorithm's decision-making process",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a FRIA to assess the risks associated with the deployment of the algorithm",
+      "Ensure that the data used to train and validate the algorithm is representative of the target population and reflects diversity",
+      "Document the steps taken to identify and avoid bias in the input data and algorithmic design",
+      "Specify the capabilities and limitations of human oversight and intervention in the algorithm's decision-making process",
+      "Inspect the algorithm and data for suspected biases or limitations and take steps to address them"
+    ],
+    "tier2_reflective_prompts": [
+      "Consider the potential harms associated with the algorithm's deployment and take steps to mitigate them",
+      "Reflect on the potential for the algorithm to perpetuate and amplify existing social biases and discrimination",
+      "Consider the importance of transparency and accountability in AI-driven decision-making processes, particularly in contexts where they may impact vulnerable populations"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "bias",
+        "discriminat",
+        "data",
+        "health",
+        "diagnos",
+        "patient",
+        "predict",
+        "scor",
+        "race"
+      ],
+      "rights_matched": 10,
+      "requirements_retrieved": 170,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "HE014",
+        "HE038",
+        "R028",
+        "R085",
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028"
+      ],
+      "requirements_retrieved_ids": [
+        "HE014",
+        "HE038",
+        "R028",
+        "R085",
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "ACM001",
+        "ACM014",
+        "ACM032",
+        "HE049",
+        "R080",
+        "ACM027",
+        "R021",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM035",
+        "AI017",
+        "AI019",
+        "AI022",
+        "HE005",
+        "HE027",
+        "HE029",
+        "HE048",
+        "R010",
+        "R054",
+        "R055",
+        "R074",
+        "R082",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073"
+      ],
+      "requirements_cited": [
+        "R085",
+        "ACM023",
+        "HE012",
+        "HE013",
+        "AI001",
+        "AI016",
+        "ACM002",
+        "ACM028"
+      ],
+      "incidents_sample": [
+        "AIAAIC-001",
+        "AIAAIC-002",
+        "AIAAIC-003",
+        "AIAAIC-011",
+        "AIAAIC-013"
+      ]
+    }
+  }
+}

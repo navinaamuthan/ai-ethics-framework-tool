@@ -1,0 +1,463 @@
+{
+  "proposal_id": "P04",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-05T19:01:53.838099",
+  "proposal_text": "This research proposes to develop a machine learning-based ad delivery optimisation system for deployment on a major social media platform. The system will use a multi-objective optimisation algorithm that maximises ad relevance scores and advertiser return on investment by predicting which users are most likely to engage with each advertisement. The algorithm will use thousands of user behavioural, demographic, and interest signals — excluding explicit race and gender variables — to determine ad delivery. The system will operate as a real-time auction where advertisers bid for impression opportunities, with the platform's relevance prediction model determining which users see which ads. An academic audit of this system found that even when advertisers set their targeting parameters to be fully inclusive with no demographic restrictions, the optimisation algorithm delivered employment ads predominantly to men and housing ads predominantly to white users. This skew was caused by the algorithm's financial optimisation function, which learned that majority-group users were cheaper to reach and more likely to engage. The system does not include pre-deployment fairness auditing. No mechanism for individual users to understand why they are or are not shown specific opportunity-related advertisements is planned.",
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "fairness",
+    "employ",
+    "prediction",
+    "predict",
+    "scor",
+    "race",
+    "gender",
+    "social media"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art15_FreedomOfOccupation",
+    "Art20_EqualityBeforeLaw",
+    "Art21_NonDiscrimination",
+    "Art23_GenderEquality",
+    "Art31_FairWorkingConditions",
+    "Art41_GoodAdministration",
+    "Art47_RightToEffectiveRemedy",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 177,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The proposed machine learning-based ad delivery optimisation system poses significant ethical risks, including potential discrimination and bias in ad delivery, lack of transparency and explainability, and potential negative impacts on democratic processes and social relations. The system's use of user behavioural, demographic, and interest signals to determine ad delivery may perpetuate existing biases and stereotypes, and the absence of pre-deployment fairness auditing and mechanisms for individual users to understand ad delivery decisions exacerbates these risks. Furthermore, the system's potential to facilitate deceptive interactions, influence political processes, and promote hate speech is a concern. The risks are heightened by the system's potential to impact vulnerable groups, such as minorities and women, and the lack of consideration for universal accessibility and anti-discrimination implications.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Discrimination and bias in ad delivery",
+        "severity": "High",
+        "explanation": "The system's use of user behavioural, demographic, and interest signals to determine ad delivery may perpetuate existing biases and stereotypes, leading to discriminatory outcomes."
+      },
+      {
+        "risk": "Lack of transparency and explainability",
+        "severity": "High",
+        "explanation": "The absence of pre-deployment fairness auditing and mechanisms for individual users to understand ad delivery decisions makes it difficult to identify and address potential biases and errors."
+      },
+      {
+        "risk": "Negative impacts on democratic processes and social relations",
+        "severity": "High",
+        "explanation": "The system's potential to facilitate deceptive interactions, influence political processes, and promote hate speech poses a significant risk to democratic processes and social relations."
+      },
+      {
+        "risk": "Inadequate consideration for universal accessibility",
+        "severity": "Medium",
+        "explanation": "The system's design may not be accessible to all users, particularly those with disabilities, which could exacerbate existing social inequalities."
+      },
+      {
+        "risk": "Insufficient anti-discrimination and bias implications",
+        "severity": "Medium",
+        "explanation": "The system's potential to perpetuate biases and stereotypes may have significant negative impacts on vulnerable groups, such as minorities and women."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM020",
+        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough assessment of the datasets used in the system to ensure they are representative of the intended population"
+      },
+      {
+        "requirement_id": "ACM025",
+        "requirement_text": "Communicate whether approach could facilitate deceptive interactions causing harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of the system's potential to facilitate deceptive interactions and develop strategies to mitigate this risk"
+      },
+      {
+        "requirement_id": "HE019",
+        "requirement_text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough assessment of the system's potential to negatively impact democratic processes and social relations"
+      },
+      {
+        "requirement_id": "HE021",
+        "requirement_text": "It must be made clear to end-users they are interacting with an AI system",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop a clear and transparent mechanism to inform users that they are interacting with an AI system"
+      },
+      {
+        "requirement_id": "R085",
+        "requirement_text": "Have you considered anti-discrimination and bias implications of your AI/technology research?",
+        "framework": "REAMS",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Conduct a thorough analysis of the system's potential to perpetuate biases and stereotypes and develop strategies to mitigate this risk"
+      },
+      {
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough assessment to determine whether the organisation is obligated to conduct a FRIA"
+      },
+      {
+        "requirement_id": "AI016",
+        "requirement_text": "Specify what humans can and cannot do — ability to correct outputs, ability to opt out, override capability",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop a clear and transparent mechanism to specify what humans can and cannot do in relation to the system's outputs"
+      },
+      {
+        "requirement_id": "ACM028",
+        "requirement_text": "Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of the system's models and datasets to identify and address potential biases and limitations"
+      },
+      {
+        "requirement_id": "HE012",
+        "requirement_text": "Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity or is sufficiently neutral",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop a clear and transparent mechanism to ensure that the data used in the system is representative of the target population and reflects diversity or is sufficiently neutral"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The system's potential to perpetuate biases and stereotypes may lead to discriminatory outcomes, which could violate the right to non-discrimination"
+      },
+      {
+        "article": "Article 20",
+        "right_name": "Equality Before Law",
+        "relevance": "The system's potential to perpetuate biases and stereotypes may lead to unequal treatment of individuals, which could violate the right to equality before the law"
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The system's use of user behavioural, demographic, and interest signals to determine ad delivery may infringe on individuals' right to private life"
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The system's use of personal data to determine ad delivery may infringe on individuals' right to data protection"
+      },
+      {
+        "article": "Article 23",
+        "right_name": "Gender Equality",
+        "relevance": "The system's potential to perpetuate biases and stereotypes may lead to unequal treatment of individuals based on gender, which could violate the right to gender equality"
+      },
+      {
+        "article": "Article 41",
+        "right_name": "Good Administration",
+        "relevance": "The system's lack of transparency and explainability may lead to a lack of trust in the administration of the system, which could violate the right to good administration"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of auditing and testing AI systems for bias and discrimination"
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The potential for AI systems to perpetuate existing biases and stereotypes, leading to false arrests and other negative outcomes"
+      },
+      {
+        "incident_id": "AIAAIC-014",
+        "incident_title": "YouTube Recommendation Radicalisation",
+        "lesson": "The potential for AI systems to facilitate the spread of hate speech and radicalisation"
+      },
+      {
+        "incident_id": "AIAAIC-015",
+        "incident_title": "Uber Surge Pricing Discrimination",
+        "lesson": "The potential for AI systems to perpetuate biases and stereotypes, leading to discriminatory outcomes"
+      },
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "The potential for AI systems to facilitate the spread of hate speech and violence"
+      },
+      {
+        "incident_id": "AIAAIC-021",
+        "incident_title": "HireVue Automated Video Interview Bias",
+        "lesson": "The importance of auditing and testing AI systems for bias and discrimination"
+      },
+      {
+        "incident_id": "AIAAIC-022",
+        "incident_title": "Deliveroo Algorithmic Dismissal",
+        "lesson": "The potential for AI systems to perpetuate biases and stereotypes, leading to discriminatory outcomes"
+      },
+      {
+        "incident_id": "AIAAIC-027",
+        "incident_title": "Spotify Mood Inference Patent",
+        "lesson": "The potential for AI systems to perpetuate biases and stereotypes, leading to discriminatory outcomes"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct thorough audits and testing for bias and discrimination",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop and implement strategies to mitigate bias and discrimination",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Ensure transparency and explainability in the system's decision-making processes",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop and implement mechanisms for individual users to understand and correct ad delivery decisions",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Ensure that the system is designed and implemented in a way that respects universal accessibility principles",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough assessment of the datasets used in the system to ensure they are representative of the intended population",
+      "Conduct a thorough analysis of the system's potential to facilitate deceptive interactions and develop strategies to mitigate this risk",
+      "Conduct a thorough assessment of the system's potential to negatively impact democratic processes and social relations",
+      "Develop a clear and transparent mechanism to inform users that they are interacting with an AI system",
+      "Conduct a thorough analysis of the system's models and datasets to identify and address potential biases and limitations"
+    ],
+    "tier2_reflective_prompts": [
+      "Have you considered the potential for the system to perpetuate biases and stereotypes?",
+      "How will you ensure that the system is designed and implemented in a way that respects universal accessibility principles?",
+      "What strategies will you develop to mitigate the risk of bias and discrimination in the system?",
+      "How will you ensure that the system is transparent and explainable in its decision-making processes?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "fairness",
+        "employ",
+        "prediction",
+        "predict",
+        "scor",
+        "race",
+        "gender",
+        "social media"
+      ],
+      "rights_matched": 10,
+      "requirements_retrieved": 177,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "HE014",
+        "HE038",
+        "R028"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "HE014",
+        "HE038",
+        "R028",
+        "R085",
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "ACM011",
+        "ACM037",
+        "HE020",
+        "R020",
+        "R050",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM001",
+        "ACM035",
+        "AI017",
+        "AI019",
+        "AI022",
+        "HE005",
+        "HE027",
+        "HE029",
+        "HE048",
+        "R010",
+        "R054",
+        "R055",
+        "R074",
+        "R082",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073"
+      ],
+      "requirements_cited": [
+        "ACM020",
+        "ACM025",
+        "HE019",
+        "HE021",
+        "R085",
+        "AI001",
+        "AI016",
+        "ACM028",
+        "HE012"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-015",
+        "AIAAIC-021"
+      ]
+    }
+  }
+}

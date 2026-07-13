@@ -1,0 +1,30 @@
+{
+  "evaluation_timestamp": "2026-06-23T00:18:33.908391",
+  "config": {
+    "llm_model": "llama-3.3-70b-versatile",
+    "graphdb_endpoint": "http://localhost:7200/repositories/ai-ethics-kg"
+  },
+  "results": [
+    {
+      "success": false,
+      "proposal_name": "facial_recognition_law_enforcement",
+      "error": "name 'RISK_KEYWORDS' is not defined",
+      "timestamp": "2026-06-23T00:18:33.907851",
+      "expected_risk_level": "HIGH"
+    },
+    {
+      "success": false,
+      "proposal_name": "student_sentiment_analysis",
+      "error": "name 'RISK_KEYWORDS' is not defined",
+      "timestamp": "2026-06-23T00:18:33.907894",
+      "expected_risk_level": "MEDIUM"
+    },
+    {
+      "success": false,
+      "proposal_name": "bibliometric_analysis",
+      "error": "name 'RISK_KEYWORDS' is not defined",
+      "timestamp": "2026-06-23T00:18:33.908218",
+      "expected_risk_level": "LOW"
+    }
+  ]
+}

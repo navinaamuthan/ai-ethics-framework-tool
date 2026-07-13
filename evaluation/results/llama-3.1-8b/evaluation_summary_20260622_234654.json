@@ -1,0 +1,356 @@
+{
+  "evaluation_timestamp": "2026-06-22T23:46:54.923719",
+  "config": {
+    "llm_model": "llama-3.3-70b-versatile",
+    "graphdb_endpoint": "http://localhost:7200/repositories/ai-ethics"
+  },
+  "results": [
+    {
+      "success": true,
+      "proposal_name": "facial_recognition_law_enforcement",
+      "timestamp": "2026-06-22T23:46:34.330067",
+      "processing_time_seconds": 3.35,
+      "extracted_keywords": [
+        "facial recognition",
+        "biometric",
+        "surveillance",
+        "law enforcement",
+        "police",
+        "profiling",
+        "deep learning",
+        "computer vision"
+      ],
+      "mapped_charter_articles": [
+        "Art1",
+        "Art3",
+        "Art6",
+        "Art7",
+        "Art8",
+        "Art21",
+        "Art47",
+        "Art48"
+      ],
+      "kg_retrieval_success": false,
+      "kg_items_retrieved": {
+        "requirements_by_keyword": 0,
+        "requirements_by_charter": 0,
+        "incidents": 0,
+        "charter_rights": 0
+      },
+      "assessment": {
+        "risk_summary": "The proposed facial recognition system for law enforcement raises significant ethical concerns regarding privacy, bias, and potential misuse. The collection and use of biometric data without explicit consent, and the integration with existing criminal databases, pose risks to individuals' rights and freedoms. The system's predictive profiling capabilities also increase the likelihood of discriminatory outcomes.",
+        "identified_risks": [
+          {
+            "risk": "Privacy infringement",
+            "severity": "High",
+            "explanation": "The collection and use of facial images and biometric data without explicit consent from individuals"
+          },
+          {
+            "risk": "Bias and discrimination",
+            "severity": "High",
+            "explanation": "The potential for biased training data and algorithms to result in discriminatory outcomes, particularly against marginalized groups"
+          },
+          {
+            "risk": "Misuse of data",
+            "severity": "Medium",
+            "explanation": "The risk of unauthorized access or misuse of the collected data, including facial images and biometric information"
+          }
+        ],
+        "applicable_requirements": [
+          {
+            "requirement": "Ensure transparency and explainability of AI decision-making processes",
+            "framework": "EUAIAct",
+            "tier": "Tier1",
+            "action_needed": "Develop and implement transparent and explainable AI models"
+          },
+          {
+            "requirement": "Obtain explicit consent from individuals for the collection and use of their biometric data",
+            "framework": "GDPR",
+            "tier": "Tier1",
+            "action_needed": "Develop a consent mechanism and obtain explicit consent from individuals"
+          },
+          {
+            "requirement": "Implement robust data protection measures to prevent unauthorized access or misuse",
+            "framework": "GDPR",
+            "tier": "Tier1",
+            "action_needed": "Develop and implement robust data protection measures"
+          }
+        ],
+        "charter_rights_at_risk": [
+          {
+            "article": "Art7",
+            "right": "Respect for private and family life",
+            "relevance": "The collection and use of facial images and biometric data without explicit consent infringes on individuals' right to private life"
+          },
+          {
+            "article": "Art8",
+            "right": "Protection of personal data",
+            "relevance": "The collection and use of biometric data without explicit consent and adequate data protection measures infringes on individuals' right to data protection"
+          }
+        ],
+        "historical_precedents": [
+          {
+            "incident": "The Cambridge Analytica scandal",
+            "lesson": "The importance of transparency and consent in the collection and use of personal data"
+          },
+          {
+            "incident": "The use of facial recognition technology by law enforcement in the US",
+            "lesson": "The potential for biased outcomes and discriminatory effects of facial recognition technology"
+          }
+        ],
+        "recommended_mitigations": [
+          {
+            "mitigation": "Develop and implement transparent and explainable AI models",
+            "priority": "High"
+          },
+          {
+            "mitigation": "Obtain explicit consent from individuals for the collection and use of their biometric data",
+            "priority": "High"
+          },
+          {
+            "mitigation": "Implement robust data protection measures to prevent unauthorized access or misuse",
+            "priority": "High"
+          }
+        ],
+        "tier1_mandatory_actions": [
+          "Develop a consent mechanism and obtain explicit consent from individuals",
+          "Develop and implement transparent and explainable AI models",
+          "Implement robust data protection measures to prevent unauthorized access or misuse"
+        ],
+        "tier2_reflective_prompts": [
+          "How will the system ensure fairness and avoid bias in its decision-making processes?",
+          "What measures will be taken to prevent the misuse of the collected data?",
+          "How will the system be audited and evaluated to ensure compliance with applicable regulations and ethical standards?"
+        ],
+        "overall_risk_level": "High",
+        "reams_clearance_likely": false
+      },
+      "expected_risk_level": "HIGH"
+    },
+    {
+      "success": true,
+      "proposal_name": "student_sentiment_analysis",
+      "timestamp": "2026-06-22T23:46:36.638944",
+      "processing_time_seconds": 2.31,
+      "extracted_keywords": [
+        "sentiment analysis",
+        "privacy",
+        "consent",
+        "student",
+        "nlp",
+        "natural language processing"
+      ],
+      "mapped_charter_articles": [
+        "Art1",
+        "Art3",
+        "Art7",
+        "Art8",
+        "Art11",
+        "Art14",
+        "Art21",
+        "Art25"
+      ],
+      "kg_retrieval_success": false,
+      "kg_items_retrieved": {
+        "requirements_by_keyword": 0,
+        "requirements_by_charter": 0,
+        "incidents": 0,
+        "charter_rights": 0
+      },
+      "assessment": {
+        "risk_summary": "The proposed research on automated sentiment analysis of student essays raises concerns about student privacy, consent, and potential biases in the AI system. The collection of sensitive data, including essays and social media posts, poses risks to students' rights and wellbeing. The project's reliance on natural language processing and machine learning algorithms also introduces risks of inaccurate or discriminatory outcomes.",
+        "identified_risks": [
+          {
+            "risk": "Invasion of student privacy",
+            "severity": "High",
+            "explanation": "The collection and analysis of student essays and social media posts may infringe on students' right to privacy and potentially reveal sensitive personal information."
+          },
+          {
+            "risk": "Lack of informed consent",
+            "severity": "Medium",
+            "explanation": "Students and their parents may not fully understand the implications of participating in the research, including the potential risks and benefits."
+          },
+          {
+            "risk": "Bias in AI decision-making",
+            "severity": "High",
+            "explanation": "The AI system may perpetuate existing biases and discriminate against certain groups of students, leading to unfair or inaccurate assessments."
+          }
+        ],
+        "applicable_requirements": [
+          {
+            "requirement": "Ensure transparency and explainability of AI decision-making processes",
+            "framework": "EUAIAct",
+            "tier": "Tier1",
+            "action_needed": "Provide clear documentation of the AI system's decision-making processes and ensure that stakeholders can understand and challenge the outcomes."
+          },
+          {
+            "requirement": "Obtain informed consent from students and their parents",
+            "framework": "REAMS",
+            "tier": "Tier1",
+            "action_needed": "Develop and implement a comprehensive informed consent process that includes clear information about the research, its risks and benefits, and the rights of participants."
+          },
+          {
+            "requirement": "Implement robust data protection measures",
+            "framework": "HorizonEurope",
+            "tier": "Tier2",
+            "action_needed": "Develop and implement a data protection plan that includes measures to anonymize and secure student data, as well as procedures for responding to data breaches."
+          }
+        ],
+        "charter_rights_at_risk": [
+          {
+            "article": "Art7",
+            "right": "Respect for private and family life",
+            "relevance": "The collection and analysis of student essays and social media posts may infringe on students' right to privacy and family life."
+          },
+          {
+            "article": "Art8",
+            "right": "Protection of personal data",
+            "relevance": "The project's handling of student data, including essays and social media posts, must comply with data protection regulations and ensure the security and confidentiality of personal data."
+          }
+        ],
+        "historical_precedents": [
+          {
+            "incident": "Cambridge Analytica scandal",
+            "lesson": "The importance of transparency and accountability in the collection and use of personal data, particularly in the context of AI-powered decision-making systems."
+          }
+        ],
+        "recommended_mitigations": [
+          {
+            "mitigation": "Implement robust data anonymization and encryption measures",
+            "priority": "High"
+          },
+          {
+            "mitigation": "Develop and implement a comprehensive informed consent process",
+            "priority": "High"
+          },
+          {
+            "mitigation": "Regularly audit and test the AI system for bias and accuracy",
+            "priority": "Medium"
+          }
+        ],
+        "tier1_mandatory_actions": [
+          "Obtain informed consent from students and their parents",
+          "Develop and implement a comprehensive data protection plan",
+          "Ensure transparency and explainability of AI decision-making processes"
+        ],
+        "tier2_reflective_prompts": [
+          "How might the AI system perpetuate existing biases and discrimination?",
+          "What are the potential consequences of inaccurate or unfair assessments on students' wellbeing and academic outcomes?",
+          "How can the research team ensure that the AI system is transparent, explainable, and accountable to stakeholders?"
+        ],
+        "overall_risk_level": "High",
+        "reams_clearance_likely": false
+      },
+      "expected_risk_level": "MEDIUM"
+    },
+    {
+      "success": true,
+      "proposal_name": "bibliometric_analysis",
+      "timestamp": "2026-06-22T23:46:54.922285",
+      "processing_time_seconds": 18.28,
+      "extracted_keywords": [
+        "personal data"
+      ],
+      "mapped_charter_articles": [
+        "Art7",
+        "Art8"
+      ],
+      "kg_retrieval_success": false,
+      "kg_items_retrieved": {
+        "requirements_by_keyword": 0,
+        "requirements_by_charter": 0,
+        "incidents": 0,
+        "charter_rights": 0
+      },
+      "assessment": {
+        "risk_summary": "The research proposal involves the collection and analysis of publicly available academic data, which poses minimal risks to individuals, but may still raise concerns regarding privacy and data protection. The use of personal data, although limited to publicly available authorship information, requires careful consideration. The project's overall risk level is relatively low due to the use of open-access databases and publicly available data.",
+        "identified_risks": [
+          {
+            "risk": "Privacy risk",
+            "severity": "Low",
+            "explanation": "Although the project only collects publicly available data, there is still a risk of inadvertently collecting sensitive information or compromising author anonymity."
+          },
+          {
+            "risk": "Data protection risk",
+            "severity": "Low",
+            "explanation": "The project must ensure that it complies with relevant data protection regulations, such as the EU's General Data Protection Regulation (GDPR), when handling publication metadata and author affiliations."
+          },
+          {
+            "risk": "Bias in data analysis",
+            "severity": "Medium",
+            "explanation": "The project's use of computational bibliometric methods and topic modeling may introduce biases in the analysis, which could impact the accuracy and reliability of the results."
+          }
+        ],
+        "applicable_requirements": [
+          {
+            "requirement": "Ensure transparency and explainability in AI-driven decision-making",
+            "framework": "EUAIAct",
+            "tier": "Tier1",
+            "action_needed": "Provide clear documentation of the bibliometric analysis methods and topic modeling techniques used, as well as any potential limitations or biases."
+          },
+          {
+            "requirement": "Comply with data protection regulations",
+            "framework": "GDPR",
+            "tier": "Tier1",
+            "action_needed": "Implement measures to ensure the secure storage and handling of publication metadata and author affiliations, and obtain necessary permissions or waivers if required."
+          },
+          {
+            "requirement": "Conduct regular audits and assessments to ensure AI system fairness and transparency",
+            "framework": "HorizonEurope",
+            "tier": "Tier2",
+            "action_needed": "Regularly review and assess the project's methods and results to identify potential biases or areas for improvement."
+          }
+        ],
+        "charter_rights_at_risk": [
+          {
+            "article": "Art7",
+            "right": "Respect for private life",
+            "relevance": "The project's collection and analysis of publicly available authorship information may potentially impact authors' right to private life, although the risk is considered low."
+          },
+          {
+            "article": "Art8",
+            "right": "Protection of personal data",
+            "relevance": "The project's handling of publication metadata and author affiliations may raise concerns regarding the protection of personal data, although the use of publicly available data minimizes this risk."
+          }
+        ],
+        "historical_precedents": [
+          {
+            "incident": "The Facebook-Cambridge Analytica data scandal",
+            "lesson": "The importance of ensuring transparency and accountability in data collection and analysis, as well as complying with relevant data protection regulations."
+          },
+          {
+            "incident": "The controversy surrounding the use of AI in academic publishing",
+            "lesson": "The need for careful consideration of potential biases and limitations in AI-driven decision-making, particularly in areas such as academic publishing and research evaluation."
+          }
+        ],
+        "recommended_mitigations": [
+          {
+            "mitigation": "Implement robust data anonymization and pseudonymization techniques",
+            "priority": "Low"
+          },
+          {
+            "mitigation": "Conduct regular reviews and assessments of the project's methods and results",
+            "priority": "Medium"
+          },
+          {
+            "mitigation": "Develop and implement a comprehensive data management plan",
+            "priority": "High"
+          }
+        ],
+        "tier1_mandatory_actions": [
+          "Obtain necessary permissions or waivers for data collection and analysis",
+          "Implement measures to ensure the secure storage and handling of publication metadata and author affiliations",
+          "Provide clear documentation of the bibliometric analysis methods and topic modeling techniques used"
+        ],
+        "tier2_reflective_prompts": [
+          "How might the project's methods and results be impacted by potential biases or limitations in the data or analysis techniques?",
+          "What measures can be taken to ensure the transparency and explainability of the project's AI-driven decision-making processes?",
+          "How can the project ensure that it is complying with relevant data protection regulations and respecting authors' right to private life?"
+        ],
+        "overall_risk_level": "Low",
+        "reams_clearance_likely": true
+      },
+      "expected_risk_level": "LOW"
+    }
+  ]
+}

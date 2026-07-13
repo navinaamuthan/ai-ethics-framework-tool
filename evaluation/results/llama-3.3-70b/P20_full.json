@@ -1,0 +1,405 @@
+{
+  "proposal_id": "P20",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-05T19:07:12.724826",
+  "proposal_text": "This research proposes to study the relationship between digital workplace behaviours and productivity by monitoring 200 consenting employees at a Dublin technology company over six months. The monitoring system will track application usage, email response times, meeting attendance, keyboard activity patterns, and break frequency. All participants will provide written informed consent and can withdraw at any time without workplace consequences. Data will be stored on encrypted university servers and destroyed after the study period. However, the monitoring software will also incidentally capture screen content including potentially sensitive communications. Aggregate productivity patterns will be shared with the employer in a format that does not identify individual employees, but the small team sizes of 5-8 people within departments may enable indirect identification. The employer has stated that monitoring results will not influence performance reviews, but this commitment is not legally binding. The research does not address the power imbalance between employer and employee that may compromise the voluntariness of consent.",
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "data",
+    "consent",
+    "monitor",
+    "track",
+    "employ"
+  ],
+  "matched_rights": [
+    "Art15_FreedomOfOccupation",
+    "Art31_FairWorkingConditions",
+    "Art3_RightToIntegrity",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 150,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The research proposal poses significant ethical risks due to the monitoring of employees' digital workplace behaviors, which may compromise their privacy and autonomy. The incidental capture of screen content, including potentially sensitive communications, and the sharing of aggregate productivity patterns with the employer, may lead to indirect identification of individual employees. The power imbalance between employer and employee may also compromise the voluntariness of consent. Furthermore, the research does not address the potential risks of biased or discriminatory outcomes, and the lack of a legally binding commitment from the employer to not use the monitoring results in performance reviews raises concerns.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Privacy risk",
+        "severity": "Medium",
+        "explanation": "The monitoring system may capture sensitive communications, and the sharing of aggregate productivity patterns may lead to indirect identification of individual employees."
+      },
+      {
+        "risk": "Bias and discrimination risk",
+        "severity": "Medium",
+        "explanation": "The research does not address the potential risks of biased or discriminatory outcomes, which may affect certain groups of employees."
+      },
+      {
+        "risk": "Power imbalance risk",
+        "severity": "Medium",
+        "explanation": "The power imbalance between employer and employee may compromise the voluntariness of consent, and the lack of a legally binding commitment from the employer to not use the monitoring results in performance reviews raises concerns."
+      },
+      {
+        "risk": "Lack of transparency risk",
+        "severity": "Medium",
+        "explanation": "The research does not provide sufficient information about the monitoring system, the data collection process, and the potential risks and benefits to the employees."
+      },
+      {
+        "risk": "Data protection risk",
+        "severity": "Medium",
+        "explanation": "The research involves the collection and storage of personal data, which must be protected in accordance with the EU Charter of Fundamental Rights and the General Data Protection Regulation (GDPR)."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "R009",
+        "requirement_text": "Specify whether project involves humans/their data OR animals",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The research proposal must clearly state that it involves human participants and their data."
+      },
+      {
+        "requirement_id": "R019",
+        "requirement_text": "Will consent be obtained from participants (or proxy/guardian)?",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The research proposal must provide evidence that informed consent will be obtained from all participants before the monitoring begins."
+      },
+      {
+        "requirement_id": "R022",
+        "requirement_text": "Does the project require a Consent Declaration under HRR?",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The research proposal must determine whether a Consent Declaration is required under the Human Research Regulations (HRR) and provide the necessary documentation."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The research proposal must ensure that the monitoring system respects the privacy of the employees and obtains informed consent where required."
+      },
+      {
+        "requirement_id": "HE003",
+        "requirement_text": "AI system must not subordinate, coerce, deceive, manipulate, objectify or dehumanize end-users or affected persons",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The research proposal must ensure that the monitoring system does not subordinate, coerce, deceive, manipulate, objectify, or dehumanize the employees."
+      },
+      {
+        "requirement_id": "R042",
+        "requirement_text": "How will consent be obtained and by whom?",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The research proposal must provide details on how consent will be obtained and by whom."
+      },
+      {
+        "requirement_id": "R048",
+        "requirement_text": "How can participants withdraw consent and/or their data?",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The research proposal must provide information on how participants can withdraw their consent and/or their data."
+      },
+      {
+        "requirement_id": "R054",
+        "requirement_text": "Identify risks to participants: inconvenience, physical, emotional, reputational, financial, privacy, intrusive, harmful",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The research proposal must identify the potential risks to the participants and provide measures to mitigate them."
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The research proposal must consider and ameliorate biases in the data and the monitoring system's outputs."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The monitoring system may capture sensitive communications and compromise the employees' right to private life."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The research involves the collection and storage of personal data, which must be protected in accordance with the EU Charter of Fundamental Rights and the General Data Protection Regulation (GDPR)."
+      },
+      {
+        "article": "Article 15",
+        "right_name": "Freedom of Occupation",
+        "relevance": "The monitoring system may affect the employees' freedom of occupation and their ability to work without undue surveillance."
+      },
+      {
+        "article": "Article 31",
+        "right_name": "Fair Working Conditions",
+        "relevance": "The monitoring system may compromise the employees' right to fair working conditions and a safe working environment."
+      },
+      {
+        "article": "Article 41",
+        "right_name": "Good Administration",
+        "relevance": "The research proposal must ensure that the monitoring system is administered in a way that respects the employees' rights and dignity."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-015",
+        "incident_title": "Uber Surge Pricing Discrimination",
+        "lesson": "The incident highlights the importance of ensuring that AI systems do not discriminate against certain groups of people."
+      },
+      {
+        "incident_id": "AIAAIC-021",
+        "incident_title": "HireVue Automated Video Interview Bias",
+        "lesson": "The incident emphasizes the need to consider and ameliorate biases in AI systems, particularly in situations where they may affect people's employment opportunities."
+      },
+      {
+        "incident_id": "AIAAIC-022",
+        "incident_title": "Deliveroo Algorithmic Dismissal",
+        "lesson": "The incident highlights the risks of using AI systems to make decisions that affect people's employment status and livelihoods."
+      },
+      {
+        "incident_id": "AIAAIC-034",
+        "incident_title": "China Social Credit System AI Scoring",
+        "lesson": "The incident emphasizes the importance of ensuring that AI systems are transparent, fair, and respectful of people's rights and dignity."
+      },
+      {
+        "incident_id": "AIAAIC-036",
+        "incident_title": "Netherlands SyRI Welfare Surveillance System",
+        "lesson": "The incident highlights the need to consider the potential risks and benefits of using AI systems to monitor and surveil people, particularly in situations where they may affect vulnerable groups."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Obtain informed consent from all participants before the monitoring begins",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Ensure that the monitoring system respects the employees' right to private life and data protection",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Consider and ameliorate biases in the data and the monitoring system's outputs",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Provide information on how participants can withdraw their consent and/or their data",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Ensure that the monitoring system is administered in a way that respects the employees' rights and dignity",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Obtain informed consent from all participants before the monitoring begins",
+      "Ensure that the monitoring system respects the employees' right to private life and data protection",
+      "Consider and ameliorate biases in the data and the monitoring system's outputs",
+      "Provide information on how participants can withdraw their consent and/or their data",
+      "Ensure that the monitoring system is administered in a way that respects the employees' rights and dignity"
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential risks and benefits of using the monitoring system, and how can they be mitigated?",
+      "How can the research proposal ensure that the monitoring system is transparent, fair, and respectful of the employees' rights and dignity?",
+      "What measures can be taken to prevent biases in the data and the monitoring system's outputs, and to ensure that the system is administered in a way that respects the employees' rights and dignity?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "consent",
+        "monitor",
+        "track",
+        "employ"
+      ],
+      "rights_matched": 6,
+      "requirements_retrieved": 150,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM011",
+        "ACM037",
+        "HE020",
+        "R020",
+        "R050",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "HE003"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM011",
+        "ACM037",
+        "HE020",
+        "R020",
+        "R050",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "HE003",
+        "HE004",
+        "HE017",
+        "R009",
+        "R011",
+        "R015",
+        "R019",
+        "R022",
+        "R034",
+        "R039",
+        "R042",
+        "R043",
+        "R044",
+        "R046",
+        "R048",
+        "R054",
+        "R076",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM003",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R023",
+        "R026",
+        "R040",
+        "R047",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE013",
+        "HE033",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "R009",
+        "R019",
+        "R022",
+        "ACM006",
+        "HE003",
+        "R042",
+        "R048",
+        "R054",
+        "ACM004"
+      ],
+      "incidents_sample": [
+        "AIAAIC-015",
+        "AIAAIC-021",
+        "AIAAIC-022",
+        "AIAAIC-034",
+        "AIAAIC-036"
+      ]
+    }
+  }
+}

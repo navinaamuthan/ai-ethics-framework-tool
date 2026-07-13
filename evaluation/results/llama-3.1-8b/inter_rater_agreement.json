@@ -1,0 +1,21 @@
+{
+  "reviewers": [
+    "R1",
+    "R2"
+  ],
+  "proposal_count": 2,
+  "pairs": [
+    {
+      "reviewer_a": "R1",
+      "reviewer_b": "R2",
+      "risk_level_kappa": 0.0,
+      "requirement_selection_kappa": 0.065,
+      "risk_level_spearman_rho": null,
+      "risk_level_spearman_p_value": null,
+      "n_proposals": 2,
+      "risk_level_kappa_interpretation": "Slight Agreement",
+      "requirement_kappa_interpretation": "Slight Agreement",
+      "divergence_note": null
+    }
+  ]
+}
