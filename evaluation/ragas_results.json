@@ -1,0 +1,232 @@
+{
+  "per_proposal": [
+    {
+      "proposal_id": "P01",
+      "domain": "Facial recognition in education",
+      "n_retrieved": 170,
+      "n_expected": 13,
+      "context_recall": 0.8461538461538461,
+      "context_precision": 0.06470588235294118,
+      "faithfulness": 0.5,
+      "answer_relevancy": 1.0
+    },
+    {
+      "proposal_id": "P02",
+      "domain": "Predictive policing",
+      "n_retrieved": 167,
+      "n_expected": 11,
+      "context_recall": 0.8181818181818182,
+      "context_precision": 0.05389221556886228,
+      "faithfulness": 0.5,
+      "answer_relevancy": 1.0
+    },
+    {
+      "proposal_id": "P03",
+      "domain": "Healthcare diagnosis",
+      "n_retrieved": 190,
+      "n_expected": 9,
+      "context_recall": 0.8888888888888888,
+      "context_precision": 0.042105263157894736,
+      "faithfulness": 0.0,
+      "answer_relevancy": 1.0
+    },
+    {
+      "proposal_id": "P04",
+      "domain": "Automated hiring",
+      "n_retrieved": 177,
+      "n_expected": 9,
+      "context_recall": 0.8888888888888888,
+      "context_precision": 0.04519774011299435,
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.8
+    },
+    {
+      "proposal_id": "P05",
+      "domain": "Social credit scoring",
+      "n_retrieved": 193,
+      "n_expected": 9,
+      "context_recall": 0.8888888888888888,
+      "context_precision": 0.04145077720207254,
+      "faithfulness": 0.0,
+      "answer_relevancy": null
+    },
+    {
+      "proposal_id": "P06",
+      "domain": "Child behaviour monitoring",
+      "n_retrieved": 196,
+      "n_expected": 9,
+      "context_recall": 1.0,
+      "context_precision": 0.04591836734693878,
+      "faithfulness": null,
+      "answer_relevancy": 0.9
+    },
+    {
+      "proposal_id": "P07",
+      "domain": "Autonomous weapons",
+      "n_retrieved": 196,
+      "n_expected": 7,
+      "context_recall": 1.0,
+      "context_precision": 0.03571428571428571,
+      "faithfulness": null,
+      "answer_relevancy": null
+    },
+    {
+      "proposal_id": "P08",
+      "domain": "Immigration decision automation",
+      "n_retrieved": 176,
+      "n_expected": 9,
+      "context_recall": 0.8888888888888888,
+      "context_precision": 0.045454545454545456,
+      "faithfulness": null,
+      "answer_relevancy": 0.9
+    },
+    {
+      "proposal_id": "P09",
+      "domain": "Mental health prediction",
+      "n_retrieved": 193,
+      "n_expected": 9,
+      "context_recall": 1.0,
+      "context_precision": 0.046632124352331605,
+      "faithfulness": null,
+      "answer_relevancy": null
+    },
+    {
+      "proposal_id": "P10",
+      "domain": "Sentiment analysis on tweets",
+      "n_retrieved": 174,
+      "n_expected": 6,
+      "context_recall": 0.6666666666666666,
+      "context_precision": 0.022988505747126436,
+      "faithfulness": null,
+      "answer_relevancy": 0.8
+    },
+    {
+      "proposal_id": "P11",
+      "domain": "Traffic flow optimisation",
+      "n_retrieved": 191,
+      "n_expected": 5,
+      "context_recall": 0.8,
+      "context_precision": 0.020942408376963352,
+      "faithfulness": null,
+      "answer_relevancy": null
+    },
+    {
+      "proposal_id": "P12",
+      "domain": "Agricultural crop prediction",
+      "n_retrieved": 188,
+      "n_expected": 3,
+      "context_recall": 1.0,
+      "context_precision": 0.015957446808510637,
+      "faithfulness": null,
+      "answer_relevancy": 0.9
+    },
+    {
+      "proposal_id": "P13",
+      "domain": "Customer service chatbot",
+      "n_retrieved": 154,
+      "n_expected": 7,
+      "context_recall": 0.5714285714285714,
+      "context_precision": 0.025974025974025976,
+      "faithfulness": null,
+      "answer_relevancy": null
+    },
+    {
+      "proposal_id": "P14",
+      "domain": "Energy consumption forecasting",
+      "n_retrieved": 164,
+      "n_expected": 4,
+      "context_recall": 0.75,
+      "context_precision": 0.018292682926829267,
+      "faithfulness": null,
+      "answer_relevancy": 0.8
+    },
+    {
+      "proposal_id": "P15",
+      "domain": "Language translation",
+      "n_retrieved": 139,
+      "n_expected": 4,
+      "context_recall": 0.25,
+      "context_precision": 0.007194244604316547,
+      "faithfulness": null,
+      "answer_relevancy": 0.8
+    },
+    {
+      "proposal_id": "P16",
+      "domain": "Plagiarism detection",
+      "n_retrieved": 170,
+      "n_expected": 6,
+      "context_recall": 0.6666666666666666,
+      "context_precision": 0.023529411764705882,
+      "faithfulness": null,
+      "answer_relevancy": null
+    },
+    {
+      "proposal_id": "P17",
+      "domain": "Weather pattern analysis",
+      "n_retrieved": 191,
+      "n_expected": 3,
+      "context_recall": 1.0,
+      "context_precision": 0.015706806282722512,
+      "faithfulness": null,
+      "answer_relevancy": 0.9
+    },
+    {
+      "proposal_id": "P18",
+      "domain": "Historical document digitisation",
+      "n_retrieved": 178,
+      "n_expected": 3,
+      "context_recall": 1.0,
+      "context_precision": 0.016853932584269662,
+      "faithfulness": null,
+      "answer_relevancy": null
+    },
+    {
+      "proposal_id": "P19",
+      "domain": "Mathematical theorem proving",
+      "n_retrieved": 181,
+      "n_expected": 1,
+      "context_recall": 1.0,
+      "context_precision": 0.0055248618784530384,
+      "faithfulness": null,
+      "answer_relevancy": 1.0
+    },
+    {
+      "proposal_id": "P20",
+      "domain": "Open-source code linting",
+      "n_retrieved": 150,
+      "n_expected": 1,
+      "context_recall": 0.0,
+      "context_precision": 0.0,
+      "faithfulness": null,
+      "answer_relevancy": null
+    }
+  ],
+  "aggregate": {
+    "context_recall": {
+      "mean": 0.7962326562326563,
+      "min": 0.0,
+      "max": 1.0,
+      "n": 20
+    },
+    "context_precision": {
+      "mean": 0.029701776410539497,
+      "min": 0.0,
+      "max": 0.06470588235294118,
+      "n": 20
+    },
+    "faithfulness": {
+      "mean": 0.3,
+      "min": 0.0,
+      "max": 0.5,
+      "n": 5
+    },
+    "answer_relevancy": {
+      "mean": 0.9,
+      "min": 0.8,
+      "max": 1.0,
+      "n": 12
+    }
+  },
+  "backend": "groq (llama-3.3-70b-versatile judge)",
+  "retrieval_source": "live GraphDB (ai-ethics-kg) via sparql_retrieval.py"
+}

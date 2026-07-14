@@ -200,7 +200,8 @@ def call_llm(prompt, backend="ollama"):
             data=data,
             headers={
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {api_key}"
+                "Authorization": f"Bearer {api_key}",
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
             }
         )
         with urllib.request.urlopen(req, timeout=120) as resp:
