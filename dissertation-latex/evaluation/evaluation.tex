@@ -1,0 +1,224 @@
+\chapter{Evaluation and Discussion}
+\label{ch:evaluation}
+
+This chapter presents the evaluation methodology, results, and discussion. The evaluation addresses all three research questions through a combination of automated metrics, an ablation study, and real-world case analysis.
+
+
+\section{Evaluation Methodology}
+
+\subsection{Evaluation Dataset}
+
+The evaluation dataset comprises 25 proposals: 20 synthetic proposals (P01--P20) and 5 real-world cases (R01--R05).
+
+The 20 synthetic proposals were constructed to provide controlled coverage across risk levels, stratified as 9 High, 7 Medium, and 4 Low risk. Each proposal was authored as a free-text research description of approximately 200--400 words, specifying the AI technology, application domain, data types, affected populations, and deployment context. Ground truth annotations were assigned by the researcher, specifying the expected risk level, applicable requirements (by ID), impacted Charter rights, and relevant incidents. The stratification ensures that the evaluation covers the full range of risk classifications rather than concentrating on a single category.
+
+The synthetic proposal construction protocol follows established benchmarking methodology. PASTA \cite{pasta2026} evaluates AI outputs against multiple compliance policies simultaneously and validates system scores against a panel of human experts' median judgments, directly analogous to AIEF's multi-framework, expert-reviewed design. InvisibleBench \cite{invisiblebench2025}, though situated in a different AI-safety domain (caregiving-relationship AI), demonstrates more broadly that researcher-constructed synthetic scenarios without real-participant data can support controlled, reproducible safety evaluation. LiveRAG \cite{liverag2025} employs a diverse Q\&A dataset for RAG system evaluation, reinforcing the value of controlled synthetic benchmarking for retrieval-augmented systems specifically. Kapania et al. \cite{kapania2024} examine the ethics of using LLMs within HCI research practice, including as substitutes for human input, informing this dissertation's treatment of synthetic proposals as a substitute for confidential real REAMS applications.
+
+The 5 real-world cases provide external validity:
+
+\begin{table}[htbp]
+\centering
+\caption{Real-world evaluation cases.}
+\label{tab:realworld}
+\begin{tabular}{llll}
+\toprule
+\textbf{ID} & \textbf{System} & \textbf{Domain} & \textbf{Expected Risk} \\
+\midrule
+R01 & Optum algorithm \cite{optum2019} & Healthcare & High \\
+R02 & COMPAS \cite{compas2016} & Criminal justice & High \\
+R03 & Amazon Rekognition \cite{rekognition2019} & Facial recognition & High \\
+R04 & Facebook ad delivery \cite{facebookads2019} & Advertising & High \\
+R05 & Epic Sepsis Model \cite{wong2021sepsis} & Healthcare & High \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These cases were selected because they are extensively documented in academic literature and public reporting, enabling verification of the system's assessments against established analyses of each system's ethical implications.
+
+
+\subsection{Evaluation Metrics}
+
+Four metrics were used to assess system performance:
+
+\textbf{Risk classification accuracy.} The proportion of proposals for which the system's predicted risk level (High, Medium, or Low) matches the ground truth annotation. This metric addresses RQ2.
+
+\textbf{Retrieval recall.} The proportion of ground truth requirement IDs that appear in the knowledge graph retrieval results for a given proposal, calculated as $|R_{retrieved} \cap R_{ground\_truth}| / |R_{ground\_truth}|$. This metric isolates the knowledge graph's contribution independently of the LLM's behaviour, addressing RQ1 and RQ2.
+
+\textbf{Generation F1 score.} The harmonic mean of precision and recall computed over the requirement IDs cited in the LLM's generated assessment, compared against the ground truth. This metric captures how effectively the LLM selects and cites relevant requirements from the retrieved context, addressing RQ3.
+
+\textbf{Ablation comparison.} A controlled comparison across three conditions (LLM-only, KG-only, and full pipeline) to isolate the contribution of each component, directly addressing RQ3.
+
+
+\section{Multi-Model Evaluation Results}
+
+Table~\ref{tab:model_comparison} presents the primary evaluation results across two model configurations.
+
+\begin{table}[htbp]
+\centering
+\caption{Evaluation results by model configuration (20 synthetic proposals).}
+\label{tab:model_comparison}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Metric} & \textbf{Llama 3.1 8B} & \textbf{Llama 3.3 70B} \\
+\midrule
+Risk classification accuracy & 65\% (13/20) & 90\% (18/20) \\
+Retrieval recall & 0.99 & 0.99 \\
+Generation F1 & 0.16 & 0.22 \\
+Backend & Ollama (local) & Groq API (cloud) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\subsection{Central Finding: Model-Agnostic Retrieval}
+
+The most significant finding is that retrieval recall remains at 0.99 across both model configurations. This result demonstrates that the knowledge graph's contribution to the assessment pipeline is independent of the LLM used for generation. The ontology-driven SPARQL retrieval consistently surfaces the correct requirements, incidents, and rights mappings regardless of downstream model capacity.
+
+This finding supports RQ1 and RQ2: the harmonised ontology effectively represents cross-framework requirements, and the knowledge graph supports automated ethics assessment with near-perfect retrieval performance. It also establishes a clean analytical separation between retrieval quality and generation quality, following the decomposition framework proposed by Gao et al. \cite{gao2023rag}. The knowledge engineering contribution is stable and reusable; generation quality is a function of model capacity that will improve as larger and more capable models become available.
+
+
+\subsection{Risk Classification Analysis}
+\label{sec:risk-classification-analysis}
+
+Risk classification accuracy scales with model capacity: 65\% at 8B parameters and 90\% at 70B parameters. Analysis of the 8B model's misclassifications reveals a consistent pattern of conservative bias: the model over-classifies Medium and Low risk proposals as High risk. This bias does not manifest as under-detection of genuine high-risk proposals, which are correctly classified at a 90\% rate even by the 8B model.
+
+In the context of ethics assessment, this conservative behaviour is defensible. False negatives (failing to flag a genuinely risky proposal) carry greater potential for harm than false positives (flagging a low-risk proposal for additional review). This asymmetry aligns with the precautionary principle embedded in EU AI Act Article~9, which requires risk management systems to err on the side of caution. Farber \cite{farber2025} reports an analogous finding in offender risk assessment, where AI models consistently assign higher overall risk scores than human assessors, interpreting this as a characteristic of LLM-based risk assessment rather than an error.
+
+The 90\% accuracy achieved by the 70B model demonstrates that the system produces reliable risk classifications when provided with sufficient model capacity.
+
+
+\subsection{Generation F1 Analysis}
+
+Generation F1 scores (0.16 at 8B, 0.22 at 70B) are lower than retrieval recall, reflecting the expected gap between retrieving the correct requirements and the LLM's ability to cite them accurately in its generated assessment. The LLM receives all relevant requirements in its context but selectively cites a subset, sometimes omitting requirements that are applicable or occasionally citing requirements that were retrieved but are marginally relevant to the specific proposal.
+
+This finding confirms the analytical value of separating retrieval and generation metrics: the knowledge graph performs its function well (0.99 retrieval recall), while generation quality is a separable concern that improves with model capacity and can be further enhanced through prompt engineering or fine-tuning.
+
+
+\subsection{Qwen3 32B: Exploratory Results}
+\label{sec:qwen-ratelimit}
+
+An exploratory evaluation was conducted using Qwen3 32B via the Groq API. However, 7 of 20 proposals failed to complete due to tokens-per-minute (TPM) rate limiting on the free API tier. The results from the 13 completed proposals are therefore methodologically compromised and cannot be reliably compared against the Llama configurations. For this reason, Qwen3 32B results are excluded from the primary comparison. This limitation is acknowledged as a constraint of the evaluation infrastructure rather than a reflection on the model's capabilities.
+
+
+\section{Ablation Study}
+\label{sec:ablation}
+
+An ablation study was conducted on five proposals (P01, P03, P07, P13, P17) selected to span all three risk levels. Three conditions were evaluated:
+
+\begin{table}[htbp]
+\centering
+\caption{Ablation study results.}
+\label{tab:ablation}
+\begin{tabular}{p{2.5cm}p{4cm}ccr}
+\toprule
+\textbf{Condition} & \textbf{Description} & \textbf{Req. IDs} & \textbf{Incidents} & \textbf{Rights} \\
+\midrule
+A: LLM Only & Proposal sent to LLM without KG context & None & 0--1 & 1--2 \\
+B: KG Only & SPARQL retrieval without LLM interpretation & All & 8 & 9--11 \\
+C: Full Pipeline & KG retrieval + LLM interpretation & Cited & 1--2 & 2--4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The ablation study reveals three concrete contributions of the knowledge graph:
+
+\textbf{Requirement traceability.} Under Condition A (LLM-only), the model produces general ethics commentary but cites no specific requirement IDs from any governance framework. The LLM lacks the structured knowledge to provide framework-specific, traceable compliance guidance. Under Condition C (full pipeline), assessments cite specific requirement IDs with framework provenance (e.g., ``R042 from REAMS \S 3.1.4''), enabling the user to verify each recommendation against the source document.
+
+\textbf{Incident grounding.} Under Condition A, the LLM references 0--1 incidents, which are frequently hallucinated (naming incidents that do not exist or misattributing details). Under Condition B (KG-only), retrieval surfaces 8 relevant incidents per proposal from the curated dataset. Under Condition C, the LLM contextualises 1--2 of the most relevant retrieved incidents in its narrative, grounding its assessment in documented precedent rather than fabricated examples.
+
+\textbf{Rights coverage.} Under Condition A, the LLM identifies 1--2 Charter rights, typically the most obvious (e.g., data protection for any project involving personal data). Under Condition B, the KG retrieves 9--11 mapped rights per proposal, reflecting the full breadth of Charter implications. Under Condition C, the LLM synthesises 2--4 rights in its assessment, providing broader coverage than the LLM-alone baseline while remaining manageable for the reader.
+
+These findings directly address RQ3: retrieval-augmented generation using the ontology-driven knowledge graph produces more accurate and traceable assessments than an LLM operating without structured knowledge.
+
+
+\section{Real-World Case Analysis}
+
+The five real-world cases (R01--R05) were re-processed through the deployed production pipeline (\url{https://aief.vercel.app}, Llama 3.3 70B backend) on 14 July 2026 to assess external validity, so the figures below are directly reproducible rather than reported from memory. All five cases were correctly classified as High risk. The system's assessments were qualitatively compared against published analyses of each system's ethical implications:
+
+\textbf{R01 (Optum).} The system correctly identified healthcare discrimination risk and mapped the case to Article~21 (non-discrimination) and Article~35 (healthcare), citing requirements ACM023, ACM027, HE032, and R021, and retrieving the Optum healthcare-bias incident itself (AIAAIC-006) alongside a further healthcare-domain precedent (AIAAIC-043).
+
+\textbf{R02 (COMPAS).} The system identified criminal justice bias, mapping to Article~21, Article~6 (liberty and security of person), and Article~47 (right to effective remedy), citing requirement R068 and retrieving the Detroit false-arrest incident (AIAAIC-002) and a further law-enforcement precedent (AIAAIC-038).
+
+\textbf{R03 (Amazon Rekognition).} Facial recognition bias was correctly identified with mappings to Article~7 (private life), Article~8 (data protection), and Article~21, citing requirements ACM024, AI024, and HE048. The system retrieved the Detroit false-arrest incident (AIAAIC-002) as a cross-technology precedent from the same risk category, alongside two further precedents (AIAAIC-007, AIAAIC-051).
+
+\textbf{R04 (Facebook ad delivery).} Discriminatory ad targeting was identified with mappings to Article~21 and Article~23 (equality between women and men), citing requirements ACM003, ACM004, HE015, AI023, and R054, and retrieving the Amazon hiring-bias incident (AIAAIC-001) and a further precedent (AIAAIC-011).
+
+\textbf{R05 (Epic Sepsis Model).} An earlier draft of this dissertation used an unverifiable ``NHS sepsis prediction algorithm'' as R05; that citation has been corrected. R05 is now the Epic Sepsis Model, a proprietary clinical decision-support tool deployed across hundreds of US hospitals, whose external validation at a large academic medical centre found substantially worse real-world discrimination than the developer reported (AUC 0.63 versus a claimed 0.76--0.83), 33\% sensitivity for genuine sepsis cases, a 12\% positive predictive value, and a high false-alarm burden contributing to clinician alert fatigue \cite{wong2021sepsis}. AIEF classified this case as High risk, citing requirements ACM003, HE013, and R085, mapping to Article~21, and retrieving the Optum healthcare-bias incident (AIAAIC-006) and the Amazon hiring-bias incident (AIAAIC-001) as precedents. This revises the earlier draft's characterisation of R05 as Medium risk on the premise that clinical oversight mitigates model error; the peer-reviewed evidence on the Epic Sepsis Model does not support that premise, since alert fatigue from a high false-positive rate is itself a documented mechanism by which human oversight fails.
+
+These results provide evidence that the system generalises beyond the synthetic evaluation dataset to documented real-world cases, though the sample size (n=5) limits the strength of this claim.
+
+
+\section{RAGAS-Style Automated Metrics}
+\label{sec:ragas-validation}
+
+To complement the risk-classification-accuracy, retrieval-recall, and generation-F1 metrics reported above, four RAGAS-style metrics \cite{gao2023rag} were computed for all 20 synthetic proposals on 14 July 2026: context recall and context precision, computed directly against live SPARQL retrieval from the GraphDB endpoint (no LLM judge required), and faithfulness and answer relevancy, scored by Llama 3.3 70B as an LLM judge against the generated assessments.
+
+Context recall and context precision completed for all 20 proposals. The LLM-judge metrics (faithfulness, answer relevancy) completed for a subset of proposals — 5/20 and 12/20 respectively — before repeatedly hitting the Groq free-tier tokens-per-minute rate limit already documented for the Qwen3 32B exploratory evaluation (\S\ref{sec:qwen-ratelimit}); retries with exponential backoff were attempted but the constraint persisted after 24 minutes of runtime, so these two metrics are reported as partial coverage rather than extrapolated to the full dataset.
+
+\begin{table}[htbp]
+\centering
+\caption{RAGAS-style metrics (20 synthetic proposals, 14 July 2026).}
+\label{tab:ragas}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Metric} & \textbf{Mean} & \textbf{Range} & \textbf{n} & \textbf{Judge} \\
+\midrule
+Context recall & 0.80 & 0.00--1.00 & 20/20 & none (set overlap) \\
+Context precision & 0.030 & 0.006--0.065 & 20/20 & none (set overlap) \\
+Faithfulness & 0.30 & 0.0--0.5 & 5/20 & Llama 3.3 70B \\
+Answer relevancy & 0.90 & 0.8--1.0 & 12/20 & Llama 3.3 70B \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Context recall} (mean 0.80) is lower than the 0.99 headline retrieval-recall figure reported in Table~\ref{tab:model_comparison} because the two metrics use different denominators: the primary retrieval-recall metric checks recall of ground-truth requirement IDs used for the risk-classification evaluation, while RAGAS context recall here is computed against the full 5--13-item expected-requirement sets used for generation-F1 scoring, a stricter test. One proposal (P20, open-source code linting, Low risk) returned zero recall — the single expected requirement (ACM001) was not among the retrieved set, a genuine keyword-retrieval failure on a minimal-risk, technically-phrased proposal that the keyword map does not cover well, and is recorded as a concrete limitation of the current keyword-based retrieval mechanism.
+
+\textbf{Context precision} (mean 0.030) is very low because SPARQL retrieval is deliberately broad by design: it typically surfaces 140--196 of the 207 total requirements per proposal, leaving the LLM to filter down to the requirements it ultimately cites (a mean of roughly 5 per proposal, per the ablation study in \S\ref{sec:ablation}). This recall-over-precision retrieval strategy was not previously quantified in evaluation terms; measuring it here makes explicit a design trade-off that was implicit in the system's architecture — a missed requirement is more consequential for ethics screening than an irrelevant one being briefly retrieved and then discarded by the LLM, but it also means retrieval alone does not narrow the requirement set, and all of that filtering work falls on the LLM at generation time.
+
+\textbf{Faithfulness} (mean 0.30, n=5) and \textbf{answer relevancy} (mean 0.90, n=12) on the partial sample suggest the system's assessments are reliably on-topic (high relevancy) but that the LLM judge found several assessments only partially grounded in the retrieved context (low faithfulness) — consistent with the generation F1 gap already discussed in \S\ref{sec:risk-classification-analysis}. Given the small sample size for these two metrics, this finding should be treated as indicative rather than conclusive; a full-coverage re-run on a paid Groq tier or a local Ollama judge (avoiding the rate-limit constraint entirely) is recorded as future work in Chapter~\ref{ch:conclusion}.
+
+
+\section{Discussion}
+
+\subsection{Addressing the Research Questions}
+
+\textbf{RQ1} asked whether a harmonised ontology can effectively represent cross-framework ethics requirements. The ontology's 63 classes, alignment with DPV and ODRL, and successful validation through expert review and SPARQL competency queries confirm that it can. The 0.99 retrieval recall demonstrates that the ontology supports effective knowledge retrieval across all four frameworks.
+
+\textbf{RQ2} asked whether the knowledge graph supports automated, rights-grounded ethics assessment. The evaluation results confirm this: the populated knowledge graph enables 90\% risk classification accuracy (at 70B), provides requirement-level traceability, and maps assessments to specific Charter rights.
+
+\textbf{RQ3} asked whether RAG with the knowledge graph outperforms LLM-alone baselines. The ablation study provides definitive evidence: the LLM alone produces no traceable requirement IDs, hallucinated or absent incident references, and minimal rights coverage, while the full pipeline provides all three.
+
+
+\subsection{Comparison with Related Work}
+
+The conservative bias observed in AIEF's smaller model mirrors findings by Farber \cite{farber2025} in a different risk assessment domain, suggesting this may be a general characteristic of LLM-based risk assessment that warrants further investigation.
+
+
+\subsection{Threats to Validity}
+
+\textbf{Internal validity.} The ground truth annotations for synthetic proposals were assigned by the researcher rather than an independent panel. While the inter-annotator agreement study (Cohen's $\kappa$ = 0.712) validates the annotation methodology for incident-rights mappings, the risk level assignments for synthetic proposals represent a single annotator's judgment.
+
+\textbf{External validity.} The evaluation uses synthetic proposals because real REAMS applications are confidential. The 5 real-world cases mitigate this limitation but do not fully replicate the conditions under which the system would be used in practice. The system has not been evaluated by REAMS committee members or ethics reviewers.
+
+\textbf{Construct validity.} Risk classification accuracy treats risk levels as categorical labels, but in practice, the boundary between Medium and High risk is often contextual and debatable. The 65\% accuracy at 8B may partly reflect ambiguity in ground truth labels rather than system error.
+
+\textbf{Reliability.} LLM outputs are stochastic. Running the same proposal through the pipeline multiple times may produce slightly different assessments. The evaluation reports results from a single run per proposal. Temperature and other generation parameters were held constant across all evaluations.
+
+
+\subsection{Limitations}
+
+Several limitations should be acknowledged:
+
+\begin{enumerate}
+\item The ontology covers four governance frameworks; additional frameworks (e.g., ISO/IEC 42001, NIST AI RMF) are not included and would require ontology extension.
+
+\item The 70 incidents represent a curated subset of available AI incident data. As new incidents occur (362 in 2025 alone \cite{stanfordaiindex2026}), the knowledge graph requires periodic updates.
+
+\item Expert validation of system outputs was planned but not completed within the project timeline. Scoring sheets were prepared for 8 proposals across ADAPT Centre researchers, but responses were not received before submission.
+
+\item The Qwen3 32B evaluation was compromised by API rate limits, preventing a complete three-model comparison.
+
+\item The web application uses a static knowledge graph snapshot for deployment, which does not update automatically as new triples are added to GraphDB.
+
+\item The system's SPARQL retrieval relies on keyword matching, which may miss requirements that are relevant but expressed using different terminology than the proposal text.
+\end{enumerate}

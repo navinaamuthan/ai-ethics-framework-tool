@@ -1,0 +1,50 @@
+\chapter{Introduction}
+\label{ch:introduction}
+
+\section{Motivation}
+
+The rapid expansion of artificial intelligence into domains such as healthcare, criminal justice, employment, and education has created an urgent need for systematic ethics assessment at every stage of the AI development lifecycle. Regulatory instruments including the EU AI Act \cite{euaiact2024}, institutional frameworks such as the Trinity College Dublin Research Ethics and Approval Management System (REAMS), funding body requirements under Horizon Europe \cite{horizonethics2021}, and professional codes of conduct from organisations such as the ACM \cite{acmethics2018} and NeurIPS \cite{neurips2021} all impose obligations on researchers and developers. These obligations frequently overlap, occasionally conflict, and collectively demand a level of cross-referencing that manual compliance processes struggle to provide at scale.
+
+The consequences of inadequate ethics assessment are well documented. The AIAAIC Repository catalogues over 1,000 incidents of AI-related harm as of September 2024 \cite{aiaaic2024}, while the AI Incident Database records over 1,460 cases \cite{aiid2024}. The Stanford AI Index 2026 reports 362 new AI incidents in 2025 alone \cite{stanfordaiindex2026}. These incidents span discriminatory hiring algorithms \cite{amazonhiring2018}, racially biased recidivism prediction \cite{compas2016}, misidentification by facial recognition systems \cite{rekognition2019}, discriminatory ad delivery \cite{facebookads2019}, and clinical decision support systems that systematically disadvantage minority patients \cite{optum2019}. In each case, earlier and more rigorous ethics assessment could have identified the risks before deployment.
+
+Despite the growing body of governance requirements, the tools available to researchers remain fragmented. Existing approaches typically address a single framework in isolation. The Assessment List for Trustworthy AI (ALTAI) \cite{altai2020} covers the EU AI Act but not institutional or funding body requirements. IBM's AI Fairness 360 \cite{aif360} provides bias detection metrics but does not perform compliance assessment against regulatory texts. RiskRAG \cite{riskrag2025} applies retrieval-augmented generation to AI model cards but does not accept free-text proposals or map to fundamental rights. The FRIA ontology developed by Pandit and Rintam\"{a}ki \cite{pandit2024fria} formalises Fundamental Rights Impact Assessment but explicitly identifies the development of an automated assessment tool as future work.
+
+This dissertation addresses these gaps by designing, building, and evaluating the AI-Assisted Ethics Assessment Framework (AIEF): an end-to-end system that accepts a free-text research proposal as input and produces a structured, traceable ethics compliance assessment grounded in four regulatory frameworks and mapped to the EU Charter of Fundamental Rights \cite{eucharter2012}.
+
+
+\section{Research Questions}
+
+This dissertation is guided by three research questions:
+
+\begin{enumerate}
+\item[\textbf{RQ1:}] Can a harmonised ontology effectively represent ethics assessment requirements across REAMS, the EU AI Act, Horizon Europe, and ACM/NeurIPS frameworks?
+
+\item[\textbf{RQ2:}] Can a knowledge graph populated with these requirements and real-world AI incidents support automated, rights-grounded ethics assessment?
+
+\item[\textbf{RQ3:}] Does retrieval-augmented generation using an ontology-driven knowledge graph produce more accurate and traceable ethics assessments than a large language model operating without structured knowledge?
+\end{enumerate}
+
+
+\section{Research Contributions}
+
+This dissertation makes four principal contributions:
+
+\begin{enumerate}
+\item \textbf{A harmonised ontology} linking requirements from TCD REAMS, the EU AI Act (Article 27 FRIA), Horizon Europe, and ACM/NeurIPS guidelines to EU Charter of Fundamental Rights articles, published at a persistent URI (\url{https://w3id.org/aief/}).
+
+\item \textbf{A populated knowledge graph} encoding 207 governance requirements and 70 real-world AI incidents in a semantic network of Charter rights and risk categories, validated through SPARQL competency queries and inter-annotator agreement (Cohen's $\kappa$ = 0.712).
+
+\item \textbf{An empirically evaluated RAG-based assessment engine} demonstrating 0.99 retrieval recall across all model configurations and 90\% risk classification accuracy at the 70B parameter scale, with an ablation study confirming the knowledge graph's contribution is model-agnostic.
+
+\item \textbf{A deployed web application} providing a publicly accessible demonstration of the complete pipeline, with retrieval transparency features that expose the provenance of every cited requirement and incident.
+\end{enumerate}
+
+
+\section{Research Approach}
+
+The research follows the Design Science Research (DSR) paradigm as articulated by Hevner et al. \cite{hevner2004}, constructing and evaluating an artifact against defined requirements derived from the four governance frameworks. The evaluation employs a mixed-methods strategy combining automated metrics (retrieval recall, risk classification accuracy, generation F1 score) with qualitative analysis (ablation study, real-world case validation). The validation dataset comprises 20 synthetic proposals stratified across risk levels and 5 real-world cases, following the hybrid synthetic-real evaluation methodology established in recent literature \cite{pasta2026, invisiblebench2025, autocontrolarena2025}.
+
+
+\section{Dissertation Structure}
+
+The remainder of this dissertation is organised as follows. Chapter~\ref{ch:background} presents the background and literature review, covering AI ethics governance frameworks, ontology engineering for compliance, knowledge graphs, and retrieval-augmented generation. Chapter~\ref{ch:design} describes the system design and implementation, detailing the ontology, knowledge graph population, RAG pipeline architecture, and web application. Chapter~\ref{ch:evaluation} presents the evaluation methodology and results, including the multi-model comparison, ablation study, and real-world case analysis. Chapter~\ref{ch:conclusion} discusses the findings, addresses limitations, and outlines directions for future work.

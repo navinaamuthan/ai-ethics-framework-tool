@@ -1,0 +1,107 @@
+\chapter{Background and Literature Review}
+\label{ch:background}
+
+This chapter surveys the landscape of AI ethics governance, ontology engineering for compliance, knowledge graph construction, and retrieval-augmented generation. It identifies the research gap that motivates the design of AIEF.
+
+
+\section{AI Ethics Governance Frameworks}
+
+The governance of AI research ethics is characterised by regulatory pluralism: multiple frameworks operate simultaneously, each with distinct scope, enforcement mechanisms, and levels of specificity. This section examines the four frameworks addressed by AIEF.
+
+
+\subsection{TCD Research Ethics and Approval Management System (REAMS)}
+
+REAMS is Trinity College Dublin's institutional ethics review system, governing all research involving human participants, their data, or the potential for societal impact \cite{reams2023}. The framework operates through a tiered review process. Tier~1 covers standard research with minimal risk, while Tier~2 and above apply to research involving vulnerable populations, deception, sensitive data, or technologies with dual-use potential. REAMS requires researchers to complete a structured application identifying their research design, data handling procedures, participant protections, and risk mitigations. The current version (REAMS v2) comprises 87 discrete requirements spanning informed consent, data protection, risk assessment, and institutional accountability.
+
+
+\subsection{The EU AI Act}
+
+The EU AI Act, adopted in 2024, establishes a risk-based regulatory framework for AI systems within the European Union \cite{euaiact2024}. Article~6 and Annex~III define criteria for classifying AI systems by risk level (unacceptable, high, limited, minimal). Article~27 mandates Fundamental Rights Impact Assessments (FRIAs) for high-risk AI systems deployed by public bodies and certain private actors. The Act requires conformity assessments, technical documentation, human oversight mechanisms, and transparency measures. Pandit and Rintam\"{a}ki \cite{pandit2024fria} have formalised the FRIA requirements as an OWL ontology extending the W3C Data Privacy Vocabulary (DPV), providing a machine-readable representation of the Article~27 obligations. AIEF explicitly builds upon this foundation, extending the scope beyond the EU AI Act to cover three additional frameworks.
+
+
+\subsection{Horizon Europe Ethics Requirements}
+
+Horizon Europe, the European Union's research and innovation funding programme, imposes ethics-by-design requirements on all funded projects \cite{horizonethics2021}. The programme's ethics review process requires applicants to address data protection, dual-use concerns, environmental impact, and societal implications through structured self-assessment. The Ethics by Design and Ethics of Use guidance specifies 52 requirements ranging from data management plans to stakeholder engagement protocols. These requirements overlap substantially with both the EU AI Act and REAMS but are framed specifically for the research funding context and carry distinct compliance obligations.
+
+
+\subsection{ACM and NeurIPS Ethics Guidelines}
+
+Professional organisations in computer science have established ethics requirements for conference submissions and publications. The ACM Code of Ethics \cite{acmethics2018} articulates general principles regarding harm avoidance, fairness, privacy, and professional responsibility. NeurIPS \cite{neurips2021} requires ethics statements accompanying submissions, covering broader impact, potential for misuse, and measures taken to mitigate foreseeable harms. Together, these professional guidelines add 38 requirements to the compliance landscape. While less prescriptive than legislative instruments, they represent the expectations of the research community and carry reputational consequences for non-compliance.
+
+
+\subsection{The Cross-Framework Compliance Challenge}
+
+The four frameworks described above collectively impose 207 requirements on AI researchers. These requirements exhibit significant overlap: data protection obligations appear in all four frameworks, while risk assessment expectations differ in granularity and terminology across REAMS, the EU AI Act, and Horizon Europe. A researcher submitting an AI project must navigate all applicable frameworks simultaneously, yet no existing tool harmonises these requirements or maps them to a common reference framework. The EU Charter of Fundamental Rights \cite{eucharter2012}, with its 54 articles organised across seven titles, provides a natural common denominator, as all four frameworks ultimately derive their legitimacy from fundamental rights protections. This observation motivates the design of AIEF's Charter-centred knowledge representation.
+
+
+\section{Fundamental Rights and AI}
+
+The relationship between AI systems and fundamental rights has been formalised through several complementary efforts. The EU Charter of Fundamental Rights \cite{eucharter2012} provides the normative foundation, articulating rights to human dignity, non-discrimination, data protection, and effective remedy that are directly implicated by AI deployment. Pandit and Rintam\"{a}ki \cite{pandit2024fria} operationalise these rights in the context of the EU AI Act's FRIA requirement, developing an ontology that links AI system properties to impacted rights through a structured assessment process. Their work explicitly identifies the development of an automated tool for conducting FRIAs as a direction for future work, a gap that AIEF directly addresses.
+
+The W3C Data Privacy Vocabulary (DPV) \cite{dpv2024} provides a comprehensive vocabulary for describing personal data processing, legal bases, purposes, and risks. Its EU Fundamental Rights extension offers machine-readable identifiers for Charter articles, enabling semantic interoperability across compliance tools. AIEF aligns its rights representation with DPV through \texttt{owl:equivalentClass} assertions, ensuring compatibility with the broader Linked Data ecosystem.
+
+
+\section{Ontology Engineering for AI Governance}
+
+Ontology engineering provides the formal knowledge representation methods necessary for automated compliance reasoning. Several ontologies address AI governance concerns, each with distinct scope and design decisions.
+
+The AI Risk Ontology (AIRO) \cite{airo2022} and its extension VAIR provide a taxonomy of AI risks, capabilities, and potential harms, developed within the ADAPT Centre. The ITO Knowledge Graph \cite{ito2022} represents AI incidents through a comprehensive ontology of 1,100 classes and 1,995 properties, demonstrating the feasibility of large-scale knowledge engineering in the AI governance domain but operating at a scale and complexity that exceeds the requirements of a targeted compliance tool.
+
+The design of the AIEF ontology draws on established ontology engineering methodologies, employing competency questions to drive class and property design \cite{gruninger1995}, DPV alignment for interoperability \cite{dpv2024}, and ODRL subclass relationships to encode the deontic modalities (obligation, permission, prohibition) inherent in governance requirements \cite{odrl2018}.
+
+
+\section{Knowledge Graphs for Compliance and Risk Assessment}
+
+Knowledge graphs have emerged as a practical infrastructure for compliance automation. Farber \cite{farber2025} evaluates LLM-based risk assessment against human expert judgments in offender risk contexts, finding that AI models consistently assign higher overall risk scores than human assessors. This finding is directly relevant to AIEF, as the system exhibits analogous conservative bias in ethics risk classification, a behaviour that aligns with the precautionary principle embedded in EU AI Act Article~9.
+
+The AIAAIC Repository \cite{aiaaic2024} catalogues AI incidents with structured metadata including affected populations, technologies involved, and geographic scope. The AI Incident Database \cite{aiid2024} provides complementary coverage with a focus on incident narratives and source documentation. AIEF draws on both repositories, curating 70 incidents across eight domain categories (NLP bias, computer vision misidentification, autonomous systems, healthcare AI, recommendation systems, generative AI misuse, surveillance, and children's rights) to populate the knowledge graph's incident layer.
+
+
+\section{Retrieval-Augmented Generation}
+
+Retrieval-augmented generation (RAG) combines the generative capabilities of large language models with structured information retrieval to produce outputs grounded in external knowledge \cite{lewis2020rag}. Gao et al. \cite{gao2023rag} provide a comprehensive survey of RAG architectures, establishing the analytical framework that distinguishes retrieval quality from generation quality as separable dimensions of system performance. This decomposition is central to AIEF's evaluation strategy: by measuring retrieval recall independently of generation accuracy, the evaluation isolates the knowledge graph's contribution from the LLM's interpretive behaviour.
+
+RiskRAG \cite{riskrag2025}, presented at CHI 2025, applies RAG to AI risk assessment by retrieving relevant model card information for risk analysis. While RiskRAG demonstrates the viability of RAG for compliance tasks, it operates on model cards rather than free-text proposals, covers a single governance framework, and does not incorporate an ontology or map to fundamental rights. AIEF extends the RAG-for-compliance paradigm by grounding retrieval in a formal ontology, accepting arbitrary proposal text as input, and providing multi-framework coverage with rights traceability.
+
+
+\section{Existing Ethics Assessment Tools}
+
+Table~\ref{tab:comparison} presents a systematic comparison of AIEF against existing tools across nine feature dimensions that collectively define the scope of an automated ethics assessment system.
+
+\begin{table}[htbp]
+\centering
+\caption{Feature comparison of AIEF against existing ethics assessment tools.}
+\label{tab:comparison}
+\small
+\begin{tabular}{p{2.8cm}ccccccc}
+\toprule
+\textbf{Feature} & \textbf{AIEF} & \textbf{ALTAI} & \textbf{RiskRAG} & \textbf{E-LENS} & \textbf{FRIA Ont.} & \textbf{AIRO} & \textbf{AIF360} \\
+\midrule
+Free-text input        & \checkmark & --         & --         & --         & --         & --     & --         \\
+Multi-framework        & \checkmark & --         & --         & --         & --         & --     & --         \\
+OWL ontology           & \checkmark & --         & --         & --         & \checkmark & \checkmark & --     \\
+KG with incidents      & \checkmark & --         & --         & --         & --         & --     & --         \\
+Charter rights map     & \checkmark & Partial    & --         & --         & \checkmark & --     & --         \\
+Risk classification    & \checkmark & \checkmark & \checkmark & \checkmark & --         & --     & --         \\
+Requirement IDs        & \checkmark & --         & --         & --         & --         & --     & --         \\
+RAG pipeline           & \checkmark & --         & \checkmark & --         & --         & --     & --         \\
+Pre-deployment scope   & \checkmark & --         & --         & --         & \checkmark & --     & --         \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+To the best of our knowledge, no existing tool combines all nine features within a single architecture. ALTAI provides comprehensive questionnaire-based assessment but is limited to the EU AI Act and does not accept free-text input. RiskRAG demonstrates RAG for risk assessment but operates on model cards within a single framework. The FRIA ontology provides the formal knowledge representation that AIEF extends but does not include an assessment engine. AIRO offers a risk taxonomy but lacks an operational compliance pipeline.
+
+
+\section{Synthetic and Hybrid Evaluation Methodology}
+
+The use of synthetic evaluation data in AI system assessment has gained significant methodological support in recent literature. PASTA \cite{pasta2026}, presented at CHI 2026, evaluates AI outputs against multiple compliance policies simultaneously and validates system scores against a panel of human experts' median judgments — directly analogous to AIEF's multi-framework assessment and expert-review design. InvisibleBench \cite{invisiblebench2025} and AutoControl Arena \cite{autocontrolarena2025}, though situated in different AI-safety domains (caregiving-relationship AI and frontier-model red-teaming respectively), demonstrate more broadly that researcher-constructed synthetic scenarios without real-participant data can support controlled, reproducible safety evaluation. Kapania et al. \cite{kapania2024} examine the ethics of using LLMs within HCI research practice, including as substitutes for human input, informing AIEF's treatment of synthetic proposals as a substitute for confidential real REAMS applications. LiveRAG \cite{liverag2025} employs a diverse Q\&A dataset for RAG system evaluation, reinforcing the value of controlled synthetic benchmarking for retrieval-augmented systems specifically.
+
+Two further FAccT '26 contributions bear directly on AIEF's positioning: Jarvers and Papakyriakopoulos \cite{jarvers2026engaged} study the ``last mile'' problem of translating EU AI Act text into development practice, finding through action research that practitioners perceive regulatory requirements inconsistently and arguing that internal expert collaboration, not automated tooling alone, is needed to close the gap; and Ullstein et al. \cite{ullstein2026pafria} propose PaFRIA, a participatory Fundamental Rights Impact Assessment process aligned with EU AI Act Article 27, developed iteratively with deployers, affected end-users, and experts. Both papers reinforce a limitation AIEF shares with other automated assessment tools: neither internal-team buy-in nor affected-stakeholder participation is captured by a knowledge-graph-and-LLM pipeline operating on proposal text alone. AIEF and PaFRIA are complementary rather than competing: AIEF's rapid, traceable, pre-submission screen could plausibly serve as an input artefact to a subsequent participatory process, surfacing candidate risks and rights for stakeholders to deliberate over rather than replacing that deliberation.
+
+AIEF's evaluation design adopts this hybrid approach: 20 synthetic proposals provide controlled coverage across risk strata (9 High, 7 Medium, 4 Low), while 5 real-world cases (Optum \cite{optum2019}, COMPAS \cite{compas2016}, Amazon Rekognition \cite{rekognition2019}, Facebook ad delivery \cite{facebookads2019}, and the Epic Sepsis Model \cite{wong2021sepsis}) provide external validity. This design is directly informed by the methodological precedents established in the literature reviewed above.
+
+
+\section{Summary and Research Gap}
+
+The literature reveals a clear gap: while individual components of automated ethics assessment exist in isolation (ontologies for AI governance, knowledge graphs for incident documentation, RAG for compliance-related retrieval), no existing system integrates these components into an end-to-end pipeline that accepts free-text proposals, covers multiple frameworks, maps to fundamental rights, and provides requirement-level traceability. Pandit and Rintam\"{a}ki \cite{pandit2024fria} explicitly identify the development of such an automated tool as future work. AIEF is designed to fill this gap.

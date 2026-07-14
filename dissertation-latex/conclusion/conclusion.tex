@@ -1,0 +1,45 @@
+\chapter{Conclusion and Future Work}
+\label{ch:conclusion}
+
+\section{Summary of Contributions}
+
+This dissertation has presented AIEF, an AI-assisted ethics assessment framework that takes free-text research proposals as input and produces structured, traceable compliance assessments grounded in four governance frameworks and mapped to the EU Charter of Fundamental Rights. The system integrates three technical layers: an OWL ontology harmonising 207 requirements across REAMS, the EU AI Act, Horizon Europe, and ACM/NeurIPS; a knowledge graph encoding these requirements alongside 70 real-world AI incidents with 342 Charter rights mappings; and a retrieval-augmented generation pipeline that grounds LLM outputs in structured knowledge to produce assessments with requirement-level provenance.
+
+The evaluation demonstrates three principal findings. First, the knowledge graph achieves 0.99 retrieval recall across all model configurations, confirming that the ontology-driven knowledge engineering provides a model-agnostic foundation for ethics assessment. Second, risk classification accuracy scales with model capacity (65\% at 8B, 90\% at 70B), establishing that generation quality is a separable dimension that will improve with advances in LLM capabilities while the underlying knowledge engineering remains stable. Third, the ablation study confirms that the knowledge graph provides requirement traceability, incident grounding, and rights coverage that are entirely absent from LLM-alone baselines.
+
+AIEF realises the automated compliance assessment tool that Pandit and Rintam\"{a}ki \cite{pandit2024fria} explicitly proposed as future work in their FRIA ontology research. To the best of our knowledge, it is the first system to combine free-text proposal input, multi-framework coverage, an OWL ontology with incident grounding, EU Charter rights mapping, risk classification, and requirement-level traceability within a single RAG-based architecture.
+
+
+\section{Practical Implications}
+
+The system has three immediate practical applications. For \textbf{researchers}, AIEF can serve as a pre-submission screening tool, identifying ethics requirements and potential risks before formal review, reducing the likelihood of incomplete applications and iterative resubmissions. For \textbf{ethics committees}, the system can provide a preliminary assessment that supplements (but does not replace) human review, highlighting areas requiring closer attention. For \textbf{institutions}, the system's multi-framework coverage enables consistent application of ethics requirements across research groups, reducing the variability that arises from individual researchers' differing awareness of regulatory obligations.
+
+
+\section{Future Work}
+
+Several directions for future research emerge from this work:
+
+\textbf{Framework extension.} The ontology architecture supports the addition of further governance frameworks. ISO/IEC 42001 (AI Management System), the NIST AI Risk Management Framework, and sector-specific regulations (e.g., FDA guidance for clinical AI, financial services AI regulations) could be integrated by defining new requirement individuals and Charter mappings within the existing schema.
+
+\textbf{Knowledge graph maintenance.} The AIAAIC Repository and AI Incident Database are continuously updated. An automated or semi-automated pipeline for ingesting new incidents, annotating them with Charter rights mappings, and inserting them into the knowledge graph would ensure the system's evidence base remains current.
+
+\textbf{Embedding-based retrieval.} The current keyword-based SPARQL retrieval could be augmented with semantic embedding similarity to improve recall on proposals that use terminology not directly matching requirement text. Hybrid retrieval combining structured SPARQL queries with vector similarity search has been demonstrated in recent RAG literature.
+
+\textbf{Expert validation.} Completing the planned expert review with ADAPT Centre researchers would provide inter-rater reliability metrics (Spearman $\rho$) for system output quality, following the PASTA \cite{pasta2026} evaluation methodology.
+
+\textbf{Namespace separation.} The current unified namespace (\texttt{https://w3id.org/aief/}) could be separated into per-framework namespaces to support modular ontology publication and independent versioning, as recommended during the expert ontology review.
+
+\textbf{OOPS! remediation.} The OOPS! pitfall scan (\S\ref{sec:oops-validation}) identified concrete, addressable gaps: domain/range declarations for five data properties, \texttt{rdfs:label}/\texttt{rdfs:comment} annotations for 78 supporting-vocabulary elements, and \texttt{owl:inverseOf} declarations for 17 object properties. None require redesigning the class hierarchy.
+
+\textbf{Retrieval precision.} SPARQL retrieval currently prioritises recall over precision by design, retrieving a broad candidate set (typically 150--200 of 207 requirements per proposal) for the LLM to filter; this keeps context recall high (mean 0.80 across the 20 synthetic proposals per the RAGAS-style evaluation in \S\ref{sec:ragas-validation}) but yields low context precision. Narrowing retrieval — for example through embedding similarity re-ranking before LLM hand-off — is a natural next step now that this trade-off has been measured directly rather than assumed.
+
+\textbf{Stakeholder participation.} Following \cite{jarvers2026engaged,ullstein2026pafria}, investigating how AIEF's automated screen could feed into, rather than substitute for, a participatory review process involving affected stakeholders and internal experts.
+
+\textbf{Corporate and regulatory extension.} While this dissertation focuses on research proposal assessment, the architecture is designed to support extension to corporate AI governance contexts. Replacing REAMS requirements with corporate AI governance policies and adding sector-specific regulatory requirements would enable the system to serve as a compliance screening tool for industry AI deployments.
+
+\textbf{Fine-tuning.} The current system uses general-purpose LLMs with prompt engineering. Fine-tuning a model on ethics assessment outputs could improve generation F1 scores, particularly for smaller models, reducing the dependency on large parameter counts.
+
+
+\section{Concluding Remarks}
+
+The gap between the growing body of AI ethics governance requirements and the tools available to researchers for navigating them represents both a practical problem and a research opportunity. This dissertation has demonstrated that an ontology-driven knowledge graph, combined with retrieval-augmented generation, can bridge this gap by providing automated, traceable, and rights-grounded compliance assessments. The 0.99 retrieval recall across model configurations confirms that the knowledge engineering contribution is robust and reusable. As both the regulatory landscape and LLM capabilities continue to evolve, the modular architecture of AIEF provides a foundation that can adapt to both.

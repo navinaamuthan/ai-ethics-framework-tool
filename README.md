@@ -29,9 +29,11 @@ The ontology is aligned with the [W3C Data Privacy Vocabulary (DPV)](https://w3i
 ai-ethics-final.ttl    Canonical ontology + knowledge graph (kept at root: w3id.org/aief redirects here)
 ontology/              Copy of the TTL + validation script
 rag-pipeline/          Python RAG pipeline (SPARQL retrieval → prompt building → LLM call → scoring)
-evaluation/            Evaluation outputs per model + OOPS! report
+evaluation/            Evaluation outputs per model, OOPS! report, RAGAS results
 webapp/                Next.js 14 demo application (deployed on Vercel)
 docs/                  Concept and architecture diagrams
+paper/                 Standalone research paper (Trinity LaTeX format, with diagrams)
+dissertation-latex/    Full five-chapter MSc dissertation (LaTeX source)
 ```
 
 ## Architecture
@@ -69,12 +71,18 @@ Deployment (Vercel): set the project **Root Directory** to `webapp/` and add `GR
 
 ## Evaluation summary
 
-- **Dataset:** 20 synthetic proposals (9 High / 7 Medium / 4 Low risk) + 5 real-world cases (Optum, COMPAS, Amazon Rekognition, Facebook ad delivery, NHS sepsis).
+- **Dataset:** 20 synthetic proposals (9 High / 7 Medium / 4 Low risk) + 5 real-world cases (Optum, COMPAS, Amazon Rekognition, Facebook ad delivery, the Epic Sepsis Model — Wong et al., *JAMA Internal Medicine* 2021).
 - **Retrieval recall:** 0.99 across all model configurations — the KG contribution is model-agnostic.
 - **Risk accuracy:** 65% (Llama 3.1 8B, Ollama) / 90% (Llama 3.3 70B, Groq); misclassifications skew conservative (upward).
 - **Ablation:** LLM-only cites no traceable requirement IDs and hallucinates incidents; the full pipeline cites requirement IDs with framework provenance and grounds findings in curated incidents.
 - Qwen3 32B results are exploratory only (7/20 runs failed on free-tier rate limits) and excluded from the primary comparison — see `evaluation/results/qwen3-32b-exploratory/`.
 - Annotation methodology validated by inter-annotator agreement on incident–rights mappings (Cohen's κ = 0.712, substantial).
+- **OOPS! ontology validation:** 8 non-critical pitfall categories found (2 "Important": missing domain/range on 5 properties, missing disjointness axioms; rest "Minor" annotation-completeness gaps). Full report: `evaluation/oops_report.xml`.
+- **RAGAS-style metrics:** context recall/precision computed on all 20 proposals (mean recall 0.80, mean precision 0.030 — retrieval is deliberately broad by design); faithfulness/answer-relevancy (LLM-judge metrics) completed on a partial sample due to Groq free-tier rate limits. Full results: `evaluation/ragas_results.json`.
+
+## Paper and dissertation
+
+`paper/main.tex` is a standalone research-paper writeup of this work in Trinity College Dublin's dissertation LaTeX format, with five diagrams (system architecture, ontology concept diagram, knowledge graph schema, ablation methodology, and the central retrieval-vs-generation finding) — Mermaid source for each is in `paper/diagrams/README.md`. `dissertation-latex/` contains the full five-chapter MSc dissertation this paper is drawn from. Both compile with a standard TeX Live installation (e.g. on Overleaf); no LaTeX toolchain is bundled here.
 
 ## Citation
 

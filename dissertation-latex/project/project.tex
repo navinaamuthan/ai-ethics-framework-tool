@@ -1,0 +1,261 @@
+\chapter{System Design and Implementation}
+\label{ch:design}
+
+This chapter describes the design, implementation, and deployment of AIEF. The system comprises four layers: an OWL ontology defining the domain vocabulary, a knowledge graph encoding governance requirements and AI incidents, a RAG pipeline producing structured assessments, and a web application providing public access to the system.
+
+
+\section{Research Methodology}
+
+The research follows the Design Science Research (DSR) paradigm \cite{hevner2004}, which prescribes the iterative construction and evaluation of artifacts that address identified problems. DSR is appropriate for this work because the primary contribution is a functional system (the AIEF artifact) rather than a purely theoretical framework. The design cycle proceeded through five iterations: (1) framework extraction and requirement harmonisation, (2) ontology design and expert review, (3) knowledge graph population and validation, (4) RAG pipeline construction, and (5) evaluation and refinement.
+
+
+\section{Ontology Design}
+\label{sec:ontology}
+
+\subsection{Design Principles}
+
+The AIEF ontology was designed to satisfy three objectives: (a) harmonising requirements from four distinct governance frameworks into a single queryable schema, (b) providing traceability from individual requirements to EU Charter of Fundamental Rights articles, and (c) enabling interoperability with existing Semantic Web vocabularies. Competency questions guided the class and property design following established ontology engineering methodology \cite{gruninger1995}.
+
+The ontology was developed in WebProt\'{e}g\'{e} and is published at the persistent URI \url{https://w3id.org/aief/} via the W3C Permanent Identifier Community Group's redirect service. The source is maintained in a public GitHub repository.\footnote{\url{https://github.com/navinaamuthan/ai-ethics-framework-tool}}
+
+
+\subsection{Ontology Structure}
+
+The ontology comprises 63 classes, 19 object properties, and 11 data properties. Table~\ref{tab:ontology_summary} summarises the key structural elements.
+
+\begin{table}[htbp]
+\centering
+\caption{AIEF ontology structural summary.}
+\label{tab:ontology_summary}
+\begin{tabular}{lr}
+\toprule
+\textbf{Element} & \textbf{Count} \\
+\midrule
+Classes & 63 \\
+Object properties & 19 \\
+Data properties & 11 \\
+Requirement individuals & 207 \\
+Incident individuals & 70 \\
+Charter rights mappings (\texttt{mapsToRight} triples) & 342 \\
+Total asserted triples & 3,921 \\
+Total triples including inferred (GraphDB, OWL-Horst) & 5,197 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The core class hierarchy organises the domain into six principal concepts. \texttt{ResearchProposal} represents the input artifact. \texttt{GovernanceRequirement} is subclassed by framework-specific requirement types (\texttt{REAMSRequirement}, \texttt{EUAIActRequirement}, \texttt{HorizonEuropeRequirement}, \texttt{ACMRequirement}), each further classified by deontic modality (\texttt{Obligation}, \texttt{Permission}, \texttt{Prohibition}) aligned with ODRL through \texttt{rdfs:subClassOf} relationships \cite{odrl2018}. \texttt{FundamentalRight} represents EU Charter articles and is aligned with the DPV EU Fundamental Rights extension through \texttt{owl:equivalentClass} assertions \cite{dpv2024}. \texttt{AIIncident} represents real-world cases of AI harm. \texttt{RiskLevel} classifies proposals as High, Medium, or Low risk. \texttt{Mitigation} captures recommended risk reduction measures.
+
+Key object properties include \texttt{mapsToRight} (linking requirements to Charter articles), \texttt{impactsRight} (linking incidents to affected rights), \texttt{hasRiskLevel} (classifying proposals), \texttt{supportsRequirement} (connecting incidents to the requirements they illustrate), and \texttt{demonstratesRisk} (linking incidents to risk categories). The core \texttt{Requirement} and \texttt{Incident} individuals carry identifying data properties throughout; annotation coverage across the supporting-vocabulary classes is incomplete, as \S\ref{sec:oops-validation} reports.
+
+
+\subsection{Standards Alignment}
+
+Two alignment strategies ensure interoperability with the broader Semantic Web ecosystem:
+
+\textbf{DPV alignment.} Fifteen of the 25 EU Charter rights represented in the ontology are currently linked to their DPV counterparts through \texttt{owl:equivalentClass} assertions. For example, \texttt{aief:Article21NonDiscrimination} is declared equivalent to \texttt{dpv-rights:A21-NonDiscrimination}. This enables federated queries across AIEF and any DPV-aligned dataset.
+
+\textbf{ODRL alignment.} Requirement deontic modalities are encoded as subclasses of ODRL classes: \texttt{aief:Obligation rdfs:subClassOf odrl:Obligation}. This alignment ensures that AIEF requirements are interpretable within the ODRL policy framework, supporting future integration with automated policy enforcement systems.
+
+
+\subsection{Expert Review and Revisions}
+
+The ontology was reviewed by Delaram Golpayegani (ADAPT Centre, TCD), co-author of the FRIA ontology and AIRO. Her review produced seven recommendations, all of which were implemented:
+
+\begin{enumerate}
+\item Registration of a permanent namespace at \url{https://w3id.org/aief/} (w3id pull request merged).
+\item Migration of all IRIs from placeholder \texttt{example.org} URIs.
+\item Alignment of EU Charter rights with the DPV EU Fundamental Rights extension via \texttt{owl:equivalentClass}.
+\item Explicit linkage of requirement subclasses to ODRL via \texttt{rdfs:subClassOf}.
+\item Addition of \texttt{rdfs:label}, \texttt{rdfs:comment}, and \texttt{dct:source} to core requirement and framework classes.
+\item Formal definition of the Tier~1/Tier~2 distinction in REAMS requirements.
+\item Production of a concept diagram for documentation purposes.
+\end{enumerate}
+
+The recommendation to establish separate namespaces for each governance framework was noted as future work for post-submission publication, as the current unified namespace is sufficient for the dissertation scope. Annotation coverage was not extended to every supporting-vocabulary class during this review; \S\ref{sec:oops-validation} reports the remaining gap and its scope.
+
+\subsection{OOPS! Pitfall Scanner Validation}
+\label{sec:oops-validation}
+
+The ontology was submitted in full to the OOPS! (OntOlogy Pitfall Scanner) web service \cite{poveda2014oops} on 14 July 2026, scanning against its standard 28-pitfall catalogue. The scanner returned 8 pitfall categories with at least one instance; none reached OOPS!'s highest (``Critical'') severity tier.
+
+Two ``Important'' categories affect AIEF's own authored terms directly. \textbf{P11 (missing domain or range)} affects 5 data properties (\texttt{incidentYear}, \texttt{coderAgreement}, \texttt{incidentTitle}, \texttt{incidentID}, \texttt{aiCapability}). \textbf{P34 (untyped class)} affects 21 elements, but 16 of these are externally-referenced DPV rights terms rather than AIEF's own classes (2 of 21) — an artefact of referencing DPV individuals by IRI without a full \texttt{owl:import}, not a defect in AIEF's own modelling. A third Important category, \textbf{P10 (missing disjointness axioms)}, was flagged as a general recommendation with no specific elements enumerated.
+
+Five Minor categories were also reported. The most substantial is \textbf{P08 (missing annotations)}, affecting 78 of AIEF's own elements — chiefly supporting-vocabulary classes such as \texttt{PersonalData}, \texttt{DataSubject}, and \texttt{Researcher} that carry data-property values but not \texttt{rdfs:label}/\texttt{rdfs:comment} pairs. This finding revises the annotation-completeness claim in \S\ref{sec:ontology} and Table~\ref{tab:ontology_summary}: annotation coverage is complete for the core requirement and incident individuals but incomplete across supporting-vocabulary classes. \textbf{P13 (inverse relationships not declared)} affects 17 object properties (e.g.\ \texttt{hasImpactOn}, \texttt{mapsToRight}, \texttt{demonstratesRisk}), which lack \texttt{owl:inverseOf} declarations. The remaining two Minor categories, P07 and P20/P22, each affect one or two elements and are not substantive.
+
+None of the eight findings indicate a structural or logical defect in the ontology; all are annotation-completeness or property-declaration gaps addressable without redesigning the class hierarchy. They are recorded as concrete remediation items in Chapter~\ref{ch:conclusion} rather than deferred vaguely. The full machine-readable OOPS! report is included in the project repository at \texttt{evaluation/oops\_report.xml}.
+
+
+\section{Knowledge Graph Population}
+\label{sec:kg}
+
+\subsection{Requirement Extraction}
+
+Requirements were exhaustively extracted from the four governance frameworks through manual analysis of source documents. Table~\ref{tab:requirements} presents the breakdown by framework.
+
+\begin{table}[htbp]
+\centering
+\caption{Requirement extraction by governance framework.}
+\label{tab:requirements}
+\begin{tabular}{llr}
+\toprule
+\textbf{Framework} & \textbf{ID Range} & \textbf{Count} \\
+\midrule
+TCD REAMS v2 & R001--R087 & 87 \\
+EU AI Act (Article 27 FRIA) & AI001--AI030 & 30 \\
+Horizon Europe (Ethics by Design) & HE001--HE052 & 52 \\
+ACM/NeurIPS & ACM001--ACM038 & 38 \\
+\midrule
+\textbf{Total} & & \textbf{207} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Each requirement was assigned a unique identifier, annotated with its source section, classified by deontic modality (obligation, permission, or prohibition), and mapped to applicable EU Charter articles. The 342 \texttt{mapsToRight} triples encode these Charter mappings across 18 of the Charter's 54 articles.
+
+
+\subsection{Incident Curation}
+
+Seventy AI incidents were curated from the AIAAIC Repository \cite{aiaaic2024} and the AI Incident Database \cite{aiid2024}, selected by the researcher to provide representative coverage across eight domain categories: NLP bias, computer vision misidentification, autonomous systems, healthcare AI, recommendation systems, generative AI misuse, surveillance, and children's rights.
+
+Each incident was annotated with impacted Charter rights, demonstrated risk categories, and supported governance requirements. For example, the Amazon hiring algorithm incident (AIAAIC-001) was annotated as impacting Article~21 (non-discrimination) and Article~23 (equality between women and men), demonstrating discrimination risk, and supporting requirement R085 (bias and discrimination assessment).
+
+
+\subsection{Inter-Annotator Agreement}
+
+To validate the annotation methodology, a pilot study assessed inter-annotator agreement on incident-to-rights mappings. Ten incidents (AIAAIC-001 through AIAAIC-010) were independently annotated by two coders across all 54 Charter articles (binary: applicable/not applicable), yielding 540 annotation decisions.
+
+\begin{table}[htbp]
+\centering
+\caption{Inter-annotator agreement for incident-rights mapping.}
+\label{tab:kappa}
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Total annotation decisions & 540 \\
+Agreed decisions & 387 \\
+Observed agreement ($P_o$) & 0.717 \\
+Cohen's $\kappa$ (scikit-learn) & 0.712 \\
+Interpretation & Substantial agreement \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A Cohen's $\kappa$ of 0.712 indicates substantial agreement according to Landis and Koch \cite{landiskoch1977}. The validated annotation methodology was then applied to the remaining 60 incidents using researcher-adjudicated coding with literature validation, a scaling approach consistent with established annotation practice \cite{pustejovsky2012}.
+
+
+\subsection{SPARQL Competency Query Validation}
+
+The knowledge graph was validated through four competency queries executed against the GraphDB SPARQL endpoint, confirming the graph's ability to answer governance-relevant queries:
+
+\begin{enumerate}
+\item \textbf{CQ1:} Which incidents impact the right to non-discrimination? Result: 37 incidents returned.
+\item \textbf{CQ2:} Which requirements are mapped to Article~8 (Data Protection)? Result: 57 requirements returned.
+\item \textbf{CQ3:} Which Charter rights are at risk in a given incident? Result: AIAAIC-001 returns Article~21 and Article~23.
+\item \textbf{CQ4:} Which incidents support a given requirement? Result: R085 returns AIAAIC-001 (Amazon Hiring).
+\end{enumerate}
+
+
+\section{RAG Pipeline Architecture}
+\label{sec:rag}
+
+\subsection{System Overview}
+
+The assessment engine implements a retrieval-augmented generation architecture that grounds LLM outputs in structured knowledge from the ontology-driven knowledge graph. Figure~\ref{fig:architecture} illustrates the pipeline.
+
+% Placeholder for architecture diagram
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox{0.8\textwidth}{\centering\vspace{2cm}[Architecture diagram: Proposal $\rightarrow$ Keyword Extraction $\rightarrow$ SPARQL Retrieval $\rightarrow$ Prompt Construction $\rightarrow$ LLM Generation $\rightarrow$ Structured Assessment]\vspace{2cm}}}
+\caption{AIEF system architecture.}
+\label{fig:architecture}
+\end{figure}
+
+The pipeline consists of five modules, each implemented as a separate Python module:
+
+\textbf{Keyword extraction} (\texttt{sparql\_retrieval.py}). The input proposal text is analysed to extract domain-relevant keywords (e.g., ``facial recognition'', ``personal data'', ``healthcare'') that drive the SPARQL retrieval queries.
+
+\textbf{SPARQL retrieval} (\texttt{sparql\_retrieval.py}). Keyword-based SPARQL queries are executed against the GraphDB endpoint to retrieve matching requirements, incidents, and Charter rights mappings. The retrieval module returns structured JSON containing requirement IDs, descriptions, framework sources, mapped rights, and relevant incidents.
+
+\textbf{Prompt construction} (\texttt{prompt\_builder.py}). The retrieved knowledge graph context is formatted into a structured prompt that instructs the LLM to produce assessments grounded in the provided evidence. The prompt template specifies the required output structure: risk level classification, risk summary, applicable requirements with IDs, impacted Charter rights, relevant incidents, and recommended mitigations.
+
+\textbf{LLM generation} (\texttt{llm\_caller.py}). The constructed prompt is sent to the LLM backend. The system supports multiple backends through a configurable interface: Ollama for local deployment (Llama 3.1 8B) and Groq API for cloud inference (Llama 3.3 70B, Qwen3 32B).
+
+\textbf{Output parsing} (\texttt{ethics\_rag.py}). The LLM response is parsed into a structured JSON assessment containing eight sections: risk level, risk summary, identified risks, applicable requirements, impacted Charter rights, historical incidents, recommended mitigations, and knowledge graph metadata.
+
+
+\subsection{Model Selection and Deployment}
+
+Three LLM configurations were evaluated:
+
+\begin{table}[htbp]
+\centering
+\caption{LLM configurations evaluated.}
+\label{tab:models}
+\begin{tabular}{llll}
+\toprule
+\textbf{Model} & \textbf{Parameters} & \textbf{Backend} & \textbf{Deployment} \\
+\midrule
+Llama 3.1 8B & 8B & Ollama & Local \\
+Llama 3.3 70B & 70B & Groq API & Cloud \\
+Qwen3 32B & 32B & Groq API & Cloud (exploratory) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Ollama local deployment was chosen for the primary evaluation to ensure reproducibility and data sovereignty: all proposal text remains on the researcher's machine, which is particularly relevant when assessing proposals containing sensitive research designs. The Groq API configurations provide a comparison across model scales.
+
+
+\subsection{Evaluation Pipeline}
+
+The evaluation pipeline (\texttt{run\_evaluation.py}, \texttt{run\_ablation.py}, \texttt{score\_evaluation.py}) automates the end-to-end assessment and scoring process. Each synthetic proposal is processed through the full pipeline, and the resulting assessment is scored against ground truth annotations for risk level accuracy, requirement retrieval recall, and generation F1.
+
+
+\section{Web Application}
+\label{sec:webapp}
+
+A web application was developed to provide public access to the AIEF assessment engine and to demonstrate the system's capabilities for the 21 July 2026 presentation session.
+
+\subsection{Technology Stack}
+
+The application is built with Next.js 14 and Tailwind CSS, deployed on Vercel, with Groq SDK providing the LLM backend. The visual design employs a pine-green governance aesthetic with Fraunces, Inter, and IBM Plex Mono typography to convey institutional seriousness.
+
+
+\subsection{Key Features}
+
+The application provides several features designed to support transparency and trust:
+
+\textbf{Retrieval transparency panel.} The interface displays both the requirements retrieved from the knowledge graph and those cited by the LLM in its assessment, enabling users to verify that the LLM's citations correspond to actually retrieved knowledge.
+
+\textbf{Framework filter tabs.} Users can filter the assessment output by governance framework (REAMS, EU AI Act, Horizon Europe, ACM/NeurIPS) to focus on requirements from a specific regime.
+
+\textbf{Charter rights cards.} Impacted EU Charter articles are displayed as individual cards showing the article number, title, and the requirements mapped to that right.
+
+\textbf{Confidence flagging.} The system flags assessments where the LLM's citations diverge from the retrieved knowledge, alerting users to potential hallucination.
+
+\textbf{Model selector.} A dropdown allows users to switch between available LLM backends, facilitating comparison of assessment quality across models.
+
+
+\subsection{Knowledge Graph Deployment}
+
+For the Vercel deployment, a static knowledge graph snapshot replaces the live GraphDB SPARQL endpoint. The snapshot contains the same triples used in the evaluation, serialised as a JSON module (\texttt{lib/kg-snapshot.ts}) with keyword-based retrieval mirroring the SPARQL logic. A \texttt{USE\_LIVE\_KG} environment variable toggles between the static snapshot (for demonstration) and the live GraphDB endpoint (for development), requiring only the addition of a \texttt{GRAPHDB\_ENDPOINT} environment variable to switch modes.
+
+
+\section{Ethical Considerations}
+
+This research evaluates a software tool using synthetic and publicly documented data. No human participants were involved in the evaluation, and no Research Ethics and Approval Management System (REAMS) clearance was required. All synthetic proposals were constructed by the researcher; no real REAMS applications were accessed or used. The five real-world cases (Optum, COMPAS, Amazon Rekognition, Facebook ad delivery, the Epic Sepsis Model) are drawn from publicly available incident reports and academic publications. The decision to use synthetic proposals rather than real REAMS applications was confirmed with the project supervisor at Meeting 5 (11 June 2026).
+
+
+\section{Reproducibility}
+
+All artifacts produced by this research are publicly available:
+
+\begin{itemize}
+\item \textbf{Ontology:} Published at \url{https://w3id.org/aief/} with Turtle serialisation.
+\item \textbf{Source code:} Available at \url{https://github.com/navinaamuthan/ai-ethics-framework-tool}.
+\item \textbf{RAG pipeline:} Python modules in the project repository (\texttt{sparql\_retrieval.py}, \texttt{llm\_caller.py}, \texttt{prompt\_builder.py}, \texttt{ethics\_rag.py}, \texttt{run\_evaluation.py}, \texttt{run\_ablation.py}, \texttt{score\_evaluation.py}).
+\item \textbf{Web application:} Deployed on Vercel at a public URL.
+\item \textbf{Knowledge graph:} GraphDB repository with SPARQL endpoint; static snapshot included in the web application repository.
+\end{itemize}
+
+To reproduce the evaluation, a user must install Ollama with the Llama 3.1 8B model, start GraphDB Desktop with the provided repository, and execute \texttt{run\_evaluation.py} followed by \texttt{score\_evaluation.py}.
