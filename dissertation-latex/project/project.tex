@@ -38,10 +38,12 @@ Requirement individuals & 207 \\
 Incident individuals & 70 \\
 Charter rights mappings (\texttt{mapsToRight} triples) & 342 \\
 Total asserted triples & 3,921 \\
-Total triples including inferred (GraphDB, OWL-Horst) & 5,197 \\
+Total triples including inferred (GraphDB, RDFS+, production ruleset) & 4,847 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+The materialised-triple figure was re-verified on 15 July 2026 against the production GraphDB repository that the RAG pipeline queries at runtime; an earlier verification pass on 13 July, conducted in a separate scratch repository configured with a stricter OWL-Horst ruleset, reported 5,197, but that ruleset does not match the RDFS+ ruleset actually deployed in production, so the figure above supersedes it.
 
 The core class hierarchy organises the domain into six principal concepts. \texttt{ResearchProposal} represents the input artifact. \texttt{GovernanceRequirement} is subclassed by framework-specific requirement types (\texttt{REAMSRequirement}, \texttt{EUAIActRequirement}, \texttt{HorizonEuropeRequirement}, \texttt{ACMRequirement}), each further classified by deontic modality (\texttt{Obligation}, \texttt{Permission}, \texttt{Prohibition}) aligned with ODRL through \texttt{rdfs:subClassOf} relationships \cite{odrl2018}. \texttt{FundamentalRight} represents EU Charter articles and is aligned with the DPV EU Fundamental Rights extension through \texttt{owl:equivalentClass} assertions \cite{dpv2024}. \texttt{AIIncident} represents real-world cases of AI harm. \texttt{RiskLevel} classifies proposals as High, Medium, or Low risk. \texttt{Mitigation} captures recommended risk reduction measures.
 

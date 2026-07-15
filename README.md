@@ -28,6 +28,7 @@ The ontology is aligned with the [W3C Data Privacy Vocabulary (DPV)](https://w3i
 ```
 ai-ethics-final.ttl    Canonical ontology + knowledge graph (kept at root: w3id.org/aief redirects here)
 ontology/              Copy of the TTL + validation script
+kg-export/             Populated graph as TTL/N-Triples — load into any triple store, no GraphDB required
 rag-pipeline/          Python RAG pipeline (SPARQL retrieval → prompt building → LLM call → scoring)
 evaluation/            Evaluation outputs per model, OOPS! report, RAGAS results
 webapp/                Next.js 14 demo application (deployed on Vercel)
@@ -47,7 +48,7 @@ The pipeline separates **retrieval** (knowledge-graph driven, model-agnostic) fr
 
 ## Running the RAG pipeline
 
-Requirements: Python 3.11+, [GraphDB Desktop](https://graphdb.ontotext.com/) with `ai-ethics-final.ttl` loaded, and either [Ollama](https://ollama.com) (local Llama 3.1 8B) or a Groq API key.
+Requirements: Python 3.11+, [GraphDB Desktop](https://graphdb.ontotext.com/) with `ai-ethics-final.ttl` loaded, and either [Ollama](https://ollama.com) (local Llama 3.1 8B) or a Groq API key. If you just want to run SPARQL queries against the populated graph without standing up GraphDB, load `kg-export/aief-asserted.ttl` (or `aief-materialised.ttl` for RDFS+-derived inferences) into `rdflib` or any triple store instead — see `kg-export/README.md`.
 
 ```bash
 cd rag-pipeline

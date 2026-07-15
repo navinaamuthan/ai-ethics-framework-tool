@@ -17,7 +17,7 @@
       "n_expected": 11,
       "context_recall": 0.8181818181818182,
       "context_precision": 0.05389221556886228,
-      "faithfulness": 0.5,
+      "faithfulness": 0.0,
       "answer_relevancy": 1.0
     },
     {
@@ -48,7 +48,7 @@
       "context_recall": 0.8888888888888888,
       "context_precision": 0.04145077720207254,
       "faithfulness": 0.0,
-      "answer_relevancy": null
+      "answer_relevancy": 1.0
     },
     {
       "proposal_id": "P06",
@@ -57,7 +57,7 @@
       "n_expected": 9,
       "context_recall": 1.0,
       "context_precision": 0.04591836734693878,
-      "faithfulness": null,
+      "faithfulness": 0.0,
       "answer_relevancy": 0.9
     },
     {
@@ -67,8 +67,8 @@
       "n_expected": 7,
       "context_recall": 1.0,
       "context_precision": 0.03571428571428571,
-      "faithfulness": null,
-      "answer_relevancy": null
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.8
     },
     {
       "proposal_id": "P08",
@@ -77,7 +77,7 @@
       "n_expected": 9,
       "context_recall": 0.8888888888888888,
       "context_precision": 0.045454545454545456,
-      "faithfulness": null,
+      "faithfulness": 0.5,
       "answer_relevancy": 0.9
     },
     {
@@ -87,8 +87,8 @@
       "n_expected": 9,
       "context_recall": 1.0,
       "context_precision": 0.046632124352331605,
-      "faithfulness": null,
-      "answer_relevancy": null
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.8
     },
     {
       "proposal_id": "P10",
@@ -97,7 +97,7 @@
       "n_expected": 6,
       "context_recall": 0.6666666666666666,
       "context_precision": 0.022988505747126436,
-      "faithfulness": null,
+      "faithfulness": 0.5,
       "answer_relevancy": 0.8
     },
     {
@@ -107,8 +107,8 @@
       "n_expected": 5,
       "context_recall": 0.8,
       "context_precision": 0.020942408376963352,
-      "faithfulness": null,
-      "answer_relevancy": null
+      "faithfulness": 0.0,
+      "answer_relevancy": 1.0
     },
     {
       "proposal_id": "P12",
@@ -117,7 +117,7 @@
       "n_expected": 3,
       "context_recall": 1.0,
       "context_precision": 0.015957446808510637,
-      "faithfulness": null,
+      "faithfulness": 0.0,
       "answer_relevancy": 0.9
     },
     {
@@ -127,8 +127,8 @@
       "n_expected": 7,
       "context_recall": 0.5714285714285714,
       "context_precision": 0.025974025974025976,
-      "faithfulness": null,
-      "answer_relevancy": null
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.5
     },
     {
       "proposal_id": "P14",
@@ -137,7 +137,7 @@
       "n_expected": 4,
       "context_recall": 0.75,
       "context_precision": 0.018292682926829267,
-      "faithfulness": null,
+      "faithfulness": 0.5,
       "answer_relevancy": 0.8
     },
     {
@@ -147,7 +147,7 @@
       "n_expected": 4,
       "context_recall": 0.25,
       "context_precision": 0.007194244604316547,
-      "faithfulness": null,
+      "faithfulness": 0.5,
       "answer_relevancy": 0.8
     },
     {
@@ -157,8 +157,8 @@
       "n_expected": 6,
       "context_recall": 0.6666666666666666,
       "context_precision": 0.023529411764705882,
-      "faithfulness": null,
-      "answer_relevancy": null
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.8
     },
     {
       "proposal_id": "P17",
@@ -167,7 +167,7 @@
       "n_expected": 3,
       "context_recall": 1.0,
       "context_precision": 0.015706806282722512,
-      "faithfulness": null,
+      "faithfulness": 0.5,
       "answer_relevancy": 0.9
     },
     {
@@ -177,8 +177,8 @@
       "n_expected": 3,
       "context_recall": 1.0,
       "context_precision": 0.016853932584269662,
-      "faithfulness": null,
-      "answer_relevancy": null
+      "faithfulness": 0.8,
+      "answer_relevancy": 1.0
     },
     {
       "proposal_id": "P19",
@@ -187,7 +187,7 @@
       "n_expected": 1,
       "context_recall": 1.0,
       "context_precision": 0.0055248618784530384,
-      "faithfulness": null,
+      "faithfulness": 0.0,
       "answer_relevancy": 1.0
     },
     {
@@ -215,16 +215,16 @@
       "n": 20
     },
     "faithfulness": {
-      "mean": 0.3,
+      "mean": 0.34736842105263155,
       "min": 0.0,
-      "max": 0.5,
-      "n": 5
+      "max": 0.8,
+      "n": 19
     },
     "answer_relevancy": {
-      "mean": 0.9,
-      "min": 0.8,
+      "mean": 0.8789473684210526,
+      "min": 0.5,
       "max": 1.0,
-      "n": 12
+      "n": 19
     }
   },
   "backend": "groq (llama-3.3-70b-versatile judge)",
