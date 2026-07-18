@@ -1,0 +1,159 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix aief:   <https://w3id.org/aief/> .
+@prefix aiefsh: <https://w3id.org/aief/shapes#> .
+
+#################################################################
+# AIEF SHACL Risk-Dimension Shapes — prototype demonstrator
+#
+# Each shape is one scrutable risk rule. A rule declares, AS DATA:
+#   - the risk dimension it belongs to (an EU Charter right IRI)
+#   - its priority rank (aiefsh:priority — an editable integer)
+#   - its severity tier (sh:severity — editable: Violation/Warning/Info)
+#   - its rationale (rdfs:comment — why this pattern ranks where it does)
+#   - the pattern it detects (a SPARQL constraint — inspectable, editable)
+#
+# An evaluator who disagrees with a priority changes one triple and
+# re-validates: the ranking is consistent, observable, and scrutable.
+# No LLM is involved in this layer.
+#
+# Priority provenance: defaults are informed by harm-evidenced-priorities.ttl
+# (incident in-degree / max, tiered into thirds). Where aiefsh:priority
+# diverges from aiefsh:evidencedPriority, the rationale below records why.
+#################################################################
+
+aiefsh: a owl:Ontology ;
+    rdfs:label "AIEF risk-dimension shapes (prototype)" ;
+    rdfs:comment "SHACL constraint set expressing per-dimension, priority-ranked risk rules over AIEF proposal descriptions. Demonstrates scrutable, evaluator-editable risk prioritisation as an alternative to a single aggregated risk label." ;
+    sh:declare [ sh:prefix "aief" ; sh:namespace "https://w3id.org/aief/"^^xsd:anyURI ] .
+
+#################################################################
+# Rule 1 — Biometric data without opt-in consent
+#################################################################
+aiefsh:BiometricConsentShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Biometric data requires opt-in consent" ;
+    rdfs:comment "Rationale for priority 1 (deliberate divergence from evidencedPriority 2 for Art8): biometric identifiers are special-category data (GDPR Art. 9) whose collection without opt-in consent is a per-se infringement, not a contextual risk. Corresponds to REAMS consent requirements (R019, R042) and EU AI Act biometric provisions." ;
+    aiefsh:riskDimension aief:Art8_DataProtection ;
+    aiefsh:priority 1 ;
+    sh:severity sh:Violation ;
+    sh:sparql [
+        sh:message "Biometric data is processed without an opt-in consent mechanism (dimension: Art 8 Data Protection)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """
+            SELECT $this WHERE {
+                $this aief:involvesDataCategory aief:BiometricData .
+                FILTER NOT EXISTS { $this aief:hasConsentMechanism true }
+            }
+        """ ;
+    ] .
+
+#################################################################
+# Rule 2 — Special-category data without a DPIA
+#################################################################
+aiefsh:DPIAShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Special-category data requires a DPIA" ;
+    rdfs:comment "Rationale for priority 1 (deliberate divergence from evidencedPriority 2 for Art8): GDPR Art. 35 makes a Data Protection Impact Assessment mandatory, not advisory, for high-risk processing of special-category data (health, biometric). Absence is a compliance gap independent of how carefully the data is otherwise handled." ;
+    aiefsh:riskDimension aief:Art8_DataProtection ;
+    aiefsh:priority 1 ;
+    sh:severity sh:Violation ;
+    sh:sparql [
+        sh:message "Special-category data (biometric/health) is processed without a Data Protection Impact Assessment (dimension: Art 8 Data Protection)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """
+            SELECT $this WHERE {
+                $this aief:involvesDataCategory ?cat .
+                FILTER(?cat IN (aief:BiometricData, aief:HealthData, aief:SpecialCategoryData))
+                FILTER NOT EXISTS { $this aief:hasDPIA true }
+            }
+        """ ;
+    ] .
+
+#################################################################
+# Rule 3 — Demographic-impact model without independent bias audit
+#################################################################
+aiefsh:BiasAuditShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Models affecting people require an independent bias audit" ;
+    rdfs:comment "Rationale for priority 2 (deliberate divergence from evidencedPriority 1 for Art21 — the most harm-evidenced right at 37 incidents): unaudited demographic bias is a substantive harm channel but, unlike Rules 1-2, is remediable within the project by commissioning an audit before deployment; it therefore ranks below the per-se legal infringements. An evaluator who prioritises discrimination harm can raise aiefsh:priority to 1 and re-validate." ;
+    aiefsh:riskDimension aief:Art21_NonDiscrimination ;
+    aiefsh:priority 2 ;
+    sh:severity sh:Violation ;
+    sh:sparql [
+        sh:message "A model that makes or informs decisions about people has no independent demographic bias audit (dimension: Art 21 Non-Discrimination)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """
+            SELECT $this WHERE {
+                $this aief:usesCapability ?cap .
+                FILTER(?cap IN (aief:FacialRecognition, aief:ClinicalDecisionSupport, aief:AutomatedScreening))
+                FILTER NOT EXISTS { $this aief:hasBiasAudit true }
+            }
+        """ ;
+    ] .
+
+#################################################################
+# Rule 4 — Monitoring of minors without individual opt-out
+#################################################################
+aiefsh:ChildrenMonitoringShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Monitoring of minors requires an individual opt-out" ;
+    rdfs:comment "Rationale for priority 1 (deliberate divergence from evidencedPriority 3 for Art24): children cannot meaningfully consent through proxies alone; continuous monitoring without an individual opt-out removes the child's own agency entirely. Charter Art. 24 gives children's rights primacy over research convenience, outweighing the thinner incident in-degree (7)." ;
+    aiefsh:riskDimension aief:Art24_RightsOfChild ;
+    aiefsh:priority 1 ;
+    sh:severity sh:Violation ;
+    sh:sparql [
+        sh:message "Minors are subject to continuous monitoring with no individual opt-out mechanism (dimension: Art 24 Rights of the Child)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """
+            SELECT $this WHERE {
+                $this aief:involvesPopulation aief:Children ;
+                      aief:usesCapability aief:ContinuousMonitoring .
+                FILTER NOT EXISTS { $this aief:hasIndividualOptOut true }
+            }
+        """ ;
+    ] .
+
+#################################################################
+# Rule 5 — Clinical decision support without clinical validation
+#################################################################
+aiefsh:ClinicalValidationShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Clinical decision support requires clinical validation" ;
+    rdfs:comment "Rationale for priority 2 (mild divergence from evidencedPriority 3 for Art35): professional oversight partially mitigates unvalidated clinical AI, but the Epic Sepsis Model case (Wong et al. 2021) shows alert fatigue can defeat that oversight, so this is a genuine risk dimension rather than a formality. An evaluator who weighs clinical risk more heavily can raise sh:severity to sh:Violation and re-validate." ;
+    aiefsh:riskDimension aief:Art35_HealthCare ;
+    aiefsh:priority 2 ;
+    sh:severity sh:Warning ;
+    sh:sparql [
+        sh:message "A clinical decision-support capability has no planned clinical validation (dimension: Art 35 Health Care)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """
+            SELECT $this WHERE {
+                $this aief:usesCapability aief:ClinicalDecisionSupport .
+                FILTER NOT EXISTS { $this aief:hasClinicalValidation true }
+            }
+        """ ;
+    ] .
+
+#################################################################
+# Rule 6 — Undisclosed AI interaction
+#################################################################
+aiefsh:AIDisclosureShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Users must know they are interacting with an AI system" ;
+    rdfs:comment "Rationale for priority 3 (deliberate divergence from evidencedPriority 2 for Art1): non-disclosure undermines dignity and autonomy (Horizon Europe HE021, EU AI Act transparency provisions) but is trivially remediable by adding a disclosure, so it ranks below structural risks despite substantial incident evidence (21)." ;
+    aiefsh:riskDimension aief:Art1_HumanDignity ;
+    aiefsh:priority 3 ;
+    sh:severity sh:Warning ;
+    sh:sparql [
+        sh:message "End-users interact with an AI system without disclosure that it is an AI system (dimension: Art 1 Human Dignity)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """
+            SELECT $this WHERE {
+                $this aief:usesCapability aief:ConversationalAgent .
+                FILTER NOT EXISTS { $this aief:disclosesAIUse true }
+            }
+        """ ;
+    ] .

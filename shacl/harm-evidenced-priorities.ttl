@@ -1,0 +1,21 @@
+% Harm-evidenced priorities — generated from incident in-degree, max evidence = 37 incidents
+@prefix aiefsh: <https://w3id.org/aief/shapes#> .
+@prefix aief:   <https://w3id.org/aief/> .
+
+aief:Art21_NonDiscrimination aiefsh:harmEvidence 37 ; aiefsh:evidencedPriority 1 .
+aief:Art7_PrivateLife aiefsh:harmEvidence 24 ; aiefsh:evidencedPriority 2 .
+aief:Art8_DataProtection aiefsh:harmEvidence 24 ; aiefsh:evidencedPriority 2 .
+aief:Art47_RightToEffectiveRemedy aiefsh:harmEvidence 22 ; aiefsh:evidencedPriority 2 .
+aief:Art1_HumanDignity aiefsh:harmEvidence 21 ; aiefsh:evidencedPriority 2 .
+aief:Art2_RightToLife aiefsh:harmEvidence 13 ; aiefsh:evidencedPriority 2 .
+aief:Art11_FreedomOfExpression aiefsh:harmEvidence 12 ; aiefsh:evidencedPriority 3 .
+aief:Art15_FreedomOfOccupation aiefsh:harmEvidence 11 ; aiefsh:evidencedPriority 3 .
+aief:Art6_RightToLiberty aiefsh:harmEvidence 10 ; aiefsh:evidencedPriority 3 .
+aief:Art41_GoodAdministration aiefsh:harmEvidence 9 ; aiefsh:evidencedPriority 3 .
+aief:Art23_GenderEquality aiefsh:harmEvidence 7 ; aiefsh:evidencedPriority 3 .
+aief:Art35_HealthCare aiefsh:harmEvidence 7 ; aiefsh:evidencedPriority 3 .
+aief:Art24_RightsOfChild aiefsh:harmEvidence 7 ; aiefsh:evidencedPriority 3 .
+aief:Art48_PresumptionOfInnocence aiefsh:harmEvidence 5 ; aiefsh:evidencedPriority 3 .
+aief:Art26_DisabilityIntegration aiefsh:harmEvidence 1 ; aiefsh:evidencedPriority 3 .
+aief:Art17_RightToProperty aiefsh:harmEvidence 1 ; aiefsh:evidencedPriority 3 .
+aief:Art13_FreedomOfArtsScience aiefsh:harmEvidence 1 ; aiefsh:evidencedPriority 3 .

@@ -1,0 +1,29 @@
+@prefix aief: <https://w3id.org/aief/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Structured proposal descriptions for the SHACL demonstrator.
+# These mirror three proposals from the evaluation set (P01, P08, P13).
+# In the current prototype these descriptions are authored by hand;
+# producing them automatically from proposal text (via the existing
+# keyword-extraction stage) is identified as future work.
+
+aief:DemoProposal-P01 a aief:ResearchProposal ;
+    rdfs:label "P01: Facial recognition for campus security" ;
+    aief:involvesDataCategory aief:BiometricData ;
+    aief:involvesPopulation aief:Students ;
+    aief:usesCapability aief:FacialRecognition, aief:ContinuousMonitoring .
+    # no consent mechanism, no bias audit, no DPIA -> rules 1, 2, 3 fire
+
+aief:DemoProposal-P08 a aief:ResearchProposal ;
+    rdfs:label "P08: AI chatbot for mental health support triage" ;
+    aief:involvesDataCategory aief:HealthData ;
+    aief:involvesPopulation aief:Students ;
+    aief:usesCapability aief:ConversationalAgent, aief:ClinicalDecisionSupport ;
+    aief:disclosesAIUse true ;
+    aief:hasConsentMechanism true .
+    # no DPIA, no clinical validation, no bias audit -> rules 2, 3, 5 fire; rule 6 does not (disclosed)
+
+aief:DemoProposal-P13 a aief:ResearchProposal ;
+    rdfs:label "P13: Bibliometric analysis of open access AI ethics publications" ;
+    aief:involvesDataCategory aief:PublicMetadata .
+    # no sensitive categories, no capabilities of concern -> no rules fire

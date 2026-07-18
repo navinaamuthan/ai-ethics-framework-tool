@@ -59,6 +59,12 @@
 :Art10_FreedomOfThought rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms .
 :Art11_FreedomOfExpression rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms .
 :Art16_FreedomToConductBusiness rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms .
+:Art13_FreedomOfArtsScience rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms ;
+    rdfs:label "Article 13 — Freedom of the Arts and Sciences" .
+:Art15_FreedomOfOccupation rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms ;
+    rdfs:label "Article 15 — Freedom to Choose an Occupation and Right to Engage in Work" .
+:Art17_RightToProperty rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms ;
+    rdfs:label "Article 17 — Right to Property" .
 
 :Title3_Equality rdf:type owl:Class ; rdfs:subClassOf :EUCharterRight .
 :Art20_EqualityBeforeLaw rdf:type owl:Class ; rdfs:subClassOf :Title3_Equality .
@@ -525,7 +531,7 @@
     :incidentTitle "Facebook Discriminatory Ad Targeting" ;
     :incidentYear "2019" ;
     :aiCapability "Reasoning (Recommendation)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art23_GenderEquality, :Art26_RightToData ;
+    :impactsRight :Art21_NonDiscrimination, :Art23_GenderEquality, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :PrivacyBreach ;
     :supportsRequirement :R010, :R019, :R085 .
 
@@ -570,7 +576,7 @@
     :incidentTitle "Palantir ICE Surveillance System" ;
     :incidentYear "2019" ;
     :aiCapability "Reasoning (Prediction)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art6_LibertyAndSecurity, :Art21_NonDiscrimination ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art6_RightToLiberty, :Art21_NonDiscrimination ;
     :demonstratesRisk :Surveillance, :PrivacyBreach ;
     :supportsRequirement :R001, :R027, :R010 .
 
@@ -597,7 +603,7 @@
     :incidentTitle "COMPAS Juvenile Risk Tool Racial Bias" ;
     :incidentYear "2016" ;
     :aiCapability "Reasoning (Risk Prediction)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art6_LibertyAndSecurity, :Art47_RightToEffectiveRemedy, :Art48_PresumptionOfInnocence ;
+    :impactsRight :Art21_NonDiscrimination, :Art6_RightToLiberty, :Art47_RightToEffectiveRemedy, :Art48_PresumptionOfInnocence ;
     :demonstratesRisk :Discrimination, :LibertyViolation ;
     :supportsRequirement :R085, :R027, :R010 .
 
@@ -606,7 +612,7 @@
     :incidentTitle "Amazon Ring Police Surveillance Network" ;
     :incidentYear "2019" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art6_LibertyAndSecurity ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art6_RightToLiberty ;
     :demonstratesRisk :Surveillance, :PrivacyBreach ;
     :supportsRequirement :R001, :R027 .
 
@@ -615,7 +621,7 @@
     :incidentTitle "HireVue Automated Video Interview Bias" ;
     :incidentYear "2019" ;
     :aiCapability "Perception (CV/NLP)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art26_RightToData ;
+    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :EmploymentHarm ;
     :supportsRequirement :R085, :R042, :R010 .
 
@@ -633,7 +639,7 @@
     :incidentTitle "Xiaomi Smart Speaker Data Leak" ;
     :incidentYear "2020" ;
     :aiCapability "Perception (Audio)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection ;
     :demonstratesRisk :PrivacyBreach, :DataBreach ;
     :supportsRequirement :R001, :R027 .
 
@@ -651,7 +657,7 @@
     :incidentTitle "Amazon Alexa Recording Children Without Consent" ;
     :incidentYear "2023" ;
     :aiCapability "Perception (Audio)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art24_RightsOfChild ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art24_RightsOfChild ;
     :demonstratesRisk :PrivacyBreach, :ChildrenRights ;
     :supportsRequirement :R001, :R027, :R010 .
 
@@ -660,7 +666,7 @@
     :incidentTitle "Facial Recognition in UK Schools" ;
     :incidentYear "2022" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art24_RightsOfChild ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art24_RightsOfChild ;
     :demonstratesRisk :PrivacyBreach, :ChildrenRights ;
     :supportsRequirement :R001, :R027 .
 
@@ -669,7 +675,7 @@
     :incidentTitle "Spotify Mood Inference Patent" ;
     :incidentYear "2021" ;
     :aiCapability "Perception (Audio/NLP)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art11_FreedomOfExpression ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art11_FreedomOfExpression ;
     :demonstratesRisk :PrivacyBreach, :Manipulation ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -678,7 +684,7 @@
     :incidentTitle "Grindr HIV Status Data Sharing" ;
     :incidentYear "2018" ;
     :aiCapability "Reasoning (Data Processing)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art21_NonDiscrimination ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art21_NonDiscrimination ;
     :demonstratesRisk :PrivacyBreach, :DataBreach ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -687,7 +693,7 @@
     :incidentTitle "BART Predictive Policing Racial Bias" ;
     :incidentYear "2020" ;
     :aiCapability "Reasoning (Prediction)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art6_LibertyAndSecurity, :Art7_Privacy ;
+    :impactsRight :Art21_NonDiscrimination, :Art6_RightToLiberty, :Art7_PrivateLife ;
     :demonstratesRisk :Discrimination, :Surveillance ;
     :supportsRequirement :R085, :R001 .
 
@@ -696,7 +702,7 @@
     :incidentTitle "GitHub Copilot Copyright Infringement" ;
     :incidentYear "2022" ;
     :aiCapability "Reasoning (Code Generation)" ;
-    :impactsRight :Art17_RightToProperty, :Art16_FreedomOfArtsScience ;
+    :impactsRight :Art17_RightToProperty, :Art13_FreedomOfArtsScience ;
     :demonstratesRisk :IntellectualProperty, :Accountability ;
     :supportsRequirement :R054, :R071 .
 
@@ -705,7 +711,7 @@
     :incidentTitle "TikTok Shadowbanning Disability Content" ;
     :incidentYear "2020" ;
     :aiCapability "Reasoning (Content Moderation)" ;
-    :impactsRight :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art26_RightToData ;
+    :impactsRight :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :ExpressionHarm ;
     :supportsRequirement :R085, :R019 .
 
@@ -714,7 +720,7 @@
     :incidentTitle "Lensa AI Sexualisation of Women" ;
     :incidentYear "2022" ;
     :aiCapability "Perception (Image Generation)" ;
-    :impactsRight :Art1_HumanDignity, :Art23_GenderEquality, :Art7_Privacy ;
+    :impactsRight :Art1_HumanDignity, :Art23_GenderEquality, :Art7_PrivateLife ;
     :demonstratesRisk :Dignity, :GenderHarm ;
     :supportsRequirement :R001, :R085 .
 
@@ -732,7 +738,7 @@
     :incidentTitle "China Social Credit System AI Scoring" ;
     :incidentYear "2018" ;
     :aiCapability "Reasoning (Scoring)" ;
-    :impactsRight :Art6_LibertyAndSecurity, :Art7_Privacy, :Art8_DataProtection, :Art15_FreedomOfOccupation, :Art41_GoodAdministration, :Art47_RightToEffectiveRemedy ;
+    :impactsRight :Art6_RightToLiberty, :Art7_PrivateLife, :Art8_DataProtection, :Art15_FreedomOfOccupation, :Art41_GoodAdministration, :Art47_RightToEffectiveRemedy ;
     :demonstratesRisk :Surveillance, :LibertyViolation ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -750,7 +756,7 @@
     :incidentTitle "Netherlands SyRI Welfare Surveillance System" ;
     :incidentYear "2020" ;
     :aiCapability "Reasoning (Profiling)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art21_NonDiscrimination, :Art41_GoodAdministration, :Art47_RightToEffectiveRemedy ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art21_NonDiscrimination, :Art41_GoodAdministration, :Art47_RightToEffectiveRemedy ;
     :demonstratesRisk :Surveillance, :Discrimination ;
     :supportsRequirement :R010, :R027, :R085 .
 
@@ -768,7 +774,7 @@
     :incidentTitle "COMPAS Pennsylvania Sentencing Racial Bias" ;
     :incidentYear "2017" ;
     :aiCapability "Reasoning (Risk Prediction)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art6_LibertyAndSecurity, :Art47_RightToEffectiveRemedy, :Art48_PresumptionOfInnocence ;
+    :impactsRight :Art21_NonDiscrimination, :Art6_RightToLiberty, :Art47_RightToEffectiveRemedy, :Art48_PresumptionOfInnocence ;
     :demonstratesRisk :Discrimination, :LibertyViolation ;
     :supportsRequirement :R085, :R027, :R010 .
 
@@ -831,7 +837,7 @@
     :incidentTitle "Cambridge Analytica Facebook Data Exploitation" ;
     :incidentYear "2018" ;
     :aiCapability "Reasoning (Profiling/NLP)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art26_RightToData ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art8_DataProtection ;
     :demonstratesRisk :PrivacyBreach, :Manipulation ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -849,7 +855,7 @@
     :incidentTitle "Uber Eats Racial Profiling in Driver Verification" ;
     :incidentYear "2021" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art7_Privacy ;
+    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art7_PrivateLife ;
     :demonstratesRisk :Discrimination, :EmploymentHarm ;
     :supportsRequirement :R085, :R042 .
 
@@ -858,7 +864,7 @@
     :incidentTitle "Affectiva Emotion AI Hiring Bias" ;
     :incidentYear "2019" ;
     :aiCapability "Perception (CV/Affective)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art26_RightToData ;
+    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :EmploymentHarm ;
     :supportsRequirement :R085, :R042, :R071 .
 
@@ -885,7 +891,7 @@
     :incidentTitle "Proctorio Online Exam Surveillance Bias" ;
     :incidentYear "2020" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art24_RightsOfChild, :Art7_Privacy, :Art8_DataProtection ;
+    :impactsRight :Art21_NonDiscrimination, :Art24_RightsOfChild, :Art7_PrivateLife, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :PrivacyBreach ;
     :supportsRequirement :R085, :R001, :R027 .
 
@@ -903,7 +909,7 @@
     :incidentTitle "Clearview AI GDPR Violations EU" ;
     :incidentYear "2022" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art26_RightToData, :Art21_NonDiscrimination ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art8_DataProtection, :Art21_NonDiscrimination ;
     :demonstratesRisk :PrivacyBreach, :Surveillance ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -939,7 +945,7 @@
     :incidentTitle "AWS Rekognition ICE Border Enforcement" ;
     :incidentYear "2019" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art21_NonDiscrimination, :Art6_LibertyAndSecurity ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art21_NonDiscrimination, :Art6_RightToLiberty ;
     :demonstratesRisk :Surveillance, :PrivacyBreach ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -957,7 +963,7 @@
     :incidentTitle "NEC Facial Recognition in Japanese Schools" ;
     :incidentYear "2021" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art24_RightsOfChild, :Art7_Privacy, :Art8_DataProtection ;
+    :impactsRight :Art24_RightsOfChild, :Art7_PrivateLife, :Art8_DataProtection ;
     :demonstratesRisk :PrivacyBreach, :ChildrenRights ;
     :supportsRequirement :R001, :R027 .
 
@@ -984,7 +990,7 @@
     :incidentTitle "Palantir NHS Federated Data Platform" ;
     :incidentYear "2023" ;
     :aiCapability "Reasoning (Data Processing)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art35_HealthCare ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art35_HealthCare ;
     :demonstratesRisk :PrivacyBreach, :DataGovernance ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -993,7 +999,7 @@
     :incidentTitle "Deepfake Non-Consensual Intimate Imagery" ;
     :incidentYear "2023" ;
     :aiCapability "Perception (Image Generation)" ;
-    :impactsRight :Art1_HumanDignity, :Art7_Privacy, :Art23_GenderEquality ;
+    :impactsRight :Art1_HumanDignity, :Art7_PrivateLife, :Art23_GenderEquality ;
     :demonstratesRisk :Dignity, :GenderHarm ;
     :supportsRequirement :R001, :R027 .
 
@@ -1029,7 +1035,7 @@
     :incidentTitle "Predictim AI Babysitter Social Media Screening" ;
     :incidentYear "2018" ;
     :aiCapability "Reasoning (NLP/Profiling)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art21_NonDiscrimination, :Art15_FreedomOfOccupation ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art21_NonDiscrimination, :Art15_FreedomOfOccupation ;
     :demonstratesRisk :PrivacyBreach, :Discrimination ;
     :supportsRequirement :R001, :R010, :R085 .
 
@@ -1038,7 +1044,7 @@
     :incidentTitle "MyHeritage DeepNostalgia Deceased Relatives Deepfake" ;
     :incidentYear "2021" ;
     :aiCapability "Perception (Image Generation)" ;
-    :impactsRight :Art7_Privacy, :Art1_HumanDignity ;
+    :impactsRight :Art7_PrivateLife, :Art1_HumanDignity ;
     :demonstratesRisk :PrivacyBreach, :Dignity ;
     :supportsRequirement :R001, :R027 .
 
@@ -1047,7 +1053,7 @@
     :incidentTitle "Teleperformance AI Home Worker Monitoring" ;
     :incidentYear "2021" ;
     :aiCapability "Perception (CV/Audio)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art15_FreedomOfOccupation ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art15_FreedomOfOccupation ;
     :demonstratesRisk :Surveillance, :EmploymentHarm ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -3943,7 +3949,7 @@
     :incidentTitle "Facebook Discriminatory Ad Targeting" ;
     :incidentYear "2019" ;
     :aiCapability "Reasoning (Recommendation)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art23_GenderEquality, :Art26_RightToData ;
+    :impactsRight :Art21_NonDiscrimination, :Art23_GenderEquality, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :PrivacyBreach ;
     :supportsRequirement :R010, :R019, :R085 .
 
@@ -3988,7 +3994,7 @@
     :incidentTitle "Palantir ICE Surveillance System" ;
     :incidentYear "2019" ;
     :aiCapability "Reasoning (Prediction)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art6_LibertyAndSecurity, :Art21_NonDiscrimination ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art6_RightToLiberty, :Art21_NonDiscrimination ;
     :demonstratesRisk :Surveillance, :PrivacyBreach ;
     :supportsRequirement :R001, :R027, :R010 .
 
@@ -4015,7 +4021,7 @@
     :incidentTitle "COMPAS Juvenile Risk Tool Racial Bias" ;
     :incidentYear "2016" ;
     :aiCapability "Reasoning (Risk Prediction)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art6_LibertyAndSecurity, :Art47_RightToEffectiveRemedy, :Art48_PresumptionOfInnocence ;
+    :impactsRight :Art21_NonDiscrimination, :Art6_RightToLiberty, :Art47_RightToEffectiveRemedy, :Art48_PresumptionOfInnocence ;
     :demonstratesRisk :Discrimination, :LibertyViolation ;
     :supportsRequirement :R085, :R027, :R010 .
 
@@ -4024,7 +4030,7 @@
     :incidentTitle "Amazon Ring Police Surveillance Network" ;
     :incidentYear "2019" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art6_LibertyAndSecurity ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art6_RightToLiberty ;
     :demonstratesRisk :Surveillance, :PrivacyBreach ;
     :supportsRequirement :R001, :R027 .
 
@@ -4033,7 +4039,7 @@
     :incidentTitle "HireVue Automated Video Interview Bias" ;
     :incidentYear "2019" ;
     :aiCapability "Perception (CV/NLP)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art26_RightToData ;
+    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :EmploymentHarm ;
     :supportsRequirement :R085, :R042, :R010 .
 
@@ -4051,7 +4057,7 @@
     :incidentTitle "Xiaomi Smart Speaker Data Leak" ;
     :incidentYear "2020" ;
     :aiCapability "Perception (Audio)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection ;
     :demonstratesRisk :PrivacyBreach, :DataBreach ;
     :supportsRequirement :R001, :R027 .
 
@@ -4069,7 +4075,7 @@
     :incidentTitle "Amazon Alexa Recording Children Without Consent" ;
     :incidentYear "2023" ;
     :aiCapability "Perception (Audio)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art24_RightsOfChild ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art24_RightsOfChild ;
     :demonstratesRisk :PrivacyBreach, :ChildrenRights ;
     :supportsRequirement :R001, :R027, :R010 .
 
@@ -4078,7 +4084,7 @@
     :incidentTitle "Facial Recognition in UK Schools" ;
     :incidentYear "2022" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art24_RightsOfChild ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art24_RightsOfChild ;
     :demonstratesRisk :PrivacyBreach, :ChildrenRights ;
     :supportsRequirement :R001, :R027 .
 
@@ -4087,7 +4093,7 @@
     :incidentTitle "Spotify Mood Inference Patent" ;
     :incidentYear "2021" ;
     :aiCapability "Perception (Audio/NLP)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art11_FreedomOfExpression ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art11_FreedomOfExpression ;
     :demonstratesRisk :PrivacyBreach, :Manipulation ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -4096,7 +4102,7 @@
     :incidentTitle "Grindr HIV Status Data Sharing" ;
     :incidentYear "2018" ;
     :aiCapability "Reasoning (Data Processing)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art21_NonDiscrimination ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art21_NonDiscrimination ;
     :demonstratesRisk :PrivacyBreach, :DataBreach ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -4105,7 +4111,7 @@
     :incidentTitle "BART Predictive Policing Racial Bias" ;
     :incidentYear "2020" ;
     :aiCapability "Reasoning (Prediction)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art6_LibertyAndSecurity, :Art7_Privacy ;
+    :impactsRight :Art21_NonDiscrimination, :Art6_RightToLiberty, :Art7_PrivateLife ;
     :demonstratesRisk :Discrimination, :Surveillance ;
     :supportsRequirement :R085, :R001 .
 
@@ -4114,7 +4120,7 @@
     :incidentTitle "GitHub Copilot Copyright Infringement" ;
     :incidentYear "2022" ;
     :aiCapability "Reasoning (Code Generation)" ;
-    :impactsRight :Art17_RightToProperty, :Art16_FreedomOfArtsScience ;
+    :impactsRight :Art17_RightToProperty, :Art13_FreedomOfArtsScience ;
     :demonstratesRisk :IntellectualProperty, :Accountability ;
     :supportsRequirement :R054, :R071 .
 
@@ -4123,7 +4129,7 @@
     :incidentTitle "TikTok Shadowbanning Disability Content" ;
     :incidentYear "2020" ;
     :aiCapability "Reasoning (Content Moderation)" ;
-    :impactsRight :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art26_RightToData ;
+    :impactsRight :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :ExpressionHarm ;
     :supportsRequirement :R085, :R019 .
 
@@ -4132,7 +4138,7 @@
     :incidentTitle "Lensa AI Sexualisation of Women" ;
     :incidentYear "2022" ;
     :aiCapability "Perception (Image Generation)" ;
-    :impactsRight :Art1_HumanDignity, :Art23_GenderEquality, :Art7_Privacy ;
+    :impactsRight :Art1_HumanDignity, :Art23_GenderEquality, :Art7_PrivateLife ;
     :demonstratesRisk :Dignity, :GenderHarm ;
     :supportsRequirement :R001, :R085 .
 
@@ -4150,7 +4156,7 @@
     :incidentTitle "China Social Credit System AI Scoring" ;
     :incidentYear "2018" ;
     :aiCapability "Reasoning (Scoring)" ;
-    :impactsRight :Art6_LibertyAndSecurity, :Art7_Privacy, :Art8_DataProtection, :Art15_FreedomOfOccupation, :Art41_GoodAdministration, :Art47_RightToEffectiveRemedy ;
+    :impactsRight :Art6_RightToLiberty, :Art7_PrivateLife, :Art8_DataProtection, :Art15_FreedomOfOccupation, :Art41_GoodAdministration, :Art47_RightToEffectiveRemedy ;
     :demonstratesRisk :Surveillance, :LibertyViolation ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -4168,7 +4174,7 @@
     :incidentTitle "Netherlands SyRI Welfare Surveillance System" ;
     :incidentYear "2020" ;
     :aiCapability "Reasoning (Profiling)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art21_NonDiscrimination, :Art41_GoodAdministration, :Art47_RightToEffectiveRemedy ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art21_NonDiscrimination, :Art41_GoodAdministration, :Art47_RightToEffectiveRemedy ;
     :demonstratesRisk :Surveillance, :Discrimination ;
     :supportsRequirement :R010, :R027, :R085 .
 
@@ -4186,7 +4192,7 @@
     :incidentTitle "COMPAS Pennsylvania Sentencing Racial Bias" ;
     :incidentYear "2017" ;
     :aiCapability "Reasoning (Risk Prediction)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art6_LibertyAndSecurity, :Art47_RightToEffectiveRemedy, :Art48_PresumptionOfInnocence ;
+    :impactsRight :Art21_NonDiscrimination, :Art6_RightToLiberty, :Art47_RightToEffectiveRemedy, :Art48_PresumptionOfInnocence ;
     :demonstratesRisk :Discrimination, :LibertyViolation ;
     :supportsRequirement :R085, :R027, :R010 .
 
@@ -4249,7 +4255,7 @@
     :incidentTitle "Cambridge Analytica Facebook Data Exploitation" ;
     :incidentYear "2018" ;
     :aiCapability "Reasoning (Profiling/NLP)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art26_RightToData ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art8_DataProtection ;
     :demonstratesRisk :PrivacyBreach, :Manipulation ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -4267,7 +4273,7 @@
     :incidentTitle "Uber Eats Racial Profiling in Driver Verification" ;
     :incidentYear "2021" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art7_Privacy ;
+    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art7_PrivateLife ;
     :demonstratesRisk :Discrimination, :EmploymentHarm ;
     :supportsRequirement :R085, :R042 .
 
@@ -4276,7 +4282,7 @@
     :incidentTitle "Affectiva Emotion AI Hiring Bias" ;
     :incidentYear "2019" ;
     :aiCapability "Perception (CV/Affective)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art26_RightToData ;
+    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :EmploymentHarm ;
     :supportsRequirement :R085, :R042, :R071 .
 
@@ -4303,7 +4309,7 @@
     :incidentTitle "Proctorio Online Exam Surveillance Bias" ;
     :incidentYear "2020" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art24_RightsOfChild, :Art7_Privacy, :Art8_DataProtection ;
+    :impactsRight :Art21_NonDiscrimination, :Art24_RightsOfChild, :Art7_PrivateLife, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :PrivacyBreach ;
     :supportsRequirement :R085, :R001, :R027 .
 
@@ -4321,7 +4327,7 @@
     :incidentTitle "Clearview AI GDPR Violations EU" ;
     :incidentYear "2022" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art26_RightToData, :Art21_NonDiscrimination ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art8_DataProtection, :Art21_NonDiscrimination ;
     :demonstratesRisk :PrivacyBreach, :Surveillance ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -4357,7 +4363,7 @@
     :incidentTitle "AWS Rekognition ICE Border Enforcement" ;
     :incidentYear "2019" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art21_NonDiscrimination, :Art6_LibertyAndSecurity ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art21_NonDiscrimination, :Art6_RightToLiberty ;
     :demonstratesRisk :Surveillance, :PrivacyBreach ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -4375,7 +4381,7 @@
     :incidentTitle "NEC Facial Recognition in Japanese Schools" ;
     :incidentYear "2021" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art24_RightsOfChild, :Art7_Privacy, :Art8_DataProtection ;
+    :impactsRight :Art24_RightsOfChild, :Art7_PrivateLife, :Art8_DataProtection ;
     :demonstratesRisk :PrivacyBreach, :ChildrenRights ;
     :supportsRequirement :R001, :R027 .
 
@@ -4402,7 +4408,7 @@
     :incidentTitle "Palantir NHS Federated Data Platform" ;
     :incidentYear "2023" ;
     :aiCapability "Reasoning (Data Processing)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art35_HealthCare ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art35_HealthCare ;
     :demonstratesRisk :PrivacyBreach, :DataGovernance ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -4411,7 +4417,7 @@
     :incidentTitle "Deepfake Non-Consensual Intimate Imagery" ;
     :incidentYear "2023" ;
     :aiCapability "Perception (Image Generation)" ;
-    :impactsRight :Art1_HumanDignity, :Art7_Privacy, :Art23_GenderEquality ;
+    :impactsRight :Art1_HumanDignity, :Art7_PrivateLife, :Art23_GenderEquality ;
     :demonstratesRisk :Dignity, :GenderHarm ;
     :supportsRequirement :R001, :R027 .
 
@@ -4447,7 +4453,7 @@
     :incidentTitle "Predictim AI Babysitter Social Media Screening" ;
     :incidentYear "2018" ;
     :aiCapability "Reasoning (NLP/Profiling)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art21_NonDiscrimination, :Art15_FreedomOfOccupation ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art21_NonDiscrimination, :Art15_FreedomOfOccupation ;
     :demonstratesRisk :PrivacyBreach, :Discrimination ;
     :supportsRequirement :R001, :R010, :R085 .
 
@@ -4456,7 +4462,7 @@
     :incidentTitle "MyHeritage DeepNostalgia Deceased Relatives Deepfake" ;
     :incidentYear "2021" ;
     :aiCapability "Perception (Image Generation)" ;
-    :impactsRight :Art7_Privacy, :Art1_HumanDignity ;
+    :impactsRight :Art7_PrivateLife, :Art1_HumanDignity ;
     :demonstratesRisk :PrivacyBreach, :Dignity ;
     :supportsRequirement :R001, :R027 .
 
@@ -4465,7 +4471,7 @@
     :incidentTitle "Teleperformance AI Home Worker Monitoring" ;
     :incidentYear "2021" ;
     :aiCapability "Perception (CV/Audio)" ;
-    :impactsRight :Art7_Privacy, :Art8_DataProtection, :Art15_FreedomOfOccupation ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art15_FreedomOfOccupation ;
     :demonstratesRisk :Surveillance, :EmploymentHarm ;
     :supportsRequirement :R001, :R010, :R027 .
 

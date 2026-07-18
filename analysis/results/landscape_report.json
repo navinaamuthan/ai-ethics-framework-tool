@@ -1,0 +1,233 @@
+{
+  "coverage_matrix": {
+    "Art11_FreedomOfExpression": {
+      "REAMS": 0,
+      "EUAIAct": 0,
+      "HorizonEurope": 4,
+      "ACMConference": 3
+    },
+    "Art1_HumanDignity": {
+      "REAMS": 14,
+      "EUAIAct": 5,
+      "HorizonEurope": 17,
+      "ACMConference": 11
+    },
+    "Art20_EqualityBeforeLaw": {
+      "REAMS": 2,
+      "EUAIAct": 0,
+      "HorizonEurope": 2,
+      "ACMConference": 0
+    },
+    "Art21_NonDiscrimination": {
+      "REAMS": 3,
+      "EUAIAct": 5,
+      "HorizonEurope": 7,
+      "ACMConference": 6
+    },
+    "Art22_CulturalDiversity": {
+      "REAMS": 0,
+      "EUAIAct": 0,
+      "HorizonEurope": 2,
+      "ACMConference": 1
+    },
+    "Art23_GenderEquality": {
+      "REAMS": 1,
+      "EUAIAct": 1,
+      "HorizonEurope": 1,
+      "ACMConference": 2
+    },
+    "Art24_RightsOfChild": {
+      "REAMS": 6,
+      "EUAIAct": 0,
+      "HorizonEurope": 0,
+      "ACMConference": 0
+    },
+    "Art26_DisabilityIntegration": {
+      "REAMS": 0,
+      "EUAIAct": 1,
+      "HorizonEurope": 2,
+      "ACMConference": 1
+    },
+    "Art2_RightToLife": {
+      "REAMS": 1,
+      "EUAIAct": 0,
+      "HorizonEurope": 1,
+      "ACMConference": 3
+    },
+    "Art31_FairWorkingConditions": {
+      "REAMS": 2,
+      "EUAIAct": 0,
+      "HorizonEurope": 1,
+      "ACMConference": 2
+    },
+    "Art35_HealthCare": {
+      "REAMS": 1,
+      "EUAIAct": 1,
+      "HorizonEurope": 0,
+      "ACMConference": 1
+    },
+    "Art37_EnvironmentalProtection": {
+      "REAMS": 2,
+      "EUAIAct": 0,
+      "HorizonEurope": 2,
+      "ACMConference": 2
+    },
+    "Art3_RightToIntegrity": {
+      "REAMS": 14,
+      "EUAIAct": 0,
+      "HorizonEurope": 3,
+      "ACMConference": 4
+    },
+    "Art41_GoodAdministration": {
+      "REAMS": 28,
+      "EUAIAct": 18,
+      "HorizonEurope": 20,
+      "ACMConference": 8
+    },
+    "Art47_RightToEffectiveRemedy": {
+      "REAMS": 5,
+      "EUAIAct": 12,
+      "HorizonEurope": 13,
+      "ACMConference": 4
+    },
+    "Art6_RightToLiberty": {
+      "REAMS": 1,
+      "EUAIAct": 1,
+      "HorizonEurope": 2,
+      "ACMConference": 3
+    },
+    "Art7_PrivateLife": {
+      "REAMS": 14,
+      "EUAIAct": 3,
+      "HorizonEurope": 5,
+      "ACMConference": 11
+    },
+    "Art8_DataProtection": {
+      "REAMS": 30,
+      "EUAIAct": 5,
+      "HorizonEurope": 12,
+      "ACMConference": 10
+    }
+  },
+  "incident_evidence_per_right": {
+    "Art21_NonDiscrimination": 37,
+    "Art7_PrivateLife": 24,
+    "Art8_DataProtection": 24,
+    "Art47_RightToEffectiveRemedy": 22,
+    "Art1_HumanDignity": 21,
+    "Art2_RightToLife": 13,
+    "Art11_FreedomOfExpression": 12,
+    "Art15_FreedomOfOccupation": 11,
+    "Art6_RightToLiberty": 10,
+    "Art41_GoodAdministration": 9,
+    "Art23_GenderEquality": 7,
+    "Art35_HealthCare": 7,
+    "Art24_RightsOfChild": 7,
+    "Art48_PresumptionOfInnocence": 5,
+    "Art26_DisabilityIntegration": 1,
+    "Art17_RightToProperty": 1,
+    "Art13_FreedomOfArtsScience": 1
+  },
+  "harm_without_governance": [
+    [
+      "Art15_FreedomOfOccupation",
+      11
+    ],
+    [
+      "Art48_PresumptionOfInnocence",
+      5
+    ],
+    [
+      "Art17_RightToProperty",
+      1
+    ],
+    [
+      "Art13_FreedomOfArtsScience",
+      1
+    ]
+  ],
+  "governance_without_harm": [
+    [
+      "Art3_RightToIntegrity",
+      21
+    ],
+    [
+      "Art37_EnvironmentalProtection",
+      6
+    ],
+    [
+      "Art31_FairWorkingConditions",
+      5
+    ],
+    [
+      "Art20_EqualityBeforeLaw",
+      4
+    ],
+    [
+      "Art22_CulturalDiversity",
+      3
+    ]
+  ],
+  "overlap_distribution": {
+    "1": [
+      "Art24_RightsOfChild"
+    ],
+    "2": [
+      "Art11_FreedomOfExpression",
+      "Art20_EqualityBeforeLaw",
+      "Art22_CulturalDiversity"
+    ],
+    "3": [
+      "Art26_DisabilityIntegration",
+      "Art2_RightToLife",
+      "Art31_FairWorkingConditions",
+      "Art35_HealthCare",
+      "Art37_EnvironmentalProtection",
+      "Art3_RightToIntegrity"
+    ],
+    "4": [
+      "Art1_HumanDignity",
+      "Art21_NonDiscrimination",
+      "Art23_GenderEquality",
+      "Art41_GoodAdministration",
+      "Art47_RightToEffectiveRemedy",
+      "Art6_RightToLiberty",
+      "Art7_PrivateLife",
+      "Art8_DataProtection"
+    ]
+  },
+  "top_harm_evidenced_requirements": [
+    [
+      "R027",
+      31
+    ],
+    [
+      "R001",
+      28
+    ],
+    [
+      "R085",
+      25
+    ],
+    [
+      "R010",
+      19
+    ],
+    [
+      "R071",
+      17
+    ],
+    [
+      "R054",
+      14
+    ],
+    [
+      "R019",
+      12
+    ],
+    [
+      "R042",
+      8
+    ]
+  ]
+}
