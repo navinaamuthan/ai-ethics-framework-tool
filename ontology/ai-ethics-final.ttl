@@ -3873,6 +3873,7 @@
 :ACM005 :mapsToRight :Art3_RightToIntegrity .
 :ACM005 :mapsToRight :Art7_PrivateLife .
 :ACM005 :mapsToRight :Art8_DataProtection .
+:ACM005 :mapsToRight :Art17_RightToProperty .
 :ACM006 :mapsToRight :Art3_RightToIntegrity .
 :ACM006 :mapsToRight :Art8_DataProtection .
 :ACM007 :mapsToRight :Art3_RightToIntegrity .

@@ -1,0 +1,76 @@
+{
+  "Art48_PresumptionOfInnocence": [
+    {
+      "id": "AIAAIC-004",
+      "title": "COMPAS Recidivism Algorithm Racial Bias"
+    },
+    {
+      "id": "AIAAIC-010",
+      "title": "UK Post Office Horizon System Wrongful Prosecutions"
+    },
+    {
+      "id": "AIAAIC-019",
+      "title": "COMPAS Juvenile Risk Tool Racial Bias"
+    },
+    {
+      "id": "AIAAIC-035",
+      "title": "Amazon Rekognition False Matches on Congress Members"
+    },
+    {
+      "id": "AIAAIC-038",
+      "title": "COMPAS Pennsylvania Sentencing Racial Bias"
+    }
+  ],
+  "Art15_FreedomOfOccupation": [
+    {
+      "id": "AIAAIC-015",
+      "title": "Uber Surge Pricing Discrimination"
+    },
+    {
+      "id": "AIAAIC-021",
+      "title": "HireVue Automated Video Interview Bias"
+    },
+    {
+      "id": "AIAAIC-022",
+      "title": "Deliveroo Algorithmic Dismissal"
+    },
+    {
+      "id": "AIAAIC-024",
+      "title": "LinkedIn Advertising Gender Bias"
+    },
+    {
+      "id": "AIAAIC-034",
+      "title": "China Social Credit System AI Scoring"
+    },
+    {
+      "id": "AIAAIC-047",
+      "title": "Uber Eats Racial Profiling in Driver Verification"
+    },
+    {
+      "id": "AIAAIC-048",
+      "title": "Affectiva Emotion AI Hiring Bias"
+    },
+    {
+      "id": "AIAAIC-050",
+      "title": "Australian Robodebt Automated Welfare Notices"
+    },
+    {
+      "id": "AIAAIC-066",
+      "title": "UK Universal Credit Algorithmic Benefits Denial"
+    },
+    {
+      "id": "AIAAIC-067",
+      "title": "Predictim AI Babysitter Social Media Screening"
+    },
+    {
+      "id": "AIAAIC-069",
+      "title": "Teleperformance AI Home Worker Monitoring"
+    }
+  ],
+  "Art13_FreedomOfArtsScience": [
+    {
+      "id": "AIAAIC-030",
+      "title": "GitHub Copilot Copyright Infringement"
+    }
+  ]
+}

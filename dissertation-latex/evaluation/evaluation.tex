@@ -67,7 +67,7 @@ Before evaluating the assessment pipeline, this section reports SPARQL analyses 
 
 \textbf{Overlap distribution.} Of the 18 Charter rights that carry at least one \texttt{mapsToRight} triple from a governance requirement, eight are covered by all four frameworks (Articles~1, 6, 7, 8, 21, 23, 41, and 47 in the requirement IRI naming), six by three frameworks, three by two, and one --- Article~24 (rights of the child) --- by REAMS alone. Convergence is therefore real but uneven: data protection, non-discrimination, dignity, and remedy are shared priorities, while children's rights remain institutionally siloed.
 
-\textbf{Harm without governance.} After merging two dual-IRI aliases that had split incident annotations from requirement mappings (\texttt{Art7\_Privacy}$\rightarrow$\texttt{Art7\_PrivateLife}, \texttt{Art6\_LibertyAndSecurity}$\rightarrow$\texttt{Art6\_RightToLiberty}) and reloading the canonical graph, \textbf{four} Charter rights remain impacted by curated incidents yet carry zero requirement mappings --- the headline RQ1 finding. Article~15 (freedom to choose an occupation) is impacted by 11 documented incidents with no requirement in any of the four frameworks; Article~48 (presumption of innocence) by 5; Article~17 (right to property) by 1; and Article~13 (freedom of the arts and sciences) by 1. Each is a concrete gap: documented harm without a corresponding obligation as currently encoded.
+\textbf{Harm without governance.} After merging two dual-IRI aliases (\texttt{Art7\_Privacy}$\rightarrow$\texttt{Art7\_PrivateLife}, \texttt{Art6\_LibertyAndSecurity}$\rightarrow$\texttt{Art6\_RightToLiberty}) and correcting one mapping omission (ACM005 now maps to Article~17 property / IP ownership), \textbf{three} Charter rights remain impacted by curated incidents yet carry zero requirement mappings --- the headline RQ1 finding. Article~15 (freedom to choose an occupation) is impacted by 11 documented incidents; Article~48 (presumption of innocence) by 5; Article~13 (freedom of the arts and sciences) by 1. Each gap was verified against the extracted requirement corpus of all four frameworks to rule out further mapping omission (log in \texttt{analysis/gap\_verification\_log.md}): frameworks address hiring harm via non-discrimination or working-conditions articles, never Art.~15; criminal-conviction \emph{data} requirements are not presumption-of-innocence obligations; no arts/sciences-freedom language appears in any framework text.
 
 \textbf{Governance without documented harm.} The reverse gap also appears. Five rights carry requirement mappings but zero incident evidence in the curated set: Article~3 (right to integrity of the person, 21 requirements), Article~37 (environmental protection, 6), Article~31 (fair working conditions, 5), Article~20 (equality before the law, 4), and Article~22 (cultural diversity, 3). These are not errors --- precautionary or aspirational requirements can precede documented incidents --- but they show where the frameworks encode obligations that the current incident evidence base cannot yet stress-test.
 
@@ -84,7 +84,8 @@ Table~\ref{tab:model_comparison} presents the primary evaluation results across 
 \toprule
 \textbf{Metric} & \textbf{Llama 3.1 8B} & \textbf{Llama 3.3 70B} \\
 \midrule
-Fundamental rights coverage (primary) & --- & 0.458 (n=18) \\
+Fundamental rights coverage (primary) & --- & 0.773 (n=20) \\
+\quad 95\% bootstrap CI & --- & [0.632, 0.894] \\
 Risk classification accuracy (secondary) & 65\% (13/20) & 90\% (18/20) \\
 Retrieval recall & 0.99 & 0.99 \\
 Generation F1 & 0.16 & 0.22 \\
@@ -96,7 +97,7 @@ Backend & Ollama (local) & Groq API (cloud) \\
 \subsection{Fundamental Rights Coverage}
 \label{sec:rights-coverage}
 
-Mean fundamental rights coverage on the Llama~3.3~70B assessments is 0.458 (n=18 proposals with non-empty expected-rights sets; P19 and P20 have none). A string-normalisation check rules out an artefact: system outputs use forms such as ``Article~8'' while reference annotations use ``Article8'', and whitespace stripping yields exact matches; zero of 22 per-right misses are rescued by case or digit-only variants. Spot-checks confirm genuine gaps --- for example P01 surfaces Articles~7, 21, 35, 41, and~47 but not the expected Article~8; P07 surfaces Articles~7, 8, and~21 but neither expected Article~2 nor Article~6; P11 surfaces Articles~21, 41, and~47 but neither expected Article~6 nor Article~8. Five proposals achieve full coverage (P02, P06, P10, P12, P17). A mean below 0.50 is stricter than the 90\% secondary risk-label accuracy, and that is the point: rights coverage exposes retrieval and generation misses that a single High/Medium/Low label conceals. The plan benchmark of $\geq$0.85 was framed against baseline documentation rather than against reference annotations; reported here honestly against the latter, coverage is a recall-style claim about whether the system surfaces annotator-identified rights, not an oracle claim about correctness.
+Mean fundamental rights coverage on the Llama~3.3~70B assessments is 0.773 (n=20) against \texttt{synthetic\_proposals} reference annotations --- the same ground truth used for risk scoring --- with a 95\% bootstrap CI of $[0.632, 0.894]$. Ten proposals achieve full coverage. A string-normalisation check rules out an artefact (``Article~8'' vs ``Article8''). Of 13 per-right misses, \textbf{84\% are generation-stage} (the right was in \texttt{matched\_rights} but not cited in the assessment) and 15\% are retrieval-stage keyword misses (both on Article~11 for P13/P14). That split is consistent with the generation-F1 gap: the knowledge graph surfaces the right, but the LLM selectively omits it. The plan benchmark of $\geq$0.85 was framed against baseline documentation; against reference annotations the CI upper bound reaches 0.894 while the mean sits just below. Risk-label accuracy (90\% at 70B) is retained as secondary. An exact McNemar test on the 20 paired 8B/70B classifications gives $p=0.125$ (discordant pairs 1 vs 6), consistent with the directional-trend framing rather than a confirmed capacity effect.
 
 
 \subsection{Central Finding: Model-Agnostic Retrieval}
@@ -163,7 +164,7 @@ These findings, together with the architecture comparison in Table~\ref{tab:arch
 \centering
 \caption{Architecture comparison for RQ2 (LLM-only vs hybrid RAG vs SHACL-only).}
 \label{tab:arch_compare}
-\begin{tabular}{p{2.4cm}p{3.2cm}p{3.2cm}p{3.2cm}}
+\begin{tabular}{p{2.2cm}p{3.0cm}p{3.0cm}p{3.2cm}}
 \toprule
 \textbf{Property} & \textbf{LLM-only} & \textbf{Hybrid RAG} & \textbf{SHACL-only} \\
 \midrule
@@ -172,9 +173,12 @@ Determinism & Stochastic & Stochastic generation; deterministic retrieval & Full
 Traceability & No requirement IDs; hallucinated incidents & Requirement IDs + incident IRIs with provenance & Shape IRI, SPARQL pattern, priority triple \\
 Per-dimension output & Collapsed into narrative / single label & Narrative + rights list; single risk label & Per-dimension profile ordered by priority \\
 Editability & Prompt / model change only & Ontology + prompt; ranking inside LLM & Edit one \texttt{aiefsh:priority} triple and re-validate \\
+Rights P / R (n=20) & --- & coverage recall 0.773 & 0.417 / 0.193 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+SHACL mean precision 0.417 and recall 0.193 over the 20 synthetic proposals are bounded by the demonstrator's six rules covering only four Charter dimensions (Arts.~1, 8, 21, 24, 35) --- that low recall \emph{is} the RQ2 trade-off, stated with numbers: scrutable and editable, but narrow. A deterministic citation post-filter enforcing $\mathrm{citation}\subseteq\mathrm{retrieval}$ found a 0\% out-of-retrieval citation rate (0/167 after normalising prefixed ID variants such as \texttt{EUAIAct AI001}$\rightarrow$\texttt{AI001}); post-filtering leaves F1 unchanged at 0.227, so grounding works and the transparency panel's divergence warnings rarely fire.
 
 
 \section{Documentation Generation (RQ3)}
@@ -198,7 +202,7 @@ Horizon Europe & 61\% & 20 \\
 \end{tabular}
 \end{table}
 
-FRIA and ACM/NeurIPS fields map cleanly onto the assessment schema (purpose, rights, risks, mitigations, precedents). REAMS misses are concentrated in \texttt{consent\_arrangements} when no cited requirement text mentions consent. Horizon Europe is thinner: \texttt{ethics\_by\_design} and \texttt{human\_oversight} frequently require manual input because the harmonised assessment does not always surface Horizon-specific requirement text or an explicit oversight clause. These misses are reported honestly --- they show where the shared representation is thinner than an authority's checklist demands, not where generation failed silently. Generated Markdown artefacts for all 20 proposals are in \texttt{evaluation/generated-documentation/}.
+FRIA and ACM/NeurIPS fields map cleanly onto the assessment schema (purpose, rights, risks, mitigations, precedents). Field-level breakdown shows the unfilled slots concentrated in Horizon Europe \texttt{Human Oversight} (19/20 docs), REAMS \texttt{Consent Arrangements} (17/20), and Horizon \texttt{Data Management} (12/20). Consent is a REAMS-specific checklist heading that the assessment only fills when a cited requirement literally mentions consent --- a docgen mapping thinness. Human oversight, by contrast, is demanded by Horizon's Ethics-by-Design guidance in a form no other framework's template requires as a standalone section; the completeness shortfall is therefore partly a measurement of Horizon's structural distinctiveness, not solely a system limitation. Generated Markdown artefacts for all 20 proposals are in \texttt{evaluation/generated-documentation/}.
 
 
 \section{Real-World Case Analysis}
@@ -254,11 +258,11 @@ Answer relevancy & 0.88 & 0.5--1.0 & 19/20 & Llama 3.3 70B \\
 
 \subsection{Addressing the Research Questions}
 
-\textbf{RQ1} asked where the four frameworks converge, diverge, and leave documented harms without requirement coverage. Section~\ref{sec:landscape} answers directly: eight rights are covered by all four authorities, Article~24 by REAMS alone, and four rights carry incident evidence with zero requirement mappings after dual-IRI cleanup.
+\textbf{RQ1} asked where the four frameworks converge, diverge, and leave documented harms without requirement coverage. Section~\ref{sec:landscape} answers directly: eight rights are covered by all four authorities, Article~24 by REAMS alone, and three verified genuine gaps (Arts.~13, 15, 48) after dual-IRI cleanup and one mapping correction.
 
 \textbf{RQ2} asked about trade-offs between scrutable symbolic rules and LLM-based interpretation. Table~\ref{tab:arch_compare} and \S\ref{sec:shacl} summarise the comparison: hybrid RAG accepts free text and produces narrative assessments with requirement provenance but stochastic ranking; SHACL accepts structured (or keyword-bridged) descriptions and produces deterministic, per-dimension, editable profiles at the cost of narrower coverage. The ablation study shows that LLM-alone lacks traceable requirement IDs and reliable incident grounding.
 
-\textbf{RQ3} asked whether one harmonised assessment can satisfy divergent authority documentation structures, and with what rights coverage against reference annotations. Documentation completeness reaches 100\% for FRIA and ACM/NeurIPS, 86\% for REAMS, and 61\% for Horizon Europe (\S\ref{sec:docgen}). Mean fundamental rights coverage is 0.458 (n=18) against reference annotations (\S\ref{sec:rights-coverage}), reported as a recall-style claim rather than an oracle score.
+\textbf{RQ3} asked whether one harmonised assessment can satisfy divergent authority documentation structures, and with what rights coverage against reference annotations. Documentation completeness reaches 100\% for FRIA and ACM/NeurIPS, 86\% for REAMS, and 61\% for Horizon Europe (\S\ref{sec:docgen}). Mean fundamental rights coverage is 0.773 (n=20, 95\% CI $[0.632, 0.894]$) against reference annotations (\S\ref{sec:rights-coverage}), with 84\% of misses at generation stage.
 
 
 \subsection{Comparison with Related Work}

@@ -42,9 +42,28 @@ def local(iri):
 
 
 def main():
-    data_file = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_DATA
+    data_file = DEFAULT_DATA
+    profile_file = None
+    i = 1
+    while i < len(sys.argv):
+        if sys.argv[i] == "--profile" and i + 1 < len(sys.argv):
+            profile_file = Path(sys.argv[i + 1])
+            i += 2
+            continue
+        if not sys.argv[i].startswith("--"):
+            data_file = Path(sys.argv[i])
+        i += 1
 
     shapes = rdflib.Graph().parse(SHAPES_FILE, format="turtle")
+    # after parsing shapes, before validate():
+    if profile_file is not None:
+        prof = rdflib.Graph().parse(profile_file, format="turtle")
+        for s, p, o in prof:
+            if p in (AIEFSH.priority, SH.severity):
+                shapes.remove((s, p, None))
+                shapes.add((s, p, o))
+        print(f"Profile applied: {profile_file.name}")
+
     data = rdflib.Graph().parse(data_file, format="turtle")
 
     conforms, report_graph, _ = validate(

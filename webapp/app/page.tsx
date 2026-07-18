@@ -12,6 +12,8 @@ import Mitigations from "@/components/Mitigations"
 import Checklist from "@/components/Checklist"
 import RetrievalPanel from "@/components/RetrievalPanel"
 import KGMetadata from "@/components/KGMetadata"
+import DimensionProfile from "@/components/DimensionProfile"
+import { dimensionProfile, type Finding } from "@/lib/dimension-rules"
 
 const STEPS = ["Extracting keywords", "Querying knowledge graph", "Generating assessment"]
 
@@ -20,6 +22,7 @@ export default function Home() {
   const [step, setStep] = useState(0)
   const [error, setError] = useState<string | null>(null)
   const [result, setResult] = useState<AssessmentResponse | null>(null)
+  const [dimFindings, setDimFindings] = useState<Finding[]>([])
 
   useEffect(() => {
     if (state !== "loading") return
@@ -32,6 +35,7 @@ export default function Home() {
   async function assess(proposalText: string, model: string) {
     setError(null)
     setState("loading")
+    setDimFindings(dimensionProfile(proposalText))
     try {
       const res = await fetch("/api/assess", {
         method: "POST",
@@ -113,6 +117,7 @@ export default function Home() {
               confidence={result.assessment.confidence_flag}
               reamsLikely={result.assessment.reams_clearance_likely}
             />
+            <DimensionProfile findings={dimFindings} />
             <RiskSummary summary={result.assessment.risk_summary} />
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
               <div className="lg:col-span-3 space-y-8">

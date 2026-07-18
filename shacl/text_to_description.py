@@ -25,19 +25,25 @@ RULES = [  # (regex on proposal text, triple to emit)
 # (known limitation — regex, not NLU; same class as keyword retrieval).
 _NEG = re.compile(r"\b(without|no|not|lack(?:ing)?|absent)\b.{0,40}$", re.I)
 
-text = open(sys.argv[1]).read() if len(sys.argv) > 1 else sys.stdin.read()
-t = text.lower()
-triples = set()
-for rx, obj in RULES:
-    m = re.search(rx, t)
-    if not m:
-        continue
-    if obj.startswith("aief:has") or obj.startswith("aief:discloses"):
-        prefix = t[max(0, m.start() - 40):m.start()]
-        if _NEG.search(prefix):
+
+def describe(text):
+    t = text.lower()
+    triples = set()
+    for rx, obj in RULES:
+        m = re.search(rx, t)
+        if not m:
             continue
-    triples.add(obj)
-triples = sorted(triples)
-print("@prefix aief: <https://w3id.org/aief/> .\n")
-print("aief:InputProposal a aief:ResearchProposal ;")
-print(" ;\n".join(f"    {tr}" for tr in triples) + " .")
+        if obj.startswith("aief:has") or obj.startswith("aief:discloses"):
+            prefix = t[max(0, m.start() - 40):m.start()]
+            if _NEG.search(prefix):
+                continue
+        triples.add(obj)
+    triples = sorted(triples)
+    return ("@prefix aief: <https://w3id.org/aief/> .\n\n"
+            "aief:InputProposal a aief:ResearchProposal ;\n"
+            + " ;\n".join(f"    {tr}" for tr in triples) + " .")
+
+
+if __name__ == "__main__":
+    text = open(sys.argv[1]).read() if len(sys.argv) > 1 else sys.stdin.read()
+    print(describe(text))

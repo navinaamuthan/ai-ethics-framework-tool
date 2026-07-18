@@ -1,0 +1,3 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix aiefsh: <https://w3id.org/aief/shapes#> .
+aiefsh:ClinicalValidationShape aiefsh:priority 1 ; sh:severity sh:Violation .
