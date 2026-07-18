@@ -87,6 +87,35 @@ Five Minor categories were also reported. The most substantial is \textbf{P08 (m
 None of the eight findings indicate a structural or logical defect in the ontology; all are annotation-completeness or property-declaration gaps addressable without redesigning the class hierarchy. They are recorded as concrete remediation items in Chapter~\ref{ch:conclusion} rather than deferred vaguely. The full machine-readable OOPS! report is included in the project repository at \texttt{evaluation/oops\_report.xml}.
 
 
+\subsection{Scrutable Risk Prioritisation with SHACL}
+\label{sec:shacl}
+
+A recurring critique of the main pipeline is that a single High/Medium/Low label collapses heterogeneous risk, and that the ranking rationale for that label sits inside the LLM. The SHACL layer in \texttt{shacl/} demonstrates the alternative: six risk rules expressed as SHACL shapes, each declaring as data its risk dimension (an EU Charter right IRI), priority rank (\texttt{aiefsh:priority}), severity tier (\texttt{sh:severity}), written rationale (\texttt{rdfs:comment}), and an inspectable SPARQL constraint. Validation produces a \emph{per-dimension risk profile} ordered by priority rather than one aggregate label. No LLM is involved in this layer.
+
+Priorities have empirical provenance. The script \texttt{harm\_evidenced\_priorities.py} queries GraphDB for incident in-degree per right (\texttt{COUNT(DISTINCT ?incident)} via \texttt{:impactsRight}), normalises against the maximum (37 for Article~21), and tiers into thirds: top third $\rightarrow$ priority~1, middle $\rightarrow$~2, remainder $\rightarrow$~3. Generated triples are serialised in \texttt{harm-evidenced-priorities.ttl}. Where a shape's \texttt{aiefsh:priority} diverges from that right's \texttt{evidencedPriority} --- for example Rule~3 (Art.~21) keeps priority~2 despite evidenced priority~1 because bias audits are remediable within the project; Rules~1--2 (Art.~8) keep priority~1 despite evidenced priority~2 as per-se GDPR infringements --- the divergence is recorded in the shape's rationale. Defaults are harm-evidenced; deliberate deviations are explicit and editable.
+
+\begin{lstlisting}[caption={BiometricConsentShape (excerpt) --- dimension, priority, severity, and SPARQL pattern as data.},label={lst:biometric-shape},language={},basicstyle=\ttfamily\scriptsize]
+aiefsh:BiometricConsentShape a sh:NodeShape ;
+  sh:targetClass aief:ResearchProposal ;
+  aiefsh:riskDimension aief:Art8_DataProtection ;
+  aiefsh:priority 1 ;
+  sh:severity sh:Violation ;
+  sh:sparql [
+    sh:message "Biometric data is processed without an opt-in consent mechanism..." ;
+    sh:select """
+      SELECT $this WHERE {
+        $this aief:involvesDataCategory aief:BiometricData .
+        FILTER NOT EXISTS { $this aief:hasConsentMechanism true }
+      }
+    """ ;
+  ] .
+\end{lstlisting}
+
+An evaluator who weighs clinical risk more heavily edits two triples on \texttt{ClinicalValidationShape} (\texttt{aiefsh:priority 2}$\rightarrow$\texttt{1}, \texttt{sh:severity} Warning$\rightarrow$Violation) and re-runs \texttt{run\_shacl.py}: P08's clinical-validation finding moves to the top tier of its profile. The free-text bridge (\texttt{text\_to\_description.py}) materialises structured descriptions from proposal text using the same keyword heuristics as retrieval, so SHACL can run end-to-end on free text; negation handling remains naive (regex, not NLU) --- a known limitation of the same class as keyword retrieval.
+
+Six rules over a handful of dimensions is a demonstrator, not a rule base. Its claim is architectural: that per-dimension, priority-as-data, evaluator-editable risk rules are expressible over the AIEF ontology with standard Semantic Web tooling (SHACL + pyshacl), and that they compose with the existing knowledge graph. Populating a full rule base --- and deciding \emph{whose} priorities the defaults encode --- is exactly the kind of question the AIEF platform is meant to make explorable rather than settle.
+
+
 \section{Knowledge Graph Population}
 \label{sec:kg}
 

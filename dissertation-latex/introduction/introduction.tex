@@ -17,12 +17,14 @@ This dissertation addresses these gaps by designing, building, and evaluating th
 This dissertation is guided by three research questions:
 
 \begin{enumerate}
-\item[\textbf{RQ1:}] Can a harmonised ontology effectively represent ethics assessment requirements across REAMS, the EU AI Act, Horizon Europe, and ACM/NeurIPS frameworks?
+\item[\textbf{RQ1:}] When ethics requirements from four governance authorities are harmonised into a single rights-grounded knowledge graph, where do the frameworks converge, diverge, and leave documented AI harms without corresponding requirement coverage?
 
-\item[\textbf{RQ2:}] Can a knowledge graph populated with these requirements and real-world AI incidents support automated, rights-grounded ethics assessment?
+\item[\textbf{RQ2:}] What are the trade-offs between scrutable symbolic rules and LLM-based interpretation in assessing free-text proposals --- in coverage, traceability, and openness to legitimate disagreement about risk priorities?
 
-\item[\textbf{RQ3:}] Does retrieval-augmented generation using an ontology-driven knowledge graph produce more accurate and traceable ethics assessments than a large language model operating without structured knowledge?
+\item[\textbf{RQ3:}] Can a single harmonised assessment generate documentation satisfying the divergent structural requirements of each authority, and with what coverage of the fundamental rights identified in reference annotations?
 \end{enumerate}
+
+These questions position AIEF as an \emph{exploratory instrument for a contested rule space} rather than an oracle: there is no external ground truth for what a ``correct'' ethics assessment is, and the system is designed so that the rules doing the assessing --- and the priorities ranking their findings --- are explicit, empirically grounded in documented harm, and open to inspection and revision by evaluators who disagree.
 
 
 \section{Research Contributions}
@@ -34,9 +36,9 @@ This dissertation makes four principal contributions:
 
 \item \textbf{A populated knowledge graph} encoding 207 governance requirements and 70 real-world AI incidents in a semantic network of Charter rights and risk categories, validated through SPARQL competency queries and inter-annotator agreement (Cohen's $\kappa$ = 0.712).
 
-\item \textbf{An empirically evaluated RAG-based assessment engine} demonstrating 0.99 retrieval recall across all model configurations and 90\% risk classification accuracy at the 70B parameter scale, with an ablation study confirming the knowledge graph's contribution is model-agnostic.
+\item \textbf{Landscape findings and architecture comparison} that surface where the four frameworks converge and diverge on Charter rights, identify rights with documented incident harm but zero requirement coverage, and compare LLM-only, hybrid RAG, and SHACL-only assessment modes on coverage, determinism, traceability, and editability (RQ1--RQ2).
 
-\item \textbf{A deployed web application} providing a publicly accessible demonstration of the complete pipeline, with retrieval transparency features that expose the provenance of every cited requirement and incident.
+\item \textbf{An evaluated assessment and documentation pipeline} --- a RAG engine with 0.99 retrieval recall and mean fundamental-rights coverage of 0.458 against reference annotations, a multi-authority documentation generator producing REAMS, FRIA, ACM/NeurIPS, and Horizon Europe artefacts from one assessment, a deployed web application with retrieval transparency, and a SHACL risk-dimension layer with harm-evidenced, evaluator-editable priorities.
 \end{enumerate}
 
 
@@ -47,4 +49,4 @@ The research follows the Design Science Research (DSR) paradigm as articulated b
 
 \section{Dissertation Structure}
 
-The remainder of this dissertation is organised as follows. Chapter~\ref{ch:background} presents the background and literature review, covering AI ethics governance frameworks, ontology engineering for compliance, knowledge graphs, and retrieval-augmented generation. Chapter~\ref{ch:design} describes the system design and implementation, detailing the ontology, knowledge graph population, RAG pipeline architecture, and web application. Chapter~\ref{ch:evaluation} presents the evaluation methodology and results, including the multi-model comparison, ablation study, and real-world case analysis. Chapter~\ref{ch:conclusion} discusses the findings, addresses limitations, and outlines directions for future work.
+The remainder of this dissertation is organised as follows. Chapter~\ref{ch:background} presents the background and literature review, covering AI ethics governance frameworks, ontology engineering for compliance, knowledge graphs, and retrieval-augmented generation. Chapter~\ref{ch:design} describes the system design and implementation, detailing the ontology, knowledge graph population, SHACL risk-dimension layer, RAG pipeline architecture, and web application. Chapter~\ref{ch:evaluation} presents the governance-landscape analysis (RQ1), multi-model and rights-coverage results, documentation generation (RQ3), ablation study, and real-world case analysis. Chapter~\ref{ch:conclusion} discusses the findings, addresses limitations, and outlines directions for future work.
