@@ -6,14 +6,14 @@ The AIEF ontology schema is published at [w3id.org/aief](https://w3id.org/aief/)
 
 | File | Contents | Triples | Verified via |
 |---|---|---|---|
-| `aief-asserted.ttl` / `aief-asserted.nt` | Only the triples explicitly in the source data (no reasoning) | 3,921 | Independently cross-checked with `rdflib` (Python) parsing the source `ai-ethics-final.ttl` directly — identical count |
-| `aief-materialised.ttl` | Asserted triples plus everything derivable under the RDFS+ ruleset (`rdfsplus-optimized`) — the ruleset actually configured on the production GraphDB repository the RAG pipeline queries at runtime | 4,847 | Re-verified 15 July 2026 after a data-consistency fix (see below) |
+| `aief-asserted.ttl` / `aief-asserted.nt` | Only the triples explicitly in the source data (no reasoning) | 3,931 | Independently cross-checked with `rdflib` (Python) parsing the source `ai-ethics-final.ttl` directly — identical count |
+| `aief-materialised.ttl` | Asserted triples plus everything derivable under the RDFS+ ruleset (`rdfsplus-optimized`) — the ruleset actually configured on the production GraphDB repository the RAG pipeline queries at runtime | 4,863 | Re-verified 15 July 2026 after a data-consistency fix (see below) |
 
 Both were generated via `GET /repositories/ai-ethics-kg/statements` against a local GraphDB Desktop instance, using `?infer=false` for the asserted-only export and no parameter (GraphDB's default) for the materialised export.
 
 ## A note on ruleset choice
 
-An earlier verification pass (13 July 2026) loaded the ontology into a separate scratch repository configured with a stricter `owl-horst-optimized` ruleset and reported 5,197 materialised triples. That figure does not reflect the ruleset actually deployed in production and has been superseded by the 4,847 figure above, which was generated against the real production repository (`ai-ethics-kg`) that `rag-pipeline/sparql_retrieval.py` queries at runtime. If you load these files into your own triple store with a different reasoner (e.g. full OWL-DL), your materialised count will differ from both — this is expected and is a property of the reasoner, not the data.
+An earlier verification pass (13 July 2026) loaded the ontology into a separate scratch repository configured with a stricter `owl-horst-optimized` ruleset and reported 5,197 materialised triples. That figure does not reflect the ruleset actually deployed in production and has been superseded by the 4,863 figure above, which was generated against the real production repository (`ai-ethics-kg`) that `rag-pipeline/sparql_retrieval.py` queries at runtime. If you load these files into your own triple store with a different reasoner (e.g. full OWL-DL), your materialised count will differ from both — this is expected and is a property of the reasoner, not the data.
 
 ## A note on a fixed data-consistency bug
 

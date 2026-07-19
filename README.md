@@ -17,8 +17,8 @@ AIEF takes a free-text AI research proposal and produces a structured, traceable
 | Governance requirements | **207** (REAMS R001–R087 · EU AI Act AI001–AI030 · Horizon Europe HE001–HE052 · ACM/NeurIPS ACM001–ACM038) |
 | AI incidents (AIAAIC-001 … 070) | 70 |
 | Charter rights mappings (`mapsToRight`) | 342 |
-| Asserted triples | 3,921 |
-| Triples incl. RDFS+ inference (GraphDB production ruleset) | 4,847 |
+| Asserted triples | 3,931 |
+| Triples incl. RDFS+ inference (GraphDB production ruleset) | 4,863 |
 | Ontology schema | 125 classes · 22 object properties · 16 data properties |
 
 The ontology is aligned with the [W3C Data Privacy Vocabulary (DPV)](https://w3id.org/dpv) (`owl:equivalentClass` for Charter rights) and [ODRL](https://www.w3.org/TR/odrl-model/) (`rdfs:subClassOf` for deontic modalities).
@@ -83,6 +83,10 @@ Deployment (Vercel): set the project **Root Directory** to `webapp/` and add `GR
 - **Retrieval baseline (controlled comparison):** ontology-driven SPARQL retrieval reaches 0.992 recall vs BM25 0.915 / TF-IDF 0.925 at matched set size; lexical baselines fall to 0.61–0.64 at k=100. `evaluation/retrieval_baselines.json`.
 - **Ontology evaluation battery:** 20/20 competency questions pass (incl. exact-value checks); HermiT reasoner reports zero inconsistent classes; OOPS! scan as above. `analysis/competency_questions.py`.
 - **Error taxonomy:** zero risk under-classifications across 20 proposals (2 over-classifications); 98.9% of requirement misses are generation-stage, with citation recall skewed against the largest framework (REAMS 0.067 vs ACM 0.297). `analysis/results/error_taxonomy.json`.
+- **Requirement redundancy (RQ1):** 207 requirement statements compress to 180 distinct obligation clusters (13.0% paraphrase redundancy); 9 clusters are cross-framework pairs, spanning every pairwise framework combination; none span 3+ frameworks at the calibrated similarity threshold. `analysis/requirement_clustering.py`.
+- **Gap stress test (RQ1):** the 3 genuine harm-without-governance gaps (Art 13, 15, 48) survive deliberate augmentation with 3 additional, independently-sourced real incidents (SyRI, US predictive-policing discontinuations, GPT-detector bias) — all remain at zero requirement coverage. `analysis/landscape_analysis.py`.
+- **Ontology data-shape validation:** 9/11 SHACL data shapes pass cleanly against the live KG; one genuine modelling gap found and fixed (Art 48 was never wired into the Charter-right class hierarchy) and one legitimate finding retained (12 Tier-2 requirements demand evidence inconsistent with their reflective tier). `shacl/ontology-data-shapes.ttl`, `shacl/validate_ontology_shapes.py`.
+- **SHACL widened + compound rules:** rule set expanded from 6→27 shapes (21 atomic + 6 compound conjunctive-escalation rules) across 20 of 22 Charter dimensions; precision 0.417→0.566, recall 0.193→0.327. Compound rules demonstrate auditable multi-condition escalation logic (e.g. children + monitoring + no safeguards → automatic priority-1 escalation) that a single aggregated label cannot express. `shacl/aief-risk-shapes.ttl`, `shacl/evaluate_shacl.py`.
 
 ## Paper and dissertation
 

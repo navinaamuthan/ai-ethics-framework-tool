@@ -1,0 +1,110 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix aief: <https://w3id.org/aief/> .
+
+#################################################################
+# AIEF Ontology-Level SHACL Data Shapes
+#
+# Distinct in purpose from aief-risk-shapes.ttl: those shapes encode
+# application-level risk rules over proposal descriptions. These shapes
+# validate the KNOWLEDGE GRAPH ITSELF for structural completeness --
+# the standard ontology-engineering use of SHACL (data shape validation),
+# complementing the OOPS! schema-quality scan and the HermiT consistency
+# check with instance-level integrity constraints neither of those tools
+# checks.
+#################################################################
+
+aief:RequirementShape a sh:NodeShape ;
+    sh:targetClass aief:Requirement ;
+    sh:property [ sh:path aief:requirementID ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype <http://www.w3.org/2001/XMLSchema#string> ] ;
+    sh:property [ sh:path aief:requirementText ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path aief:belongsToFramework ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path aief:hasTier ; sh:minCount 1 ] .
+
+aief:IncidentShape a sh:NodeShape ;
+    sh:targetClass aief:Incident ;
+    sh:property [ sh:path aief:incidentID ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path aief:incidentTitle ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path aief:impactsRight ; sh:minCount 1 ] .
+
+aief:RequirementRightTypeShape a sh:NodeShape ;
+    sh:targetClass aief:Requirement ;
+    sh:sparql [
+        sh:message "Every mapsToRight target must be a subclass of EUCharterRight (corrected 16 July 2026: rights are modelled as an OWL class hierarchy under EUCharterRight/TitleN_*, not as individuals of a FundamentalRight class -- the shape was fixed to match this design after an initial version incorrectly assumed the latter and flagged 343 false violations)." ;
+        sh:select """PREFIX aief: <https://w3id.org/aief/>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            SELECT $this WHERE {
+                $this aief:mapsToRight ?rt .
+                FILTER NOT EXISTS { ?rt rdfs:subClassOf* aief:EUCharterRight } } """ ;
+    ] .
+
+aief:IncidentRightTypeShape a sh:NodeShape ;
+    sh:targetClass aief:Incident ;
+    sh:sparql [
+        sh:message "Every impactsRight target must be a subclass of EUCharterRight (same correction as RequirementRightTypeShape)." ;
+        sh:select """PREFIX aief: <https://w3id.org/aief/>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            SELECT $this WHERE {
+                $this aief:impactsRight ?rt .
+                FILTER NOT EXISTS { ?rt rdfs:subClassOf* aief:EUCharterRight } } """ ;
+    ] .
+
+aief:SupportsRequirementTypeShape a sh:NodeShape ;
+    sh:targetSubjectsOf aief:supportsRequirement ;
+    sh:property [ sh:path aief:supportsRequirement ; sh:class aief:Requirement ;
+                  sh:message "Every supportsRequirement target must be typed Requirement." ] .
+
+aief:FrameworkClosedShape a sh:NodeShape ;
+    sh:targetObjectsOf aief:belongsToFramework ;
+    sh:in ( aief:REAMS aief:EUAIAct aief:HorizonEurope aief:ACMConference ) ;
+    sh:message "belongsToFramework must be one of the four recognised governance frameworks (closed-world check, catches typos/new unintended framework IRIs)." .
+
+aief:MandatoryTierConsistencyShape a sh:NodeShape ;
+    sh:targetClass aief:Requirement ;
+    sh:sparql [
+        sh:message "A Tier 1 (Mandatory) requirement must have isMandatory = true (tier/mandatory-flag consistency check)." ;
+        sh:select """PREFIX aief: <https://w3id.org/aief/>
+            SELECT $this WHERE {
+                $this aief:hasTier aief:Tier1_Mandatory .
+                FILTER NOT EXISTS { $this aief:isMandatory true } } """ ;
+    ] .
+
+aief:NoOrphanRightShape a sh:NodeShape ;
+    sh:targetClass aief:FundamentalRight ;
+    sh:sparql [
+        sh:message "A FundamentalRight individual should be referenced by at least one mapsToRight or impactsRight triple (catches unused/orphaned Charter articles in the ontology)." ;
+        sh:select """PREFIX aief: <https://w3id.org/aief/>
+            SELECT $this WHERE {
+                FILTER NOT EXISTS { ?r aief:mapsToRight $this }
+                FILTER NOT EXISTS { ?i aief:impactsRight $this } } """ ;
+    ] .
+
+aief:RequirementIDUniqueShape a sh:NodeShape ;
+    sh:targetClass aief:Requirement ;
+    sh:sparql [
+        sh:message "Two distinct Requirement individuals must not share the same requirementID (uniqueness check; this is exactly the class of bug that produced the R010/R054 duplication found and fixed during evaluation)." ;
+        sh:select """PREFIX aief: <https://w3id.org/aief/>
+            SELECT $this WHERE {
+                $this aief:requirementID ?id .
+                ?other aief:requirementID ?id . FILTER(?other != $this) } """ ;
+    ] .
+
+aief:IncidentIDUniqueShape a sh:NodeShape ;
+    sh:targetClass aief:Incident ;
+    sh:sparql [
+        sh:message "Two distinct Incident individuals must not share the same incidentID." ;
+        sh:select """PREFIX aief: <https://w3id.org/aief/>
+            SELECT $this WHERE {
+                $this aief:incidentID ?id .
+                ?other aief:incidentID ?id . FILTER(?other != $this) } """ ;
+    ] .
+
+aief:EvidenceRequirementConsistencyShape a sh:NodeShape ;
+    sh:targetClass aief:Requirement ;
+    sh:sparql [
+        sh:message "A requirement demanding evidence (requiresEvidence) should be Tier 1 Mandatory, not Tier 2 Reflective (a Reflective-tier requirement demanding hard evidence is a modelling inconsistency)." ;
+        sh:select """PREFIX aief: <https://w3id.org/aief/>
+            SELECT $this WHERE {
+                $this aief:requiresEvidence ?e ; aief:hasTier aief:Tier2_Reflective . } """ ;
+    ] .

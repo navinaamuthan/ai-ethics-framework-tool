@@ -335,3 +335,94 @@ aiefsh:GoodAdministrationShape a sh:NodeShape ;
         sh:prefixes aiefsh: ;
         sh:select """SELECT $this WHERE { $this aief:usesCapability aief:PublicSectorDecision .
             FILTER NOT EXISTS { $this aief:hasAppealMechanism true } }""" ; ] .
+
+#################################################################
+# Rules 22-27 — Compound/composable escalation rules (16 July 2026)
+#
+# All rules above fire on a single missing condition. Real ethics risk is
+# often conjunctive: several individually-Warning-tier facts combine into
+# a Violation-tier concern that no atomic rule captures. Each compound rule
+# declares aiefsh:compoundConditions listing the contributing dimensions,
+# so the composition itself -- not just the final verdict -- is inspectable
+# and auditable, unlike an LLM's internal aggregation of the same facts.
+#################################################################
+
+aiefsh:ChildSurveillanceCompoundShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "[Compound] Children + continuous monitoring + no safeguards" ;
+    rdfs:comment "Individually, monitoring-without-opt-out (Art 7, priority 2) and involving children (Art 24) are each Warning/Priority-2 concerns. Their conjunction is escalated to priority 1 Violation: a child population removes the possibility of meaningful individual consent that would otherwise mitigate a monitoring concern, so the two facts are not merely additive but multiplicative." ;
+    aiefsh:riskDimension aief:Art24_RightsOfChild ;
+    aiefsh:compoundConditions (aief:Art24_RightsOfChild aief:Art7_PrivateLife) ;
+    aiefsh:priority 1 ; sh:severity sh:Violation ;
+    sh:sparql [ sh:message "[COMPOUND] Children are subject to continuous monitoring with neither consent nor an individual opt-out (dimensions: Art 24 + Art 7, compounded)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE {
+            $this aief:involvesPopulation aief:Children ; aief:usesCapability aief:ContinuousMonitoring .
+            FILTER NOT EXISTS { $this aief:hasConsentMechanism true }
+            FILTER NOT EXISTS { $this aief:hasIndividualOptOut true } }""" ; ] .
+
+aiefsh:BiometricPublicSectorCompoundShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "[Compound] Biometric identification by a public authority, unaudited" ;
+    rdfs:comment "Facial recognition alone (Art 8/21, priority 1-2) and public-sector deployment alone (Art 41, priority 1) are each serious but separately remediable. Combined with the absence of a bias audit, state-actor biometric identification compounds data protection, non-discrimination, and rule-of-law concerns simultaneously -- escalated above any single contributing rule." ;
+    aiefsh:riskDimension aief:Art21_NonDiscrimination ;
+    aiefsh:compoundConditions (aief:Art8_DataProtection aief:Art21_NonDiscrimination aief:Art41_GoodAdministration) ;
+    aiefsh:priority 1 ; sh:severity sh:Violation ;
+    sh:sparql [ sh:message "[COMPOUND] A public-sector actor uses unaudited facial recognition (dimensions: Art 8 + Art 21 + Art 41, compounded)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE {
+            $this aief:usesCapability aief:FacialRecognition, aief:PublicSectorDecision .
+            FILTER NOT EXISTS { $this aief:hasBiasAudit true } }""" ; ] .
+
+aiefsh:VulnerableHealthCompoundShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "[Compound] Unvalidated clinical decision support for children" ;
+    rdfs:comment "Clinical decision support without validation (Art 35, priority 2 Warning) is remediable by validation alone when the affected population is adults. When the population is children, the same gap compounds with Art 24: paediatric clinical error has materially different, less reversible consequences, escalating from Warning to Violation." ;
+    aiefsh:riskDimension aief:Art35_HealthCare ;
+    aiefsh:compoundConditions (aief:Art35_HealthCare aief:Art24_RightsOfChild) ;
+    aiefsh:priority 1 ; sh:severity sh:Violation ;
+    sh:sparql [ sh:message "[COMPOUND] Unvalidated clinical decision support is applied to a child population (dimensions: Art 35 + Art 24, compounded)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE {
+            $this aief:usesCapability aief:ClinicalDecisionSupport ; aief:involvesPopulation aief:Children .
+            FILTER NOT EXISTS { $this aief:hasClinicalValidation true } }""" ; ] .
+
+aiefsh:CriminalJusticeTripleCompoundShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "[Compound] Unaudited, unappealable criminal-justice risk scoring" ;
+    rdfs:comment "This is the maximal compound case in the rule set: criminal-justice risk scoring (Art 6, Art 48) that is both unaudited for bias (Art 21) and has no appeal route (Art 47) implicates four dimensions simultaneously. Any one gap alone is priority 1-2; their conjunction represents the highest-priority compound pattern the rule set expresses, directly modelling the COMPAS-type failure mode in the incident corpus." ;
+    aiefsh:riskDimension aief:Art48_PresumptionOfInnocence ;
+    aiefsh:compoundConditions (aief:Art6_RightToLiberty aief:Art21_NonDiscrimination aief:Art47_RightToEffectiveRemedy aief:Art48_PresumptionOfInnocence) ;
+    aiefsh:priority 1 ; sh:severity sh:Violation ;
+    sh:sparql [ sh:message "[COMPOUND] Criminal-justice risk scoring is unaudited for bias and has no appeal mechanism (dimensions: Art 6 + Art 21 + Art 47 + Art 48, compounded)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE {
+            $this aief:usesCapability aief:CriminalJusticeRiskScoring .
+            FILTER NOT EXISTS { $this aief:hasBiasAudit true }
+            FILTER NOT EXISTS { $this aief:hasAppealMechanism true } }""" ; ] .
+
+aiefsh:GenderHiringCompoundShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "[Compound] Automated screening of gender-relevant populations, unaudited" ;
+    rdfs:comment "Automated screening alone (Art 15, priority 2) and gender-relevant populations alone (Art 23, priority 2) are each Warning-tier. Combined -- the Amazon hiring-algorithm pattern precisely -- unaudited screening with disparate gender impact is escalated to Violation, since this is a documented, repeated real-world failure mode rather than a hypothetical compounding." ;
+    aiefsh:riskDimension aief:Art23_GenderEquality ;
+    aiefsh:compoundConditions (aief:Art15_FreedomOfOccupation aief:Art23_GenderEquality) ;
+    aiefsh:priority 1 ; sh:severity sh:Violation ;
+    sh:sparql [ sh:message "[COMPOUND] Automated screening affecting gender-relevant populations has no bias audit (dimensions: Art 15 + Art 23, compounded)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE {
+            $this aief:usesCapability aief:AutomatedScreening ; aief:involvesPopulation aief:GenderMinorities .
+            FILTER NOT EXISTS { $this aief:hasBiasAudit true } }""" ; ] .
+
+aiefsh:UnlicensedHighComputeCompoundShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "[Compound] Large-scale training on unlicensed data" ;
+    rdfs:comment "High-compute training alone (Art 37, priority 3, an accounting obligation) and unlicensed data use alone (Art 17, priority 2) are each moderate. Combined, large-scale unlicensed data use has materially higher stakes -- the harm from unresolved IP infringement or environmental cost scales with training run size -- so the conjunction escalates by one priority tier relative to either individual rule." ;
+    aiefsh:riskDimension aief:Art17_RightToProperty ;
+    aiefsh:compoundConditions (aief:Art17_RightToProperty aief:Art37_EnvironmentalProtection) ;
+    aiefsh:priority 1 ; sh:severity sh:Violation ;
+    sh:sparql [ sh:message "[COMPOUND] Large-scale (high-compute) training uses unlicensed data with no licensing arrangement stated (dimensions: Art 17 + Art 37, compounded)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE {
+            $this aief:usesCapability aief:HighComputeTraining, aief:UnlicensedDataUse .
+            FILTER NOT EXISTS { $this aief:hasDataLicensing true } }""" ; ] .

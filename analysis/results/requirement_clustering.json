@@ -1,0 +1,184 @@
+{
+  "n_requirements": 207,
+  "n_clusters": 180,
+  "distance_threshold": 0.33,
+  "cluster_size_distribution": {
+    "1": 154,
+    "2": 25,
+    "3": 1
+  },
+  "cross_framework_cluster_count": 9,
+  "cross_framework_clusters": [
+    {
+      "cluster_id": 2,
+      "frameworks": [
+        "ACMConference",
+        "REAMS"
+      ],
+      "requirements": [
+        {
+          "id": "R010",
+          "framework": "REAMS",
+          "text": "Assess whether research could have detrimental legal, economic or social consequences for participants"
+        },
+        {
+          "id": "ACM001",
+          "framework": "ACMConference",
+          "text": "Research must contribute to society and human well-being \u2014 discuss how applications may harm individuals, groups or society and ways to mitigate such harms"
+        }
+      ]
+    },
+    {
+      "cluster_id": 29,
+      "frameworks": [
+        "ACMConference",
+        "REAMS"
+      ],
+      "requirements": [
+        {
+          "id": "R080",
+          "framework": "REAMS",
+          "text": "Have you considered whether research could be misdirected for dual purpose / harm?"
+        },
+        {
+          "id": "ACM013",
+          "framework": "ACMConference",
+          "text": "Discuss dual use potential \u2014 ways research could be misused and mitigations"
+        }
+      ]
+    },
+    {
+      "cluster_id": 22,
+      "frameworks": [
+        "EUAIAct",
+        "REAMS"
+      ],
+      "requirements": [
+        {
+          "id": "R084",
+          "framework": "REAMS",
+          "text": "Have you considered whether anonymised data could be re-identified?"
+        },
+        {
+          "id": "AI029",
+          "framework": "EUAIAct",
+          "text": "Have you considered whether pseudonymised or anonymised data could still lead to identification of affected individuals?"
+        }
+      ]
+    },
+    {
+      "cluster_id": 35,
+      "frameworks": [
+        "HorizonEurope",
+        "REAMS"
+      ],
+      "requirements": [
+        {
+          "id": "R087",
+          "framework": "REAMS",
+          "text": "Have you considered environmental impact of compute-intensive AI research?"
+        },
+        {
+          "id": "HE052",
+          "framework": "HorizonEurope",
+          "text": "Have you assessed the environmental footprint of your AI system's compute and supply chain?"
+        }
+      ]
+    },
+    {
+      "cluster_id": 10,
+      "frameworks": [
+        "EUAIAct",
+        "HorizonEurope"
+      ],
+      "requirements": [
+        {
+          "id": "AI008",
+          "framework": "EUAIAct",
+          "text": "State the intended purpose of the AI system"
+        },
+        {
+          "id": "HE027",
+          "framework": "HorizonEurope",
+          "text": "AI system must allow for human oversight and control over decision cycles and operation, unless compelling justification provided"
+        }
+      ]
+    },
+    {
+      "cluster_id": 14,
+      "frameworks": [
+        "ACMConference",
+        "HorizonEurope"
+      ],
+      "requirements": [
+        {
+          "id": "HE009",
+          "framework": "HorizonEurope",
+          "text": "Appropriate technical and organisational measures must be in place to safeguard rights of data subjects (anonymisation, pseudonymisation, encryption, aggregation)"
+        },
+        {
+          "id": "ACM031",
+          "framework": "ACMConference",
+          "text": "Use privacy protocols, encryption and anonymisation to reduce risk of data leakage \u2014 stronger measures for sensitive data"
+        }
+      ]
+    },
+    {
+      "cluster_id": 8,
+      "frameworks": [
+        "ACMConference",
+        "HorizonEurope"
+      ],
+      "requirements": [
+        {
+          "id": "HE012",
+          "framework": "HorizonEurope",
+          "text": "Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity or is sufficiently neutral"
+        },
+        {
+          "id": "ACM020",
+          "framework": "ACMConference",
+          "text": "Assess and communicate degree to which datasets are representative of intended population \u2014 claims of diverse representation must be substantiated"
+        }
+      ]
+    },
+    {
+      "cluster_id": 6,
+      "frameworks": [
+        "ACMConference",
+        "HorizonEurope"
+      ],
+      "requirements": [
+        {
+          "id": "HE016",
+          "framework": "HorizonEurope",
+          "text": "Methods to identify and mitigate negative social impacts in medium and longer term must be documented in proposal"
+        },
+        {
+          "id": "ACM012",
+          "framework": "ACMConference",
+          "text": "Consider and ameliorate negative impacts of approach on political, social or natural environment"
+        }
+      ]
+    },
+    {
+      "cluster_id": 17,
+      "frameworks": [
+        "ACMConference",
+        "HorizonEurope"
+      ],
+      "requirements": [
+        {
+          "id": "HE032",
+          "framework": "HorizonEurope",
+          "text": "Input, training and output data must all be analysed for bias \u2014 verify data accounts for diversity in gender, race, age, sexual orientation, national origin, religion, health, disability"
+        },
+        {
+          "id": "ACM028",
+          "framework": "ACMConference",
+          "text": "Inspect suspected biases or limitations in models/datasets \u2014 ascertain whether they encode bias against gender, race, sexuality or other protected characteristics"
+        }
+      ]
+    }
+  ]
+}

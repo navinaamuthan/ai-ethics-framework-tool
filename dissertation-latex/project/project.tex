@@ -35,12 +35,15 @@ Classes & 125 \\
 Object properties & 22 \\
 Data properties & 16 \\
 Requirement individuals & 207 \\
-Incident individuals & 70 \\
+Incident individuals & 70$^{*}$ \\
 Charter rights mappings (\texttt{mapsToRight} triples) & 342 \\
-Total asserted triples & 3,921 \\
-Total triples including inferred (GraphDB, RDFS+, production ruleset) & 4,847 \\
+Total asserted triples & 3,931$^{*}$ \\
+Total triples including inferred (GraphDB, RDFS+, production ruleset) & 4,863$^{*}$ \\
 \bottomrule
 \end{tabular}
+
+\vspace{2mm}
+\footnotesize $^{*}$All evaluation results in Chapter~\ref{ch:evaluation} (RAGAS metrics, retrieval baselines, error taxonomy, rights coverage) were computed against this 70-incident, 3,931-triple state. Three additional incidents (73 total, 3,961 asserted triples) were added on 16 July 2026 as a targeted stress test of the RQ1 landscape-analysis gap finding (\S\ref{sec:landscape}) and are scoped to that analysis only; they postdate and are excluded from every other reported evaluation figure to keep those results comparable to their originally-reported values.
 \end{table}
 
 The materialised-triple figure was re-verified on 15 July 2026 against the production GraphDB repository that the RAG pipeline queries at runtime; an earlier verification pass on 13 July, conducted in a separate scratch repository configured with a stricter OWL-Horst ruleset, reported 5,197, but that ruleset does not match the RDFS+ ruleset actually deployed in production, so the figure above supersedes it.

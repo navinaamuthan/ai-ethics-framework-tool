@@ -59,6 +59,12 @@
 :Art10_FreedomOfThought rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms .
 :Art11_FreedomOfExpression rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms .
 :Art16_FreedomToConductBusiness rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms .
+:Art13_FreedomOfArtsScience rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms ;
+    rdfs:label "Article 13 — Freedom of the Arts and Sciences" .
+:Art15_FreedomOfOccupation rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms ;
+    rdfs:label "Article 15 — Freedom to Choose an Occupation and Right to Engage in Work" .
+:Art17_RightToProperty rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms ;
+    rdfs:label "Article 17 — Right to Property" .
 
 :Title3_Equality rdf:type owl:Class ; rdfs:subClassOf :EUCharterRight .
 :Art20_EqualityBeforeLaw rdf:type owl:Class ; rdfs:subClassOf :Title3_Equality .
@@ -80,6 +86,7 @@
 
 :Title6_Justice rdf:type owl:Class ; rdfs:subClassOf :EUCharterRight .
 :Art47_RightToEffectiveRemedy rdf:type owl:Class ; rdfs:subClassOf :Title6_Justice .
+:Art48_PresumptionOfInnocence rdf:type owl:Class ; rdfs:subClassOf :Title6_Justice .
 
 # ===== STAKEHOLDER SUBCLASSES =====
 
@@ -525,7 +532,7 @@
     :incidentTitle "Facebook Discriminatory Ad Targeting" ;
     :incidentYear "2019" ;
     :aiCapability "Reasoning (Recommendation)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art23_GenderEquality, :Art26_RightToData ;
+    :impactsRight :Art21_NonDiscrimination, :Art23_GenderEquality, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :PrivacyBreach ;
     :supportsRequirement :R010, :R019, :R085 .
 
@@ -615,7 +622,7 @@
     :incidentTitle "HireVue Automated Video Interview Bias" ;
     :incidentYear "2019" ;
     :aiCapability "Perception (CV/NLP)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art26_RightToData ;
+    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :EmploymentHarm ;
     :supportsRequirement :R085, :R042, :R010 .
 
@@ -696,7 +703,7 @@
     :incidentTitle "GitHub Copilot Copyright Infringement" ;
     :incidentYear "2022" ;
     :aiCapability "Reasoning (Code Generation)" ;
-    :impactsRight :Art17_RightToProperty, :Art16_FreedomOfArtsScience ;
+    :impactsRight :Art17_RightToProperty, :Art13_FreedomOfArtsScience ;
     :demonstratesRisk :IntellectualProperty, :Accountability ;
     :supportsRequirement :R054, :R071 .
 
@@ -705,7 +712,7 @@
     :incidentTitle "TikTok Shadowbanning Disability Content" ;
     :incidentYear "2020" ;
     :aiCapability "Reasoning (Content Moderation)" ;
-    :impactsRight :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art26_RightToData ;
+    :impactsRight :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :ExpressionHarm ;
     :supportsRequirement :R085, :R019 .
 
@@ -831,7 +838,7 @@
     :incidentTitle "Cambridge Analytica Facebook Data Exploitation" ;
     :incidentYear "2018" ;
     :aiCapability "Reasoning (Profiling/NLP)" ;
-    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art26_RightToData ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art8_DataProtection ;
     :demonstratesRisk :PrivacyBreach, :Manipulation ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -858,7 +865,7 @@
     :incidentTitle "Affectiva Emotion AI Hiring Bias" ;
     :incidentYear "2019" ;
     :aiCapability "Perception (CV/Affective)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art26_RightToData ;
+    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :EmploymentHarm ;
     :supportsRequirement :R085, :R042, :R071 .
 
@@ -903,7 +910,7 @@
     :incidentTitle "Clearview AI GDPR Violations EU" ;
     :incidentYear "2022" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art26_RightToData, :Art21_NonDiscrimination ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art8_DataProtection, :Art21_NonDiscrimination ;
     :demonstratesRisk :PrivacyBreach, :Surveillance ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -3944,7 +3951,7 @@
     :incidentTitle "Facebook Discriminatory Ad Targeting" ;
     :incidentYear "2019" ;
     :aiCapability "Reasoning (Recommendation)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art23_GenderEquality, :Art26_RightToData ;
+    :impactsRight :Art21_NonDiscrimination, :Art23_GenderEquality, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :PrivacyBreach ;
     :supportsRequirement :R010, :R019, :R085 .
 
@@ -4034,7 +4041,7 @@
     :incidentTitle "HireVue Automated Video Interview Bias" ;
     :incidentYear "2019" ;
     :aiCapability "Perception (CV/NLP)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art26_RightToData ;
+    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :EmploymentHarm ;
     :supportsRequirement :R085, :R042, :R010 .
 
@@ -4115,7 +4122,7 @@
     :incidentTitle "GitHub Copilot Copyright Infringement" ;
     :incidentYear "2022" ;
     :aiCapability "Reasoning (Code Generation)" ;
-    :impactsRight :Art17_RightToProperty, :Art16_FreedomOfArtsScience ;
+    :impactsRight :Art17_RightToProperty, :Art13_FreedomOfArtsScience ;
     :demonstratesRisk :IntellectualProperty, :Accountability ;
     :supportsRequirement :R054, :R071 .
 
@@ -4124,7 +4131,7 @@
     :incidentTitle "TikTok Shadowbanning Disability Content" ;
     :incidentYear "2020" ;
     :aiCapability "Reasoning (Content Moderation)" ;
-    :impactsRight :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art26_RightToData ;
+    :impactsRight :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :ExpressionHarm ;
     :supportsRequirement :R085, :R019 .
 
@@ -4250,7 +4257,7 @@
     :incidentTitle "Cambridge Analytica Facebook Data Exploitation" ;
     :incidentYear "2018" ;
     :aiCapability "Reasoning (Profiling/NLP)" ;
-    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art26_RightToData ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art11_FreedomOfExpression, :Art21_NonDiscrimination, :Art8_DataProtection ;
     :demonstratesRisk :PrivacyBreach, :Manipulation ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -4277,7 +4284,7 @@
     :incidentTitle "Affectiva Emotion AI Hiring Bias" ;
     :incidentYear "2019" ;
     :aiCapability "Perception (CV/Affective)" ;
-    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art26_RightToData ;
+    :impactsRight :Art21_NonDiscrimination, :Art15_FreedomOfOccupation, :Art8_DataProtection ;
     :demonstratesRisk :Discrimination, :EmploymentHarm ;
     :supportsRequirement :R085, :R042, :R071 .
 
@@ -4322,7 +4329,7 @@
     :incidentTitle "Clearview AI GDPR Violations EU" ;
     :incidentYear "2022" ;
     :aiCapability "Perception (CV)" ;
-    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art26_RightToData, :Art21_NonDiscrimination ;
+    :impactsRight :Art7_PrivateLife, :Art8_DataProtection, :Art8_DataProtection, :Art21_NonDiscrimination ;
     :demonstratesRisk :PrivacyBreach, :Surveillance ;
     :supportsRequirement :R001, :R010, :R027 .
 
@@ -4822,3 +4829,36 @@
 :NotApplicable rdfs:label "Not Applicable" ;
     rdfs:comment "The requirement does not apply to this research project given its specific context and scope." .
 
+
+# Added 16 July 2026 as a targeted stress test of the RQ1 landscape-analysis
+# gap finding (Art 13, Art 15, Art 48 have incidents but zero requirement
+# coverage): sourcing additional, well-documented real-world incidents for
+# the thinnest-evidenced gap rights to test whether the gap persists under
+# deliberate augmentation rather than accepting the original 1-5 incident
+# counts as final.
+:AIAAIC_071 a :Incident ;
+    :incidentID "AIAAIC-071" ;
+    :incidentTitle "SyRI Welfare Fraud Detection System Ruled Unlawful (Netherlands)" ;
+    :incidentYear "2020" ;
+    :aiCapability "Reasoning (Risk Scoring)" ;
+    :impactsRight :Art48_PresumptionOfInnocence, :Art8_DataProtection, :Art21_NonDiscrimination ;
+    :demonstratesRisk :Discrimination, :PrivacyBreach ;
+    :noteText "The Hague District Court (NJCM c.s. v. The Netherlands, ECLI:NL:RBDHA:2020:1878) ruled the System Risk Indication (SyRI) algorithm, used to flag welfare recipients as fraud-risk suspects on unspecified profiling criteria, violated Article 8 ECHR, in part because opaque risk-flagging of citizens as suspects prior to any finding of wrongdoing was incompatible with a fair balance between fraud prevention and privacy/non-discrimination rights." .
+
+:AIAAIC_072 a :Incident ;
+    :incidentID "AIAAIC-072" ;
+    :incidentTitle "Predictive Policing Programs Discontinued After Bias Findings (US)" ;
+    :incidentYear "2020" ;
+    :aiCapability "Reasoning (Predictive Policing)" ;
+    :impactsRight :Art48_PresumptionOfInnocence, :Art21_NonDiscrimination, :Art6_RightToLiberty ;
+    :demonstratesRisk :Discrimination ;
+    :noteText "Multiple US police departments (including LAPD's PredPol/PredCrime deployment) discontinued place-based and person-based predictive policing programs following independent audits and investigative reporting finding the underlying arrest data reproduced historical over-policing of minority neighbourhoods, treating past policing intensity as a proxy for future criminality prior to any individualised suspicion." .
+
+:AIAAIC_073 a :Incident ;
+    :incidentID "AIAAIC-073" ;
+    :incidentTitle "AI-Detection Tools Falsely Flag Non-Native English Academic Writing" ;
+    :incidentYear "2023" ;
+    :aiCapability "Reasoning (NLP Classification)" ;
+    :impactsRight :Art13_FreedomOfArtsScience, :Art21_NonDiscrimination ;
+    :demonstratesRisk :Discrimination ;
+    :noteText "Liang et al. (2023, arXiv:2304.02819) found widely-deployed GPT-detection tools misclassified over half of TOEFL essays by non-native English writers as AI-generated, with universities using such tools for academic-integrity enforcement; students and researchers face restricted ability to pursue academic work under suspicion generated by an unaudited classifier, directly implicating the freedom to conduct academic research (Art 13)." .

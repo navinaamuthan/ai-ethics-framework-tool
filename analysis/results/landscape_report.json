@@ -116,23 +116,23 @@
     }
   },
   "incident_evidence_per_right": {
-    "Art21_NonDiscrimination": 37,
+    "Art21_NonDiscrimination": 40,
+    "Art8_DataProtection": 25,
     "Art7_PrivateLife": 24,
-    "Art8_DataProtection": 24,
     "Art47_RightToEffectiveRemedy": 22,
     "Art1_HumanDignity": 21,
     "Art2_RightToLife": 13,
     "Art11_FreedomOfExpression": 12,
+    "Art6_RightToLiberty": 11,
     "Art15_FreedomOfOccupation": 11,
-    "Art6_RightToLiberty": 10,
     "Art41_GoodAdministration": 9,
     "Art23_GenderEquality": 7,
+    "Art48_PresumptionOfInnocence": 7,
     "Art35_HealthCare": 7,
     "Art24_RightsOfChild": 7,
-    "Art48_PresumptionOfInnocence": 5,
+    "Art13_FreedomOfArtsScience": 2,
     "Art26_DisabilityIntegration": 1,
-    "Art17_RightToProperty": 1,
-    "Art13_FreedomOfArtsScience": 1
+    "Art17_RightToProperty": 1
   },
   "harm_without_governance": [
     [
@@ -141,11 +141,11 @@
     ],
     [
       "Art48_PresumptionOfInnocence",
-      5
+      7
     ],
     [
       "Art13_FreedomOfArtsScience",
-      1
+      2
     ]
   ],
   "governance_without_harm": [

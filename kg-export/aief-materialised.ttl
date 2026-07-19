@@ -466,6 +466,8 @@ dct:source a rdf:Property;
 
 <https://w3id.org/aief/AIAAIC_004> a <https://w3id.org/aief/Incident> .
 
+<https://w3id.org/aief/Art48_PresumptionOfInnocence> a owl:Class .
+
 <https://w3id.org/aief/AIAAIC_005> a <https://w3id.org/aief/Incident> .
 
 <https://w3id.org/aief/AIAAIC_006> a <https://w3id.org/aief/Incident> .
@@ -487,6 +489,8 @@ dct:source a rdf:Property;
 <https://w3id.org/aief/AIAAIC_014> a <https://w3id.org/aief/Incident> .
 
 <https://w3id.org/aief/AIAAIC_015> a <https://w3id.org/aief/Incident> .
+
+<https://w3id.org/aief/Art15_FreedomOfOccupation> a owl:Class .
 
 <https://w3id.org/aief/AIAAIC_016> a <https://w3id.org/aief/Incident> .
 
@@ -517,6 +521,8 @@ dct:source a rdf:Property;
 <https://w3id.org/aief/AIAAIC_029> a <https://w3id.org/aief/Incident> .
 
 <https://w3id.org/aief/AIAAIC_030> a <https://w3id.org/aief/Incident> .
+
+<https://w3id.org/aief/Art17_RightToProperty> a owl:Class .
 
 <https://w3id.org/aief/AIAAIC_031> a <https://w3id.org/aief/Incident> .
 
@@ -992,6 +998,8 @@ dct:source a rdf:Property;
 
 <https://w3id.org/aief/ACM038> a odrl:Duty, <https://w3id.org/aief/Requirement>, <https://w3id.org/aief/Obligation> .
 
+<https://w3id.org/aief/Art13_FreedomOfArtsScience> a owl:Class .
+
 rdfs:isDefinedBy rdfs:subPropertyOf rdfs:seeAlso .
 
 rdf:Alt rdfs:subClassOf rdfs:Container .
@@ -1029,7 +1037,8 @@ eu-rights:EqualityBeforeLaw rdfs:subClassOf eu-rights:EqualityBeforeLaw, <https:
     <https://w3id.org/aief/Title3_Equality>, <https://w3id.org/aief/Art20_EqualityBeforeLaw> .
 
 eu-rights:NonDiscrimination rdfs:subClassOf eu-rights:NonDiscrimination, <https://w3id.org/aief/EUCharterRight>,
-    <https://w3id.org/aief/Title3_Equality>, <https://w3id.org/aief/Art21_NonDiscrimination> .
+    <https://w3id.org/aief/Title3_Equality>, <https://w3id.org/aief/Art21_NonDiscrimination>;
+  owl:equivalentClass eu-rights:NonDiscrimination, <https://w3id.org/aief/Art21_NonDiscrimination> .
 
 eu-rights:GenderEquality rdfs:subClassOf eu-rights:GenderEquality, <https://w3id.org/aief/EUCharterRight>,
     <https://w3id.org/aief/Title3_Equality>, <https://w3id.org/aief/Art23_GenderEquality>;
@@ -1052,7 +1061,7 @@ eu-rights:EffectiveRemedy rdfs:subClassOf eu-rights:EffectiveRemedy, <https://w3
   owl:equivalentClass eu-rights:EffectiveRemedy, <https://w3id.org/aief/Art47_RightToEffectiveRemedy> .
 
 eu-rights:PresumptionOfInnocence rdfs:subClassOf eu-rights:PresumptionOfInnocence,
-    <https://w3id.org/aief/Art48_PresumptionOfInnocence>;
+    <https://w3id.org/aief/EUCharterRight>, <https://w3id.org/aief/Title6_Justice>, <https://w3id.org/aief/Art48_PresumptionOfInnocence>;
   owl:equivalentClass eu-rights:PresumptionOfInnocence, <https://w3id.org/aief/Art48_PresumptionOfInnocence> .
 
 <https://w3id.org/aief/REAMS> rdfs:subClassOf <https://w3id.org/aief/Framework>;
@@ -1587,11 +1596,23 @@ eu-rights:PresumptionOfInnocence rdfs:subClassOf eu-rights:PresumptionOfInnocenc
   rdfs:label "Not Applicable" .
 
 <https://w3id.org/aief/Art48_PresumptionOfInnocence> rdfs:subClassOf eu-rights:PresumptionOfInnocence,
-    <https://w3id.org/aief/Art48_PresumptionOfInnocence>;
+    <https://w3id.org/aief/EUCharterRight>, <https://w3id.org/aief/Title6_Justice>, <https://w3id.org/aief/Art48_PresumptionOfInnocence>;
   owl:equivalentClass eu-rights:PresumptionOfInnocence, <https://w3id.org/aief/Art48_PresumptionOfInnocence>;
   rdfs:comment "Everyone who has been charged shall be presumed innocent until proved guilty according to law.";
   rdfs:label "Article 48 — Presumption of Innocence";
   dct:source <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016P/TXT> .
+
+<https://w3id.org/aief/Art15_FreedomOfOccupation> rdfs:subClassOf <https://w3id.org/aief/EUCharterRight>,
+    <https://w3id.org/aief/Title2_Freedoms>;
+  rdfs:label "Article 15 — Freedom to Choose an Occupation and Right to Engage in Work" .
+
+<https://w3id.org/aief/Art17_RightToProperty> rdfs:subClassOf <https://w3id.org/aief/EUCharterRight>,
+    <https://w3id.org/aief/Title2_Freedoms>;
+  rdfs:label "Article 17 — Right to Property" .
+
+<https://w3id.org/aief/Art13_FreedomOfArtsScience> rdfs:subClassOf <https://w3id.org/aief/EUCharterRight>,
+    <https://w3id.org/aief/Title2_Freedoms>;
+  rdfs:label "Article 13 — Freedom of the Arts and Sciences" .
 
 rdfs:subClassOf rdfs:domain rdfs:Class;
   rdfs:range rdfs:Class;
@@ -1766,8 +1787,6 @@ eu-rights:DataProtection owl:equivalentClass eu-rights:DataProtection, <https://
 eu-rights:FreedomOfExpression owl:equivalentClass eu-rights:FreedomOfExpression, <https://w3id.org/aief/Art11_FreedomOfExpression> .
 
 eu-rights:EqualityBeforeLaw owl:equivalentClass eu-rights:EqualityBeforeLaw, <https://w3id.org/aief/Art20_EqualityBeforeLaw> .
-
-eu-rights:NonDiscrimination owl:equivalentClass eu-rights:NonDiscrimination, <https://w3id.org/aief/Art21_NonDiscrimination> .
 
 rdf:type <http://proton.semanticweb.org/protonsys#transitiveOver> rdfs:subClassOf .
 
@@ -2167,39 +2186,114 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
 
 <https://w3id.org/aief/ACM002> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
 
-<https://w3id.org/aief/ACM003> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM003> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>;
+  <https://w3id.org/aief/requiresEvidence> "Bias analysis section";
+  <https://w3id.org/aief/requirementID> "ACM003" .
 
-<https://w3id.org/aief/ACM004> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM004> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art3_RightToIntegrity>,
+    <https://w3id.org/aief/Art7_PrivateLife>;
+  <https://w3id.org/aief/requiresEvidence> "Data statement / bias assessment";
+  <https://w3id.org/aief/requirementID> "ACM004" .
 
-<https://w3id.org/aief/ACM005> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM005> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art3_RightToIntegrity>,
+    <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>,
+    <https://w3id.org/aief/Art17_RightToProperty>;
+  <https://w3id.org/aief/requiresEvidence> "Citation and licence compliance";
+  <https://w3id.org/aief/requirementID> "ACM005" .
 
-<https://w3id.org/aief/ACM006> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM006> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art3_RightToIntegrity>,
+    <https://w3id.org/aief/Art8_DataProtection>;
+  <https://w3id.org/aief/requiresEvidence> "IRB/ethics approval; consent forms";
+  <https://w3id.org/aief/requirementID> "ACM006" .
 
-<https://w3id.org/aief/ACM007> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM007> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art3_RightToIntegrity>,
+    <https://w3id.org/aief/Art7_PrivateLife>;
+  <https://w3id.org/aief/requiresEvidence> "Risk analysis section in paper";
+  <https://w3id.org/aief/requirementID> "ACM007" .
 
-<https://w3id.org/aief/ACM008> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM008> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>;
+  <https://w3id.org/aief/requiresEvidence> "Method risk discussion";
+  <https://w3id.org/aief/requirementID> "ACM008" .
 
-<https://w3id.org/aief/ACM009> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM009> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection>;
+  <https://w3id.org/aief/requiresEvidence> "Data access documentation";
+  <https://w3id.org/aief/requirementID> "ACM009" .
 
-<https://w3id.org/aief/ACM010> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM010> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>;
+  <https://w3id.org/aief/requiresEvidence> "Security assessment";
+  <https://w3id.org/aief/requirementID> "ACM010" .
 
-<https://w3id.org/aief/ACM011> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM011> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art1_HumanDignity>, <https://w3id.org/aief/Art31_FairWorkingConditions>;
+  <https://w3id.org/aief/requiresEvidence> "Annotator welfare documentation";
+  <https://w3id.org/aief/requirementID> "ACM011" .
 
-<https://w3id.org/aief/ACM012> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM012> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier2_Reflective>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art21_NonDiscrimination>,
+    <https://w3id.org/aief/Art23_GenderEquality>;
+  <https://w3id.org/aief/requiresEvidence> "Environmental/social impact statement";
+  <https://w3id.org/aief/requirementID> "ACM012" .
 
-<https://w3id.org/aief/ACM013> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM013> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier2_Reflective>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art1_HumanDignity>, <https://w3id.org/aief/Art21_NonDiscrimination>;
+  <https://w3id.org/aief/requiresEvidence> "Dual use discussion";
+  <https://w3id.org/aief/requirementID> "ACM013" .
 
-<https://w3id.org/aief/ACM014> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM014> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art1_HumanDignity>, <https://w3id.org/aief/Art2_RightToLife>;
+  <https://w3id.org/aief/requiresEvidence> "Payment documentation";
+  <https://w3id.org/aief/requirementID> "ACM014" .
 
-<https://w3id.org/aief/ACM015> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM015> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>;
+  <https://w3id.org/aief/requiresEvidence> "IRB/ethics approval or peer review";
+  <https://w3id.org/aief/requirementID> "ACM015" .
 
-<https://w3id.org/aief/ACM016> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM016> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection>, <https://w3id.org/aief/Art41_GoodAdministration>;
+  <https://w3id.org/aief/requiresEvidence> "Data anonymisation documentation";
+  <https://w3id.org/aief/requirementID> "ACM016" .
 
-<https://w3id.org/aief/ACM017> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM017> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art41_GoodAdministration>,
+    <https://w3id.org/aief/Art47_RightToEffectiveRemedy>;
+  <https://w3id.org/aief/requiresEvidence> "Consent documentation";
+  <https://w3id.org/aief/requirementID> "ACM017" .
 
-<https://w3id.org/aief/ACM018> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM018> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art41_GoodAdministration>;
+  <https://w3id.org/aief/requiresEvidence> "Dataset status verification";
+  <https://w3id.org/aief/requirementID> "ACM018" .
 
-<https://w3id.org/aief/ACM019> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference> .
+<https://w3id.org/aief/ACM019> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
+  <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
+  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art1_HumanDignity>, <https://w3id.org/aief/Art21_NonDiscrimination>;
+  <https://w3id.org/aief/requiresEvidence> "Licence compliance";
+  <https://w3id.org/aief/requirementID> "ACM019" .
 
 <https://w3id.org/aief/ACM020> <https://w3id.org/aief/belongsToFramework> <https://w3id.org/aief/ACMConference>;
   <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
@@ -2654,95 +2748,77 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
 
 <https://w3id.org/aief/R058> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art41_GoodAdministration>;
-  <https://w3id.org/aief/requirementID> "R058";
-  <https://w3id.org/aief/requirementText> "RPAMS number if applicable" .
+  <https://w3id.org/aief/requirementID> "R058" .
 
 <https://w3id.org/aief/R059> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art41_GoodAdministration>;
-  <https://w3id.org/aief/requirementID> "R059";
-  <https://w3id.org/aief/requirementText> "List all sources of funding with type (industrial, state, philanthropic, other)" .
+  <https://w3id.org/aief/requirementID> "R059" .
 
 <https://w3id.org/aief/R060> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art41_GoodAdministration>;
-  <https://w3id.org/aief/requirementID> "R060";
-  <https://w3id.org/aief/requirementText> "Funder-specific requirements or obligations for ethics committee attention" .
+  <https://w3id.org/aief/requirementID> "R060" .
 
 <https://w3id.org/aief/R061> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art41_GoodAdministration>;
-  <https://w3id.org/aief/requirementID> "R061";
-  <https://w3id.org/aief/requirementText> "Will results be used/disclosed for commercial purposes?" .
+  <https://w3id.org/aief/requirementID> "R061" .
 
 <https://w3id.org/aief/R062> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art41_GoodAdministration>;
-  <https://w3id.org/aief/requirementID> "R062";
-  <https://w3id.org/aief/requirementText> "Conflict of interest from funding or commercialisation" .
+  <https://w3id.org/aief/requirementID> "R062" .
 
 <https://w3id.org/aief/R063> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requirementID> "R063";
-  <https://w3id.org/aief/requirementText> "All Trinity researchers completed GDPR training?" .
+  <https://w3id.org/aief/requirementID> "R063" .
 
 <https://w3id.org/aief/R064> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requirementID> "R064";
-  <https://w3id.org/aief/requirementText> "All Trinity staff/students familiar with Personal Data Breach Procedural Guidelines?" .
+  <https://w3id.org/aief/requirementID> "R064" .
 
 <https://w3id.org/aief/R065> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requirementID> "R065";
-  <https://w3id.org/aief/requirementText> "What is Trinity's role: Controller, Joint Controller, or Processor?" .
+  <https://w3id.org/aief/requirementID> "R065" .
 
 <https://w3id.org/aief/R066> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requirementID> "R066";
-  <https://w3id.org/aief/requirementText> "Number of participants whose personal data is processed (≥100 or <100)" .
+  <https://w3id.org/aief/requirementID> "R066" .
 
 <https://w3id.org/aief/R067> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requirementID> "R067";
-  <https://w3id.org/aief/requirementText> "List all types of personal data processed (including special category)" .
+  <https://w3id.org/aief/requirementID> "R067" .
 
 <https://w3id.org/aief/R068> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requirementID> "R068";
-  <https://w3id.org/aief/requirementText> "Does project involve special category data or criminal conviction data?" .
+  <https://w3id.org/aief/requirementID> "R068" .
 
 <https://w3id.org/aief/R069> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requirementID> "R069";
-  <https://w3id.org/aief/requirementText> "Is personal data shared within Trinity (outside research team)?" .
+  <https://w3id.org/aief/requirementID> "R069" .
 
 <https://w3id.org/aief/R070> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requirementID> "R070";
-  <https://w3id.org/aief/requirementText> "Is personal data shared with third parties outside Trinity?" .
+  <https://w3id.org/aief/requirementID> "R070" .
 
 <https://w3id.org/aief/R072> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requirementID> "R072";
-  <https://w3id.org/aief/requirementText> "Are personal data transferred outside UK/EEA?" .
+  <https://w3id.org/aief/requirementID> "R072" .
 
 <https://w3id.org/aief/R073> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requirementID> "R073";
-  <https://w3id.org/aief/requirementText> "Detail how long personal data retained in identifiable/coded format" .
+  <https://w3id.org/aief/requirementID> "R073" .
 
 <https://w3id.org/aief/R075> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art41_GoodAdministration>;
   <https://w3id.org/aief/requiresEvidence> "System-generated list";
-  <https://w3id.org/aief/requirementID> "R075";
-  <https://w3id.org/aief/requirementText> "All required attachments uploaded (consent forms, certificates, PIL, recruitment material, methods instruments, DPO letter)" .
+  <https://w3id.org/aief/requirementID> "R075" .
 
 <https://w3id.org/aief/R076> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art1_HumanDignity>, <https://w3id.org/aief/Art3_RightToIntegrity>;
   <https://w3id.org/aief/requiresEvidence> "PIL attachment";
-  <https://w3id.org/aief/requirementID> "R076";
-  <https://w3id.org/aief/requirementText> "Participant Information Leaflet appropriate for target audience (plain English, accessible format)" .
+  <https://w3id.org/aief/requirementID> "R076" .
 
 <https://w3id.org/aief/R077> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art41_GoodAdministration>;
-  <https://w3id.org/aief/requirementID> "R077";
-  <https://w3id.org/aief/requirementText> "Applicant declaration: accuracy, compliance with Good Research Practice, GDPR, HRR, TCD policies" .
+  <https://w3id.org/aief/requirementID> "R077" .
 
 <https://w3id.org/aief/R078> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
   <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art41_GoodAdministration>;
@@ -3220,96 +3296,121 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/requiresEvidence> "Ethics statement in paper";
   <https://w3id.org/aief/requirementID> "ACM002" .
 
-<https://w3id.org/aief/ACM003> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requiresEvidence> "Bias analysis section";
-  <https://w3id.org/aief/requirementID> "ACM003" .
+<https://w3id.org/aief/R058> <https://w3id.org/aief/requirementText> "RPAMS number if applicable";
+  <https://w3id.org/aief/sectionReference> "§2.9";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true .
 
-<https://w3id.org/aief/ACM004> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art3_RightToIntegrity>,
-    <https://w3id.org/aief/Art7_PrivateLife>;
-  <https://w3id.org/aief/requiresEvidence> "Data statement / bias assessment";
-  <https://w3id.org/aief/requirementID> "ACM004" .
+<https://w3id.org/aief/R059> <https://w3id.org/aief/requirementText> "List all sources of funding with type (industrial, state, philanthropic, other)";
+  <https://w3id.org/aief/sectionReference> "§2.9";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true .
 
-<https://w3id.org/aief/ACM005> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art3_RightToIntegrity>,
-    <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requiresEvidence> "Citation and licence compliance";
-  <https://w3id.org/aief/requirementID> "ACM005" .
+<https://w3id.org/aief/R060> <https://w3id.org/aief/requirementText> "Funder-specific requirements or obligations for ethics committee attention";
+  <https://w3id.org/aief/sectionReference> "§2.9";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true .
 
-<https://w3id.org/aief/ACM006> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art3_RightToIntegrity>,
-    <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requiresEvidence> "IRB/ethics approval; consent forms";
-  <https://w3id.org/aief/requirementID> "ACM006" .
+<https://w3id.org/aief/R061> <https://w3id.org/aief/requirementText> "Will results be used/disclosed for commercial purposes?";
+  <https://w3id.org/aief/sectionReference> "§2.9";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true;
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 16 Freedom to conduct business",
+    "If yes: clarify IP rights" .
 
-<https://w3id.org/aief/ACM007> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art3_RightToIntegrity>,
-    <https://w3id.org/aief/Art7_PrivateLife>;
-  <https://w3id.org/aief/requiresEvidence> "Risk analysis section in paper";
-  <https://w3id.org/aief/requirementID> "ACM007" .
+<https://w3id.org/aief/R062> <https://w3id.org/aief/requirementText> "Conflict of interest from funding or commercialisation";
+  <https://w3id.org/aief/sectionReference> "§2.9";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true .
 
-<https://w3id.org/aief/ACM008> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requiresEvidence> "Method risk discussion";
-  <https://w3id.org/aief/requirementID> "ACM008" .
+<https://w3id.org/aief/R063> <https://w3id.org/aief/requirementText> "All Trinity researchers completed GDPR training?";
+  <https://w3id.org/aief/sectionReference> "§2.11.1";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true;
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8", "Cannot proceed without Yes";
+  <https://w3id.org/aief/legalBasis> "GDPR Art 39(1)(b)" .
 
-<https://w3id.org/aief/ACM009> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requiresEvidence> "Data access documentation";
-  <https://w3id.org/aief/requirementID> "ACM009" .
+<https://w3id.org/aief/R064> <https://w3id.org/aief/requirementText> "All Trinity staff/students familiar with Personal Data Breach Procedural Guidelines?";
+  <https://w3id.org/aief/sectionReference> "§2.11.1";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true;
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8", "Cannot proceed without Yes";
+  <https://w3id.org/aief/legalBasis> "GDPR Art 33-34" .
 
-<https://w3id.org/aief/ACM010> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requiresEvidence> "Security assessment";
-  <https://w3id.org/aief/requirementID> "ACM010" .
+<https://w3id.org/aief/R065> <https://w3id.org/aief/requirementText> "What is Trinity's role: Controller, Joint Controller, or Processor?";
+  <https://w3id.org/aief/sectionReference> "§2.11.2";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true;
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8";
+  <https://w3id.org/aief/legalBasis> "GDPR Art 24-28" .
 
-<https://w3id.org/aief/ACM011> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art1_HumanDignity>, <https://w3id.org/aief/Art31_FairWorkingConditions>;
-  <https://w3id.org/aief/requiresEvidence> "Annotator welfare documentation";
-  <https://w3id.org/aief/requirementID> "ACM011" .
+<https://w3id.org/aief/R066> <https://w3id.org/aief/requirementText> "Number of participants whose personal data is processed (≥100 or <100)";
+  <https://w3id.org/aief/sectionReference> "§2.11.2";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true;
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8";
+  <https://w3id.org/aief/legalBasis> "GDPR Art 35" .
 
-<https://w3id.org/aief/ACM012> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier2_Reflective>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art21_NonDiscrimination>,
-    <https://w3id.org/aief/Art23_GenderEquality>;
-  <https://w3id.org/aief/requiresEvidence> "Environmental/social impact statement";
-  <https://w3id.org/aief/requirementID> "ACM012" .
+<https://w3id.org/aief/R067> <https://w3id.org/aief/requirementText> "List all types of personal data processed (including special category)";
+  <https://w3id.org/aief/sectionReference> "§2.11.2";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true;
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8";
+  <https://w3id.org/aief/legalBasis> "GDPR Art 9" .
 
-<https://w3id.org/aief/ACM013> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier2_Reflective>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art1_HumanDignity>, <https://w3id.org/aief/Art21_NonDiscrimination>;
-  <https://w3id.org/aief/requiresEvidence> "Dual use discussion";
-  <https://w3id.org/aief/requirementID> "ACM013" .
+<https://w3id.org/aief/R068> <https://w3id.org/aief/requirementText> "Does project involve special category data or criminal conviction data?";
+  <https://w3id.org/aief/sectionReference> "§2.11.2";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true;
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8; Art 21 Non-discrimination";
+  <https://w3id.org/aief/legalBasis> "GDPR Art 9-10" .
 
-<https://w3id.org/aief/ACM014> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art1_HumanDignity>, <https://w3id.org/aief/Art2_RightToLife>;
-  <https://w3id.org/aief/requiresEvidence> "Payment documentation";
-  <https://w3id.org/aief/requirementID> "ACM014" .
+<https://w3id.org/aief/R069> <https://w3id.org/aief/requirementText> "Is personal data shared within Trinity (outside research team)?";
+  <https://w3id.org/aief/sectionReference> "§2.11.2";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true;
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8", "If yes: name units and justify";
+  <https://w3id.org/aief/legalBasis> "GDPR Art 5(1)(b)" .
 
-<https://w3id.org/aief/ACM015> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>;
-  <https://w3id.org/aief/requiresEvidence> "IRB/ethics approval or peer review";
-  <https://w3id.org/aief/requirementID> "ACM015" .
+<https://w3id.org/aief/R070> <https://w3id.org/aief/requirementText> "Is personal data shared with third parties outside Trinity?";
+  <https://w3id.org/aief/sectionReference> "§2.11.2";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true;
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8", "If yes: name orgs, justify, IT due diligence";
+  <https://w3id.org/aief/legalBasis> "GDPR Art 26, 28" .
 
-<https://w3id.org/aief/ACM016> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection>, <https://w3id.org/aief/Art41_GoodAdministration>;
-  <https://w3id.org/aief/requiresEvidence> "Data anonymisation documentation";
-  <https://w3id.org/aief/requirementID> "ACM016" .
+<https://w3id.org/aief/R072> <https://w3id.org/aief/requirementText> "Are personal data transferred outside UK/EEA?";
+  <https://w3id.org/aief/sectionReference> "§2.11.2";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true;
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8", "If yes: must contact DPO";
+  <https://w3id.org/aief/legalBasis> "GDPR Ch V" .
 
-<https://w3id.org/aief/ACM017> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art41_GoodAdministration>,
-    <https://w3id.org/aief/Art47_RightToEffectiveRemedy>;
-  <https://w3id.org/aief/requiresEvidence> "Consent documentation";
-  <https://w3id.org/aief/requirementID> "ACM017" .
+<https://w3id.org/aief/R073> <https://w3id.org/aief/requirementText> "Detail how long personal data retained in identifiable/coded format";
+  <https://w3id.org/aief/sectionReference> "§2.11.2";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true;
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8";
+  <https://w3id.org/aief/legalBasis> "GDPR Art 5(1)(e)" .
 
-<https://w3id.org/aief/ACM018> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art41_GoodAdministration>;
-  <https://w3id.org/aief/requiresEvidence> "Dataset status verification";
-  <https://w3id.org/aief/requirementID> "ACM018" .
+<https://w3id.org/aief/R075> <https://w3id.org/aief/requirementText> "All required attachments uploaded (consent forms, certificates, PIL, recruitment material, methods instruments, DPO letter)";
+  <https://w3id.org/aief/sectionReference> "§2.12";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true;
+  <https://w3id.org/aief/noteText> "Submission blocked until all uploaded" .
 
-<https://w3id.org/aief/ACM019> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory>;
-  <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art1_HumanDignity>, <https://w3id.org/aief/Art21_NonDiscrimination>;
-  <https://w3id.org/aief/requiresEvidence> "Licence compliance";
-  <https://w3id.org/aief/requirementID> "ACM019" .
+<https://w3id.org/aief/R076> <https://w3id.org/aief/requirementText> "Participant Information Leaflet appropriate for target audience (plain English, accessible format)";
+  <https://w3id.org/aief/sectionReference> "§2.12.3";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true;
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8; Art 11 Freedom of expression (access to info)",
+    "Must match application form details";
+  <https://w3id.org/aief/legalBasis> "GDPR Art 12-13" .
+
+<https://w3id.org/aief/R077> <https://w3id.org/aief/requirementText> "Applicant declaration: accuracy, compliance with Good Research Practice, GDPR, HRR, TCD policies";
+  <https://w3id.org/aief/sectionReference> "§3.1.1";
+  <https://w3id.org/aief/tierLevel> 1;
+  <https://w3id.org/aief/isMandatory> true .
 
 <https://w3id.org/aief/R078> <https://w3id.org/aief/requirementText> "PI declaration and approval (if applicant ≠ PI)";
   <https://w3id.org/aief/sectionReference> "§3.1.2";
@@ -3439,119 +3540,101 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
 <https://w3id.org/aief/AI012> <https://w3id.org/aief/requirementText> "Assess the likelihood that those persons/groups will be affected";
   <https://w3id.org/aief/sectionReference> "Art 27-1c";
   <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-1c" .
+  <https://w3id.org/aief/isMandatory> true .
 
 <https://w3id.org/aief/AI013> <https://w3id.org/aief/requirementText> "Identify consequences and impacts on affected persons/groups";
   <https://w3id.org/aief/sectionReference> "Art 27-1c";
   <https://w3id.org/aief/tierLevel> 1;
   <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 1 Human dignity; Art 3 Integrity";
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-1c" .
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" .
 
 <https://w3id.org/aief/AI014> <https://w3id.org/aief/requirementText> "Identify specific risks of harm to fundamental rights";
   <https://w3id.org/aief/sectionReference> "Art 27-1d";
   <https://w3id.org/aief/tierLevel> 1;
   <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Map each risk to specific Charter article";
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-1d" .
+  <https://w3id.org/aief/noteText> "Charter Mapping: Map each risk to specific Charter article" .
 
 <https://w3id.org/aief/AI015> <https://w3id.org/aief/requirementText> "Describe human oversight measures in place";
   <https://w3id.org/aief/sectionReference> "Art 27-1e";
   <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-1e" .
+  <https://w3id.org/aief/isMandatory> true .
 
 <https://w3id.org/aief/AI016> <https://w3id.org/aief/requirementText> "Specify what humans can and cannot do — ability to correct outputs, ability to opt out, override capability";
   <https://w3id.org/aief/sectionReference> "Art 27-1e";
   <https://w3id.org/aief/tierLevel> 1;
   <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 47 Right to effective remedy";
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-1e" .
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 47 Right to effective remedy" .
 
 <https://w3id.org/aief/AI017> <https://w3id.org/aief/requirementText> "Reference instructions for use provided by the AI system provider";
   <https://w3id.org/aief/sectionReference> "Art 27-1e";
   <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-1e" .
+  <https://w3id.org/aief/isMandatory> true .
 
 <https://w3id.org/aief/AI018> <https://w3id.org/aief/requirementText> "Specify measures to be taken if risks materialise — internal governance arrangements and complaint mechanisms";
   <https://w3id.org/aief/sectionReference> "Art 27-1f";
   <https://w3id.org/aief/tierLevel> 1;
   <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 47 Right to effective remedy";
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-1f" .
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 47 Right to effective remedy" .
 
 <https://w3id.org/aief/AI019> <https://w3id.org/aief/requirementText> "If relying on a previously conducted FRIA, document which prior FRIA is being reused and what has changed";
   <https://w3id.org/aief/sectionReference> "Art 27-2";
   <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-2" .
+  <https://w3id.org/aief/isMandatory> true .
 
 <https://w3id.org/aief/AI020> <https://w3id.org/aief/requirementText> "If a DPIA already exists under GDPR, document how it complements the FRIA — what it covers and what gaps remain";
   <https://w3id.org/aief/sectionReference> "Art 27-4";
   <https://w3id.org/aief/tierLevel> 1;
   <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection";
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-4; GDPR Art 35" .
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 
 <https://w3id.org/aief/AI021> <https://w3id.org/aief/requirementText> "Determine FRIA outcome status: Unacceptable Risk / High Residual Risk / Risks Acceptable / Risks Mitigated";
   <https://w3id.org/aief/sectionReference> "Art 27-1";
   <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-1" .
+  <https://w3id.org/aief/isMandatory> true .
 
 <https://w3id.org/aief/AI022> <https://w3id.org/aief/requirementText> "For each affected fundamental right, state whether there is an impact and its severity";
   <https://w3id.org/aief/sectionReference> "Art 27-1";
   <https://w3id.org/aief/tierLevel> 1;
   <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Each Charter article individually";
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-1" .
+  <https://w3id.org/aief/noteText> "Charter Mapping: Each Charter article individually" .
 
 <https://w3id.org/aief/AI023> <https://w3id.org/aief/requirementText> "For granular impacts (e.g. discrimination based on sex, race, gender under Art 21), specify the category of impact";
   <https://w3id.org/aief/sectionReference> "Art 27-1";
   <https://w3id.org/aief/tierLevel> 1;
   <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 21 subcategories";
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-1" .
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 21 subcategories" .
 
 <https://w3id.org/aief/AI024> <https://w3id.org/aief/requirementText> "Assess whether notification to market surveillance authority is required or exempt under Art 46-1";
   <https://w3id.org/aief/sectionReference> "Art 27-3";
   <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-3" .
+  <https://w3id.org/aief/isMandatory> true .
 
 <https://w3id.org/aief/AI025> <https://w3id.org/aief/requirementText> "If required: notify market surveillance authority of FRIA results";
   <https://w3id.org/aief/sectionReference> "Art 27-3";
   <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-3" .
+  <https://w3id.org/aief/isMandatory> true .
 
 <https://w3id.org/aief/AI026> <https://w3id.org/aief/requirementText> "Complete the FRIA questionnaire template provided by the AI Office";
   <https://w3id.org/aief/sectionReference> "Art 27-5";
   <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-5" .
+  <https://w3id.org/aief/isMandatory> true .
 
 <https://w3id.org/aief/AI027> <https://w3id.org/aief/requirementText> "Document whether an automated tool was used to support the FRIA process";
   <https://w3id.org/aief/sectionReference> "Art 27-5";
   <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/legalBasis> "AI Act Art 27-5" .
+  <https://w3id.org/aief/isMandatory> true .
 
 <https://w3id.org/aief/AI028> <https://w3id.org/aief/requirementText> "Have you considered whether the same AI system with one intended purpose could have different intended uses causing different rights impacts?";
   <https://w3id.org/aief/sectionReference> "General";
   <https://w3id.org/aief/tierLevel> 2;
   <https://w3id.org/aief/isMandatory> false;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 21; Art 1";
-  <https://w3id.org/aief/legalBasis> "Paper discussion" .
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 21; Art 1" .
 
 <https://w3id.org/aief/AI029> <https://w3id.org/aief/requirementText> "Have you considered whether pseudonymised or anonymised data could still lead to identification of affected individuals?";
   <https://w3id.org/aief/sectionReference> "General";
   <https://w3id.org/aief/tierLevel> 2;
   <https://w3id.org/aief/isMandatory> false;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection";
-  <https://w3id.org/aief/legalBasis> "Paper + GDPR Recital 26" .
+  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 
 <https://w3id.org/aief/AI030> <https://w3id.org/aief/requirementText> "Have you assessed impact at the granular level — not just non-discrimination but which specific grounds (sex, race, disability, age)?";
   <https://w3id.org/aief/sectionReference> "General";
@@ -4403,103 +4486,41 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/isMandatory> true;
   <https://w3id.org/aief/noteText> "Excludes funding COI (separate section)" .
 
-<https://w3id.org/aief/R058> <https://w3id.org/aief/sectionReference> "§2.9";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true .
+<https://w3id.org/aief/AI012> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1c" .
 
-<https://w3id.org/aief/R059> <https://w3id.org/aief/sectionReference> "§2.9";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true .
+<https://w3id.org/aief/AI013> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1c" .
 
-<https://w3id.org/aief/R060> <https://w3id.org/aief/sectionReference> "§2.9";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true .
+<https://w3id.org/aief/AI014> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1d" .
 
-<https://w3id.org/aief/R061> <https://w3id.org/aief/sectionReference> "§2.9";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 16 Freedom to conduct business",
-    "If yes: clarify IP rights" .
+<https://w3id.org/aief/AI015> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1e" .
 
-<https://w3id.org/aief/R062> <https://w3id.org/aief/sectionReference> "§2.9";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true .
+<https://w3id.org/aief/AI016> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1e" .
 
-<https://w3id.org/aief/R063> <https://w3id.org/aief/sectionReference> "§2.11.1";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8", "Cannot proceed without Yes";
-  <https://w3id.org/aief/legalBasis> "GDPR Art 39(1)(b)" .
+<https://w3id.org/aief/AI017> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1e" .
 
-<https://w3id.org/aief/R064> <https://w3id.org/aief/sectionReference> "§2.11.1";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8", "Cannot proceed without Yes";
-  <https://w3id.org/aief/legalBasis> "GDPR Art 33-34" .
+<https://w3id.org/aief/AI018> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1f" .
 
-<https://w3id.org/aief/R065> <https://w3id.org/aief/sectionReference> "§2.11.2";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8";
-  <https://w3id.org/aief/legalBasis> "GDPR Art 24-28" .
+<https://w3id.org/aief/AI019> <https://w3id.org/aief/legalBasis> "AI Act Art 27-2" .
 
-<https://w3id.org/aief/R066> <https://w3id.org/aief/sectionReference> "§2.11.2";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8";
-  <https://w3id.org/aief/legalBasis> "GDPR Art 35" .
+<https://w3id.org/aief/AI020> <https://w3id.org/aief/legalBasis> "AI Act Art 27-4; GDPR Art 35" .
 
-<https://w3id.org/aief/R067> <https://w3id.org/aief/sectionReference> "§2.11.2";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8";
-  <https://w3id.org/aief/legalBasis> "GDPR Art 9" .
+<https://w3id.org/aief/AI021> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1" .
 
-<https://w3id.org/aief/R068> <https://w3id.org/aief/sectionReference> "§2.11.2";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8; Art 21 Non-discrimination";
-  <https://w3id.org/aief/legalBasis> "GDPR Art 9-10" .
+<https://w3id.org/aief/AI022> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1" .
 
-<https://w3id.org/aief/R069> <https://w3id.org/aief/sectionReference> "§2.11.2";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8", "If yes: name units and justify";
-  <https://w3id.org/aief/legalBasis> "GDPR Art 5(1)(b)" .
+<https://w3id.org/aief/AI023> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1" .
 
-<https://w3id.org/aief/R070> <https://w3id.org/aief/sectionReference> "§2.11.2";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8", "If yes: name orgs, justify, IT due diligence";
-  <https://w3id.org/aief/legalBasis> "GDPR Art 26, 28" .
+<https://w3id.org/aief/AI024> <https://w3id.org/aief/legalBasis> "AI Act Art 27-3" .
 
-<https://w3id.org/aief/R072> <https://w3id.org/aief/sectionReference> "§2.11.2";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8", "If yes: must contact DPO";
-  <https://w3id.org/aief/legalBasis> "GDPR Ch V" .
+<https://w3id.org/aief/AI025> <https://w3id.org/aief/legalBasis> "AI Act Art 27-3" .
 
-<https://w3id.org/aief/R073> <https://w3id.org/aief/sectionReference> "§2.11.2";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8";
-  <https://w3id.org/aief/legalBasis> "GDPR Art 5(1)(e)" .
+<https://w3id.org/aief/AI026> <https://w3id.org/aief/legalBasis> "AI Act Art 27-5" .
 
-<https://w3id.org/aief/R075> <https://w3id.org/aief/sectionReference> "§2.12";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Submission blocked until all uploaded" .
+<https://w3id.org/aief/AI027> <https://w3id.org/aief/legalBasis> "AI Act Art 27-5" .
 
-<https://w3id.org/aief/R076> <https://w3id.org/aief/sectionReference> "§2.12.3";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true;
-  <https://w3id.org/aief/noteText> "Charter Mapping: Art 8; Art 11 Freedom of expression (access to info)",
-    "Must match application form details";
-  <https://w3id.org/aief/legalBasis> "GDPR Art 12-13" .
+<https://w3id.org/aief/AI028> <https://w3id.org/aief/legalBasis> "Paper discussion" .
 
-<https://w3id.org/aief/R077> <https://w3id.org/aief/sectionReference> "§3.1.1";
-  <https://w3id.org/aief/tierLevel> 1;
-  <https://w3id.org/aief/isMandatory> true .
+<https://w3id.org/aief/AI029> <https://w3id.org/aief/legalBasis> "Paper + GDPR Recital 26" .
 
 <https://w3id.org/aief/AI030> <https://w3id.org/aief/legalBasis> "Paper discussion" .
 
@@ -4747,8 +4768,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentID> "AIAAIC-010";
   <https://w3id.org/aief/incidentTitle> "UK Post Office Horizon System Wrongful Prosecutions" .
 
-<https://w3id.org/aief/AIAAIC_011> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art21_NonDiscrimination>,
-    <https://w3id.org/aief/Art23_GenderEquality>, <https://w3id.org/aief/Art26_RightToData>;
+<https://w3id.org/aief/AIAAIC_011> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
+    <https://w3id.org/aief/Art21_NonDiscrimination>, <https://w3id.org/aief/Art23_GenderEquality>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/Discrimination>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R010>, <https://w3id.org/aief/R019>,
     <https://w3id.org/aief/R085>;
@@ -4794,9 +4815,9 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2016";
   <https://w3id.org/aief/aiCapability> "Reasoning (Pricing)" .
 
-<https://w3id.org/aief/AIAAIC_016> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art21_NonDiscrimination>, <https://w3id.org/aief/Art7_Privacy>,
-    <https://w3id.org/aief/Art6_LibertyAndSecurity>;
+<https://w3id.org/aief/AIAAIC_016> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art6_RightToLiberty>,
+    <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>,
+    <https://w3id.org/aief/Art21_NonDiscrimination>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/Surveillance>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R010>,
     <https://w3id.org/aief/R027>;
@@ -4825,9 +4846,9 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2018";
   <https://w3id.org/aief/aiCapability> "Reasoning (Recommendation)" .
 
-<https://w3id.org/aief/AIAAIC_019> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art21_NonDiscrimination>,
-    <https://w3id.org/aief/Art47_RightToEffectiveRemedy>, <https://w3id.org/aief/Art48_PresumptionOfInnocence>,
-    <https://w3id.org/aief/Art6_LibertyAndSecurity>;
+<https://w3id.org/aief/AIAAIC_019> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art6_RightToLiberty>,
+    <https://w3id.org/aief/Art21_NonDiscrimination>, <https://w3id.org/aief/Art47_RightToEffectiveRemedy>,
+    <https://w3id.org/aief/Art48_PresumptionOfInnocence>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/Discrimination>, <https://w3id.org/aief/LibertyViolation>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R010>, <https://w3id.org/aief/R027>,
     <https://w3id.org/aief/R085>;
@@ -4836,8 +4857,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2016";
   <https://w3id.org/aief/aiCapability> "Reasoning (Risk Prediction)" .
 
-<https://w3id.org/aief/AIAAIC_020> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art7_Privacy>, <https://w3id.org/aief/Art6_LibertyAndSecurity>;
+<https://w3id.org/aief/AIAAIC_020> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art6_RightToLiberty>,
+    <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/Surveillance>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R027>;
   <https://w3id.org/aief/incidentID> "AIAAIC-020";
@@ -4845,8 +4866,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2019";
   <https://w3id.org/aief/aiCapability> "Perception (CV)" .
 
-<https://w3id.org/aief/AIAAIC_021> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art21_NonDiscrimination>,
-    <https://w3id.org/aief/Art26_RightToData>, <https://w3id.org/aief/Art15_FreedomOfOccupation>;
+<https://w3id.org/aief/AIAAIC_021> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
+    <https://w3id.org/aief/Art21_NonDiscrimination>, <https://w3id.org/aief/Art15_FreedomOfOccupation>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/Discrimination>, <https://w3id.org/aief/EmploymentHarm>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R010>, <https://w3id.org/aief/R042>,
     <https://w3id.org/aief/R085>;
@@ -4865,8 +4886,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2017";
   <https://w3id.org/aief/aiCapability> "Reasoning (Performance Scoring)" .
 
-<https://w3id.org/aief/AIAAIC_023> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art7_Privacy>;
+<https://w3id.org/aief/AIAAIC_023> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art7_PrivateLife>,
+    <https://w3id.org/aief/Art8_DataProtection>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/DataBreach>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R027>;
   <https://w3id.org/aief/incidentID> "AIAAIC-023";
@@ -4883,8 +4904,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2019";
   <https://w3id.org/aief/aiCapability> "Reasoning (Recommendation)" .
 
-<https://w3id.org/aief/AIAAIC_025> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art24_RightsOfChild>, <https://w3id.org/aief/Art7_Privacy>;
+<https://w3id.org/aief/AIAAIC_025> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art7_PrivateLife>,
+    <https://w3id.org/aief/Art8_DataProtection>, <https://w3id.org/aief/Art24_RightsOfChild>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/ChildrenRights>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R010>,
     <https://w3id.org/aief/R027>;
@@ -4893,8 +4914,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2023";
   <https://w3id.org/aief/aiCapability> "Perception (Audio)" .
 
-<https://w3id.org/aief/AIAAIC_026> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art24_RightsOfChild>, <https://w3id.org/aief/Art7_Privacy>;
+<https://w3id.org/aief/AIAAIC_026> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art7_PrivateLife>,
+    <https://w3id.org/aief/Art8_DataProtection>, <https://w3id.org/aief/Art24_RightsOfChild>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/ChildrenRights>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R027>;
   <https://w3id.org/aief/incidentID> "AIAAIC-026";
@@ -4902,8 +4923,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2022";
   <https://w3id.org/aief/aiCapability> "Perception (CV)" .
 
-<https://w3id.org/aief/AIAAIC_027> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art11_FreedomOfExpression>, <https://w3id.org/aief/Art7_Privacy>;
+<https://w3id.org/aief/AIAAIC_027> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art7_PrivateLife>,
+    <https://w3id.org/aief/Art8_DataProtection>, <https://w3id.org/aief/Art11_FreedomOfExpression>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/Manipulation>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R010>,
     <https://w3id.org/aief/R027>;
@@ -4912,8 +4933,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2021";
   <https://w3id.org/aief/aiCapability> "Perception (Audio/NLP)" .
 
-<https://w3id.org/aief/AIAAIC_028> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art21_NonDiscrimination>, <https://w3id.org/aief/Art7_Privacy>;
+<https://w3id.org/aief/AIAAIC_028> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art7_PrivateLife>,
+    <https://w3id.org/aief/Art8_DataProtection>, <https://w3id.org/aief/Art21_NonDiscrimination>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/DataBreach>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R010>,
     <https://w3id.org/aief/R027>;
@@ -4922,8 +4943,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2018";
   <https://w3id.org/aief/aiCapability> "Reasoning (Data Processing)" .
 
-<https://w3id.org/aief/AIAAIC_029> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art21_NonDiscrimination>,
-    <https://w3id.org/aief/Art7_Privacy>, <https://w3id.org/aief/Art6_LibertyAndSecurity>;
+<https://w3id.org/aief/AIAAIC_029> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art6_RightToLiberty>,
+    <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art21_NonDiscrimination>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/Discrimination>, <https://w3id.org/aief/Surveillance>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R085>;
   <https://w3id.org/aief/incidentID> "AIAAIC-029";
@@ -4932,7 +4953,7 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/aiCapability> "Reasoning (Prediction)" .
 
 <https://w3id.org/aief/AIAAIC_030> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art17_RightToProperty>,
-    <https://w3id.org/aief/Art16_FreedomOfArtsScience>;
+    <https://w3id.org/aief/Art13_FreedomOfArtsScience>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/Accountability>, <https://w3id.org/aief/IntellectualProperty>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R054>, <https://w3id.org/aief/R071>;
   <https://w3id.org/aief/incidentID> "AIAAIC-030";
@@ -4940,8 +4961,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2022";
   <https://w3id.org/aief/aiCapability> "Reasoning (Code Generation)" .
 
-<https://w3id.org/aief/AIAAIC_031> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art11_FreedomOfExpression>,
-    <https://w3id.org/aief/Art21_NonDiscrimination>, <https://w3id.org/aief/Art26_RightToData>;
+<https://w3id.org/aief/AIAAIC_031> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
+    <https://w3id.org/aief/Art11_FreedomOfExpression>, <https://w3id.org/aief/Art21_NonDiscrimination>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/Discrimination>, <https://w3id.org/aief/ExpressionHarm>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R019>, <https://w3id.org/aief/R085>;
   <https://w3id.org/aief/incidentID> "AIAAIC-031";
@@ -4950,7 +4971,7 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/aiCapability> "Reasoning (Content Moderation)" .
 
 <https://w3id.org/aief/AIAAIC_032> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art1_HumanDignity>,
-    <https://w3id.org/aief/Art23_GenderEquality>, <https://w3id.org/aief/Art7_Privacy>;
+    <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art23_GenderEquality>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/Dignity>, <https://w3id.org/aief/GenderHarm>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R085>;
   <https://w3id.org/aief/incidentID> "AIAAIC-032";
@@ -4967,10 +4988,10 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2018";
   <https://w3id.org/aief/aiCapability> "Interaction (NLP Voice)" .
 
-<https://w3id.org/aief/AIAAIC_034> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
+<https://w3id.org/aief/AIAAIC_034> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art6_RightToLiberty>,
+    <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>,
     <https://w3id.org/aief/Art41_GoodAdministration>, <https://w3id.org/aief/Art47_RightToEffectiveRemedy>,
-    <https://w3id.org/aief/Art15_FreedomOfOccupation>, <https://w3id.org/aief/Art7_Privacy>,
-    <https://w3id.org/aief/Art6_LibertyAndSecurity>;
+    <https://w3id.org/aief/Art15_FreedomOfOccupation>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/Surveillance>, <https://w3id.org/aief/LibertyViolation>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R010>,
     <https://w3id.org/aief/R027>;
@@ -4988,9 +5009,9 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2018";
   <https://w3id.org/aief/aiCapability> "Perception (CV)" .
 
-<https://w3id.org/aief/AIAAIC_036> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art21_NonDiscrimination>, <https://w3id.org/aief/Art41_GoodAdministration>,
-    <https://w3id.org/aief/Art47_RightToEffectiveRemedy>, <https://w3id.org/aief/Art7_Privacy>;
+<https://w3id.org/aief/AIAAIC_036> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art7_PrivateLife>,
+    <https://w3id.org/aief/Art8_DataProtection>, <https://w3id.org/aief/Art21_NonDiscrimination>,
+    <https://w3id.org/aief/Art41_GoodAdministration>, <https://w3id.org/aief/Art47_RightToEffectiveRemedy>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/Discrimination>, <https://w3id.org/aief/Surveillance>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R010>, <https://w3id.org/aief/R027>,
     <https://w3id.org/aief/R085>;
@@ -5009,9 +5030,9 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2018";
   <https://w3id.org/aief/aiCapability> "Reasoning (Recommendation)" .
 
-<https://w3id.org/aief/AIAAIC_038> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art21_NonDiscrimination>,
-    <https://w3id.org/aief/Art47_RightToEffectiveRemedy>, <https://w3id.org/aief/Art48_PresumptionOfInnocence>,
-    <https://w3id.org/aief/Art6_LibertyAndSecurity>;
+<https://w3id.org/aief/AIAAIC_038> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art6_RightToLiberty>,
+    <https://w3id.org/aief/Art21_NonDiscrimination>, <https://w3id.org/aief/Art47_RightToEffectiveRemedy>,
+    <https://w3id.org/aief/Art48_PresumptionOfInnocence>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/Discrimination>, <https://w3id.org/aief/LibertyViolation>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R010>, <https://w3id.org/aief/R027>,
     <https://w3id.org/aief/R085>;
@@ -5078,9 +5099,9 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2023";
   <https://w3id.org/aief/aiCapability> "Perception (Image Generation)" .
 
-<https://w3id.org/aief/AIAAIC_045> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art11_FreedomOfExpression>, <https://w3id.org/aief/Art21_NonDiscrimination>,
-    <https://w3id.org/aief/Art26_RightToData>, <https://w3id.org/aief/Art7_Privacy>;
+<https://w3id.org/aief/AIAAIC_045> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art7_PrivateLife>,
+    <https://w3id.org/aief/Art8_DataProtection>, <https://w3id.org/aief/Art11_FreedomOfExpression>,
+    <https://w3id.org/aief/Art21_NonDiscrimination>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/Manipulation>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R010>,
     <https://w3id.org/aief/R027>;
@@ -5099,8 +5120,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2020";
   <https://w3id.org/aief/aiCapability> "Reasoning (Healthcare ML)" .
 
-<https://w3id.org/aief/AIAAIC_047> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art21_NonDiscrimination>,
-    <https://w3id.org/aief/Art15_FreedomOfOccupation>, <https://w3id.org/aief/Art7_Privacy>;
+<https://w3id.org/aief/AIAAIC_047> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art7_PrivateLife>,
+    <https://w3id.org/aief/Art21_NonDiscrimination>, <https://w3id.org/aief/Art15_FreedomOfOccupation>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/Discrimination>, <https://w3id.org/aief/EmploymentHarm>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R042>, <https://w3id.org/aief/R085>;
   <https://w3id.org/aief/incidentID> "AIAAIC-047";
@@ -5108,8 +5129,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2021";
   <https://w3id.org/aief/aiCapability> "Perception (CV)" .
 
-<https://w3id.org/aief/AIAAIC_048> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art21_NonDiscrimination>,
-    <https://w3id.org/aief/Art26_RightToData>, <https://w3id.org/aief/Art15_FreedomOfOccupation>;
+<https://w3id.org/aief/AIAAIC_048> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
+    <https://w3id.org/aief/Art21_NonDiscrimination>, <https://w3id.org/aief/Art15_FreedomOfOccupation>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/Discrimination>, <https://w3id.org/aief/EmploymentHarm>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R042>, <https://w3id.org/aief/R071>,
     <https://w3id.org/aief/R085>;
@@ -5139,9 +5160,9 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2016";
   <https://w3id.org/aief/aiCapability> "Reasoning (Debt Recovery)" .
 
-<https://w3id.org/aief/AIAAIC_051> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art21_NonDiscrimination>, <https://w3id.org/aief/Art24_RightsOfChild>,
-    <https://w3id.org/aief/Art7_Privacy>;
+<https://w3id.org/aief/AIAAIC_051> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art7_PrivateLife>,
+    <https://w3id.org/aief/Art8_DataProtection>, <https://w3id.org/aief/Art21_NonDiscrimination>,
+    <https://w3id.org/aief/Art24_RightsOfChild>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/Discrimination>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R027>,
     <https://w3id.org/aief/R085>;
@@ -5159,9 +5180,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2022";
   <https://w3id.org/aief/aiCapability> "Reasoning (Recommendation)" .
 
-<https://w3id.org/aief/AIAAIC_053> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art21_NonDiscrimination>, <https://w3id.org/aief/Art26_RightToData>,
-    <https://w3id.org/aief/Art7_Privacy>;
+<https://w3id.org/aief/AIAAIC_053> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art7_PrivateLife>,
+    <https://w3id.org/aief/Art8_DataProtection>, <https://w3id.org/aief/Art21_NonDiscrimination>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/Surveillance>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R010>,
     <https://w3id.org/aief/R027>;
@@ -5201,9 +5221,9 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2024";
   <https://w3id.org/aief/aiCapability> "Interaction (Audio Generation)" .
 
-<https://w3id.org/aief/AIAAIC_057> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art21_NonDiscrimination>, <https://w3id.org/aief/Art7_Privacy>,
-    <https://w3id.org/aief/Art6_LibertyAndSecurity>;
+<https://w3id.org/aief/AIAAIC_057> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art6_RightToLiberty>,
+    <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art8_DataProtection>,
+    <https://w3id.org/aief/Art21_NonDiscrimination>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/Surveillance>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R010>,
     <https://w3id.org/aief/R027>;
@@ -5221,8 +5241,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2022";
   <https://w3id.org/aief/aiCapability> "Perception (Image Generation)" .
 
-<https://w3id.org/aief/AIAAIC_059> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art24_RightsOfChild>, <https://w3id.org/aief/Art7_Privacy>;
+<https://w3id.org/aief/AIAAIC_059> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art7_PrivateLife>,
+    <https://w3id.org/aief/Art8_DataProtection>, <https://w3id.org/aief/Art24_RightsOfChild>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/ChildrenRights>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R027>;
   <https://w3id.org/aief/incidentID> "AIAAIC-059";
@@ -5250,8 +5270,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2021";
   <https://w3id.org/aief/aiCapability> "Reasoning (Recommendation)" .
 
-<https://w3id.org/aief/AIAAIC_062> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art35_HealthCare>, <https://w3id.org/aief/Art7_Privacy>;
+<https://w3id.org/aief/AIAAIC_062> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art7_PrivateLife>,
+    <https://w3id.org/aief/Art8_DataProtection>, <https://w3id.org/aief/Art35_HealthCare>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/DataGovernance>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R010>,
     <https://w3id.org/aief/R027>;
@@ -5261,7 +5281,7 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/aiCapability> "Reasoning (Data Processing)" .
 
 <https://w3id.org/aief/AIAAIC_063> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art1_HumanDignity>,
-    <https://w3id.org/aief/Art23_GenderEquality>, <https://w3id.org/aief/Art7_Privacy>;
+    <https://w3id.org/aief/Art7_PrivateLife>, <https://w3id.org/aief/Art23_GenderEquality>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/Dignity>, <https://w3id.org/aief/GenderHarm>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R027>;
   <https://w3id.org/aief/incidentID> "AIAAIC-063";
@@ -5299,9 +5319,9 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2019";
   <https://w3id.org/aief/aiCapability> "Reasoning (Decision Scoring)" .
 
-<https://w3id.org/aief/AIAAIC_067> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art21_NonDiscrimination>, <https://w3id.org/aief/Art15_FreedomOfOccupation>,
-    <https://w3id.org/aief/Art7_Privacy>;
+<https://w3id.org/aief/AIAAIC_067> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art7_PrivateLife>,
+    <https://w3id.org/aief/Art8_DataProtection>, <https://w3id.org/aief/Art21_NonDiscrimination>,
+    <https://w3id.org/aief/Art15_FreedomOfOccupation>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/Discrimination>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R010>,
     <https://w3id.org/aief/R085>;
@@ -5311,7 +5331,7 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/aiCapability> "Reasoning (NLP/Profiling)" .
 
 <https://w3id.org/aief/AIAAIC_068> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art1_HumanDignity>,
-    <https://w3id.org/aief/Art7_Privacy>;
+    <https://w3id.org/aief/Art7_PrivateLife>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/PrivacyBreach>, <https://w3id.org/aief/Dignity>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R027>;
   <https://w3id.org/aief/incidentID> "AIAAIC-068";
@@ -5319,8 +5339,8 @@ owl:differentFrom owl:inverseOf owl:differentFrom .
   <https://w3id.org/aief/incidentYear> "2021";
   <https://w3id.org/aief/aiCapability> "Perception (Image Generation)" .
 
-<https://w3id.org/aief/AIAAIC_069> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art8_DataProtection>,
-    <https://w3id.org/aief/Art15_FreedomOfOccupation>, <https://w3id.org/aief/Art7_Privacy>;
+<https://w3id.org/aief/AIAAIC_069> <https://w3id.org/aief/impactsRight> <https://w3id.org/aief/Art7_PrivateLife>,
+    <https://w3id.org/aief/Art8_DataProtection>, <https://w3id.org/aief/Art15_FreedomOfOccupation>;
   <https://w3id.org/aief/demonstratesRisk> <https://w3id.org/aief/Surveillance>, <https://w3id.org/aief/EmploymentHarm>;
   <https://w3id.org/aief/supportsRequirement> <https://w3id.org/aief/R001>, <https://w3id.org/aief/R010>,
     <https://w3id.org/aief/R027>;
