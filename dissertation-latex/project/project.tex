@@ -6,7 +6,7 @@ This chapter describes the design, implementation, and deployment of AIEF. The s
 
 \section{Research Methodology}
 
-The research follows the Design Science Research (DSR) paradigm \cite{hevner2004}, which prescribes the iterative construction and evaluation of artifacts that address identified problems. DSR is appropriate for this work because the primary contribution is a functional system (the AIEF artifact) rather than a purely theoretical framework. The design cycle proceeded through five iterations: (1) framework extraction and requirement harmonisation, (2) ontology design and expert review, (3) knowledge graph population and validation, (4) RAG pipeline construction, and (5) evaluation and refinement.
+The research follows the Design Science Research (DSR) paradigm \cite{hevner2004}, which prescribes the iterative construction and evaluation of artifacts that address identified problems. In the knowledge-contribution framing of Gregor and Hevner \cite{gregor2013}, this work occupies the \emph{improvement} quadrant: a new solution architecture --- rights-grounded, incident-evidenced, scrutable multi-framework assessment --- for a known problem, early-stage research ethics compliance. The contribution is therefore twofold: the artifact itself, and the design knowledge the evaluation produces about \emph{when and where} knowledge-graph grounding and symbolic rules improve on LLM-only assessment. The work maps onto the six activities of the DSR methodology of Peffers et al.\ \cite{peffers2007}: problem identification (Chapter~\ref{ch:introduction}), solution objectives (the research questions), design and development (this chapter), demonstration (the deployed application and real-world cases), evaluation (Chapter~\ref{ch:evaluation}), and communication (this dissertation and the public artifacts). The design cycle proceeded through five iterations: (1) framework extraction and requirement harmonisation, (2) ontology design and expert review, (3) knowledge graph population and validation, (4) RAG pipeline construction, and (5) evaluation and refinement.
 
 
 \section{Ontology Design}
@@ -21,7 +21,7 @@ The ontology was developed in WebProt\'{e}g\'{e} and is published at the persist
 
 \subsection{Ontology Structure}
 
-The ontology comprises 63 classes, 19 object properties, and 11 data properties. Table~\ref{tab:ontology_summary} summarises the key structural elements.
+The ontology comprises 125 classes, 22 object properties, and 16 data properties. Table~\ref{tab:ontology_summary} summarises the key structural elements.
 
 \begin{table}[htbp]
 \centering
@@ -31,9 +31,9 @@ The ontology comprises 63 classes, 19 object properties, and 11 data properties.
 \toprule
 \textbf{Element} & \textbf{Count} \\
 \midrule
-Classes & 63 \\
-Object properties & 19 \\
-Data properties & 11 \\
+Classes & 125 \\
+Object properties & 22 \\
+Data properties & 16 \\
 Requirement individuals & 207 \\
 Incident individuals & 70 \\
 Charter rights mappings (\texttt{mapsToRight} triples) & 342 \\
@@ -57,6 +57,8 @@ Two alignment strategies ensure interoperability with the broader Semantic Web e
 \textbf{DPV alignment.} Fifteen of the 25 EU Charter rights represented in the ontology are currently linked to their DPV counterparts through \texttt{owl:equivalentClass} assertions. For example, \texttt{aief:Article21NonDiscrimination} is declared equivalent to \texttt{dpv-rights:A21-NonDiscrimination}. This enables federated queries across AIEF and any DPV-aligned dataset.
 
 \textbf{ODRL alignment.} Requirement deontic modalities are encoded as subclasses of ODRL classes: \texttt{aief:Obligation rdfs:subClassOf odrl:Obligation}. This alignment ensures that AIEF requirements are interpretable within the ODRL policy framework, supporting future integration with automated policy enforcement systems.
+
+Quantitatively, the ontology asserts 15 \texttt{owl:equivalentClass} alignments to DPV rights terms and 3 \texttt{rdfs:subClassOf} alignments to ODRL deontic classes, referencing 18 distinct external vocabulary terms in total --- a deliberate reuse-over-reinvention posture for the rights and policy layers, while the requirement, incident, and evidence vocabularies are AIEF-authored because no existing vocabulary covers the four-framework harmonisation.
 
 
 \subsection{Expert Review and Revisions}
@@ -85,6 +87,19 @@ Two ``Important'' categories affect AIEF's own authored terms directly. \textbf{
 Five Minor categories were also reported. The most substantial is \textbf{P08 (missing annotations)}, affecting 78 of AIEF's own elements — chiefly supporting-vocabulary classes such as \texttt{PersonalData}, \texttt{DataSubject}, and \texttt{Researcher} that carry data-property values but not \texttt{rdfs:label}/\texttt{rdfs:comment} pairs. This finding revises the annotation-completeness claim in \S\ref{sec:ontology} and Table~\ref{tab:ontology_summary}: annotation coverage is complete for the core requirement and incident individuals but incomplete across supporting-vocabulary classes. \textbf{P13 (inverse relationships not declared)} affects 17 object properties (e.g.\ \texttt{hasImpactOn}, \texttt{mapsToRight}, \texttt{demonstratesRisk}), which lack \texttt{owl:inverseOf} declarations. The remaining two Minor categories, P07 and P20/P22, each affect one or two elements and are not substantive.
 
 None of the eight findings indicate a structural or logical defect in the ontology; all are annotation-completeness or property-declaration gaps addressable without redesigning the class hierarchy. They are recorded as concrete remediation items in Chapter~\ref{ch:conclusion} rather than deferred vaguely. The full machine-readable OOPS! report is included in the project repository at \texttt{evaluation/oops\_report.xml}.
+
+\subsection{Competency-Question Verification and Reasoner Consistency}
+\label{sec:cq-validation}
+
+Following the competency-question methodology of Gr\"{u}ninger and Fox \cite{gruninger1995}, twenty formal competency questions were authored spanning the ontology's intended capabilities --- requirement lookup by topic, right, framework, tier, evidence demand, and legal basis; incident lookup by right, capability, and requirement support; and cross-framework structural queries. Each question was translated to a SPARQL query with an explicit pass criterion: seventeen require a non-empty answer set, and three assert exact values that cross-validate findings reported independently elsewhere in this dissertation (the incident-impacted rights lacking requirement coverage must be exactly Articles 13, 15, and 48; the rights covered by all four frameworks must number exactly 8; the DPV-aligned rights must number exactly 15). All twenty questions pass against the live knowledge graph (Table~\ref{tab:cq}). Separately, the full ontology was checked with the HermiT OWL reasoner, which completed classification and reported zero inconsistent classes.
+
+\begin{table}[htbp]
+\centering
+\caption{Competency-question verification results (20/20 pass, 16 July 2026).}
+\label{tab:cq}
+\small
+\input{project/cq_table.tex}
+\end{table}
 
 
 \subsection{Scrutable Risk Prioritisation with SHACL}

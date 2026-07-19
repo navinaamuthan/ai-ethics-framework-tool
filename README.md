@@ -18,8 +18,8 @@ AIEF takes a free-text AI research proposal and produces a structured, traceable
 | AI incidents (AIAAIC-001 … 070) | 70 |
 | Charter rights mappings (`mapsToRight`) | 342 |
 | Asserted triples | 3,921 |
-| Triples incl. OWL-Horst inference (GraphDB) | 5,197 |
-| Ontology schema | 63 classes · 19 object properties · 11 data properties |
+| Triples incl. RDFS+ inference (GraphDB production ruleset) | 4,847 |
+| Ontology schema | 125 classes · 22 object properties · 16 data properties |
 
 The ontology is aligned with the [W3C Data Privacy Vocabulary (DPV)](https://w3id.org/dpv) (`owl:equivalentClass` for Charter rights) and [ODRL](https://www.w3.org/TR/odrl-model/) (`rdfs:subClassOf` for deontic modalities).
 
@@ -79,7 +79,10 @@ Deployment (Vercel): set the project **Root Directory** to `webapp/` and add `GR
 - Qwen3 32B results are exploratory only (7/20 runs failed on free-tier rate limits) and excluded from the primary comparison — see `evaluation/results/qwen3-32b-exploratory/`.
 - Annotation methodology validated by inter-annotator agreement on incident–rights mappings (Cohen's κ = 0.712, substantial).
 - **OOPS! ontology validation:** 8 non-critical pitfall categories found (2 "Important": missing domain/range on 5 properties, missing disjointness axioms; rest "Minor" annotation-completeness gaps). Full report: `evaluation/oops_report.xml`.
-- **RAGAS-style metrics:** context recall/precision computed on all 20 proposals (mean recall 0.80, mean precision 0.030 — retrieval is deliberately broad by design); faithfulness/answer-relevancy (LLM-judge metrics) completed on a partial sample due to Groq free-tier rate limits. Full results: `evaluation/ragas_results.json`.
+- **RAGAS-style metrics:** context recall/precision on all 20 proposals (mean recall 0.80, mean precision 0.030 — retrieval is deliberately broad by design); faithfulness 0.35 / answer relevancy 0.88 (LLM judge, 19/20). Full results: `evaluation/ragas_results.json`.
+- **Retrieval baseline (controlled comparison):** ontology-driven SPARQL retrieval reaches 0.992 recall vs BM25 0.915 / TF-IDF 0.925 at matched set size; lexical baselines fall to 0.61–0.64 at k=100. `evaluation/retrieval_baselines.json`.
+- **Ontology evaluation battery:** 20/20 competency questions pass (incl. exact-value checks); HermiT reasoner reports zero inconsistent classes; OOPS! scan as above. `analysis/competency_questions.py`.
+- **Error taxonomy:** zero risk under-classifications across 20 proposals (2 over-classifications); 98.9% of requirement misses are generation-stage, with citation recall skewed against the largest framework (REAMS 0.067 vs ACM 0.297). `analysis/results/error_taxonomy.json`.
 
 ## Paper and dissertation
 

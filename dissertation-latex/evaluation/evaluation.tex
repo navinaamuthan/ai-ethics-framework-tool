@@ -97,7 +97,7 @@ Backend & Ollama (local) & Groq API (cloud) \\
 \subsection{Fundamental Rights Coverage}
 \label{sec:rights-coverage}
 
-Mean fundamental rights coverage on the Llama~3.3~70B assessments is 0.773 (n=20) against \texttt{synthetic\_proposals} reference annotations --- the same ground truth used for risk scoring --- with a 95\% bootstrap CI of $[0.632, 0.894]$. Ten proposals achieve full coverage. A string-normalisation check rules out an artefact (``Article~8'' vs ``Article8''). Of 13 per-right misses, \textbf{84\% are generation-stage} (the right was in \texttt{matched\_rights} but not cited in the assessment) and 15\% are retrieval-stage keyword misses (both on Article~11 for P13/P14). That split is consistent with the generation-F1 gap: the knowledge graph surfaces the right, but the LLM selectively omits it. The plan benchmark of $\geq$0.85 was framed against baseline documentation; against reference annotations the CI upper bound reaches 0.894 while the mean sits just below. Risk-label accuracy (90\% at 70B) is retained as secondary. An exact McNemar test on the 20 paired 8B/70B classifications gives $p=0.125$ (discordant pairs 1 vs 6), consistent with the directional-trend framing rather than a confirmed capacity effect.
+Mean fundamental rights coverage on the Llama~3.3~70B assessments is 0.773 (n=20) against \texttt{synthetic\_proposals} reference annotations --- the same ground truth used for risk scoring --- with a 95\% bootstrap CI of $[0.632, 0.894]$. Ten proposals achieve full coverage. A string-normalisation check rules out an artefact (``Article~8'' vs ``Article8''). Of 13 per-right misses, \textbf{84\% are generation-stage} (the right was in \texttt{matched\_rights} but not cited in the assessment) and 15\% are retrieval-stage keyword misses (both on Article~11 for P13/P14). That split is consistent with the generation-F1 gap: the knowledge graph surfaces the right, but the LLM selectively omits it. The plan benchmark of $\geq$0.85 was framed against baseline documentation; against reference annotations the CI upper bound reaches 0.894 while the mean sits just below. Risk-label accuracy (90\% at 70B) is retained as secondary. An exact McNemar test --- the recommended paired comparison for classifiers evaluated on the same items \cite{dietterich1998} --- on the 20 paired 8B/70B classifications gives $p=0.125$ (discordant pairs 1 vs 6), consistent with the directional-trend framing rather than a confirmed capacity effect.
 
 
 \subsection{Central Finding: Model-Agnostic Retrieval}
@@ -105,6 +105,28 @@ Mean fundamental rights coverage on the Llama~3.3~70B assessments is 0.773 (n=20
 The most significant finding is that retrieval recall remains at 0.99 across both model configurations. This result demonstrates that the knowledge graph's contribution to the assessment pipeline is independent of the LLM used for generation. The ontology-driven SPARQL retrieval consistently surfaces the correct requirements, incidents, and rights mappings regardless of downstream model capacity.
 
 This finding supports RQ1 and RQ2: the harmonised ontology effectively represents cross-framework requirements, and the knowledge graph supports automated ethics assessment with near-perfect retrieval performance. It also establishes a clean analytical separation between retrieval quality and generation quality, following the decomposition framework proposed by Gao et al. \cite{gao2023rag}. The knowledge engineering contribution is stable and reusable; generation quality is a function of model capacity that will improve as larger and more capable models become available.
+
+\subsection{Controlled Retrieval Baseline: Ontology-Driven vs.\ Lexical Retrieval}
+\label{sec:retrieval-baselines}
+
+A high retrieval-recall figure alone does not isolate the ontology's contribution: a simpler retrieval mechanism might achieve the same recall without any knowledge engineering. To test this, the ontology-driven SPARQL retrieval was compared against two standard lexical baselines --- BM25 and TF-IDF cosine similarity --- ranking the same 207 requirement texts for the same 20 proposals, scored as recall against the expected-requirement annotations (Table~\ref{tab:retrieval-baselines}). Because SPARQL retrieval returns a variable-size set (mean 177 requirements), baselines are reported both at fixed cut-offs and at a cut-off matched to the SPARQL set size per proposal.
+
+\begin{table}[htbp]
+\centering
+\caption{Retrieval recall: ontology-driven SPARQL vs.\ lexical baselines (20 proposals, 16 July 2026).}
+\label{tab:retrieval-baselines}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Condition} & \textbf{R@10} & \textbf{R@25} & \textbf{R@50} & \textbf{R@100} & \textbf{R@$|$SPARQL$|$} \\
+\midrule
+SPARQL (ontology-driven) & \multicolumn{4}{c}{---} & \textbf{0.992} \\
+BM25 & 0.073 & 0.175 & 0.287 & 0.611 & 0.915 \\
+TF-IDF cosine & 0.078 & 0.160 & 0.329 & 0.637 & 0.925 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The ontology-driven retrieval outperforms both baselines even at matched set size (0.992 vs.\ 0.915/0.925), and the gap widens dramatically at realistic cut-offs: at $k=100$ --- already half the corpus --- lexical similarity recovers only 61--64\% of applicable requirements, because many requirements apply to a proposal through a \emph{rights-mediated} connection (e.g.\ a biometric-surveillance proposal implicating a consent requirement whose text shares no vocabulary with the proposal) that content similarity cannot see but the keyword$\to$right$\to$requirement path in the knowledge graph traverses directly. This is the controlled evidence that the knowledge engineering, not merely retrieval breadth, carries the recall: a lexical retriever given the same generous budget still misses 7.5--8.5\% of applicable requirements. The honest converse, established in \S\ref{sec:ragas-validation}, is that the SPARQL retrieval buys this recall with very low precision; the comparison here shows the trade is nonetheless favourable, since no examined operating point of either baseline dominates it.
 
 
 \subsection{Risk Classification Analysis}
@@ -128,6 +150,50 @@ This finding confirms the analytical value of separating retrieval and generatio
 \label{sec:qwen-ratelimit}
 
 An exploratory evaluation was conducted using Qwen3 32B via the Groq API. However, 7 of 20 proposals failed to complete due to tokens-per-minute (TPM) rate limiting on the free API tier. The results from the 13 completed proposals are therefore methodologically compromised and cannot be reliably compared against the Llama configurations. For this reason, Qwen3 32B results are excluded from the primary comparison. This limitation is acknowledged as a constraint of the evaluation infrastructure rather than a reflection on the model's capabilities.
+
+\subsection{Error Taxonomy and Per-Framework Analysis}
+\label{sec:error-taxonomy}
+
+Every deviation from ground truth across the 20 proposals (Llama 3.3 70B configuration) was classified into a seven-category taxonomy (Table~\ref{tab:error-taxonomy}), separating errors by pipeline stage (retrieval vs.\ generation) and object (risk tier, requirements, rights).
+
+\begin{table}[htbp]
+\centering
+\caption{Error taxonomy over 20 proposals (Llama 3.3 70B).}
+\label{tab:error-taxonomy}
+\begin{tabular}{llr}
+\toprule
+\textbf{Category} & \textbf{Stage} & \textbf{Count} \\
+\midrule
+E1: Risk over-classification & generation & 2 \\
+E2: Risk under-classification & generation & \textbf{0} \\
+E3: Requirement retrieval miss & retrieval & 2 \\
+E4: Requirement generation miss (retrieved, not cited) & generation & 180 \\
+E5: Rights generation miss (matched, not cited) & generation & 11 \\
+E6: Rights retrieval miss & retrieval & 2 \\
+E7: Citations outside expected set (reported, not scored as error) & generation & 130 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Three findings follow. First, the conservative-bias claim of \S\ref{sec:risk-classification-analysis} is now exact: across all 20 proposals the system \emph{never} under-classifies risk (E2 $=0$); its only tier errors are upward (E1 $=2$) --- precisely the error asymmetry the precautionary posture of ethics screening prefers. Second, the pipeline's bottleneck is overwhelmingly generation-stage: of 182 missed requirement citations, 180 (98.9\%) had been successfully retrieved and were present in the prompt context, against only 2 genuine retrieval misses; the corresponding split for rights is 11 vs.\ 2. Third, category E7 is reported but deliberately not scored as error: a citation outside the expected-requirement annotation is frequently a defensible additional finding rather than a mistake, and scoring it as error would presuppose the reference annotations are exhaustive --- which, as a single-annotator artifact, they are not.
+
+\begin{table}[htbp]
+\centering
+\caption{Per-framework requirement performance (20 proposals, Llama 3.3 70B).}
+\label{tab:per-framework}
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Framework} & \textbf{Expected} & \textbf{Retrieved} & \textbf{Ret.\ recall} & \textbf{Cited} & \textbf{Cite recall} \\
+\midrule
+REAMS & 104 & 102 & 0.981 & 7 & 0.067 \\
+EU AI Act & 42 & 42 & 1.000 & 10 & 0.238 \\
+Horizon Europe & 36 & 36 & 1.000 & 9 & 0.250 \\
+ACM/NeurIPS & 37 & 37 & 1.000 & 11 & 0.297 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The per-framework breakdown (Table~\ref{tab:per-framework}) exposes a systematic citation skew: retrieval recall is near-uniform across frameworks, but the LLM's citation recall is 4.4$\times$ lower for REAMS (0.067) than for ACM/NeurIPS (0.297). REAMS contributes the most expected requirements per proposal (104 across 20 proposals) while the model cites only $\sim$5 requirements per assessment in total, so the largest framework is proportionally most under-represented in generated citations. This is a concrete, previously invisible consequence of leaving citation selection to the LLM, and a direct argument for the deterministic per-dimension layer of \S\ref{sec:shacl}: rule-based verdicts do not exhibit budget-driven framework skew.
 
 
 \section{Ablation Study}

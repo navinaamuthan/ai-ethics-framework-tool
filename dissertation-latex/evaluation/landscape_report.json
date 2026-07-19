@@ -6,12 +6,6 @@
       "HorizonEurope": 4,
       "ACMConference": 3
     },
-    "Art17_RightToProperty": {
-      "REAMS": 0,
-      "EUAIAct": 0,
-      "HorizonEurope": 0,
-      "ACMConference": 1
-    },
     "Art1_HumanDignity": {
       "REAMS": 14,
       "EUAIAct": 5,
@@ -144,6 +138,10 @@
       5
     ],
     [
+      "Art17_RightToProperty",
+      1
+    ],
+    [
       "Art13_FreedomOfArtsScience",
       1
     ]
@@ -172,7 +170,6 @@
   ],
   "overlap_distribution": {
     "1": [
-      "Art17_RightToProperty",
       "Art24_RightsOfChild"
     ],
     "2": [
