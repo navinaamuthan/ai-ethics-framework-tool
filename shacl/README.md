@@ -7,9 +7,14 @@ A prototype answer to two critiques of the main AIEF pipeline, raised in supervi
 
 This directory demonstrates the alternative: risk rules as **SHACL shapes**, with the risk dimension, priority rank, severity tier, and written rationale all expressed **as data** in the shapes file, and validation producing a **per-dimension risk profile** per proposal instead of a single label. No LLM is involved in this layer.
 
+**Update (16 July 2026, Week-2 widening):** the rule set was expanded from 6 shapes covering 4 Charter dimensions to **21 shapes covering 20 of the 22 Charter dimensions present in the knowledge graph**. This was done specifically to close a fairness objection: a 6-rule/4-dimension comparison against the full RAG pipeline invited the charge that the "architecture comparison" in RQ2 was rigged toward whichever side was more convenient. Two dimensions remain deliberately unruled — Art13 (Freedom of Arts and Science) and Art20 (Equality Before the Law) — because no reliable keyword signal in free text distinguishes them from the already-ruled adjacent dimensions (Art11 Expression; Art21 Non-Discrimination) without a materially richer NLU layer than the keyword bridge supports. This is stated as a scope limit, not silently dropped.
+
+Widening the rule set changed the quantitative comparison substantially: mean precision rose from 0.417 to **0.566** and mean recall from 0.193 to **0.327** (both computed by `evaluate_shacl.py` over the same 20 proposals). The direction confirms the expected relationship — recall was bounded by rule-set coverage, not by some intrinsic limit of the SHACL approach — while the absolute recall still trails the RAG pipeline's rights coverage (0.773), which is the honest and expected result of comparing 21 hand-authored deterministic rules against an LLM with much broader (if less precise and less traceable) interpretive reach.
+
 ## Files
 
-- `aief-risk-shapes.ttl` — six risk rules. Each declares: `aiefsh:riskDimension` (an EU Charter right IRI), `aiefsh:priority` (editable integer), `sh:severity` (editable tier), `rdfs:comment` (the explicit rationale for its rank), and a SPARQL constraint (the inspectable pattern).
+- `aief-risk-shapes.ttl` — 21 risk rules across 20 Charter dimensions. Each declares: `aiefsh:riskDimension` (an EU Charter right IRI), `aiefsh:priority` (editable integer), `sh:severity` (editable tier), `rdfs:comment` (the explicit rationale for its rank), and a SPARQL constraint (the inspectable pattern).
+- `evaluate_shacl.py` — quantitative precision/recall of the rule set against all 20 synthetic proposals' `expected_rights` annotations, via the text→description bridge.
 - `harm_evidenced_priorities.py` / `harm-evidenced-priorities.ttl` — SPARQL-derived incident in-degree per Charter right, tiered into priorities 1–3 (see provenance below).
 - `text_to_description.py` — keyword bridge from free-text proposals to structured TTL for SHACL validation.
 - `example-proposals.ttl` — structured descriptions of three proposals from the evaluation set (P01, P08, P13).

@@ -19,6 +19,25 @@ RULES = [  # (regex on proposal text, triple to emit)
     (r"clinical (validation|trial) (is|has been|was) (planned|conducted)", "aief:hasClinicalValidation true"),
     (r"disclaimer|disclosed? (that|as) (an )?AI", "aief:disclosesAIUse true"),
     (r"opt-out", "aief:hasIndividualOptOut true"),
+
+    # --- extended capability/population/flag vocabulary (Week 2 widening) ---
+    (r"predictive polic|risk scor.{0,20}(offend|reoffend|recidivis)|parole|sentenc", "aief:usesCapability aief:CriminalJusticeRiskScoring"),
+    (r"detention|involuntary confinement|denies? (bail|parole)", "aief:usesCapability aief:LibertyAffectingDecision"),
+    (r"autonomous vehicle|self-driving|life.support|safety.critical", "aief:usesCapability aief:SafetyCriticalControl"),
+    (r"human enhancement|invasive implant|neural interface|human experiment", "aief:usesCapability aief:InvasiveIntervention"),
+    (r"content moderation|censor|takedown|removes? (posts|content)", "aief:usesCapability aief:ContentModeration"),
+    (r"scrap(e|ing)|without (the )?(rightsholder|owner).s consent|training data.{0,20}copyright", "aief:usesCapability aief:UnlicensedDataUse"),
+    (r"translat|language model.{0,20}minority language|underrepresented language", "aief:usesCapability aief:LanguageProcessing"),
+    (r"gig work|zero.hour|workplace productivity|employee monitoring|worker surveillance", "aief:usesCapability aief:WorkplaceMonitoring"),
+    (r"compute.intensive|carbon footprint|energy consumption|large.scale training", "aief:usesCapability aief:HighComputeTraining"),
+    (r"public sector|government agency|welfare (eligibility|decision)|benefits? (decision|eligibility)", "aief:usesCapability aief:PublicSectorDecision"),
+    (r"gender|women|non-binary", "aief:involvesPopulation aief:GenderMinorities"),
+    (r"disab(led|ility)|accessib", "aief:involvesPopulation aief:PeopleWithDisabilities"),
+
+    (r"human review.{0,20}(available|required|conducted)|appeal (mechanism|process)|right to (appeal|contest)", "aief:hasAppealMechanism true"),
+    (r"accessib(le|ility) (design|features|compliant)|WCAG", "aief:hasAccessibilityDesign true"),
+    (r"carbon.aware|energy.efficient|environmental impact assessment", "aief:hasEnvironmentalAssessment true"),
+    (r"licens(ed|ing) agreement|rightsholder consent|copyright cleared", "aief:hasDataLicensing true"),
 ]
 
 # Positive-evidence predicates: skip if the match is under naive negation

@@ -43,4 +43,6 @@ for row in rows: print(*row, sep="  ")
 print(f"\nSHACL condition: mean precision={sum(precs)/len(precs):.3f}, "
       f"mean recall={sum(recs)/len(recs):.3f} (n={len(precs)})")
 print("Compare in the RQ2 table against RAG rights-coverage (recall-style) and note:")
-print("SHACL recall is bounded by 6 rules / 3-4 dimensions -- report that bound explicitly.")
+print("SHACL recall is bounded by 21 rules / 20 of 22 Charter dimensions in the KG")
+print("(Art13 Freedom of Arts/Science and Art20 Equality Before the Law are unruled --")
+print("no reliable keyword signal distinguishes them from adjacent ruled dimensions).")

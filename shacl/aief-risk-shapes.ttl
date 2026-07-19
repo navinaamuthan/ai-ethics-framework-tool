@@ -157,3 +157,181 @@ aiefsh:AIDisclosureShape a sh:NodeShape ;
             }
         """ ;
     ] .
+
+#################################################################
+# Rules 7-20 — Week-2 widening (16 July 2026)
+# Added to cover the remaining Charter dimensions present in the KG,
+# converting the RQ2 architecture comparison from a 4-dimension demo
+# into a comparison spanning ~20 of the 22 dimensions actually mapped
+# by requirements/incidents. Two dimensions (Art13 Freedom of Arts and
+# Science, Art20 Equality Before the Law) are deliberately left unruled:
+# no reliable text signal distinguishes them from adjacent, already-ruled
+# dimensions (Art11 expression; Art21 non-discrimination respectively)
+# without a much richer NLU layer than the keyword bridge supports --
+# an honest scope limit, not an oversight.
+#################################################################
+
+aiefsh:LibertyShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Criminal justice risk-scoring requires effective-remedy safeguards" ;
+    rdfs:comment "Rationale for priority 1: liberty-affecting decisions (bail, parole, sentencing) informed by automated risk scores implicate the presumption of innocence and the right to liberty directly; absence of an appeal mechanism compounds the risk (Art 6, Art 47, Art 48)." ;
+    aiefsh:riskDimension aief:Art6_RightToLiberty ;
+    aiefsh:priority 1 ; sh:severity sh:Violation ;
+    sh:sparql [ sh:message "Criminal-justice risk scoring or liberty-affecting decisions with no appeal mechanism (dimension: Art 6 Liberty)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:usesCapability ?c . FILTER(?c IN (aief:CriminalJusticeRiskScoring, aief:LibertyAffectingDecision))
+            FILTER NOT EXISTS { $this aief:hasAppealMechanism true } }""" ; ] .
+
+aiefsh:PresumptionOfInnocenceShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Pre-conviction risk scoring requires human oversight" ;
+    rdfs:comment "Rationale for priority 1: using AI risk scores before conviction/adjudication risks treating predicted risk as established fact, undermining the presumption of innocence." ;
+    aiefsh:riskDimension aief:Art48_PresumptionOfInnocence ;
+    aiefsh:priority 1 ; sh:severity sh:Violation ;
+    sh:sparql [ sh:message "Criminal-justice risk scoring is used without a stated human-oversight/appeal safeguard (dimension: Art 48 Presumption of Innocence)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:usesCapability aief:CriminalJusticeRiskScoring .
+            FILTER NOT EXISTS { $this aief:hasAppealMechanism true } }""" ; ] .
+
+aiefsh:EffectiveRemedyShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Automated decisions affecting people require an appeal mechanism" ;
+    rdfs:comment "Rationale for priority 2: any automated decision materially affecting a person (screening, liberty, public-sector) without a contestation route denies effective remedy, but is remediable by adding an appeal process -- ranks below the per-se liberty/innocence violations above." ;
+    aiefsh:riskDimension aief:Art47_RightToEffectiveRemedy ;
+    aiefsh:priority 2 ; sh:severity sh:Violation ;
+    sh:sparql [ sh:message "An automated decision affecting people has no appeal mechanism (dimension: Art 47 Effective Remedy)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:usesCapability ?c . FILTER(?c IN (aief:AutomatedScreening, aief:PublicSectorDecision, aief:LibertyAffectingDecision))
+            FILTER NOT EXISTS { $this aief:hasAppealMechanism true } }""" ; ] .
+
+aiefsh:SafetyCriticalShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Safety-critical control systems require independent validation" ;
+    rdfs:comment "Rationale for priority 1: autonomous control of physical safety-critical systems risks the right to life itself if unvalidated; no remediation short of validation is adequate." ;
+    aiefsh:riskDimension aief:Art2_RightToLife ;
+    aiefsh:priority 1 ; sh:severity sh:Violation ;
+    sh:sparql [ sh:message "A safety-critical control capability has no stated independent validation (dimension: Art 2 Right to Life)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:usesCapability aief:SafetyCriticalControl .
+            FILTER NOT EXISTS { $this aief:hasClinicalValidation true } }""" ; ] .
+
+aiefsh:IntegrityShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Invasive interventions require independent ethical/clinical validation" ;
+    rdfs:comment "Rationale for priority 1: neural interfaces, human enhancement and invasive human experimentation implicate bodily integrity directly and are per-se risks absent independent review." ;
+    aiefsh:riskDimension aief:Art3_RightToIntegrity ;
+    aiefsh:priority 1 ; sh:severity sh:Violation ;
+    sh:sparql [ sh:message "An invasive intervention capability has no stated independent validation (dimension: Art 3 Integrity)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:usesCapability aief:InvasiveIntervention .
+            FILTER NOT EXISTS { $this aief:hasClinicalValidation true } }""" ; ] .
+
+aiefsh:PrivacyShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Continuous monitoring requires a stated privacy safeguard" ;
+    rdfs:comment "Rationale for priority 2: continuous monitoring/surveillance without consent or DPIA implicates private life distinctly from the data-protection rules above, since Art 7 concerns the intrusion itself rather than the data handling; remediable via consent or an opt-out." ;
+    aiefsh:riskDimension aief:Art7_PrivateLife ;
+    aiefsh:priority 2 ; sh:severity sh:Violation ;
+    sh:sparql [ sh:message "Continuous monitoring is used with no consent mechanism or individual opt-out stated (dimension: Art 7 Private Life)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:usesCapability aief:ContinuousMonitoring .
+            FILTER NOT EXISTS { $this aief:hasConsentMechanism true } FILTER NOT EXISTS { $this aief:hasIndividualOptOut true } }""" ; ] .
+
+aiefsh:ExpressionShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Content moderation requires an appeal mechanism" ;
+    rdfs:comment "Rationale for priority 2: automated content removal without contestation risks freedom of expression; remediable by adding an appeal route, so ranks below per-se violations." ;
+    aiefsh:riskDimension aief:Art11_FreedomOfExpression ;
+    aiefsh:priority 2 ; sh:severity sh:Warning ;
+    sh:sparql [ sh:message "Content moderation is used with no appeal mechanism stated (dimension: Art 11 Freedom of Expression)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:usesCapability aief:ContentModeration .
+            FILTER NOT EXISTS { $this aief:hasAppealMechanism true } }""" ; ] .
+
+aiefsh:OccupationShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Automated hiring/screening requires a bias audit" ;
+    rdfs:comment "Rationale for priority 2: automated employment screening risks the freedom to choose an occupation through unaudited exclusionary bias; overlaps partially with the non-discrimination rule but targets the occupational-access dimension specifically." ;
+    aiefsh:riskDimension aief:Art15_FreedomOfOccupation ;
+    aiefsh:priority 2 ; sh:severity sh:Warning ;
+    sh:sparql [ sh:message "Automated hiring/screening has no independent bias audit stated (dimension: Art 15 Freedom of Occupation)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:usesCapability aief:AutomatedScreening .
+            FILTER NOT EXISTS { $this aief:hasBiasAudit true } }""" ; ] .
+
+aiefsh:PropertyShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Training data use requires licensing/rightsholder consent" ;
+    rdfs:comment "Rationale for priority 2: unlicensed use of scraped or copyrighted material for training implicates the right to property (IP); remediable by securing licensing." ;
+    aiefsh:riskDimension aief:Art17_RightToProperty ;
+    aiefsh:priority 2 ; sh:severity sh:Warning ;
+    sh:sparql [ sh:message "Unlicensed data use has no stated data licensing arrangement (dimension: Art 17 Right to Property)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:usesCapability aief:UnlicensedDataUse .
+            FILTER NOT EXISTS { $this aief:hasDataLicensing true } }""" ; ] .
+
+aiefsh:CulturalDiversityShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Language technologies require bias auditing across languages" ;
+    rdfs:comment "Rationale for priority 3: language/translation systems that underperform on minority languages risk cultural diversity; a Warning tier since the harm is typically one of degraded quality rather than a per-se rights violation." ;
+    aiefsh:riskDimension aief:Art22_CulturalDiversity ;
+    aiefsh:priority 3 ; sh:severity sh:Warning ;
+    sh:sparql [ sh:message "Language-processing capability has no stated bias audit across languages/dialects (dimension: Art 22 Cultural Diversity)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:usesCapability aief:LanguageProcessing .
+            FILTER NOT EXISTS { $this aief:hasBiasAudit true } }""" ; ] .
+
+aiefsh:GenderEqualityShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Proposals involving gender-relevant populations require a bias audit" ;
+    rdfs:comment "Rationale for priority 2: gender-differentiated impact (e.g. Amazon hiring precedent) requires explicit auditing distinct from general non-discrimination, since gender bias in training data is a documented, specific failure mode." ;
+    aiefsh:riskDimension aief:Art23_GenderEquality ;
+    aiefsh:priority 2 ; sh:severity sh:Warning ;
+    sh:sparql [ sh:message "A proposal involving gender-relevant populations/capabilities has no stated bias audit (dimension: Art 23 Gender Equality)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:involvesPopulation aief:GenderMinorities .
+            FILTER NOT EXISTS { $this aief:hasBiasAudit true } }""" ; ] .
+
+aiefsh:DisabilityShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Proposals involving people with disabilities require accessibility design" ;
+    rdfs:comment "Rationale for priority 2: systems affecting disabled populations without stated accessibility design (e.g. WCAG compliance) risk exclusion contrary to Art 26 disability integration." ;
+    aiefsh:riskDimension aief:Art26_DisabilityIntegration ;
+    aiefsh:priority 2 ; sh:severity sh:Warning ;
+    sh:sparql [ sh:message "A proposal involving people with disabilities has no stated accessibility design (dimension: Art 26 Disability Integration)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:involvesPopulation aief:PeopleWithDisabilities .
+            FILTER NOT EXISTS { $this aief:hasAccessibilityDesign true } }""" ; ] .
+
+aiefsh:WorkingConditionsShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Workplace monitoring requires a consent mechanism" ;
+    rdfs:comment "Rationale for priority 2: worker surveillance/productivity monitoring without consent risks fair working conditions (Art 31); remediable via a disclosed consent process." ;
+    aiefsh:riskDimension aief:Art31_FairWorkingConditions ;
+    aiefsh:priority 2 ; sh:severity sh:Warning ;
+    sh:sparql [ sh:message "Workplace monitoring has no stated worker consent mechanism (dimension: Art 31 Fair Working Conditions)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:usesCapability aief:WorkplaceMonitoring .
+            FILTER NOT EXISTS { $this aief:hasConsentMechanism true } }""" ; ] .
+
+aiefsh:EnvironmentShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "High-compute training requires an environmental impact assessment" ;
+    rdfs:comment "Rationale for priority 3: large-scale compute has an environmental footprint (Art 37); Warning tier since this is a disclosure/accounting obligation rather than a direct rights infringement." ;
+    aiefsh:riskDimension aief:Art37_EnvironmentalProtection ;
+    aiefsh:priority 3 ; sh:severity sh:Warning ;
+    sh:sparql [ sh:message "A high-compute training capability has no stated environmental impact assessment (dimension: Art 37 Environmental Protection)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:usesCapability aief:HighComputeTraining .
+            FILTER NOT EXISTS { $this aief:hasEnvironmentalAssessment true } }""" ; ] .
+
+aiefsh:GoodAdministrationShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Public-sector automated decisions require human review" ;
+    rdfs:comment "Rationale for priority 1: public authorities using automated decision-making without human review or an appeal route directly undermines the right to good administration (Art 41), a foundational rule-of-law concern for state action specifically." ;
+    aiefsh:riskDimension aief:Art41_GoodAdministration ;
+    aiefsh:priority 1 ; sh:severity sh:Violation ;
+    sh:sparql [ sh:message "A public-sector automated decision capability has no stated human review/appeal mechanism (dimension: Art 41 Good Administration)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """SELECT $this WHERE { $this aief:usesCapability aief:PublicSectorDecision .
+            FILTER NOT EXISTS { $this aief:hasAppealMechanism true } }""" ; ] .
