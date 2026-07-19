@@ -1,0 +1,55 @@
+# AIEF documentation-generation template spec.
+# Each authority lists the fields its documentation checklist requires, in
+# order. This file is the single point of extension for a new authority or
+# a changed checklist -- a REAMS administrator or Horizon officer could edit
+# this without touching Python, mirroring the "rules as editable data"
+# argument already made for the SHACL layer (shacl/aief-risk-shapes.ttl).
+#
+# `pool_key` must match a key produced by build_sections() in
+# generate_documentation.py. `label` is the human-readable section heading.
+
+REAMS:
+  - pool_key: project_summary
+    label: Project Summary
+  - pool_key: risk_level
+    label: Risk Level
+  - pool_key: participant_risks
+    label: Participant Risks
+  - pool_key: data_protection
+    label: Data Protection
+  - pool_key: consent_arrangements
+    label: Consent Arrangements
+  - pool_key: mitigations
+    label: Mitigations
+
+FRIA:
+  - pool_key: intended_purpose
+    label: Intended Purpose
+  - pool_key: affected_rights
+    label: Affected Rights
+  - pool_key: risk_identification
+    label: Risk Identification
+  - pool_key: severity_assessment
+    label: Severity Assessment
+  - pool_key: mitigation_measures
+    label: Mitigation Measures
+  - pool_key: precedent_evidence
+    label: Precedent Evidence
+
+ACM_NeurIPS:
+  - pool_key: broader_impact
+    label: Broader Impact
+  - pool_key: potential_misuse
+    label: Potential Misuse
+  - pool_key: harm_mitigations
+    label: Harm Mitigations
+
+HorizonEurope:
+  - pool_key: ethics_by_design
+    label: Ethics by Design
+  - pool_key: data_management
+    label: Data Management
+  - pool_key: social_impact
+    label: Social Impact
+  - pool_key: human_oversight
+    label: Human Oversight

@@ -1,0 +1,52 @@
+{
+  "title": "AIEF: AI-Assisted Ethics Assessment Framework — Ontology, Knowledge Graph, and RAG Pipeline",
+  "description": "<p>AIEF harmonises AI research ethics requirements from four governance frameworks (TCD REAMS, EU AI Act Article 27 FRIA, Horizon Europe Ethics by Design, ACM/NeurIPS guidelines) into a single OWL ontology and knowledge graph, mapped to EU Charter of Fundamental Rights articles and grounded in 70+ documented AI incidents. This deposit archives the ontology (published at the persistent URI https://w3id.org/aief/), the populated knowledge graph (207 requirements, 70-73 incidents, 342 Charter rights mappings), a SHACL-based scrutable risk-rule layer, and the retrieval-augmented generation pipeline that produces structured, traceable ethics assessments from free-text research proposals.</p><p>Companion to the MSc dissertation \"AI-Assisted Ethics Assessment Framework for Early-Stage Research Projects\" (Trinity College Dublin, 2026).</p>",
+  "creators": [
+    {
+      "name": "Ganapathy Amuthan, Navina",
+      "affiliation": "Trinity College Dublin"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Lewis, Dave",
+      "affiliation": "ADAPT Centre, Trinity College Dublin",
+      "type": "Supervisor"
+    },
+    {
+      "name": "Golpayegani, Delaram",
+      "affiliation": "ADAPT Centre, Trinity College Dublin",
+      "type": "Other",
+      "orcid": ""
+    }
+  ],
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "AI ethics",
+    "ontology",
+    "knowledge graph",
+    "SHACL",
+    "retrieval-augmented generation",
+    "EU AI Act",
+    "fundamental rights",
+    "research ethics",
+    "compliance automation",
+    "OWL"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://w3id.org/aief/",
+      "relation": "isDescribedBy",
+      "resource_type": "other"
+    },
+    {
+      "identifier": "https://github.com/navinaamuthan/ai-ethics-framework-tool",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "version": "2.0.0",
+  "language": "eng"
+}

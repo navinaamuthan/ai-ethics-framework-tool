@@ -1,0 +1,433 @@
+{
+  "proposal_id": "P04",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-19T19:52:25.471552",
+  "proposal_text": "This research proposes to develop a machine learning-based ad delivery optimisation system for deployment on a major social media platform. The system will use a multi-objective optimisation algorithm that maximises ad relevance scores and advertiser return on investment by predicting which users are most likely to engage with each advertisement. The algorithm will use thousands of user behavioural, demographic, and interest signals — excluding explicit race and gender variables — to determine ad delivery. The system will operate as a real-time auction where advertisers bid for impression opportunities, with the platform's relevance prediction model determining which users see which ads. An academic audit of this system found that even when advertisers set their targeting parameters to be fully inclusive with no demographic restrictions, the optimisation algorithm delivered employment ads predominantly to men and housing ads predominantly to white users. This skew was caused by the algorithm's financial optimisation function, which learned that majority-group users were cheaper to reach and more likely to engage. The system does not include pre-deployment fairness auditing. No mechanism for individual users to understand why they are or are not shown specific opportunity-related advertisements is planned.",
+  "context_max_requirements": 25,
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "fairness",
+    "employ",
+    "prediction",
+    "predict",
+    "scor",
+    "race",
+    "gender",
+    "social media"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art15_FreedomOfOccupation",
+    "Art20_EqualityBeforeLaw",
+    "Art21_NonDiscrimination",
+    "Art23_GenderEquality",
+    "Art31_FairWorkingConditions",
+    "Art41_GoodAdministration",
+    "Art47_RightToEffectiveRemedy",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 177,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The proposed machine learning-based ad delivery optimisation system poses significant ethical risks, including potential discrimination against certain groups, invasion of user privacy, and lack of transparency in ad delivery decisions. The system's reliance on user behavioural, demographic, and interest signals may perpetuate biases and stereotypes, leading to unfair treatment of individuals. Furthermore, the absence of pre-deployment fairness auditing and mechanisms for users to understand ad delivery decisions exacerbates these risks. The system's potential to amplify existing social inequalities and biases is a major concern.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Discrimination",
+        "severity": "High",
+        "explanation": "The system's algorithm may learn and perpetuate biases against certain groups, leading to unfair treatment and discrimination."
+      },
+      {
+        "risk": "Privacy invasion",
+        "severity": "Medium",
+        "explanation": "The system's use of user behavioural, demographic, and interest signals may infringe on users' right to privacy."
+      },
+      {
+        "risk": "Lack of transparency",
+        "severity": "High",
+        "explanation": "The absence of mechanisms for users to understand ad delivery decisions and the lack of pre-deployment fairness auditing may lead to a lack of trust and accountability in the system."
+      },
+      {
+        "risk": "Amplification of social inequalities",
+        "severity": "High",
+        "explanation": "The system's potential to amplify existing social inequalities and biases is a major concern, particularly in the context of employment and housing ads."
+      },
+      {
+        "risk": "Inadequate data protection",
+        "severity": "Medium",
+        "explanation": "The system's use of user data may not be adequately protected, potentially leading to data breaches or misuse."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement fairness auditing and bias mitigation strategies"
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Regularly inspect and address biases in the system's data and algorithms"
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain informed consent from users and implement robust data protection measures"
+      },
+      {
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct thorough risk assessments and evaluations of the system's potential impacts"
+      },
+      {
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Minimise the use of personally identifiable information and obtain informed consent where necessary"
+      },
+      {
+        "requirement_id": "ACM021",
+        "requirement_text": "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider the potential risks and harms associated with the system's deployment"
+      },
+      {
+        "requirement_id": "ACM023",
+        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Assess the system's potential to discriminate or negatively impact certain groups"
+      },
+      {
+        "requirement_id": "ACM028",
+        "requirement_text": "Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Regularly inspect the system's models and datasets for biases and limitations"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The system's potential to discriminate against certain groups is a major concern, particularly in the context of employment and housing ads."
+      },
+      {
+        "article": "Article 20",
+        "right_name": "Equality Before the Law",
+        "relevance": "The system's algorithm may perpetuate biases and stereotypes, leading to unfair treatment and discrimination."
+      },
+      {
+        "article": "Article 23",
+        "right_name": "Gender Equality",
+        "relevance": "The system's potential to amplify existing social inequalities and biases is a major concern, particularly in the context of employment and housing ads."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The system's use of user behavioural, demographic, and interest signals may infringe on users' right to privacy."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The system's use of user data may not be adequately protected, potentially leading to data breaches or misuse."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of fairness auditing and bias mitigation in AI systems, particularly in high-stakes applications such as hiring."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The potential risks and harms associated with the deployment of AI systems, particularly in law enforcement and surveillance applications."
+      },
+      {
+        "incident_id": "AIAAIC-015",
+        "incident_title": "Uber Surge Pricing Discrimination",
+        "lesson": "The potential for AI systems to perpetuate biases and discriminate against certain groups, particularly in the context of pricing and resource allocation."
+      },
+      {
+        "incident_id": "AIAAIC-021",
+        "incident_title": "HireVue Automated Video Interview Bias",
+        "lesson": "The importance of fairness auditing and bias mitigation in AI systems, particularly in high-stakes applications such as hiring and employment."
+      },
+      {
+        "incident_id": "AIAAIC-022",
+        "incident_title": "Deliveroo Algorithmic Dismissal",
+        "lesson": "The potential risks and harms associated with the deployment of AI systems, particularly in the context of employment and worker rights."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement fairness auditing and bias mitigation strategies",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Obtain informed consent from users and implement robust data protection measures",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct thorough risk assessments and evaluations of the system's potential impacts",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Regularly inspect and address biases in the system's data and algorithms",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Develop and implement mechanisms for users to understand ad delivery decisions",
+        "priority": "Low"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Implement fairness auditing and bias mitigation strategies",
+      "Obtain informed consent from users and implement robust data protection measures",
+      "Conduct thorough risk assessments and evaluations of the system's potential impacts"
+    ],
+    "tier2_reflective_prompts": [
+      "How might the system's algorithm perpetuate biases and stereotypes, and what strategies can be implemented to mitigate these risks?",
+      "What are the potential risks and harms associated with the deployment of the system, and how can these be addressed?",
+      "How can the system be designed to promote transparency and accountability in ad delivery decisions?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "fairness",
+        "employ",
+        "prediction",
+        "predict",
+        "scor",
+        "race",
+        "gender",
+        "social media"
+      ],
+      "rights_matched": 10,
+      "requirements_retrieved": 177,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "HE014",
+        "HE038",
+        "R028"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "HE014",
+        "HE038",
+        "R028",
+        "R085",
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "ACM011",
+        "ACM037",
+        "HE020",
+        "R020",
+        "R050",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM001",
+        "ACM035",
+        "AI017",
+        "AI019",
+        "AI022",
+        "HE005",
+        "HE027",
+        "HE029",
+        "HE048",
+        "R010",
+        "R054",
+        "R055",
+        "R074",
+        "R082",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073"
+      ],
+      "requirements_cited": [
+        "ACM003",
+        "ACM004",
+        "ACM006",
+        "ACM007",
+        "ACM016",
+        "ACM021",
+        "ACM023",
+        "ACM028"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-015",
+        "AIAAIC-021"
+      ]
+    }
+  }
+}

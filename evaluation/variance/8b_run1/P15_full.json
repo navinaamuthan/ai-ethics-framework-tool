@@ -1,0 +1,285 @@
+{
+  "proposal_id": "P15",
+  "mode": "full",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T20:32:35.137875",
+  "proposal_text": "This research proposes to analyse anonymised Dublin Bus and Luas smart card tap-on data to model public transport usage patterns across different times of day, routes, and weather conditions. The dataset consists of aggregated journey counts per route per hour provided by the National Transport Authority under an open data licence. No individual passenger records are included and no re-identification is possible from the aggregated data. The analysis will use time series forecasting and clustering algorithms to identify underserved routes and peak demand periods. Results will be shared with Dublin City Council to inform transport planning decisions. The environmental impact of the computational resources required for the analysis will be documented. No AI system will be deployed in any operational context.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
+  "keywords": [
+    "data",
+    "environment"
+  ],
+  "matched_rights": [
+    "Art37_EnvironmentalProtection",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 139,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "This research proposal involves the analysis of anonymised public transport data, which poses risks to privacy and potentially environmental impact. The use of time series forecasting and clustering algorithms may also perpetuate biases in data and model outputs.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Perpetuation of biases in data and model outputs",
+        "severity": "High",
+        "explanation": "The research proposal does not explicitly address how biases will be considered and ameliorated, which is a mandatory requirement (ACM003)."
+      },
+      {
+        "risk": "Environmental impact of computational resources",
+        "severity": "Medium",
+        "explanation": "The proposal mentions documenting the environmental impact, but it is unclear whether this will be sufficient to mitigate potential risks (ACM026)."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop a plan to address potential biases in data and model outputs"
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Regularly review and update the analysis to ensure it does not perpetuate biases"
+      },
+      {
+        "requirement_id": "ACM026",
+        "requirement_text": "Consider whether research negatively impacts environment — fossil fuel extraction, consumption, greenhouse gas production",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Document and mitigate the environmental impact of computational resources"
+      },
+      {
+        "requirement_id": "AI002",
+        "requirement_text": "Record necessity status: FRIA Required or FRIA Not Required",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Determine whether a FRIA is required for this research"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 7 PrivateLife",
+        "right_name": "Right to private life",
+        "relevance": "The analysis of anonymised public transport data may still pose risks to individuals' right to privacy"
+      },
+      {
+        "article": "Article 8 DataProtection",
+        "right_name": "Right to protection of personal data",
+        "relevance": "Although the data is anonymised, there is still a risk that it could be re-identified or linked to other datasets"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
+        "lesson": "The importance of regularly reviewing and updating analysis to prevent perpetuation of biases"
+      },
+      {
+        "incident_id": "AIAAIC-011",
+        "incident_title": "Facebook Discriminatory Ad Targeting",
+        "lesson": "The need for careful consideration of potential biases in data and model outputs"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Regularly review and update the analysis to ensure it does not perpetuate biases",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Document and mitigate the environmental impact of computational resources",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Develop a plan to address potential biases in data and model outputs"
+    ],
+    "tier2_reflective_prompts": [
+      "How will you ensure that the analysis does not perpetuate biases?",
+      "What measures will you take to mitigate the environmental impact of computational resources?"
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "environment"
+      ],
+      "rights_matched": 4,
+      "requirements_retrieved": 139,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM026",
+        "ACM038",
+        "HE018",
+        "HE051",
+        "R052",
+        "R087",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM026",
+        "ACM038",
+        "HE018",
+        "HE051",
+        "R052",
+        "R087",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R054",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE013",
+        "HE033",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM003",
+        "ACM004",
+        "ACM026",
+        "AI002"
+      ],
+      "incidents_sample": [
+        "AIAAIC-022",
+        "AIAAIC-034",
+        "AIAAIC-036",
+        "AIAAIC-002",
+        "AIAAIC-007"
+      ]
+    }
+  }
+}
