@@ -36,7 +36,7 @@ for gt in sorted(PROPOSALS, key=lambda p: p["id"]):
     meta = d.get("_retrieval_metadata") or d.get("assessment", {}).get("_retrieval_metadata") or {}
     retrieved = {norm_id(x) for x in (meta.get("requirements_retrieved_ids") or [])} - {""}
     if not retrieved:
-        reqs, _, _, _ = retrieve_all_for_proposal(d["proposal_text"])
+        reqs, _, _, _, _ = retrieve_all_for_proposal(d["proposal_text"])
         retrieved = {norm_id(r["id"]) for r in reqs} - {""}
     kept = cited & retrieved
     halluc += len(cited - retrieved)

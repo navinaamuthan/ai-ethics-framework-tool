@@ -143,27 +143,35 @@ def assess_proposal(
     # ── MODE: KG ONLY ──
     if mode == "kg_only":
         print("\n[Step 1] Extracting keywords...")
-        reqs, incidents, rights, keywords = retrieve_all_for_proposal(proposal)
+        reqs, incidents, rights, keywords, risk_cats = retrieve_all_for_proposal(proposal)
         print(f"  Keywords: {keywords}")
         print(f"  Rights matched: {len(rights)}")
         print(f"  Requirements retrieved: {len(reqs)}")
         print(f"  Incidents retrieved: {len(incidents)}")
+        print(f"  Risk categories: {[c['id'] for c in risk_cats]}")
 
         result_metadata["keywords"] = keywords
         result_metadata["matched_rights"] = rights
         result_metadata["retrieved_requirements"] = reqs
         result_metadata["retrieved_incidents"] = incidents
+        result_metadata["retrieved_risk_categories"] = risk_cats
+        result_metadata["rights_disambiguation"] = getattr(
+            retrieve_all_for_proposal, "last_disambiguation", "not_applicable"
+        )
         result_metadata["assessment"] = {
             "note": "KG-only mode — no LLM interpretation",
             "requirements_count": len(reqs),
             "incidents_count": len(incidents),
             "rights_count": len(rights),
+            "risk_categories_count": len(risk_cats),
             "confidence_flag": _confidence_flag(keywords, reqs),
             "_retrieval_metadata": {
                 "keywords": keywords,
                 "rights_matched": len(rights),
                 "requirements_retrieved": len(reqs),
                 "incidents_retrieved": len(incidents),
+                "risk_categories": [c["id"] for c in risk_cats],
+                "rights_disambiguation": result_metadata["rights_disambiguation"],
                 "requirements_sample": [r["id"] for r in reqs[:10]],
                 "requirements_retrieved_ids": [r["id"] for r in reqs],
                 "requirements_cited": [],
@@ -204,16 +212,22 @@ def assess_proposal(
 
     # ── MODE: FULL PIPELINE (KG + LLM) ──
     print("\n[Step 1] Extracting keywords from proposal...")
-    reqs, incidents, rights, keywords = retrieve_all_for_proposal(proposal)
+    reqs, incidents, rights, keywords, risk_cats = retrieve_all_for_proposal(proposal)
     print(f"  Keywords found: {keywords}")
     print(f"  Charter rights matched: {len(rights)}")
     print(f"  Requirements retrieved: {len(reqs)}")
     print(f"  Incidents retrieved: {len(incidents)}")
+    print(f"  Risk categories in scope: {[c['id'] for c in risk_cats]}")
+    print(f"  Rights disambiguation: {getattr(retrieve_all_for_proposal, 'last_disambiguation', 'n/a')}")
 
     result_metadata["keywords"] = keywords
     result_metadata["matched_rights"] = rights
     result_metadata["retrieved_requirements_count"] = len(reqs)
     result_metadata["retrieved_incidents_count"] = len(incidents)
+    result_metadata["retrieved_risk_categories"] = risk_cats
+    result_metadata["rights_disambiguation"] = getattr(
+        retrieve_all_for_proposal, "last_disambiguation", "not_applicable"
+    )
 
     if not reqs and not incidents:
         print("  [WARNING] No KG results retrieved. LLM will operate without grounding.")
@@ -226,6 +240,7 @@ def assess_proposal(
         max_requirements=context_max_requirements,
         total_requirements=len(reqs),
         max_requirement_text_chars=requirement_text_char_limit(context_max_requirements),
+        risk_categories=risk_cats,
     )
 
     print("\n[Step 3] Building assessment prompt...")
@@ -277,7 +292,18 @@ def _save_output(
     mode: str = "full",
     output_dir: str = None,
 ):
-    """Save assessment output to JSON file."""
+    """Save assessment output to JSON file.
+
+    Guards against clobbering a previously-saved *valid* assessment with a
+    failure result (e.g. an "LLM returned empty response" error from a
+    transient rate-limit/timeout during a re-run). If the data being saved
+    represents a hard failure (top-level "error" key, or a "parse_error"
+    with no usable assessment content) and a file already exists at the
+    target path that does NOT itself contain a top-level "error"/"parse_error",
+    we refuse to overwrite it and instead write the failure to a sibling
+    "*_FAILED_<timestamp>.json" file so the failure is still visible for
+    debugging without destroying good prior data.
+    """
     save_dir = output_dir or OUTPUT_DIR
     os.makedirs(save_dir, exist_ok=True)
 
@@ -288,6 +314,38 @@ def _save_output(
         filename = f"assessment_{timestamp}_{mode}.json"
 
     filepath = os.path.join(save_dir, filename)
+
+    assessment = data.get("assessment", {}) if isinstance(data, dict) else {}
+    is_failure = isinstance(assessment, dict) and (
+        "error" in assessment or "parse_error" in assessment
+    )
+
+    if is_failure and os.path.exists(filepath):
+        try:
+            with open(filepath, "r") as f:
+                existing = json.load(f)
+            existing_assessment = (
+                existing.get("assessment", {}) if isinstance(existing, dict) else {}
+            )
+            existing_is_failure = isinstance(existing_assessment, dict) and (
+                "error" in existing_assessment or "parse_error" in existing_assessment
+            )
+        except (OSError, json.JSONDecodeError):
+            existing_is_failure = True  # unreadable/corrupt — safe to treat as no valid data to protect
+
+        if not existing_is_failure:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            base, ext = os.path.splitext(filepath)
+            failed_path = f"{base}_FAILED_{timestamp}{ext}"
+            with open(failed_path, "w") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            print(
+                f"  [PROTECTED] Existing valid result at {filepath} was NOT "
+                f"overwritten by this failure. Failure details saved to "
+                f"{failed_path} instead."
+            )
+            return
+
     with open(filepath, "w") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
     print(f"  [SAVED] {filepath}")

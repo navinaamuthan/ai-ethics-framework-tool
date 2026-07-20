@@ -8,6 +8,8 @@ Categories:
   E6 rights retrieval miss        (right never matched)
   E7 extra citation               (cited requirement outside expected set;
                                    not necessarily wrong -- reported separately)
+  E8 risk-category miss           (expected RiskCategory not surfaced in
+                                   identified_risks[].risk_category)
 All computed against synthetic_proposals.PROPOSALS (the corrected ground truth).
 """
 import json, re, sys
@@ -16,14 +18,36 @@ from collections import Counter, defaultdict
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "rag-pipeline"))
 from synthetic_proposals import PROPOSALS
-from sparql_retrieval import retrieve_all_for_proposal
+from sparql_retrieval import retrieve_all_for_proposal, set_retrieval_backend
+
+# Prefer local TTL so taxonomy scoring works without GraphDB
+set_retrieval_backend("auto")
 
 SRC = Path(__file__).parent.parent / "evaluation/results/llama-3.3-70b"
 TIER = {"Low": 0, "Medium": 1, "High": 2}
 FW = lambda rid: ("EUAIAct" if rid.startswith("AI") else "HorizonEurope" if rid.startswith("HE")
                   else "ACMConference" if rid.startswith("ACM") else "REAMS")
+
+
 def norm_right(s):
     m = re.search(r"Art(?:icle)?\s*(\d+)", str(s)); return f"Art{m.group(1)}" if m else None
+
+
+def expected_risk_categories(p: dict) -> set:
+    """Ground-truth risk categories: expected_risk_categories or expected_risks."""
+    cats = p.get("expected_risk_categories") or p.get("expected_risks") or []
+    return {str(c).strip() for c in cats if c}
+
+
+def surfaced_risk_categories(assessment: dict) -> set:
+    """Categories the LLM (or post-process) actually emitted."""
+    out = set()
+    for r in assessment.get("identified_risks", []) or []:
+        cat = r.get("risk_category") or r.get("category")
+        if cat:
+            out.add(str(cat).strip())
+    return out
+
 
 tax = Counter(); detail = defaultdict(list)
 fw_exp, fw_ret, fw_cit = Counter(), Counter(), Counter()
@@ -54,10 +78,17 @@ for p in PROPOSALS:
     # rights
     matched = {norm_right(r) for r in d.get("matched_rights", [])} - {None}
     cited_rights = {norm_right(r.get("article")) for r in a.get("charter_rights_at_risk", [])} - {None}
-    exp_rights = {norm_right(r) for r in p["expected_rights"]} - {None}
+    exp_rights = {norm_right(r) for r in p.get("expected_rights", p.get("expected_charter_articles", []))} - {None}
     for rt in exp_rights - cited_rights:
         if rt in matched: tax["E5 rights generation miss"] += 1; detail["E5"].append(f"{pid}:{rt}")
         else: tax["E6 rights retrieval miss"] += 1; detail["E6"].append(f"{pid}:{rt}")
+
+    # E8: risk-category miss
+    exp_cats = expected_risk_categories(p)
+    got_cats = surfaced_risk_categories(a)
+    for cat in exp_cats - got_cats:
+        tax["E8 risk-category miss"] += 1
+        detail["E8"].append(f"{pid}:{cat}")
 
 print("=== ERROR TAXONOMY (20 proposals, Llama 3.3 70B) ===")
 for k in sorted(tax): print(f"  {k}: {tax[k]}")
@@ -70,5 +101,6 @@ for fw in ("REAMS", "EUAIAct", "HorizonEurope", "ACMConference"):
 out = {"taxonomy": dict(tax), "detail": {k: v for k, v in detail.items()},
        "per_framework": {fw: {"expected": fw_exp[fw], "retrieved": fw_ret[fw], "cited": fw_cit[fw]}
                          for fw in ("REAMS", "EUAIAct", "HorizonEurope", "ACMConference")}}
+Path(__file__).parent.joinpath("results").mkdir(exist_ok=True)
 json.dump(out, open(Path(__file__).parent / "results/error_taxonomy.json", "w"), indent=2)
 print("\nSaved analysis/results/error_taxonomy.json")

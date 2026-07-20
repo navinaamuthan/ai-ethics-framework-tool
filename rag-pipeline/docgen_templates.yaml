@@ -29,6 +29,8 @@ FRIA:
     label: Affected Rights
   - pool_key: risk_identification
     label: Risk Identification
+  - pool_key: risk_category_breakdown
+    label: Risk Category Breakdown
   - pool_key: severity_assessment
     label: Severity Assessment
   - pool_key: mitigation_measures

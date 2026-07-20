@@ -2,8 +2,9 @@
   "proposal_id": "P12",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-05T19:04:49.048710",
+  "timestamp": "2026-07-20T14:35:16.835371",
   "proposal_text": "This research proposes to develop a machine learning model to optimise hospital bed allocation across three Dublin hospitals. The model will predict patient length of stay, readmission risk, and discharge timing using electronic health records including diagnosis codes, vital signs, medication history, and demographic information including age, gender, and medical card status. The training dataset consists of 80,000 anonymised patient records from 2018-2024. The model will generate daily recommendations for bed managers on patient transfers and early discharge candidates. The researchers acknowledge that medical card status (a proxy for socioeconomic deprivation) could influence the model's predictions in ways that disadvantage lower-income patients. The model outputs will be advisory but will be integrated into the hospital's electronic patient record system. No mechanism for clinical override documentation has been designed.",
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "data",
@@ -25,438 +26,51 @@
     "Art23_GenderEquality",
     "Art2_RightToLife",
     "Art35_HealthCare",
-    "Art41_GoodAdministration",
     "Art47_RightToEffectiveRemedy",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 188,
+  "retrieved_requirements_count": 142,
   "retrieved_incidents_count": 8,
-  "assessment": {
-    "risk_summary": "The proposed research involves developing a machine learning model to optimise hospital bed allocation, which poses risks related to biased predictions, potential discrimination against vulnerable groups, and lack of clinical override mechanisms. The use of electronic health records, including sensitive information such as medical card status, raises concerns about data protection and privacy. The integration of the model's outputs into the hospital's electronic patient record system without a mechanism for clinical override documentation increases the risk of autonomous decision-making. The potential for biased predictions and lack of transparency in the decision-making process may lead to unintended consequences, such as unequal access to healthcare services.",
-    "overall_risk_level": "High",
-    "identified_risks": [
-      {
-        "risk": "Biased predictions",
-        "severity": "High",
-        "explanation": "The model's predictions may be influenced by socioeconomic deprivation, leading to discriminatory outcomes"
-      },
-      {
-        "risk": "Lack of clinical override mechanisms",
-        "severity": "High",
-        "explanation": "The absence of a mechanism for clinical override documentation may lead to autonomous decision-making, potentially resulting in harm to patients"
-      },
-      {
-        "risk": "Data protection and privacy concerns",
-        "severity": "Medium",
-        "explanation": "The use of electronic health records, including sensitive information, raises concerns about data protection and privacy"
-      },
-      {
-        "risk": "Lack of transparency in decision-making process",
-        "severity": "Medium",
-        "explanation": "The integration of the model's outputs into the hospital's electronic patient record system without transparency may lead to unintended consequences"
-      },
-      {
-        "risk": "Potential for unequal access to healthcare services",
-        "severity": "High",
-        "explanation": "The model's predictions may perpetuate existing healthcare disparities, leading to unequal access to healthcare services"
-      }
-    ],
-    "applicable_requirements": [
-      {
-        "requirement_id": "ACM020",
-        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough assessment of the dataset's representativeness and communicate the results"
-      },
-      {
-        "requirement_id": "ACM025",
-        "requirement_text": "Communicate whether approach could facilitate deceptive interactions causing harm",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Evaluate the potential for the model to facilitate deceptive interactions and communicate the results"
-      },
-      {
-        "requirement_id": "ACM027",
-        "requirement_text": "Research must not build upon or facilitate illegal activity",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the research does not facilitate illegal activity, such as discrimination"
-      },
-      {
-        "requirement_id": "HE019",
-        "requirement_text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Assess the potential impact of the model on democratic processes and social relations"
-      },
-      {
-        "requirement_id": "HE021",
-        "requirement_text": "It must be made clear to end-users they are interacting with an AI system",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that end-users are aware they are interacting with an AI system"
-      },
-      {
-        "requirement_id": "HE042",
-        "requirement_text": "Test whether users understand they are interacting with non-human agent",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Test user understanding of the AI system"
-      },
-      {
-        "requirement_id": "HE050",
-        "requirement_text": "Have you considered whether your AI system could be misused or diverted from its original purpose",
-        "framework": "HorizonEurope",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider the potential for misuse or diversion of the AI system"
-      },
-      {
-        "requirement_id": "AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a FRIA to assess the risks associated with the AI system"
-      },
-      {
-        "requirement_id": "AI008",
-        "requirement_text": "State the intended purpose of the AI system",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Clearly state the intended purpose of the AI system"
-      }
-    ],
-    "charter_rights_at_risk": [
-      {
-        "article": "Article 21",
-        "right_name": "Non-Discrimination",
-        "relevance": "The model's predictions may perpetuate existing healthcare disparities, leading to discriminatory outcomes"
-      },
-      {
-        "article": "Article 35",
-        "right_name": "HealthCare",
-        "relevance": "The model's outputs may impact access to healthcare services, potentially leading to unequal access"
-      },
-      {
-        "article": "Article 7",
-        "right_name": "PrivateLife",
-        "relevance": "The use of electronic health records raises concerns about data protection and privacy"
-      },
-      {
-        "article": "Article 8",
-        "right_name": "DataProtection",
-        "relevance": "The use of sensitive information, such as medical card status, raises concerns about data protection"
-      },
-      {
-        "article": "Article 41",
-        "right_name": "GoodAdministration",
-        "relevance": "The lack of transparency in the decision-making process may lead to unintended consequences"
-      }
-    ],
-    "historical_precedents": [
-      {
-        "incident_id": "AIAAIC-001",
-        "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of ensuring that AI systems do not perpetuate existing biases and discriminatory practices"
-      },
-      {
-        "incident_id": "AIAAIC-002",
-        "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The potential for AI systems to lead to false or discriminatory outcomes, highlighting the need for robust testing and validation"
-      },
-      {
-        "incident_id": "AIAAIC-003",
-        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The importance of ensuring that AI systems are designed and tested to avoid causing harm or perpetuating discriminatory practices"
-      },
-      {
-        "incident_id": "AIAAIC-005",
-        "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The potential for AI systems to perpetuate existing biases and discriminatory practices, highlighting the need for diverse and representative datasets"
-      },
-      {
-        "incident_id": "AIAAIC-009",
-        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The importance of ensuring that AI systems are designed and tested to prioritize human safety and well-being"
-      }
-    ],
-    "recommended_mitigations": [
-      {
-        "mitigation": "Conduct thorough testing and validation of the model",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Implement mechanisms for clinical override and documentation",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Ensure transparency in the decision-making process",
-        "priority": "Medium"
-      },
-      {
-        "mitigation": "Implement data protection and privacy measures",
-        "priority": "Medium"
-      },
-      {
-        "mitigation": "Conduct regular audits and assessments to ensure compliance with regulatory requirements",
-        "priority": "Low"
-      }
-    ],
-    "tier1_mandatory_actions": [
-      "Conduct a thorough assessment of the dataset's representativeness",
-      "Evaluate the potential for the model to facilitate deceptive interactions",
-      "Ensure that the research does not facilitate illegal activity, such as discrimination",
-      "Assess the potential impact of the model on democratic processes and social relations",
-      "Ensure that end-users are aware they are interacting with an AI system",
-      "Test user understanding of the AI system",
-      "Conduct a FRIA to assess the risks associated with the AI system",
-      "Clearly state the intended purpose of the AI system"
-    ],
-    "tier2_reflective_prompts": [
-      "Consider the potential for misuse or diversion of the AI system",
-      "Reflect on the potential impact of the model on vulnerable populations",
-      "Consider the potential for the model to perpetuate existing biases and discriminatory practices"
-    ],
-    "reams_clearance_likely": false,
-    "confidence_flag": "HIGH",
-    "_retrieval_metadata": {
-      "keywords": [
-        "data",
-        "health",
-        "medical",
-        "diagnos",
-        "patient",
-        "prediction",
-        "predict",
-        "gender",
-        "recommend",
-        "generat",
-        "transfer"
-      ],
-      "rights_matched": 10,
-      "requirements_retrieved": 188,
-      "incidents_retrieved": 8,
-      "requirements_sample": [
-        "ACM020",
-        "ACM025",
-        "ACM027",
-        "HE019",
-        "HE021",
-        "HE042",
-        "HE050",
-        "ACM001",
-        "ACM002",
-        "ACM011"
-      ],
-      "requirements_retrieved_ids": [
-        "ACM020",
-        "ACM025",
-        "ACM027",
-        "HE019",
-        "HE021",
-        "HE042",
-        "HE050",
-        "ACM001",
-        "ACM002",
-        "ACM011",
-        "ACM013",
-        "ACM014",
-        "ACM019",
-        "ACM024",
-        "ACM032",
-        "ACM036",
-        "AI001",
-        "AI008",
-        "AI010",
-        "AI017",
-        "AI021",
-        "HE001",
-        "HE002",
-        "HE003",
-        "HE004",
-        "HE005",
-        "HE006",
-        "HE015",
-        "HE016",
-        "HE017",
-        "HE022",
-        "HE027",
-        "HE041",
-        "HE049",
-        "R010",
-        "R011",
-        "R027",
-        "R040",
-        "R050",
-        "R051",
-        "R053",
-        "R054",
-        "R056",
-        "R076",
-        "R080",
-        "R081",
-        "R082",
-        "R086",
-        "ACM012",
-        "ACM023",
-        "ACM028",
-        "AI016",
-        "AI023",
-        "AI024",
-        "HE012",
-        "HE013",
-        "HE032",
-        "HE033",
-        "HE037",
-        "R028",
-        "R085",
-        "R021",
-        "ACM016",
-        "ACM017",
-        "ACM018",
-        "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
-        "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI009",
-        "AI012",
-        "AI015",
-        "AI018",
-        "AI020",
-        "AI026",
-        "AI027",
-        "AI028",
-        "AI029",
-        "AI030",
-        "HE011",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM035",
-        "AI019",
-        "AI022",
-        "HE029",
-        "HE048",
-        "R055",
-        "R074",
-        "ACM003",
-        "ACM004",
-        "ACM005",
-        "ACM007",
-        "ACM008",
-        "ACM010",
-        "ACM015",
-        "ACM022",
-        "ACM031",
-        "AI011",
-        "AI013",
-        "AI025",
-        "HE007",
-        "HE008",
-        "HE009",
-        "HE031",
-        "HE036",
-        "R019",
-        "R023",
-        "R026",
-        "R042",
-        "R047",
-        "R048",
-        "R049",
-        "R067",
-        "R068",
-        "R071",
-        "R083",
-        "R084",
-        "ACM006",
-        "ACM009",
-        "AI014",
-        "HE010",
-        "HE035",
-        "R005",
-        "R014",
-        "R018",
-        "R022",
-        "R024",
-        "R025",
-        "R029",
-        "R031",
-        "R033",
-        "R063",
-        "R064",
-        "R065",
-        "R066",
-        "R069",
-        "R070",
-        "R072",
-        "R073"
-      ],
-      "requirements_cited": [
-        "ACM020",
-        "ACM025",
-        "ACM027",
-        "HE019",
-        "HE021",
-        "HE042",
-        "HE050",
-        "AI001",
-        "AI008"
-      ],
-      "incidents_sample": [
-        "AIAAIC-014",
-        "AIAAIC-018",
-        "AIAAIC-027",
-        "AIAAIC-003",
-        "AIAAIC-005"
-      ]
+  "retrieved_risk_categories": [
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system."
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system."
+    },
+    {
+      "id": "PhysicalHarm",
+      "label": "Physical Harm",
+      "definition": "Risk of bodily injury, death, or physical safety compromise caused by an AI system."
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions."
+    },
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system."
+    },
+    {
+      "id": "Manipulation",
+      "label": "",
+      "definition": ""
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system."
     }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "error": "LLM returned empty response"
   }
 }

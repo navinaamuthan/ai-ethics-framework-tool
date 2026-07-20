@@ -2,6 +2,8 @@
 prompt_builder.py
 Builds structured prompts for the ethics assessment LLM.
 Combines: research proposal + retrieved KG context → assessment prompt.
+
+Phase 2: risk-category taxonomy constraint + transparency/well-being surfacing rule.
 """
 
 RISK_CALIBRATION = """
@@ -33,6 +35,7 @@ def build_context(
     max_requirements: int = DEFAULT_MAX_REQUIREMENTS,
     total_requirements: int = None,
     max_requirement_text_chars: int = None,
+    risk_categories: list = None,
 ) -> str:
     """Format retrieved KG data as human-readable context for the LLM."""
     total_requirements = total_requirements if total_requirements is not None else len(requirements)
@@ -49,16 +52,33 @@ def build_context(
         text = r["text"]
         if max_requirement_text_chars and len(text) > max_requirement_text_chars:
             text = text[:max_requirement_text_chars].rstrip() + "..."
-        req_lines.append(f"  [{fw}] {r['id']}: {text} ({tier_label})")
+        section = r.get("section_reference") or ""
+        section_bit = f" [section: {section}]" if section else ""
+        risk_bit = ""
+        if r.get("risk_categories"):
+            risk_bit = f" [risks: {', '.join(r['risk_categories'])}]"
+        req_lines.append(f"  [{fw}] {r['id']}: {text} ({tier_label}){section_bit}{risk_bit}")
 
     inc_lines = []
     for i in incidents:
-        inc_lines.append(f"  {i['id']}: {i['title']}")
+        risk_bit = ""
+        if i.get("risk_categories"):
+            risk_bit = f" [risks: {', '.join(i['risk_categories'])}]"
+        inc_lines.append(f"  {i['id']}: {i['title']}{risk_bit}")
 
     rights_clean = []
     for r in rights:
         name = r.replace("Art", "Article ").replace("_", " ")
         rights_clean.append(f"  {name}")
+
+    risk_cat_lines = []
+    for c in risk_categories or []:
+        label = c.get("label") or c.get("id", "")
+        definition = c.get("definition") or ""
+        if definition:
+            risk_cat_lines.append(f"  - {c['id']} ({label}): {definition}")
+        else:
+            risk_cat_lines.append(f"  - {c['id']}")
 
     context = f"""
 RETRIEVED ETHICS REQUIREMENTS FROM KNOWLEDGE GRAPH ({total_requirements} total, showing top {len(shown_requirements)}):
@@ -69,8 +89,24 @@ EU CHARTER OF FUNDAMENTAL RIGHTS AT RISK ({len(rights)} articles):
 
 HISTORICAL AI INCIDENT PRECEDENTS ({len(incidents)} incidents):
 {chr(10).join(inc_lines) if inc_lines else '  No incidents retrieved.'}
+
+RISK CATEGORIES IN SCOPE FOR THIS PROPOSAL ({len(risk_categories or [])} categories from retrieved evidence):
+{chr(10).join(risk_cat_lines) if risk_cat_lines else '  No risk categories retrieved — use only formal AIEF RiskCategory labels if needed.'}
 """
     return context
+
+
+_RISK_CATEGORY_INSTRUCTIONS = """
+RISK CATEGORY CONSTRAINTS:
+- Every identified risk MUST include a "risk_category" field.
+- "risk_category" MUST be drawn from the "RISK CATEGORIES IN SCOPE FOR THIS PROPOSAL" list above.
+  Do not invent free-text category labels. Use the exact category id (e.g. ChildrenRights, Surveillance, PrivacyBreach).
+- If a requirement tagged section "Transparency" or "Well-being" (environmental) was retrieved above and is
+  relevant to this proposal, you MUST surface it as its own identified risk — do not omit it even if
+  lower severity than the primary risks. Transparency should be treated as a near-default concern for
+  any AI system that interacts with end-users; environmental/well-being disclosure should be surfaced
+  when compute, training scale, or environmental-impact requirements are in scope.
+"""
 
 
 def build_assessment_prompt(proposal: str, context: str) -> str:
@@ -91,7 +127,7 @@ INSTRUCTIONS:
 - Be specific and actionable.
 - Return your assessment as valid JSON only. No markdown. No explanation outside the JSON.
 - The JSON arrays must contain MULTIPLE items — never just 1 or 2 for a substantive proposal.
-
+{_RISK_CATEGORY_INSTRUCTIONS}
 {RISK_CALIBRATION}
 RESEARCH PROPOSAL:
 {proposal}
@@ -104,7 +140,7 @@ Return ONLY valid JSON:
   "risk_summary": "3-4 sentence summary of ALL primary ethical risks",
   "overall_risk_level": "High or Medium or Low",
   "identified_risks": [
-    {{"risk": "...", "severity": "High or Medium or Low", "explanation": "..."}}
+    {{"risk": "...", "risk_category": "e.g. ChildrenRights", "severity": "High or Medium or Low", "explanation": "..."}}
   ],
   "applicable_requirements": [
     {{"requirement_id": "e.g. R085", "requirement_text": "...", "framework": "REAMS or EUAIAct or HorizonEurope or ACMConference", "tier": "Tier 1 Mandatory or Tier 2 Reflective", "action_needed": "..."}}
@@ -139,7 +175,14 @@ INSTRUCTIONS:
 - Be specific and actionable.
 - Return your assessment as valid JSON only. No markdown. No explanation outside the JSON.
 - The JSON arrays must contain MULTIPLE items — never just 1 or 2 for a substantive proposal.
+- Every identified risk MUST include a "risk_category" drawn from the AIEF RiskCategory taxonomy
+  (e.g. PhysicalHarm, PsychologicalHarm, FinancialHarm, ReputationalHarm, PrivacyBreach,
+  Discrimination, EnvironmentalHarm, DualUseMisuse, FunctionCreep, WorkplaceSafetyRisk,
+  DemocraticProcessHarm, AddictionRisk, Surveillance, Manipulation, ChildrenRights, Dignity,
+  GenderHarm, EconomicHarm, EmploymentHarm, Accountability, LibertyViolation, ExpressionHarm).
+  Do not invent free-text category labels.
 
+{RISK_CALIBRATION}
 RESEARCH PROPOSAL:
 {proposal}
 
@@ -148,7 +191,7 @@ Return ONLY valid JSON:
   "risk_summary": "3-4 sentence summary of ALL primary ethical risks",
   "overall_risk_level": "High or Medium or Low",
   "identified_risks": [
-    {{"risk": "...", "severity": "High or Medium or Low", "explanation": "..."}}
+    {{"risk": "...", "risk_category": "e.g. ChildrenRights", "severity": "High or Medium or Low", "explanation": "..."}}
   ],
   "applicable_requirements": [
     {{"requirement_id": "e.g. R085", "requirement_text": "...", "framework": "REAMS or EUAIAct or HorizonEurope or ACMConference", "tier": "Tier 1 Mandatory or Tier 2 Reflective", "action_needed": "..."}}
@@ -187,7 +230,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     proposal = next(p for p in PROPOSALS if p["id"] == args.proposal_id)
-    reqs, incidents, rights, _ = retrieve_all_for_proposal(proposal["proposal_text"])
+    reqs, incidents, rights, _, risk_cats = retrieve_all_for_proposal(proposal["proposal_text"])
     text_limit = requirement_text_char_limit(args.max_requirements)
     context = build_context(
         reqs,
@@ -196,12 +239,14 @@ if __name__ == "__main__":
         max_requirements=args.max_requirements,
         total_requirements=len(reqs),
         max_requirement_text_chars=text_limit,
+        risk_categories=risk_cats,
     )
     prompt = build_assessment_prompt(proposal["proposal_text"], context)
     print(f"Proposal: {args.proposal_id}")
     print(f"Retrieved requirements: {len(reqs)}")
     print(f"Shown in context: {min(args.max_requirements, len(reqs))}")
+    print(f"Risk categories: {[c['id'] for c in risk_cats]}")
     print(f"Requirement text limit: {text_limit or 'none'}")
     print(f"Prompt length: {len(prompt)} characters (~{len(prompt) // 2} tokens est.)")
-    print("\n--- CONTEXT PREVIEW (first 2000 chars) ---")
-    print(context[:2000])
+    print("\n--- CONTEXT PREVIEW (first 2500 chars) ---")
+    print(context[:2500])

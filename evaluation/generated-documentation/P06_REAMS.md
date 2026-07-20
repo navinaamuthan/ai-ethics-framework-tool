@@ -8,30 +8,34 @@ This project proposes to install camera-based emotion recognition systems in six
 High
 
 ## Participant Risks
-- Invasion of student privacy (High)
-- Biases in emotion recognition system (High)
-- Potential negative impact on student emotional well-being (High)
-- Lack of transparency and control (Medium)
-- Insufficient consideration of vulnerable groups (Medium)
+- Biased emotion recognition (High)
+- Lack of transparency (Medium)
+- Inadequate consent mechanisms (High)
+- Psychological harm (Medium)
+- Surveillance (High)
+- Data governance (Medium)
+- Dignity (High)
+- Privacy breach (High)
 
 ## Data Protection
-- ACM001: Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms
-- ACM002: Avoid harm — consider how data, code or other outcomes of research may cause harm
-- ACM020: Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated
-- EUAIAct AI001: Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)
-- HorizonEurope HE001: AI system must not deprive end-users or affected persons of ability to make decisions about their own lives or remove basic freedoms
-- HorizonEurope HE015: Possible negative social impacts on certain groups must be mitigated, including impacts beyond algorithmic bias
-- ACM024: Consult local laws before collecting or analysing bulk surveillance data — surveillance must not predict protected categories or endanger individual well-being
-- ACM036: Have you considered whether your NLP/ML system could out, profile or endanger vulnerable individuals?
+- ACM001: Research must contribute to society and human well-being
+- ACM002: Avoid harm
+- ACM003: Be fair and take action not to discriminate
+- ACM004: Consider and ameliorate biases in data and biased code/model outputs
+- ACM006: Respect privacy
+- ACM007: Give comprehensive evaluation of systems and their impacts
+- ACM014: All human research subjects or participants must receive appropriate compensation
+- ACM016: Datasets should minimise exposure of personally identifiable information
+- ACM027: Research must not build upon or facilitate illegal activity
 
-*Source: ACM001, ACM002, ACM020, EUAIAct AI001, HorizonEurope HE001, HorizonEurope HE015, ACM024, ACM036*
+*Source: ACM001, ACM002, ACM003, ACM004, ACM006, ACM007, ACM014, ACM016, ACM027*
 
 ## Consent Arrangements
 [NOT DERIVABLE FROM ASSESSMENT — requires manual input]
 
 ## Mitigations
-- Implementing measures to ensure the accuracy and fairness of the emotion recognition system
-- Providing students with access to their individual data and control over its use
-- Ensuring that the project complies with relevant laws and regulations, including those related to surveillance and data protection
-- Conducting a thorough analysis of the project's potential impact on vulnerable individuals, including students from diverse ethnic backgrounds or with disabilities
-- Implementing measures to mitigate the project's potential negative social impacts, including its impact on students from diverse ethnic backgrounds or with disabilities
+- Implement robust data protection measures
+- Validate the system on diverse datasets
+- Provide transparency regarding data collection and use
+- Implement measures to prevent biased emotion recognition
+- Ensure that students and parents are aware of the system's purposes and benefits

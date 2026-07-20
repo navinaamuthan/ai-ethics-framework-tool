@@ -2,8 +2,9 @@
   "proposal_id": "P08",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-05T19:03:57.182084",
+  "timestamp": "2026-07-20T14:34:15.398757",
   "proposal_text": "This project proposes to develop a conversational AI chatbot to provide initial mental health support triage for university students. The chatbot will conduct a structured conversational assessment to evaluate symptoms of anxiety and depression using validated clinical screening instruments (PHQ-9, GAD-7) adapted into conversational format. Based on the assessment, the chatbot will recommend one of three pathways: self-help resources, a scheduled counselling appointment, or immediate crisis intervention referral. The chatbot will store conversation logs for quality improvement purposes. Student data will be pseudonymised but linked to student records to enable follow-up. The chatbot will include a disclaimer that it is not a substitute for professional mental health care. The system has not been validated against clinical assessments performed by qualified professionals. Conversations will be processed by an external cloud-based NLP service.",
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "data",
@@ -24,401 +25,50 @@
   ],
   "retrieved_requirements_count": 176,
   "retrieved_incidents_count": 8,
-  "assessment": {
-    "risk_summary": "The proposed conversational AI chatbot for mental health support triage poses significant ethical risks, including potential misdiagnosis, lack of human oversight, and privacy concerns. The system's reliance on pseudonymised student data and external cloud-based NLP services raises concerns about data protection and potential function creep. Additionally, the chatbot's ability to influence students' decisions about their mental health care may impact their autonomy and human dignity.",
-    "overall_risk_level": "High",
-    "identified_risks": [
-      {
-        "risk": "Misdiagnosis or inaccurate assessment",
-        "severity": "High",
-        "explanation": "The chatbot's use of adapted clinical screening instruments may not be sufficient to accurately assess students' mental health conditions, potentially leading to misdiagnosis or inadequate support."
-      },
-      {
-        "risk": "Lack of human oversight",
-        "severity": "High",
-        "explanation": "The chatbot's autonomous decision-making process may not provide sufficient human oversight, potentially leading to inadequate or inappropriate support for students."
-      },
-      {
-        "risk": "Privacy concerns",
-        "severity": "Medium",
-        "explanation": "The storage of conversation logs and pseudonymised student data raises concerns about data protection and potential breaches of confidentiality."
-      },
-      {
-        "risk": "Function creep",
-        "severity": "Medium",
-        "explanation": "The chatbot's use of external cloud-based NLP services may lead to function creep, where the system is used for purposes beyond its original intention, potentially compromising students' privacy and autonomy."
-      },
-      {
-        "risk": "Influence on students' decisions",
-        "severity": "High",
-        "explanation": "The chatbot's ability to recommend pathways for mental health support may influence students' decisions about their care, potentially impacting their autonomy and human dignity."
-      }
-    ],
-    "applicable_requirements": [
-      {
-        "requirement_id": "ACM020",
-        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough assessment of the chatbot's dataset to ensure it is representative of the intended student population"
-      },
-      {
-        "requirement_id": "ACM025",
-        "requirement_text": "Communicate whether approach could facilitate deceptive interactions causing harm",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop strategies to prevent the chatbot from being used for deceptive or harmful interactions"
-      },
-      {
-        "requirement_id": "ACM027",
-        "requirement_text": "Research must not build upon or facilitate illegal activity",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure the chatbot is not used for any illegal or unethical purposes"
-      },
-      {
-        "requirement_id": "HE019",
-        "requirement_text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough assessment of the chatbot's potential impact on democratic processes and social relations"
-      },
-      {
-        "requirement_id": "HE021",
-        "requirement_text": "It must be made clear to end-users they are interacting with an AI system",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop clear guidelines and disclaimers to inform students they are interacting with an AI chatbot"
-      },
-      {
-        "requirement_id": "HE042",
-        "requirement_text": "Test whether users understand they are interacting with non-human agent",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct user testing to ensure students understand they are interacting with a non-human agent"
-      },
-      {
-        "requirement_id": "EUAIAct AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a FRIA to assess the chatbot's potential risks and impacts"
-      },
-      {
-        "requirement_id": "EUAIAct AI008",
-        "requirement_text": "State the intended purpose of the AI system",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Clearly define the intended purpose of the chatbot and ensure it aligns with the institution's goals and values"
-      }
-    ],
-    "charter_rights_at_risk": [
-      {
-        "article": "Article 1",
-        "right_name": "Human Dignity",
-        "relevance": "The chatbot's potential to influence students' decisions about their mental health care may impact their human dignity and autonomy"
-      },
-      {
-        "article": "Article 7",
-        "right_name": "Private Life",
-        "relevance": "The storage of conversation logs and pseudonymised student data raises concerns about students' right to private life"
-      },
-      {
-        "article": "Article 8",
-        "right_name": "Data Protection",
-        "relevance": "The chatbot's use of external cloud-based NLP services and storage of student data raises concerns about data protection and potential breaches of confidentiality"
-      },
-      {
-        "article": "Article 35",
-        "right_name": "Health Care",
-        "relevance": "The chatbot's potential to provide inadequate or inaccurate mental health support may impact students' right to health care"
-      },
-      {
-        "article": "Article 41",
-        "right_name": "Good Administration",
-        "relevance": "The chatbot's development and deployment must be transparent, accountable, and subject to oversight to ensure good administration"
-      }
-    ],
-    "historical_precedents": [
-      {
-        "incident_id": "AIAAIC-003",
-        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The importance of ensuring AI systems are designed and tested to prevent harmful or deceptive interactions"
-      },
-      {
-        "incident_id": "AIAAIC-014",
-        "incident_title": "YouTube Recommendation Radicalisation",
-        "lesson": "The potential for AI systems to amplify or perpetuate harmful or extreme content"
-      },
-      {
-        "incident_id": "AIAAIC-018",
-        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
-        "lesson": "The importance of ensuring AI systems are designed and deployed to prevent the amplification of hate speech or harmful content"
-      },
-      {
-        "incident_id": "AIAAIC-025",
-        "incident_title": "Amazon Alexa Recording Children Without Consent",
-        "lesson": "The importance of ensuring AI systems are designed and deployed with robust privacy and data protection measures"
-      },
-      {
-        "incident_id": "AIAAIC-026",
-        "incident_title": "Facial Recognition in UK Schools",
-        "lesson": "The importance of ensuring AI systems are designed and deployed with transparency, accountability, and oversight to prevent potential misuse or abuse"
-      }
-    ],
-    "recommended_mitigations": [
-      {
-        "mitigation": "Develop clear guidelines and disclaimers to inform students they are interacting with an AI chatbot",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Conduct user testing to ensure students understand they are interacting with a non-human agent",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Implement robust privacy and data protection measures to prevent breaches of confidentiality",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Develop strategies to prevent the chatbot from being used for deceptive or harmful interactions",
-        "priority": "Medium"
-      },
-      {
-        "mitigation": "Conduct a thorough assessment of the chatbot's potential impact on democratic processes and social relations",
-        "priority": "Medium"
-      }
-    ],
-    "tier1_mandatory_actions": [
-      "Conduct a thorough assessment of the chatbot's dataset to ensure it is representative of the intended student population",
-      "Develop clear guidelines and disclaimers to inform students they are interacting with an AI chatbot",
-      "Conduct user testing to ensure students understand they are interacting with a non-human agent",
-      "Implement robust privacy and data protection measures to prevent breaches of confidentiality"
-    ],
-    "tier2_reflective_prompts": [
-      "How might the chatbot's use of external cloud-based NLP services impact students' privacy and autonomy?",
-      "What potential biases or discriminatory practices might be embedded in the chatbot's decision-making process?",
-      "How might the chatbot's potential to influence students' decisions about their mental health care impact their human dignity and autonomy?"
-    ],
-    "reams_clearance_likely": false,
-    "confidence_flag": "HIGH",
-    "_retrieval_metadata": {
-      "keywords": [
-        "data",
-        "health",
-        "student",
-        "recommend",
-        "chatbot"
-      ],
-      "rights_matched": 8,
-      "requirements_retrieved": 176,
-      "incidents_retrieved": 8,
-      "requirements_sample": [
-        "ACM020",
-        "ACM025",
-        "ACM027",
-        "HE019",
-        "HE021",
-        "HE042",
-        "HE050",
-        "ACM001",
-        "ACM002",
-        "ACM011"
-      ],
-      "requirements_retrieved_ids": [
-        "ACM020",
-        "ACM025",
-        "ACM027",
-        "HE019",
-        "HE021",
-        "HE042",
-        "HE050",
-        "ACM001",
-        "ACM002",
-        "ACM011",
-        "ACM013",
-        "ACM014",
-        "ACM019",
-        "ACM024",
-        "ACM032",
-        "ACM036",
-        "AI001",
-        "AI008",
-        "AI010",
-        "AI017",
-        "AI021",
-        "HE001",
-        "HE002",
-        "HE003",
-        "HE004",
-        "HE005",
-        "HE006",
-        "HE015",
-        "HE016",
-        "HE017",
-        "HE022",
-        "HE027",
-        "HE041",
-        "HE049",
-        "R010",
-        "R011",
-        "R027",
-        "R040",
-        "R050",
-        "R051",
-        "R053",
-        "R054",
-        "R056",
-        "R076",
-        "R080",
-        "R081",
-        "R082",
-        "R086",
-        "R043",
-        "R044",
-        "R045",
-        "R055",
-        "AI024",
-        "R021",
-        "ACM016",
-        "ACM017",
-        "ACM018",
-        "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
-        "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI009",
-        "AI012",
-        "AI015",
-        "AI018",
-        "AI020",
-        "AI026",
-        "AI027",
-        "AI028",
-        "AI029",
-        "AI030",
-        "HE011",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM003",
-        "ACM004",
-        "ACM005",
-        "ACM007",
-        "ACM008",
-        "ACM010",
-        "ACM015",
-        "ACM022",
-        "ACM031",
-        "AI011",
-        "AI013",
-        "AI025",
-        "HE007",
-        "HE008",
-        "HE009",
-        "HE031",
-        "HE036",
-        "R019",
-        "R023",
-        "R026",
-        "R042",
-        "R047",
-        "R048",
-        "R049",
-        "R067",
-        "R068",
-        "R071",
-        "R083",
-        "R084",
-        "ACM006",
-        "ACM009",
-        "AI014",
-        "HE010",
-        "HE013",
-        "HE033",
-        "HE035",
-        "R005",
-        "R014",
-        "R018",
-        "R022",
-        "R024",
-        "R025",
-        "R029",
-        "R031",
-        "R033",
-        "R063",
-        "R064",
-        "R065",
-        "R066",
-        "R069",
-        "R070",
-        "R072",
-        "R073",
-        "R074"
-      ],
-      "requirements_cited": [
-        "ACM020",
-        "ACM025",
-        "ACM027",
-        "HE019",
-        "HE021",
-        "HE042",
-        "EUAIAct AI001",
-        "EUAIAct AI008"
-      ],
-      "incidents_sample": [
-        "AIAAIC-014",
-        "AIAAIC-018",
-        "AIAAIC-027",
-        "AIAAIC-003",
-        "AIAAIC-005"
-      ]
+  "retrieved_risk_categories": [
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system."
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system."
+    },
+    {
+      "id": "PhysicalHarm",
+      "label": "Physical Harm",
+      "definition": "Risk of bodily injury, death, or physical safety compromise caused by an AI system."
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions."
+    },
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system."
+    },
+    {
+      "id": "Manipulation",
+      "label": "",
+      "definition": ""
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system."
+    },
+    {
+      "id": "ChildrenRights",
+      "label": "",
+      "definition": ""
     }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "error": "LLM returned empty response"
   }
 }

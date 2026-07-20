@@ -8,23 +8,33 @@ This research proposes to develop a machine learning-based ad delivery optimisat
 High
 
 ## Participant Risks
-- Discrimination and bias in ad delivery (High)
-- Lack of transparency and explainability (High)
-- Negative impacts on democratic processes and social relations (High)
-- Inadequate consideration for universal accessibility (Medium)
-- Insufficient anti-discrimination and bias implications (Medium)
+- Discrimination against certain groups (High)
+- Privacy breaches (Medium)
+- Manipulation of user behavior (Medium)
+- Lack of transparency and accountability (High)
+- Environmental impact (Low)
+- Reputational harm (Medium)
 
 ## Data Protection
-- R085: Have you considered anti-discrimination and bias implications of your AI/technology research?
+- ACM003: Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate
+- ACM006: Respect privacy — obtain informed consent where required and protect personally identifiable information
+- ACM007: Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications
+- ACM016: Datasets should minimise exposure of personally identifiable information unless informed consent is provided
+- ACM023: Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access
+- ACM027: Research must not build upon or facilitate illegal activity — strongly discourage work that denies rights to privacy, speech, health, liberty, security, legal personhood, freedom of conscience/religion
+- ACM028: Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics
+- ACM029: Provide data and model documentation via structured templates (Model Cards, Datasheets for Datasets)
 
-*Source: R085*
+*Source: ACM003, ACM006, ACM007, ACM016, ACM023, ACM027, ACM028, ACM029*
 
 ## Consent Arrangements
-[NOT DERIVABLE FROM ASSESSMENT — requires manual input]
+Respect privacy — obtain informed consent where required and protect personally identifiable information
+
+*Source: ACM006*
 
 ## Mitigations
-- Conduct thorough audits and testing for bias and discrimination
-- Develop and implement strategies to mitigate bias and discrimination
-- Ensure transparency and explainability in the system's decision-making processes
-- Develop and implement mechanisms for individual users to understand and correct ad delivery decisions
-- Ensure that the system is designed and implemented in a way that respects universal accessibility principles
+- Implement fairness auditing and bias mitigation strategies
+- Implement robust privacy protections and obtain informed consent from users
+- Conduct a thorough risk assessment and evaluation of the system's impacts
+- Minimise the collection and use of personally identifiable information
+- Provide transparent documentation of the system's data and models

@@ -8,31 +8,33 @@ This research proposes to deploy Amazon Rekognition, a cloud-based facial recogn
 High
 
 ## Participant Risks
-- Misidentification of individuals (High)
-- Lack of independent oversight mechanisms (High)
-- Mass surveillance and privacy concerns (High)
-- Biased decision-making (High)
-- Processing of special category data without consent (High)
+- False matches and misidentification (High)
+- Privacy breaches (High)
+- Physical harm (High)
+- Surveillance and manipulation (Medium)
+- Reputational harm (Medium)
+- Lack of transparency and accountability (High)
+- Environmental and well-being concerns (Low)
 
 ## Data Protection
-- ACM020: Assess and communicate degree to which datasets are representative of intended population
-- ACM025: Communicate whether approach could facilitate deceptive interactions causing harm
-- ACM027: Research must not build upon or facilitate illegal activity
-- HE019: AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations
-- HE021: It must be made clear to end-users they are interacting with an AI system
-- EUAIAct001: Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)
-- EUAIAct008: State the intended purpose of the AI system
-- EUAIAct010: Describe the intended use — specific deployment scenarios distinct from intended purpose
 - ACM001: Research must contribute to society and human well-being
+- ACM003: Be fair and take action not to discriminate
+- ACM006: Respect privacy
+- ACM014: All human research subjects or participants must receive appropriate compensation
+- ACM016: Datasets should minimise exposure of personally identifiable information
+- ACM021: Consider whether technology can be used to harm, injure or kill people
+- ACM022: Consider risk that applications could open security vulnerabilities or cause serious accidents
+- ACM023: Consider whether technology can be used to discriminate, exclude or negatively impact people
+- ACM024: Consult local laws before collecting or analysing bulk surveillance data
 
-*Source: ACM020, ACM025, ACM027, HE019, HE021, EUAIAct001, EUAIAct008, EUAIAct010, ACM001*
+*Source: ACM001, ACM003, ACM006, ACM014, ACM016, ACM021, ACM022, ACM023, ACM024*
 
 ## Consent Arrangements
 [NOT DERIVABLE FROM ASSESSMENT — requires manual input]
 
 ## Mitigations
-- Conduct a thorough assessment of the system's potential biases and implement measures to mitigate them
-- Establish an independent oversight mechanism to address false match consequences and ensure accountability
-- Provide clear information to end-users about the system's capabilities and limitations
-- Ensure that the system is designed and deployed in a way that contributes to society and human well-being
-- Implement measures to prevent the system from being used to facilitate illegal activity or build upon existing illegal activities
+- Conduct a thorough impact assessment to identify potential harms and benefits
+- Implement robust privacy measures to protect personal data
+- Conduct an independent demographic bias audit to identify and mitigate potential biases
+- Implement data minimization techniques to reduce the risk of privacy breaches
+- Ensure that all individuals whose data is used in the system receive appropriate compensation and consent

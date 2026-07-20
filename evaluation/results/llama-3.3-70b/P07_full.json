@@ -2,8 +2,9 @@
   "proposal_id": "P07",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-05T19:03:16.290087",
+  "timestamp": "2026-07-20T14:33:55.523388",
   "proposal_text": "This research proposes to apply sentiment analysis and linguistic style detection to a corpus of 5,000 anonymised undergraduate essays submitted to the School of English at Trinity College Dublin. The aim is to investigate whether emotional tone and writing style correlate with academic grade outcomes. Essays will be collected from the past three academic years with student consent obtained retrospectively via email. The NLP pipeline will extract features including sentiment polarity, subjectivity scores, vocabulary complexity, and sentence structure patterns. The researchers will investigate whether detectable stylistic differences correlate with students' first language, gender, or socioeconomic background as indicated by fee status. All analysis will be performed on pseudonymised data with student IDs replaced by random codes. Results will be published in aggregate form only.",
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "data",
@@ -29,173 +30,241 @@
   ],
   "retrieved_requirements_count": 196,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system."
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system."
+    },
+    {
+      "id": "PhysicalHarm",
+      "label": "Physical Harm",
+      "definition": "Risk of bodily injury, death, or physical safety compromise caused by an AI system."
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions."
+    },
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system."
+    },
+    {
+      "id": "Manipulation",
+      "label": "",
+      "definition": ""
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system."
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The research proposal involves processing personal data, albeit anonymised, and may lead to potential biases in the analysis of academic grade outcomes based on emotional tone and writing style. There is a risk of correlating detectable stylistic differences with students' personal characteristics, such as first language, gender, or socioeconomic background. Additionally, the use of sentiment analysis and linguistic style detection may raise concerns about privacy and potential misuse of the results. The proposal also involves retrospective consent, which may not be sufficient to ensure that students are fully aware of the potential risks and benefits of the research.",
+    "risk_summary": "The research proposal involves sentiment analysis and linguistic style detection on a corpus of anonymised undergraduate essays, which may pose risks related to bias, discrimination, and privacy breach. The use of pseudonymised data and retrospective consent may mitigate some risks, but the potential for harm to students, particularly those from vulnerable groups, remains. The analysis of stylistic differences correlated with students' first language, gender, or socioeconomic background may also raise concerns about fairness and non-discrimination. Furthermore, the potential for biased models and lack of transparency in the NLP pipeline may exacerbate these risks.",
     "overall_risk_level": "Medium",
     "identified_risks": [
       {
-        "risk": "Bias in analysis",
+        "risk": "Bias in sentiment analysis and linguistic style detection",
+        "risk_category": "Discrimination",
         "severity": "Medium",
-        "explanation": "The research may inadvertently introduce biases in the analysis, which could lead to unfair or discriminatory outcomes."
+        "explanation": "The use of machine learning models to analyse essays may perpetuate existing biases and discriminate against certain groups of students."
       },
       {
-        "risk": "Privacy concerns",
-        "severity": "Medium",
-        "explanation": "The use of anonymised data may not be sufficient to protect students' privacy, particularly if the data can be linked to individual students."
+        "risk": "Privacy breach due to pseudonymisation",
+        "risk_category": "PrivacyBreach",
+        "severity": "Low",
+        "explanation": "Although the data is pseudonymised, there is still a risk of re-identification, particularly if the dataset is combined with other data sources."
       },
       {
-        "risk": "Misuse of results",
+        "risk": "Lack of transparency in the NLP pipeline",
+        "risk_category": "Manipulation",
         "severity": "Medium",
-        "explanation": "The results of the research could be misused to discriminate against certain groups of students or to make decisions that affect their academic outcomes."
+        "explanation": "The use of complex machine learning models may make it difficult to understand how the analysis is being performed, which could lead to manipulation or bias."
       },
       {
-        "risk": "Inadequate consent",
+        "risk": "Potential harm to students from vulnerable groups",
+        "risk_category": "PsychologicalHarm",
         "severity": "Medium",
-        "explanation": "The retrospective consent process may not be sufficient to ensure that students are fully aware of the potential risks and benefits of the research."
+        "explanation": "The analysis of essays may reveal sensitive information about students' personal lives, which could cause harm or distress if not handled properly."
       },
       {
-        "risk": "Lack of transparency",
+        "risk": "Insufficient consideration of contextual factors",
+        "risk_category": "Discrimination",
         "severity": "Medium",
-        "explanation": "The research proposal does not provide sufficient information about the methods and procedures used to ensure transparency and accountability."
+        "explanation": "The analysis may not account for contextual factors that could affect the results, such as the student's socioeconomic background or access to resources."
       }
     ],
     "applicable_requirements": [
       {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the NLP pipeline is designed to mitigate bias and discrimination"
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain informed consent from students and ensure that their personal data is protected"
+      },
+      {
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the dataset is anonymised and pseudonymised to protect student privacy"
+      },
+      {
+        "requirement_id": "ACM017",
+        "requirement_text": "Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from students or explain why it was not possible"
+      },
+      {
         "requirement_id": "ACM020",
-        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population",
+        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated",
         "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the dataset is representative of the intended population and communicate this in the research proposal"
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Assess the representativeness of the dataset and communicate the results"
       },
       {
-        "requirement_id": "ACM025",
-        "requirement_text": "Communicate whether approach could facilitate deceptive interactions causing harm",
+        "requirement_id": "ACM021",
+        "requirement_text": "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse",
         "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Assess the potential for the research to facilitate deceptive interactions and communicate this in the research proposal"
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Consider the potential risks and harms associated with the research"
       },
       {
-        "requirement_id": "HE019",
-        "requirement_text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Assess the potential for the research to negatively impact democratic processes and social relations"
-      },
-      {
-        "requirement_id": "HE021",
-        "requirement_text": "It must be made clear to end-users they are interacting with an AI system",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that students are aware that they are interacting with an AI system"
-      },
-      {
-        "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being",
+        "requirement_id": "ACM022",
+        "requirement_text": "Consider risk that applications could open security vulnerabilities or cause serious accidents — recommend or implement protections",
         "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the research contributes to society and human well-being"
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Consider the potential security risks and implement protections"
       },
       {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm",
+        "requirement_id": "ACM023",
+        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
         "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the research does not cause harm to individuals or groups"
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Consider the potential risks of discrimination and implement measures to mitigate them"
       },
       {
-        "requirement_id": "ACM011",
-        "requirement_text": "Manage personnel and resources to enhance quality of working life",
+        "requirement_id": "ACM024",
+        "requirement_text": "Consult local laws before collecting or analysing bulk surveillance data — surveillance must not predict protected categories or endanger individual well-being",
         "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the research is managed in a way that enhances the quality of working life for all personnel involved"
-      },
-      {
-        "requirement_id": "EUAIAct AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Assess whether the organisation is obligated to conduct a FRIA"
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Consult local laws and ensure that the research complies with them"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The research may inadvertently introduce biases in the analysis, which could lead to discriminatory outcomes."
+        "relevance": "The research may perpetuate biases and discriminate against certain groups of students"
       },
       {
         "article": "Article 7",
         "right_name": "Private Life",
-        "relevance": "The use of anonymised data may not be sufficient to protect students' privacy"
+        "relevance": "The research may reveal sensitive information about students' personal lives"
       },
       {
         "article": "Article 8",
         "right_name": "Data Protection",
-        "relevance": "The research involves the processing of personal data, which must be protected in accordance with data protection regulations"
+        "relevance": "The research may involve the processing of personal data, which must be protected"
+      },
+      {
+        "article": "Article 11",
+        "right_name": "Freedom of Expression",
+        "relevance": "The research may impact students' freedom of expression, particularly if the results are used to evaluate their work"
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The use of AI systems can perpetuate existing biases and discrimination if not properly designed and tested"
+        "lesson": "The use of machine learning models can perpetuate biases and discriminate against certain groups"
       },
       {
         "incident_id": "AIAAIC-002",
         "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The use of AI systems can lead to false or misleading results if not properly validated and tested"
+        "lesson": "The use of machine learning models can lead to false positives and negatively impact individuals"
       },
       {
         "incident_id": "AIAAIC-003",
         "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The use of AI systems can lead to harmful or offensive outputs if not properly designed and tested"
+        "lesson": "The use of machine learning models can lead to harmful outputs and negatively impact individuals"
       },
       {
         "incident_id": "AIAAIC-005",
         "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The use of AI systems can perpetuate existing biases and stereotypes if not properly designed and tested"
+        "lesson": "The use of machine learning models can perpetuate biases and discriminate against certain groups"
       },
       {
         "incident_id": "AIAAIC-009",
         "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The use of AI systems can lead to serious consequences if not properly designed, tested, and validated"
+        "lesson": "The use of machine learning models can lead to serious accidents and negatively impact individuals"
+      },
+      {
+        "incident_id": "AIAAIC-014",
+        "incident_title": "YouTube Recommendation Radicalisation",
+        "lesson": "The use of machine learning models can lead to the spread of harmful content and negatively impact individuals"
+      },
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "The use of machine learning models can lead to the spread of harmful content and negatively impact individuals"
+      },
+      {
+        "incident_id": "AIAAIC-027",
+        "incident_title": "Spotify Mood Inference Patent",
+        "lesson": "The use of machine learning models can lead to the collection of sensitive information and negatively impact individuals"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Ensure that the dataset is representative of the intended population",
+        "mitigation": "Ensure that the NLP pipeline is designed to mitigate bias and discrimination",
         "priority": "High"
       },
       {
-        "mitigation": "Assess the potential for the research to facilitate deceptive interactions",
+        "mitigation": "Obtain informed consent from students and ensure that their personal data is protected",
         "priority": "High"
       },
       {
-        "mitigation": "Ensure that students are aware that they are interacting with an AI system",
+        "mitigation": "Assess the representativeness of the dataset and communicate the results",
         "priority": "Medium"
       },
       {
-        "mitigation": "Ensure that the research contributes to society and human well-being",
+        "mitigation": "Consider the potential risks and harms associated with the research",
         "priority": "Medium"
       },
       {
-        "mitigation": "Ensure that the research does not cause harm to individuals or groups",
+        "mitigation": "Implement measures to mitigate the risks of discrimination and bias",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Ensure that the dataset is representative of the intended population",
-      "Assess the potential for the research to facilitate deceptive interactions",
-      "Ensure that students are aware that they are interacting with an AI system",
-      "Ensure that the research contributes to society and human well-being",
-      "Ensure that the research does not cause harm to individuals or groups"
+      "Ensure that the NLP pipeline is designed to mitigate bias and discrimination",
+      "Obtain informed consent from students and ensure that their personal data is protected",
+      "Assess the representativeness of the dataset and communicate the results"
     ],
     "tier2_reflective_prompts": [
-      "What are the potential risks and benefits of the research?",
-      "How can the research be designed to minimize harm and maximize benefits?",
-      "What are the potential consequences of the research, and how can they be mitigated?"
+      "Consider the potential risks and harms associated with the research",
+      "Implement measures to mitigate the risks of discrimination and bias",
+      "Consider the potential impact of the research on students' freedom of expression"
     ],
-    "reams_clearance_likely": false,
+    "reams_clearance_likely": true,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
@@ -422,14 +491,15 @@
         "R073"
       ],
       "requirements_cited": [
+        "ACM003",
+        "ACM006",
+        "ACM016",
+        "ACM017",
         "ACM020",
-        "ACM025",
-        "HE019",
-        "HE021",
-        "ACM001",
-        "ACM002",
-        "ACM011",
-        "EUAIAct AI001"
+        "ACM021",
+        "ACM022",
+        "ACM023",
+        "ACM024"
       ],
       "incidents_sample": [
         "AIAAIC-014",

@@ -8,31 +8,32 @@ This research proposes to deploy a machine learning sepsis prediction algorithm 
 High
 
 ## Participant Risks
-- Discriminatory predictions (High)
-- Lack of transparency (Medium)
-- Insufficient auditing (High)
-- Inadequate feedback mechanisms (Medium)
-- Unequal access to healthcare (High)
+- Discrimination against minority ethnic patient populations (High)
+- Privacy breaches (Medium)
+- Physical harm due to inaccurate predictions (High)
+- Lack of transparency in feature weighting and performance variance (Medium)
+- Inadequate accountability and fairness mechanisms (Medium)
 
 ## Data Protection
+- ACM003: Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate
+- ACM004: Consider and ameliorate biases in data and biased code/model outputs
+- ACM006: Respect privacy — obtain informed consent where required and protect personally identifiable information
+- ACM007: Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications
 - ACM020: Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated
-- AI001: Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)
-- HE015: Possible negative social impacts on certain groups must be mitigated, including impacts beyond algorithmic bias
-- ACM036: Have you considered whether your NLP/ML system could out, profile or endanger vulnerable individuals?
-- HE006: End-users and affected persons must receive comprehensible information about the AI logic, significance and envisaged consequences
-- AI021: Determine FRIA outcome status: Unacceptable Risk / High Residual Risk / Risks Acceptable / Risks Mitigated
-- ACM001: Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms
-- HE001: AI system must not deprive end-users or affected persons of ability to make decisions about their own lives or remove basic freedoms
-- ACM002: Avoid harm — consider how data, code or other outcomes of research may cause harm
+- ACM021: Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse
+- ACM023: Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access
+- ACM027: Research must not build upon or facilitate illegal activity — strongly discourage work that denies rights to privacy, speech, health, liberty, security, legal personhood, freedom of conscience/religion
 
-*Source: ACM020, AI001, HE015, ACM036, HE006, AI021, ACM001, HE001, ACM002*
+*Source: ACM003, ACM004, ACM006, ACM007, ACM020, ACM021, ACM023, ACM027*
 
 ## Consent Arrangements
-[NOT DERIVABLE FROM ASSESSMENT — requires manual input]
+Respect privacy — obtain informed consent where required and protect personally identifiable information
+
+*Source: ACM006*
 
 ## Mitigations
-- Conduct thorough demographic bias auditing and provide transparent documentation of the algorithm's performance across different ethnic subgroups.
-- Develop and implement strategies to mitigate potential negative social impacts, including those related to algorithmic bias and unequal access to healthcare.
-- Provide transparent and comprehensible information to clinicians and patients about the algorithm's logic, significance, and potential consequences.
-- Ensure that the algorithm's deployment does not deprive patients or clinicians of their ability to make decisions about their own lives or remove basic freedoms.
-- Develop and implement a formal mechanism for clinicians to record or escalate concerns about demographic performance disparities.
+- Conduct demographic bias auditing and implement fairness mechanisms to ensure equal treatment of all patient populations
+- Implement data preprocessing techniques to mitigate biases in the training dataset and ensure fair representation of all patient populations
+- Ensure that patient data is anonymised and protected in accordance with relevant data protection regulations
+- Conduct a thorough risk assessment and evaluation of the algorithm's potential impacts on patient outcomes and healthcare systems
+- Implement transparency mechanisms to ensure that clinicians and patients are aware of the algorithm's predictions and limitations

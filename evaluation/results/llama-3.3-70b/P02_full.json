@@ -2,8 +2,9 @@
   "proposal_id": "P02",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-05T19:01:07.642580",
+  "timestamp": "2026-07-20T14:32:17.450518",
   "proposal_text": "This research proposes to deploy the COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) risk assessment tool across criminal courts in Broward County, Florida, to predict defendants' likelihood of recidivism. The system uses a proprietary algorithm trained on a battery of psychological questionnaire responses administered at the time of arrest, combined with criminal history variables including prior arrest count, age at first offence, and charge severity. The algorithm produces three decile scores (1–10) for general recidivism, violent recidivism, and failure to appear, with scores categorised as Low (1–4), Medium (5–7), or High (8–10). These scores will be provided to judges and parole officers at pre-trial hearings and sentencing to inform detention and release decisions. The model is proprietary and its internal weighting is not disclosed to defendants or defence counsel. No mechanism for defendants to challenge the algorithmic risk score is included in the deployment design. An independent analysis of the algorithm's outputs found that Black defendants who did not re-offend were falsely classified as high risk at nearly twice the rate of white defendants who did not re-offend (45% vs 24%).",
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "predict",
@@ -23,187 +24,258 @@
   ],
   "retrieved_requirements_count": 167,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system."
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system."
+    },
+    {
+      "id": "PhysicalHarm",
+      "label": "Physical Harm",
+      "definition": "Risk of bodily injury, death, or physical safety compromise caused by an AI system."
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions."
+    },
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system."
+    },
+    {
+      "id": "Accountability",
+      "label": "",
+      "definition": ""
+    },
+    {
+      "id": "EmploymentHarm",
+      "label": "",
+      "definition": ""
+    },
+    {
+      "id": "Surveillance",
+      "label": "",
+      "definition": ""
+    },
+    {
+      "id": "LibertyViolation",
+      "label": "",
+      "definition": ""
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system."
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed deployment of the COMPAS risk assessment tool poses significant ethical risks, including potential discrimination against Black defendants, lack of transparency and accountability in the algorithmic decision-making process, and insufficient mechanisms for challenging or correcting false classifications. The tool's proprietary nature and absence of explicit consent from defendants for the use of their data further exacerbate these concerns. The risks are heightened by the tool's potential to influence consequential decisions regarding detention and release, which can have profound impacts on individuals' lives and liberties. The historical precedent of COMPAS Recidivism Algorithm Racial Bias (AIAAIC-004) underscores the urgency of addressing these issues.",
+    "risk_summary": "The proposed deployment of the COMPAS risk assessment tool poses significant ethical risks, including discrimination, privacy breaches, and potential physical harm to defendants. The tool's proprietary algorithm and lack of transparency raise concerns about accountability and the potential for biased decision-making. The historical precedent of COMPAS's racial bias and the risk of perpetuating existing social inequalities are also major concerns. Furthermore, the tool's use in informing detention and release decisions may lead to liberty violations and reputational harm.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
         "risk": "Discrimination against Black defendants",
+        "risk_category": "Discrimination",
         "severity": "High",
-        "explanation": "The algorithm's false classification of Black defendants as high risk at nearly twice the rate of white defendants who did not re-offend indicates a significant bias."
+        "explanation": "The COMPAS algorithm has been shown to falsely classify Black defendants as high risk at a higher rate than white defendants, perpetuating existing racial biases in the criminal justice system"
+      },
+      {
+        "risk": "Privacy breaches of defendant data",
+        "risk_category": "PrivacyBreach",
+        "severity": "Medium",
+        "explanation": "The use of proprietary algorithms and lack of transparency in the COMPAS tool may compromise the privacy of defendant data"
+      },
+      {
+        "risk": "Liberty violations due to biased decision-making",
+        "risk_category": "LibertyViolation",
+        "severity": "High",
+        "explanation": "The COMPAS tool's biased algorithm may lead to incorrect decisions about detention and release, resulting in liberty violations for defendants"
+      },
+      {
+        "risk": "Reputational harm to defendants",
+        "risk_category": "ReputationalHarm",
+        "severity": "Medium",
+        "explanation": "The use of the COMPAS tool may lead to reputational harm for defendants who are incorrectly classified as high risk or who are detained or released based on biased decisions"
       },
       {
         "risk": "Lack of transparency and accountability",
+        "risk_category": "Accountability",
         "severity": "High",
-        "explanation": "The proprietary nature of the algorithm and the absence of mechanisms for challenging or correcting false classifications undermine trust and fairness in the decision-making process."
+        "explanation": "The proprietary nature of the COMPAS algorithm and the lack of transparency in its decision-making process raise concerns about accountability and the potential for biased decision-making"
       },
       {
-        "risk": "Insufficient consent and data protection",
-        "severity": "High",
-        "explanation": "The use of defendants' data without explicit consent and the lack of transparency about how this data is used and protected raise serious concerns about data protection and privacy."
-      },
-      {
-        "risk": "Consequential decisions without human oversight",
-        "severity": "High",
-        "explanation": "The potential for the tool to influence decisions regarding detention and release without adequate human oversight or review increases the risk of unfair or biased outcomes."
-      },
-      {
-        "risk": "Perpetuation of systemic injustices",
-        "severity": "High",
-        "explanation": "The deployment of a tool with known biases in the criminal justice system may perpetuate and exacerbate existing systemic injustices and inequalities."
+        "risk": "Physical harm to defendants due to incorrect decisions",
+        "risk_category": "PhysicalHarm",
+        "severity": "Low",
+        "explanation": "The use of the COMPAS tool may lead to incorrect decisions about detention and release, potentially resulting in physical harm to defendants"
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough impact assessment to identify and mitigate potential harms"
+        "action_needed": "Implement measures to address and mitigate biases in the COMPAS algorithm"
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that defendant data is protected and that the COMPAS tool is designed with privacy in mind"
+      },
+      {
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of systems and their impacts",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough evaluation of the COMPAS tool's impacts on defendants and the criminal justice system"
+      },
+      {
+        "requirement_id": "ACM015",
+        "requirement_text": "Research involving human participants must follow existing institutional protocols",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the deployment of the COMPAS tool follows existing institutional protocols for research involving human participants"
+      },
+      {
+        "requirement_id": "ACM021",
+        "requirement_text": "Consider whether technology can be used to harm, injure or kill people",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider the potential risks of the COMPAS tool and implement measures to mitigate them"
+      },
+      {
+        "requirement_id": "ACM022",
+        "requirement_text": "Consider risk that applications could open security vulnerabilities or cause serious accidents",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement measures to address potential security vulnerabilities and accidents related to the COMPAS tool"
       },
       {
         "requirement_id": "ACM023",
-        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
+        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to detect and prevent discrimination, including regular audits and testing for bias"
+        "action_needed": "Implement measures to address and mitigate biases in the COMPAS algorithm and ensure that it does not discriminate against certain groups"
       },
       {
-        "requirement_id": "AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
-        "framework": "EUAIAct",
+        "requirement_id": "ACM027",
+        "requirement_text": "Research must not build upon or facilitate illegal activity",
+        "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a FRIA to assess the risks associated with the deployment of the COMPAS tool"
-      },
-      {
-        "requirement_id": "AI016",
-        "requirement_text": "Specify what humans can and cannot do — ability to correct outputs, ability to opt out, override capability",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Establish clear procedures for human review and correction of algorithmic decisions, as well as mechanisms for defendants to opt out or appeal"
-      },
-      {
-        "requirement_id": "HE012",
-        "requirement_text": "Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity or is sufficiently neutral",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the data used to train and validate the algorithm is diverse, representative, and free from bias"
-      },
-      {
-        "requirement_id": "HE013",
-        "requirement_text": "Document how bias in input data and algorithmic design will be identified and avoided",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement robust methods for detecting and mitigating bias in the algorithm and its training data"
-      },
-      {
-        "requirement_id": "R085",
-        "requirement_text": "Have you considered anti-discrimination and bias implications of your AI/technology research?",
-        "framework": "REAMS",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Reflect on the potential for the COMPAS tool to perpetuate or exacerbate existing biases and discrimination in the criminal justice system"
+        "action_needed": "Ensure that the deployment of the COMPAS tool does not facilitate or perpetuate illegal activity"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The deployment of a tool with known racial biases may violate the right to non-discrimination"
+        "relevance": "The COMPAS tool's biased algorithm may perpetuate existing racial biases in the criminal justice system, violating the right to non-discrimination"
       },
       {
         "article": "Article 41",
         "right_name": "Good Administration",
-        "relevance": "The lack of transparency and accountability in the algorithmic decision-making process may undermine the right to good administration"
+        "relevance": "The lack of transparency and accountability in the COMPAS tool's decision-making process may violate the right to good administration"
       },
       {
         "article": "Article 47",
         "right_name": "Right to Effective Remedy",
-        "relevance": "The absence of mechanisms for challenging or correcting false classifications may deny defendants their right to an effective remedy"
+        "relevance": "The lack of mechanisms for defendants to challenge the COMPAS tool's decisions may violate the right to effective remedy"
       },
       {
         "article": "Article 48",
         "right_name": "Presumption of Innocence",
-        "relevance": "The potential for the tool to influence decisions regarding detention and release may compromise the presumption of innocence"
+        "relevance": "The COMPAS tool's biased algorithm may lead to incorrect decisions about detention and release, potentially violating the presumption of innocence"
       },
       {
         "article": "Article 6",
         "right_name": "Right to Liberty",
-        "relevance": "The deployment of the COMPAS tool may impact the right to liberty, particularly if it leads to unfair or biased detention decisions"
+        "relevance": "The COMPAS tool's biased algorithm may lead to liberty violations for defendants who are incorrectly classified as high risk or who are detained or released based on biased decisions"
       },
       {
         "article": "Article 7",
         "right_name": "Private Life",
-        "relevance": "The use of personal data without explicit consent may violate the right to private life"
-      },
-      {
-        "article": "Article 8",
-        "right_name": "Data Protection",
-        "relevance": "The lack of transparency and accountability in the handling of personal data may compromise the right to data protection"
+        "relevance": "The use of the COMPAS tool may compromise the private life of defendants, particularly if their data is not protected"
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of auditing and testing AI systems for bias to prevent discrimination"
+        "lesson": "The importance of addressing and mitigating biases in AI algorithms"
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The potential risks of using AI systems in law enforcement, particularly if they are biased or inaccurate"
       },
       {
         "incident_id": "AIAAIC-004",
         "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
-        "lesson": "The need for transparency and accountability in algorithmic decision-making systems, particularly in high-stakes applications like criminal justice"
+        "lesson": "The need to address and mitigate biases in AI algorithms, particularly in high-stakes decision-making contexts"
       },
       {
         "incident_id": "AIAAIC-008",
         "incident_title": "PredPol Predictive Policing Algorithmic Bias",
-        "lesson": "The potential for AI systems to perpetuate and exacerbate existing biases and discrimination in the criminal justice system"
+        "lesson": "The importance of considering the potential risks and biases of AI systems in law enforcement"
       },
       {
         "incident_id": "AIAAIC-022",
         "incident_title": "Deliveroo Algorithmic Dismissal",
-        "lesson": "The importance of ensuring that AI systems are fair, transparent, and accountable, particularly in situations where they may impact individuals' livelihoods"
+        "lesson": "The potential risks of using AI systems in employment contexts, particularly if they are biased or inaccurate"
       },
       {
         "incident_id": "AIAAIC-034",
         "incident_title": "China Social Credit System AI Scoring",
-        "lesson": "The potential risks and consequences of deploying AI systems that can have a significant impact on individuals' lives and liberties"
+        "lesson": "The potential risks of using AI systems to score or rank individuals, particularly if they are biased or inaccurate"
       },
       {
         "incident_id": "AIAAIC-036",
         "incident_title": "Netherlands SyRI Welfare Surveillance System",
-        "lesson": "The need for careful consideration and mitigation of the potential risks and biases associated with AI systems, particularly in sensitive applications like welfare and social services"
+        "lesson": "The importance of considering the potential risks and biases of AI systems in social welfare contexts"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement robust testing and auditing procedures to detect and prevent bias in the algorithm",
+        "mitigation": "Implement measures to address and mitigate biases in the COMPAS algorithm",
         "priority": "High"
       },
       {
-        "mitigation": "Establish clear procedures for human review and correction of algorithmic decisions",
+        "mitigation": "Ensure that defendant data is protected and that the COMPAS tool is designed with privacy in mind",
         "priority": "High"
       },
       {
-        "mitigation": "Ensure that the data used to train and validate the algorithm is diverse, representative, and free from bias",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Provide mechanisms for defendants to opt out or appeal algorithmic decisions",
+        "mitigation": "Conduct a thorough evaluation of the COMPAS tool's impacts on defendants and the criminal justice system",
         "priority": "Medium"
       },
       {
-        "mitigation": "Conduct regular reviews and updates of the algorithm to ensure it remains fair, transparent, and accountable",
+        "mitigation": "Implement measures to address potential security vulnerabilities and accidents related to the COMPAS tool",
         "priority": "Medium"
+      },
+      {
+        "mitigation": "Ensure that the deployment of the COMPAS tool follows existing institutional protocols for research involving human participants",
+        "priority": "Low"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough impact assessment to identify and mitigate potential harms",
-      "Implement measures to detect and prevent discrimination, including regular audits and testing for bias",
-      "Establish clear procedures for human review and correction of algorithmic decisions",
-      "Ensure that the data used to train and validate the algorithm is diverse, representative, and free from bias"
+      "Implement measures to address and mitigate biases in the COMPAS algorithm",
+      "Ensure that defendant data is protected and that the COMPAS tool is designed with privacy in mind",
+      "Conduct a thorough evaluation of the COMPAS tool's impacts on defendants and the criminal justice system"
     ],
     "tier2_reflective_prompts": [
-      "Reflect on the potential for the COMPAS tool to perpetuate or exacerbate existing biases and discrimination in the criminal justice system",
-      "Consider the potential consequences of deploying an AI system that can have a significant impact on individuals' lives and liberties"
+      "What are the potential risks and biases of the COMPAS tool, and how can they be addressed and mitigated?",
+      "How can the deployment of the COMPAS tool be designed to ensure that it is fair, transparent, and accountable?",
+      "What are the potential consequences of using the COMPAS tool in the criminal justice system, and how can they be mitigated?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -400,13 +472,14 @@
         "R073"
       ],
       "requirements_cited": [
-        "ACM002",
+        "ACM003",
+        "ACM006",
+        "ACM007",
+        "ACM015",
+        "ACM021",
+        "ACM022",
         "ACM023",
-        "AI001",
-        "AI016",
-        "HE012",
-        "HE013",
-        "R085"
+        "ACM027"
       ],
       "incidents_sample": [
         "AIAAIC-001",

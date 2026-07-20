@@ -11,6 +11,35 @@ This is the record referenced from the dissertation's Design Science Research fr
 (`dissertation-latex/project/project.tex`, §Research Methodology) as the artifact's iterative
 build-evaluate cycle.
 
+## [2.1.0] — 2026-07-20
+
+### Fixed (expert-review remediation — Monique / Delaram comments)
+- **Risk taxonomy never reached the LLM.** `:hasRisk` was asserted on only 2/207 requirements;
+  retrieval selected only `:mapsToRight` / `:requirementText` / `:framework` / `:tier` / `:mandatory`.
+  Phase 0 populated `:hasRisk` across all requirements; Phase 1 wires `sectionReference` + risk
+  categories into SPARQL retrieval; Phase 2 constrains `identified_risks[].risk_category` to the
+  retrieved taxonomy (with an explicit Transparency / Well-being surfacing rule).
+- **"Defaults to Art 21" pattern.** `get_matched_rights()` always injected Art41+Art8 and mapped
+  bias/fairness keywords to Art21. Phase 3 adds a SHACL-style structural disambiguation step
+  (identifiable individual/group treatment → Art21; systemic/bibliometric information quality →
+  Art11/Art22) and softens the unconditional Art41/Art8 inject. Acceptance: P13 no longer surfaces
+  Art21; P20 surfaces Art31; protest-adjacent text surfaces Art12.
+- **Missing Art12.** Added `Art12_FreedomOfAssembly` (class + annotation). HE018→Art37 mapping
+  verified present.
+
+### Added
+- **15 formal RiskCategory subclasses** formalising the incident `:demonstratesRisk` vocabulary
+  (Surveillance, Manipulation, ChildrenRights, Dignity, GenderHarm, EconomicHarm, EmploymentHarm,
+  Accountability, LibertyViolation, ExpressionHarm, DataBreach, Deception, IntellectualProperty,
+  FalseIdentification, DataGovernance) — extending the original 12 to ~27 first-class categories.
+- **SHACL Phase 4 shapes:** `TransparencyDisclosureShape`, `SustainabilityDisclosureShape`,
+  `AssemblyAssociationShape`; `ChildrenMonitoringShape` broadened to facial/emotion recognition of
+  children. Documented as a standalone RQ2 comparison arm (`shacl/PHASE4_RQ2_FINDING.md`).
+- **FRIA `risk_category_breakdown`** in `docgen_templates.yaml` / `generate_documentation.py`.
+- **E8 risk-category miss** in `analysis/error_taxonomy.py`; before/after case study at
+  `analysis/results/phase6_before_after.md`.
+- Local rdflib SPARQL fallback in `sparql_retrieval.py` when GraphDB is unreachable.
+
 ## [2.0.0] — 2026-07-16
 
 ### Fixed

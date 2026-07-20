@@ -54,7 +54,7 @@ def main():
         text = p["proposal_text"]
 
         # condition 1: ontology-driven SPARQL (the system's retrieval)
-        s_reqs, _, _, _ = retrieve_all_for_proposal(text)
+        s_reqs, _, _, _, _ = retrieve_all_for_proposal(text)
         s_ids = {r["id"] for r in s_reqs}
         sparql_recalls.append(len(s_ids & expected) / len(expected))
         sparql_sizes.append(len(s_ids))

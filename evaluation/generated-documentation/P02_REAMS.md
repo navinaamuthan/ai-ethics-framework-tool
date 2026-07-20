@@ -9,22 +9,30 @@ High
 
 ## Participant Risks
 - Discrimination against Black defendants (High)
+- Privacy breaches of defendant data (Medium)
+- Liberty violations due to biased decision-making (High)
+- Reputational harm to defendants (Medium)
 - Lack of transparency and accountability (High)
-- Insufficient consent and data protection (High)
-- Consequential decisions without human oversight (High)
-- Perpetuation of systemic injustices (High)
+- Physical harm to defendants due to incorrect decisions (Low)
 
 ## Data Protection
-- R085: Have you considered anti-discrimination and bias implications of your AI/technology research?
+- ACM003: Be fair and take action not to discriminate
+- ACM006: Respect privacy
+- ACM007: Give comprehensive evaluation of systems and their impacts
+- ACM015: Research involving human participants must follow existing institutional protocols
+- ACM021: Consider whether technology can be used to harm, injure or kill people
+- ACM022: Consider risk that applications could open security vulnerabilities or cause serious accidents
+- ACM023: Consider whether technology can be used to discriminate, exclude or negatively impact people
+- ACM027: Research must not build upon or facilitate illegal activity
 
-*Source: R085*
+*Source: ACM003, ACM006, ACM007, ACM015, ACM021, ACM022, ACM023, ACM027*
 
 ## Consent Arrangements
 [NOT DERIVABLE FROM ASSESSMENT — requires manual input]
 
 ## Mitigations
-- Implement robust testing and auditing procedures to detect and prevent bias in the algorithm
-- Establish clear procedures for human review and correction of algorithmic decisions
-- Ensure that the data used to train and validate the algorithm is diverse, representative, and free from bias
-- Provide mechanisms for defendants to opt out or appeal algorithmic decisions
-- Conduct regular reviews and updates of the algorithm to ensure it remains fair, transparent, and accountable
+- Implement measures to address and mitigate biases in the COMPAS algorithm
+- Ensure that defendant data is protected and that the COMPAS tool is designed with privacy in mind
+- Conduct a thorough evaluation of the COMPAS tool's impacts on defendants and the criminal justice system
+- Implement measures to address potential security vulnerabilities and accidents related to the COMPAS tool
+- Ensure that the deployment of the COMPAS tool follows existing institutional protocols for research involving human participants

@@ -8,10 +8,11 @@ RULES = [  # (regex on proposal text, triple to emit)
     (r"child|minor|school|under 18|adolescent", "aief:involvesPopulation aief:Children"),
     (r"student", "aief:involvesPopulation aief:Students"),
     (r"facial recogn", "aief:usesCapability aief:FacialRecognition"),
+    (r"emotion recogn|facial expression|emotional engagement", "aief:usesCapability aief:EmotionRecognition"),
     (r"chatbot|conversational", "aief:usesCapability aief:ConversationalAgent"),
     (r"clinical decision|diagnos|triage", "aief:usesCapability aief:ClinicalDecisionSupport"),
-    (r"monitor|surveil|cctv|track", "aief:usesCapability aief:ContinuousMonitoring"),
-    (r"hiring|recruit|screening", "aief:usesCapability aief:AutomatedScreening"),
+    (r"monitor|surveil|cctv|track|camera-based", "aief:usesCapability aief:ContinuousMonitoring"),
+    (r"hiring|recruit|(job|applicant|candidate).{0,20}screening|automated screening", "aief:usesCapability aief:AutomatedScreening"),
     # positive-evidence flags: only asserted when text states them
     (r"opt-in consent|informed consent obtained|consent will be obtained", "aief:hasConsentMechanism true"),
     (r"DPIA|data protection impact assessment (has been|was) conducted", "aief:hasDPIA true"),
@@ -34,9 +35,17 @@ RULES = [  # (regex on proposal text, triple to emit)
     (r"gender|women|non-binary", "aief:involvesPopulation aief:GenderMinorities"),
     (r"disab(led|ility)|accessib", "aief:involvesPopulation aief:PeopleWithDisabilities"),
 
+    # --- Phase 4 bridge vocabulary ---
+    (r"chatbot|conversational|emotion recogn|end.?user|user.?facing|students will (not )?be informed|teachers to inform", "aief:usesCapability aief:EndUserFacingAI"),
+    (r"\b\d{2,},\d{3}\b.{0,40}(patient|record|post|sample|essay)|million patient|large.?scale (model|train)|200 million", "aief:usesCapability aief:LargeDatasetTraining"),
+    (r"(?<!no ai system will be )(?<!not be )deploy(ment|ed) across|nationwide deployment|commercial .+ algorithm to (identify|predict)", "aief:usesCapability aief:LargeScaleDeployment"),
+    (r"protest|assembly|union organis|organizing|collective (action|activity)|political activism", "aief:usesCapability aief:CollectiveActivityMonitoring"),
+    (r"explainab|model card|feature weighting|visibility into", "aief:hasExplainabilityProvision true"),
+    (r"assembly safeguard|peaceful.?assembly protection|protect(s|ing)? (the )?right to (peaceful )?assembly", "aief:hasAssemblySafeguard true"),
+
     (r"human review.{0,20}(available|required|conducted)|appeal (mechanism|process)|right to (appeal|contest)", "aief:hasAppealMechanism true"),
     (r"accessib(le|ility) (design|features|compliant)|WCAG", "aief:hasAccessibilityDesign true"),
-    (r"carbon.aware|energy.efficient|environmental impact assessment", "aief:hasEnvironmentalAssessment true"),
+    (r"carbon.aware|energy.efficient|environmental impact|carbon footprint using|ML CO2|environmental .{0,40}documented", "aief:hasEnvironmentalAssessment true"),
     (r"licens(ed|ing) agreement|rightsholder consent|copyright cleared", "aief:hasDataLicensing true"),
 ]
 

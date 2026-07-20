@@ -22,6 +22,12 @@ from pathlib import Path
 HERE = Path(__file__).parent
 TEMPLATES = yaml.safe_load(open(HERE / "docgen_templates.yaml"))
 
+sys.path.insert(0, str(HERE))
+try:
+    from sparql_retrieval import requirement_ids_for_risk_category
+except Exception:  # pragma: no cover - keeps docgen usable if SPARQL layer unavailable
+    requirement_ids_for_risk_category = None
+
 
 def _join(items, cite_key=None):
     """Join formatted lines and collect the source IDs cited, if any."""
@@ -53,6 +59,42 @@ def build_sections(d):
 
     def fmt_risks():
         return _join([{"text": f"- {r.get('risk')} ({r.get('severity')})"} for r in risks])
+
+    def fmt_risk_categories():
+        """Group identified_risks by risk_category for FRIA-style categorised docs.
+
+        Sources cite the real requirement ID(s) whose ontology :hasRisk
+        assertion names this category (restricted to requirements actually
+        retrieved/cited for this proposal), not the category label itself.
+        """
+        from collections import defaultdict
+        groups = defaultdict(list)
+        for r in risks:
+            cat = r.get("risk_category") or "Uncategorised"
+            groups[cat].append(r)
+        if not groups:
+            return None, []
+        candidate_ids = [r.get("requirement_id") for r in reqs if r.get("requirement_id")]
+        lines, sources = [], []
+        for cat in sorted(groups):
+            lines.append(f"### {cat}")
+            cat_req_ids = []
+            if requirement_ids_for_risk_category is not None:
+                try:
+                    cat_req_ids = requirement_ids_for_risk_category(cat, candidate_ids)
+                except Exception:
+                    cat_req_ids = []
+            for r in groups[cat]:
+                sev = r.get("severity", "")
+                lines.append(f"- {r.get('risk')} ({sev}): {r.get('explanation', '')}")
+            if cat_req_ids:
+                sources.extend(cat_req_ids)
+            else:
+                # Honest fallback: no ontology-traceable requirement asserts
+                # this category among the requirements retrieved for this
+                # proposal -- do not fabricate a source.
+                lines.append(f"  (no retrieved requirement traces :hasRisk :{cat} -- untraced)")
+        return "\n".join(lines), sources
 
     def fmt_mits():
         return _join([{"text": f"- {m.get('mitigation', m) if isinstance(m, dict) else m}"} for m in mits])
@@ -90,6 +132,7 @@ def build_sections(d):
         data_protection_text, data_protection_src = fmt_reqs()
     horizon_reqs_text, horizon_reqs_src = fmt_reqs("Horizon")
     risks_text, risks_src = fmt_risks()
+    risk_cat_text, risk_cat_src = fmt_risk_categories()
     mits_text, mits_src = fmt_mits()
     rights_text, rights_src = fmt_rights()
     prec_text, prec_src = fmt_precedents()
@@ -104,6 +147,7 @@ def build_sections(d):
         "intended_purpose": (a.get("risk_summary"), []),
         "affected_rights": (rights_text, rights_src),
         "risk_identification": (risks_text, risks_src),
+        "risk_category_breakdown": (risk_cat_text, risk_cat_src),
         "severity_assessment": (risks_text, risks_src),
         "mitigation_measures": (mits_text, mits_src),
         "precedent_evidence": (prec_text, prec_src),

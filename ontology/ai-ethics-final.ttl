@@ -58,6 +58,7 @@
 :Art8_DataProtection rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms .
 :Art10_FreedomOfThought rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms .
 :Art11_FreedomOfExpression rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms .
+:Art12_FreedomOfAssembly rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms .
 :Art16_FreedomToConductBusiness rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms .
 :Art13_FreedomOfArtsScience rdf:type owl:Class ; rdfs:subClassOf :Title2_Freedoms ;
     rdfs:label "Article 13 — Freedom of the Arts and Sciences" .
@@ -133,6 +134,22 @@
 :WorkplaceSafetyRisk rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
 :DemocraticProcessHarm rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
 :AddictionRisk rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:Surveillance rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:Manipulation rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:ChildrenRights rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:Dignity rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:GenderHarm rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:EconomicHarm rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:EmploymentHarm rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:Accountability rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:LibertyViolation rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:ExpressionHarm rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:DataBreach rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:Deception rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:IntellectualProperty rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:FalseIdentification rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:DataGovernance rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:Transparency rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
 
 # ===== DATA CATEGORY SUBCLASSES =====
 
@@ -345,7 +362,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :assignedTo :Researcher .
+    :assignedTo :Researcher ;
+    :hasRisk :ChildrenRights , :EmploymentHarm , :PsychologicalHarm , :ReputationalHarm , :WorkplaceSafetyRisk .
 
 :R005 rdf:type :Obligation ;
     :requirementID "R005" ;
@@ -358,7 +376,8 @@
     :assignedTo :Researcher ;
     :requiresEvidence :Certificate ;
     :mapsToRight :Art8_DataProtection ;
-    :legalBasis "GDPR Art 39(1)(b)" .
+    :legalBasis "GDPR Art 39(1)(b)" ;
+    :hasRisk :PrivacyBreach , :ReputationalHarm .
 
 :R010 rdf:type :Obligation ;
     :requirementID "R010" ;
@@ -370,8 +389,8 @@
     :hasTier :Tier1_Mandatory ;
     :assignedTo :Researcher ;
     :mapsToRight :Art1_HumanDignity , :Art47_RightToEffectiveRemedy ;
-    :hasRisk :PsychologicalHarm , :FinancialHarm ;
-    :triggersReviewLevel "Level 3" .
+    :triggersReviewLevel "Level 3" ;
+    :hasRisk :Accountability , :Dignity , :DualUseMisuse , :EconomicHarm , :FinancialHarm , :LibertyViolation , :PsychologicalHarm .
 
 :R019 rdf:type :Obligation ;
     :requirementID "R019" ;
@@ -385,7 +404,8 @@
     :requiresEvidence :ConsentForm ;
     :mapsToRight :Art8_DataProtection ;
     :legalBasis "GDPR Art 6-7" ;
-    :appliesTo :DataSubject .
+    :appliesTo :DataSubject ;
+    :hasRisk :ChildrenRights , :PrivacyBreach , :PsychologicalHarm .
 
 :R027 rdf:type :Obligation ;
     :requirementID "R027" ;
@@ -397,7 +417,8 @@
     :hasTier :Tier1_Mandatory ;
     :assignedTo :Researcher ;
     :mapsToRight :Art24_RightsOfChild , :Art21_NonDiscrimination ;
-    :triggersReviewLevel "Level 3" .
+    :triggersReviewLevel "Level 3" ;
+    :hasRisk :ChildrenRights , :Discrimination , :EmploymentHarm , :PsychologicalHarm , :WorkplaceSafetyRisk .
 
 :R042 rdf:type :Obligation ;
     :requirementID "R042" ;
@@ -410,7 +431,8 @@
     :assignedTo :Researcher ;
     :requiresEvidence :ConsentForm ;
     :mapsToRight :Art8_DataProtection , :Art7_PrivateLife ;
-    :legalBasis "GDPR Art 7" .
+    :legalBasis "GDPR Art 7" ;
+    :hasRisk :PrivacyBreach , :Surveillance .
 
 :R054 rdf:type :Obligation ;
     :requirementID "R054" ;
@@ -422,7 +444,7 @@
     :hasTier :Tier1_Mandatory ;
     :assignedTo :Researcher ;
     :mapsToRight :Art1_HumanDignity , :Art3_RightToIntegrity , :Art7_PrivateLife ;
-    :hasRisk :PhysicalHarm , :PsychologicalHarm , :ReputationalHarm , :FinancialHarm , :PrivacyBreach .
+    :hasRisk :Dignity , :EconomicHarm , :FinancialHarm , :FunctionCreep , :PhysicalHarm , :PrivacyBreach , :PsychologicalHarm , :ReputationalHarm , :Surveillance .
 
 :R071 rdf:type :Obligation ;
     :requirementID "R071" ;
@@ -436,7 +458,8 @@
     :mapsToRight :Art8_DataProtection ;
     :legalBasis "GDPR Art 32" ;
     :involvesData :PersonalData ;
-    :hasMitigation :Encryption , :AccessControl .
+    :hasMitigation :Encryption , :AccessControl ;
+    :hasRisk :DataBreach , :DataGovernance , :PrivacyBreach , :Surveillance .
 
 :R074 rdf:type :Obligation ;
     :requirementID "R074" ;
@@ -448,7 +471,8 @@
     :hasTier :Tier1_Mandatory ;
     :assignedTo :Researcher ;
     :mapsToRight :Art8_DataProtection ;
-    :legalBasis "GDPR Art 35" .
+    :legalBasis "GDPR Art 35" ;
+    :hasRisk :PrivacyBreach .
 
 :R085 rdf:type :Obligation ;
     :requirementID "R085" ;
@@ -460,7 +484,8 @@
     :hasTier :Tier2_Reflective ;
     :assignedTo :Researcher ;
     :mapsToRight :Art21_NonDiscrimination , :Art23_GenderEquality ;
-    :noteText "Key gap — REAMS does not explicitly cover this" .
+    :noteText "Key gap — REAMS does not explicitly cover this" ;
+    :hasRisk :Accountability , :DemocraticProcessHarm , :Discrimination , :GenderHarm .
 
 
 # ===== INCIDENT KNOWLEDGE GRAPH EXTENSION =====
@@ -1097,8 +1122,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "If not PI, PI must also approve" .
-
+    :noteText "If not PI, PI must also approve" ;
+    :hasRisk :Accountability .
 
 :R003 rdf:type :Obligation ;
     :requirementID "R003" ;
@@ -1109,8 +1134,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Declaration (Yes/No)" ;
-    :legalBasis "Research integrity" .
-
+    :legalBasis "Research integrity" ;
+    :hasRisk :Accountability .
 
 :R004 rdf:type :Obligation ;
     :requirementID "R004" ;
@@ -1122,8 +1147,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Certificate upload required" ;
     :legalBasis "Research integrity" ;
-    :noteText "PhD: CA7000; Staff: Epigeum" .
-
+    :noteText "PhD: CA7000; Staff: Epigeum" ;
+    :hasRisk :Accountability .
 
 :R005 rdf:type :Obligation ;
     :requirementID "R005" ;
@@ -1145,8 +1170,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Student apps must include Primary Supervisor" .
-
+    :noteText "Student apps must include Primary Supervisor" ;
+    :hasRisk :ChildrenRights , :PsychologicalHarm .
 
 :R007 rdf:type :Obligation ;
     :requirementID "R007" ;
@@ -1156,8 +1181,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Cannot edit application online" .
-
+    :noteText "Cannot edit application online" ;
+    :hasRisk :Accountability .
 
 :R008 rdf:type :Obligation ;
     :requirementID "R008" ;
@@ -1166,8 +1191,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :PrivacyBreach .
 
 :R009 rdf:type :Obligation ;
     :requirementID "R009" ;
@@ -1177,10 +1202,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Determines entire question set" .
-
-
-
+    :noteText "Determines entire question set" ;
+    :hasRisk :PrivacyBreach .
 
 :R011 rdf:type :Obligation ;
     :requirementID "R011" ;
@@ -1191,8 +1214,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 1 Human dignity; Art 3 Right to integrity" ;
-    :noteText "Any selection except 'none' → Level 3" .
-
+    :noteText "Any selection except 'none' → Level 3" ;
+    :hasRisk :Accountability , :Deception , :DualUseMisuse .
 
 :R012 rdf:type :Obligation ;
     :requirementID "R012" ;
@@ -1201,8 +1224,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :Accountability .
 
 :R013 rdf:type :Obligation ;
     :requirementID "R013" ;
@@ -1211,8 +1234,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :Accountability .
 
 :R014 rdf:type :Obligation ;
     :requirementID "R014" ;
@@ -1223,8 +1246,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Ch V (international transfers)" ;
-    :noteText "Foreign country triggers insurance check" .
-
+    :noteText "Foreign country triggers insurance check" ;
+    :hasRisk :PrivacyBreach .
 
 :R015 rdf:type :Obligation ;
     :requirementID "R015" ;
@@ -1235,8 +1258,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 3 Right to integrity of person" ;
-    :noteText "Answers 3-5 → Level 3" .
-
+    :noteText "Answers 3-5 → Level 3" ;
+    :hasRisk :PrivacyBreach .
 
 :R016 rdf:type :Obligation ;
     :requirementID "R016" ;
@@ -1246,8 +1269,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Triggers funding tab" .
-
+    :noteText "Triggers funding tab" ;
+    :hasRisk :Accountability .
 
 :R017 rdf:type :Obligation ;
     :requirementID "R017" ;
@@ -1257,8 +1280,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Phased dependent studies need separate ethics per phase" .
-
+    :noteText "Phased dependent studies need separate ethics per phase" ;
+    :hasRisk :Accountability .
 
 :R018 rdf:type :Obligation ;
     :requirementID "R018" ;
@@ -1268,8 +1291,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :legalBasis "GDPR Art 14 (secondary data)" .
-
+    :legalBasis "GDPR Art 14 (secondary data)" ;
+    :hasRisk :PrivacyBreach .
 
 :R019 rdf:type :Obligation ;
     :requirementID "R019" ;
@@ -1292,8 +1315,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Excess triggers justification" .
-
+    :noteText "Excess triggers justification" ;
+    :hasRisk :Accountability .
 
 :R021 rdf:type :Obligation ;
     :requirementID "R021" ;
@@ -1305,8 +1328,8 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "HRR 2018/2021" ;
     :noteText "Charter Mapping: Art 35 Health care" ;
-    :noteText "Triggers Health Research tab" .
-
+    :noteText "Triggers Health Research tab" ;
+    :hasRisk :PhysicalHarm , :PrivacyBreach .
 
 :R022 rdf:type :Obligation ;
     :requirementID "R022" ;
@@ -1316,8 +1339,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :legalBasis "HRR 2018/2021" .
-
+    :legalBasis "HRR 2018/2021" ;
+    :hasRisk :PrivacyBreach .
 
 :R023 rdf:type :Obligation ;
     :requirementID "R023" ;
@@ -1329,8 +1352,8 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 5-6" ;
     :noteText "Charter Mapping: Art 8 Protection of personal data" ;
-    :noteText "Yes → cannot route to Level 1; triggers DP section" .
-
+    :noteText "Yes → cannot route to Level 1; triggers DP section" ;
+    :hasRisk :PrivacyBreach .
 
 :R024 rdf:type :Obligation ;
     :requirementID "R024" ;
@@ -1342,8 +1365,8 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Recital 26" ;
     :noteText "Charter Mapping: Art 8" ;
-    :noteText "Still personal data under GDPR" .
-
+    :noteText "Still personal data under GDPR" ;
+    :hasRisk :PrivacyBreach .
 
 :R025 rdf:type :Obligation ;
     :requirementID "R025" ;
@@ -1355,8 +1378,8 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 6" ;
     :noteText "Charter Mapping: Art 8" ;
-    :noteText "Yes → cannot route to Level 1" .
-
+    :noteText "Yes → cannot route to Level 1" ;
+    :hasRisk :Discrimination , :EmploymentHarm , :PrivacyBreach .
 
 :R026 rdf:type :Obligation ;
     :requirementID "R026" ;
@@ -1367,8 +1390,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 5(1)(e)" ;
-    :noteText "Charter Mapping: Art 8" .
-
+    :noteText "Charter Mapping: Art 8" ;
+    :hasRisk :Discrimination , :EmploymentHarm , :PrivacyBreach .
 
 :R027 rdf:type :Obligation ;
     :requirementID "R027" ;
@@ -1390,8 +1413,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Charter Mapping: Art 21 Non-discrimination" .
-
+    :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasRisk :Accountability .
 
 :R029 rdf:type :Obligation ;
     :requirementID "R029" ;
@@ -1401,8 +1424,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "One entry per site" .
-
+    :noteText "One entry per site" ;
+    :hasRisk :PrivacyBreach .
 
 :R030 rdf:type :Obligation ;
     :requirementID "R030" ;
@@ -1412,8 +1435,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :requiresEvidence "Permission documentation upload" .
-
+    :requiresEvidence "Permission documentation upload" ;
+    :hasRisk :IntellectualProperty .
 
 :R031 rdf:type :Obligation ;
     :requirementID "R031" ;
@@ -1425,8 +1448,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "DPIA attachment if yes" ;
     :legalBasis "GDPR Art 35" ;
-    :noteText "Charter Mapping: Art 8" .
-
+    :noteText "Charter Mapping: Art 8" ;
+    :hasRisk :PrivacyBreach .
 
 :R032 rdf:type :Obligation ;
     :requirementID "R032" ;
@@ -1436,8 +1459,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Each method → required attachment" .
-
+    :noteText "Each method → required attachment" ;
+    :hasRisk :PrivacyBreach .
 
 :R033 rdf:type :Obligation ;
     :requirementID "R033" ;
@@ -1447,8 +1470,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Low-risk methods → can route to Level 1" .
-
+    :noteText "Low-risk methods → can route to Level 1" ;
+    :hasRisk :PrivacyBreach .
 
 :R034 rdf:type :Obligation ;
     :requirementID "R034" ;
@@ -1459,8 +1482,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 3 Right to integrity" ;
-    :noteText "Yes → Level 3" .
-
+    :noteText "Yes → Level 3" ;
+    :hasRisk :Accountability .
 
 :R035 rdf:type :Obligation ;
     :requirementID "R035" ;
@@ -1469,8 +1492,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :Accountability .
 
 :R036 rdf:type :Obligation ;
     :requirementID "R036" ;
@@ -1479,8 +1502,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :Accountability .
 
 :R037 rdf:type :Obligation ;
     :requirementID "R037" ;
@@ -1489,8 +1512,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :Accountability .
 
 :R038 rdf:type :Obligation ;
     :requirementID "R038" ;
@@ -1500,8 +1523,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Convenience, purposeful, snowball etc." .
-
+    :noteText "Convenience, purposeful, snowball etc." ;
+    :hasRisk :Accountability .
 
 :R039 rdf:type :Obligation ;
     :requirementID "R039" ;
@@ -1511,8 +1534,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Needed for informed consent" .
-
+    :noteText "Needed for informed consent" ;
+    :hasRisk :Accountability .
 
 :R040 rdf:type :Obligation ;
     :requirementID "R040" ;
@@ -1523,8 +1546,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 21 Non-discrimination" ;
-    :noteText "Dependent relationship → mitigation needed" .
-
+    :noteText "Dependent relationship → mitigation needed" ;
+    :hasRisk :Accountability .
 
 :R041 rdf:type :Obligation ;
     :requirementID "R041" ;
@@ -1534,8 +1557,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :requiresEvidence "Recruitment material attachment" .
-
+    :requiresEvidence "Recruitment material attachment" ;
+    :hasRisk :Discrimination , :EmploymentHarm .
 
 :R042 rdf:type :Obligation ;
     :requirementID "R042" ;
@@ -1558,8 +1581,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Charter Mapping: Art 26 Integration of persons with disabilities" .
-
+    :noteText "Charter Mapping: Art 26 Integration of persons with disabilities" ;
+    :hasRisk :PrivacyBreach .
 
 :R044 rdf:type :Obligation ;
     :requirementID "R044" ;
@@ -1569,8 +1592,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Charter Mapping: Art 24 Rights of child" .
-
+    :noteText "Charter Mapping: Art 24 Rights of child" ;
+    :hasRisk :Accountability .
 
 :R045 rdf:type :Obligation ;
     :requirementID "R045" ;
@@ -1583,8 +1606,8 @@
     :requiresEvidence "Garda vetting certificate" ;
     :legalBasis "Children Act 2001" ;
     :noteText "Charter Mapping: Art 24 Rights of child" ;
-    :noteText "Required for contact with children" .
-
+    :noteText "Required for contact with children" ;
+    :hasRisk :Accountability .
 
 :R046 rdf:type :Obligation ;
     :requirementID "R046" ;
@@ -1595,8 +1618,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 8" ;
-    :noteText "<7 days needs justification" .
-
+    :noteText "<7 days needs justification" ;
+    :hasRisk :PrivacyBreach .
 
 :R047 rdf:type :Obligation ;
     :requirementID "R047" ;
@@ -1607,8 +1630,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 13-14" ;
-    :noteText "Charter Mapping: Art 8" .
-
+    :noteText "Charter Mapping: Art 8" ;
+    :hasRisk :PrivacyBreach .
 
 :R048 rdf:type :Obligation ;
     :requirementID "R048" ;
@@ -1619,8 +1642,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 7(3), Art 17" ;
-    :noteText "Charter Mapping: Art 8" .
-
+    :noteText "Charter Mapping: Art 8" ;
+    :hasRisk :PrivacyBreach .
 
 :R049 rdf:type :Obligation ;
     :requirementID "R049" ;
@@ -1629,8 +1652,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :PrivacyBreach .
 
 :R050 rdf:type :Obligation ;
     :requirementID "R050" ;
@@ -1640,8 +1663,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Charter Mapping: Art 31 Fair working conditions" .
-
+    :noteText "Charter Mapping: Art 31 Fair working conditions" ;
+    :hasRisk :PhysicalHarm , :PsychologicalHarm .
 
 :R051 rdf:type :Obligation ;
     :requirementID "R051" ;
@@ -1650,8 +1673,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :PsychologicalHarm .
 
 :R052 rdf:type :Obligation ;
     :requirementID "R052" ;
@@ -1662,8 +1685,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 37 Environmental protection" ;
-    :noteText "Site name revelation is common risk" .
-
+    :noteText "Site name revelation is common risk" ;
+    :hasRisk :EnvironmentalHarm .
 
 :R053 rdf:type :Obligation ;
     :requirementID "R053" ;
@@ -1673,10 +1696,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Charter Mapping: Art 21 Non-discrimination" .
-
-
-
+    :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasRisk :Accountability .
 
 :R055 rdf:type :Obligation ;
     :requirementID "R055" ;
@@ -1687,8 +1708,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :legalBasis "Children First Act 2015" ;
-    :noteText "Charter Mapping: Art 24 Rights of child" .
-
+    :noteText "Charter Mapping: Art 24 Rights of child" ;
+    :hasRisk :ChildrenRights , :PsychologicalHarm .
 
 :R056 rdf:type :Obligation ;
     :requirementID "R056" ;
@@ -1698,8 +1719,8 @@
     :isMandatory false ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier2_Reflective ;
-    :noteText "May be none — that is acceptable" .
-
+    :noteText "May be none — that is acceptable" ;
+    :hasRisk :Accountability .
 
 :R057 rdf:type :Obligation ;
     :requirementID "R057" ;
@@ -1709,8 +1730,8 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
-    :noteText "Excludes funding COI (separate section)" .
-
+    :noteText "Excludes funding COI (separate section)" ;
+    :hasRisk :Accountability , :IntellectualProperty .
 
 :R058 rdf:type :Obligation ;
     :requirementID "R058" ;
@@ -1719,8 +1740,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :Accountability .
 
 :R059 rdf:type :Obligation ;
     :requirementID "R059" ;
@@ -1729,8 +1750,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :Accountability .
 
 :R060 rdf:type :Obligation ;
     :requirementID "R060" ;
@@ -1739,8 +1760,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :Accountability .
 
 :R061 rdf:type :Obligation ;
     :requirementID "R061" ;
@@ -1751,8 +1772,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 16 Freedom to conduct business" ;
-    :noteText "If yes: clarify IP rights" .
-
+    :noteText "If yes: clarify IP rights" ;
+    :hasRisk :Accountability , :Deception .
 
 :R062 rdf:type :Obligation ;
     :requirementID "R062" ;
@@ -1761,8 +1782,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :Accountability .
 
 :R063 rdf:type :Obligation ;
     :requirementID "R063" ;
@@ -1774,8 +1795,8 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 39(1)(b)" ;
     :noteText "Charter Mapping: Art 8" ;
-    :noteText "Cannot proceed without Yes" .
-
+    :noteText "Cannot proceed without Yes" ;
+    :hasRisk :PrivacyBreach .
 
 :R064 rdf:type :Obligation ;
     :requirementID "R064" ;
@@ -1787,8 +1808,8 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 33-34" ;
     :noteText "Charter Mapping: Art 8" ;
-    :noteText "Cannot proceed without Yes" .
-
+    :noteText "Cannot proceed without Yes" ;
+    :hasRisk :EmploymentHarm , :PrivacyBreach , :WorkplaceSafetyRisk .
 
 :R065 rdf:type :Obligation ;
     :requirementID "R065" ;
@@ -1799,8 +1820,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 24-28" ;
-    :noteText "Charter Mapping: Art 8" .
-
+    :noteText "Charter Mapping: Art 8" ;
+    :hasRisk :Accountability .
 
 :R066 rdf:type :Obligation ;
     :requirementID "R066" ;
@@ -1811,8 +1832,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 35" ;
-    :noteText "Charter Mapping: Art 8" .
-
+    :noteText "Charter Mapping: Art 8" ;
+    :hasRisk :PrivacyBreach .
 
 :R067 rdf:type :Obligation ;
     :requirementID "R067" ;
@@ -1823,8 +1844,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 9" ;
-    :noteText "Charter Mapping: Art 8" .
-
+    :noteText "Charter Mapping: Art 8" ;
+    :hasRisk :PrivacyBreach .
 
 :R068 rdf:type :Obligation ;
     :requirementID "R068" ;
@@ -1835,8 +1856,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 9-10" ;
-    :noteText "Charter Mapping: Art 8; Art 21 Non-discrimination" .
-
+    :noteText "Charter Mapping: Art 8; Art 21 Non-discrimination" ;
+    :hasRisk :PrivacyBreach .
 
 :R069 rdf:type :Obligation ;
     :requirementID "R069" ;
@@ -1848,8 +1869,8 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 5(1)(b)" ;
     :noteText "Charter Mapping: Art 8" ;
-    :noteText "If yes: name units and justify" .
-
+    :noteText "If yes: name units and justify" ;
+    :hasRisk :PrivacyBreach .
 
 :R070 rdf:type :Obligation ;
     :requirementID "R070" ;
@@ -1861,8 +1882,8 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 26, 28" ;
     :noteText "Charter Mapping: Art 8" ;
-    :noteText "If yes: name orgs, justify, IT due diligence" .
-
+    :noteText "If yes: name orgs, justify, IT due diligence" ;
+    :hasRisk :PrivacyBreach .
 
 :R071 rdf:type :Obligation ;
     :requirementID "R071" ;
@@ -1887,8 +1908,8 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Ch V" ;
     :noteText "Charter Mapping: Art 8" ;
-    :noteText "If yes: must contact DPO" .
-
+    :noteText "If yes: must contact DPO" ;
+    :hasRisk :PrivacyBreach .
 
 :R073 rdf:type :Obligation ;
     :requirementID "R073" ;
@@ -1899,8 +1920,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 5(1)(e)" ;
-    :noteText "Charter Mapping: Art 8" .
-
+    :noteText "Charter Mapping: Art 8" ;
+    :hasRisk :PrivacyBreach .
 
 :R074 rdf:type :Obligation ;
     :requirementID "R074" ;
@@ -1923,8 +1944,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "System-generated list" ;
-    :noteText "Submission blocked until all uploaded" .
-
+    :noteText "Submission blocked until all uploaded" ;
+    :hasRisk :Discrimination , :EmploymentHarm .
 
 :R076 rdf:type :Obligation ;
     :requirementID "R076" ;
@@ -1937,8 +1958,8 @@
     :requiresEvidence "PIL attachment" ;
     :legalBasis "GDPR Art 12-13" ;
     :noteText "Charter Mapping: Art 8; Art 11 Freedom of expression (access to info)" ;
-    :noteText "Must match application form details" .
-
+    :noteText "Must match application form details" ;
+    :hasRisk :Accountability .
 
 :R077 rdf:type :Obligation ;
     :requirementID "R077" ;
@@ -1947,8 +1968,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :PrivacyBreach .
 
 :R078 rdf:type :Obligation ;
     :requirementID "R078" ;
@@ -1957,8 +1978,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :Accountability .
 
 :R079 rdf:type :Obligation ;
     :requirementID "R079" ;
@@ -1967,8 +1988,8 @@
     :tierLevel 1 ;
     :isMandatory true ;
     :belongsToFramework :REAMS ;
-    :hasTier :Tier1_Mandatory .
-
+    :hasTier :Tier1_Mandatory ;
+    :hasRisk :Accountability .
 
 :R080 rdf:type :Obligation ;
     :requirementID "R080" ;
@@ -1980,8 +2001,8 @@
     :hasTier :Tier2_Reflective ;
     :legalBasis "EU Dual Use Regulation" ;
     :noteText "Charter Mapping: Art 1 Human dignity" ;
-    :noteText "Reflective prompt for researcher awareness" .
-
+    :noteText "Reflective prompt for researcher awareness" ;
+    :hasRisk :PsychologicalHarm .
 
 :R081 rdf:type :Obligation ;
     :requirementID "R081" ;
@@ -1991,8 +2012,8 @@
     :isMandatory false ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier2_Reflective ;
-    :noteText "Charter Mapping: Art 21 Non-discrimination; Art 26 Disability" .
-
+    :noteText "Charter Mapping: Art 21 Non-discrimination; Art 26 Disability" ;
+    :hasRisk :Discrimination , :EmploymentHarm .
 
 :R082 rdf:type :Obligation ;
     :requirementID "R082" ;
@@ -2002,8 +2023,8 @@
     :isMandatory false ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier2_Reflective ;
-    :noteText "Best practice prompt" .
-
+    :noteText "Best practice prompt" ;
+    :hasRisk :PsychologicalHarm .
 
 :R083 rdf:type :Obligation ;
     :requirementID "R083" ;
@@ -2013,8 +2034,8 @@
     :isMandatory false ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier2_Reflective ;
-    :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" ;
+    :hasRisk :Accountability .
 
 :R084 rdf:type :Obligation ;
     :requirementID "R084" ;
@@ -2026,8 +2047,8 @@
     :hasTier :Tier2_Reflective ;
     :legalBasis "GDPR Recital 26" ;
     :noteText "Charter Mapping: Art 8" ;
-    :noteText "Pseudonymised ≠ anonymised" .
-
+    :noteText "Pseudonymised ≠ anonymised" ;
+    :hasRisk :PrivacyBreach .
 
 :R085 rdf:type :Obligation ;
     :requirementID "R085" ;
@@ -2052,8 +2073,8 @@
     :hasTier :Tier2_Reflective ;
     :legalBasis "EU AI Act" ;
     :noteText "Charter Mapping: Art 6 Right to liberty; Art 1 Human dignity" ;
-    :noteText "Key gap — not in REAMS" .
-
+    :noteText "Key gap — not in REAMS" ;
+    :hasRisk :Dignity .
 
 :R087 rdf:type :Obligation ;
     :requirementID "R087" ;
@@ -2064,8 +2085,8 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier2_Reflective ;
     :noteText "Charter Mapping: Art 37 Environmental protection" ;
-    :noteText "Key gap — not in REAMS" .
-
+    :noteText "Key gap — not in REAMS" ;
+    :hasRisk :EnvironmentalHarm .
 
 :AI001 rdf:type :Obligation ;
     :requirementID "AI001" ;
@@ -2077,8 +2098,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Necessity determination document" ;
     :legalBasis "AI Act Art 27-1" ;
-    :noteText "Charter Mapping: All Charter rights potentially" .
-
+    :noteText "Charter Mapping: All Charter rights potentially" ;
+    :hasRisk :DataBreach , :Dignity , :FalseIdentification , :FunctionCreep , :PsychologicalHarm .
 
 :AI002 rdf:type :Obligation ;
     :requirementID "AI002" ;
@@ -2089,8 +2110,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Written determination" ;
-    :legalBasis "AI Act Art 27-1" .
-
+    :legalBasis "AI Act Art 27-1" ;
+    :hasRisk :Accountability .
 
 :AI003 rdf:type :Obligation ;
     :requirementID "AI003" ;
@@ -2101,8 +2122,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Dated documentation" ;
-    :legalBasis "AI Act Art 27-2" .
-
+    :legalBasis "AI Act Art 27-2" ;
+    :hasRisk :Accountability .
 
 :AI004 rdf:type :Obligation ;
     :requirementID "AI004" ;
@@ -2113,8 +2134,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Named roles" ;
-    :legalBasis "AI Act Art 27-2" .
-
+    :legalBasis "AI Act Art 27-2" ;
+    :hasRisk :Accountability .
 
 :AI005 rdf:type :Obligation ;
     :requirementID "AI005" ;
@@ -2125,8 +2146,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Version tracking" ;
-    :legalBasis "AI Act Art 27-2" .
-
+    :legalBasis "AI Act Art 27-2" ;
+    :hasRisk :Accountability .
 
 :AI006 rdf:type :Obligation ;
     :requirementID "AI006" ;
@@ -2137,8 +2158,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Code of conduct reference" ;
-    :legalBasis "AI Act Art 27-2" .
-
+    :legalBasis "AI Act Art 27-2" ;
+    :hasRisk :Accountability .
 
 :AI007 rdf:type :Obligation ;
     :requirementID "AI007" ;
@@ -2149,8 +2170,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Process description" ;
-    :legalBasis "AI Act Art 27-1a" .
-
+    :legalBasis "AI Act Art 27-1a" ;
+    :hasRisk :Accountability .
 
 :AI008 rdf:type :Obligation ;
     :requirementID "AI008" ;
@@ -2161,8 +2182,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Purpose statement" ;
-    :legalBasis "AI Act Art 27-1a" .
-
+    :legalBasis "AI Act Art 27-1a" ;
+    :hasRisk :Accountability , :AddictionRisk , :Manipulation .
 
 :AI009 rdf:type :Obligation ;
     :requirementID "AI009" ;
@@ -2173,8 +2194,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Duration/frequency declaration" ;
-    :legalBasis "AI Act Art 27-1b" .
-
+    :legalBasis "AI Act Art 27-1b" ;
+    :hasRisk :Accountability .
 
 :AI010 rdf:type :Obligation ;
     :requirementID "AI010" ;
@@ -2185,8 +2206,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Use-case descriptions" ;
-    :legalBasis "AI Act Art 27-1b" .
-
+    :legalBasis "AI Act Art 27-1b" ;
+    :hasRisk :Accountability .
 
 :AI011 rdf:type :Obligation ;
     :requirementID "AI011" ;
@@ -2198,8 +2219,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Affected population description" ;
     :legalBasis "AI Act Art 27-1c" ;
-    :noteText "Charter Mapping: Art 21 Non-discrimination; Art 24 Rights of child" .
-
+    :noteText "Charter Mapping: Art 21 Non-discrimination; Art 24 Rights of child" ;
+    :hasRisk :Accountability , :FalseIdentification , :FunctionCreep , :Surveillance .
 
 :AI012 rdf:type :Obligation ;
     :requirementID "AI012" ;
@@ -2210,8 +2231,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Likelihood assessment" ;
-    :legalBasis "AI Act Art 27-1c" .
-
+    :legalBasis "AI Act Art 27-1c" ;
+    :hasRisk :Accountability , :DataGovernance .
 
 :AI013 rdf:type :Obligation ;
     :requirementID "AI013" ;
@@ -2223,8 +2244,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Impact description" ;
     :legalBasis "AI Act Art 27-1c" ;
-    :noteText "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" .
-
+    :noteText "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" ;
+    :hasRisk :Accountability .
 
 :AI014 rdf:type :Obligation ;
     :requirementID "AI014" ;
@@ -2236,8 +2257,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Risk register" ;
     :legalBasis "AI Act Art 27-1d" ;
-    :noteText "Charter Mapping: Map each risk to specific Charter article" .
-
+    :noteText "Charter Mapping: Map each risk to specific Charter article" ;
+    :hasRisk :PsychologicalHarm .
 
 :AI015 rdf:type :Obligation ;
     :requirementID "AI015" ;
@@ -2248,8 +2269,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Oversight documentation" ;
-    :legalBasis "AI Act Art 27-1e" .
-
+    :legalBasis "AI Act Art 27-1e" ;
+    :hasRisk :Accountability .
 
 :AI016 rdf:type :Obligation ;
     :requirementID "AI016" ;
@@ -2261,8 +2282,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Permissions/restrictions list" ;
     :legalBasis "AI Act Art 27-1e" ;
-    :noteText "Charter Mapping: Art 47 Right to effective remedy" .
-
+    :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
+    :hasRisk :Accountability , :EmploymentHarm , :GenderHarm , :WorkplaceSafetyRisk .
 
 :AI017 rdf:type :Obligation ;
     :requirementID "AI017" ;
@@ -2273,8 +2294,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Provider documentation" ;
-    :legalBasis "AI Act Art 27-1e" .
-
+    :legalBasis "AI Act Art 27-1e" ;
+    :hasRisk :Accountability , :Deception .
 
 :AI018 rdf:type :Obligation ;
     :requirementID "AI018" ;
@@ -2286,8 +2307,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Mitigation plan + incident procedures" ;
     :legalBasis "AI Act Art 27-1f" ;
-    :noteText "Charter Mapping: Art 47 Right to effective remedy" .
-
+    :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
+    :hasRisk :PsychologicalHarm .
 
 :AI019 rdf:type :Obligation ;
     :requirementID "AI019" ;
@@ -2298,8 +2319,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Prior FRIA reference" ;
-    :legalBasis "AI Act Art 27-2" .
-
+    :legalBasis "AI Act Art 27-2" ;
+    :hasRisk :Accountability .
 
 :AI020 rdf:type :Obligation ;
     :requirementID "AI020" ;
@@ -2311,8 +2332,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "DPIA cross-reference" ;
     :legalBasis "AI Act Art 27-4; GDPR Art 35" ;
-    :noteText "Charter Mapping: Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasRisk :PrivacyBreach .
 
 :AI021 rdf:type :Obligation ;
     :requirementID "AI021" ;
@@ -2323,8 +2344,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Outcome determination" ;
-    :legalBasis "AI Act Art 27-1" .
-
+    :legalBasis "AI Act Art 27-1" ;
+    :hasRisk :DemocraticProcessHarm , :EconomicHarm , :LibertyViolation , :PsychologicalHarm .
 
 :AI022 rdf:type :Obligation ;
     :requirementID "AI022" ;
@@ -2336,8 +2357,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Rights impact matrix" ;
     :legalBasis "AI Act Art 27-1" ;
-    :noteText "Charter Mapping: Each Charter article individually" .
-
+    :noteText "Charter Mapping: Each Charter article individually" ;
+    :hasRisk :Accountability , :LibertyViolation .
 
 :AI023 rdf:type :Obligation ;
     :requirementID "AI023" ;
@@ -2349,8 +2370,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Granular impact detail" ;
     :legalBasis "AI Act Art 27-1" ;
-    :noteText "Charter Mapping: Art 21 subcategories" .
-
+    :noteText "Charter Mapping: Art 21 subcategories" ;
+    :hasRisk :Discrimination , :GenderHarm .
 
 :AI024 rdf:type :Obligation ;
     :requirementID "AI024" ;
@@ -2361,8 +2382,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Notification status determination" ;
-    :legalBasis "AI Act Art 27-3" .
-
+    :legalBasis "AI Act Art 27-3" ;
+    :hasRisk :PrivacyBreach , :Surveillance .
 
 :AI025 rdf:type :Obligation ;
     :requirementID "AI025" ;
@@ -2373,8 +2394,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Notification record / proof of submission" ;
-    :legalBasis "AI Act Art 27-3" .
-
+    :legalBasis "AI Act Art 27-3" ;
+    :hasRisk :PrivacyBreach , :Surveillance .
 
 :AI026 rdf:type :Obligation ;
     :requirementID "AI026" ;
@@ -2385,8 +2406,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Completed questionnaire" ;
-    :legalBasis "AI Act Art 27-5" .
-
+    :legalBasis "AI Act Art 27-5" ;
+    :hasRisk :Accountability .
 
 :AI027 rdf:type :Obligation ;
     :requirementID "AI027" ;
@@ -2397,8 +2418,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Tool documentation" ;
-    :legalBasis "AI Act Art 27-5" .
-
+    :legalBasis "AI Act Art 27-5" ;
+    :hasRisk :Accountability .
 
 :AI028 rdf:type :Obligation ;
     :requirementID "AI028" ;
@@ -2409,8 +2430,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier2_Reflective ;
     :legalBasis "Paper discussion" ;
-    :noteText "Charter Mapping: Art 21; Art 1" .
-
+    :noteText "Charter Mapping: Art 21; Art 1" ;
+    :hasRisk :Accountability .
 
 :AI029 rdf:type :Obligation ;
     :requirementID "AI029" ;
@@ -2421,8 +2442,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier2_Reflective ;
     :legalBasis "Paper + GDPR Recital 26" ;
-    :noteText "Charter Mapping: Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasRisk :PrivacyBreach .
 
 :AI030 rdf:type :Obligation ;
     :requirementID "AI030" ;
@@ -2433,8 +2454,8 @@
     :belongsToFramework :EUAIAct ;
     :hasTier :Tier2_Reflective ;
     :legalBasis "Paper discussion" ;
-    :noteText "Charter Mapping: Art 21 subcategories" .
-
+    :noteText "Charter Mapping: Art 21 subcategories" ;
+    :hasRisk :Discrimination .
 
 :HE001 rdf:type :Obligation ;
     :requirementID "HE001" ;
@@ -2446,8 +2467,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Ethics self-assessment" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 6 Right to liberty; Art 1 Human dignity" .
-
+    :noteText "Charter Mapping: Art 6 Right to liberty; Art 1 Human dignity" ;
+    :hasRisk :Accountability , :Dignity .
 
 :HE002 rdf:type :Obligation ;
     :requirementID "HE002" ;
@@ -2459,8 +2480,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Ethics self-assessment" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 1 Human dignity; Art 47 Right to effective remedy" .
-
+    :noteText "Charter Mapping: Art 1 Human dignity; Art 47 Right to effective remedy" ;
+    :hasRisk :Accountability , :Dignity .
 
 :HE003 rdf:type :Obligation ;
     :requirementID "HE003" ;
@@ -2472,8 +2493,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Ethics self-assessment" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" .
-
+    :noteText "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" ;
+    :hasRisk :Accountability , :AddictionRisk , :ChildrenRights , :Dignity , :Manipulation .
 
 :HE004 rdf:type :Obligation ;
     :requirementID "HE004" ;
@@ -2485,8 +2506,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Ethics self-assessment" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 3 Integrity of person" .
-
+    :noteText "Charter Mapping: Art 3 Integrity of person" ;
+    :hasRisk :Accountability , :AddictionRisk , :Dignity .
 
 :HE005 rdf:type :Obligation ;
     :requirementID "HE005" ;
@@ -2498,8 +2519,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Design documentation" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 6 Right to liberty" .
-
+    :noteText "Charter Mapping: Art 6 Right to liberty" ;
+    :hasRisk :Accountability , :Dignity , :DualUseMisuse , :LibertyViolation .
 
 :HE006 rdf:type :Obligation ;
     :requirementID "HE006" ;
@@ -2511,8 +2532,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "User-facing documentation" ;
     :legalBasis "GDPR Art 13-14" ;
-    :noteText "Charter Mapping: Art 8 Data protection; Art 11 Freedom of expression" .
-
+    :noteText "Charter Mapping: Art 8 Data protection; Art 11 Freedom of expression" ;
+    :hasRisk :Accountability , :Dignity .
 
 :HE007 rdf:type :Obligation ;
     :requirementID "HE007" ;
@@ -2524,8 +2545,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "GDPR compliance documentation" ;
     :legalBasis "GDPR Art 5-6" ;
-    :noteText "Charter Mapping: Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasRisk :Accountability , :DataBreach , :Deception , :FalseIdentification , :FunctionCreep , :PrivacyBreach , :Surveillance .
 
 :HE008 rdf:type :Obligation ;
     :requirementID "HE008" ;
@@ -2537,8 +2558,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Design documentation" ;
     :legalBasis "GDPR Art 25" ;
-    :noteText "Charter Mapping: Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasRisk :PrivacyBreach .
 
 :HE009 rdf:type :Obligation ;
     :requirementID "HE009" ;
@@ -2550,8 +2571,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Security documentation" ;
     :legalBasis "GDPR Art 32" ;
-    :noteText "Charter Mapping: Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasRisk :PrivacyBreach .
 
 :HE010 rdf:type :Obligation ;
     :requirementID "HE010" ;
@@ -2563,8 +2584,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Security audit / logging" ;
     :legalBasis "GDPR Art 32-34; Cybersecurity Act" ;
-    :noteText "Charter Mapping: Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasRisk :PrivacyBreach .
 
 :HE011 rdf:type :Obligation ;
     :requirementID "HE011" ;
@@ -2576,8 +2597,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Audit trail" ;
     :legalBasis "GDPR" ;
-    :noteText "Charter Mapping: Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasRisk :PrivacyBreach .
 
 :HE012 rdf:type :Obligation ;
     :requirementID "HE012" ;
@@ -2590,8 +2611,8 @@
     :requiresEvidence "Proposal text / data statement" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination" ;
-    :noteText "MUST requirement" .
-
+    :noteText "MUST requirement" ;
+    :hasRisk :DataGovernance , :Discrimination .
 
 :HE013 rdf:type :Obligation ;
     :requirementID "HE013" ;
@@ -2603,8 +2624,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Bias assessment report" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 21 Non-discrimination; Art 23 Equality" .
-
+    :noteText "Charter Mapping: Art 21 Non-discrimination; Art 23 Equality" ;
+    :hasRisk :Discrimination , :EmploymentHarm , :GenderHarm , :WorkplaceSafetyRisk .
 
 :HE014 rdf:type :Obligation ;
     :requirementID "HE014" ;
@@ -2617,8 +2638,8 @@
     :requiresEvidence "Accessibility compliance" ;
     :legalBasis "Accessibility guidelines" ;
     :noteText "Charter Mapping: Art 26 Integration of persons with disabilities" ;
-    :noteText "Encouraged not mandatory" .
-
+    :noteText "Encouraged not mandatory" ;
+    :hasRisk :Discrimination .
 
 :HE015 rdf:type :Obligation ;
     :requirementID "HE015" ;
@@ -2631,8 +2652,8 @@
     :requiresEvidence "Impact assessment" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination; Art 20 Equality before law" ;
-    :noteText "MUST requirement" .
-
+    :noteText "MUST requirement" ;
+    :hasRisk :Discrimination , :EconomicHarm , :WorkplaceSafetyRisk .
 
 :HE016 rdf:type :Obligation ;
     :requirementID "HE016" ;
@@ -2644,8 +2665,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Proposal text" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 21 Non-discrimination" .
-
+    :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasRisk :Discrimination .
 
 :HE017 rdf:type :Obligation ;
     :requirementID "HE017" ;
@@ -2657,8 +2678,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Well-being assessment" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" .
-
+    :noteText "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" ;
+    :hasRisk :AddictionRisk , :EnvironmentalHarm , :Manipulation , :PsychologicalHarm .
 
 :HE018 rdf:type :Obligation ;
     :requirementID "HE018" ;
@@ -2671,8 +2692,8 @@
     :requiresEvidence "Environmental impact statement" ;
     :legalBasis "Sustainable Development Objectives" ;
     :noteText "Charter Mapping: Art 37 Environmental protection" ;
-    :noteText "MUST requirement" .
-
+    :noteText "MUST requirement" ;
+    :hasRisk :EnvironmentalHarm , :PsychologicalHarm .
 
 :HE019 rdf:type :Obligation ;
     :requirementID "HE019" ;
@@ -2684,8 +2705,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Social impact assessment" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 11 Freedom of expression; Art 12 Freedom of assembly" .
-
+    :noteText "Charter Mapping: Art 11 Freedom of expression; Art 12 Freedom of assembly" ;
+    :hasRisk :DemocraticProcessHarm , :DualUseMisuse , :EnvironmentalHarm , :ExpressionHarm , :PsychologicalHarm .
 
 :HE020 rdf:type :Obligation ;
     :requirementID "HE020" ;
@@ -2697,8 +2718,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Safety compliance" ;
     :legalBasis "IEEE P1228" ;
-    :noteText "Charter Mapping: Art 31 Fair working conditions" .
-
+    :noteText "Charter Mapping: Art 31 Fair working conditions" ;
+    :hasRisk :EmploymentHarm , :EnvironmentalHarm , :PsychologicalHarm , :WorkplaceSafetyRisk .
 
 :HE021 rdf:type :Obligation ;
     :requirementID "HE021" ;
@@ -2711,8 +2732,8 @@
     :requiresEvidence "User notification / disclosure" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 11 Freedom of expression" ;
-    :noteText "Especially chatbots" .
-
+    :noteText "Especially chatbots" ;
+    :hasRisk :Accountability , :Deception , :DemocraticProcessHarm , :ExpressionHarm , :Transparency .
 
 :HE022 rdf:type :Obligation ;
     :requirementID "HE022" ;
@@ -2724,8 +2745,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "User documentation" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 11 Freedom of expression" .
-
+    :noteText "Charter Mapping: Art 11 Freedom of expression" ;
+    :hasRisk :Accountability , :Deception , :Transparency .
 
 :HE023 rdf:type :Obligation ;
     :requirementID "HE023" ;
@@ -2736,8 +2757,8 @@
     :belongsToFramework :HorizonEurope ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Traceability documentation" ;
-    :legalBasis "EU Charter" .
-
+    :legalBasis "EU Charter" ;
+    :hasRisk :Accountability , :Deception , :IntellectualProperty , :Transparency .
 
 :HE024 rdf:type :Obligation ;
     :requirementID "HE024" ;
@@ -2749,8 +2770,8 @@
     :hasTier :Tier2_Reflective ;
     :requiresEvidence "Explainability documentation" ;
     :legalBasis "EU Charter" ;
-    :noteText "Particularly for high-impact decisions" .
-
+    :noteText "Particularly for high-impact decisions" ;
+    :hasRisk :Accountability , :Deception , :Transparency .
 
 :HE025 rdf:type :Obligation ;
     :requirementID "HE025" ;
@@ -2762,8 +2783,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Ethics decision log" ;
     :legalBasis "EU Charter" ;
-    :noteText "MUST requirement" .
-
+    :noteText "MUST requirement" ;
+    :hasRisk :Accountability , :Deception , :Transparency .
 
 :HE026 rdf:type :Obligation ;
     :requirementID "HE026" ;
@@ -2775,8 +2796,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Detection/remediation plan" ;
     :legalBasis "EU Charter" ;
-    :noteText "MUST requirement" .
-
+    :noteText "MUST requirement" ;
+    :hasRisk :Accountability .
 
 :HE027 rdf:type :Obligation ;
     :requirementID "HE027" ;
@@ -2788,8 +2809,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Oversight documentation" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 47 Right to effective remedy" .
-
+    :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
+    :hasRisk :Accountability .
 
 :HE028 rdf:type :Obligation ;
     :requirementID "HE028" ;
@@ -2801,8 +2822,8 @@
     :hasTier :Tier2_Reflective ;
     :requiresEvidence "Risk assessment" ;
     :legalBasis "EU Charter" ;
-    :noteText "Scaled to research type" .
-
+    :noteText "Scaled to research type" ;
+    :hasRisk :Accountability .
 
 :HE029 rdf:type :Obligation ;
     :requirementID "HE029" ;
@@ -2814,8 +2835,8 @@
     :hasTier :Tier2_Reflective ;
     :requiresEvidence "Complaint mechanism" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 47 Right to effective remedy" .
-
+    :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
+    :hasRisk :Accountability .
 
 :HE030 rdf:type :Obligation ;
     :requirementID "HE030" ;
@@ -2826,8 +2847,8 @@
     :belongsToFramework :HorizonEurope ;
     :hasTier :Tier2_Reflective ;
     :requiresEvidence "Audit logs" ;
-    :legalBasis "EU Charter" .
-
+    :legalBasis "EU Charter" ;
+    :hasRisk :Accountability .
 
 :HE031 rdf:type :Obligation ;
     :requirementID "HE031" ;
@@ -2839,8 +2860,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Data protection policy" ;
     :legalBasis "GDPR" ;
-    :noteText "Charter Mapping: Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasRisk :PrivacyBreach .
 
 :HE032 rdf:type :Obligation ;
     :requirementID "HE032" ;
@@ -2852,8 +2873,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Bias assessment" ;
     :legalBasis "GDPR; EU Charter" ;
-    :noteText "Charter Mapping: Art 21 Non-discrimination" .
-
+    :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasRisk :Discrimination , :GenderHarm , :PhysicalHarm , :PrivacyBreach .
 
 :HE033 rdf:type :Obligation ;
     :requirementID "HE033" ;
@@ -2865,8 +2886,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Data quality report" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 21 Non-discrimination" .
-
+    :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasRisk :DataGovernance , :Discrimination .
 
 :HE034 rdf:type :Obligation ;
     :requirementID "HE034" ;
@@ -2878,8 +2899,8 @@
     :hasTier :Tier2_Reflective ;
     :requiresEvidence "Versioning / provenance system" ;
     :legalBasis "EU Charter" ;
-    :noteText "Whenever possible" .
-
+    :noteText "Whenever possible" ;
+    :hasRisk :DataGovernance .
 
 :HE035 rdf:type :Obligation ;
     :requirementID "HE035" ;
@@ -2891,8 +2912,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Data governance documentation" ;
     :legalBasis "GDPR" ;
-    :noteText "Charter Mapping: Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasRisk :DataGovernance , :PrivacyBreach .
 
 :HE036 rdf:type :Obligation ;
     :requirementID "HE036" ;
@@ -2904,8 +2925,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Data minimisation documentation" ;
     :legalBasis "GDPR Art 5(1)(c)" ;
-    :noteText "Charter Mapping: Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasRisk :PrivacyBreach .
 
 :HE037 rdf:type :Obligation ;
     :requirementID "HE037" ;
@@ -2917,8 +2938,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Bias testing report" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 21 Non-discrimination" .
-
+    :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasRisk :Discrimination .
 
 :HE038 rdf:type :Obligation ;
     :requirementID "HE038" ;
@@ -2930,8 +2951,8 @@
     :hasTier :Tier2_Reflective ;
     :requiresEvidence "Accessibility review" ;
     :legalBasis "Accessibility guidelines" ;
-    :noteText "Charter Mapping: Art 26 Integration of persons with disabilities" .
-
+    :noteText "Charter Mapping: Art 26 Integration of persons with disabilities" ;
+    :hasRisk :Accountability .
 
 :HE039 rdf:type :Obligation ;
     :requirementID "HE039" ;
@@ -2942,8 +2963,8 @@
     :belongsToFramework :HorizonEurope ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Traceability documentation" ;
-    :legalBasis "EU Charter" .
-
+    :legalBasis "EU Charter" ;
+    :hasRisk :Accountability .
 
 :HE040 rdf:type :Obligation ;
     :requirementID "HE040" ;
@@ -2954,8 +2975,8 @@
     :belongsToFramework :HorizonEurope ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Code documentation" ;
-    :legalBasis "EU Charter" .
-
+    :legalBasis "EU Charter" ;
+    :hasRisk :Accountability .
 
 :HE041 rdf:type :Obligation ;
     :requirementID "HE041" ;
@@ -2966,8 +2987,8 @@
     :belongsToFramework :HorizonEurope ;
     :hasTier :Tier2_Reflective ;
     :requiresEvidence "Explainability artefacts" ;
-    :legalBasis "EU Charter" .
-
+    :legalBasis "EU Charter" ;
+    :hasRisk :Accountability , :Deception .
 
 :HE042 rdf:type :Obligation ;
     :requirementID "HE042" ;
@@ -2979,8 +3000,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "User comprehension test" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 1 Human dignity" .
-
+    :noteText "Charter Mapping: Art 1 Human dignity" ;
+    :hasRisk :Accountability .
 
 :HE043 rdf:type :Obligation ;
     :requirementID "HE043" ;
@@ -2991,8 +3012,8 @@
     :belongsToFramework :HorizonEurope ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Audit report" ;
-    :legalBasis "EU Charter" .
-
+    :legalBasis "EU Charter" ;
+    :hasRisk :Accountability .
 
 :HE044 rdf:type :Obligation ;
     :requirementID "HE044" ;
@@ -3004,8 +3025,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Stakeholder communication" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 11 Freedom of expression" .
-
+    :noteText "Charter Mapping: Art 11 Freedom of expression" ;
+    :hasRisk :Accountability .
 
 :HE045 rdf:type :Obligation ;
     :requirementID "HE045" ;
@@ -3016,8 +3037,8 @@
     :belongsToFramework :HorizonEurope ;
     :hasTier :Tier2_Reflective ;
     :requiresEvidence "Feedback mechanism" ;
-    :legalBasis "EU Charter" .
-
+    :legalBasis "EU Charter" ;
+    :hasRisk :Accountability .
 
 :HE046 rdf:type :Obligation ;
     :requirementID "HE046" ;
@@ -3028,8 +3049,8 @@
     :belongsToFramework :HorizonEurope ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Compliance plan" ;
-    :legalBasis "EU Charter" .
-
+    :legalBasis "EU Charter" ;
+    :hasRisk :Accountability .
 
 :HE047 rdf:type :Obligation ;
     :requirementID "HE047" ;
@@ -3041,8 +3062,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Updated policies" ;
     :legalBasis "GDPR" ;
-    :noteText "Charter Mapping: Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasRisk :PrivacyBreach .
 
 :HE048 rdf:type :Obligation ;
     :requirementID "HE048" ;
@@ -3053,8 +3074,8 @@
     :belongsToFramework :HorizonEurope ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Monitoring dashboard / reports" ;
-    :legalBasis "EU Charter" .
-
+    :legalBasis "EU Charter" ;
+    :hasRisk :PrivacyBreach , :Surveillance .
 
 :HE049 rdf:type :Obligation ;
     :requirementID "HE049" ;
@@ -3066,8 +3087,8 @@
     :hasTier :Tier2_Reflective ;
     :requiresEvidence "Complaint channel" ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 47 Right to effective remedy" .
-
+    :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
+    :hasRisk :PrivacyBreach , :Surveillance .
 
 :HE050 rdf:type :Obligation ;
     :requirementID "HE050" ;
@@ -3078,8 +3099,8 @@
     :belongsToFramework :HorizonEurope ;
     :hasTier :Tier2_Reflective ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 1 Human dignity" .
-
+    :noteText "Charter Mapping: Art 1 Human dignity" ;
+    :hasRisk :DualUseMisuse , :FunctionCreep .
 
 :HE051 rdf:type :Obligation ;
     :requirementID "HE051" ;
@@ -3090,8 +3111,8 @@
     :belongsToFramework :HorizonEurope ;
     :hasTier :Tier2_Reflective ;
     :legalBasis "EU Charter" ;
-    :noteText "Charter Mapping: Art 11 Freedom of expression; Art 12 Freedom of assembly" .
-
+    :noteText "Charter Mapping: Art 11 Freedom of expression; Art 12 Freedom of assembly" ;
+    :hasRisk :DemocraticProcessHarm , :EnvironmentalHarm .
 
 :HE052 rdf:type :Obligation ;
     :requirementID "HE052" ;
@@ -3102,8 +3123,8 @@
     :belongsToFramework :HorizonEurope ;
     :hasTier :Tier2_Reflective ;
     :legalBasis "Sustainable Development Objectives" ;
-    :noteText "Charter Mapping: Art 37 Environmental protection" .
-
+    :noteText "Charter Mapping: Art 37 Environmental protection" ;
+    :hasRisk :EnvironmentalHarm .
 
 :ACM001 rdf:type :Obligation ;
     :requirementID "ACM001" ;
@@ -3115,8 +3136,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Ethics statement in paper" ;
     :legalBasis "ACL Code of Ethics §1.1" ;
-    :noteText "Charter Mapping: Art 1 Human dignity" .
-
+    :noteText "Charter Mapping: Art 1 Human dignity" ;
+    :hasRisk :Dignity , :PsychologicalHarm .
 
 :ACM002 rdf:type :Obligation ;
     :requirementID "ACM002" ;
@@ -3128,8 +3149,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Ethics statement in paper" ;
     :legalBasis "ACL Code of Ethics §1.2" ;
-    :noteText "Charter Mapping: Art 3 Integrity of person" .
-
+    :noteText "Charter Mapping: Art 3 Integrity of person" ;
+    :hasRisk :DataBreach , :FalseIdentification , :FunctionCreep , :PrivacyBreach , :Surveillance .
 
 :ACM003 rdf:type :Obligation ;
     :requirementID "ACM003" ;
@@ -3141,8 +3162,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Bias analysis section" ;
     :legalBasis "ACL Code of Ethics §1.4" ;
-    :noteText "Charter Mapping: Art 21 Non-discrimination" .
-
+    :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasRisk :DataGovernance , :Discrimination .
 
 :ACM004 rdf:type :Obligation ;
     :requirementID "ACM004" ;
@@ -3154,8 +3175,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Data statement / bias assessment" ;
     :legalBasis "ACL Code of Ethics §1.4" ;
-    :noteText "Charter Mapping: Art 21 Non-discrimination" .
-
+    :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasRisk :AddictionRisk , :ChildrenRights , :Discrimination , :Manipulation .
 
 :ACM005 rdf:type :Obligation ;
     :requirementID "ACM005" ;
@@ -3167,8 +3188,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Citation and licence compliance" ;
     :legalBasis "ACL Code of Ethics §1.5" ;
-    :noteText "Charter Mapping: Art 17 Right to property" .
-
+    :noteText "Charter Mapping: Art 17 Right to property" ;
+    :hasRisk :AddictionRisk , :ChildrenRights , :IntellectualProperty .
 
 :ACM006 rdf:type :Obligation ;
     :requirementID "ACM006" ;
@@ -3180,8 +3201,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "IRB/ethics approval; consent forms" ;
     :legalBasis "ACL Code of Ethics §1.6" ;
-    :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" ;
+    :hasRisk :PrivacyBreach .
 
 :ACM007 rdf:type :Obligation ;
     :requirementID "ACM007" ;
@@ -3193,8 +3214,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Risk analysis section in paper" ;
     :legalBasis "ACL Code of Ethics §2.5" ;
-    :noteText "Charter Mapping: Art 1 Human dignity" .
-
+    :noteText "Charter Mapping: Art 1 Human dignity" ;
+    :hasRisk :PsychologicalHarm .
 
 :ACM008 rdf:type :Obligation ;
     :requirementID "ACM008" ;
@@ -3205,8 +3226,8 @@
     :belongsToFramework :ACMConference ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Method risk discussion" ;
-    :legalBasis "ACL Code of Ethics §2.5" .
-
+    :legalBasis "ACL Code of Ethics §2.5" ;
+    :hasRisk :PsychologicalHarm .
 
 :ACM009 rdf:type :Obligation ;
     :requirementID "ACM009" ;
@@ -3218,8 +3239,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Data access documentation" ;
     :legalBasis "ACL Code of Ethics §2.8" ;
-    :noteText "Charter Mapping: Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasRisk :Accountability .
 
 :ACM010 rdf:type :Obligation ;
     :requirementID "ACM010" ;
@@ -3230,8 +3251,8 @@
     :belongsToFramework :ACMConference ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Security assessment" ;
-    :legalBasis "ACL Code of Ethics §2.9" .
-
+    :legalBasis "ACL Code of Ethics §2.9" ;
+    :hasRisk :Accountability .
 
 :ACM011 rdf:type :Obligation ;
     :requirementID "ACM011" ;
@@ -3243,8 +3264,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Annotator welfare documentation" ;
     :legalBasis "ACL Code of Ethics §3.3" ;
-    :noteText "Charter Mapping: Art 31 Fair working conditions" .
-
+    :noteText "Charter Mapping: Art 31 Fair working conditions" ;
+    :hasRisk :EmploymentHarm , :WorkplaceSafetyRisk .
 
 :ACM012 rdf:type :Obligation ;
     :requirementID "ACM012" ;
@@ -3256,8 +3277,8 @@
     :hasTier :Tier2_Reflective ;
     :requiresEvidence "Environmental/social impact statement" ;
     :legalBasis "ACL Code of Ethics §1.1" ;
-    :noteText "Charter Mapping: Art 37 Environmental protection" .
-
+    :noteText "Charter Mapping: Art 37 Environmental protection" ;
+    :hasRisk :EconomicHarm , :EmploymentHarm , :EnvironmentalHarm , :GenderHarm , :WorkplaceSafetyRisk .
 
 :ACM013 rdf:type :Obligation ;
     :requirementID "ACM013" ;
@@ -3269,8 +3290,8 @@
     :hasTier :Tier2_Reflective ;
     :requiresEvidence "Dual use discussion" ;
     :legalBasis "ACL Code of Ethics §1.2, §2.5" ;
-    :noteText "Charter Mapping: Art 1 Human dignity" .
-
+    :noteText "Charter Mapping: Art 1 Human dignity" ;
+    :hasRisk :Accountability , :Deception , :DualUseMisuse .
 
 :ACM014 rdf:type :Obligation ;
     :requirementID "ACM014" ;
@@ -3282,8 +3303,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Payment documentation" ;
     :legalBasis "NeurIPS Code of Ethics" ;
-    :noteText "Charter Mapping: Art 31 Fair working conditions" .
-
+    :noteText "Charter Mapping: Art 31 Fair working conditions" ;
+    :hasRisk :Accountability .
 
 :ACM015 rdf:type :Obligation ;
     :requirementID "ACM015" ;
@@ -3295,8 +3316,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "IRB/ethics approval or peer review" ;
     :legalBasis "NeurIPS Code of Ethics" ;
-    :noteText "Charter Mapping: Art 1 Human dignity" .
-
+    :noteText "Charter Mapping: Art 1 Human dignity" ;
+    :hasRisk :Accountability .
 
 :ACM016 rdf:type :Obligation ;
     :requirementID "ACM016" ;
@@ -3308,8 +3329,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Data anonymisation documentation" ;
     :legalBasis "NeurIPS Code of Ethics" ;
-    :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" ;
+    :hasRisk :DataGovernance , :PrivacyBreach .
 
 :ACM017 rdf:type :Obligation ;
     :requirementID "ACM017" ;
@@ -3321,8 +3342,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Consent documentation" ;
     :legalBasis "NeurIPS Code of Ethics" ;
-    :noteText "Charter Mapping: Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasRisk :DataGovernance .
 
 :ACM018 rdf:type :Obligation ;
     :requirementID "ACM018" ;
@@ -3333,8 +3354,8 @@
     :belongsToFramework :ACMConference ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Dataset status verification" ;
-    :legalBasis "NeurIPS Code of Ethics" .
-
+    :legalBasis "NeurIPS Code of Ethics" ;
+    :hasRisk :DataGovernance , :IntellectualProperty .
 
 :ACM019 rdf:type :Obligation ;
     :requirementID "ACM019" ;
@@ -3346,8 +3367,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Licence compliance" ;
     :legalBasis "NeurIPS Code of Ethics" ;
-    :noteText "Charter Mapping: Art 17 Right to property" .
-
+    :noteText "Charter Mapping: Art 17 Right to property" ;
+    :hasRisk :DataGovernance , :IntellectualProperty .
 
 :ACM020 rdf:type :Obligation ;
     :requirementID "ACM020" ;
@@ -3359,8 +3380,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Representativeness statement" ;
     :legalBasis "NeurIPS Code of Ethics" ;
-    :noteText "Charter Mapping: Art 21 Non-discrimination" .
-
+    :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasRisk :DataGovernance , :DualUseMisuse , :ExpressionHarm .
 
 :ACM021 rdf:type :Obligation ;
     :requirementID "ACM021" ;
@@ -3373,8 +3394,8 @@
     :requiresEvidence "Safety assessment" ;
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 2 Right to life; Art 3 Integrity" ;
-    :noteText "No weapons research accepted" .
-
+    :noteText "No weapons research accepted" ;
+    :hasRisk :DualUseMisuse .
 
 :ACM022 rdf:type :Obligation ;
     :requirementID "ACM022" ;
@@ -3385,8 +3406,8 @@
     :belongsToFramework :ACMConference ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Security risk assessment" ;
-    :legalBasis "NeurIPS Code of Ethics" .
-
+    :legalBasis "NeurIPS Code of Ethics" ;
+    :hasRisk :PsychologicalHarm .
 
 :ACM023 rdf:type :Obligation ;
     :requirementID "ACM023" ;
@@ -3398,8 +3419,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Discrimination impact assessment" ;
     :legalBasis "NeurIPS Code of Ethics" ;
-    :noteText "Charter Mapping: Art 21 Non-discrimination; Art 35 Health care" .
-
+    :noteText "Charter Mapping: Art 21 Non-discrimination; Art 35 Health care" ;
+    :hasRisk :Discrimination , :PhysicalHarm , :PrivacyBreach .
 
 :ACM024 rdf:type :Obligation ;
     :requirementID "ACM024" ;
@@ -3411,8 +3432,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Legal compliance check" ;
     :legalBasis "NeurIPS Code of Ethics" ;
-    :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" ;
+    :hasRisk :PrivacyBreach , :PsychologicalHarm , :Surveillance .
 
 :ACM025 rdf:type :Obligation ;
     :requirementID "ACM025" ;
@@ -3424,8 +3445,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Misuse risk statement" ;
     :legalBasis "NeurIPS Code of Ethics" ;
-    :noteText "Charter Mapping: Art 1 Human dignity; Art 11 Freedom of expression" .
-
+    :noteText "Charter Mapping: Art 1 Human dignity; Art 11 Freedom of expression" ;
+    :hasRisk :Accountability , :Deception , :DemocraticProcessHarm , :DualUseMisuse , :EconomicHarm , :ExpressionHarm , :FinancialHarm .
 
 :ACM026 rdf:type :Obligation ;
     :requirementID "ACM026" ;
@@ -3437,8 +3458,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Environmental impact statement" ;
     :legalBasis "NeurIPS Code of Ethics" ;
-    :noteText "Charter Mapping: Art 37 Environmental protection" .
-
+    :noteText "Charter Mapping: Art 37 Environmental protection" ;
+    :hasRisk :EnvironmentalHarm .
 
 :ACM027 rdf:type :Obligation ;
     :requirementID "ACM027" ;
@@ -3450,8 +3471,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Human rights compliance" ;
     :legalBasis "NeurIPS Code of Ethics" ;
-    :noteText "Charter Mapping: Art 1-50 (multiple)" .
-
+    :noteText "Charter Mapping: Art 1-50 (multiple)" ;
+    :hasRisk :ExpressionHarm , :LibertyViolation , :PhysicalHarm , :PrivacyBreach .
 
 :ACM028 rdf:type :Obligation ;
     :requirementID "ACM028" ;
@@ -3463,8 +3484,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Bias audit" ;
     :legalBasis "NeurIPS Code of Ethics" ;
-    :noteText "Charter Mapping: Art 21 Non-discrimination; Art 23 Equality" .
-
+    :noteText "Charter Mapping: Art 21 Non-discrimination; Art 23 Equality" ;
+    :hasRisk :DataGovernance , :Discrimination , :GenderHarm .
 
 :ACM029 rdf:type :Obligation ;
     :requirementID "ACM029" ;
@@ -3475,8 +3496,8 @@
     :belongsToFramework :ACMConference ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Model Card / Datasheet" ;
-    :legalBasis "NeurIPS Code of Ethics" .
-
+    :legalBasis "NeurIPS Code of Ethics" ;
+    :hasRisk :DataGovernance , :IntellectualProperty .
 
 :ACM030 rdf:type :Obligation ;
     :requirementID "ACM030" ;
@@ -3487,8 +3508,8 @@
     :belongsToFramework :ACMConference ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Licence document" ;
-    :legalBasis "NeurIPS Code of Ethics" .
-
+    :legalBasis "NeurIPS Code of Ethics" ;
+    :hasRisk :IntellectualProperty .
 
 :ACM031 rdf:type :Obligation ;
     :requirementID "ACM031" ;
@@ -3500,8 +3521,8 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Security documentation" ;
     :legalBasis "NeurIPS Code of Ethics" ;
-    :noteText "Charter Mapping: Art 8 Data protection" .
-
+    :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasRisk :PrivacyBreach .
 
 :ACM032 rdf:type :Obligation ;
     :requirementID "ACM032" ;
@@ -3512,8 +3533,8 @@
     :belongsToFramework :ACMConference ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Release policy" ;
-    :legalBasis "NeurIPS Code of Ethics" .
-
+    :legalBasis "NeurIPS Code of Ethics" ;
+    :hasRisk :PsychologicalHarm .
 
 :ACM033 rdf:type :Obligation ;
     :requirementID "ACM033" ;
@@ -3524,8 +3545,8 @@
     :belongsToFramework :ACMConference ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Reproducibility package" ;
-    :legalBasis "NeurIPS Code of Ethics" .
-
+    :legalBasis "NeurIPS Code of Ethics" ;
+    :hasRisk :EnvironmentalHarm .
 
 :ACM034 rdf:type :Obligation ;
     :requirementID "ACM034" ;
@@ -3536,8 +3557,8 @@
     :belongsToFramework :ACMConference ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Reproducibility statement" ;
-    :legalBasis "NeurIPS Code of Ethics" .
-
+    :legalBasis "NeurIPS Code of Ethics" ;
+    :hasRisk :Accountability , :Deception .
 
 :ACM035 rdf:type :Obligation ;
     :requirementID "ACM035" ;
@@ -3548,8 +3569,8 @@
     :belongsToFramework :ACMConference ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Legal compliance statement" ;
-    :legalBasis "NeurIPS Code of Ethics" .
-
+    :legalBasis "NeurIPS Code of Ethics" ;
+    :hasRisk :Accountability .
 
 :ACM036 rdf:type :Obligation ;
     :requirementID "ACM036" ;
@@ -3560,8 +3581,8 @@
     :belongsToFramework :ACMConference ;
     :hasTier :Tier2_Reflective ;
     :legalBasis "ACL example review" ;
-    :noteText "Charter Mapping: Art 1 Human dignity; Art 7 Private life" .
-
+    :noteText "Charter Mapping: Art 1 Human dignity; Art 7 Private life" ;
+    :hasRisk :Accountability .
 
 :ACM037 rdf:type :Obligation ;
     :requirementID "ACM037" ;
@@ -3572,8 +3593,8 @@
     :belongsToFramework :ACMConference ;
     :hasTier :Tier2_Reflective ;
     :legalBasis "NeurIPS + ACL §3.3" ;
-    :noteText "Charter Mapping: Art 31 Fair working conditions" .
-
+    :noteText "Charter Mapping: Art 31 Fair working conditions" ;
+    :hasRisk :EmploymentHarm , :WorkplaceSafetyRisk .
 
 :ACM038 rdf:type :Obligation ;
     :requirementID "ACM038" ;
@@ -3584,7 +3605,8 @@
     :belongsToFramework :ACMConference ;
     :hasTier :Tier2_Reflective ;
     :legalBasis "NeurIPS environment guidance" ;
-    :noteText "Charter Mapping: Art 37 Environmental protection" .
+    :noteText "Charter Mapping: Art 37 Environmental protection" ;
+    :hasRisk :EnvironmentalHarm .
 
 
 ### ============================================================
@@ -4649,6 +4671,10 @@
     rdfs:comment "Everyone has the right to freedom of expression. This right shall include freedom to hold opinions and to receive and impart information and ideas without interference by public authority." ;
     dct:source <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016P/TXT> .
 
+:Art12_FreedomOfAssembly rdfs:label "Article 12 — Freedom of Assembly and of Association" ;
+    rdfs:comment "Everyone has the right to freedom of peaceful assembly and to freedom of association at all levels, in particular in political, trade union and civic matters, which includes the right of everyone to form and to join trade unions for the protection of his or her interests." ;
+    dct:source <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016P/TXT> .
+
 :Art16_FreedomToConductBusiness rdfs:label "Article 16 — Freedom to Conduct a Business" ;
     rdfs:comment "The freedom to conduct a business in accordance with Union law and national laws and practices is recognised." ;
     dct:source <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016P/TXT> .
@@ -4761,6 +4787,57 @@
 
 :AddictionRisk rdfs:label "Addiction Risk" ;
     rdfs:comment "Risk that AI system design exploits psychological vulnerabilities to create compulsive usage patterns." .
+
+
+### Extended risk categories (Phase 0 — incident vocabulary formalised)
+:Surveillance rdfs:label "Surveillance" ;
+    rdfs:comment "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system." .
+
+:Manipulation rdfs:label "Manipulation" ;
+    rdfs:comment "Risk that an AI system covertly influences behaviour, beliefs, or choices without adequate disclosure or consent." .
+
+:ChildrenRights rdfs:label "Children Rights" ;
+    rdfs:comment "Risk of harm to children's rights, development, or best interests arising from AI systems affecting minors." .
+
+:Dignity rdfs:label "Dignity" ;
+    rdfs:comment "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use." .
+
+:GenderHarm rdfs:label "Gender Harm" ;
+    rdfs:comment "Risk of gender-based disadvantage, stereotyping, or exclusion produced or amplified by an AI system." .
+
+:EconomicHarm rdfs:label "Economic Harm" ;
+    rdfs:comment "Risk of systemic or population-level economic disadvantage caused by AI systems (distinct from individual FinancialHarm)." .
+
+:EmploymentHarm rdfs:label "Employment Harm" ;
+    rdfs:comment "Risk of unfair exclusion, surveillance, or adverse treatment of workers or job applicants by AI systems." .
+
+:Accountability rdfs:label "Accountability" ;
+    rdfs:comment "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions." .
+
+:LibertyViolation rdfs:label "Liberty Violation" ;
+    rdfs:comment "Risk of unjustified restriction of personal liberty through AI-informed decisions (detention, exclusion, coercion)." .
+
+:ExpressionHarm rdfs:label "Expression Harm" ;
+    rdfs:comment "Risk of chilling, suppressing, or misrepresenting legitimate expression through AI content systems." .
+
+:DataBreach rdfs:label "Data Breach" ;
+    rdfs:comment "Risk of unauthorised access to or leakage of personal data held or processed by an AI system." .
+
+:Deception rdfs:label "Deception" ;
+    rdfs:comment "Risk that an AI system misleads users about its nature, capabilities, or the provenance of its outputs." .
+
+:IntellectualProperty rdfs:label "Intellectual Property" ;
+    rdfs:comment "Risk of unauthorised use or infringement of intellectual property in AI training or outputs." .
+
+:FalseIdentification rdfs:label "False Identification" ;
+    rdfs:comment "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm." .
+
+:DataGovernance rdfs:label "Data Governance" ;
+    rdfs:comment "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines." .
+
+:Transparency rdfs:label "Transparency" ;
+    rdfs:comment "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders." .
+
 
 ### Evidence types
 :Certificate rdfs:label "Certificate" ;

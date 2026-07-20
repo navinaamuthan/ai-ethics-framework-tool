@@ -1,0 +1,486 @@
+{
+  "cases": [
+    {
+      "proposal_id": "P01",
+      "title": "Optum Health Risk Stratification Algorithm",
+      "expert_signal": "Art21 present / Art31",
+      "before": {
+        "matched_rights": [
+          "Art20_EqualityBeforeLaw",
+          "Art21_NonDiscrimination",
+          "Art23_GenderEquality",
+          "Art26_DisabilityIntegration",
+          "Art2_RightToLife",
+          "Art35_HealthCare",
+          "Art41_GoodAdministration",
+          "Art47_RightToEffectiveRemedy",
+          "Art7_PrivateLife",
+          "Art8_DataProtection"
+        ],
+        "art21": true,
+        "art24": false,
+        "art31": false,
+        "risk_categories_retrieved": []
+      },
+      "after": {
+        "matched_rights": [
+          "Art20_EqualityBeforeLaw",
+          "Art21_NonDiscrimination",
+          "Art23_GenderEquality",
+          "Art26_DisabilityIntegration",
+          "Art2_RightToLife",
+          "Art35_HealthCare",
+          "Art41_GoodAdministration",
+          "Art47_RightToEffectiveRemedy",
+          "Art7_PrivateLife",
+          "Art8_DataProtection"
+        ],
+        "art21": true,
+        "art24": false,
+        "art31": false,
+        "disambiguation_path": "individual_treatment\u2192Art21",
+        "risk_categories_retrieved": [
+          "Discrimination",
+          "Accountability",
+          "DemocraticProcessHarm",
+          "GenderHarm",
+          "DataBreach",
+          "FalseIdentification",
+          "FunctionCreep",
+          "PrivacyBreach",
+          "Surveillance",
+          "EconomicHarm",
+          "EmploymentHarm",
+          "EnvironmentalHarm",
+          "WorkplaceSafetyRisk",
+          "Deception",
+          "DualUseMisuse",
+          "DataGovernance",
+          "IntellectualProperty",
+          "PhysicalHarm",
+          "Dignity",
+          "PsychologicalHarm",
+          "LibertyViolation",
+          "ChildrenRights",
+          "ExpressionHarm",
+          "AddictionRisk",
+          "Manipulation",
+          "ReputationalHarm",
+          "FinancialHarm"
+        ],
+        "transparency_wellbeing_sections": [
+          "Transparency"
+        ],
+        "requirements_retrieved": 170
+      },
+      "expected_rights": [
+        "Art21_NonDiscrimination",
+        "Art35_HealthCare",
+        "Art8_DataProtection",
+        "Art2_RightToLife"
+      ],
+      "expected_risk_categories": [
+        "Discrimination",
+        "PhysicalHarm"
+      ],
+      "existing_llm_output": {
+        "risk_categories": [],
+        "charter_articles": [
+          "Art21",
+          "Art35",
+          "Art41",
+          "Art47",
+          "Art7"
+        ],
+        "note": "Pre-rerun outputs lack risk_category fields; re-run ethics_rag after GraphDB reload to populate."
+      },
+      "fix_highlights": [
+        "Surveillance category retrieved"
+      ]
+    },
+    {
+      "proposal_id": "P03",
+      "title": "Amazon Rekognition Law Enforcement Facial Recognition",
+      "expert_signal": "Surveillance / Art21",
+      "before": {
+        "matched_rights": [
+          "Art11_FreedomOfExpression",
+          "Art1_HumanDignity",
+          "Art20_EqualityBeforeLaw",
+          "Art21_NonDiscrimination",
+          "Art23_GenderEquality",
+          "Art41_GoodAdministration",
+          "Art47_RightToEffectiveRemedy",
+          "Art48_PresumptionOfInnocence",
+          "Art6_RightToLiberty",
+          "Art7_PrivateLife",
+          "Art8_DataProtection"
+        ],
+        "art21": true,
+        "art24": false,
+        "art31": false,
+        "risk_categories_retrieved": []
+      },
+      "after": {
+        "matched_rights": [
+          "Art11_FreedomOfExpression",
+          "Art1_HumanDignity",
+          "Art20_EqualityBeforeLaw",
+          "Art21_NonDiscrimination",
+          "Art23_GenderEquality",
+          "Art41_GoodAdministration",
+          "Art47_RightToEffectiveRemedy",
+          "Art48_PresumptionOfInnocence",
+          "Art6_RightToLiberty",
+          "Art7_PrivateLife",
+          "Art8_DataProtection"
+        ],
+        "art21": true,
+        "art24": false,
+        "art31": false,
+        "disambiguation_path": "individual_treatment\u2192Art21",
+        "risk_categories_retrieved": [
+          "DataGovernance",
+          "DualUseMisuse",
+          "ExpressionHarm",
+          "Accountability",
+          "Deception",
+          "DemocraticProcessHarm",
+          "EconomicHarm",
+          "FinancialHarm",
+          "LibertyViolation",
+          "PhysicalHarm",
+          "PrivacyBreach",
+          "EnvironmentalHarm",
+          "PsychologicalHarm",
+          "FunctionCreep",
+          "Dignity",
+          "DataBreach",
+          "FalseIdentification",
+          "Surveillance",
+          "EmploymentHarm",
+          "WorkplaceSafetyRisk",
+          "IntellectualProperty",
+          "AddictionRisk",
+          "Manipulation",
+          "ChildrenRights",
+          "Discrimination",
+          "ReputationalHarm",
+          "GenderHarm"
+        ],
+        "transparency_wellbeing_sections": [
+          "Transparency",
+          "Well-being"
+        ],
+        "requirements_retrieved": 190
+      },
+      "expected_rights": [
+        "Art7_PrivateLife",
+        "Art8_DataProtection",
+        "Art21_NonDiscrimination",
+        "Art6_RightToLiberty",
+        "Art47_RightToEffectiveRemedy",
+        "Art48_PresumptionOfInnocence"
+      ],
+      "expected_risk_categories": [
+        "Discrimination",
+        "Surveillance",
+        "FalseIdentification"
+      ],
+      "existing_llm_output": {
+        "risk_categories": [],
+        "charter_articles": [
+          "Art7",
+          "Art8",
+          "Art20",
+          "Art21",
+          "Art47"
+        ],
+        "note": "Pre-rerun outputs lack risk_category fields; re-run ethics_rag after GraphDB reload to populate."
+      },
+      "fix_highlights": [
+        "Surveillance category retrieved"
+      ]
+    },
+    {
+      "proposal_id": "P06",
+      "title": "Emotion Recognition in Secondary School Classrooms",
+      "expert_signal": "Art24 + ChildrenRights",
+      "before": {
+        "matched_rights": [
+          "Art1_HumanDignity",
+          "Art21_NonDiscrimination",
+          "Art24_RightsOfChild",
+          "Art3_RightToIntegrity",
+          "Art41_GoodAdministration",
+          "Art47_RightToEffectiveRemedy",
+          "Art7_PrivateLife",
+          "Art8_DataProtection"
+        ],
+        "art21": true,
+        "art24": true,
+        "art31": false,
+        "risk_categories_retrieved": []
+      },
+      "after": {
+        "matched_rights": [
+          "Art1_HumanDignity",
+          "Art21_NonDiscrimination",
+          "Art24_RightsOfChild",
+          "Art3_RightToIntegrity",
+          "Art41_GoodAdministration",
+          "Art47_RightToEffectiveRemedy",
+          "Art7_PrivateLife",
+          "Art8_DataProtection"
+        ],
+        "art21": true,
+        "art24": true,
+        "art31": false,
+        "disambiguation_path": "not_applicable",
+        "risk_categories_retrieved": [
+          "Dignity",
+          "PsychologicalHarm",
+          "DataBreach",
+          "FalseIdentification",
+          "FunctionCreep",
+          "PrivacyBreach",
+          "Surveillance",
+          "EmploymentHarm",
+          "WorkplaceSafetyRisk",
+          "Accountability",
+          "Deception",
+          "DualUseMisuse",
+          "DataGovernance",
+          "IntellectualProperty",
+          "ExpressionHarm",
+          "DemocraticProcessHarm",
+          "EconomicHarm",
+          "FinancialHarm",
+          "AddictionRisk",
+          "Manipulation",
+          "LibertyViolation",
+          "ChildrenRights",
+          "Discrimination",
+          "EnvironmentalHarm",
+          "PhysicalHarm",
+          "ReputationalHarm",
+          "GenderHarm"
+        ],
+        "transparency_wellbeing_sections": [
+          "Transparency",
+          "Well-being"
+        ],
+        "requirements_retrieved": 196
+      },
+      "expected_rights": [
+        "Art24_RightsOfChild",
+        "Art7_PrivateLife",
+        "Art8_DataProtection",
+        "Art1_HumanDignity",
+        "Art3_RightToIntegrity"
+      ],
+      "expected_risk_categories": [
+        "ChildrenRights",
+        "PrivacyBreach",
+        "Discrimination"
+      ],
+      "existing_llm_output": {
+        "risk_categories": [],
+        "charter_articles": [
+          "Art1",
+          "Art7",
+          "Art8",
+          "Art21",
+          "Art24"
+        ],
+        "note": "Pre-rerun outputs lack risk_category fields; re-run ethics_rag after GraphDB reload to populate."
+      },
+      "fix_highlights": [
+        "Art24=True; ChildrenRights=True",
+        "Surveillance category retrieved"
+      ]
+    },
+    {
+      "proposal_id": "P08",
+      "title": "AI Chatbot for Mental Health Support Triage",
+      "expert_signal": "Art35 health path",
+      "before": {
+        "matched_rights": [
+          "Art11_FreedomOfExpression",
+          "Art1_HumanDignity",
+          "Art24_RightsOfChild",
+          "Art2_RightToLife",
+          "Art35_HealthCare",
+          "Art41_GoodAdministration",
+          "Art7_PrivateLife",
+          "Art8_DataProtection"
+        ],
+        "art21": false,
+        "art24": true,
+        "art31": false,
+        "risk_categories_retrieved": []
+      },
+      "after": {
+        "matched_rights": [
+          "Art11_FreedomOfExpression",
+          "Art1_HumanDignity",
+          "Art24_RightsOfChild",
+          "Art2_RightToLife",
+          "Art35_HealthCare",
+          "Art41_GoodAdministration",
+          "Art7_PrivateLife",
+          "Art8_DataProtection"
+        ],
+        "art21": false,
+        "art24": true,
+        "art31": false,
+        "disambiguation_path": "not_applicable",
+        "risk_categories_retrieved": [
+          "DataGovernance",
+          "DualUseMisuse",
+          "ExpressionHarm",
+          "Accountability",
+          "Deception",
+          "DemocraticProcessHarm",
+          "EconomicHarm",
+          "FinancialHarm",
+          "LibertyViolation",
+          "PhysicalHarm",
+          "PrivacyBreach",
+          "EnvironmentalHarm",
+          "PsychologicalHarm",
+          "FunctionCreep",
+          "Dignity",
+          "DataBreach",
+          "FalseIdentification",
+          "Surveillance",
+          "EmploymentHarm",
+          "WorkplaceSafetyRisk",
+          "IntellectualProperty",
+          "AddictionRisk",
+          "Manipulation",
+          "ChildrenRights",
+          "Discrimination",
+          "ReputationalHarm",
+          "GenderHarm"
+        ],
+        "transparency_wellbeing_sections": [
+          "Transparency",
+          "Well-being"
+        ],
+        "requirements_retrieved": 176
+      },
+      "expected_rights": [
+        "Art35_HealthCare",
+        "Art2_RightToLife",
+        "Art8_DataProtection",
+        "Art1_HumanDignity"
+      ],
+      "expected_risk_categories": [
+        "PhysicalHarm",
+        "PrivacyBreach"
+      ],
+      "existing_llm_output": {
+        "risk_categories": [],
+        "charter_articles": [
+          "Art1",
+          "Art7",
+          "Art8",
+          "Art35",
+          "Art41"
+        ],
+        "note": "Pre-rerun outputs lack risk_category fields; re-run ethics_rag after GraphDB reload to populate."
+      },
+      "fix_highlights": [
+        "Surveillance category retrieved"
+      ]
+    },
+    {
+      "proposal_id": "P13",
+      "title": "Bibliometric Analysis of Open Access AI Ethics Publications",
+      "expert_signal": "Art21 removed (bibliometric)",
+      "before": {
+        "matched_rights": [
+          "Art20_EqualityBeforeLaw",
+          "Art21_NonDiscrimination",
+          "Art41_GoodAdministration",
+          "Art7_PrivateLife",
+          "Art8_DataProtection"
+        ],
+        "art21": true,
+        "art24": false,
+        "art31": false,
+        "risk_categories_retrieved": []
+      },
+      "after": {
+        "matched_rights": [
+          "Art11_FreedomOfExpression",
+          "Art22_CulturalDiversity",
+          "Art7_PrivateLife",
+          "Art8_DataProtection"
+        ],
+        "art21": false,
+        "art24": false,
+        "art31": false,
+        "disambiguation_path": "systemic_info\u2192Art11/Art22",
+        "risk_categories_retrieved": [
+          "DataGovernance",
+          "DualUseMisuse",
+          "ExpressionHarm",
+          "Accountability",
+          "Deception",
+          "DemocraticProcessHarm",
+          "EconomicHarm",
+          "FinancialHarm",
+          "LibertyViolation",
+          "PhysicalHarm",
+          "PrivacyBreach",
+          "EnvironmentalHarm",
+          "PsychologicalHarm",
+          "FunctionCreep",
+          "Discrimination",
+          "GenderHarm",
+          "AddictionRisk",
+          "ChildrenRights",
+          "Manipulation",
+          "IntellectualProperty",
+          "FalseIdentification",
+          "Surveillance",
+          "DataBreach",
+          "EmploymentHarm",
+          "Dignity",
+          "ReputationalHarm",
+          "WorkplaceSafetyRisk"
+        ],
+        "transparency_wellbeing_sections": [
+          "Transparency",
+          "Well-being"
+        ],
+        "requirements_retrieved": 74
+      },
+      "expected_rights": [
+        "Art11_FreedomOfExpression"
+      ],
+      "expected_risk_categories": [],
+      "existing_llm_output": {
+        "risk_categories": [],
+        "charter_articles": [
+          "Art20",
+          "Art21"
+        ],
+        "note": "Pre-rerun outputs lack risk_category fields; re-run ethics_rag after GraphDB reload to populate."
+      },
+      "fix_highlights": [
+        "Art21 True\u2192False via systemic_info\u2192Art11/Art22",
+        "Surveillance category retrieved"
+      ]
+    }
+  ],
+  "acceptance": {
+    "P13_art21_removed": true,
+    "P06_children_rights_in_scope": true,
+    "P06_art24": true,
+    "P20_art31": true,
+    "synthetic_protest_art12": true
+  }
+}

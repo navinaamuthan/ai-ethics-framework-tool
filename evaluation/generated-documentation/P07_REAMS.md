@@ -8,30 +8,33 @@ This research proposes to apply sentiment analysis and linguistic style detectio
 Medium
 
 ## Participant Risks
-- Bias in analysis (Medium)
-- Privacy concerns (Medium)
-- Misuse of results (Medium)
-- Inadequate consent (Medium)
-- Lack of transparency (Medium)
+- Bias in sentiment analysis and linguistic style detection (Medium)
+- Privacy breach due to pseudonymisation (Low)
+- Lack of transparency in the NLP pipeline (Medium)
+- Potential harm to students from vulnerable groups (Medium)
+- Insufficient consideration of contextual factors (Medium)
 
 ## Data Protection
-- ACM020: Assess and communicate degree to which datasets are representative of intended population
-- ACM025: Communicate whether approach could facilitate deceptive interactions causing harm
-- HE019: AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations
-- HE021: It must be made clear to end-users they are interacting with an AI system
-- ACM001: Research must contribute to society and human well-being
-- ACM002: Avoid harm
-- ACM011: Manage personnel and resources to enhance quality of working life
-- EUAIAct AI001: Assess whether organisation is obligated to conduct a FRIA
+- ACM003: Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate
+- ACM006: Respect privacy — obtain informed consent where required and protect personally identifiable information
+- ACM016: Datasets should minimise exposure of personally identifiable information unless informed consent is provided
+- ACM017: Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained
+- ACM020: Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated
+- ACM021: Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse
+- ACM022: Consider risk that applications could open security vulnerabilities or cause serious accidents — recommend or implement protections
+- ACM023: Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access
+- ACM024: Consult local laws before collecting or analysing bulk surveillance data — surveillance must not predict protected categories or endanger individual well-being
 
-*Source: ACM020, ACM025, HE019, HE021, ACM001, ACM002, ACM011, EUAIAct AI001*
+*Source: ACM003, ACM006, ACM016, ACM017, ACM020, ACM021, ACM022, ACM023, ACM024*
 
 ## Consent Arrangements
-[NOT DERIVABLE FROM ASSESSMENT — requires manual input]
+Respect privacy — obtain informed consent where required and protect personally identifiable information
+
+*Source: ACM006*
 
 ## Mitigations
-- Ensure that the dataset is representative of the intended population
-- Assess the potential for the research to facilitate deceptive interactions
-- Ensure that students are aware that they are interacting with an AI system
-- Ensure that the research contributes to society and human well-being
-- Ensure that the research does not cause harm to individuals or groups
+- Ensure that the NLP pipeline is designed to mitigate bias and discrimination
+- Obtain informed consent from students and ensure that their personal data is protected
+- Assess the representativeness of the dataset and communicate the results
+- Consider the potential risks and harms associated with the research
+- Implement measures to mitigate the risks of discrimination and bias

@@ -45,7 +45,7 @@ def _get_retrieved_requirement_ids(data: dict) -> tuple[set[str], bool]:
         try:
             from sparql_retrieval import retrieve_all_for_proposal
 
-            reqs, _, _, _ = retrieve_all_for_proposal(proposal_text)
+            reqs, _, _, _, _ = retrieve_all_for_proposal(proposal_text)
             retrieved = {normalize_requirement_id(r["id"]) for r in reqs}
             return retrieved, True
         except Exception:

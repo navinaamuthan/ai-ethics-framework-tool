@@ -100,17 +100,18 @@ aiefsh:BiasAuditShape a sh:NodeShape ;
 aiefsh:ChildrenMonitoringShape a sh:NodeShape ;
     sh:targetClass aief:ResearchProposal ;
     rdfs:label "Monitoring of minors requires an individual opt-out" ;
-    rdfs:comment "Rationale for priority 1 (deliberate divergence from evidencedPriority 3 for Art24): children cannot meaningfully consent through proxies alone; continuous monitoring without an individual opt-out removes the child's own agency entirely. Charter Art. 24 gives children's rights primacy over research convenience, outweighing the thinner incident in-degree (7)." ;
+    rdfs:comment "Rationale for priority 1 (deliberate divergence from evidencedPriority 3 for Art24): children cannot meaningfully consent through proxies alone; continuous monitoring without an individual opt-out removes the child's own agency entirely. Charter Art. 24 gives children's rights primacy over research convenience, outweighing the thinner incident in-degree (7). Phase 4 audit (Jul 2026): trigger broadened to FacialRecognition and EmotionRecognition involving children — the P06 classroom pattern — because ContinuousMonitoring alone was too narrow and missed camera-based emotion systems." ;
     aiefsh:riskDimension aief:Art24_RightsOfChild ;
     aiefsh:priority 1 ;
     sh:severity sh:Violation ;
     sh:sparql [
-        sh:message "Minors are subject to continuous monitoring with no individual opt-out mechanism (dimension: Art 24 Rights of the Child)." ;
+        sh:message "Minors are subject to continuous monitoring / biometric emotion or facial analysis with no individual opt-out mechanism (dimension: Art 24 Rights of the Child)." ;
         sh:prefixes aiefsh: ;
         sh:select """
             SELECT $this WHERE {
                 $this aief:involvesPopulation aief:Children ;
-                      aief:usesCapability aief:ContinuousMonitoring .
+                      aief:usesCapability ?cap .
+                FILTER(?cap IN (aief:ContinuousMonitoring, aief:FacialRecognition, aief:EmotionRecognition))
                 FILTER NOT EXISTS { $this aief:hasIndividualOptOut true }
             }
         """ ;
@@ -426,3 +427,70 @@ aiefsh:UnlicensedHighComputeCompoundShape a sh:NodeShape ;
         sh:select """SELECT $this WHERE {
             $this aief:usesCapability aief:HighComputeTraining, aief:UnlicensedDataUse .
             FILTER NOT EXISTS { $this aief:hasDataLicensing true } }""" ; ] .
+
+#################################################################
+# Phase 4 — Transparency / Sustainability / Assembly shapes
+# (Jul 2026). These are deliberate complements to the LLM RAG arm:
+# SHACL catches structural omissions (disclosure, environmental
+# accounting, assembly chilling) that free-text assessment often
+# crowds out with bias/privacy. Finding for RQ2: these flags are
+# intended for the standalone SHACL-vs-LLM comparison arm, and are
+# also available to feed the LLM prompt if desired.
+#################################################################
+
+aiefsh:TransparencyDisclosureShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "End-user AI interaction requires explicit AI disclosure" ;
+    rdfs:comment "Phase 4 addition. Broader than AIDisclosureShape (ConversationalAgent-only): any end-user-facing AI capability without disclosed AI use is a transparency gap. Risk dimension is Art 47 Effective Remedy (not Art 41) to avoid compounding the over-injection of Good Administration already observed in keyword retrieval. Warning tier — remediable by adding disclosure." ;
+    aiefsh:riskDimension aief:Art47_RightToEffectiveRemedy ;
+    aiefsh:priority 3 ;
+    sh:severity sh:Warning ;
+    sh:sparql [
+        sh:message "An end-user-facing AI capability is present with no explicit AI-disclosure / explainability provision (dimension: Art 47 Effective Remedy — transparency)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """
+            SELECT $this WHERE {
+                $this aief:usesCapability ?cap .
+                FILTER(?cap IN (aief:EndUserFacingAI, aief:ConversationalAgent, aief:EmotionRecognition, aief:ClinicalDecisionSupport))
+                FILTER NOT EXISTS { $this aief:disclosesAIUse true }
+                FILTER NOT EXISTS { $this aief:hasExplainabilityProvision true }
+            }
+        """ ;
+    ] .
+
+aiefsh:SustainabilityDisclosureShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Large-scale training/deployment requires an environmental-impact statement" ;
+    rdfs:comment "Phase 4 addition. Complements EnvironmentShape (HighComputeTraining-only) by also firing on LargeScaleDeployment and LargeDatasetTraining capability flags produced by the text bridge when proposals claim large datasets / compute without an environmental impact statement. Targets Art 37." ;
+    aiefsh:riskDimension aief:Art37_EnvironmentalProtection ;
+    aiefsh:priority 3 ;
+    sh:severity sh:Warning ;
+    sh:sparql [
+        sh:message "Large-scale model training or deployment is claimed with no environmental-impact statement (dimension: Art 37 Environmental Protection)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """
+            SELECT $this WHERE {
+                $this aief:usesCapability ?cap .
+                FILTER(?cap IN (aief:HighComputeTraining, aief:LargeScaleDeployment, aief:LargeDatasetTraining))
+                FILTER NOT EXISTS { $this aief:hasEnvironmentalAssessment true }
+            }
+        """ ;
+    ] .
+
+aiefsh:AssemblyAssociationShape a sh:NodeShape ;
+    sh:targetClass aief:ResearchProposal ;
+    rdfs:label "Monitoring of collective/group activity implicates freedom of assembly" ;
+    rdfs:comment "Phase 4 addition (requires Art12_FreedomOfAssembly from Phase 0). Triggers when a proposal involves monitoring of protest, union, or assembly contexts without stated safeguards for peaceful assembly/association. Warning tier — the chilling-effect risk is real but remediable via purpose limitation and oversight." ;
+    aiefsh:riskDimension aief:Art12_FreedomOfAssembly ;
+    aiefsh:priority 2 ;
+    sh:severity sh:Warning ;
+    sh:sparql [
+        sh:message "Collective/group activity (protest, assembly, organising) is monitored or classified without stated assembly/association safeguards (dimension: Art 12 Freedom of Assembly)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """
+            SELECT $this WHERE {
+                $this aief:usesCapability aief:CollectiveActivityMonitoring .
+                FILTER NOT EXISTS { $this aief:hasAssemblySafeguard true }
+            }
+        """ ;
+    ] .

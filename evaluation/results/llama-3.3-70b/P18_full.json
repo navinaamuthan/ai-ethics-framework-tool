@@ -2,8 +2,9 @@
   "proposal_id": "P18",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-05T19:06:30.835807",
+  "timestamp": "2026-07-20T14:36:48.681697",
   "proposal_text": "This project proposes to develop an autonomous AI research assistant capable of independently searching the web, reading academic papers, summarising findings, and drafting literature review sections. The agent will use a large language model with tool-use capabilities including web browsing, PDF parsing, database querying, and file creation. The agent will operate with minimal human oversight, executing multi-step research tasks overnight and presenting results for review the following morning. The system will access academic databases using the researcher's institutional credentials. The agent may encounter and process personal data, copyrighted material, and sensitive research findings during its autonomous web browsing. No guardrails have been implemented to prevent the agent from accessing restricted databases, submitting forms, or interacting with external services beyond its intended scope. The researchers plan to evaluate the agent's output quality but have not addressed accountability for errors, hallucinated citations, or unintended data access.",
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "data",
@@ -21,426 +22,60 @@
   ],
   "retrieved_requirements_count": 178,
   "retrieved_incidents_count": 8,
-  "assessment": {
-    "risk_summary": "The proposed autonomous AI research assistant poses significant ethical risks due to its ability to access and process personal data, copyrighted material, and sensitive research findings without adequate guardrails. The system's potential to encounter and process restricted databases, submit forms, or interact with external services beyond its intended scope raises concerns about data protection, privacy, and potential harm to individuals or groups. Furthermore, the lack of accountability for errors, hallucinated citations, or unintended data access exacerbates these risks. The system's autonomous decision-making capabilities, although limited to research tasks, may also impinge upon human dignity, right to life, and right to effective remedy.",
-    "overall_risk_level": "High",
-    "identified_risks": [
-      {
-        "risk": "Unintended data access and processing",
-        "severity": "High",
-        "explanation": "The AI system may access restricted databases or process sensitive information without proper authorization or oversight."
-      },
-      {
-        "risk": "Hallucinated citations and errors",
-        "severity": "Medium",
-        "explanation": "The AI system may generate inaccurate or fabricated citations, potentially leading to academic integrity issues or harm to researchers' reputations."
-      },
-      {
-        "risk": "Lack of accountability",
-        "severity": "High",
-        "explanation": "The researchers have not addressed accountability for errors, hallucinated citations, or unintended data access, which may lead to a lack of transparency and trust in the AI system."
-      },
-      {
-        "risk": "Potential harm to individuals or groups",
-        "severity": "High",
-        "explanation": "The AI system's potential to process personal data, copyrighted material, or sensitive research findings may lead to harm or exploitation of individuals or groups, particularly if proper safeguards are not in place."
-      },
-      {
-        "risk": "Autonomous decision-making",
-        "severity": "Medium",
-        "explanation": "Although the AI system's decision-making capabilities are limited to research tasks, they may still impinge upon human dignity, right to life, or right to effective remedy if not properly designed and controlled."
-      }
-    ],
-    "applicable_requirements": [
-      {
-        "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment and develop strategies to mitigate potential harms."
-      },
-      {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement safeguards to prevent the AI system from causing harm, such as data protection measures and error correction mechanisms."
-      },
-      {
-        "requirement_id": "ACM013",
-        "requirement_text": "Discuss dual use potential — ways research could be misused and mitigations",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider the potential for the AI system to be misused and develop strategies to prevent or mitigate such misuse."
-      },
-      {
-        "requirement_id": "EUAIAct-AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a FRIA to assess the AI system's potential risks and develop strategies to mitigate them."
-      },
-      {
-        "requirement_id": "HE001",
-        "requirement_text": "AI system must not deprive end-users or affected persons of ability to make decisions about their own lives or remove basic freedoms",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the AI system is designed to respect human autonomy and decision-making capabilities."
-      },
-      {
-        "requirement_id": "HE002",
-        "requirement_text": "AI system must not autonomously make decisions about fundamental personal, economic, social or political issues normally decided by humans, without human oversight and redress",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement human oversight and redress mechanisms to ensure that the AI system's decisions are transparent, accountable, and subject to human review."
-      },
-      {
-        "requirement_id": "HE015",
-        "requirement_text": "Possible negative social impacts on certain groups must be mitigated, including impacts beyond algorithmic bias",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough impact assessment to identify potential negative social impacts and develop strategies to mitigate them."
-      },
-      {
-        "requirement_id": "ACM019",
-        "requirement_text": "Respect terms of datasets with defined licences (CC 4.0, MIT etc)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the AI system respects the terms of datasets with defined licenses and obtains necessary permissions or licenses."
-      },
-      {
-        "requirement_id": "ACM024",
-        "requirement_text": "Consult local laws before collecting or analysing bulk surveillance data — surveillance must not predict protected categories or endanger individual well-being",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Consult local laws and ensure that the AI system's data collection and analysis practices comply with relevant regulations and do not endanger individual well-being."
-      }
-    ],
-    "charter_rights_at_risk": [
-      {
-        "article": "Article 1",
-        "right_name": "Human Dignity",
-        "relevance": "The AI system's potential to process personal data, copyrighted material, or sensitive research findings may impinge upon human dignity if not properly designed and controlled."
-      },
-      {
-        "article": "Article 7",
-        "right_name": "Private Life",
-        "relevance": "The AI system's potential to access and process personal data may infringe upon individuals' right to private life if not properly safeguarded."
-      },
-      {
-        "article": "Article 8",
-        "right_name": "Data Protection",
-        "relevance": "The AI system's potential to process personal data, copyrighted material, or sensitive research findings may infringe upon individuals' right to data protection if not properly designed and controlled."
-      },
-      {
-        "article": "Article 41",
-        "right_name": "Good Administration",
-        "relevance": "The AI system's lack of accountability and transparency may infringe upon the right to good administration if not properly addressed."
-      },
-      {
-        "article": "Article 47",
-        "right_name": "Right to Effective Remedy",
-        "relevance": "The AI system's potential to cause harm or errors may infringe upon individuals' right to effective remedy if not properly addressed."
-      }
-    ],
-    "historical_precedents": [
-      {
-        "incident_id": "AIAAIC-003",
-        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The importance of proper design, testing, and oversight to prevent AI systems from causing harm or generating inappropriate content."
-      },
-      {
-        "incident_id": "AIAAIC-005",
-        "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The need for diverse and representative training data to prevent AI systems from perpetuating biases and stereotypes."
-      },
-      {
-        "incident_id": "AIAAIC-009",
-        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The importance of proper testing, validation, and oversight to ensure that AI systems are safe and reliable."
-      },
-      {
-        "incident_id": "AIAAIC-017",
-        "incident_title": "IBM Watson Oncology Unsafe Recommendations",
-        "lesson": "The need for transparent and explainable AI decision-making processes to ensure that AI systems provide accurate and reliable recommendations."
-      },
-      {
-        "incident_id": "AIAAIC-018",
-        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
-        "lesson": "The importance of proper content moderation and oversight to prevent AI systems from amplifying harmful or inappropriate content."
-      },
-      {
-        "incident_id": "AIAAIC-022",
-        "incident_title": "Deliveroo Algorithmic Dismissal",
-        "lesson": "The need for transparent and fair AI decision-making processes to ensure that AI systems do not unfairly discriminate against individuals or groups."
-      },
-      {
-        "incident_id": "AIAAIC-034",
-        "incident_title": "China Social Credit System AI Scoring",
-        "lesson": "The importance of ensuring that AI systems are designed and used in ways that respect human rights and dignity."
-      },
-      {
-        "incident_id": "AIAAIC-036",
-        "incident_title": "Netherlands SyRI Welfare Surveillance System",
-        "lesson": "The need for proper oversight and accountability to prevent AI systems from being used in ways that infringe upon human rights or dignity."
-      }
-    ],
-    "recommended_mitigations": [
-      {
-        "mitigation": "Implement robust data protection measures to prevent unauthorized access or processing of personal data",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Develop and implement transparent and explainable AI decision-making processes",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Conduct thorough risk assessments and impact analyses to identify potential negative social impacts",
-        "priority": "Medium"
-      },
-      {
-        "mitigation": "Establish human oversight and redress mechanisms to ensure that AI system decisions are transparent, accountable, and subject to human review",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Ensure that the AI system is designed and used in ways that respect human rights and dignity",
-        "priority": "High"
-      }
-    ],
-    "tier1_mandatory_actions": [
-      "Conduct a thorough risk assessment and develop strategies to mitigate potential harms",
-      "Implement safeguards to prevent the AI system from causing harm, such as data protection measures and error correction mechanisms",
-      "Ensure that the AI system respects the terms of datasets with defined licenses and obtains necessary permissions or licenses",
-      "Consult local laws and ensure that the AI system's data collection and analysis practices comply with relevant regulations and do not endanger individual well-being",
-      "Establish human oversight and redress mechanisms to ensure that AI system decisions are transparent, accountable, and subject to human review"
-    ],
-    "tier2_reflective_prompts": [
-      "Consider the potential for the AI system to be misused and develop strategies to prevent or mitigate such misuse",
-      "Reflect on the potential negative social impacts of the AI system and develop strategies to mitigate them",
-      "Consider the importance of transparent and explainable AI decision-making processes and develop strategies to implement them"
-    ],
-    "reams_clearance_likely": false,
-    "confidence_flag": "HIGH",
-    "_retrieval_metadata": {
-      "keywords": [
-        "data",
-        "personal data",
-        "accountab",
-        "autonomous"
-      ],
-      "rights_matched": 6,
-      "requirements_retrieved": 178,
-      "incidents_retrieved": 8,
-      "requirements_sample": [
-        "ACM001",
-        "ACM002",
-        "ACM011",
-        "ACM013",
-        "ACM014",
-        "ACM019",
-        "ACM020",
-        "ACM024",
-        "ACM025",
-        "ACM032"
-      ],
-      "requirements_retrieved_ids": [
-        "ACM001",
-        "ACM002",
-        "ACM011",
-        "ACM013",
-        "ACM014",
-        "ACM019",
-        "ACM020",
-        "ACM024",
-        "ACM025",
-        "ACM032",
-        "ACM036",
-        "AI001",
-        "AI008",
-        "AI010",
-        "AI017",
-        "AI021",
-        "HE001",
-        "HE002",
-        "HE003",
-        "HE004",
-        "HE005",
-        "HE006",
-        "HE015",
-        "HE016",
-        "HE017",
-        "HE019",
-        "HE021",
-        "HE022",
-        "HE027",
-        "HE041",
-        "HE042",
-        "HE049",
-        "HE050",
-        "R010",
-        "R011",
-        "R027",
-        "R040",
-        "R050",
-        "R051",
-        "R053",
-        "R054",
-        "R056",
-        "R076",
-        "R080",
-        "R081",
-        "R082",
-        "R086",
-        "ACM016",
-        "ACM017",
-        "ACM018",
-        "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
-        "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI009",
-        "AI012",
-        "AI015",
-        "AI018",
-        "AI020",
-        "AI026",
-        "AI027",
-        "AI028",
-        "AI029",
-        "AI030",
-        "HE011",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM035",
-        "AI019",
-        "AI022",
-        "AI023",
-        "HE029",
-        "HE048",
-        "R055",
-        "R074",
-        "ACM003",
-        "ACM004",
-        "ACM005",
-        "ACM007",
-        "ACM008",
-        "ACM010",
-        "ACM015",
-        "ACM022",
-        "ACM027",
-        "ACM031",
-        "AI011",
-        "AI013",
-        "AI025",
-        "HE007",
-        "HE008",
-        "HE009",
-        "HE031",
-        "HE036",
-        "R019",
-        "R023",
-        "R026",
-        "R042",
-        "R047",
-        "R048",
-        "R049",
-        "R067",
-        "R068",
-        "R071",
-        "R083",
-        "R084",
-        "ACM006",
-        "ACM009",
-        "AI014",
-        "HE010",
-        "HE013",
-        "HE033",
-        "HE035",
-        "R005",
-        "R014",
-        "R018",
-        "R021",
-        "R022",
-        "R024",
-        "R025",
-        "R029",
-        "R031",
-        "R033",
-        "R063",
-        "R064",
-        "R065",
-        "R066",
-        "R069",
-        "R070",
-        "R072",
-        "R073"
-      ],
-      "requirements_cited": [
-        "ACM001",
-        "ACM002",
-        "ACM013",
-        "EUAIAct-AI001",
-        "HE001",
-        "HE002",
-        "HE015",
-        "ACM019",
-        "ACM024"
-      ],
-      "incidents_sample": [
-        "AIAAIC-003",
-        "AIAAIC-005",
-        "AIAAIC-009",
-        "AIAAIC-017",
-        "AIAAIC-018"
-      ]
+  "retrieved_risk_categories": [
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system."
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system."
+    },
+    {
+      "id": "PhysicalHarm",
+      "label": "Physical Harm",
+      "definition": "Risk of bodily injury, death, or physical safety compromise caused by an AI system."
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions."
+    },
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system."
+    },
+    {
+      "id": "Accountability",
+      "label": "",
+      "definition": ""
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system."
+    },
+    {
+      "id": "EmploymentHarm",
+      "label": "",
+      "definition": ""
+    },
+    {
+      "id": "Surveillance",
+      "label": "",
+      "definition": ""
+    },
+    {
+      "id": "LibertyViolation",
+      "label": "",
+      "definition": ""
     }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "error": "LLM returned empty response"
   }
 }

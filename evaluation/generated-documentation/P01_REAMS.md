@@ -8,23 +8,34 @@ This research proposes to develop a commercial health risk stratification algori
 High
 
 ## Participant Risks
-- Perpetuation of healthcare disparities (High)
-- Lack of transparency and accountability (High)
-- Inadequate protection of sensitive health data (High)
-- Insufficient consideration of bias and discrimination (High)
-- Inadequate mechanisms for addressing adverse outcomes (Medium)
+- Bias in cost proxy (High)
+- Lack of independent bias auditing (High)
+- No mechanism for algorithmic review or patient appeal (High)
+- Privacy concerns (Medium)
+- Physical harm (Medium)
+- Reputational harm (Low)
 
 ## Data Protection
-- R085: Have you considered anti-discrimination and bias implications of your AI/technology research?
+- ACM003: Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate
+- ACM004: Consider and ameliorate biases in data and biased code/model outputs
+- ACM006: Respect privacy — obtain informed consent where required and protect personally identifiable information
+- ACM007: Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications
+- ACM014: All human research subjects or participants must receive appropriate compensation — respect minimum hourly rate in region where work is carried out
+- ACM016: Datasets should minimise exposure of personally identifiable information unless informed consent is provided
+- ACM021: Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse
+- ACM023: Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access
+- ACM027: Research must not build upon or facilitate illegal activity — strongly discourage work that denies rights to privacy, speech, health, liberty, security, legal personhood, freedom of conscience/religion
 
-*Source: R085*
+*Source: ACM003, ACM004, ACM006, ACM007, ACM014, ACM016, ACM021, ACM023, ACM027*
 
 ## Consent Arrangements
-[NOT DERIVABLE FROM ASSESSMENT — requires manual input]
+Respect privacy — obtain informed consent where required and protect personally identifiable information
+
+*Source: ACM006*
 
 ## Mitigations
-- Conduct a thorough analysis of the potential for bias and discrimination in the algorithm's design and deployment
-- Implement mechanisms for addressing adverse outcomes and providing recourse for patients
-- Ensure that the data used to train and validate the algorithm is representative of the target population and reflects diversity
-- Document the steps taken to identify and avoid bias in the input data and algorithmic design
-- Specify the capabilities and limitations of human oversight and intervention in the algorithm's decision-making process
+- Conduct independent bias auditing and implement measures to address potential biases in the algorithm
+- Implement data preprocessing techniques to reduce bias in the data and monitor the algorithm's performance for biased outcomes
+- Obtain informed consent from patients and implement measures to protect patient privacy and data security
+- Conduct a comprehensive evaluation of the algorithm's potential risks and impacts on patients and healthcare providers
+- Implement measures to prevent discrimination and ensure that the algorithm is fair and unbiased
