@@ -1,0 +1,315 @@
+{
+  "proposal_id": "P20",
+  "mode": "full",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T21:27:02.308482",
+  "proposal_text": "This research proposes to study the relationship between digital workplace behaviours and productivity by monitoring 200 consenting employees at a Dublin technology company over six months. The monitoring system will track application usage, email response times, meeting attendance, keyboard activity patterns, and break frequency. All participants will provide written informed consent and can withdraw at any time without workplace consequences. Data will be stored on encrypted university servers and destroyed after the study period. However, the monitoring software will also incidentally capture screen content including potentially sensitive communications. Aggregate productivity patterns will be shared with the employer in a format that does not identify individual employees, but the small team sizes of 5-8 people within departments may enable indirect identification. The employer has stated that monitoring results will not influence performance reviews, but this commitment is not legally binding. The research does not address the power imbalance between employer and employee that may compromise the voluntariness of consent.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
+  "keywords": [
+    "data",
+    "consent",
+    "monitor",
+    "track",
+    "employ"
+  ],
+  "matched_rights": [
+    "Art15_FreedomOfOccupation",
+    "Art31_FairWorkingConditions",
+    "Art3_RightToIntegrity",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 150,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The research proposal involves monitoring employees' digital workplace behaviours, which may compromise their privacy and potentially infringe on their rights to fair working conditions and private life. The incidental capture of sensitive communications and the risk of indirect identification of individual employees are significant concerns.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Infringement of Article 7 PrivateLife and Article 8 DataProtection",
+        "severity": "High",
+        "explanation": "The monitoring system may capture sensitive communications, compromising participants' private lives."
+      },
+      {
+        "risk": "Potential infringement of Article 31 FairWorkingConditions",
+        "severity": "Medium",
+        "explanation": "The research does not address the power imbalance between employer and employee that may compromise the voluntariness of consent."
+      },
+      {
+        "risk": "Risk of data leakage due to inadequate security measures",
+        "severity": "High",
+        "explanation": "The monitoring software will incidentally capture screen content, which may contain sensitive information."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that participants provide explicit consent for the monitoring of sensitive communications."
+      },
+      {
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Minimise the collection and storage of sensitive communications."
+      },
+      {
+        "requirement_id": "AI002",
+        "requirement_text": "Record necessity status: FRIA Required or FRIA Not Required (Mandatory)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Determine whether a FRIA is required for this research."
+      },
+      {
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment of the monitoring system."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 7 PrivateLife",
+        "right_name": "Right to private life",
+        "relevance": "The research may compromise participants' right to private life by capturing sensitive communications."
+      },
+      {
+        "article": "Article 8 DataProtection",
+        "right_name": "Right to data protection",
+        "relevance": "The research involves the processing of personal data, which must be protected in accordance with EU data protection regulations."
+      },
+      {
+        "article": "Article 31 FairWorkingConditions",
+        "right_name": "Fair working conditions",
+        "relevance": "The research does not address the power imbalance between employer and employee that may compromise the voluntariness of consent."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-015",
+        "incident_title": "Uber Surge Pricing Discrimination",
+        "lesson": "The incident highlights the importance of ensuring that AI systems do not perpetuate biases and discrimination."
+      },
+      {
+        "incident_id": "AIAAIC-021",
+        "incident_title": "HireVue Automated Video Interview Bias",
+        "lesson": "The incident demonstrates the need for careful consideration of the potential impacts of AI on employment opportunities."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement robust security measures to protect sensitive communications.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct regular audits and risk assessments to ensure that the monitoring system is operating as intended.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Ensure that participants provide explicit consent for the monitoring of sensitive communications.",
+      "Minimise the collection and storage of sensitive communications."
+    ],
+    "tier2_reflective_prompts": [
+      "What measures will be taken to address any potential biases in the monitoring system?",
+      "How will the research ensure that the power imbalance between employer and employee is addressed?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "consent",
+        "monitor",
+        "track",
+        "employ"
+      ],
+      "rights_matched": 6,
+      "requirements_retrieved": 150,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM011",
+        "ACM037",
+        "HE020",
+        "R020",
+        "R050",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "HE003"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM011",
+        "ACM037",
+        "HE020",
+        "R020",
+        "R050",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "HE003",
+        "HE004",
+        "HE017",
+        "R009",
+        "R011",
+        "R015",
+        "R019",
+        "R022",
+        "R034",
+        "R039",
+        "R042",
+        "R043",
+        "R044",
+        "R046",
+        "R048",
+        "R054",
+        "R076",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM003",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R023",
+        "R026",
+        "R040",
+        "R047",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE013",
+        "HE033",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM006",
+        "ACM016",
+        "AI002",
+        "ACM007"
+      ],
+      "incidents_sample": [
+        "AIAAIC-015",
+        "AIAAIC-021",
+        "AIAAIC-022",
+        "AIAAIC-034",
+        "AIAAIC-036"
+      ]
+    }
+  }
+}
