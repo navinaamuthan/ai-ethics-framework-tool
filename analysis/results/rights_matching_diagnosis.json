@@ -1,0 +1,3111 @@
+{
+  "before": [
+    {
+      "keywords": [
+        "bias",
+        "discriminat",
+        "data",
+        "health",
+        "diagnos",
+        "patient",
+        "predict",
+        "scor",
+        "race"
+      ],
+      "keyword_counts": {
+        "bias": 1,
+        "discriminat": 1,
+        "data": 1,
+        "health": 1,
+        "diagnos": 1,
+        "patient": 1,
+        "predict": 1,
+        "scor": 1,
+        "race": 1
+      },
+      "rights_from_keywords": [
+        "Art20_EqualityBeforeLaw",
+        "Art21_NonDiscrimination",
+        "Art23_GenderEquality",
+        "Art26_DisabilityIntegration",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art41_GoodAdministration",
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art20_EqualityBeforeLaw",
+        "Art21_NonDiscrimination",
+        "Art23_GenderEquality",
+        "Art26_DisabilityIntegration",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 9,
+      "n_rights": 10,
+      "id": "P01"
+    },
+    {
+      "keywords": [
+        "predict",
+        "profil",
+        "classif",
+        "scor",
+        "criminal"
+      ],
+      "keyword_counts": {
+        "predict": 1,
+        "profil": 1,
+        "classif": 1,
+        "scor": 1,
+        "criminal": 1
+      },
+      "rights_from_keywords": [
+        "Art21_NonDiscrimination",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art48_PresumptionOfInnocence",
+        "Art6_RightToLiberty",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art41_GoodAdministration",
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art21_NonDiscrimination",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art48_PresumptionOfInnocence",
+        "Art6_RightToLiberty",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 5,
+      "n_rights": 7,
+      "id": "P02"
+    },
+    {
+      "keywords": [
+        "bias",
+        "data",
+        "surveil",
+        "track",
+        "accountab",
+        "facial recogn",
+        "criminal",
+        "polic",
+        "law enforce",
+        "recommend"
+      ],
+      "keyword_counts": {
+        "bias": 1,
+        "data": 1,
+        "surveil": 1,
+        "track": 1,
+        "accountab": 1,
+        "facial recogn": 1,
+        "criminal": 1,
+        "polic": 1,
+        "law enforce": 1,
+        "recommend": 1
+      },
+      "rights_from_keywords": [
+        "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
+        "Art20_EqualityBeforeLaw",
+        "Art21_NonDiscrimination",
+        "Art23_GenderEquality",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art48_PresumptionOfInnocence",
+        "Art6_RightToLiberty",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art41_GoodAdministration",
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
+        "Art20_EqualityBeforeLaw",
+        "Art21_NonDiscrimination",
+        "Art23_GenderEquality",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art48_PresumptionOfInnocence",
+        "Art6_RightToLiberty",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 10,
+      "n_rights": 11,
+      "id": "P03"
+    },
+    {
+      "keywords": [
+        "fairness",
+        "employ",
+        "prediction",
+        "predict",
+        "scor",
+        "race",
+        "gender",
+        "social media"
+      ],
+      "keyword_counts": {
+        "fairness": 1,
+        "employ": 1,
+        "prediction": 1,
+        "predict": 1,
+        "scor": 1,
+        "race": 1,
+        "gender": 1,
+        "social media": 1
+      },
+      "rights_from_keywords": [
+        "Art11_FreedomOfExpression",
+        "Art15_FreedomOfOccupation",
+        "Art20_EqualityBeforeLaw",
+        "Art21_NonDiscrimination",
+        "Art23_GenderEquality",
+        "Art31_FairWorkingConditions",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art41_GoodAdministration"
+      ],
+      "matched_rights": [
+        "Art11_FreedomOfExpression",
+        "Art15_FreedomOfOccupation",
+        "Art20_EqualityBeforeLaw",
+        "Art21_NonDiscrimination",
+        "Art23_GenderEquality",
+        "Art31_FairWorkingConditions",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 8,
+      "n_rights": 10,
+      "id": "P04"
+    },
+    {
+      "keywords": [
+        "bias",
+        "data",
+        "health",
+        "patient",
+        "minor",
+        "staff",
+        "prediction",
+        "predict",
+        "profil",
+        "scor",
+        "minority",
+        "racial",
+        "generat"
+      ],
+      "keyword_counts": {
+        "bias": 1,
+        "data": 1,
+        "health": 1,
+        "patient": 1,
+        "minor": 1,
+        "staff": 1,
+        "prediction": 1,
+        "predict": 1,
+        "profil": 1,
+        "scor": 1,
+        "minority": 1,
+        "racial": 1,
+        "generat": 1
+      },
+      "rights_from_keywords": [
+        "Art1_HumanDignity",
+        "Art20_EqualityBeforeLaw",
+        "Art21_NonDiscrimination",
+        "Art22_CulturalDiversity",
+        "Art23_GenderEquality",
+        "Art24_RightsOfChild",
+        "Art2_RightToLife",
+        "Art31_FairWorkingConditions",
+        "Art35_HealthCare",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art41_GoodAdministration",
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art1_HumanDignity",
+        "Art20_EqualityBeforeLaw",
+        "Art21_NonDiscrimination",
+        "Art22_CulturalDiversity",
+        "Art23_GenderEquality",
+        "Art24_RightsOfChild",
+        "Art2_RightToLife",
+        "Art31_FairWorkingConditions",
+        "Art35_HealthCare",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 13,
+      "n_rights": 13,
+      "id": "P05"
+    },
+    {
+      "keywords": [
+        "data",
+        "consent",
+        "student",
+        "school",
+        "monitor",
+        "classif",
+        "scor",
+        "emotion"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "consent": 1,
+        "student": 1,
+        "school": 1,
+        "monitor": 1,
+        "classif": 1,
+        "scor": 1,
+        "emotion": 1
+      },
+      "rights_from_keywords": [
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art24_RightsOfChild",
+        "Art3_RightToIntegrity",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art41_GoodAdministration",
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art24_RightsOfChild",
+        "Art3_RightToIntegrity",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 8,
+      "n_rights": 8,
+      "id": "P06"
+    },
+    {
+      "keywords": [
+        "data",
+        "consent",
+        "student",
+        "school",
+        "scor",
+        "gender",
+        "emotion",
+        "sentiment"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "consent": 1,
+        "student": 1,
+        "school": 1,
+        "scor": 1,
+        "gender": 1,
+        "emotion": 1,
+        "sentiment": 1
+      },
+      "rights_from_keywords": [
+        "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art23_GenderEquality",
+        "Art24_RightsOfChild",
+        "Art3_RightToIntegrity",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art41_GoodAdministration",
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art23_GenderEquality",
+        "Art24_RightsOfChild",
+        "Art3_RightToIntegrity",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 8,
+      "n_rights": 10,
+      "id": "P07"
+    },
+    {
+      "keywords": [
+        "data",
+        "health",
+        "student",
+        "recommend",
+        "chatbot"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "health": 1,
+        "student": 1,
+        "recommend": 1,
+        "chatbot": 1
+      },
+      "rights_from_keywords": [
+        "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
+        "Art24_RightsOfChild",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art41_GoodAdministration",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art41_GoodAdministration",
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
+        "Art24_RightsOfChild",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art41_GoodAdministration",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 5,
+      "n_rights": 8,
+      "id": "P08"
+    },
+    {
+      "keywords": [
+        "data",
+        "consent",
+        "student",
+        "profil",
+        "disabilit",
+        "recommend"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "consent": 1,
+        "student": 1,
+        "profil": 1,
+        "disabilit": 1,
+        "recommend": 1
+      },
+      "rights_from_keywords": [
+        "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art24_RightsOfChild",
+        "Art26_DisabilityIntegration",
+        "Art3_RightToIntegrity",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art24_RightsOfChild",
+        "Art26_DisabilityIntegration",
+        "Art3_RightToIntegrity",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 6,
+      "n_rights": 8,
+      "id": "P09"
+    },
+    {
+      "keywords": [
+        "data",
+        "health",
+        "medical",
+        "classif",
+        "scor",
+        "social media"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "health": 1,
+        "medical": 1,
+        "classif": 1,
+        "scor": 1,
+        "social media": 1
+      },
+      "rights_from_keywords": [
+        "Art11_FreedomOfExpression",
+        "Art21_NonDiscrimination",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art41_GoodAdministration",
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art11_FreedomOfExpression",
+        "Art21_NonDiscrimination",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 6,
+      "n_rights": 8,
+      "id": "P10"
+    },
+    {
+      "keywords": [
+        "data",
+        "student",
+        "scor",
+        "generat"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "student": 1,
+        "scor": 1,
+        "generat": 1
+      },
+      "rights_from_keywords": [
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art24_RightsOfChild",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art41_GoodAdministration",
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art24_RightsOfChild",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 4,
+      "n_rights": 7,
+      "id": "P11"
+    },
+    {
+      "keywords": [
+        "data",
+        "health",
+        "medical",
+        "diagnos",
+        "patient",
+        "prediction",
+        "predict",
+        "gender",
+        "recommend",
+        "generat",
+        "transfer"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "health": 1,
+        "medical": 1,
+        "diagnos": 1,
+        "patient": 1,
+        "prediction": 1,
+        "predict": 1,
+        "gender": 1,
+        "recommend": 1,
+        "generat": 1,
+        "transfer": 1
+      },
+      "rights_from_keywords": [
+        "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art23_GenderEquality",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art23_GenderEquality",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 11,
+      "n_rights": 9,
+      "id": "P12"
+    },
+    {
+      "keywords": [
+        "data",
+        "personal data",
+        "fairness"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "personal data": 1,
+        "fairness": 1
+      },
+      "rights_from_keywords": [
+        "Art20_EqualityBeforeLaw",
+        "Art21_NonDiscrimination",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art20_EqualityBeforeLaw",
+        "Art21_NonDiscrimination",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 3,
+      "n_rights": 4,
+      "id": "P13"
+    },
+    {
+      "keywords": [
+        "data",
+        "personal data",
+        "classif",
+        "scor"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "personal data": 1,
+        "classif": 1,
+        "scor": 1
+      },
+      "rights_from_keywords": [
+        "Art21_NonDiscrimination",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art41_GoodAdministration",
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art21_NonDiscrimination",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 4,
+      "n_rights": 5,
+      "id": "P14"
+    },
+    {
+      "keywords": [
+        "data",
+        "environment"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "environment": 1
+      },
+      "rights_from_keywords": [
+        "Art37_EnvironmentalProtection",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art37_EnvironmentalProtection",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 2,
+      "n_rights": 3,
+      "id": "P15"
+    },
+    {
+      "keywords": [
+        "data",
+        "personal data",
+        "carbon",
+        "prediction",
+        "predict"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "personal data": 1,
+        "carbon": 1,
+        "prediction": 1,
+        "predict": 1
+      },
+      "rights_from_keywords": [
+        "Art21_NonDiscrimination",
+        "Art37_EnvironmentalProtection",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art21_NonDiscrimination",
+        "Art37_EnvironmentalProtection",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 5,
+      "n_rights": 5,
+      "id": "P16"
+    },
+    {
+      "keywords": [
+        "data",
+        "minor",
+        "recruit",
+        "classif",
+        "minority",
+        "dual-use",
+        "content moder",
+        "social media",
+        "protest",
+        "organisation"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "minor": 1,
+        "recruit": 1,
+        "classif": 1,
+        "minority": 1,
+        "dual-use": 1,
+        "content moder": 1,
+        "social media": 1,
+        "protest": 1,
+        "organisation": 1
+      },
+      "rights_from_keywords": [
+        "Art11_FreedomOfExpression",
+        "Art12_FreedomOfAssembly",
+        "Art15_FreedomOfOccupation",
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art22_CulturalDiversity",
+        "Art24_RightsOfChild",
+        "Art2_RightToLife",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art11_FreedomOfExpression",
+        "Art12_FreedomOfAssembly",
+        "Art15_FreedomOfOccupation",
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art22_CulturalDiversity",
+        "Art24_RightsOfChild",
+        "Art2_RightToLife",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 10,
+      "n_rights": 11,
+      "id": "P17"
+    },
+    {
+      "keywords": [
+        "data",
+        "personal data",
+        "accountab",
+        "autonomous"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "personal data": 1,
+        "accountab": 1,
+        "autonomous": 1
+      },
+      "rights_from_keywords": [
+        "Art1_HumanDignity",
+        "Art2_RightToLife",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art41_GoodAdministration",
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art1_HumanDignity",
+        "Art2_RightToLife",
+        "Art41_GoodAdministration",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 4,
+      "n_rights": 6,
+      "id": "P18"
+    },
+    {
+      "keywords": [
+        "data",
+        "consent",
+        "medical",
+        "diagnos",
+        "patient",
+        "vulnerable",
+        "cross-border",
+        "transfer"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "consent": 1,
+        "medical": 1,
+        "diagnos": 1,
+        "patient": 1,
+        "vulnerable": 1,
+        "cross-border": 1,
+        "transfer": 1
+      },
+      "rights_from_keywords": [
+        "Art1_HumanDignity",
+        "Art24_RightsOfChild",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art3_RightToIntegrity",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art1_HumanDignity",
+        "Art24_RightsOfChild",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art3_RightToIntegrity",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 8,
+      "n_rights": 7,
+      "id": "P19"
+    },
+    {
+      "keywords": [
+        "data",
+        "consent",
+        "monitor",
+        "track",
+        "employ",
+        "employee",
+        "workplace"
+      ],
+      "keyword_counts": {
+        "data": 1,
+        "consent": 1,
+        "monitor": 1,
+        "track": 1,
+        "employ": 1,
+        "employee": 1,
+        "workplace": 1
+      },
+      "rights_from_keywords": [
+        "Art15_FreedomOfOccupation",
+        "Art31_FairWorkingConditions",
+        "Art3_RightToIntegrity",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art15_FreedomOfOccupation",
+        "Art31_FairWorkingConditions",
+        "Art3_RightToIntegrity",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 7,
+      "n_rights": 5,
+      "id": "P20"
+    }
+  ],
+  "after": [
+    {
+      "keywords": [
+        "patient",
+        "health",
+        "predict",
+        "bias",
+        "diagnos",
+        "discriminat",
+        "race",
+        "scor"
+      ],
+      "keyword_counts": {
+        "discriminat": 1,
+        "diagnos": 1,
+        "patient": 8,
+        "predict": 2,
+        "health": 7,
+        "bias": 1,
+        "scor": 1,
+        "race": 1
+      },
+      "rights_from_keywords": [
+        "Art21_NonDiscrimination",
+        "Art23_GenderEquality",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art47_RightToEffectiveRemedy",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art21_NonDiscrimination",
+        "Art23_GenderEquality",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art47_RightToEffectiveRemedy",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 8,
+      "n_rights": 6,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 8.39,
+          "n_types": 5,
+          "n_occ": 6,
+          "density": 0.0339,
+          "keywords": [
+            "bias",
+            "discriminat",
+            "predict",
+            "scor",
+            "race"
+          ]
+        },
+        "Art23_GenderEquality": {
+          "score": 3.13,
+          "n_types": 2,
+          "n_occ": 2,
+          "density": 0.0113,
+          "keywords": [
+            "bias",
+            "discriminat"
+          ]
+        },
+        "Art20_EqualityBeforeLaw": {
+          "score": 1.565,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00565,
+          "keywords": [
+            "bias"
+          ]
+        },
+        "Art26_DisabilityIntegration": {
+          "score": 1.565,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00565,
+          "keywords": [
+            "discriminat"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 5.52,
+          "n_types": 1,
+          "n_occ": 8,
+          "density": 0.0452,
+          "keywords": [
+            "patient"
+          ]
+        },
+        "Art35_HealthCare": {
+          "score": 12.04,
+          "n_types": 3,
+          "n_occ": 16,
+          "density": 0.0904,
+          "keywords": [
+            "health",
+            "diagnos",
+            "patient"
+          ]
+        },
+        "Art2_RightToLife": {
+          "score": 12.04,
+          "n_types": 3,
+          "n_occ": 16,
+          "density": 0.0904,
+          "keywords": [
+            "health",
+            "diagnos",
+            "patient"
+          ]
+        },
+        "Art47_RightToEffectiveRemedy": {
+          "score": 3.695,
+          "n_types": 2,
+          "n_occ": 3,
+          "density": 0.01695,
+          "keywords": [
+            "predict",
+            "scor"
+          ]
+        }
+      },
+      "disambiguation": "individual_treatment\u2192Art21",
+      "id": "P01"
+    },
+    {
+      "keywords": [
+        "scor",
+        "criminal",
+        "classif",
+        "predict",
+        "profil"
+      ],
+      "keyword_counts": {
+        "criminal": 2,
+        "predict": 1,
+        "classif": 1,
+        "profil": 1,
+        "scor": 4
+      },
+      "rights_from_keywords": [
+        "Art21_NonDiscrimination",
+        "Art47_RightToEffectiveRemedy",
+        "Art48_PresumptionOfInnocence",
+        "Art6_RightToLiberty"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art21_NonDiscrimination",
+        "Art47_RightToEffectiveRemedy",
+        "Art48_PresumptionOfInnocence",
+        "Art6_RightToLiberty"
+      ],
+      "n_keywords": 5,
+      "n_rights": 4,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 7.846,
+          "n_types": 4,
+          "n_occ": 7,
+          "density": 0.03846,
+          "keywords": [
+            "predict",
+            "profil",
+            "classif",
+            "scor"
+          ]
+        },
+        "Art7_PrivateLife": {
+          "score": 1.549,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00549,
+          "keywords": [
+            "profil"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 1.549,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00549,
+          "keywords": [
+            "profil"
+          ]
+        },
+        "Art6_RightToLiberty": {
+          "score": 2.099,
+          "n_types": 1,
+          "n_occ": 2,
+          "density": 0.01099,
+          "keywords": [
+            "criminal"
+          ]
+        },
+        "Art47_RightToEffectiveRemedy": {
+          "score": 8.396,
+          "n_types": 4,
+          "n_occ": 8,
+          "density": 0.04396,
+          "keywords": [
+            "predict",
+            "classif",
+            "scor",
+            "criminal"
+          ]
+        },
+        "Art48_PresumptionOfInnocence": {
+          "score": 2.099,
+          "n_types": 1,
+          "n_occ": 2,
+          "density": 0.01099,
+          "keywords": [
+            "criminal"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P02"
+    },
+    {
+      "keywords": [
+        "law enforce",
+        "criminal",
+        "recommend",
+        "accountab",
+        "bias",
+        "facial recogn",
+        "polic",
+        "surveil",
+        "track"
+      ],
+      "keyword_counts": {
+        "facial recogn": 1,
+        "law enforce": 3,
+        "accountab": 1,
+        "recommend": 2,
+        "criminal": 2,
+        "surveil": 1,
+        "track": 1,
+        "polic": 1,
+        "bias": 1
+      },
+      "rights_from_keywords": [
+        "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art47_RightToEffectiveRemedy",
+        "Art48_PresumptionOfInnocence",
+        "Art6_RightToLiberty",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art47_RightToEffectiveRemedy",
+        "Art48_PresumptionOfInnocence",
+        "Art6_RightToLiberty",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 9,
+      "n_rights": 8,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 4.571,
+          "n_types": 3,
+          "n_occ": 3,
+          "density": 0.01571,
+          "keywords": [
+            "bias",
+            "facial recogn",
+            "polic"
+          ]
+        },
+        "Art23_GenderEquality": {
+          "score": 1.524,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00524,
+          "keywords": [
+            "bias"
+          ]
+        },
+        "Art20_EqualityBeforeLaw": {
+          "score": 1.524,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00524,
+          "keywords": [
+            "bias"
+          ]
+        },
+        "Art7_PrivateLife": {
+          "score": 6.094,
+          "n_types": 4,
+          "n_occ": 4,
+          "density": 0.02094,
+          "keywords": [
+            "surveil",
+            "track",
+            "facial recogn",
+            "polic"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 4.571,
+          "n_types": 3,
+          "n_occ": 3,
+          "density": 0.01571,
+          "keywords": [
+            "surveil",
+            "track",
+            "facial recogn"
+          ]
+        },
+        "Art6_RightToLiberty": {
+          "score": 7.665,
+          "n_types": 4,
+          "n_occ": 7,
+          "density": 0.03665,
+          "keywords": [
+            "surveil",
+            "criminal",
+            "polic",
+            "law enforce"
+          ]
+        },
+        "Art1_HumanDignity": {
+          "score": 2.047,
+          "n_types": 1,
+          "n_occ": 2,
+          "density": 0.01047,
+          "keywords": [
+            "recommend"
+          ]
+        },
+        "Art47_RightToEffectiveRemedy": {
+          "score": 6.141,
+          "n_types": 3,
+          "n_occ": 6,
+          "density": 0.03141,
+          "keywords": [
+            "accountab",
+            "criminal",
+            "law enforce"
+          ]
+        },
+        "Art41_GoodAdministration": {
+          "score": 1.524,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00524,
+          "keywords": [
+            "accountab"
+          ]
+        },
+        "Art11_FreedomOfExpression": {
+          "score": 2.047,
+          "n_types": 1,
+          "n_occ": 2,
+          "density": 0.01047,
+          "keywords": [
+            "recommend"
+          ]
+        },
+        "Art48_PresumptionOfInnocence": {
+          "score": 4.618,
+          "n_types": 2,
+          "n_occ": 5,
+          "density": 0.02618,
+          "keywords": [
+            "criminal",
+            "law enforce"
+          ]
+        }
+      },
+      "disambiguation": "individual_treatment\u2192Art21",
+      "id": "P03"
+    },
+    {
+      "keywords": [
+        "predict",
+        "employ",
+        "fairness",
+        "gender",
+        "prediction",
+        "race",
+        "scor",
+        "social media"
+      ],
+      "keyword_counts": {
+        "social media": 1,
+        "prediction": 1,
+        "fairness": 1,
+        "predict": 2,
+        "employ": 1,
+        "gender": 1,
+        "scor": 1,
+        "race": 1
+      },
+      "rights_from_keywords": [
+        "Art21_NonDiscrimination",
+        "Art47_RightToEffectiveRemedy"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art21_NonDiscrimination",
+        "Art47_RightToEffectiveRemedy"
+      ],
+      "n_keywords": 8,
+      "n_rights": 2,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 9.684,
+          "n_types": 6,
+          "n_occ": 7,
+          "density": 0.03684,
+          "keywords": [
+            "fairness",
+            "prediction",
+            "predict",
+            "scor",
+            "race",
+            "gender"
+          ]
+        },
+        "Art23_GenderEquality": {
+          "score": 1.526,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00526,
+          "keywords": [
+            "gender"
+          ]
+        },
+        "Art20_EqualityBeforeLaw": {
+          "score": 1.526,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00526,
+          "keywords": [
+            "fairness"
+          ]
+        },
+        "Art7_PrivateLife": {
+          "score": 1.526,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00526,
+          "keywords": [
+            "social media"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 1.526,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00526,
+          "keywords": [
+            "social media"
+          ]
+        },
+        "Art47_RightToEffectiveRemedy": {
+          "score": 5.105,
+          "n_types": 3,
+          "n_occ": 4,
+          "density": 0.02105,
+          "keywords": [
+            "prediction",
+            "predict",
+            "scor"
+          ]
+        },
+        "Art31_FairWorkingConditions": {
+          "score": 1.526,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00526,
+          "keywords": [
+            "employ"
+          ]
+        },
+        "Art15_FreedomOfOccupation": {
+          "score": 1.526,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00526,
+          "keywords": [
+            "employ"
+          ]
+        },
+        "Art11_FreedomOfExpression": {
+          "score": 1.526,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00526,
+          "keywords": [
+            "social media"
+          ]
+        }
+      },
+      "disambiguation": "individual_treatment\u2192Art21",
+      "id": "P04"
+    },
+    {
+      "keywords": [
+        "patient",
+        "scor",
+        "minor",
+        "minority",
+        "predict",
+        "staff",
+        "bias",
+        "generat",
+        "health",
+        "prediction",
+        "profil",
+        "racial"
+      ],
+      "keyword_counts": {
+        "prediction": 1,
+        "minority": 2,
+        "patient": 4,
+        "predict": 2,
+        "generat": 1,
+        "health": 1,
+        "profil": 1,
+        "racial": 1,
+        "minor": 2,
+        "staff": 2,
+        "bias": 1,
+        "scor": 3
+      },
+      "rights_from_keywords": [
+        "Art21_NonDiscrimination",
+        "Art22_CulturalDiversity",
+        "Art24_RightsOfChild",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art21_NonDiscrimination",
+        "Art22_CulturalDiversity",
+        "Art24_RightsOfChild",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 12,
+      "n_rights": 8,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 12.914,
+          "n_types": 7,
+          "n_occ": 11,
+          "density": 0.05914,
+          "keywords": [
+            "bias",
+            "prediction",
+            "predict",
+            "profil",
+            "scor",
+            "minority",
+            "racial"
+          ]
+        },
+        "Art23_GenderEquality": {
+          "score": 1.538,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00538,
+          "keywords": [
+            "bias"
+          ]
+        },
+        "Art20_EqualityBeforeLaw": {
+          "score": 1.538,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00538,
+          "keywords": [
+            "bias"
+          ]
+        },
+        "Art7_PrivateLife": {
+          "score": 3.075,
+          "n_types": 2,
+          "n_occ": 2,
+          "density": 0.01075,
+          "keywords": [
+            "profil",
+            "generat"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 6.763,
+          "n_types": 3,
+          "n_occ": 7,
+          "density": 0.03763,
+          "keywords": [
+            "patient",
+            "staff",
+            "profil"
+          ]
+        },
+        "Art35_HealthCare": {
+          "score": 4.688,
+          "n_types": 2,
+          "n_occ": 5,
+          "density": 0.02688,
+          "keywords": [
+            "health",
+            "patient"
+          ]
+        },
+        "Art2_RightToLife": {
+          "score": 4.688,
+          "n_types": 2,
+          "n_occ": 5,
+          "density": 0.02688,
+          "keywords": [
+            "health",
+            "patient"
+          ]
+        },
+        "Art24_RightsOfChild": {
+          "score": 2.075,
+          "n_types": 1,
+          "n_occ": 2,
+          "density": 0.01075,
+          "keywords": [
+            "minor"
+          ]
+        },
+        "Art1_HumanDignity": {
+          "score": 1.538,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00538,
+          "keywords": [
+            "generat"
+          ]
+        },
+        "Art47_RightToEffectiveRemedy": {
+          "score": 6.226,
+          "n_types": 3,
+          "n_occ": 6,
+          "density": 0.03226,
+          "keywords": [
+            "prediction",
+            "predict",
+            "scor"
+          ]
+        },
+        "Art31_FairWorkingConditions": {
+          "score": 2.075,
+          "n_types": 1,
+          "n_occ": 2,
+          "density": 0.01075,
+          "keywords": [
+            "staff"
+          ]
+        },
+        "Art22_CulturalDiversity": {
+          "score": 2.075,
+          "n_types": 1,
+          "n_occ": 2,
+          "density": 0.01075,
+          "keywords": [
+            "minority"
+          ]
+        }
+      },
+      "disambiguation": "individual_treatment\u2192Art21",
+      "id": "P05"
+    },
+    {
+      "keywords": [
+        "emotion",
+        "student",
+        "classif",
+        "consent",
+        "monitor",
+        "school",
+        "scor"
+      ],
+      "keyword_counts": {
+        "consent": 1,
+        "student": 4,
+        "monitor": 1,
+        "classif": 1,
+        "emotion": 5,
+        "school": 1,
+        "scor": 1
+      },
+      "rights_from_keywords": [
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art24_RightsOfChild",
+        "Art3_RightToIntegrity",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art24_RightsOfChild",
+        "Art3_RightToIntegrity",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 7,
+      "n_rights": 7,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 3.493,
+          "n_types": 2,
+          "n_occ": 2,
+          "density": 0.01493,
+          "keywords": [
+            "classif",
+            "scor"
+          ]
+        },
+        "Art7_PrivateLife": {
+          "score": 8.224,
+          "n_types": 3,
+          "n_occ": 7,
+          "density": 0.05224,
+          "keywords": [
+            "consent",
+            "monitor",
+            "emotion"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 7.478,
+          "n_types": 3,
+          "n_occ": 6,
+          "density": 0.04478,
+          "keywords": [
+            "student",
+            "school",
+            "monitor"
+          ]
+        },
+        "Art3_RightToIntegrity": {
+          "score": 6.478,
+          "n_types": 2,
+          "n_occ": 6,
+          "density": 0.04478,
+          "keywords": [
+            "consent",
+            "emotion"
+          ]
+        },
+        "Art24_RightsOfChild": {
+          "score": 5.731,
+          "n_types": 2,
+          "n_occ": 5,
+          "density": 0.03731,
+          "keywords": [
+            "student",
+            "school"
+          ]
+        },
+        "Art1_HumanDignity": {
+          "score": 4.731,
+          "n_types": 1,
+          "n_occ": 5,
+          "density": 0.03731,
+          "keywords": [
+            "emotion"
+          ]
+        },
+        "Art47_RightToEffectiveRemedy": {
+          "score": 3.493,
+          "n_types": 2,
+          "n_occ": 2,
+          "density": 0.01493,
+          "keywords": [
+            "classif",
+            "scor"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P06"
+    },
+    {
+      "keywords": [
+        "student",
+        "sentiment",
+        "consent",
+        "emotion",
+        "gender",
+        "school",
+        "scor"
+      ],
+      "keyword_counts": {
+        "sentiment": 2,
+        "consent": 1,
+        "student": 3,
+        "emotion": 1,
+        "school": 1,
+        "gender": 1,
+        "scor": 1
+      },
+      "rights_from_keywords": [
+        "Art11_FreedomOfExpression",
+        "Art21_NonDiscrimination",
+        "Art24_RightsOfChild",
+        "Art3_RightToIntegrity",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art11_FreedomOfExpression",
+        "Art21_NonDiscrimination",
+        "Art24_RightsOfChild",
+        "Art3_RightToIntegrity",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 7,
+      "n_rights": 6,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 3.613,
+          "n_types": 2,
+          "n_occ": 2,
+          "density": 0.01613,
+          "keywords": [
+            "scor",
+            "gender"
+          ]
+        },
+        "Art23_GenderEquality": {
+          "score": 1.806,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00806,
+          "keywords": [
+            "gender"
+          ]
+        },
+        "Art7_PrivateLife": {
+          "score": 6.226,
+          "n_types": 3,
+          "n_occ": 4,
+          "density": 0.03226,
+          "keywords": [
+            "consent",
+            "emotion",
+            "sentiment"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 5.226,
+          "n_types": 2,
+          "n_occ": 4,
+          "density": 0.03226,
+          "keywords": [
+            "student",
+            "school"
+          ]
+        },
+        "Art3_RightToIntegrity": {
+          "score": 3.613,
+          "n_types": 2,
+          "n_occ": 2,
+          "density": 0.01613,
+          "keywords": [
+            "consent",
+            "emotion"
+          ]
+        },
+        "Art24_RightsOfChild": {
+          "score": 5.226,
+          "n_types": 2,
+          "n_occ": 4,
+          "density": 0.03226,
+          "keywords": [
+            "student",
+            "school"
+          ]
+        },
+        "Art1_HumanDignity": {
+          "score": 1.806,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00806,
+          "keywords": [
+            "emotion"
+          ]
+        },
+        "Art47_RightToEffectiveRemedy": {
+          "score": 1.806,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00806,
+          "keywords": [
+            "scor"
+          ]
+        },
+        "Art11_FreedomOfExpression": {
+          "score": 2.613,
+          "n_types": 1,
+          "n_occ": 2,
+          "density": 0.01613,
+          "keywords": [
+            "sentiment"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P07"
+    },
+    {
+      "keywords": [
+        "chatbot",
+        "student",
+        "health",
+        "recommend"
+      ],
+      "keyword_counts": {
+        "recommend": 1,
+        "student": 3,
+        "chatbot": 5,
+        "health": 2
+      },
+      "rights_from_keywords": [
+        "Art1_HumanDignity",
+        "Art24_RightsOfChild",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art1_HumanDignity",
+        "Art24_RightsOfChild",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 4,
+      "n_rights": 5,
+      "right_scores": {
+        "Art8_DataProtection": {
+          "score": 3.29,
+          "n_types": 1,
+          "n_occ": 3,
+          "density": 0.0229,
+          "keywords": [
+            "student"
+          ]
+        },
+        "Art35_HealthCare": {
+          "score": 2.527,
+          "n_types": 1,
+          "n_occ": 2,
+          "density": 0.01527,
+          "keywords": [
+            "health"
+          ]
+        },
+        "Art2_RightToLife": {
+          "score": 2.527,
+          "n_types": 1,
+          "n_occ": 2,
+          "density": 0.01527,
+          "keywords": [
+            "health"
+          ]
+        },
+        "Art24_RightsOfChild": {
+          "score": 3.29,
+          "n_types": 1,
+          "n_occ": 3,
+          "density": 0.0229,
+          "keywords": [
+            "student"
+          ]
+        },
+        "Art1_HumanDignity": {
+          "score": 6.58,
+          "n_types": 2,
+          "n_occ": 6,
+          "density": 0.0458,
+          "keywords": [
+            "recommend",
+            "chatbot"
+          ]
+        },
+        "Art11_FreedomOfExpression": {
+          "score": 1.763,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00763,
+          "keywords": [
+            "recommend"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P08"
+    },
+    {
+      "keywords": [
+        "student",
+        "recommend",
+        "consent",
+        "disabilit",
+        "profil"
+      ],
+      "keyword_counts": {
+        "disabilit": 1,
+        "recommend": 4,
+        "consent": 1,
+        "student": 9,
+        "profil": 1
+      },
+      "rights_from_keywords": [
+        "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
+        "Art24_RightsOfChild",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
+        "Art24_RightsOfChild",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 5,
+      "n_rights": 5,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 1.735,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00735,
+          "keywords": [
+            "profil"
+          ]
+        },
+        "Art26_DisabilityIntegration": {
+          "score": 1.735,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00735,
+          "keywords": [
+            "disabilit"
+          ]
+        },
+        "Art7_PrivateLife": {
+          "score": 3.471,
+          "n_types": 2,
+          "n_occ": 2,
+          "density": 0.01471,
+          "keywords": [
+            "consent",
+            "profil"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 9.353,
+          "n_types": 2,
+          "n_occ": 10,
+          "density": 0.07353,
+          "keywords": [
+            "student",
+            "profil"
+          ]
+        },
+        "Art3_RightToIntegrity": {
+          "score": 1.735,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00735,
+          "keywords": [
+            "consent"
+          ]
+        },
+        "Art24_RightsOfChild": {
+          "score": 7.618,
+          "n_types": 1,
+          "n_occ": 9,
+          "density": 0.06618,
+          "keywords": [
+            "student"
+          ]
+        },
+        "Art1_HumanDignity": {
+          "score": 3.941,
+          "n_types": 1,
+          "n_occ": 4,
+          "density": 0.02941,
+          "keywords": [
+            "recommend"
+          ]
+        },
+        "Art11_FreedomOfExpression": {
+          "score": 3.941,
+          "n_types": 1,
+          "n_occ": 4,
+          "density": 0.02941,
+          "keywords": [
+            "recommend"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P09"
+    },
+    {
+      "keywords": [
+        "health",
+        "classif",
+        "medical",
+        "scor",
+        "social media"
+      ],
+      "keyword_counts": {
+        "social media": 1,
+        "medical": 1,
+        "classif": 1,
+        "health": 2,
+        "scor": 1
+      },
+      "rights_from_keywords": [
+        "Art21_NonDiscrimination",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art47_RightToEffectiveRemedy"
+      ],
+      "rights_injected": [
+        "Art8_DataProtection"
+      ],
+      "rights_injected_requested": [
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art21_NonDiscrimination",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art47_RightToEffectiveRemedy",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 5,
+      "n_rights": 5,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 3.55,
+          "n_types": 2,
+          "n_occ": 2,
+          "density": 0.0155,
+          "keywords": [
+            "classif",
+            "scor"
+          ]
+        },
+        "Art7_PrivateLife": {
+          "score": 1.775,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00775,
+          "keywords": [
+            "social media"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 1.775,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00775,
+          "keywords": [
+            "social media"
+          ]
+        },
+        "Art35_HealthCare": {
+          "score": 4.326,
+          "n_types": 2,
+          "n_occ": 3,
+          "density": 0.02326,
+          "keywords": [
+            "health",
+            "medical"
+          ]
+        },
+        "Art2_RightToLife": {
+          "score": 4.326,
+          "n_types": 2,
+          "n_occ": 3,
+          "density": 0.02326,
+          "keywords": [
+            "health",
+            "medical"
+          ]
+        },
+        "Art47_RightToEffectiveRemedy": {
+          "score": 3.55,
+          "n_types": 2,
+          "n_occ": 2,
+          "density": 0.0155,
+          "keywords": [
+            "classif",
+            "scor"
+          ]
+        },
+        "Art11_FreedomOfExpression": {
+          "score": 1.775,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00775,
+          "keywords": [
+            "social media"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P10"
+    },
+    {
+      "keywords": [
+        "scor",
+        "student",
+        "generat"
+      ],
+      "keyword_counts": {
+        "student": 2,
+        "generat": 1,
+        "scor": 4
+      },
+      "rights_from_keywords": [
+        "Art21_NonDiscrimination",
+        "Art24_RightsOfChild",
+        "Art47_RightToEffectiveRemedy",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art21_NonDiscrimination",
+        "Art24_RightsOfChild",
+        "Art47_RightToEffectiveRemedy",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 3,
+      "n_rights": 4,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 3.797,
+          "n_types": 1,
+          "n_occ": 4,
+          "density": 0.02797,
+          "keywords": [
+            "scor"
+          ]
+        },
+        "Art7_PrivateLife": {
+          "score": 1.699,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00699,
+          "keywords": [
+            "generat"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 2.399,
+          "n_types": 1,
+          "n_occ": 2,
+          "density": 0.01399,
+          "keywords": [
+            "student"
+          ]
+        },
+        "Art24_RightsOfChild": {
+          "score": 2.399,
+          "n_types": 1,
+          "n_occ": 2,
+          "density": 0.01399,
+          "keywords": [
+            "student"
+          ]
+        },
+        "Art1_HumanDignity": {
+          "score": 1.699,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00699,
+          "keywords": [
+            "generat"
+          ]
+        },
+        "Art47_RightToEffectiveRemedy": {
+          "score": 3.797,
+          "n_types": 1,
+          "n_occ": 4,
+          "density": 0.02797,
+          "keywords": [
+            "scor"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P11"
+    },
+    {
+      "keywords": [
+        "patient",
+        "medical",
+        "predict",
+        "diagnos",
+        "gender",
+        "generat",
+        "health",
+        "prediction",
+        "recommend",
+        "transfer"
+      ],
+      "keyword_counts": {
+        "prediction": 1,
+        "recommend": 1,
+        "transfer": 1,
+        "medical": 2,
+        "diagnos": 1,
+        "patient": 5,
+        "predict": 2,
+        "generat": 1,
+        "health": 1,
+        "gender": 1
+      },
+      "rights_from_keywords": [
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art47_RightToEffectiveRemedy",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art1_HumanDignity",
+        "Art21_NonDiscrimination",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art47_RightToEffectiveRemedy",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 10,
+      "n_rights": 6,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 6.125,
+          "n_types": 3,
+          "n_occ": 4,
+          "density": 0.03125,
+          "keywords": [
+            "prediction",
+            "predict",
+            "gender"
+          ]
+        },
+        "Art23_GenderEquality": {
+          "score": 1.781,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00781,
+          "keywords": [
+            "gender"
+          ]
+        },
+        "Art7_PrivateLife": {
+          "score": 1.781,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00781,
+          "keywords": [
+            "generat"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 6.688,
+          "n_types": 2,
+          "n_occ": 6,
+          "density": 0.04688,
+          "keywords": [
+            "patient",
+            "transfer"
+          ]
+        },
+        "Art35_HealthCare": {
+          "score": 11.031,
+          "n_types": 4,
+          "n_occ": 9,
+          "density": 0.07031,
+          "keywords": [
+            "health",
+            "medical",
+            "diagnos",
+            "patient"
+          ]
+        },
+        "Art2_RightToLife": {
+          "score": 11.031,
+          "n_types": 4,
+          "n_occ": 9,
+          "density": 0.07031,
+          "keywords": [
+            "health",
+            "medical",
+            "diagnos",
+            "patient"
+          ]
+        },
+        "Art1_HumanDignity": {
+          "score": 3.562,
+          "n_types": 2,
+          "n_occ": 2,
+          "density": 0.01562,
+          "keywords": [
+            "recommend",
+            "generat"
+          ]
+        },
+        "Art47_RightToEffectiveRemedy": {
+          "score": 4.344,
+          "n_types": 2,
+          "n_occ": 3,
+          "density": 0.02344,
+          "keywords": [
+            "prediction",
+            "predict"
+          ]
+        },
+        "Art11_FreedomOfExpression": {
+          "score": 1.781,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00781,
+          "keywords": [
+            "recommend"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P12"
+    },
+    {
+      "keywords": [
+        "fairness",
+        "personal data"
+      ],
+      "keyword_counts": {
+        "personal data": 1,
+        "fairness": 1
+      },
+      "rights_from_keywords": [],
+      "rights_injected": [
+        "Art8_DataProtection"
+      ],
+      "rights_injected_requested": [
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art11_FreedomOfExpression",
+        "Art22_CulturalDiversity",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 2,
+      "n_rights": 3,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 1.787,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00787,
+          "keywords": [
+            "fairness"
+          ]
+        },
+        "Art20_EqualityBeforeLaw": {
+          "score": 1.787,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00787,
+          "keywords": [
+            "fairness"
+          ]
+        },
+        "Art7_PrivateLife": {
+          "score": 1.787,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00787,
+          "keywords": [
+            "personal data"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 1.787,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00787,
+          "keywords": [
+            "personal data"
+          ]
+        }
+      },
+      "disambiguation": "systemic_info\u2192Art11/Art22",
+      "id": "P13"
+    },
+    {
+      "keywords": [
+        "classif",
+        "personal data",
+        "scor"
+      ],
+      "keyword_counts": {
+        "personal data": 1,
+        "classif": 2,
+        "scor": 1
+      },
+      "rights_from_keywords": [
+        "Art21_NonDiscrimination",
+        "Art47_RightToEffectiveRemedy"
+      ],
+      "rights_injected": [
+        "Art8_DataProtection"
+      ],
+      "rights_injected_requested": [
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art21_NonDiscrimination",
+        "Art47_RightToEffectiveRemedy",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 3,
+      "n_rights": 3,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 4.479,
+          "n_types": 2,
+          "n_occ": 3,
+          "density": 0.02479,
+          "keywords": [
+            "classif",
+            "scor"
+          ]
+        },
+        "Art7_PrivateLife": {
+          "score": 1.826,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00826,
+          "keywords": [
+            "personal data"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 1.826,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00826,
+          "keywords": [
+            "personal data"
+          ]
+        },
+        "Art47_RightToEffectiveRemedy": {
+          "score": 4.479,
+          "n_types": 2,
+          "n_occ": 3,
+          "density": 0.02479,
+          "keywords": [
+            "classif",
+            "scor"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P14"
+    },
+    {
+      "keywords": [
+        "environment"
+      ],
+      "keyword_counts": {
+        "environment": 1
+      },
+      "rights_from_keywords": [],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [],
+      "n_keywords": 1,
+      "n_rights": 0,
+      "right_scores": {
+        "Art37_EnvironmentalProtection": {
+          "score": 1.826,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00826,
+          "keywords": [
+            "environment"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P15"
+    },
+    {
+      "keywords": [
+        "carbon",
+        "personal data",
+        "predict",
+        "prediction"
+      ],
+      "keyword_counts": {
+        "personal data": 1,
+        "prediction": 1,
+        "predict": 1,
+        "carbon": 1
+      },
+      "rights_from_keywords": [
+        "Art21_NonDiscrimination",
+        "Art47_RightToEffectiveRemedy"
+      ],
+      "rights_injected": [
+        "Art8_DataProtection"
+      ],
+      "rights_injected_requested": [
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art21_NonDiscrimination",
+        "Art47_RightToEffectiveRemedy",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 4,
+      "n_rights": 3,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 3.724,
+          "n_types": 2,
+          "n_occ": 2,
+          "density": 0.01724,
+          "keywords": [
+            "prediction",
+            "predict"
+          ]
+        },
+        "Art7_PrivateLife": {
+          "score": 1.862,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00862,
+          "keywords": [
+            "personal data"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 1.862,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00862,
+          "keywords": [
+            "personal data"
+          ]
+        },
+        "Art47_RightToEffectiveRemedy": {
+          "score": 3.724,
+          "n_types": 2,
+          "n_occ": 2,
+          "density": 0.01724,
+          "keywords": [
+            "prediction",
+            "predict"
+          ]
+        },
+        "Art37_EnvironmentalProtection": {
+          "score": 1.862,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00862,
+          "keywords": [
+            "carbon"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P16"
+    },
+    {
+      "keywords": [
+        "classif",
+        "organisation",
+        "content moder",
+        "dual-use",
+        "minor",
+        "minority",
+        "protest",
+        "recruit",
+        "social media"
+      ],
+      "keyword_counts": {
+        "content moder": 1,
+        "social media": 1,
+        "organisation": 2,
+        "minority": 1,
+        "dual-use": 1,
+        "recruit": 1,
+        "classif": 3,
+        "protest": 1,
+        "minor": 1
+      },
+      "rights_from_keywords": [
+        "Art11_FreedomOfExpression",
+        "Art12_FreedomOfAssembly",
+        "Art21_NonDiscrimination",
+        "Art47_RightToEffectiveRemedy"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art11_FreedomOfExpression",
+        "Art12_FreedomOfAssembly",
+        "Art21_NonDiscrimination",
+        "Art47_RightToEffectiveRemedy"
+      ],
+      "n_keywords": 9,
+      "n_rights": 4,
+      "right_scores": {
+        "Art21_NonDiscrimination": {
+          "score": 8.58,
+          "n_types": 4,
+          "n_occ": 6,
+          "density": 0.0458,
+          "keywords": [
+            "recruit",
+            "classif",
+            "minority",
+            "content moder"
+          ]
+        },
+        "Art7_PrivateLife": {
+          "score": 1.763,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00763,
+          "keywords": [
+            "social media"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 1.763,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00763,
+          "keywords": [
+            "social media"
+          ]
+        },
+        "Art2_RightToLife": {
+          "score": 1.763,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00763,
+          "keywords": [
+            "dual-use"
+          ]
+        },
+        "Art24_RightsOfChild": {
+          "score": 1.763,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00763,
+          "keywords": [
+            "minor"
+          ]
+        },
+        "Art1_HumanDignity": {
+          "score": 1.763,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00763,
+          "keywords": [
+            "dual-use"
+          ]
+        },
+        "Art47_RightToEffectiveRemedy": {
+          "score": 3.29,
+          "n_types": 1,
+          "n_occ": 3,
+          "density": 0.0229,
+          "keywords": [
+            "classif"
+          ]
+        },
+        "Art15_FreedomOfOccupation": {
+          "score": 1.763,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00763,
+          "keywords": [
+            "recruit"
+          ]
+        },
+        "Art11_FreedomOfExpression": {
+          "score": 9.58,
+          "n_types": 5,
+          "n_occ": 6,
+          "density": 0.0458,
+          "keywords": [
+            "dual-use",
+            "content moder",
+            "social media",
+            "protest",
+            "organisation"
+          ]
+        },
+        "Art22_CulturalDiversity": {
+          "score": 1.763,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00763,
+          "keywords": [
+            "minority"
+          ]
+        },
+        "Art12_FreedomOfAssembly": {
+          "score": 4.29,
+          "n_types": 2,
+          "n_occ": 3,
+          "density": 0.0229,
+          "keywords": [
+            "protest",
+            "organisation"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P17"
+    },
+    {
+      "keywords": [
+        "autonomous",
+        "accountab",
+        "personal data"
+      ],
+      "keyword_counts": {
+        "personal data": 1,
+        "autonomous": 2,
+        "accountab": 1
+      },
+      "rights_from_keywords": [
+        "Art1_HumanDignity",
+        "Art2_RightToLife"
+      ],
+      "rights_injected": [
+        "Art8_DataProtection"
+      ],
+      "rights_injected_requested": [
+        "Art8_DataProtection"
+      ],
+      "matched_rights": [
+        "Art1_HumanDignity",
+        "Art2_RightToLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 3,
+      "n_rights": 3,
+      "right_scores": {
+        "Art7_PrivateLife": {
+          "score": 1.694,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00694,
+          "keywords": [
+            "personal data"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 1.694,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00694,
+          "keywords": [
+            "personal data"
+          ]
+        },
+        "Art2_RightToLife": {
+          "score": 2.389,
+          "n_types": 1,
+          "n_occ": 2,
+          "density": 0.01389,
+          "keywords": [
+            "autonomous"
+          ]
+        },
+        "Art1_HumanDignity": {
+          "score": 2.389,
+          "n_types": 1,
+          "n_occ": 2,
+          "density": 0.01389,
+          "keywords": [
+            "autonomous"
+          ]
+        },
+        "Art47_RightToEffectiveRemedy": {
+          "score": 1.694,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00694,
+          "keywords": [
+            "accountab"
+          ]
+        },
+        "Art41_GoodAdministration": {
+          "score": 1.694,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00694,
+          "keywords": [
+            "accountab"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P18"
+    },
+    {
+      "keywords": [
+        "patient",
+        "consent",
+        "cross-border",
+        "diagnos",
+        "medical",
+        "transfer",
+        "vulnerable"
+      ],
+      "keyword_counts": {
+        "cross-border": 1,
+        "vulnerable": 1,
+        "transfer": 1,
+        "consent": 1,
+        "medical": 1,
+        "diagnos": 1,
+        "patient": 5
+      },
+      "rights_from_keywords": [
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 7,
+      "n_rights": 4,
+      "right_scores": {
+        "Art7_PrivateLife": {
+          "score": 3.316,
+          "n_types": 2,
+          "n_occ": 2,
+          "density": 0.01316,
+          "keywords": [
+            "consent",
+            "cross-border"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 7.605,
+          "n_types": 3,
+          "n_occ": 7,
+          "density": 0.04605,
+          "keywords": [
+            "patient",
+            "cross-border",
+            "transfer"
+          ]
+        },
+        "Art3_RightToIntegrity": {
+          "score": 1.658,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00658,
+          "keywords": [
+            "consent"
+          ]
+        },
+        "Art35_HealthCare": {
+          "score": 7.605,
+          "n_types": 3,
+          "n_occ": 7,
+          "density": 0.04605,
+          "keywords": [
+            "medical",
+            "diagnos",
+            "patient"
+          ]
+        },
+        "Art2_RightToLife": {
+          "score": 7.605,
+          "n_types": 3,
+          "n_occ": 7,
+          "density": 0.04605,
+          "keywords": [
+            "medical",
+            "diagnos",
+            "patient"
+          ]
+        },
+        "Art24_RightsOfChild": {
+          "score": 1.658,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00658,
+          "keywords": [
+            "vulnerable"
+          ]
+        },
+        "Art1_HumanDignity": {
+          "score": 1.658,
+          "n_types": 1,
+          "n_occ": 1,
+          "density": 0.00658,
+          "keywords": [
+            "vulnerable"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P19"
+    },
+    {
+      "keywords": [
+        "employ",
+        "monitor",
+        "consent",
+        "employee",
+        "workplace",
+        "track"
+      ],
+      "keyword_counts": {
+        "workplace": 2,
+        "employee": 3,
+        "consent": 3,
+        "monitor": 4,
+        "employ": 6,
+        "track": 1
+      },
+      "rights_from_keywords": [
+        "Art15_FreedomOfOccupation",
+        "Art31_FairWorkingConditions",
+        "Art3_RightToIntegrity",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art15_FreedomOfOccupation",
+        "Art31_FairWorkingConditions",
+        "Art3_RightToIntegrity",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "n_keywords": 6,
+      "n_rights": 5,
+      "right_scores": {
+        "Art7_PrivateLife": {
+          "score": 8.063,
+          "n_types": 3,
+          "n_occ": 8,
+          "density": 0.05063,
+          "keywords": [
+            "consent",
+            "monitor",
+            "track"
+          ]
+        },
+        "Art8_DataProtection": {
+          "score": 5.165,
+          "n_types": 2,
+          "n_occ": 5,
+          "density": 0.03165,
+          "keywords": [
+            "monitor",
+            "track"
+          ]
+        },
+        "Art3_RightToIntegrity": {
+          "score": 2.899,
+          "n_types": 1,
+          "n_occ": 3,
+          "density": 0.01899,
+          "keywords": [
+            "consent"
+          ]
+        },
+        "Art31_FairWorkingConditions": {
+          "score": 9.962,
+          "n_types": 3,
+          "n_occ": 11,
+          "density": 0.06962,
+          "keywords": [
+            "employ",
+            "employee",
+            "workplace"
+          ]
+        },
+        "Art15_FreedomOfOccupation": {
+          "score": 9.962,
+          "n_types": 3,
+          "n_occ": 11,
+          "density": 0.06962,
+          "keywords": [
+            "employ",
+            "employee",
+            "workplace"
+          ]
+        }
+      },
+      "disambiguation": "not_applicable",
+      "id": "P20"
+    }
+  ],
+  "summary": {
+    "before_mean_rights": 7.75,
+    "after_mean_rights": 4.55,
+    "before_art8": 20,
+    "after_art8": 16,
+    "before_art41": 12,
+    "after_art41": 0
+  }
+}

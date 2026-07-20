@@ -11,6 +11,28 @@ This is the record referenced from the dissertation's Design Science Research fr
 (`dissertation-latex/project/project.tex`, §Research Methodology) as the artifact's iterative
 build-evaluate cycle.
 
+## [2.1.1] — 2026-07-20
+
+### Changed
+- **Risk-category ranking: allowlist → two-pool TF + IDF.** Replaced the hardcoded
+  `ALWAYS_SURFACE_IF_PRESENT` allowlist (`Transparency`, `EnvironmentalHarm`,
+  `Sustainability`, `ChildrenRights`) in `retrieve_risk_categories_for_proposal`
+  with a two-pool ranker over global `:hasRisk`/`:demonstratesRisk` document
+  frequencies (`ontology/risk_category_doc_frequency.json`, built by
+  `ontology/compute_risk_category_idf.py`): the first 6 slots go to highest
+  per-proposal term frequency (proposal-specific evidence mass); remaining
+  slots to `top_n=10` go to highest IDF among categories not yet selected
+  (rare-but-retrieved). Pure TF×IDF fails under Phase-0 seeding — high-recall
+  proposals retrieve nearly the full taxonomy, so raw TF lets Accountability
+  dominate and binary IDF promotes every ultra-rare seed label. Two-pool
+  coverage ranking is a standard IR pattern and needs no hand-picked category
+  list. Validation on 20 synthetic proposals: Transparency in top-10 for
+  **18/20** (matching the allowlist baseline); P15/P20 correctly exclude it;
+  previously unnamed rare categories (FalseIdentification, AddictionRisk,
+  FunctionCreep, Surveillance, DemocraticProcessHarm) now surface where
+  retrieved. No severity multiplier — `:hasRisk` triples carry no reified
+  severity annotation.
+
 ## [2.1.0] — 2026-07-20
 
 ### Fixed (expert-review remediation — Monique / Delaram comments)

@@ -8,6 +8,8 @@ Phase 1: retrieves sectionReference + risk categories (:hasRisk / :demonstratesR
 Phase 3: Charter rights disambiguation (bias→Art21 vs Art11/Art22) + Art12/Art31 triggers
 """
 
+import json
+import math
 import re
 import requests
 from pathlib import Path
@@ -21,6 +23,19 @@ _ONTOLOGY_CANDIDATES = [
 ]
 _local_graph = None
 _use_local = None  # None=auto, True=force local, False=force GraphDB
+
+# Precomputed global document frequency for RiskCategory IDF ranking.
+# Regenerate via: python ontology/compute_risk_category_idf.py
+_IDF_PATH = Path(__file__).resolve().parent.parent / "ontology" / "risk_category_doc_frequency.json"
+if not _IDF_PATH.exists():
+    raise FileNotFoundError(
+        f"Missing risk-category IDF table at {_IDF_PATH}. "
+        "Run: python ontology/compute_risk_category_idf.py"
+    )
+_DOC_FREQ: dict[str, int] = json.loads(_IDF_PATH.read_text())
+if not _DOC_FREQ:
+    raise ValueError(f"Empty risk-category IDF table at {_IDF_PATH}")
+_TOTAL_DOCS: int = sum(_DOC_FREQ.values())
 
 
 def _get_local_graph():
@@ -61,7 +76,7 @@ KEYWORD_TO_RIGHTS = {
     "bias":             ["Art21_NonDiscrimination", "Art23_GenderEquality", "Art20_EqualityBeforeLaw"],
     "discriminat":      ["Art21_NonDiscrimination", "Art23_GenderEquality", "Art26_DisabilityIntegration"],
     "privacy":          ["Art7_PrivateLife", "Art8_DataProtection"],
-    "data":             ["Art8_DataProtection", "Art7_PrivateLife"],
+    # bare "data" removed — too broad (dataset/database/metadata); use personal data etc.
     "personal data":    ["Art8_DataProtection", "Art7_PrivateLife"],
     "consent":          ["Art3_RightToIntegrity", "Art7_PrivateLife"],
     "health":           ["Art35_HealthCare", "Art2_RightToLife"],
@@ -101,7 +116,8 @@ KEYWORD_TO_RIGHTS = {
     "predict":          ["Art21_NonDiscrimination", "Art47_RightToEffectiveRemedy"],
     "profil":           ["Art7_PrivateLife", "Art8_DataProtection", "Art21_NonDiscrimination"],
     "classif":          ["Art21_NonDiscrimination", "Art47_RightToEffectiveRemedy"],
-    "scor":             ["Art21_NonDiscrimination", "Art47_RightToEffectiveRemedy", "Art41_GoodAdministration"],
+    # Art41 removed from scor — score/scoring is not administrative process
+    "scor":             ["Art21_NonDiscrimination", "Art47_RightToEffectiveRemedy"],
     "vulnerable":       ["Art1_HumanDignity", "Art24_RightsOfChild"],
     "minority":         ["Art21_NonDiscrimination", "Art22_CulturalDiversity"],
     "race":             ["Art21_NonDiscrimination"],
@@ -117,7 +133,8 @@ KEYWORD_TO_RIGHTS = {
     "dual-use":         ["Art2_RightToLife", "Art1_HumanDignity", "Art11_FreedomOfExpression"],
     "content moder":    ["Art11_FreedomOfExpression", "Art21_NonDiscrimination"],
     "recommend":        ["Art11_FreedomOfExpression", "Art1_HumanDignity"],
-    "chatbot":          ["Art1_HumanDignity", "Art41_GoodAdministration"],
+    # Art41 removed from chatbot — conversational agent ≠ administrative process
+    "chatbot":          ["Art1_HumanDignity"],
     "generat":          ["Art1_HumanDignity", "Art7_PrivateLife"],
     "emotion":          ["Art1_HumanDignity", "Art7_PrivateLife", "Art3_RightToIntegrity"],
     "sentiment":        ["Art7_PrivateLife", "Art11_FreedomOfExpression"],
@@ -133,7 +150,34 @@ KEYWORD_TO_RIGHTS = {
     "organisation":     ["Art12_FreedomOfAssembly", "Art11_FreedomOfExpression"],  # British spelling in P17
     "association":      ["Art12_FreedomOfAssembly"],
     "collective":       ["Art12_FreedomOfAssembly"],
+    # Art41 — administrative / institutional decision-making only
+    "admissions":       ["Art41_GoodAdministration"],
+    "disciplinary":     ["Art41_GoodAdministration", "Art47_RightToEffectiveRemedy"],
+    "reams":            ["Art41_GoodAdministration"],
+    "welfare":          ["Art41_GoodAdministration", "Art21_NonDiscrimination"],
+    "public sector":    ["Art41_GoodAdministration"],
+    "administrative":   ["Art41_GoodAdministration"],
 }
+
+# Invert for per-right scoring
+RIGHT_TO_KEYWORDS: dict[str, list] = {}
+for _kw, _rights in KEYWORD_TO_RIGHTS.items():
+    for _right in _rights:
+        RIGHT_TO_KEYWORDS.setdefault(_right, []).append(_kw)
+
+# Personal/identifiable data signals for conditional Art8 (excludes bare "data")
+_ART8_PERSONAL_DATA_KEYWORDS = {
+    "privacy", "personal data", "biometric", "patient", "consent",
+    "surveil", "monitor", "track", "profil", "scraping", "cross-border",
+    "facial recogn", "health", "medical", "diagnos",
+}
+
+# Rights-matching hyperparameters
+_RIGHTS_TOP_K = 8                 # max rights passed downstream
+_RIGHTS_MIN_TYPES = 1             # at least one distinct keyword type
+_RIGHTS_MIN_OCCURRENCES = 2       # or ≥2 occurrences of triggering keywords
+_RIGHTS_MIN_SCORE = 1.15          # density-adjusted score floor
+_SHORT_STEM_MAX_LEN = 5           # stems shorter than this use word-boundary match
 
 # Bias/discrimination keywords that may incorrectly default to Art21
 _BIAS_KEYWORDS = {"bias", "discriminat", "fairness"}
@@ -258,14 +302,76 @@ def test_connection() -> bool:
         return False
 
 
+def _count_keyword(text: str, term: str) -> int:
+    """Count keyword occurrences; short stems use word-boundary prefix matching."""
+    if " " in term or len(term) > _SHORT_STEM_MAX_LEN:
+        return text.count(term)
+    # Short stems (e.g. scor, harm, track): match as word-prefix to avoid
+    # substring false positives inside unrelated tokens where possible.
+    return len(re.findall(rf"\b{re.escape(term)}\w*", text))
+
+
+def extract_keyword_counts(proposal: str) -> dict:
+    """Return {keyword: occurrence_count} for KEYWORD_TO_RIGHTS terms found."""
+    text = proposal.lower()
+    hits = {}
+    # Longer phrases first so diagnostics prefer "personal data" over fragments
+    for term in sorted(KEYWORD_TO_RIGHTS.keys(), key=len, reverse=True):
+        n = _count_keyword(text, term)
+        if n > 0:
+            hits[term] = n
+    return hits
+
+
 def extract_keywords(proposal: str) -> list:
-    """Extract risk keywords from proposal text."""
-    proposal_lower = proposal.lower()
-    found = []
-    for term in KEYWORD_TO_RIGHTS.keys():
-        if term in proposal_lower:
-            found.append(term)
-    return found
+    """Extract risk keywords from proposal text (occurrence-weighted presence)."""
+    hits = extract_keyword_counts(proposal)
+    # Stable order: most frequent first, then alpha
+    return sorted(hits.keys(), key=lambda k: (-hits[k], k))
+
+
+extract_keywords.with_counts = extract_keyword_counts  # type: ignore[attr-defined]
+
+
+def score_rights_for_proposal(proposal: str, hits: dict) -> dict:
+    """
+    Score each Charter right by distinct keyword-type count and occurrence density.
+
+    score = n_types + 100 * (total_occurrences / word_count)
+
+    A right barely triggered by one incidental mention scores near 1.0; a right
+    central to the proposal (multiple keyword types and/or dense repeats) scores
+    higher and survives the top-K / threshold cut in get_matched_rights().
+    """
+    words = max(len(proposal.split()), 1)
+    scores = {}
+    for right, kws in RIGHT_TO_KEYWORDS.items():
+        fired = [kw for kw in kws if kw in hits]
+        if not fired:
+            continue
+        n_types = len(fired)
+        n_occ = sum(hits[kw] for kw in fired)
+        density = n_occ / words
+        scores[right] = {
+            "score": n_types + 100.0 * density,
+            "n_types": n_types,
+            "n_occ": n_occ,
+            "density": density,
+            "keywords": fired,
+        }
+    return scores
+
+
+def _right_passes_threshold(info: dict) -> bool:
+    """Salience gate: enough distinct types, or enough occurrences, and min score."""
+    if info["score"] < _RIGHTS_MIN_SCORE:
+        return False
+    if info["n_types"] >= 2:
+        return True
+    if info["n_types"] >= _RIGHTS_MIN_TYPES and info["n_occ"] >= _RIGHTS_MIN_OCCURRENCES:
+        return True
+    # Single keyword type with a single occurrence: reject (incidental mention)
+    return False
 
 
 def disambiguate_bias_rights(proposal: str, rights: set, keywords: list) -> tuple[set, str]:
@@ -280,7 +386,6 @@ def disambiguate_bias_rights(proposal: str, rights: set, keywords: list) -> tupl
       'not_applicable' | 'individual_treatment→Art21' | 'systemic_info→Art11/Art22'
     """
     bias_fired = any(kw in _BIAS_KEYWORDS or kw.startswith("discriminat") for kw in keywords)
-    # also catch 'discriminat' substring keys
     if not bias_fired:
         bias_fired = any(k in keywords for k in ("bias", "discriminat", "fairness"))
     if not bias_fired:
@@ -311,8 +416,6 @@ def disambiguate_bias_rights(proposal: str, rights: set, keywords: list) -> tupl
         print(f"  [DISAMBIGUATION] bias keywords → {path}")
         return rights, path
 
-    # Ambiguous: prefer systemic downgrade when no clear individual harm mechanism
-    # (addresses Delaram P13 critique — bibliometric "fairness" without individual treatment)
     if systemic:
         rights -= art21_family
         rights.add("Art11_FreedomOfExpression")
@@ -326,33 +429,97 @@ def disambiguate_bias_rights(proposal: str, rights: set, keywords: list) -> tupl
 
 
 def get_matched_rights(keywords: list, proposal: str = "") -> list:
-    """Map extracted keywords to Charter article IRIs, with Phase 3 disambiguation."""
-    rights = set()
-    # Soft defaults: only inject when relevant signal present (Phase 3 fix —
-    # previously always injected Art41 + Art8, driving the Art21/governance skew)
-    data_signals = {"privacy", "data", "personal data", "consent", "biometric",
-                    "surveil", "monitor", "track", "patient", "student", "scraping",
-                    "transfer", "cross-border", "profil"}
-    admin_signals = {"transparen", "accountab", "explain", "chatbot", "scor"}
-    if any(k in data_signals for k in keywords):
-        rights.add("Art8_DataProtection")
-    if any(k in admin_signals for k in keywords):
-        rights.add("Art41_GoodAdministration")
+    """
+    Map proposal text to Charter article IRIs via density-weighted keyword scoring.
 
-    for kw in keywords:
-        if kw in KEYWORD_TO_RIGHTS:
-            rights.update(KEYWORD_TO_RIGHTS[kw])
+    Unlike the old binary matcher (keyword present → all associated rights),
+    each right is scored by distinct keyword-type count and occurrence density,
+    then filtered by a salience threshold and capped at top-K. Art8 injects only
+    when personal/identifiable-data keywords fire; Art41 is never unconditionally
+    injected (matched only via admin-process keywords that survive scoring).
+    """
+    text = proposal or ""
+    hits = extract_keyword_counts(text) if text else {k: 1 for k in keywords}
+    # Honour caller-supplied keyword list as a filter when proposal is empty
+    if not text and keywords:
+        hits = {k: hits.get(k, 1) for k in keywords if k in KEYWORD_TO_RIGHTS}
+
+    scored = score_rights_for_proposal(text or " ".join(hits), hits) if hits else {}
+
+    # Salience filter
+    eligible = {
+        right: info for right, info in scored.items()
+        if _right_passes_threshold(info)
+    }
+
+    # Top-K by score
+    ranked = sorted(eligible.items(), key=lambda kv: (-kv[1]["score"], kv[0]))
+    rights = {right for right, _ in ranked[:_RIGHTS_TOP_K]}
+    rights_from_keywords = set(rights)
+
+    # Conditional Art8: personal/identifiable data only (not bare "data")
+    injected: set[str] = set()
+    art8_hits = {k: hits[k] for k in _ART8_PERSONAL_DATA_KEYWORDS if k in hits}
+    if art8_hits and sum(art8_hits.values()) >= 1:
+        # Require the personal-data signal itself to be non-incidental when it's
+        # the sole Art8 path (already in rights_from_keywords is fine).
+        if "Art8_DataProtection" not in rights:
+            if sum(art8_hits.values()) >= 2 or len(art8_hits) >= 2:
+                rights.add("Art8_DataProtection")
+                injected.add("Art8_DataProtection")
+            elif sum(art8_hits.values()) >= 1 and any(
+                k in art8_hits for k in (
+                    "personal data", "biometric", "privacy", "patient",
+                    "facial recogn", "health", "medical",
+                )
+            ):
+                # Strong personal-data terms: allow single occurrence
+                rights.add("Art8_DataProtection")
+                injected.add("Art8_DataProtection")
+
+    # Art41: no soft inject — only via scored admin keywords (transparen/
+    # accountab/explain/admissions/disciplinary/reams/welfare/public sector/
+    # administrative) that already survived the threshold+top-K cut.
 
     audit_path = "not_applicable"
-    if proposal:
-        rights, audit_path = disambiguate_bias_rights(proposal, rights, keywords)
+    kw_list = list(hits.keys())
+    if text:
+        rights, audit_path = disambiguate_bias_rights(text, rights, kw_list)
 
-    # Stash last audit path for callers (retrieve_all_for_proposal reads this)
+    # Re-cap after disambiguation may have added Art11/Art22
+    if len(rights) > _RIGHTS_TOP_K:
+        # Keep highest-scoring among current set; always keep disambiguation adds
+        score_map = {r: scored.get(r, {}).get("score", 0.0) for r in rights}
+        # Boost freshly added disambiguation rights so they survive the cut
+        for r in rights:
+            if r not in eligible and r not in injected:
+                score_map[r] = max(score_map.get(r, 0.0), 2.0)
+        rights = set(sorted(rights, key=lambda r: -score_map.get(r, 0.0))[:_RIGHTS_TOP_K])
+
     get_matched_rights.last_disambiguation = audit_path  # type: ignore[attr-defined]
-    return sorted(list(rights))
+    get_matched_rights.last_match_meta = {  # type: ignore[attr-defined]
+        "keyword_counts": hits,
+        "right_scores": {
+            r: {
+                "score": round(info["score"], 3),
+                "n_types": info["n_types"],
+                "n_occ": info["n_occ"],
+                "density": round(info["density"], 5),
+                "keywords": info["keywords"],
+            }
+            for r, info in scored.items()
+        },
+        "rights_from_keywords": sorted(rights_from_keywords),
+        "rights_injected": sorted(injected),
+        "rights_injected_requested": sorted(injected),
+        "top_k": _RIGHTS_TOP_K,
+        "threshold": _RIGHTS_MIN_SCORE,
+    }
+    return sorted(rights)
 
 
 get_matched_rights.last_disambiguation = "not_applicable"  # type: ignore[attr-defined]
+get_matched_rights.last_match_meta = {}  # type: ignore[attr-defined]
 
 
 def retrieve_requirements_by_right(charter_article: str) -> list:
@@ -484,18 +651,78 @@ def retrieve_risk_category_definitions(category_names: list) -> list:
     return ordered
 
 
+def _idf_weight(category: str, total_docs: int = _TOTAL_DOCS) -> float:
+    """Smoothed IDF: rare categories score higher than ubiquitous ones."""
+    df = _DOC_FREQ.get(category, 1)  # avoid div-by-zero if table is stale
+    return math.log((total_docs + 1) / (df + 1)) + 1
+
+
+def rank_risk_categories(
+    per_proposal_counts: dict,
+    total_docs: int = _TOTAL_DOCS,
+    top_n: int = 10,
+    primary_slots: int = 6,
+) -> list:
+    """
+    Two-pool IDF ranking over categories present in this proposal's evidence.
+
+    Pool A (primary_slots): highest per-proposal term frequency — keeps the
+    categories the retrieval actually hit hardest (Accountability, Discrimination,
+    PrivacyBreach, …).
+
+    Pool B (remaining slots to top_n): highest IDF among categories not already
+    selected — surfaces rare-but-retrieved categories (Transparency,
+    FalseIdentification, …) that raw TF ranking crowds out.
+
+    Pure TF×IDF fails here because Phase-0 seeding put low-df labels on many
+    requirements, so high-recall proposals retrieve nearly the full taxonomy and
+    raw TF lets Accountability (tf≈90) dominate while binary IDF promotes every
+    ultra-rare seed label. Two-pool ranking is the standard IR coverage pattern
+    (relevance pool + novelty/rarity pool) and needs no category allowlist.
+
+    Returns list of (category, score) in final order. Score is TF for pool A
+    and IDF for pool B (for auditability).
+    """
+    if not per_proposal_counts:
+        return []
+
+    by_tf = sorted(
+        per_proposal_counts.items(),
+        key=lambda kv: (-kv[1], kv[0]),
+    )
+    by_idf = sorted(
+        per_proposal_counts.keys(),
+        key=lambda c: (-_idf_weight(c, total_docs), -per_proposal_counts[c], c),
+    )
+
+    selected: list[tuple[str, float]] = []
+    seen: set[str] = set()
+    slots_a = min(primary_slots, top_n)
+    for cat, tf in by_tf:
+        if len(selected) >= slots_a:
+            break
+        selected.append((cat, float(tf)))
+        seen.add(cat)
+    for cat in by_idf:
+        if len(selected) >= top_n:
+            break
+        if cat in seen:
+            continue
+        selected.append((cat, _idf_weight(cat, total_docs)))
+        seen.add(cat)
+    return selected
+
+
 def retrieve_risk_categories_for_proposal(reqs: list, incidents: list, top_n: int = 10) -> list:
     """
     Aggregate RiskCategory instances from retrieved requirements and incidents,
     with definitions. Scoped to this proposal's evidence (not the full taxonomy
     dump).
 
-    High-recall proposals (e.g. those matching many Charter articles) can pull
-    in most/all 27 RiskCategory subclasses simply because many requirements are
-    retrieved. To keep the "risk categories in scope" list actually scoped to
-    the proposal (rather than degenerating into the full taxonomy), categories
-    are ranked by frequency of occurrence across matched requirements +
-    incidents and only the top `top_n` are returned for use in the prompt.
+    Categories are ranked by a two-pool TF + IDF scheme over the global document
+    frequencies in ontology/risk_category_doc_frequency.json (see
+    rank_risk_categories). This replaces the previous ALWAYS_SURFACE_IF_PRESENT
+    allowlist with a generalizable statistical rule.
     """
     from collections import Counter
 
@@ -507,52 +734,20 @@ def retrieve_risk_categories_for_proposal(reqs: list, incidents: list, top_n: in
         for cat in inc.get("risk_categories", []) or []:
             counts[cat] += 1
 
-    # Stable order: highest frequency first, ties broken by first-seen order.
-    first_seen = {}
-    order = 0
-    for r in reqs:
-        for cat in r.get("risk_categories", []) or []:
-            if cat not in first_seen:
-                first_seen[cat] = order
-                order += 1
-    for inc in incidents:
-        for cat in inc.get("risk_categories", []) or []:
-            if cat not in first_seen:
-                first_seen[cat] = order
-                order += 1
+    if not counts:
+        return []
 
-    ranked = sorted(counts, key=lambda c: (-counts[c], first_seen[c]))
+    ranked = rank_risk_categories(dict(counts), top_n=top_n)
+    top = [cat for cat, _score in ranked]
 
-    # Frequency-based ranking structurally favors high-occurrence categories
-    # (e.g. Accountability, PrivacyBreach) over rare-but-important ones
-    # (e.g. Transparency), causing the latter to be crowded out of the top_n
-    # cutoff even when they were genuinely retrieved for this proposal. An
-    # expert reviewer specifically flagged this class of category as
-    # systematically under-surfaced. To fix this without just hardcoding
-    # these categories into every proposal, we guarantee inclusion only for
-    # categories that were ACTUALLY retrieved (count > 0, i.e. present in
-    # this proposal's matched requirements/incidents) and that belong to a
-    # small allowlist of categories known to be under-surfaced by raw
-    # frequency ranking. Remaining slots are still filled by frequency.
-    ALWAYS_SURFACE_IF_PRESENT = {
-        "Transparency",
-        "EnvironmentalHarm",
-        "Sustainability",
-        "ChildrenRights",
-    }
-
-    guaranteed = [c for c in ranked if c in ALWAYS_SURFACE_IF_PRESENT]
-    remainder = [c for c in ranked if c not in ALWAYS_SURFACE_IF_PRESENT]
-
-    top = list(guaranteed)
-    for c in remainder:
-        if len(top) >= top_n:
-            break
-        top.append(c)
-    # Preserve overall rank order (frequency, then first-seen) in final output
-    top = [c for c in ranked if c in set(top)]
-
-    return retrieve_risk_category_definitions(top)
+    defs = retrieve_risk_category_definitions(top)
+    score_by_id = {cat: score for cat, score in ranked}
+    for d in defs:
+        d["idf_score"] = round(_idf_weight(d["id"]), 4)
+        d["rank_score"] = round(score_by_id.get(d["id"], 0.0), 4)
+        d["tf"] = int(counts.get(d["id"], 0))
+        d["df"] = int(_DOC_FREQ.get(d["id"], 0))
+    return defs
 
 
 def requirement_ids_for_risk_category(category: str, candidate_ids: list) -> list:

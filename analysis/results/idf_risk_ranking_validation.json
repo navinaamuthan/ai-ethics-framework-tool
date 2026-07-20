@@ -1,0 +1,661 @@
+{
+  "transparency_count": 18,
+  "transparency_proposals": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10",
+    "P11",
+    "P12",
+    "P13",
+    "P14",
+    "P16",
+    "P17",
+    "P18",
+    "P19"
+  ],
+  "p15_excludes": true,
+  "p20_excludes": true,
+  "rare_unnamed_surfaced": [
+    "AddictionRisk",
+    "FalseIdentification",
+    "FunctionCreep",
+    "Surveillance"
+  ],
+  "per_proposal": [
+    {
+      "id": "P01",
+      "top": [
+        "Accountability",
+        "PrivacyBreach",
+        "Discrimination",
+        "PsychologicalHarm",
+        "DataGovernance",
+        "Deception",
+        "ReputationalHarm",
+        "FinancialHarm",
+        "FalseIdentification",
+        "Transparency"
+      ],
+      "transparency": true,
+      "rare": [
+        "FalseIdentification"
+      ],
+      "scores": {
+        "Accountability": 2.5896,
+        "PrivacyBreach": 2.8579,
+        "Discrimination": 3.3228,
+        "PsychologicalHarm": 3.9188,
+        "DataGovernance": 4.442,
+        "Deception": 4.442,
+        "ReputationalHarm": 5.8283,
+        "FinancialHarm": 5.8283,
+        "FalseIdentification": 5.4228,
+        "Transparency": 5.4228
+      }
+    },
+    {
+      "id": "P02",
+      "top": [
+        "Accountability",
+        "PrivacyBreach",
+        "Discrimination",
+        "PsychologicalHarm",
+        "DataGovernance",
+        "Surveillance",
+        "ReputationalHarm",
+        "FinancialHarm",
+        "FalseIdentification",
+        "Transparency"
+      ],
+      "transparency": true,
+      "rare": [
+        "Surveillance",
+        "FalseIdentification"
+      ],
+      "scores": {
+        "Accountability": 2.5896,
+        "PrivacyBreach": 2.8579,
+        "Discrimination": 3.3228,
+        "PsychologicalHarm": 3.9188,
+        "DataGovernance": 4.442,
+        "Surveillance": 4.2189,
+        "ReputationalHarm": 5.8283,
+        "FinancialHarm": 5.8283,
+        "FalseIdentification": 5.4228,
+        "Transparency": 5.4228
+      }
+    },
+    {
+      "id": "P03",
+      "top": [
+        "Accountability",
+        "PrivacyBreach",
+        "PsychologicalHarm",
+        "Discrimination",
+        "DataGovernance",
+        "Deception",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "Transparency",
+        "FalseIdentification"
+      ],
+      "transparency": true,
+      "rare": [
+        "FalseIdentification"
+      ],
+      "scores": {
+        "Accountability": 2.5896,
+        "PrivacyBreach": 2.8579,
+        "PsychologicalHarm": 3.9188,
+        "Discrimination": 3.3228,
+        "DataGovernance": 4.442,
+        "Deception": 4.442,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "Transparency": 5.4228,
+        "FalseIdentification": 5.4228
+      }
+    },
+    {
+      "id": "P04",
+      "top": [
+        "Accountability",
+        "PrivacyBreach",
+        "Discrimination",
+        "PsychologicalHarm",
+        "EmploymentHarm",
+        "DataGovernance",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "Transparency",
+        "FalseIdentification"
+      ],
+      "transparency": true,
+      "rare": [
+        "FalseIdentification"
+      ],
+      "scores": {
+        "Accountability": 2.5896,
+        "PrivacyBreach": 2.8579,
+        "Discrimination": 3.3228,
+        "PsychologicalHarm": 3.9188,
+        "EmploymentHarm": 4.1701,
+        "DataGovernance": 4.442,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "Transparency": 5.4228,
+        "FalseIdentification": 5.4228
+      }
+    },
+    {
+      "id": "P05",
+      "top": [
+        "Accountability",
+        "PrivacyBreach",
+        "PsychologicalHarm",
+        "Discrimination",
+        "DataGovernance",
+        "EmploymentHarm",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "Transparency",
+        "FalseIdentification"
+      ],
+      "transparency": true,
+      "rare": [
+        "FalseIdentification"
+      ],
+      "scores": {
+        "Accountability": 2.5896,
+        "PrivacyBreach": 2.8579,
+        "PsychologicalHarm": 3.9188,
+        "Discrimination": 3.3228,
+        "DataGovernance": 4.442,
+        "EmploymentHarm": 4.1701,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "Transparency": 5.4228,
+        "FalseIdentification": 5.4228
+      }
+    },
+    {
+      "id": "P06",
+      "top": [
+        "Accountability",
+        "PrivacyBreach",
+        "PsychologicalHarm",
+        "Discrimination",
+        "DataGovernance",
+        "Deception",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "Transparency",
+        "FalseIdentification"
+      ],
+      "transparency": true,
+      "rare": [
+        "FalseIdentification"
+      ],
+      "scores": {
+        "Accountability": 2.5896,
+        "PrivacyBreach": 2.8579,
+        "PsychologicalHarm": 3.9188,
+        "Discrimination": 3.3228,
+        "DataGovernance": 4.442,
+        "Deception": 4.442,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "Transparency": 5.4228,
+        "FalseIdentification": 5.4228
+      }
+    },
+    {
+      "id": "P07",
+      "top": [
+        "Accountability",
+        "PrivacyBreach",
+        "PsychologicalHarm",
+        "Discrimination",
+        "DataGovernance",
+        "Deception",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "Transparency",
+        "FalseIdentification"
+      ],
+      "transparency": true,
+      "rare": [
+        "FalseIdentification"
+      ],
+      "scores": {
+        "Accountability": 2.5896,
+        "PrivacyBreach": 2.8579,
+        "PsychologicalHarm": 3.9188,
+        "Discrimination": 3.3228,
+        "DataGovernance": 4.442,
+        "Deception": 4.442,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "Transparency": 5.4228,
+        "FalseIdentification": 5.4228
+      }
+    },
+    {
+      "id": "P08",
+      "top": [
+        "Accountability",
+        "PrivacyBreach",
+        "PsychologicalHarm",
+        "Discrimination",
+        "Deception",
+        "DataGovernance",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "Transparency",
+        "FalseIdentification"
+      ],
+      "transparency": true,
+      "rare": [
+        "FalseIdentification"
+      ],
+      "scores": {
+        "Accountability": 2.5896,
+        "PrivacyBreach": 2.8579,
+        "PsychologicalHarm": 3.9188,
+        "Discrimination": 3.3228,
+        "Deception": 4.442,
+        "DataGovernance": 4.442,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "Transparency": 5.4228,
+        "FalseIdentification": 5.4228
+      }
+    },
+    {
+      "id": "P09",
+      "top": [
+        "PrivacyBreach",
+        "Accountability",
+        "PsychologicalHarm",
+        "Discrimination",
+        "DataGovernance",
+        "Dignity",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "FalseIdentification",
+        "Transparency"
+      ],
+      "transparency": true,
+      "rare": [
+        "FalseIdentification"
+      ],
+      "scores": {
+        "PrivacyBreach": 2.8579,
+        "Accountability": 2.5896,
+        "PsychologicalHarm": 3.9188,
+        "Discrimination": 3.3228,
+        "DataGovernance": 4.442,
+        "Dignity": 4.3814,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "FalseIdentification": 5.4228,
+        "Transparency": 5.4228
+      }
+    },
+    {
+      "id": "P10",
+      "top": [
+        "Accountability",
+        "PrivacyBreach",
+        "Discrimination",
+        "PsychologicalHarm",
+        "DataGovernance",
+        "Deception",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "Transparency",
+        "FalseIdentification"
+      ],
+      "transparency": true,
+      "rare": [
+        "FalseIdentification"
+      ],
+      "scores": {
+        "Accountability": 2.5896,
+        "PrivacyBreach": 2.8579,
+        "Discrimination": 3.3228,
+        "PsychologicalHarm": 3.9188,
+        "DataGovernance": 4.442,
+        "Deception": 4.442,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "Transparency": 5.4228,
+        "FalseIdentification": 5.4228
+      }
+    },
+    {
+      "id": "P11",
+      "top": [
+        "Accountability",
+        "PrivacyBreach",
+        "PsychologicalHarm",
+        "Discrimination",
+        "DataGovernance",
+        "Deception",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "Transparency",
+        "FalseIdentification"
+      ],
+      "transparency": true,
+      "rare": [
+        "FalseIdentification"
+      ],
+      "scores": {
+        "Accountability": 2.5896,
+        "PrivacyBreach": 2.8579,
+        "PsychologicalHarm": 3.9188,
+        "Discrimination": 3.3228,
+        "DataGovernance": 4.442,
+        "Deception": 4.442,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "Transparency": 5.4228,
+        "FalseIdentification": 5.4228
+      }
+    },
+    {
+      "id": "P12",
+      "top": [
+        "PrivacyBreach",
+        "Accountability",
+        "PsychologicalHarm",
+        "Discrimination",
+        "DataGovernance",
+        "Dignity",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "FalseIdentification",
+        "Transparency"
+      ],
+      "transparency": true,
+      "rare": [
+        "FalseIdentification"
+      ],
+      "scores": {
+        "PrivacyBreach": 2.8579,
+        "Accountability": 2.5896,
+        "PsychologicalHarm": 3.9188,
+        "Discrimination": 3.3228,
+        "DataGovernance": 4.442,
+        "Dignity": 4.3814,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "FalseIdentification": 5.4228,
+        "Transparency": 5.4228
+      }
+    },
+    {
+      "id": "P13",
+      "top": [
+        "PrivacyBreach",
+        "Accountability",
+        "Discrimination",
+        "DataGovernance",
+        "PsychologicalHarm",
+        "Surveillance",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "FalseIdentification",
+        "Transparency"
+      ],
+      "transparency": true,
+      "rare": [
+        "Surveillance",
+        "FalseIdentification"
+      ],
+      "scores": {
+        "PrivacyBreach": 2.8579,
+        "Accountability": 2.5896,
+        "Discrimination": 3.3228,
+        "DataGovernance": 4.442,
+        "PsychologicalHarm": 3.9188,
+        "Surveillance": 4.2189,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "FalseIdentification": 5.4228,
+        "Transparency": 5.4228
+      }
+    },
+    {
+      "id": "P14",
+      "top": [
+        "Accountability",
+        "PrivacyBreach",
+        "Discrimination",
+        "PsychologicalHarm",
+        "DataGovernance",
+        "EmploymentHarm",
+        "ReputationalHarm",
+        "FinancialHarm",
+        "FalseIdentification",
+        "Transparency"
+      ],
+      "transparency": true,
+      "rare": [
+        "FalseIdentification"
+      ],
+      "scores": {
+        "Accountability": 2.5896,
+        "PrivacyBreach": 2.8579,
+        "Discrimination": 3.3228,
+        "PsychologicalHarm": 3.9188,
+        "DataGovernance": 4.442,
+        "EmploymentHarm": 4.1701,
+        "ReputationalHarm": 5.8283,
+        "FinancialHarm": 5.8283,
+        "FalseIdentification": 5.4228,
+        "Transparency": 5.4228
+      }
+    },
+    {
+      "id": "P15",
+      "top": [
+        "PrivacyBreach",
+        "Accountability",
+        "DataGovernance",
+        "Discrimination",
+        "PsychologicalHarm",
+        "Surveillance",
+        "ReputationalHarm",
+        "FinancialHarm",
+        "FalseIdentification",
+        "FunctionCreep"
+      ],
+      "transparency": false,
+      "rare": [
+        "Surveillance",
+        "FalseIdentification",
+        "FunctionCreep"
+      ],
+      "scores": {
+        "PrivacyBreach": 2.8579,
+        "Accountability": 2.5896,
+        "DataGovernance": 4.442,
+        "Discrimination": 3.3228,
+        "PsychologicalHarm": 3.9188,
+        "Surveillance": 4.2189,
+        "ReputationalHarm": 5.8283,
+        "FinancialHarm": 5.8283,
+        "FalseIdentification": 5.4228,
+        "FunctionCreep": 5.2687
+      }
+    },
+    {
+      "id": "P16",
+      "top": [
+        "PrivacyBreach",
+        "Accountability",
+        "Discrimination",
+        "PsychologicalHarm",
+        "DataGovernance",
+        "Surveillance",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "FalseIdentification",
+        "Transparency"
+      ],
+      "transparency": true,
+      "rare": [
+        "Surveillance",
+        "FalseIdentification"
+      ],
+      "scores": {
+        "PrivacyBreach": 2.8579,
+        "Accountability": 2.5896,
+        "Discrimination": 3.3228,
+        "PsychologicalHarm": 3.9188,
+        "DataGovernance": 4.442,
+        "Surveillance": 4.2189,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "FalseIdentification": 5.4228,
+        "Transparency": 5.4228
+      }
+    },
+    {
+      "id": "P17",
+      "top": [
+        "PrivacyBreach",
+        "Accountability",
+        "PsychologicalHarm",
+        "Discrimination",
+        "DataGovernance",
+        "Dignity",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "FalseIdentification",
+        "Transparency"
+      ],
+      "transparency": true,
+      "rare": [
+        "FalseIdentification"
+      ],
+      "scores": {
+        "PrivacyBreach": 2.8579,
+        "Accountability": 2.5896,
+        "PsychologicalHarm": 3.9188,
+        "Discrimination": 3.3228,
+        "DataGovernance": 4.442,
+        "Dignity": 4.3814,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "FalseIdentification": 5.4228,
+        "Transparency": 5.4228
+      }
+    },
+    {
+      "id": "P18",
+      "top": [
+        "Accountability",
+        "PrivacyBreach",
+        "PsychologicalHarm",
+        "Discrimination",
+        "Deception",
+        "DataGovernance",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "Transparency",
+        "FalseIdentification"
+      ],
+      "transparency": true,
+      "rare": [
+        "FalseIdentification"
+      ],
+      "scores": {
+        "Accountability": 2.5896,
+        "PrivacyBreach": 2.8579,
+        "PsychologicalHarm": 3.9188,
+        "Discrimination": 3.3228,
+        "Deception": 4.442,
+        "DataGovernance": 4.442,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "Transparency": 5.4228,
+        "FalseIdentification": 5.4228
+      }
+    },
+    {
+      "id": "P19",
+      "top": [
+        "PrivacyBreach",
+        "Accountability",
+        "PsychologicalHarm",
+        "Dignity",
+        "Discrimination",
+        "Surveillance",
+        "FinancialHarm",
+        "ReputationalHarm",
+        "FalseIdentification",
+        "Transparency"
+      ],
+      "transparency": true,
+      "rare": [
+        "Surveillance",
+        "FalseIdentification"
+      ],
+      "scores": {
+        "PrivacyBreach": 2.8579,
+        "Accountability": 2.5896,
+        "PsychologicalHarm": 3.9188,
+        "Dignity": 4.3814,
+        "Discrimination": 3.3228,
+        "Surveillance": 4.2189,
+        "FinancialHarm": 5.8283,
+        "ReputationalHarm": 5.8283,
+        "FalseIdentification": 5.4228,
+        "Transparency": 5.4228
+      }
+    },
+    {
+      "id": "P20",
+      "top": [
+        "PrivacyBreach",
+        "Accountability",
+        "Discrimination",
+        "EmploymentHarm",
+        "PsychologicalHarm",
+        "DataGovernance",
+        "ReputationalHarm",
+        "FinancialHarm",
+        "FalseIdentification",
+        "AddictionRisk"
+      ],
+      "transparency": false,
+      "rare": [
+        "FalseIdentification",
+        "AddictionRisk"
+      ],
+      "scores": {
+        "PrivacyBreach": 2.8579,
+        "Accountability": 2.5896,
+        "Discrimination": 3.3228,
+        "EmploymentHarm": 4.1701,
+        "PsychologicalHarm": 3.9188,
+        "DataGovernance": 4.442,
+        "ReputationalHarm": 5.8283,
+        "FinancialHarm": 5.8283,
+        "FalseIdentification": 5.4228,
+        "AddictionRisk": 5.2687
+      }
+    }
+  ],
+  "pass": true
+}
