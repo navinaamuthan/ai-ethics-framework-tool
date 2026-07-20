@@ -33,8 +33,9 @@ The proposed health risk stratification algorithm poses significant risks to pat
 - Privacy concerns (Medium): The use of insurance claims data and electronic health records raises concerns about patient privacy and data protection.
 ### ReputationalHarm
 - Reputational harm (Low): The algorithm's potential to discriminate against certain groups may damage the reputation of the healthcare providers using the algorithm.
+  (no retrieved requirement traces :hasRisk :ReputationalHarm -- untraced)
 
-*Source: Accountability, Discrimination, Discrimination, PhysicalHarm, PrivacyBreach, ReputationalHarm*
+*Source: ACM014, ACM003, ACM004, ACM023, ACM023, ACM027, ACM006, ACM016, ACM023, ACM027*
 
 ## Severity Assessment
 - Bias in cost proxy (High)

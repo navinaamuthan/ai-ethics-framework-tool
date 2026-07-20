@@ -1084,16 +1084,21 @@
         "Art48_PresumptionOfInnocence",
         "Art6_RightToLiberty"
       ],
-      "rights_injected": [],
-      "rights_injected_requested": [],
+      "rights_injected": [
+        "Art8_DataProtection"
+      ],
+      "rights_injected_requested": [
+        "Art8_DataProtection"
+      ],
       "matched_rights": [
         "Art21_NonDiscrimination",
         "Art47_RightToEffectiveRemedy",
         "Art48_PresumptionOfInnocence",
-        "Art6_RightToLiberty"
+        "Art6_RightToLiberty",
+        "Art8_DataProtection"
       ],
       "n_keywords": 5,
-      "n_rights": 4,
+      "n_rights": 5,
       "right_scores": {
         "Art21_NonDiscrimination": {
           "score": 7.846,
@@ -1345,17 +1350,23 @@
         "race": 1
       },
       "rights_from_keywords": [
+        "Art11_FreedomOfExpression",
         "Art21_NonDiscrimination",
-        "Art47_RightToEffectiveRemedy"
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
       ],
       "rights_injected": [],
       "rights_injected_requested": [],
       "matched_rights": [
+        "Art11_FreedomOfExpression",
         "Art21_NonDiscrimination",
-        "Art47_RightToEffectiveRemedy"
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
       ],
       "n_keywords": 8,
-      "n_rights": 2,
+      "n_rights": 5,
       "right_scores": {
         "Art21_NonDiscrimination": {
           "score": 9.684,
@@ -1766,6 +1777,7 @@
       },
       "rights_from_keywords": [
         "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
         "Art21_NonDiscrimination",
         "Art24_RightsOfChild",
         "Art3_RightToIntegrity",
@@ -1776,6 +1788,7 @@
       "rights_injected_requested": [],
       "matched_rights": [
         "Art11_FreedomOfExpression",
+        "Art1_HumanDignity",
         "Art21_NonDiscrimination",
         "Art24_RightsOfChild",
         "Art3_RightToIntegrity",
@@ -1783,7 +1796,7 @@
         "Art8_DataProtection"
       ],
       "n_keywords": 7,
-      "n_rights": 6,
+      "n_rights": 7,
       "right_scores": {
         "Art21_NonDiscrimination": {
           "score": 3.613,
@@ -2095,26 +2108,27 @@
         "scor": 1
       },
       "rights_from_keywords": [
-        "Art21_NonDiscrimination",
-        "Art2_RightToLife",
-        "Art35_HealthCare",
-        "Art47_RightToEffectiveRemedy"
-      ],
-      "rights_injected": [
-        "Art8_DataProtection"
-      ],
-      "rights_injected_requested": [
-        "Art8_DataProtection"
-      ],
-      "matched_rights": [
+        "Art11_FreedomOfExpression",
         "Art21_NonDiscrimination",
         "Art2_RightToLife",
         "Art35_HealthCare",
         "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
+      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
+      "matched_rights": [
+        "Art11_FreedomOfExpression",
+        "Art21_NonDiscrimination",
+        "Art2_RightToLife",
+        "Art35_HealthCare",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
         "Art8_DataProtection"
       ],
       "n_keywords": 5,
-      "n_rights": 5,
+      "n_rights": 7,
       "right_scores": {
         "Art21_NonDiscrimination": {
           "score": 3.55,
@@ -2424,20 +2438,20 @@
         "personal data": 1,
         "fairness": 1
       },
-      "rights_from_keywords": [],
-      "rights_injected": [
+      "rights_from_keywords": [
+        "Art7_PrivateLife",
         "Art8_DataProtection"
       ],
-      "rights_injected_requested": [
-        "Art8_DataProtection"
-      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
       "matched_rights": [
         "Art11_FreedomOfExpression",
         "Art22_CulturalDiversity",
+        "Art7_PrivateLife",
         "Art8_DataProtection"
       ],
       "n_keywords": 2,
-      "n_rights": 3,
+      "n_rights": 4,
       "right_scores": {
         "Art21_NonDiscrimination": {
           "score": 1.787,
@@ -2492,21 +2506,20 @@
       },
       "rights_from_keywords": [
         "Art21_NonDiscrimination",
-        "Art47_RightToEffectiveRemedy"
-      ],
-      "rights_injected": [
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
         "Art8_DataProtection"
       ],
-      "rights_injected_requested": [
-        "Art8_DataProtection"
-      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
       "matched_rights": [
         "Art21_NonDiscrimination",
         "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
         "Art8_DataProtection"
       ],
       "n_keywords": 3,
-      "n_rights": 3,
+      "n_rights": 4,
       "right_scores": {
         "Art21_NonDiscrimination": {
           "score": 4.479,
@@ -2557,12 +2570,16 @@
       "keyword_counts": {
         "environment": 1
       },
-      "rights_from_keywords": [],
+      "rights_from_keywords": [
+        "Art37_EnvironmentalProtection"
+      ],
       "rights_injected": [],
       "rights_injected_requested": [],
-      "matched_rights": [],
+      "matched_rights": [
+        "Art37_EnvironmentalProtection"
+      ],
       "n_keywords": 1,
-      "n_rights": 0,
+      "n_rights": 1,
       "right_scores": {
         "Art37_EnvironmentalProtection": {
           "score": 1.826,
@@ -2592,21 +2609,22 @@
       },
       "rights_from_keywords": [
         "Art21_NonDiscrimination",
-        "Art47_RightToEffectiveRemedy"
-      ],
-      "rights_injected": [
+        "Art37_EnvironmentalProtection",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
         "Art8_DataProtection"
       ],
-      "rights_injected_requested": [
-        "Art8_DataProtection"
-      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
       "matched_rights": [
         "Art21_NonDiscrimination",
+        "Art37_EnvironmentalProtection",
         "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
         "Art8_DataProtection"
       ],
       "n_keywords": 4,
-      "n_rights": 3,
+      "n_rights": 5,
       "right_scores": {
         "Art21_NonDiscrimination": {
           "score": 3.724,
@@ -2685,19 +2703,27 @@
       "rights_from_keywords": [
         "Art11_FreedomOfExpression",
         "Art12_FreedomOfAssembly",
+        "Art1_HumanDignity",
         "Art21_NonDiscrimination",
-        "Art47_RightToEffectiveRemedy"
+        "Art2_RightToLife",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
       ],
       "rights_injected": [],
       "rights_injected_requested": [],
       "matched_rights": [
         "Art11_FreedomOfExpression",
         "Art12_FreedomOfAssembly",
+        "Art1_HumanDignity",
         "Art21_NonDiscrimination",
-        "Art47_RightToEffectiveRemedy"
+        "Art2_RightToLife",
+        "Art47_RightToEffectiveRemedy",
+        "Art7_PrivateLife",
+        "Art8_DataProtection"
       ],
       "n_keywords": 9,
-      "n_rights": 4,
+      "n_rights": 8,
       "right_scores": {
         "Art21_NonDiscrimination": {
           "score": 8.58,
@@ -2823,21 +2849,20 @@
       },
       "rights_from_keywords": [
         "Art1_HumanDignity",
-        "Art2_RightToLife"
-      ],
-      "rights_injected": [
+        "Art2_RightToLife",
+        "Art7_PrivateLife",
         "Art8_DataProtection"
       ],
-      "rights_injected_requested": [
-        "Art8_DataProtection"
-      ],
+      "rights_injected": [],
+      "rights_injected_requested": [],
       "matched_rights": [
         "Art1_HumanDignity",
         "Art2_RightToLife",
+        "Art7_PrivateLife",
         "Art8_DataProtection"
       ],
       "n_keywords": 3,
-      "n_rights": 3,
+      "n_rights": 4,
       "right_scores": {
         "Art7_PrivateLife": {
           "score": 1.694,
@@ -3102,9 +3127,9 @@
   ],
   "summary": {
     "before_mean_rights": 7.75,
-    "after_mean_rights": 4.55,
+    "after_mean_rights": 5.4,
     "before_art8": 20,
-    "after_art8": 16,
+    "after_art8": 19,
     "before_art41": 12,
     "after_art41": 0
   }

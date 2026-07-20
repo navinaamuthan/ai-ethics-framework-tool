@@ -35,8 +35,9 @@ The proposed deployment of the COMPAS risk assessment tool poses significant eth
 - Privacy breaches of defendant data (Medium): The use of proprietary algorithms and lack of transparency in the COMPAS tool may compromise the privacy of defendant data
 ### ReputationalHarm
 - Reputational harm to defendants (Medium): The use of the COMPAS tool may lead to reputational harm for defendants who are incorrectly classified as high risk or who are detained or released based on biased decisions
+  (no retrieved requirement traces :hasRisk :ReputationalHarm -- untraced)
 
-*Source: Accountability, Discrimination, LibertyViolation, PhysicalHarm, PrivacyBreach, ReputationalHarm*
+*Source: ACM015, ACM003, ACM023, ACM027, ACM023, ACM027, ACM006, ACM023, ACM027*
 
 ## Severity Assessment
 - Discrimination against Black defendants (High)

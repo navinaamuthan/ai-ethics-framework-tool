@@ -25,12 +25,13 @@ The research proposal involves sentiment analysis and linguistic style detection
 - Insufficient consideration of contextual factors (Medium): The analysis may not account for contextual factors that could affect the results, such as the student's socioeconomic background or access to resources.
 ### Manipulation
 - Lack of transparency in the NLP pipeline (Medium): The use of complex machine learning models may make it difficult to understand how the analysis is being performed, which could lead to manipulation or bias.
+  (no retrieved requirement traces :hasRisk :Manipulation -- untraced)
 ### PrivacyBreach
 - Privacy breach due to pseudonymisation (Low): Although the data is pseudonymised, there is still a risk of re-identification, particularly if the dataset is combined with other data sources.
 ### PsychologicalHarm
 - Potential harm to students from vulnerable groups (Medium): The analysis of essays may reveal sensitive information about students' personal lives, which could cause harm or distress if not handled properly.
 
-*Source: Discrimination, Discrimination, Manipulation, PrivacyBreach, PsychologicalHarm*
+*Source: ACM003, ACM023, ACM006, ACM016, ACM023, ACM024, ACM022, ACM024*
 
 ## Severity Assessment
 - Bias in sentiment analysis and linguistic style detection (Medium)

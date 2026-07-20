@@ -30,7 +30,7 @@ The proposed deployment of a machine learning sepsis prediction algorithm across
 ### PrivacyBreach
 - Privacy breaches (Medium): The algorithm processes sensitive patient data, including physiological parameters and laboratory values, which may be vulnerable to unauthorised access or disclosure.
 
-*Source: Discrimination, Discrimination, Discrimination, PhysicalHarm, PrivacyBreach*
+*Source: ACM003, ACM004, ACM023, ACM023, ACM027, ACM006, ACM023, ACM027*
 
 ## Severity Assessment
 - Discrimination against minority ethnic patient populations (High)

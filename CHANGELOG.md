@@ -11,6 +11,26 @@ This is the record referenced from the dissertation's Design Science Research fr
 (`dissertation-latex/project/project.tex`, §Research Methodology) as the artifact's iterative
 build-evaluate cycle.
 
+## [2.1.2] — 2026-07-20
+
+### Changed
+- **Charter-rights matching: binary presence → density-weighted scoring.** Replaced
+  substring presence matching in `extract_keywords()` / `get_matched_rights()` with
+  occurrence counts, per-right density scores (`n_types + 100 × occ/words`), a
+  salience threshold (incidental single mentions dropped unless the keyword is
+  topic-defining), and a top-K=8 cap before requirement retrieval. Removed bare
+  `"data"` (too broad) and unconditional Art41 injection (Art41 now only via
+  admin-process keywords: admissions/disciplinary/REAMS/welfare/public sector/
+  transparency/accountability/explain). Art8 injects only on personal/identifiable
+  data signals. Same root cause as the risk-category TF bug: unweighted presence
+  treats a footnote mention as equal to the central topic, flooding downstream
+  retrieval. Before→after on 20 proposals: mean rights **7.8→5.3**; Art8 **20→18**/20
+  (now conditional); Art41 **12→0**/20; P01 **10→6** rights / **~196→112** requirements.
+  IDF risk-category validation still holds at **17/20** Transparency (P15/P20/P19
+  correctly exclude; P19 is a newly honest drop — HE021 maps via Art1/Art11, which
+  are no longer weakly matched). Phase-3 checks (P13≠Art21, P20=Art31, Art12 on
+  protest text) still pass.
+
 ## [2.1.1] — 2026-07-20
 
 ### Changed

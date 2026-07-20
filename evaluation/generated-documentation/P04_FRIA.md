@@ -24,18 +24,22 @@ The proposed machine learning-based ad delivery optimisation system poses signif
 ## Risk Category Breakdown
 ### Accountability
 - Lack of transparency and accountability (High): The system's lack of transparency and accountability in its decision-making process raises concerns about the potential for unfair treatment and harm to individuals and groups.
+  (no retrieved requirement traces :hasRisk :Accountability -- untraced)
 ### Discrimination
 - Discrimination against certain groups (High): The system's financial optimisation function may learn to target certain groups based on their demographic characteristics, leading to unfair treatment and potential harm.
 ### Manipulation
 - Manipulation of user behavior (Medium): The system's ability to influence user behavior through targeted advertising may be used to manipulate users into making certain decisions or taking certain actions.
+  (no retrieved requirement traces :hasRisk :Manipulation -- untraced)
 ### PrivacyBreach
 - Privacy breaches (Medium): The system's use of thousands of user behavioral, demographic, and interest signals may compromise user privacy if not properly protected.
 ### ReputationalHarm
 - Reputational harm (Medium): The system's potential to facilitate deceptive interactions and influence user behavior may damage the reputation of the social media platform and its users.
+  (no retrieved requirement traces :hasRisk :ReputationalHarm -- untraced)
 ### Well-being
 - Environmental impact (Low): The system's energy consumption and environmental impact may be significant, particularly if it is deployed on a large scale.
+  (no retrieved requirement traces :hasRisk :Well-being -- untraced)
 
-*Source: Accountability, Discrimination, Manipulation, PrivacyBreach, ReputationalHarm, Well-being*
+*Source: ACM003, ACM023, ACM028, ACM006, ACM016, ACM023, ACM027*
 
 ## Severity Assessment
 - Discrimination against certain groups (High)

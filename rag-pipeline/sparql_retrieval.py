@@ -179,6 +179,14 @@ _RIGHTS_MIN_OCCURRENCES = 2       # or ≥2 occurrences of triggering keywords
 _RIGHTS_MIN_SCORE = 1.15          # density-adjusted score floor
 _SHORT_STEM_MAX_LEN = 5           # stems shorter than this use word-boundary match
 
+# Single-occurrence OK for these — they are topic-defining, not incidental
+_HIGH_SPECIFICITY_KEYWORDS = {
+    "environment", "carbon", "biometric", "facial recogn", "personal data",
+    "deepfake", "dual-use", "self-driving", "content moder", "protest",
+    "assembly", "workplace", "employee", "child", "chatbot", "emotion",
+    "criminal", "law enforce", "cross-border", "social media", "dpiA",
+}
+
 # Bias/discrimination keywords that may incorrectly default to Art21
 _BIAS_KEYWORDS = {"bias", "discriminat", "fairness"}
 
@@ -363,14 +371,16 @@ def score_rights_for_proposal(proposal: str, hits: dict) -> dict:
 
 
 def _right_passes_threshold(info: dict) -> bool:
-    """Salience gate: enough distinct types, or enough occurrences, and min score."""
+    """Salience gate: enough distinct types, occurrences, or a high-spec keyword."""
     if info["score"] < _RIGHTS_MIN_SCORE:
         return False
     if info["n_types"] >= 2:
         return True
     if info["n_types"] >= _RIGHTS_MIN_TYPES and info["n_occ"] >= _RIGHTS_MIN_OCCURRENCES:
         return True
-    # Single keyword type with a single occurrence: reject (incidental mention)
+    # Topic-defining keyword alone is enough (environment, biometric, …)
+    if any(kw in _HIGH_SPECIFICITY_KEYWORDS for kw in info.get("keywords", [])):
+        return True
     return False
 
 
@@ -470,7 +480,8 @@ def get_matched_rights(keywords: list, proposal: str = "") -> list:
             elif sum(art8_hits.values()) >= 1 and any(
                 k in art8_hits for k in (
                     "personal data", "biometric", "privacy", "patient",
-                    "facial recogn", "health", "medical",
+                    "facial recogn", "health", "medical", "profil",
+                    "surveil", "consent",
                 )
             ):
                 # Strong personal-data terms: allow single occurrence

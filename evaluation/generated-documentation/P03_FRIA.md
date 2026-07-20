@@ -28,6 +28,7 @@ The proposed deployment of Amazon Rekognition for law enforcement agencies poses
 - Lack of transparency and accountability (High): The lack of independent demographic bias audit and oversight mechanism exacerbates the risks of discrimination and privacy breaches.
 ### Manipulation
 - Surveillance and manipulation (Medium): The use of facial recognition technology raises concerns about surveillance and manipulation, particularly in the context of law enforcement agencies.
+  (no retrieved requirement traces :hasRisk :Manipulation -- untraced)
 ### PhysicalHarm
 - Physical harm (High): The potential for false matches and misidentification could lead to wrongful arrests, detention, or other physical harm to individuals.
 ### PrivacyBreach
@@ -35,8 +36,9 @@ The proposed deployment of Amazon Rekognition for law enforcement agencies poses
 - Environmental and well-being concerns (Low): The use of cloud-based facial recognition technology raises concerns about environmental impact and well-being, particularly in terms of energy consumption and e-waste generation.
 ### ReputationalHarm
 - Reputational harm (Medium): The potential for false matches and misidentification could lead to reputational harm to individuals and communities.
+  (no retrieved requirement traces :hasRisk :ReputationalHarm -- untraced)
 
-*Source: Discrimination, Discrimination, Manipulation, PhysicalHarm, PrivacyBreach, PrivacyBreach, ReputationalHarm*
+*Source: ACM003, ACM023, ACM023, ACM006, ACM016, ACM023, ACM024*
 
 ## Severity Assessment
 - False matches and misidentification (High)
