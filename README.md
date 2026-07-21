@@ -1,6 +1,7 @@
 # AIEF: AI Ethics Assessment Framework
 
-Ontology-driven knowledge graph and retrieval-augmented pipeline for multi-framework ethics assessment of AI research proposals.
+A system of Ontology-driven knowledge graph and retrieval-augmented pipeline for multi-framework ethics assessment of AI research proposals. This system is part of the Research Dissertation thesis submitted to Trinity College Dublin titled **"Reference-Label Reliability as a Precondition for Evaluating Automated AI Ethics Assessors"**
+as part of the fulfillment of the author's Master's Degree in Computer Science.
 
 **Author:** Navina Ganapathy Amuthan  
 **Supervisor:** Dave Lewis
