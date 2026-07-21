@@ -1,4 +1,4 @@
-# AIEF — AI Ethics Assessment Framework
+# AIEF: AI Ethics Assessment Framework
 
 Ontology-driven knowledge graph and retrieval-augmented pipeline for multi-framework ethics assessment of AI research proposals.
 
