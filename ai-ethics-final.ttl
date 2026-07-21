@@ -149,6 +149,7 @@
 :IntellectualProperty rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
 :FalseIdentification rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
 :DataGovernance rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
+:Transparency rdf:type owl:Class ; rdfs:subClassOf :RiskCategory .
 
 # ===== DATA CATEGORY SUBCLASSES =====
 
@@ -2732,7 +2733,7 @@
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 11 Freedom of expression" ;
     :noteText "Especially chatbots" ;
-    :hasRisk :Accountability , :Deception , :DemocraticProcessHarm , :ExpressionHarm .
+    :hasRisk :Accountability , :Deception , :DemocraticProcessHarm , :ExpressionHarm , :Transparency .
 
 :HE022 rdf:type :Obligation ;
     :requirementID "HE022" ;
@@ -2745,7 +2746,7 @@
     :requiresEvidence "User documentation" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 11 Freedom of expression" ;
-    :hasRisk :Accountability , :Deception .
+    :hasRisk :Accountability , :Deception , :Transparency .
 
 :HE023 rdf:type :Obligation ;
     :requirementID "HE023" ;
@@ -2757,7 +2758,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Traceability documentation" ;
     :legalBasis "EU Charter" ;
-    :hasRisk :Accountability , :Deception , :IntellectualProperty .
+    :hasRisk :Accountability , :Deception , :IntellectualProperty , :Transparency .
 
 :HE024 rdf:type :Obligation ;
     :requirementID "HE024" ;
@@ -2770,7 +2771,7 @@
     :requiresEvidence "Explainability documentation" ;
     :legalBasis "EU Charter" ;
     :noteText "Particularly for high-impact decisions" ;
-    :hasRisk :Accountability , :Deception .
+    :hasRisk :Accountability , :Deception , :Transparency .
 
 :HE025 rdf:type :Obligation ;
     :requirementID "HE025" ;
@@ -2783,7 +2784,7 @@
     :requiresEvidence "Ethics decision log" ;
     :legalBasis "EU Charter" ;
     :noteText "MUST requirement" ;
-    :hasRisk :Accountability , :Deception .
+    :hasRisk :Accountability , :Deception , :Transparency .
 
 :HE026 rdf:type :Obligation ;
     :requirementID "HE026" ;
@@ -4833,6 +4834,9 @@
 
 :DataGovernance rdfs:label "Data Governance" ;
     rdfs:comment "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines." .
+
+:Transparency rdfs:label "Transparency" ;
+    rdfs:comment "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders." .
 
 
 ### Evidence types
