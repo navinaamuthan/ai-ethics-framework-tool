@@ -6,7 +6,7 @@ as part of the fulfillment of the author's Master's Degree in Computer Science.
 **Author:** Navina Ganapathy Amuthan  
 **Supervisor:** Dave Lewis
 
-AIEF takes a free-text AI research proposal and produces a structured, traceable ethics compliance assessment across four governance frameworks — TCD REAMS, the EU AI Act (Art. 27 FRIA), Horizon Europe (Ethics by Design), and ACM/NeurIPS guidelines — with findings mapped to EU Charter of Fundamental Rights articles.
+AIEF takes a free-text AI research proposal and produces a structured, traceable ethics compliance assessment across four governance frameworks: TCD REAMS, the EU AI Act (Art. 27 FRIA), Horizon Europe (Ethics by Design), and ACM/NeurIPS guidelines — with findings mapped to EU Charter of Fundamental Rights articles.
 
 **Ontology (persistent URI):** [https://w3id.org/aief/](https://w3id.org/aief/)
 
