@@ -1,8 +1,11 @@
 {
   "proposal_id": "P04",
   "mode": "full",
-  "timestamp": "2026-07-05T15:47:44.082986",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T20:00:33.318321",
   "proposal_text": "This research proposes to develop a machine learning-based ad delivery optimisation system for deployment on a major social media platform. The system will use a multi-objective optimisation algorithm that maximises ad relevance scores and advertiser return on investment by predicting which users are most likely to engage with each advertisement. The algorithm will use thousands of user behavioural, demographic, and interest signals — excluding explicit race and gender variables — to determine ad delivery. The system will operate as a real-time auction where advertisers bid for impression opportunities, with the platform's relevance prediction model determining which users see which ads. An academic audit of this system found that even when advertisers set their targeting parameters to be fully inclusive with no demographic restrictions, the optimisation algorithm delivered employment ads predominantly to men and housing ads predominantly to white users. This skew was caused by the algorithm's financial optimisation function, which learned that majority-group users were cheaper to reach and more likely to engage. The system does not include pre-deployment fairness auditing. No mechanism for individual users to understand why they are or are not shown specific opportunity-related advertisements is planned.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "fairness",
     "employ",
@@ -28,103 +31,106 @@
   "retrieved_requirements_count": 177,
   "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "The proposed machine learning-based ad delivery optimisation system poses risks to equality, non-discrimination, and data protection. The algorithm's financial optimisation function has been shown to deliver ads predominantly to majority-group users, raising concerns about bias and discrimination.",
+    "risk_summary": "The proposed machine learning-based ad delivery optimisation system poses significant risks to individual rights and freedoms, including discrimination, bias, and lack of transparency. The system's reliance on user behavioural data and demographic signals raises concerns about fairness, equality, and the potential for harm. Furthermore, the absence of pre-deployment auditing and mechanisms for users to understand why they are shown specific advertisements exacerbates these risks.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Bias and discrimination in ad delivery",
+        "risk": "Bias in decision-making processes",
         "severity": "High",
-        "explanation": "The algorithm's financial optimisation function has been shown to deliver ads predominantly to majority-group users."
+        "explanation": "The system's optimisation algorithm may perpetuate biases and discrimination, as evidenced by the academic audit findings."
       },
       {
-        "risk": "Lack of transparency and accountability in ad targeting",
+        "risk": "Lack of transparency and accountability",
+        "severity": "High",
+        "explanation": "Users are not provided with clear explanations for why they see specific advertisements, making it difficult to hold the system accountable for its decisions."
+      },
+      {
+        "risk": "Inadequate data protection and privacy measures",
         "severity": "Medium",
-        "explanation": "There is no mechanism for individual users to understand why they are or are not shown specific opportunity-related advertisements."
+        "explanation": "The system processes user behavioural data, which raises concerns about data protection and privacy."
       },
       {
-        "risk": "Potential negative impact on democratic processes and social relations",
+        "risk": "Potential for harm through discriminatory practices",
         "severity": "High",
-        "explanation": "The system's influence on user behavior and decision-making could have significant societal implications."
+        "explanation": "The system's reliance on demographic signals may lead to discriminatory practices, as seen in the academic audit findings."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM020",
-        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated",
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms (Mandatory)",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the dataset's representativeness and provide evidence-based conclusions."
+        "action_needed": "Conduct a thorough risk assessment and mitigation plan to address potential harms."
       },
       {
-        "requirement_id": "HE019",
-        "requirement_text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment of the system's potential impact on democratic processes and social relations."
-      },
-      {
-        "requirement_id": "AI016",
-        "requirement_text": "Specify what humans can and cannot do — ability to correct outputs, ability to opt out, override capability",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Clearly specify the capabilities of human users in relation to the system's outputs and provide mechanisms for correction and override."
-      },
-      {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate (Mandatory)",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment of the system's potential harm and implement mitigations to minimize risks."
+        "action_needed": "Implement fairness auditing mechanisms and bias mitigation techniques to ensure the system does not perpetuate discrimination."
       },
       {
-        "requirement_id": "R028",
-        "requirement_text": "List inclusion/exclusion criteria for participant selection",
-        "framework": "REAMS",
+        "requirement_id": "EUAIAct-001",
+        "requirement_text": "High-risk AI systems must undergo rigorous testing, validation, and certification (Mandatory)",
+        "framework": "EU AI Act",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Clearly specify the inclusion and exclusion criteria for user participation in the system."
+        "action_needed": "Submit the system for EU AI Act certification and address any identified issues."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement robust data protection measures, including obtaining explicit user consent for data collection and processing."
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The algorithm's financial optimisation function has been shown to deliver ads predominantly to majority-group users, raising concerns about bias and discrimination."
+        "relevance": "The system's reliance on demographic signals may lead to discriminatory practices."
       },
       {
-        "article": "Article 20",
-        "right_name": "EqualityBeforeLaw",
-        "relevance": "The system's influence on user behavior and decision-making could have significant societal implications."
+        "article": "Article 23",
+        "right_name": "Gender Equality",
+        "relevance": "The system's optimisation algorithm may perpetuate biases and discrimination, including gender-based bias."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The system processes user behavioural data, which raises concerns about data protection and privacy."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of thorough testing and validation of AI systems to prevent bias and discrimination."
+        "lesson": "Implement fairness auditing mechanisms and bias mitigation techniques to ensure the system does not perpetuate discrimination."
       },
       {
         "incident_id": "AIAAIC-015",
         "incident_title": "Uber Surge Pricing Discrimination",
-        "lesson": "The need for transparency and accountability in AI decision-making processes."
+        "lesson": "Conduct a thorough risk assessment and mitigation plan to address potential harms, including discriminatory practices."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement fairness auditing mechanisms to detect and mitigate bias.",
+        "mitigation": "Implement fairness auditing mechanisms and bias mitigation techniques.",
         "priority": "High"
       },
       {
-        "mitigation": "Provide clear explanations of ad targeting decisions to users.",
+        "mitigation": "Obtain explicit user consent for data collection and processing.",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough risk assessment of the system's potential impact on democratic processes and social relations.",
-      "Clearly specify the capabilities of human users in relation to the system's outputs and provide mechanisms for correction and override."
+      "Conduct a thorough risk assessment and mitigation plan",
+      "Implement fairness auditing mechanisms and bias mitigation techniques"
     ],
     "tier2_reflective_prompts": [
-      "Consider the long-term implications of the system's influence on user behavior and decision-making.",
-      "Reflect on the potential consequences of bias and discrimination in ad delivery."
+      "How can the system be designed to ensure transparency and accountability?",
+      "What measures can be taken to address potential harms, including discriminatory practices?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -334,11 +340,10 @@
         "R073"
       ],
       "requirements_cited": [
-        "ACM020",
-        "HE019",
-        "AI016",
-        "ACM002",
-        "R028"
+        "ACM001",
+        "ACM003",
+        "EUAIAct-001",
+        "ACM006"
       ],
       "incidents_sample": [
         "AIAAIC-014",

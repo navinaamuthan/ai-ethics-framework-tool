@@ -1,0 +1,404 @@
+{
+  "proposal_id": "P31",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-20T23:44:05.093950",
+  "proposal_text": "This project will release an open speech corpus of 400 hours across Yoruba, Igbo, and Swahili for ASR research. Speakers are paid volunteers who record scripted sentences and optional two-minute personal stories about family and work. Scripts are public-domain; personal stories may contain names, employers, and locations. Release includes raw audio under CC-BY with speaker IDs replaced by codes. A subtle issue: re-identification via voice biometrics plus story content is possible for well-known community members, but the datasheet treats the corpus as anonymised. No voice-biometric risk assessment is planned. Otherwise the project is standard open-science language resource work with no downstream decision system.",
+  "context_max_requirements": 10,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "biometric",
+    "employ"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 109,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 48.0,
+      "tf": 48,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 34.0,
+      "tf": 34,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 19.0,
+      "tf": 19,
+      "df": 26
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 48
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The proposed open speech corpus for ASR research involves potential risks of re-identification via voice biometrics and story content, which may compromise the anonymity of speakers. Additionally, the project may perpetuate biases in the data and model outputs, and there is a risk of privacy breaches due to the release of raw audio under CC-BY.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Re-identification via voice biometrics and story content",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The project may compromise the anonymity of speakers due to the possibility of re-identification via voice biometrics and story content."
+      },
+      {
+        "risk": "Perpetuation of biases in data and model outputs",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The project may perpetuate biases in the data and model outputs, which can lead to unfair treatment of individuals or groups."
+      },
+      {
+        "risk": "Privacy breaches due to release of raw audio",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The project involves the release of raw audio under CC-BY, which may compromise the privacy of speakers."
+      },
+      {
+        "risk": "Lack of voice-biometric risk assessment",
+        "risk_category": "FalseIdentification",
+        "severity": "High",
+        "explanation": "The project does not plan to conduct a voice-biometric risk assessment, which may lead to incorrect identity attribution and consequential harm."
+      },
+      {
+        "risk": "Transparency risk due to lack of disclosure of operation and capabilities",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The project may not adequately disclose its operation, capabilities, and limitations to end-users and stakeholders, which can lead to a lack of transparency and trust."
+      },
+      {
+        "risk": "Well-being risk due to environmental impact of computing resources",
+        "risk_category": "Well-being",
+        "severity": "Medium",
+        "explanation": "The project may have an environmental impact due to the use of computing resources, which can compromise the well-being of individuals and the environment."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a risk assessment to identify potential harms and develop mitigation strategies."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a risk assessment to identify potential harms and develop mitigation strategies."
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a bias assessment to identify potential biases and develop mitigation strategies."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain informed consent from speakers and protect personally identifiable information."
+      },
+      {
+        "requirement_id": "ACM010",
+        "requirement_text": "Design and implement systems that are robustly and usably secure — especially systems close to production deployment",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement robust security measures to protect the project's systems and data."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 1",
+        "right_name": "Human Dignity",
+        "relevance": "The project may compromise the dignity of speakers due to the possibility of re-identification via voice biometrics and story content."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The project involves the release of raw audio under CC-BY, which may compromise the private life of speakers."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The project involves the processing of personal data, which requires compliance with data protection regulations."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The project should conduct a risk assessment to identify potential harms and develop mitigation strategies."
+      },
+      {
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "The project should conduct a bias assessment to identify potential biases and develop mitigation strategies."
+      },
+      {
+        "incident_id": "AIAAIC-016",
+        "incident_title": "Palantir ICE Surveillance System",
+        "lesson": "The project should implement robust security measures to protect the project's systems and data."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct a risk assessment to identify potential harms and develop mitigation strategies.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct a bias assessment to identify potential biases and develop mitigation strategies.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement robust security measures to protect the project's systems and data.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Obtain informed consent from speakers and protect personally identifiable information.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a risk assessment to identify potential harms and develop mitigation strategies.",
+      "Conduct a bias assessment to identify potential biases and develop mitigation strategies.",
+      "Implement robust security measures to protect the project's systems and data.",
+      "Obtain informed consent from speakers and protect personally identifiable information."
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential harms and biases associated with the project?",
+      "How can the project mitigate these harms and biases?",
+      "What security measures can be implemented to protect the project's systems and data?",
+      "How can the project ensure that speakers' personal data is protected?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "biometric",
+        "employ"
+      ],
+      "rights_matched": 3,
+      "requirements_retrieved": 109,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE019",
+        "HE021",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE042",
+        "HE049",
+        "HE050",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE013",
+        "HE033",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM003",
+        "ACM006",
+        "ACM010"
+      ],
+      "incidents_sample": [
+        "AIAAIC-003",
+        "AIAAIC-005",
+        "AIAAIC-009",
+        "AIAAIC-002",
+        "AIAAIC-007"
+      ]
+    }
+  }
+}

@@ -1,8 +1,11 @@
 {
   "proposal_id": "P09",
   "mode": "full",
-  "timestamp": "2026-07-05T16:00:48.853176",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T20:15:52.644023",
   "proposal_text": "This research proposes to build a recommendation system for academic module selection at Trinity College Dublin. The system will analyse historical student records including module choices, grades achieved, attendance patterns, and degree outcomes to recommend optimal module combinations for current students. The dataset covers 20,000 student records from the past ten years. Students will receive personalised module recommendations through the student portal alongside existing manual advising. The system will use collaborative filtering to identify students with similar academic profiles and recommend modules that led to positive outcomes for comparable students. The researchers acknowledge that historical patterns may reflect systemic inequalities in module access and outcomes. The model will not account for disability accommodations or students who changed programmes. Student consent for the use of historical academic records in the training dataset has not been explicitly obtained.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "data",
     "consent",
@@ -25,96 +28,96 @@
   "retrieved_requirements_count": 193,
   "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "The proposed recommendation system for academic module selection at Trinity College Dublin raises concerns about data protection, bias in decision-making, and potential harm to students. The use of historical student records without explicit consent may infringe on Article 8 DataProtection and Article 1 HumanDignity. Furthermore, the system's reliance on collaborative filtering may perpetuate systemic inequalities in module access and outcomes.",
-    "overall_risk_level": "Medium",
+    "risk_summary": "The proposed recommendation system for academic module selection at Trinity College Dublin involves processing historical student records, including personal data, without explicit consent. This raises concerns about the potential for bias and discrimination in the recommendations, as well as the impact on students' privacy and autonomy.",
+    "overall_risk_level": "MEDIUM",
     "identified_risks": [
       {
-        "risk": "Bias in decision-making",
+        "risk": "Bias and discrimination in recommendation system",
         "severity": "Medium",
-        "explanation": "The use of historical student records without explicit consent may lead to biased recommendations, particularly for students from underrepresented groups."
+        "explanation": "The system may perpetuate systemic inequalities in module access and outcomes, particularly if it does not account for disability accommodations or students who changed programmes."
       },
       {
-        "risk": "Data protection",
-        "severity": "Medium",
-        "explanation": "The processing of personal data without explicit consent may infringe on Article 8 DataProtection and Article 1 HumanDignity."
-      },
-      {
-        "risk": "Systemic inequalities in module access and outcomes",
+        "risk": "Inadequate consent for data processing",
         "severity": "High",
-        "explanation": "The system's reliance on collaborative filtering may perpetuate systemic inequalities in module access and outcomes, particularly for students from underrepresented groups."
+        "explanation": "Student consent for the use of historical academic records in the training dataset has not been explicitly obtained."
+      },
+      {
+        "risk": "Potential harm to students' privacy and autonomy",
+        "severity": "Medium",
+        "explanation": "The system will have access to sensitive information about students, including their module choices, grades, attendance patterns, and degree outcomes."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM020",
-        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated (Mandatory)",
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms (Mandatory)",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the dataset's representativeness and provide evidence to support claims of diversity."
+        "action_needed": "Conduct a thorough analysis of the potential risks and benefits of the recommendation system."
       },
       {
-        "requirement_id": "HE019",
-        "requirement_text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations (Mandatory)",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the system's potential impact on democratic processes and social relations."
-      },
-      {
-        "requirement_id": "AI008",
-        "requirement_text": "State the intended purpose of the AI system (Mandatory)",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Clearly state the intended purpose of the recommendation system."
-      },
-      {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm (Mandatory)",
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate (Mandatory)",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment to identify potential harms and develop strategies to mitigate them."
+        "action_needed": "Develop a plan to address potential biases in the recommendation system."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from students for the use of their historical academic records in the training dataset."
+      },
+      {
+        "requirement_id": "EUAIAct-001",
+        "requirement_text": "Personal data processing must be transparent and fair, and individuals must have control over their personal data (Mandatory)",
+        "framework": "EU AI Act",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the recommendation system is transparent about how it uses student data and provides clear options for students to control their data."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 8 DataProtection",
-        "right_name": "Data Protection",
-        "relevance": "The processing of personal data without explicit consent may infringe on this right."
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The recommendation system may perpetuate systemic inequalities in module access and outcomes, particularly if it does not account for disability accommodations or students who changed programmes."
       },
       {
-        "article": "Article 1 HumanDignity",
-        "right_name": "Human Dignity",
-        "relevance": "The use of historical student records without explicit consent may infringe on this right."
+        "article": "Article 7",
+        "right_name": "PrivateLife",
+        "relevance": "The system will have access to sensitive information about students, including their module choices, grades, attendance patterns, and degree outcomes."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-002",
-        "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The use of facial recognition technology can lead to false arrests and perpetuate systemic inequalities."
-      },
-      {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "AI systems can perpetuate biases and inequalities if not designed with fairness and transparency in mind."
+        "lesson": "The importance of considering potential biases in AI systems and developing strategies to address them."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The risks associated with using facial recognition technology, particularly in law enforcement contexts."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement data protection measures to ensure the secure processing of personal data.",
+        "mitigation": "Implement bias detection and mitigation techniques in the recommendation system.",
         "priority": "High"
       },
       {
-        "mitigation": "Develop strategies to mitigate systemic inequalities in module access and outcomes.",
+        "mitigation": "Develop a plan to address potential biases in the recommendation system.",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough analysis of the dataset's representativeness",
-      "Clearly state the intended purpose of the recommendation system"
+      "Conduct a thorough analysis of the potential risks and benefits of the recommendation system.",
+      "Obtain explicit consent from students for the use of their historical academic records in the training dataset."
     ],
     "tier2_reflective_prompts": [
-      "Consider the potential impact on democratic processes and social relations",
-      "Develop strategies to mitigate systemic inequalities in module access and outcomes"
+      "How will you ensure that the recommendation system is transparent about how it uses student data?",
+      "What strategies will you develop to address potential biases in the recommendation system?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -338,10 +341,10 @@
         "R074"
       ],
       "requirements_cited": [
-        "ACM020",
-        "HE019",
-        "AI008",
-        "ACM002"
+        "ACM001",
+        "ACM003",
+        "ACM006",
+        "EUAIAct-001"
       ],
       "incidents_sample": [
         "AIAAIC-014",

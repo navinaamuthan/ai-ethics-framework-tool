@@ -1,0 +1,29 @@
+{
+  "proposal_id": "P24",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This research proposes a shared remote-proctoring platform for five public universities in Indonesia, Malaysia, and the Philippines. During timed exams, the system records webcam video, microphone audio, screen activity, and keystroke dynamics, flagging 'suspicious behaviour' via a proprietary model trained primarily on North American student footage. Flagged sessions are queued for human review; unflagged sessions are auto-cleared. Students in shared housing report false flags when family members enter the frame. The model has not been validated on darker skin tones under typical tropical indoor lighting. Students must accept continuous recording to sit the exam; no alternative invigilation path is offered. Recordings are retained for twelve months on a Singapore cloud vendor. Universities have not published false-positive rates by campus or demographic group.",
+  "assessment": {
+    "overall_risk_level": "High",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art7_PrivateLife",
+        "right_name": "Right to Private Life",
+        "relevance": "The system records webcam video, microphone audio, screen activity, and keystroke dynamics, potentially infringing on students' right to private life."
+      },
+      {
+        "article": "Art8_DataProtection",
+        "right_name": "Right to Data Protection",
+        "relevance": "Recordings are retained for twelve months on a Singapore cloud vendor, raising concerns about the protection of students' personal data."
+      },
+      {
+        "article": "Art21_NonDiscrimination",
+        "right_name": "Right to Non-Discrimination",
+        "relevance": "The model has not been validated on darker skin tones under typical tropical indoor lighting, which may lead to discriminatory outcomes against students from certain demographic groups."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

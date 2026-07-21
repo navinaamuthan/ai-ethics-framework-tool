@@ -1,0 +1,439 @@
+{
+  "proposal_id": "P24",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T01:17:07.308451",
+  "proposal_text": "This research proposes a shared remote-proctoring platform for five public universities in Indonesia, Malaysia, and the Philippines. During timed exams, the system records webcam video, microphone audio, screen activity, and keystroke dynamics, flagging 'suspicious behaviour' via a proprietary model trained primarily on North American student footage. Flagged sessions are queued for human review; unflagged sessions are auto-cleared. Students in shared housing report false flags when family members enter the frame. The model has not been validated on darker skin tones under typical tropical indoor lighting. Students must accept continuous recording to sit the exam; no alternative invigilation path is offered. Recordings are retained for twelve months on a Singapore cloud vendor. Universities have not published false-positive rates by campus or demographic group.",
+  "context_max_requirements": 10,
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "student"
+  ],
+  "matched_rights": [
+    "Art24_RightsOfChild",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 63,
+  "retrieved_incidents_count": 6,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 43.0,
+      "tf": 43,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 48
+    },
+    {
+      "id": "ChildrenRights",
+      "label": "Children Rights",
+      "definition": "Risk of harm to children's rights, development, or best interests arising from AI systems affecting minors.",
+      "idf_score": 4.5066,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 14
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 15
+    },
+    {
+      "id": "EmploymentHarm",
+      "label": "Employment Harm",
+      "definition": "Risk of unfair exclusion, surveillance, or adverse treatment of workers or job applicants by AI systems.",
+      "idf_score": 4.1701,
+      "rank_score": 6.0,
+      "tf": 6,
+      "df": 20
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "DataBreach",
+      "label": "Data Breach",
+      "definition": "Risk of unauthorised access to or leakage of personal data held or processed by an AI system.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 2,
+      "df": 6
+    },
+    {
+      "id": "FunctionCreep",
+      "label": "Function Creep",
+      "definition": "Risk that an AI system is used beyond its originally defined and ethically approved purpose.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 2,
+      "df": 6
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The proposed remote-proctoring platform poses significant ethical risks, including potential breaches of privacy, discrimination, and children's rights. The system's use of webcam video, microphone audio, screen activity, and keystroke dynamics raises concerns about data governance and the potential for false identification. Furthermore, the model's lack of validation on darker skin tones under typical tropical indoor lighting and the absence of alternative invigilation paths for students who decline continuous recording exacerbate these risks. The retention of recordings for twelve months on a Singapore cloud vendor also increases the risk of data breaches and reputational harm.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Unauthorised collection and processing of personal data",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The system's collection and processing of personal data, including webcam video and microphone audio, without explicit consent from students raises significant concerns about privacy breaches."
+      },
+      {
+        "risk": "Discrimination against students with darker skin tones",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The model's lack of validation on darker skin tones under typical tropical indoor lighting increases the risk of discriminatory outcomes and biased decision-making."
+      },
+      {
+        "risk": "Potential harm to children's rights",
+        "risk_category": "ChildrenRights",
+        "severity": "Medium",
+        "explanation": "The system's use of webcam video and microphone audio may inadvertently capture images or audio of minors, potentially compromising their rights and well-being."
+      },
+      {
+        "risk": "Inadequate data governance and stewardship",
+        "risk_category": "DataGovernance",
+        "severity": "High",
+        "explanation": "The retention of recordings for twelve months on a Singapore cloud vendor increases the risk of data breaches and unauthorised access to personal data."
+      },
+      {
+        "risk": "False identification and reputational harm",
+        "risk_category": "FalseIdentification",
+        "severity": "Medium",
+        "explanation": "The system's potential for false identification and incorrect flagging of 'suspicious behaviour' may lead to reputational harm for students and damage to their academic and professional prospects."
+      },
+      {
+        "risk": "Lack of transparency and accountability",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "The absence of clear guidelines and protocols for human review of flagged sessions and the lack of transparency regarding the model's decision-making processes exacerbate concerns about accountability and fairness."
+      },
+      {
+        "risk": "Function creep and potential for misuse",
+        "risk_category": "FunctionCreep",
+        "severity": "Medium",
+        "explanation": "The system's potential for use beyond its originally defined purpose, such as for surveillance or monitoring, increases the risk of function creep and misuse."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate \u2014 consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct thorough bias testing and validation of the model on diverse datasets, including those representing darker skin tones under typical tropical indoor lighting."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy \u2014 obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from students for the collection and processing of their personal data and ensure that personally identifiable information is protected and anonymised where possible."
+      },
+      {
+        "requirement_id": "ACM008",
+        "requirement_text": "Consider possible risks and impacts of the research approach itself (not just applications)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment and impact analysis of the system, including its potential effects on students, academic integrity, and societal well-being."
+      },
+      {
+        "requirement_id": "ACM015",
+        "requirement_text": "Research involving human participants must follow existing institutional protocols (IRB or equivalent) \u2014 if no formal process exists, undergo equivalent informal ethics review",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the system's development and deployment comply with relevant institutional protocols and ethics guidelines, including those related to human subjects research."
+      },
+      {
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Minimise the exposure of personally identifiable information in datasets used for model training and testing, and ensure that informed consent is obtained from students for the use of their data."
+      },
+      {
+        "requirement_id": "ACM022",
+        "requirement_text": "Consider risk that applications could open security vulnerabilities or cause serious accidents \u2014 recommend or implement protections",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement robust security measures to protect the system and its data from potential security vulnerabilities and cyber threats."
+      },
+      {
+        "requirement_id": "ACM031",
+        "requirement_text": "Use privacy protocols, encryption and anonymisation to reduce risk of data leakage \u2014 stronger measures for sensitive data",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement robust privacy protocols, encryption, and anonymisation techniques to protect sensitive data and prevent data leakage."
+      },
+      {
+        "requirement_id": "EUAIAct-1",
+        "requirement_text": "Ensure transparency and explainability of AI decision-making processes",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop and implement transparent and explainable AI decision-making processes, including clear guidelines and protocols for human review of flagged sessions."
+      },
+      {
+        "requirement_id": "HorizonEurope-2",
+        "requirement_text": "Ensure accountability and fairness in AI systems",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop and implement robust accountability and fairness mechanisms, including clear guidelines and protocols for addressing potential biases and errors in the system."
+      },
+      {
+        "requirement_id": "TCDREAMS-3",
+        "requirement_text": "Ensure compliance with relevant data protection regulations and guidelines",
+        "framework": "TCDREAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the system's development and deployment comply with relevant data protection regulations and guidelines, including those related to data governance and stewardship."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The system's collection and processing of personal data, including webcam video and microphone audio, raises concerns about data protection and the potential for breaches of this right."
+      },
+      {
+        "article": "Article 24",
+        "right_name": "Rights of the Child",
+        "relevance": "The system's potential to capture images or audio of minors, either intentionally or unintentionally, raises concerns about the protection of children's rights and well-being."
+      },
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The model's lack of validation on darker skin tones under typical tropical indoor lighting increases the risk of discriminatory outcomes and biased decision-making, potentially breaching the right to non-discrimination."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Respect for Private and Family Life",
+        "relevance": "The system's collection and processing of personal data, including webcam video and microphone audio, raises concerns about the respect for private and family life, particularly in the context of students' homes and shared living spaces."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-025",
+        "incident_title": "Amazon Alexa Recording Children Without Consent",
+        "lesson": "The importance of obtaining explicit consent from individuals, particularly children, before collecting and processing their personal data."
+      },
+      {
+        "incident_id": "AIAAIC-026",
+        "incident_title": "Facial Recognition in UK Schools",
+        "lesson": "The need for careful consideration and evaluation of the potential risks and benefits of deploying facial recognition technology in educational settings."
+      },
+      {
+        "incident_id": "AIAAIC-044",
+        "incident_title": "Stable Diffusion CSAM Generation",
+        "lesson": "The potential risks and consequences of developing and deploying AI systems that can generate or disseminate harmful or illegal content, including child sexual abuse material."
+      },
+      {
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
+        "lesson": "The importance of addressing and mitigating biases in AI systems, particularly in high-stakes applications such as healthcare, to ensure fairness and equity."
+      },
+      {
+        "incident_id": "AIAAIC-007",
+        "incident_title": "Clearview AI Mass Facial Recognition Scraping",
+        "lesson": "The need for robust regulations and guidelines governing the collection, use, and sharing of personal data, including biometric data such as facial recognition information."
+      },
+      {
+        "incident_id": "AIAAIC-011",
+        "incident_title": "Facebook Discriminatory Ad Targeting",
+        "lesson": "The potential risks and consequences of deploying AI systems that can perpetuate or exacerbate existing social biases and discriminatory practices, particularly in the context of advertising and targeting."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct thorough bias testing and validation of the model on diverse datasets",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Obtain explicit consent from students for the collection and processing of their personal data",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement robust security measures to protect the system and its data from potential security vulnerabilities and cyber threats",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop and implement transparent and explainable AI decision-making processes",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Ensure accountability and fairness in AI systems, including clear guidelines and protocols for addressing potential biases and errors",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Provide alternative invigilation paths for students who decline continuous recording",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Minimise the exposure of personally identifiable information in datasets used for model training and testing",
+        "priority": "Low"
+      },
+      {
+        "mitigation": "Implement robust privacy protocols, encryption, and anonymisation techniques to protect sensitive data and prevent data leakage",
+        "priority": "Low"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct thorough bias testing and validation of the model on diverse datasets",
+      "Obtain explicit consent from students for the collection and processing of their personal data",
+      "Implement robust security measures to protect the system and its data from potential security vulnerabilities and cyber threats",
+      "Develop and implement transparent and explainable AI decision-making processes",
+      "Ensure accountability and fairness in AI systems, including clear guidelines and protocols for addressing potential biases and errors"
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential risks and consequences of deploying this system in educational settings, and how can they be mitigated?",
+      "How can the system be designed and developed to ensure fairness, equity, and transparency in its decision-making processes?",
+      "What are the potential benefits and drawbacks of using AI-powered remote proctoring systems, and how can they be balanced and optimised?",
+      "How can the system be evaluated and assessed to ensure that it is functioning as intended and not perpetuating or exacerbating existing social biases and discriminatory practices?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "student"
+      ],
+      "rights_matched": 2,
+      "requirements_retrieved": 63,
+      "incidents_retrieved": 6,
+      "requirements_sample": [
+        "R027",
+        "R043",
+        "R044",
+        "R045",
+        "R055",
+        "R081",
+        "ACM003",
+        "ACM005",
+        "ACM006",
+        "ACM008"
+      ],
+      "requirements_retrieved_ids": [
+        "R027",
+        "R043",
+        "R044",
+        "R045",
+        "R055",
+        "R081",
+        "ACM003",
+        "ACM005",
+        "ACM006",
+        "ACM008",
+        "ACM009",
+        "ACM010",
+        "ACM015",
+        "ACM016",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI012",
+        "AI013",
+        "AI014",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE010",
+        "HE011",
+        "HE013",
+        "HE031",
+        "HE033",
+        "HE034",
+        "HE035",
+        "HE036",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R019",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R042",
+        "R047",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R067",
+        "R068",
+        "R069",
+        "R070",
+        "R071",
+        "R072",
+        "R073",
+        "R074",
+        "R083",
+        "R084"
+      ],
+      "requirements_cited": [
+        "ACM003",
+        "ACM006",
+        "ACM008",
+        "ACM015",
+        "ACM016",
+        "ACM022",
+        "ACM031",
+        "EUAIAct-1",
+        "HorizonEurope-2",
+        "TCDREAMS-3"
+      ],
+      "incidents_sample": [
+        "AIAAIC-025",
+        "AIAAIC-026",
+        "AIAAIC-044",
+        "AIAAIC-006",
+        "AIAAIC-007"
+      ]
+    }
+  },
+  "compact_prompt": false
+}

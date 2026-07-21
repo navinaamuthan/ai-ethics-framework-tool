@@ -1,0 +1,498 @@
+{
+  "proposal_id": "P02_neutral_70b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T02:02:21.652938",
+  "proposal_text": "This study proposes to deploy the COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) risk assessment tool across criminal courts in Broward County, Florida, to predict defendants' likelihood of recidivism. The system uses a proprietary algorithm trained on a battery of psychological questionnaire responses administered at the time of arrest, combined with criminal history variables including prior arrest count, age at first offence, and charge severity. The algorithm produces three decile scores (1–10) for general recidivism, violent recidivism, and failure to appear, with scores categorised as Low (1–4), Medium (5–7), or High (8–10). These scores will be provided to judges and parole officers at pre-trial hearings and sentencing to inform detention and release decisions. The model is proprietary and its internal weighting is not disclosed to defendants or defence counsel. No mechanism for defendants to challenge the algorithmic risk score is included in the deployment design. An independent analysis of the algorithm's outputs found that Black defendants who did not re-offend were falsely classified as high risk at nearly twice the rate of white defendants who did not re-offend (45% vs 24%).",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "scor",
+    "criminal",
+    "classif",
+    "predict",
+    "profil"
+  ],
+  "matched_rights": [
+    "Art21_NonDiscrimination",
+    "Art47_RightToEffectiveRemedy",
+    "Art48_PresumptionOfInnocence",
+    "Art6_RightToLiberty",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 111,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 49.0,
+      "tf": 49,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 34.0,
+      "tf": 34,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 17.0,
+      "tf": 17,
+      "df": 48
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 14.0,
+      "tf": 14,
+      "df": 26
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 15
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The proposed deployment of the COMPAS risk assessment tool poses significant ethical risks, including discrimination, privacy breaches, and psychological harm. The tool's proprietary algorithm and lack of transparency raise concerns about accountability and fairness. The historical precedent of COMPAS's racial bias and the potential for false identification and reputational harm further exacerbate these risks. The overall risk level is high due to the potential for consequential decisions affecting individuals' liberty and well-being.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Discrimination against Black defendants",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The algorithm's false classification of Black defendants as high risk at nearly twice the rate of white defendants raises concerns about racial bias and discrimination."
+      },
+      {
+        "risk": "Lack of transparency and accountability",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "The proprietary algorithm and lack of disclosure to defendants or defence counsel raise concerns about the ability to challenge or contest the risk scores."
+      },
+      {
+        "risk": "Psychological harm to defendants",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Medium",
+        "explanation": "The potential for false identification and reputational harm may cause mental distress and emotional damage to defendants."
+      },
+      {
+        "risk": "Privacy breaches and data governance concerns",
+        "risk_category": "PrivacyBreach",
+        "severity": "Medium",
+        "explanation": "The collection and processing of personal data without explicit consent raise concerns about data governance and the potential for privacy breaches."
+      },
+      {
+        "risk": "Surveillance and monitoring of defendants",
+        "risk_category": "Surveillance",
+        "severity": "Low",
+        "explanation": "The use of the COMPAS tool may be seen as a form of surveillance or monitoring, potentially infringing on defendants' right to privacy and liberty."
+      },
+      {
+        "risk": "False identification and reputational harm",
+        "risk_category": "FalseIdentification",
+        "severity": "Medium",
+        "explanation": "The potential for false identification and reputational harm may cause damage to defendants' reputation and livelihood."
+      },
+      {
+        "risk": "Lack of transparency in algorithmic decision-making",
+        "risk_category": "Transparency",
+        "severity": "High",
+        "explanation": "The proprietary algorithm and lack of disclosure to defendants or defence counsel raise concerns about the transparency of the decision-making process."
+      },
+      {
+        "risk": "Environmental and well-being concerns",
+        "risk_category": "Well-being",
+        "severity": "Low",
+        "explanation": "The use of the COMPAS tool may have environmental and well-being implications, such as increased energy consumption or carbon footprint, although these are not directly related to the primary risks."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough impact assessment to identify potential harms and benefits"
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement measures to mitigate potential harms, such as bias and discrimination"
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct regular audits to ensure the algorithm is fair and unbiased"
+      },
+      {
+        "requirement_id": "ACM005",
+        "requirement_text": "Respect intellectual property and data/code ownership",
+        "framework": "ACMConference",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Ensure that the proprietary algorithm is used in accordance with its licence and that data ownership is respected"
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain informed consent from defendants and ensure that their personal data is protected"
+      },
+      {
+        "requirement_id": "EUAIAct-1",
+        "requirement_text": "Ensure transparency and explainability of AI systems",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Provide clear and concise information about the algorithm and its decision-making process"
+      },
+      {
+        "requirement_id": "HorizonEurope-1",
+        "requirement_text": "Ensure the ethical use of AI in research and innovation",
+        "framework": "HorizonEurope",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Conduct regular ethics reviews and ensure that the research is aligned with EU values and principles"
+      },
+      {
+        "requirement_id": "REAMS-1",
+        "requirement_text": "Ensure the responsible use of AI in research and innovation",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment and implement measures to mitigate potential risks"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The proposed deployment of the COMPAS tool may discriminate against Black defendants, infringing on their right to non-discrimination"
+      },
+      {
+        "article": "Article 47",
+        "right_name": "Right to Effective Remedy",
+        "relevance": "The lack of transparency and accountability in the algorithmic decision-making process may infringe on defendants' right to an effective remedy"
+      },
+      {
+        "article": "Article 48",
+        "right_name": "Presumption of Innocence",
+        "relevance": "The use of the COMPAS tool may infringe on defendants' right to the presumption of innocence, as they may be classified as high risk without sufficient evidence"
+      },
+      {
+        "article": "Article 6",
+        "right_name": "Right to Liberty",
+        "relevance": "The proposed deployment of the COMPAS tool may infringe on defendants' right to liberty, as they may be detained or sentenced based on the algorithm's risk scores"
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The collection and processing of personal data without explicit consent may infringe on defendants' right to data protection"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of ensuring that AI systems are fair and unbiased, and that they do not perpetuate existing social biases"
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The potential risks of false identification and reputational harm associated with the use of AI systems in law enforcement"
+      },
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The importance of ensuring that AI systems are designed and tested to avoid causing harm or offense to users"
+      },
+      {
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The potential risks of racial bias in AI systems, particularly in the context of criminal justice and law enforcement"
+      },
+      {
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias",
+        "lesson": "The importance of ensuring that AI systems are fair and unbiased, and that they do not perpetuate existing social biases in healthcare"
+      },
+      {
+        "incident_id": "AIAAIC-008",
+        "incident_title": "PredPol Predictive Policing Algorithmic Bias",
+        "lesson": "The potential risks of algorithmic bias in predictive policing, and the importance of ensuring that AI systems are fair and unbiased"
+      },
+      {
+        "incident_id": "AIAAIC-010",
+        "incident_title": "UK Post Office Horizon System Wrongful Prosecutions",
+        "lesson": "The potential risks of false identification and reputational harm associated with the use of AI systems in law enforcement and criminal justice"
+      },
+      {
+        "incident_id": "AIAAIC-019",
+        "incident_title": "COMPAS Juvenile Risk Tool Racial Bias",
+        "lesson": "The potential risks of racial bias in AI systems, particularly in the context of juvenile justice and law enforcement"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct a thorough impact assessment to identify potential harms and benefits",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement measures to mitigate potential harms, such as bias and discrimination",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct regular audits to ensure the algorithm is fair and unbiased",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Provide clear and concise information about the algorithm and its decision-making process",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Obtain informed consent from defendants and ensure that their personal data is protected",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Ensure that the proprietary algorithm is used in accordance with its licence and that data ownership is respected",
+        "priority": "Low"
+      },
+      {
+        "mitigation": "Conduct regular ethics reviews and ensure that the research is aligned with EU values and principles",
+        "priority": "Low"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough impact assessment to identify potential harms and benefits",
+      "Implement measures to mitigate potential harms, such as bias and discrimination",
+      "Conduct regular audits to ensure the algorithm is fair and unbiased",
+      "Provide clear and concise information about the algorithm and its decision-making process",
+      "Obtain informed consent from defendants and ensure that their personal data is protected"
+    ],
+    "tier2_reflective_prompts": [
+      "How can we ensure that the algorithm is fair and unbiased, and that it does not perpetuate existing social biases?",
+      "What measures can we take to mitigate the potential risks of false identification and reputational harm?",
+      "How can we ensure that the proprietary algorithm is used in accordance with its licence and that data ownership is respected?",
+      "What steps can we take to conduct regular ethics reviews and ensure that the research is aligned with EU values and principles?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "scor",
+        "criminal",
+        "classif",
+        "predict",
+        "profil"
+      ],
+      "rights_matched": 5,
+      "requirements_retrieved": 111,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "R028",
+        "R085",
+        "ACM001",
+        "ACM017",
+        "ACM021",
+        "ACM035",
+        "AI002",
+        "AI015",
+        "AI017",
+        "AI018",
+        "AI019",
+        "AI020",
+        "AI022",
+        "AI026",
+        "AI028",
+        "AI030",
+        "HE002",
+        "HE005",
+        "HE006",
+        "HE024",
+        "HE026",
+        "HE027",
+        "HE028",
+        "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
+        "HE048",
+        "HE052",
+        "R010",
+        "R054",
+        "R055",
+        "R074",
+        "R082",
+        "ACM024",
+        "ACM027",
+        "HE001",
+        "R086",
+        "ACM003",
+        "ACM005",
+        "ACM006",
+        "ACM008",
+        "ACM009",
+        "ACM010",
+        "ACM015",
+        "ACM016",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI012",
+        "AI013",
+        "AI014",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE010",
+        "HE011",
+        "HE031",
+        "HE034",
+        "HE035",
+        "HE036",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R019",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R042",
+        "R047",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R067",
+        "R068",
+        "R069",
+        "R070",
+        "R071",
+        "R072",
+        "R073",
+        "R083",
+        "R084"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM003",
+        "ACM005",
+        "ACM006",
+        "EUAIAct-1",
+        "HorizonEurope-1",
+        "REAMS-1"
+      ],
+      "incidents_sample": [
+        "AIAAIC-001",
+        "AIAAIC-002",
+        "AIAAIC-003",
+        "AIAAIC-004",
+        "AIAAIC-008"
+      ]
+    }
+  }
+}

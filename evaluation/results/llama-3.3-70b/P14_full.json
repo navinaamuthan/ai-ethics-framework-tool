@@ -2,7 +2,7 @@
   "proposal_id": "P14",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-20T14:35:47.519597",
+  "timestamp": "2026-07-19T19:55:52.425833",
   "proposal_text": "This project aims to develop an NLP pipeline to assist researchers in conducting systematic literature reviews. The tool will automate the screening of academic paper abstracts against predefined inclusion and exclusion criteria, reducing the manual workload of the initial screening phase. The system will use pre-trained transformer models to classify abstracts as relevant or irrelevant based on researcher-defined criteria. The tool will be evaluated on a benchmark of three previously completed systematic reviews where human screening decisions are available as ground truth. All data consists of publicly available academic abstracts. The tool will provide a confidence score alongside each classification to guide manual verification. The researchers will open-source the tool for academic use. No personal data is involved at any stage.",
   "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
@@ -21,60 +21,361 @@
   ],
   "retrieved_requirements_count": 164,
   "retrieved_incidents_count": 8,
-  "retrieved_risk_categories": [
-    {
-      "id": "PsychologicalHarm",
-      "label": "Psychological Harm",
-      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system."
-    },
-    {
-      "id": "FinancialHarm",
-      "label": "Financial Harm",
-      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system."
-    },
-    {
-      "id": "PhysicalHarm",
-      "label": "Physical Harm",
-      "definition": "Risk of bodily injury, death, or physical safety compromise caused by an AI system."
-    },
-    {
-      "id": "ReputationalHarm",
-      "label": "Reputational Harm",
-      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions."
-    },
-    {
-      "id": "PrivacyBreach",
-      "label": "Privacy Breach",
-      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system."
-    },
-    {
-      "id": "Accountability",
-      "label": "",
-      "definition": ""
-    },
-    {
-      "id": "EmploymentHarm",
-      "label": "",
-      "definition": ""
-    },
-    {
-      "id": "Surveillance",
-      "label": "",
-      "definition": ""
-    },
-    {
-      "id": "LibertyViolation",
-      "label": "",
-      "definition": ""
-    },
-    {
-      "id": "Discrimination",
-      "label": "Discrimination",
-      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system."
-    }
-  ],
-  "rights_disambiguation": "not_applicable",
   "assessment": {
-    "error": "LLM returned empty response"
+    "risk_summary": "The proposed NLP pipeline for systematic literature reviews poses low ethical risks as it only involves publicly available academic abstracts, does not process personal data, and does not make consequential decisions. However, potential biases in the pre-trained transformer models and the classification criteria could lead to unfair outcomes. The project's open-source nature and provision of confidence scores for manual verification mitigate some risks.",
+    "overall_risk_level": "Low",
+    "identified_risks": [
+      {
+        "risk": "Bias in pre-trained transformer models",
+        "severity": "Low",
+        "explanation": "The use of pre-trained models may perpetuate existing biases in the data, potentially leading to unfair classification of abstracts."
+      },
+      {
+        "risk": "Bias in classification criteria",
+        "severity": "Low",
+        "explanation": "The researcher-defined criteria may inadvertently introduce biases, affecting the fairness of the classification outcomes."
+      },
+      {
+        "risk": "Overreliance on automated screening",
+        "severity": "Low",
+        "explanation": "The tool's automation may lead to overreliance on the system, potentially causing important abstracts to be overlooked if not properly verified."
+      },
+      {
+        "risk": "Lack of transparency in model documentation",
+        "severity": "Low",
+        "explanation": "Insufficient documentation of the models and their limitations may hinder external scrutiny and reproducibility of the results."
+      },
+      {
+        "risk": "Inadequate evaluation of the tool's impact",
+        "severity": "Low",
+        "explanation": "The project's evaluation may not fully consider the potential consequences of the tool's deployment, such as its effect on the research community or the potential for misuse."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Discuss potential benefits and harms of the NLP pipeline and propose mitigation strategies"
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider potential harm caused by biases in the pre-trained models or classification criteria"
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Investigate and address potential biases in the pre-trained models and classification criteria"
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Analyze the data and model outputs for biases and implement strategies to mitigate them"
+      },
+      {
+        "requirement_id": "ACM029",
+        "requirement_text": "Provide data and model documentation via structured templates (Model Cards, Datasheets for Datasets)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Create and provide documentation for the models and data using standardized templates"
+      },
+      {
+        "requirement_id": "ACM033",
+        "requirement_text": "Make accessible all information required to understand research artefacts (code, environment, weights, hyperparameters) to enable external scrutiny",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Make the code, environment, and other relevant information accessible to facilitate external review"
+      },
+      {
+        "requirement_id": "ACM034",
+        "requirement_text": "Disclose information sufficient for reproduction of results",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Provide sufficient information to enable reproduction of the results, including details about the data, models, and experimental setup"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 41",
+        "right_name": "Good Administration",
+        "relevance": "The project's potential impact on the research community and the importance of transparency in the development and deployment of the NLP pipeline"
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "Although the project does not involve personal data, the potential for biases in the pre-trained models or classification criteria could indirectly affect individuals' private lives"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of addressing biases in AI systems to prevent unfair outcomes"
+      },
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The need for careful consideration of potential risks and harms associated with AI systems, including those related to biases and fairness"
+      },
+      {
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The potential for AI systems to perpetuate existing biases and the importance of addressing these issues to ensure fairness and transparency"
+      },
+      {
+        "incident_id": "AIAAIC-008",
+        "incident_title": "PredPol Predictive Policing Algorithmic Bias",
+        "lesson": "The need for careful evaluation and validation of AI systems to prevent biases and ensure fairness, particularly in high-stakes applications"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Regularly audit and test the NLP pipeline for biases",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Implement strategies to address biases in the pre-trained models and classification criteria",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Provide transparent documentation of the models, data, and experimental setup",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Establish a process for external review and scrutiny of the NLP pipeline",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Develop a plan for addressing potential risks and harms associated with the deployment of the NLP pipeline",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Discuss potential benefits and harms of the NLP pipeline and propose mitigation strategies",
+      "Consider potential harm caused by biases in the pre-trained models or classification criteria",
+      "Investigate and address potential biases in the pre-trained models and classification criteria",
+      "Analyze the data and model outputs for biases and implement strategies to mitigate them",
+      "Create and provide documentation for the models and data using standardized templates"
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential consequences of deploying the NLP pipeline, and how can they be mitigated?",
+      "How can the project ensure that the NLP pipeline is fair, transparent, and unbiased?",
+      "What are the potential risks and harms associated with the use of pre-trained models, and how can they be addressed?"
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "personal data",
+        "classif",
+        "scor"
+      ],
+      "rights_matched": 5,
+      "requirements_retrieved": 164,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "R028",
+        "R085",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM001",
+        "ACM035",
+        "AI017",
+        "AI019",
+        "AI022",
+        "HE005",
+        "HE027",
+        "HE029",
+        "HE048",
+        "R010",
+        "R054",
+        "R055",
+        "R074",
+        "R082",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM003",
+        "ACM004",
+        "ACM029",
+        "ACM033",
+        "ACM034"
+      ],
+      "incidents_sample": [
+        "AIAAIC-001",
+        "AIAAIC-002",
+        "AIAAIC-003",
+        "AIAAIC-022",
+        "AIAAIC-034"
+      ]
+    }
   }
 }

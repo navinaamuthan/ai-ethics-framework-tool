@@ -1,8 +1,11 @@
 {
   "proposal_id": "P06",
   "mode": "full",
-  "timestamp": "2026-07-05T15:53:04.070346",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T20:06:43.574356",
   "proposal_text": "This project proposes to install camera-based emotion recognition systems in six secondary school classrooms in Dublin to study the relationship between student emotional engagement and learning outcomes. The system will use computer vision to classify student facial expressions into six emotional categories (happy, sad, angry, surprised, fearful, neutral) at 5-second intervals throughout lessons. Data will be collected over one academic term covering approximately 180 students aged 13-17. Parental consent will be obtained but students will not be given an individual opt-out mechanism that allows them to remain in the classroom without being monitored. The emotion recognition system has been validated primarily on adult Western faces and has not been tested for accuracy on adolescent faces or faces from diverse ethnic backgrounds. Aggregated emotional engagement scores will be shared with teachers to inform pedagogical adjustments.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "data",
     "consent",
@@ -26,23 +29,23 @@
   "retrieved_requirements_count": 196,
   "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "The project involves the installation of camera-based emotion recognition systems in secondary school classrooms, which raises concerns about student privacy, data protection, and potential biases in facial expression classification. The system's accuracy on adolescent faces from diverse ethnic backgrounds is also a concern.",
+    "risk_summary": "The proposed emotion recognition system in secondary school classrooms raises concerns about student privacy, potential biases in data collection and analysis, and the lack of explicit opt-out mechanisms for students. The system's accuracy on adolescent faces from diverse ethnic backgrounds is also a concern.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Invasion of students' right to private life (Article 7) and data protection (Article 8)",
+        "risk": "Invasion of Student Privacy",
         "severity": "High",
-        "explanation": "The system will collect facial expressions from students without their explicit consent, which may be considered an invasion of their private life and a breach of data protection principles."
+        "explanation": "The camera-based emotion recognition system will collect and analyze student facial expressions without explicit consent, potentially infringing on their right to privacy."
       },
       {
-        "risk": "Bias in facial expression classification based on age and ethnicity",
+        "risk": "Bias in Data Collection and Analysis",
         "severity": "Medium",
-        "explanation": "The system's accuracy on adolescent faces from diverse ethnic backgrounds is unknown, which may lead to biased results and potential harm to students from underrepresented groups."
+        "explanation": "The system's accuracy has not been validated for adolescent faces or faces from diverse ethnic backgrounds, which may lead to biased results and potential harm to certain student groups."
       },
       {
-        "risk": "Potential for emotional distress or anxiety among students due to being monitored",
-        "severity": "Low",
-        "explanation": "While the project aims to improve learning outcomes, the constant monitoring of students' emotions may cause some individuals to feel anxious or distressed."
+        "risk": "Lack of Explicit Opt-Out Mechanism",
+        "severity": "High",
+        "explanation": "Students will not be given an individual opt-out mechanism that allows them to remain in the classroom without being monitored, potentially forcing them to participate in data collection against their will."
       }
     ],
     "applicable_requirements": [
@@ -51,71 +54,83 @@
         "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms (Mandatory)",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment and mitigation plan to address potential harms."
+        "action_needed": "Conduct a thorough analysis of potential harms and mitigation strategies."
       },
       {
-        "requirement_id": "EUAIAct AI008",
-        "requirement_text": "State the intended purpose of the AI system (Mandatory)",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Clearly define the project's goals and objectives, including how the emotion recognition system will contribute to improved learning outcomes."
-      },
-      {
-        "requirement_id": "HorizonEurope HE015",
-        "requirement_text": "Possible negative social impacts on certain groups must be mitigated, including impacts beyond algorithmic bias (Mandatory)",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of potential social impacts and develop strategies to mitigate them."
-      },
-      {
-        "requirement_id": "ACM020",
-        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated (Mandatory)",
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information (Mandatory)",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the dataset used for training the emotion recognition system is representative of the target population, including adolescents from diverse ethnic backgrounds."
+        "action_needed": "Obtain explicit consent from students and their parents, and ensure that data is protected in accordance with GDPR regulations."
+      },
+      {
+        "requirement_id": "ACM028",
+        "requirement_text": "Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of the system's accuracy and potential biases, and implement measures to mitigate any identified issues."
+      },
+      {
+        "requirement_id": "EUAIAct-001",
+        "requirement_text": "Ensure that personal data is processed in accordance with EU GDPR regulations (Mandatory)",
+        "framework": "EU AI Act",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement measures to ensure compliance with GDPR regulations, including obtaining explicit consent from students and their parents."
+      },
+      {
+        "requirement_id": "ACM014",
+        "requirement_text": "All human research subjects or participants must receive appropriate compensation — respect minimum hourly rate in region where work is carried out (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that students and their parents are compensated fairly for their participation in the study."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 7",
-        "right_name": "Private Life",
-        "relevance": "The project involves the collection and processing of students' facial expressions without their explicit consent."
+        "article": "Article 7 PrivateLife",
+        "right_name": "Right to Privacy",
+        "relevance": "The proposed emotion recognition system will collect and analyze student facial expressions without explicit consent, potentially infringing on their right to privacy."
       },
       {
-        "article": "Article 8",
-        "right_name": "Data Protection",
-        "relevance": "The project involves the collection and processing of students' personal data, including facial expressions."
+        "article": "Article 21 NonDiscrimination",
+        "right_name": "Non-Discrimination",
+        "relevance": "The system's accuracy has not been validated for adolescent faces or faces from diverse ethnic backgrounds, which may lead to biased results and potential harm to certain student groups."
+      },
+      {
+        "article": "Article 24 RightsOfChild",
+        "right_name": "Rights of the Child",
+        "relevance": "The proposed emotion recognition system raises concerns about the rights of children, including their right to privacy and protection from discrimination."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-002",
-        "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The importance of ensuring that AI systems are accurate and unbiased, particularly when used in law enforcement or other contexts where individuals' rights may be at risk."
-      },
-      {
         "incident_id": "AIAAIC-026",
         "incident_title": "Facial Recognition in UK Schools",
-        "lesson": "The need for transparency and consent when using facial recognition technology in educational settings."
+        "lesson": "The use of facial recognition technology in schools has raised concerns about student privacy and potential biases in data collection and analysis."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The use of facial recognition technology by law enforcement agencies has raised concerns about accuracy, bias, and potential harm to certain groups."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement robust data protection measures, including obtaining explicit consent from students before collecting their facial expressions.",
+        "mitigation": "Implement measures to ensure compliance with GDPR regulations, including obtaining explicit consent from students and their parents.",
         "priority": "High"
       },
       {
-        "mitigation": "Develop and deploy the emotion recognition system with safeguards to prevent bias and ensure accuracy on diverse populations.",
+        "mitigation": "Conduct a thorough analysis of the system's accuracy and potential biases, and implement measures to mitigate any identified issues.",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough risk assessment and mitigation plan",
-      "Ensure that the dataset used for training is representative of the target population"
+      "Obtain explicit consent from students and their parents",
+      "Ensure compliance with GDPR regulations"
     ],
     "tier2_reflective_prompts": [
-      "How will you address potential biases in facial expression classification?",
-      "What measures will you take to ensure transparency and consent when using facial recognition technology?"
+      "Consider the potential long-term consequences of using facial recognition technology in schools",
+      "Reflect on the potential biases and limitations of the system, and implement measures to mitigate any identified issues."
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -345,9 +360,10 @@
       ],
       "requirements_cited": [
         "ACM001",
-        "EUAIAct AI008",
-        "HorizonEurope HE015",
-        "ACM020"
+        "ACM006",
+        "ACM028",
+        "EUAIAct-001",
+        "ACM014"
       ],
       "incidents_sample": [
         "AIAAIC-003",

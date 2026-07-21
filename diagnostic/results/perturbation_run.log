@@ -1,0 +1,166 @@
+============================================================
+Step 4 — perturbation sensitivity (diagnostic)
+Scope: A unit test for assessor behaviour under known-direction change, not a claim about real-world deployment prediction.
+============================================================
+Loaded 45 existing variants from /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/perturbation_variants.json
+Persona pre-labelling...
+Running assessors on variants (full RAG for LLMs)...
+
+============================================================
+ASSESSING PROPOSAL: P01_positive_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  [SPARQL] GraphDB unreachable — falling back to local ontology TTL
+  [OK] Loaded local ontology: /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/ontology/ai-ethics-final.ttl (4399 triples)
+  Keywords found: ['patient', 'health', 'bias', 'predict', 'diagnos', 'discriminat', 'race', 'scor']
+  Charter rights matched: 7
+  Requirements retrieved: 114
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8525 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 7698 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P01_positive_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 6
+  Requirements Cited: 6
+  Rights at Risk: 4
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P01_positive_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['patient', 'health', 'bias', 'predict', 'diagnos', 'discriminat', 'race', 'scor']
+  Charter rights matched: 7
+  Requirements retrieved: 114
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8525 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 9686 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P01_positive_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 8
+  Requirements Cited: 8
+  Rights at Risk: 6
+  Precedents Cited: 6
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+  assessed 1/45 P01_positive: {'keyword-baseline': 'High', 'SHACL': 'High', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P01_negative_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['patient']
+  Charter rights matched: 1
+  Requirements retrieved: 57
+  Incidents retrieved: 3
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'DataGovernance', 'Discrimination', 'Surveillance', 'EmploymentHarm', 'ReputationalHarm', 'FalseIdentification', 'DataBreach', 'FunctionCreep']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6539 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+============================================================
+Step 4 — perturbation sensitivity (diagnostic)
+Scope: A unit test for assessor behaviour under known-direction change, not a claim about real-world deployment prediction.
+============================================================
+Loaded 45 existing variants from /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/perturbation_variants.json
+Persona pre-labelling...
+Running assessors on variants (full RAG for LLMs)...
+
+============================================================
+ASSESSING PROPOSAL: P01_negative_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [SPARQL] GraphDB unreachable — falling back to local ontology TTL
+  [OK] Loaded local ontology: /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/ontology/ai-ethics-final.ttl (4399 triples)
+  Keywords found: ['patient']
+  Charter rights matched: 1
+  Requirements retrieved: 57
+  Incidents retrieved: 3
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'DataGovernance', 'Discrimination', 'Surveillance', 'EmploymentHarm', 'ReputationalHarm', 'FalseIdentification', 'DataBreach', 'FunctionCreep']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6539 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 4961 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P01_negative_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: LOW
+  Risks Identified: 5
+  Requirements Cited: 4
+  Rights at Risk: 1
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P01_negative_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['patient']
+  Charter rights matched: 1
+  Requirements retrieved: 57
+  Incidents retrieved: 3
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'DataGovernance', 'Discrimination', 'Surveillance', 'EmploymentHarm', 'ReputationalHarm', 'FalseIdentification', 'DataBreach', 'FunctionCreep']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6539 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...

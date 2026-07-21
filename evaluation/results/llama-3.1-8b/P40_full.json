@@ -1,0 +1,446 @@
+{
+  "proposal_id": "P40",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-20T23:40:28.690364",
+  "proposal_text": "This research pilots camera-based emotion analytics in a Lagos business-process outsourcing centre, framed as employee wellbeing support. Aggregated mood dashboards go to team leads; individuals scoring repeatedly 'distressed' are offered counselling referrals. Participation is described as voluntary but tied to a wellness bonus. Labour advocates call it surveillance that chills union organising; HR calls it duty-of-care. Consent voluntariness under wage pressure is disputed. The system was validated on Western face sets only. Expected Charter mapping (private life, data protection, fair working conditions, dignity) is reasonably contested in weight even when articles are listed.",
+  "context_max_requirements": 25,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "consent",
+    "emotion",
+    "employ",
+    "employee",
+    "scor",
+    "surveil",
+    "union",
+    "working conditions"
+  ],
+  "matched_rights": [
+    "Art15_FreedomOfOccupation",
+    "Art1_HumanDignity",
+    "Art31_FairWorkingConditions",
+    "Art3_RightToIntegrity",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 119,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 50.0,
+      "tf": 50,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 39.0,
+      "tf": 39,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 20.0,
+      "tf": 20,
+      "df": 26
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 48
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "EmploymentHarm",
+      "label": "Employment Harm",
+      "definition": "Risk of unfair exclusion, surveillance, or adverse treatment of workers or job applicants by AI systems.",
+      "idf_score": 4.1701,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 20
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The research proposal involves camera-based emotion analytics in a Lagos business-process outsourcing centre, which raises concerns about privacy, surveillance, and potential harm to employees. The system's deployment and use may infringe on employees' right to privacy, freedom of occupation, and fair working conditions. The proposal's reliance on Western face sets for validation also raises concerns about bias and discrimination.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "PrivacyBreach",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The system collects and processes employees' emotional data without explicit consent, which may lead to unauthorised collection, processing, or disclosure of personal data."
+      },
+      {
+        "risk": "Surveillance",
+        "risk_category": "Surveillance",
+        "severity": "High",
+        "explanation": "The system's deployment and use may be perceived as surveillance, which may chill union organising and infringe on employees' right to privacy."
+      },
+      {
+        "risk": "PsychologicalHarm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "High",
+        "explanation": "The system's use may lead to mental distress, manipulation, or coercion of employees, particularly if they are not adequately informed or involved in the decision-making process."
+      },
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The system's reliance on Western face sets for validation may perpetuate biases and lead to unfair differential treatment of employees from diverse backgrounds."
+      },
+      {
+        "risk": "Dignity",
+        "risk_category": "Dignity",
+        "severity": "High",
+        "explanation": "The system's use may objectify or degrade employees, particularly if they are not adequately informed or involved in the decision-making process."
+      },
+      {
+        "risk": "Transparency",
+        "risk_category": "Transparency",
+        "severity": "High",
+        "explanation": "The system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to employees and stakeholders, which may lead to mistrust and undermine the system's effectiveness."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Discuss potential harms and mitigation strategies in the proposal."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider potential harms and take measures to mitigate them in the proposal."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from employees and protect their personal data in the proposal."
+      },
+      {
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a FRIA assessment to determine whether the organisation is obligated to conduct a FRIA."
+      },
+      {
+        "requirement_id": "AI008",
+        "requirement_text": "State the intended purpose of the AI system",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Clearly state the intended purpose of the AI system in the proposal."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 15",
+        "right_name": "FreedomOfOccupation",
+        "relevance": "The system's deployment and use may infringe on employees' right to freedom of occupation."
+      },
+      {
+        "article": "Article 1",
+        "right_name": "HumanDignity",
+        "relevance": "The system's use may objectify or degrade employees, particularly if they are not adequately informed or involved in the decision-making process."
+      },
+      {
+        "article": "Article 31",
+        "right_name": "FairWorkingConditions",
+        "relevance": "The system's deployment and use may infringe on employees' right to fair working conditions."
+      },
+      {
+        "article": "Article 3",
+        "right_name": "RightToIntegrity",
+        "relevance": "The system's use may infringe on employees' right to integrity."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "PrivateLife",
+        "relevance": "The system collects and processes employees' emotional data without explicit consent, which may lead to unauthorised collection, processing, or disclosure of personal data."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The system collects and processes employees' emotional data without explicit consent, which may lead to unauthorised collection, processing, or disclosure of personal data."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-015",
+        "incident_title": "Uber Surge Pricing Discrimination",
+        "lesson": "The use of AI systems can perpetuate biases and lead to unfair differential treatment of individuals or groups."
+      },
+      {
+        "incident_id": "AIAAIC-021",
+        "incident_title": "HireVue Automated Video Interview Bias",
+        "lesson": "The use of AI systems can perpetuate biases and lead to unfair differential treatment of individuals or groups."
+      },
+      {
+        "incident_id": "AIAAIC-022",
+        "incident_title": "Deliveroo Algorithmic Dismissal",
+        "lesson": "The use of AI systems can lead to unfair exclusion or adverse treatment of workers or job applicants."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement transparency and accountability measures to ensure that employees are informed and involved in the decision-making process.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop and deploy the AI system in a way that minimises the risk of bias and discrimination.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Establish clear guidelines and protocols for the collection, processing, and disclosure of employees' emotional data.",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Provide employees with adequate training and support to ensure that they understand the AI system's capabilities and limitations.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Discuss potential harms and mitigation strategies in the proposal.",
+      "Consider potential harms and take measures to mitigate them in the proposal.",
+      "Obtain explicit consent from employees and protect their personal data in the proposal.",
+      "Conduct a FRIA assessment to determine whether the organisation is obligated to conduct a FRIA.",
+      "Clearly state the intended purpose of the AI system in the proposal."
+    ],
+    "tier2_reflective_prompts": [
+      "What potential harms and mitigation strategies should be considered in the proposal?",
+      "How can the organisation ensure that employees are adequately informed and involved in the decision-making process?",
+      "What measures can be taken to minimise the risk of bias and discrimination in the AI system?",
+      "What guidelines and protocols should be established for the collection, processing, and disclosure of employees' emotional data?",
+      "What training and support should be provided to employees to ensure that they understand the AI system's capabilities and limitations?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "consent",
+        "emotion",
+        "employ",
+        "employee",
+        "scor",
+        "surveil",
+        "union",
+        "working conditions"
+      ],
+      "rights_matched": 6,
+      "requirements_retrieved": 119,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE019",
+        "HE021",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE042",
+        "HE049",
+        "HE050",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "ACM037",
+        "HE020",
+        "R020",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "R009",
+        "R015",
+        "R019",
+        "R022",
+        "R034",
+        "R039",
+        "R042",
+        "R043",
+        "R044",
+        "R046",
+        "R048",
+        "ACM003",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R023",
+        "R026",
+        "R047",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE013",
+        "HE033",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM006",
+        "AI001",
+        "AI008"
+      ],
+      "incidents_sample": [
+        "AIAAIC-015",
+        "AIAAIC-021",
+        "AIAAIC-022",
+        "AIAAIC-003",
+        "AIAAIC-005"
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+Wrote /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/tables/tab_reliability_headline.tex
+Wrote /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/tables/tab_decision_rule.tex
+Wrote /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/tables/tab_assessor_vs_gt.tex
+Wrote /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/tables/tab_perturbation_sensitivity.tex
+Wrote /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/tables/tab_property_scores.tex
+Headline figures (copy into prose if needed):
+  within_risk 0.6144388076481865
+  cross_risk 0.433975388862249
+  ceiling 0.7507056198371532
+  noise_band 0.24929438016284677

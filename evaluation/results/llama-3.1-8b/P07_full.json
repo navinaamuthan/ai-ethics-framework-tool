@@ -1,8 +1,11 @@
 {
   "proposal_id": "P07",
   "mode": "full",
-  "timestamp": "2026-07-05T15:55:39.525831",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T20:10:03.572134",
   "proposal_text": "This research proposes to apply sentiment analysis and linguistic style detection to a corpus of 5,000 anonymised undergraduate essays submitted to the School of English at Trinity College Dublin. The aim is to investigate whether emotional tone and writing style correlate with academic grade outcomes. Essays will be collected from the past three academic years with student consent obtained retrospectively via email. The NLP pipeline will extract features including sentiment polarity, subjectivity scores, vocabulary complexity, and sentence structure patterns. The researchers will investigate whether detectable stylistic differences correlate with students' first language, gender, or socioeconomic background as indicated by fee status. All analysis will be performed on pseudonymised data with student IDs replaced by random codes. Results will be published in aggregate form only.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "data",
     "consent",
@@ -28,96 +31,94 @@
   "retrieved_requirements_count": 196,
   "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "The proposed research involves the analysis of anonymised undergraduate essays using sentiment analysis and linguistic style detection, which may raise concerns about data protection, bias, and potential harm to students. The project's focus on correlation between emotional tone and writing style with academic grade outcomes also raises questions about fairness and non-discrimination.",
-    "overall_risk_level": "Medium",
+    "risk_summary": "The proposed research involves processing of personal data (undergraduate essays) with consent, AI-assisted decision support, and NLP on non-sensitive text. However, the investigation into correlations between emotional tone, writing style, and student characteristics raises concerns about potential biases and discrimination.",
+    "overall_risk_level": "MEDIUM",
     "identified_risks": [
       {
-        "risk": "Bias in NLP models",
+        "risk": "Bias in data and biased code/model outputs",
         "severity": "Medium",
-        "explanation": "The use of sentiment analysis and linguistic style detection may introduce biases if the training data is not representative or if the algorithms are not designed to mitigate such biases."
+        "explanation": "The research may perpetuate existing biases in the dataset, particularly regarding student characteristics such as first language, gender, or socioeconomic background."
       },
       {
-        "risk": "Data protection concerns",
+        "risk": "Potential harm to individuals through misuse of results",
         "severity": "Medium",
-        "explanation": "Although student consent was obtained retrospectively, there is still a risk of unauthorized access or misuse of the anonymised data."
+        "explanation": "The publication of aggregate results could potentially lead to identification of individual students and their characteristics, causing harm to their reputation or well-being."
       },
       {
-        "risk": "Potential harm to students",
+        "risk": "Lack of transparency in data processing and analysis",
         "severity": "Low",
-        "explanation": "The project's focus on correlation between emotional tone and writing style with academic grade outcomes may inadvertently reveal sensitive information about individual students."
+        "explanation": "The use of pseudonymised data and random codes may not provide sufficient transparency into the data processing and analysis steps."
       }
     ],
     "applicable_requirements": [
       {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of the dataset for potential biases and take steps to mitigate them."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that student consent is properly obtained for the use of their essays in this research."
+      },
+      {
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment of the potential impacts of this research on students and society."
+      },
+      {
         "requirement_id": "ACM020",
-        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated (Mandatory)",
+        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the dataset's representativeness and provide evidence to support any claims of diversity."
-      },
-      {
-        "requirement_id": "HE019",
-        "requirement_text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations (Mandatory)",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Assess the potential impact of the project's findings on democratic processes and social relations."
-      },
-      {
-        "requirement_id": "AI008",
-        "requirement_text": "State the intended purpose of the AI system (Mandatory)",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Clearly define the intended purpose of the sentiment analysis and linguistic style detection in the project."
-      },
-      {
-        "requirement_id": "ACM025",
-        "requirement_text": "Communicate whether approach could facilitate deceptive interactions causing harm (theft, fraud, harassment), impersonate public figures, influence political processes, or promote hate speech (Mandatory)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Discuss the potential risks of the project's findings being used for malicious purposes."
+        "action_needed": "Ensure that the dataset is representative of the student population and provide clear documentation of this assessment."
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The project may inadvertently reveal sensitive information about individual students, potentially leading to discrimination."
+        "relevance": "The research may perpetuate existing biases in the dataset, particularly regarding student characteristics such as first language, gender, or socioeconomic background."
       },
       {
-        "article": "Article 7",
-        "right_name": "PrivateLife",
-        "relevance": "The collection and analysis of anonymised data may raise concerns about the protection of students' private lives."
+        "article": "Article 23",
+        "right_name": "GenderEquality",
+        "relevance": "The investigation into correlations between emotional tone, writing style, and student characteristics raises concerns about potential biases against women."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-005",
-        "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The importance of diversity and inclusion in AI development, as well as the need for thorough testing and evaluation to prevent biases."
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of considering and mitigating biases in data and algorithms."
       },
       {
-        "incident_id": "AIAAIC-002",
-        "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The potential risks of biased or inaccurate facial recognition technology and the importance of transparency and accountability in AI development."
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "The potential for AI systems to perpetuate existing biases and stereotypes."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Use diverse and representative training data to minimize biases.",
+        "mitigation": "Conduct a thorough analysis of the dataset for potential biases and take steps to mitigate them.",
         "priority": "High"
       },
       {
-        "mitigation": "Implement robust testing and evaluation procedures to detect and mitigate potential biases.",
+        "mitigation": "Ensure that student consent is properly obtained for the use of their essays in this research.",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough analysis of the dataset's representativeness",
-      "Assess the potential impact of the project's findings on democratic processes and social relations"
+      "Conduct a thorough risk assessment of the potential impacts of this research on students and society."
     ],
     "tier2_reflective_prompts": [
-      "Discuss the potential risks of the project's findings being used for malicious purposes",
-      "Consider the long-term implications of the project's findings on students' lives and well-being"
+      "How might the results of this research be used to perpetuate existing biases or stereotypes? What steps can be taken to mitigate these risks?"
     ],
     "reams_clearance_likely": true,
     "confidence_flag": "HIGH",
@@ -346,10 +347,10 @@
         "R073"
       ],
       "requirements_cited": [
-        "ACM020",
-        "HE019",
-        "AI008",
-        "ACM025"
+        "ACM004",
+        "ACM006",
+        "ACM007",
+        "ACM020"
       ],
       "incidents_sample": [
         "AIAAIC-014",

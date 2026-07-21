@@ -1,8 +1,11 @@
 {
   "proposal_id": "P01",
   "mode": "full",
-  "timestamp": "2026-07-05T15:38:14.865620",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T19:50:59.520395",
   "proposal_text": "This research proposes to develop a commercial health risk stratification algorithm to identify high-need patients for enrolment in care management programmes across a network of US hospital systems. The algorithm will use insurance claims data as a proxy for health need, predicting which patients require additional clinical resources based on historical healthcare costs, prior diagnoses, medication use, and utilisation patterns from electronic health records covering approximately 200 million patients annually. Patients scoring in the top 3 percentile will automatically be referred to care management; those in the top 45 percentile will be assessed for referral. The algorithm will not explicitly use race as a predictive variable. However, because Black patients have historically incurred lower healthcare costs than white patients with equivalent chronic disease burden — due to structural barriers to healthcare access including cost, discrimination, and geographic distance — the cost proxy will systematically underestimate the health needs of Black patients. The algorithm has not undergone independent bias auditing prior to deployment. No mechanism for algorithmic review or patient appeal of care management non-referral decisions is planned.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "bias",
     "discriminat",
@@ -29,103 +32,101 @@
   "retrieved_requirements_count": 170,
   "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "The proposed research involves developing a commercial health risk stratification algorithm that may systematically underestimate the health needs of Black patients, potentially leading to discrimination and unequal access to care. The algorithm's bias has not been audited, and there is no mechanism for patient appeal or algorithmic review.",
+    "risk_summary": "The research proposal involves the development of a commercial health risk stratification algorithm that may systematically underestimate the health needs of Black patients due to structural barriers to healthcare access. The algorithm has not undergone independent bias auditing prior to deployment, and no mechanism for algorithmic review or patient appeal of care management non-referral decisions is planned.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Bias in AI/ML model leading to discriminatory outcomes",
+        "risk": "Bias in the algorithm against Black patients",
         "severity": "High",
-        "explanation": "The algorithm's use of insurance claims data as a proxy for health need may systematically underestimate the health needs of Black patients, leading to unequal access to care and potential harm."
+        "explanation": "The algorithm may systematically underestimate the health needs of Black patients due to structural barriers to healthcare access, which could lead to unequal treatment and exacerbate existing health disparities."
       },
       {
-        "risk": "Lack of transparency and accountability in AI decision-making",
+        "risk": "Lack of transparency and accountability in decision-making processes",
         "severity": "High",
-        "explanation": "The algorithm's outputs are not transparent, and there is no mechanism for patient appeal or algorithmic review, potentially leading to unfair treatment and lack of trust in the healthcare system."
+        "explanation": "The algorithm will automatically refer patients scoring in the top 3 percentile for care management without human review, and those in the top 45 percentile will be assessed for referral. This lack of transparency and accountability may lead to unfair treatment and unequal access to healthcare services."
       },
       {
-        "risk": "Inadequate consideration of social impacts and bias implications",
+        "risk": "Inadequate protection of sensitive data",
         "severity": "Medium",
-        "explanation": "The proposal does not adequately address potential negative social impacts on certain groups, including Black patients, and does not consider anti-discrimination and bias implications of the AI/technology research."
+        "explanation": "The algorithm will process large amounts of sensitive health data, including insurance claims data and electronic health records. However, the proposal does not provide adequate information on how this data will be protected and secured."
+      },
+      {
+        "risk": "Lack of patient consent and autonomy",
+        "severity": "Medium",
+        "explanation": "The algorithm will automatically refer patients for care management without their explicit consent or input. This lack of patient autonomy may lead to unequal treatment and exacerbate existing health disparities."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "R085",
-        "requirement_text": "Have you considered anti-discrimination and bias implications of your AI/technology research?",
-        "framework": "REAMS",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Conduct thorough analysis of potential biases and develop strategies to mitigate them"
-      },
-      {
-        "requirement_id": "AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct assessment to determine if FRIA is required"
-      },
-      {
-        "requirement_id": "HE013",
-        "requirement_text": "Document how bias in input data and algorithmic design will be identified and avoided",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop and document strategies to identify and avoid biases"
-      },
-      {
-        "requirement_id": "HE032",
-        "requirement_text": "Input, training and output data must all be analysed for bias — verify data accounts for diversity in gender, race, age, sexual orientation, national origin, religion, health, disability",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct thorough analysis of input, training, and output data for biases"
-      },
-      {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct thorough analysis of potential harms and develop strategies to mitigate them"
+        "action_needed": "Conduct independent bias auditing of the algorithm prior to deployment and implement measures to mitigate any identified biases."
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct regular audits of the algorithm's performance to identify any biases or disparities in treatment recommendations."
+      },
+      {
+        "requirement_id": "EUAIAct-001",
+        "requirement_text": "Ensure that AI systems are transparent, explainable and fair",
+        "framework": "EU AI Act",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement measures to ensure the transparency, explainability, and fairness of the algorithm's decision-making processes."
+      },
+      {
+        "requirement_id": "HorizonEurope-002",
+        "requirement_text": "Ensure that AI systems are designed and developed with human values in mind",
+        "framework": "Horizon Europe",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct regular reviews of the algorithm's design and development to ensure that it aligns with human values and promotes fairness, transparency, and accountability."
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The algorithm's bias may lead to discriminatory outcomes, potentially violating the right to non-discrimination."
+        "relevance": "The algorithm may systematically underestimate the health needs of Black patients due to structural barriers to healthcare access, which could lead to unequal treatment and exacerbate existing health disparities."
       },
       {
         "article": "Article 35",
         "right_name": "HealthCare",
-        "relevance": "The algorithm's outputs may affect access to healthcare, potentially violating the right to healthcare."
+        "relevance": "The algorithm will automatically refer patients for care management without their explicit consent or input, which may lead to unequal treatment and exacerbate existing health disparities."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "Bias in AI/ML models can lead to discriminatory outcomes and harm individuals or groups."
+        "lesson": "The importance of auditing AI systems for bias and ensuring that they are fair and transparent in their decision-making processes."
       },
       {
-        "incident_id": "AIAAIC-013",
-        "incident_title": "Apple Card Gender Discrimination",
-        "lesson": "Lack of transparency and accountability in AI decision-making can lead to unfair treatment and lack of trust in the system."
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The potential risks of using facial recognition technology, including the risk of false arrests and unequal treatment."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct thorough analysis of potential biases and develop strategies to mitigate them",
+        "mitigation": "Conduct regular audits of the algorithm's performance to identify any biases or disparities in treatment recommendations.",
         "priority": "High"
       },
       {
-        "mitigation": "Develop and document strategies to identify and avoid biases",
+        "mitigation": "Implement measures to ensure the transparency, explainability, and fairness of the algorithm's decision-making processes.",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct assessment to determine if FRIA is required (EUAIAct)",
-      "Conduct thorough analysis of input, training, and output data for biases (HorizonEurope)"
+      "Conduct independent bias auditing of the algorithm prior to deployment",
+      "Implement measures to mitigate any identified biases in the algorithm."
     ],
     "tier2_reflective_prompts": [
-      "Consider the potential social impacts on certain groups, including Black patients",
-      "Develop strategies to mitigate potential harms"
+      "What are the potential risks and consequences of using this algorithm in a real-world setting?",
+      "How can we ensure that the algorithm is fair, transparent, and accountable in its decision-making processes?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -329,11 +330,10 @@
         "R073"
       ],
       "requirements_cited": [
-        "R085",
-        "AI001",
-        "HE013",
-        "HE032",
-        "ACM002"
+        "ACM003",
+        "ACM004",
+        "EUAIAct-001",
+        "HorizonEurope-002"
       ],
       "incidents_sample": [
         "AIAAIC-001",

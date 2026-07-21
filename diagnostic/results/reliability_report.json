@@ -1,0 +1,411 @@
+{
+  "n_annotations": 480,
+  "n_proposals": 40,
+  "cross_run_choice": 1,
+  "within_stratum": {
+    "raw_pairs_risk": {
+      "technical:run1-run2": 0.36363636363636365,
+      "technical:run1-run3": 0.45378151260504207,
+      "technical:run2-run3": 0.5813953488372093,
+      "legal:run1-run2": 0.771689497716895,
+      "legal:run1-run3": 0.771689497716895,
+      "legal:run2-run3": 0.7087378640776699,
+      "ethics:run1-run2": 0.6649214659685864,
+      "ethics:run1-run3": 0.5363540569020021,
+      "ethics:run2-run3": 0.544041450777202,
+      "lay:run1-run2": 0.48571428571428577,
+      "lay:run1-run3": 0.5999999999999999,
+      "lay:run2-run3": 0.8913043478260868
+    },
+    "raw_pairs_rights": {
+      "technical:run1-run2": 0.30967287200961907,
+      "technical:run1-run3": 0.3334461890050361,
+      "technical:run2-run3": 0.3984841316973499,
+      "legal:run1-run2": 0.6511627906976742,
+      "legal:run1-run3": 0.6390606880556629,
+      "legal:run2-run3": 0.6345817290864543,
+      "ethics:run1-run2": 0.42213567706962796,
+      "ethics:run1-run3": 0.42479338842975195,
+      "ethics:run2-run3": 0.3768308921438082,
+      "lay:run1-run2": 0.39238011823954455,
+      "lay:run1-run3": 0.3563975254228288,
+      "lay:run2-run3": 0.4484907906716157
+    },
+    "persona_mean_risk": {
+      "technical": 0.46627107502620496,
+      "legal": 0.7507056198371532,
+      "ethics": 0.5817723245492635,
+      "lay": 0.6590062111801241
+    },
+    "persona_mean_rights": {
+      "technical": 0.34720106423733504,
+      "legal": 0.6416017359465971,
+      "ethics": 0.4079199858810627,
+      "lay": 0.39908947811132967
+    },
+    "mean_within_risk": 0.6144388076481865,
+    "mean_within_rights": 0.44895306604408114
+  },
+  "cross_stratum": {
+    "note": "Cross-stratum uses run 1 only per persona (design choice).",
+    "raw_pairs_risk": {
+      "technical-vs-legal (run 1)": 0.424778761061947,
+      "technical-vs-ethics (run 1)": 0.5358649789029536,
+      "technical-vs-lay (run 1)": 0.44999999999999996,
+      "legal-vs-ethics (run 1)": 0.5675675675675675,
+      "legal-vs-lay (run 1)": 0.20000000000000007,
+      "ethics-vs-lay (run 1)": 0.4256410256410257
+    },
+    "raw_pairs_rights": {
+      "technical-vs-legal (run 1)": 0.4706870799103808,
+      "technical-vs-ethics (run 1)": 0.38918792417505266,
+      "technical-vs-lay (run 1)": 0.246338849863079,
+      "legal-vs-ethics (run 1)": 0.43093385214007773,
+      "legal-vs-lay (run 1)": 0.2887288977159882,
+      "ethics-vs-lay (run 1)": 0.26560184422855254
+    },
+    "mean_cross_risk": 0.433975388862249,
+    "mean_cross_rights": 0.34857974133885516
+  },
+  "headline_test": {
+    "within_risk": {
+      "mean": 0.6144388076481865,
+      "ci95": [
+        0.5093319587038961,
+        0.6933512756583954
+      ]
+    },
+    "cross_risk": {
+      "mean": 0.433975388862249,
+      "ci95": [
+        0.25206742922403075,
+        0.5859457318280847
+      ]
+    },
+    "within_rights": {
+      "mean": 0.4489530660440811,
+      "ci95": [
+        0.4009752802971596,
+        0.5017907321004654
+      ]
+    },
+    "cross_rights": {
+      "mean": 0.34857974133885516,
+      "ci95": [
+        0.29226653964524607,
+        0.4134906144147343
+      ]
+    },
+    "frame_hypothesis_supported_risk": false,
+    "frame_hypothesis_supported_rights": false,
+    "kill_condition_1_triggered_risk": false,
+    "directional_within_gt_cross_risk": true,
+    "cis_overlap_risk": true,
+    "interpretation": "Directional but inconclusive: mean(within-stratum \u03ba) > mean(cross-stratum \u03ba), but bootstrap 95% CIs overlap, so the pre-registered non-overlap criterion for supporting the frame hypothesis is not met. Kill condition 1 is NOT triggered. Report as suggestive, not confirmatory. Reliability-ceiling computation still holds."
+  },
+  "info_sufficiency": {
+    "mean_info_by_proposal": {
+      "P01": 3.0,
+      "P02": 3.5,
+      "P03": 3.25,
+      "P04": 3.75,
+      "P05": 3.3333333333333335,
+      "P06": 3.25,
+      "P07": 4.083333333333333,
+      "P08": 3.5,
+      "P09": 3.4166666666666665,
+      "P10": 3.5833333333333335,
+      "P11": 3.6666666666666665,
+      "P12": 4.0,
+      "P13": 4.75,
+      "P14": 4.75,
+      "P15": 4.666666666666667,
+      "P16": 4.916666666666667,
+      "P17": 3.5833333333333335,
+      "P18": 3.4166666666666665,
+      "P19": 3.3333333333333335,
+      "P20": 3.8333333333333335,
+      "P21": 3.0833333333333335,
+      "P22": 2.0833333333333335,
+      "P23": 3.0,
+      "P24": 3.0833333333333335,
+      "P25": 3.1666666666666665,
+      "P26": 3.8333333333333335,
+      "P27": 3.25,
+      "P28": 3.1666666666666665,
+      "P29": 3.6666666666666665,
+      "P30": 3.75,
+      "P31": 3.75,
+      "P32": 3.5833333333333335,
+      "P33": 3.3333333333333335,
+      "P34": 3.4166666666666665,
+      "P35": 2.8333333333333335,
+      "P36": 3.25,
+      "P37": 2.6666666666666665,
+      "P38": 2.9166666666666665,
+      "P39": 3.8333333333333335,
+      "P40": 3.5
+    },
+    "agreement_by_proposal": {
+      "P01": 1.0,
+      "P02": 1.0,
+      "P03": 1.0,
+      "P04": 1.0,
+      "P05": 1.0,
+      "P06": 0.5909090909090909,
+      "P07": 0.5909090909090909,
+      "P08": 0.696969696969697,
+      "P09": 0.4696969696969697,
+      "P10": 0.4696969696969697,
+      "P11": 0.4696969696969697,
+      "P12": 0.4696969696969697,
+      "P13": 0.696969696969697,
+      "P14": 0.5909090909090909,
+      "P15": 0.5151515151515151,
+      "P16": 0.8333333333333334,
+      "P17": 0.45454545454545453,
+      "P18": 0.8333333333333334,
+      "P19": 0.8333333333333334,
+      "P20": 0.4696969696969697,
+      "P21": 0.8333333333333334,
+      "P22": 1.0,
+      "P23": 0.8333333333333334,
+      "P24": 1.0,
+      "P25": 0.5151515151515151,
+      "P26": 0.8333333333333334,
+      "P27": 0.5909090909090909,
+      "P28": 0.8333333333333334,
+      "P29": 0.696969696969697,
+      "P30": 0.5909090909090909,
+      "P31": 0.45454545454545453,
+      "P32": 0.8333333333333334,
+      "P33": 0.5151515151515151,
+      "P34": 1.0,
+      "P35": 0.696969696969697,
+      "P36": 0.5909090909090909,
+      "P37": 0.696969696969697,
+      "P38": 0.45454545454545453,
+      "P39": 0.8333333333333334,
+      "P40": 0.8333333333333334
+    },
+    "agreement_median_threshold": 0.696969696969697,
+    "info_ge_3": {
+      "n": 36,
+      "mean_within_risk": 0.6244084599272259,
+      "mean_cross_risk": 0.45911595028722774,
+      "mean_within_rights": 0.4374778745213639,
+      "mean_cross_rights": 0.3391083155130094,
+      "proposal_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12",
+        "P13",
+        "P14",
+        "P15",
+        "P16",
+        "P17",
+        "P18",
+        "P19",
+        "P20",
+        "P21",
+        "P23",
+        "P24",
+        "P25",
+        "P26",
+        "P27",
+        "P28",
+        "P29",
+        "P30",
+        "P31",
+        "P32",
+        "P33",
+        "P34",
+        "P36",
+        "P39",
+        "P40"
+      ]
+    },
+    "info_lt_3": {
+      "n": 4,
+      "mean_within_risk": 0.375,
+      "mean_cross_risk": 0.1388888888888889,
+      "mean_within_rights": 0.560414520897068,
+      "mean_cross_rights": 0.4455686498473647,
+      "proposal_ids": [
+        "P22",
+        "P35",
+        "P37",
+        "P38"
+      ]
+    },
+    "quadrants": {
+      "ambiguous_low_info_low_agree": [
+        "P38"
+      ],
+      "contested_high_info_low_agree": [
+        "P06",
+        "P07",
+        "P09",
+        "P10",
+        "P11",
+        "P12",
+        "P14",
+        "P15",
+        "P17",
+        "P20",
+        "P25",
+        "P27",
+        "P30",
+        "P31",
+        "P33",
+        "P36"
+      ],
+      "clear_high_info_high_agree": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P08",
+        "P13",
+        "P16",
+        "P18",
+        "P19",
+        "P21",
+        "P23",
+        "P24",
+        "P26",
+        "P28",
+        "P29",
+        "P32",
+        "P34",
+        "P39",
+        "P40"
+      ],
+      "noisy_low_info_high_agree": [
+        "P22",
+        "P35",
+        "P37"
+      ]
+    },
+    "criticism_5_note": "Low-sufficiency + low agreement \u2248 ambiguous; high-sufficiency + low agreement \u2248 genuinely contested."
+  },
+  "ceiling_risk": 0.7507056198371532,
+  "ceiling_rights": 0.6416017359465971,
+  "assessor_vs_gt": {
+    "LLM-8B": {
+      "n_proposals": 40,
+      "risk_kappa": 0.20948616600790512,
+      "rights_kappa": 0.5306052269601101
+    },
+    "LLM-70B": {
+      "n_proposals": 40,
+      "risk_kappa": 0.37682570593962994,
+      "rights_kappa": 0.6895647104547222
+    },
+    "keyword-baseline": {
+      "n_proposals": 40,
+      "risk_kappa": 0.09262759924385637,
+      "rights_kappa": 0.2824459234608985
+    },
+    "SHACL": {
+      "n_proposals": 40,
+      "risk_kappa": 0.15441176470588233,
+      "rights_kappa": 0.32032382793620073
+    }
+  },
+  "decision_rule": {
+    "ceiling": 0.7507056198371532,
+    "noise_band": 0.24929438016284677,
+    "pairs": [
+      {
+        "assessor_a": "LLM-70B",
+        "assessor_b": "LLM-8B",
+        "kappa_a": 0.37682570593962994,
+        "kappa_b": 0.20948616600790512,
+        "gap": 0.16733953993172482,
+        "noise_band_1_minus_ceiling": 0.24929438016284677,
+        "verdict": "not_discriminable"
+      },
+      {
+        "assessor_a": "LLM-70B",
+        "assessor_b": "SHACL",
+        "kappa_a": 0.37682570593962994,
+        "kappa_b": 0.15441176470588233,
+        "gap": 0.2224139412337476,
+        "noise_band_1_minus_ceiling": 0.24929438016284677,
+        "verdict": "not_discriminable"
+      },
+      {
+        "assessor_a": "LLM-70B",
+        "assessor_b": "keyword-baseline",
+        "kappa_a": 0.37682570593962994,
+        "kappa_b": 0.09262759924385637,
+        "gap": 0.28419810669577356,
+        "noise_band_1_minus_ceiling": 0.24929438016284677,
+        "verdict": "discriminable"
+      },
+      {
+        "assessor_a": "LLM-8B",
+        "assessor_b": "SHACL",
+        "kappa_a": 0.20948616600790512,
+        "kappa_b": 0.15441176470588233,
+        "gap": 0.05507440130202279,
+        "noise_band_1_minus_ceiling": 0.24929438016284677,
+        "verdict": "not_discriminable"
+      },
+      {
+        "assessor_a": "LLM-8B",
+        "assessor_b": "keyword-baseline",
+        "kappa_a": 0.20948616600790512,
+        "kappa_b": 0.09262759924385637,
+        "gap": 0.11685856676404875,
+        "noise_band_1_minus_ceiling": 0.24929438016284677,
+        "verdict": "not_discriminable"
+      },
+      {
+        "assessor_a": "SHACL",
+        "assessor_b": "keyword-baseline",
+        "kappa_a": 0.15441176470588233,
+        "kappa_b": 0.09262759924385637,
+        "gap": 0.06178416546202596,
+        "noise_band_1_minus_ceiling": 0.24929438016284677,
+        "verdict": "not_discriminable"
+      }
+    ],
+    "n_discriminable": 1,
+    "n_not_discriminable": 5,
+    "kill_condition_2_triggered": false,
+    "kill_condition_2_note": "Partial validity / floor-effect breakdown: 1 pair(s) discriminable, 5 not_discriminable (typically near-floor assessors whose gap < noise band). Accuracy-based ranking is valid for the discriminable pairs only."
+  },
+  "leave_one_out": {
+    "n_reruns": 40,
+    "within_risk_min": 0.5983697412904015,
+    "within_risk_max": 0.6294214122897351,
+    "cross_risk_min": 0.4003555727306302,
+    "cross_risk_max": 0.4522745619310493,
+    "ceiling_min": 0.7334247965444264,
+    "ceiling_max": 0.7763647303358495
+  },
+  "d_study": {
+    "formula": "Spearman-Brown: \u03c1* = (k\u03c1)/(1+(k-1)\u03c1), k=n*/n_obs",
+    "n_obs": 40,
+    "projected_n60": 0.7050524256112582,
+    "projected_n100": 0.7993601619424218
+  },
+  "kill_conditions": {
+    "1_within_le_cross_risk": false,
+    "2_all_gaps_within_noise_band": false,
+    "2_note": "Partial validity / floor-effect breakdown: 1 pair(s) discriminable, 5 not_discriminable (typically near-floor assessors whose gap < noise band). Accuracy-based ranking is valid for the discriminable pairs only.",
+    "3_property_suite": "evaluated in property_evaluator.py (Step 5)"
+  }
+}

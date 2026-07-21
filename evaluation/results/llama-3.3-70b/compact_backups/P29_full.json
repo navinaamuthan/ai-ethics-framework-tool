@@ -1,0 +1,24 @@
+{
+  "proposal_id": "P29",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This project proposes a 'community safety analytics' dashboard for a mid-sized EU city police service. The model forecasts week-ahead geographic concentrations of emergency calls using historical CAD data, weather, and event calendars. Outputs are heat maps for patrol allocation, not individual risk scores. Civil-liberties groups argue the system recapitulates predictive policing by intensifying presence in already over-policed neighbourhoods; the police service argues it only allocates scarce ambulances and officers to call volume. No individual surveillance cameras or stop-and-search recommendations are generated. Historical call data embed prior discriminatory deployment patterns. Whether Art.6 liberty, Art.21 non-discrimination, or neither is primarily engaged is contested among reasonable experts given the aggregate-only design.",
+  "assessment": {
+    "overall_risk_level": "Medium",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art21_NonDiscrimination",
+        "right_name": "Non-Discrimination",
+        "relevance": "The system may recapitulate predictive policing by intensifying presence in already over-policed neighbourhoods, potentially perpetuating discriminatory deployment patterns."
+      },
+      {
+        "article": "Art6_RightToLiberty",
+        "right_name": "Right To Liberty",
+        "relevance": "The allocation of patrol resources based on forecasted emergency calls may raise concerns about liberty, particularly in neighbourhoods with historically high police presence."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

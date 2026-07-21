@@ -1,0 +1,359 @@
+{
+  "proposal_id": "P20_negative_8b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T02:10:58.902238",
+  "proposal_text": "Workplace Productivity Monitoring with Employee Consent: Addressing Power Imbalance and Enhanced Transparency",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "consent",
+    "employ",
+    "employee",
+    "monitor",
+    "transparen",
+    "workplace"
+  ],
+  "matched_rights": [
+    "Art15_FreedomOfOccupation",
+    "Art31_FairWorkingConditions",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 70,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 45.0,
+      "tf": 45,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 14.0,
+      "tf": 14,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 48
+    },
+    {
+      "id": "EmploymentHarm",
+      "label": "Employment Harm",
+      "definition": "Risk of unfair exclusion, surveillance, or adverse treatment of workers or job applicants by AI systems.",
+      "idf_score": 4.1701,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 20
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 26
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 15
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "FunctionCreep",
+      "label": "Function Creep",
+      "definition": "Risk that an AI system is used beyond its originally defined and ethically approved purpose.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 3,
+      "df": 6
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "This proposal involves workplace productivity monitoring with employee consent, addressing power imbalance and enhanced transparency. However, it raises concerns about privacy, discrimination, and accountability, particularly in the context of AI-assisted decision-making.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "PrivacyBreach",
+        "risk_category": "PrivacyBreach",
+        "severity": "Medium",
+        "explanation": "The proposal involves processing personal data of employees, which requires adequate protection and consent mechanisms."
+      },
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
+        "severity": "Medium",
+        "explanation": "The AI system may perpetuate biases or discriminate against certain groups of employees, particularly if the training data is biased."
+      },
+      {
+        "risk": "Accountability",
+        "risk_category": "Accountability",
+        "severity": "Medium",
+        "explanation": "Employees may not be able to understand or contest AI-mediated decisions, which could lead to unfair treatment."
+      },
+      {
+        "risk": "FunctionCreep",
+        "risk_category": "Function Creep",
+        "severity": "Medium",
+        "explanation": "The AI system may be used beyond its originally defined purpose, potentially leading to unforeseen consequences."
+      },
+      {
+        "risk": "Transparency",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The proposal requires comprehensive evaluation and explanation of the AI system's impacts and risks."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct bias analysis and mitigation strategies"
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Regularly audit and update the AI system to prevent bias"
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement robust consent mechanisms and data protection protocols"
+      },
+      {
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct thorough risk assessment and impact analysis"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 15",
+        "right_name": "FreedomOfOccupation",
+        "relevance": "The proposal involves workplace productivity monitoring, which may impact employees' freedom of occupation."
+      },
+      {
+        "article": "Article 31",
+        "right_name": "FairWorkingConditions",
+        "relevance": "The proposal aims to address power imbalance and enhance transparency in the workplace, which is relevant to fair working conditions."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "PrivateLife",
+        "relevance": "The proposal involves processing personal data of employees, which may impact their private life."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The proposal requires adequate protection and consent mechanisms for personal data of employees."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-015",
+        "incident_title": "Uber Surge Pricing Discrimination",
+        "lesson": "Regularly audit and update the AI system to prevent bias and discrimination"
+      },
+      {
+        "incident_id": "AIAAIC-021",
+        "incident_title": "HireVue Automated Video Interview Bias",
+        "lesson": "Implement robust consent mechanisms and data protection protocols"
+      },
+      {
+        "incident_id": "AIAAIC-022",
+        "incident_title": "Deliveroo Algorithmic Dismissal",
+        "lesson": "Conduct thorough risk assessment and impact analysis"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement robust consent mechanisms and data protection protocols",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Regularly audit and update the AI system to prevent bias and discrimination",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct thorough risk assessment and impact analysis",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct bias analysis and mitigation strategies",
+      "Implement robust consent mechanisms and data protection protocols",
+      "Regularly audit and update the AI system to prevent bias and discrimination"
+    ],
+    "tier2_reflective_prompts": [
+      "How will you ensure the AI system is fair and transparent?",
+      "What measures will you take to prevent bias and discrimination?",
+      "How will you address potential risks and impacts on employees?"
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "consent",
+        "employ",
+        "employee",
+        "monitor",
+        "transparen",
+        "workplace"
+      ],
+      "rights_matched": 4,
+      "requirements_retrieved": 70,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM011",
+        "ACM037",
+        "HE020",
+        "R020",
+        "R050",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM011",
+        "ACM037",
+        "HE020",
+        "R020",
+        "R050",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R054",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE013",
+        "HE033",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM003",
+        "ACM004",
+        "ACM006",
+        "ACM007"
+      ],
+      "incidents_sample": [
+        "AIAAIC-015",
+        "AIAAIC-021",
+        "AIAAIC-022",
+        "AIAAIC-002",
+        "AIAAIC-007"
+      ]
+    }
+  }
+}

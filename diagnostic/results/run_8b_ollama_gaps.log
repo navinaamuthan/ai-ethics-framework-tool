@@ -1,0 +1,28 @@
+  [SPARQL] GraphDB unreachable — falling back to local ontology TTL
+  [OK] Loaded local ontology: /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/ontology/ai-ethics-final.ttl (4399 triples)
+  [OK] GraphDB connected. Total triples: 4399
+  [OK] Ollama connected. Available models: ['llama3.1:8b']
+  [OK] Model 'llama3.1:8b' is available.
+need ['P22', 'P24', 'P25', 'P26', 'P28', 'P30', 'P35', 'P39']
+[1/8] P22
+
+============================================================
+ASSESSING PROPOSAL: P22
+Mode: full | Backend: ollama | Model: llama3.1:8b | Context reqs: 12
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['employ', 'discriminat', 'employee', 'fairness', 'profil', 'recruit', 'scor']
+  Charter rights matched: 4
+  Requirements retrieved: 81
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Discrimination', 'Accountability', 'EmploymentHarm', 'DataGovernance', 'PsychologicalHarm', 'ReputationalHarm', 'FalseIdentification', 'DataBreach', 'FunctionCreep']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 9472 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...

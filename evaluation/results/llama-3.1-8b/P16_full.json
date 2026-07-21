@@ -1,8 +1,11 @@
 {
   "proposal_id": "P16",
   "mode": "full",
-  "timestamp": "2026-07-05T16:11:40.255741",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T20:35:04.778452",
   "proposal_text": "This project proposes to apply statistical machine learning methods to publicly available climate datasets from Met Éireann and the European Centre for Medium-Range Weather Forecasts. The research will analyse temperature, precipitation, and wind patterns across Ireland over the past 50 years to identify statistically significant trends and regional variations. The methodology combines Gaussian process regression with ensemble methods to quantify prediction uncertainty. All datasets are publicly available under open government data licences. No personal data is involved. The computational resources required for model training will be documented including estimated carbon footprint using the ML CO2 Impact calculator. Results will be published as an open-access paper with all code and data made available in a public repository.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "data",
     "personal data",
@@ -21,103 +24,90 @@
   "retrieved_requirements_count": 170,
   "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "The research proposal involves publicly available climate datasets and statistical machine learning methods to identify trends and regional variations. Although the project does not involve personal data, there are potential risks related to environmental sustainability and bias in input data.",
-    "overall_risk_level": "Medium",
+    "risk_summary": "The proposed research involves publicly available climate datasets, but it is essential to consider the potential risks and impacts of the research approach itself, as well as possible applications. The project's methodology combines Gaussian process regression with ensemble methods to quantify prediction uncertainty, which may raise concerns about bias and fairness.",
+    "overall_risk_level": "MEDIUM",
     "identified_risks": [
       {
-        "risk": "Bias in input data",
+        "risk": "Bias and unfairness in the research approach or its applications",
         "severity": "Medium",
-        "explanation": "The research involves publicly available climate datasets, but the methodology combines Gaussian process regression with ensemble methods. There is a risk of bias in the input data if not properly addressed."
+        "explanation": "The project's methodology combines Gaussian process regression with ensemble methods, which may raise concerns about bias and fairness. The ACMConference guidelines require consideration of possible risks and impacts of the research approach itself (ACM008)."
       },
       {
-        "risk": "Environmental sustainability",
+        "risk": "Potential harm to individuals or groups through misuse or side effects",
         "severity": "Medium",
-        "explanation": "The project requires computational resources and may have an estimated carbon footprint. The research should consider the environmental impact and mitigation steps."
+        "explanation": "The project's applications may cause harm if not properly mitigated. The ACMConference guidelines require consideration of whether technology can be used to harm, injure, or kill people (ACM021)."
       },
       {
-        "risk": "Bias in algorithmic design",
-        "severity": "Low",
-        "explanation": "Although not a primary concern, there is still a risk of bias in the algorithmic design if not properly addressed."
+        "risk": "Environmental impact and greenhouse gas production",
+        "severity": "Medium",
+        "explanation": "The project's computational resources required for model training will have an environmental impact. The ACMConference guidelines require consideration of whether research negatively impacts the environment (ACM026)."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "HE013",
-        "requirement_text": "Document how bias in input data and algorithmic design will be identified and avoided.",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "The research should document the steps taken to identify and avoid bias in input data and algorithmic design."
-      },
-      {
-        "requirement_id": "HE015",
-        "requirement_text": "Possible negative social impacts on certain groups must be mitigated, including impacts beyond algorithmic bias.",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "The research should consider the potential negative social impacts and mitigate them."
-      },
-      {
-        "requirement_id": "HE032",
-        "requirement_text": "Input, training and output data must all be analysed for bias — verify data accounts for diversity in gender, race, age, sexual orientation, national origin, religion, health, disability.",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "The research should analyse the input, training, and output data for bias and ensure that it accounts for diversity in various aspects."
-      },
-      {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm.",
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms.",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "The research should consider the potential harm caused by the data, code, or other outcomes and take steps to avoid it."
+        "action_needed": "Discuss potential risks and impacts of the research approach itself and its applications."
       },
       {
-        "requirement_id": "HE018",
-        "requirement_text": "AI development must be mindful of environmental sustainability — document environmental impact and mitigation steps.",
-        "framework": "HorizonEurope",
+        "requirement_id": "ACM008",
+        "requirement_text": "Consider possible risks and impacts of the research approach itself (not just applications).",
+        "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "The research should consider the environmental impact and document the mitigation steps taken."
+        "action_needed": "Conduct a thorough risk assessment of the research approach."
+      },
+      {
+        "requirement_id": "ACM026",
+        "requirement_text": "Consider whether research negatively impacts environment — fossil fuel extraction, consumption, greenhouse gas production.",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Estimate the project's carbon footprint using the ML CO2 Impact calculator."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 37",
+        "article": "Article 37 EnvironmentalProtection",
         "right_name": "Environmental Protection",
-        "relevance": "The research involves publicly available climate datasets and may have an estimated carbon footprint, which could potentially harm the environment."
+        "relevance": "The project's environmental impact and greenhouse gas production may raise concerns about Article 37 of the EU Charter of Fundamental Rights."
       },
       {
-        "article": "Article 21",
+        "article": "Article 21 NonDiscrimination",
         "right_name": "Non-Discrimination",
-        "relevance": "Although not a primary concern, there is still a risk of bias in the input data or algorithmic design, which could lead to discrimination."
+        "relevance": "The project's methodology combines Gaussian process regression with ensemble methods, which may raise concerns about bias and fairness, potentially impacting Article 21 of the EU Charter of Fundamental Rights."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-008",
-        "incident_title": "PredPol Predictive Policing Algorithmic Bias",
-        "lesson": "The research should consider the potential bias in input data and algorithmic design and take steps to mitigate it."
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of considering bias and fairness in AI research and development, particularly when dealing with sensitive data or applications."
       },
       {
         "incident_id": "AIAAIC-034",
         "incident_title": "China Social Credit System AI Scoring",
-        "lesson": "The research should be mindful of environmental sustainability and document the mitigation steps taken."
+        "lesson": "The potential risks and impacts of AI systems on individuals and society, including the possibility of bias and unfairness."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Regularly review and update the methodology to ensure that it is free from bias.",
+        "mitigation": "Conduct a thorough risk assessment of the research approach and its applications.",
         "priority": "High"
       },
       {
-        "mitigation": "Document the steps taken to mitigate potential negative social impacts.",
+        "mitigation": "Estimate the project's carbon footprint using the ML CO2 Impact calculator.",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Addressing bias in input data",
-      "Mitigating environmental sustainability"
+      "Discuss potential risks and impacts of the research approach itself and its applications (ACM001).",
+      "Conduct a thorough risk assessment of the research approach (ACM008).",
+      "Estimate the project's carbon footprint using the ML CO2 Impact calculator (ACM026)."
     ],
     "tier2_reflective_prompts": [
-      "Consider the potential harm caused by the data, code, or other outcomes of research.",
-      "Reflect on the potential negative social impacts and consider mitigations."
+      "How can the project's methodology be designed to minimize bias and ensure fairness?",
+      "What measures can be taken to mitigate potential risks and impacts of the research approach itself and its applications?"
     ],
     "reams_clearance_likely": true,
     "confidence_flag": "HIGH",
@@ -317,11 +307,9 @@
         "R073"
       ],
       "requirements_cited": [
-        "HE013",
-        "HE015",
-        "HE032",
-        "ACM002",
-        "HE018"
+        "ACM001",
+        "ACM008",
+        "ACM026"
       ],
       "incidents_sample": [
         "AIAAIC-001",

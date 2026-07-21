@@ -1,0 +1,34 @@
+{
+  "run_timestamp": "2026-07-20T16:49:53.525630",
+  "llm_backend": "groq",
+  "llm_model": null,
+  "max_requirements": null,
+  "output_dir": "outputs",
+  "total_proposals": 2,
+  "results": [
+    {
+      "id": "P17",
+      "title": "Dual-Use AI for Detecting Online Extremist Content",
+      "expected_risk": "High",
+      "predicted_risk": "N/A",
+      "risk_match": "MISMATCH",
+      "confidence_flag": "N/A",
+      "requirements_cited": 0,
+      "rights_flagged": 0,
+      "precedents_cited": 0,
+      "mitigations": 0
+    },
+    {
+      "id": "P19",
+      "title": "Cross-Border EU/US Medical Data Sharing for Rare Disease AI",
+      "expected_risk": "High",
+      "predicted_risk": "N/A",
+      "risk_match": "MISMATCH",
+      "confidence_flag": "N/A",
+      "requirements_cited": 0,
+      "rights_flagged": 0,
+      "precedents_cited": 0,
+      "mitigations": 0
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "proposal_id": "P19",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-20T18:12:43.904818",
+  "proposal_text": "This research proposes a collaboration between Trinity College Dublin and Johns Hopkins University to develop an AI diagnostic model for rare genetic conditions. The project requires sharing patient genomic data and medical imaging between Ireland and the United States. The Irish dataset of 2,000 patients was collected under GDPR with consent for domestic research use only. The US dataset was collected under HIPAA regulations. The researchers propose to use federated learning to train the model without raw data leaving each jurisdiction, but the federated learning protocol requires sharing model gradient updates which have been shown in recent research to be vulnerable to reconstruction attacks that can recover individual patient data. The project has received funding approval but cross-border data transfer impact assessments have not been completed. The rare disease patient population is small enough that anonymisation may not prevent re-identification. No patient advisory group has been consulted on the data sharing arrangements.",
+  "context_max_requirements": 25,
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "patient",
+    "consent",
+    "cross-border",
+    "diagnos",
+    "medical",
+    "transfer",
+    "vulnerable"
+  ],
+  "matched_rights": [
+    "Art2_RightToLife",
+    "Art35_HealthCare",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 71,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 46.0,
+      "tf": 46,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 14.0,
+      "tf": 14,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 26
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 19
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 15
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "FunctionCreep",
+      "label": "Function Creep",
+      "definition": "Risk that an AI system is used beyond its originally defined and ethically approved purpose.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 3,
+      "df": 6
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "error": "LLM returned empty response"
+  }
+}

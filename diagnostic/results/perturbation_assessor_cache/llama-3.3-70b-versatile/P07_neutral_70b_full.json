@@ -1,0 +1,446 @@
+{
+  "proposal_id": "P07_neutral_70b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T02:08:40.313264",
+  "proposal_text": "This study proposes to apply sentiment analysis and linguistic style detection to a corpus of 5,000 anonymised undergraduate essays submitted to the School of English at Trinity College Dublin. The aim is to investigate whether emotional tone and writing style correlate with academic grade outcomes. Essays will be collected from the past three academic years with student consent obtained retrospectively via email. The NLP pipeline will extract features including sentiment polarity, subjectivity scores, vocabulary complexity, and sentence structure patterns. The researchers will investigate whether detectable stylistic differences correlate with students' first language, gender, or socioeconomic background as indicated by fee status. All analysis will be performed on pseudonymised data with student IDs replaced by random codes. Results will be published in aggregate form only.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "student",
+    "sentiment",
+    "consent",
+    "emotion",
+    "gender",
+    "school",
+    "scor"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art1_HumanDignity",
+    "Art21_NonDiscrimination",
+    "Art24_RightsOfChild",
+    "Art3_RightToIntegrity",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 129,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 54.0,
+      "tf": 54,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 41.0,
+      "tf": 41,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 21.0,
+      "tf": 21,
+      "df": 26
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 18.0,
+      "tf": 18,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 15
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The proposed research involves sentiment analysis and linguistic style detection on a corpus of anonymised undergraduate essays, which raises concerns about potential biases in the NLP pipeline, discrimination based on protected characteristics, and psychological harm to students. The use of pseudonymised data and retrospective student consent via email may not be sufficient to mitigate these risks. Additionally, the study's focus on correlating emotional tone and writing style with academic grade outcomes may perpetuate existing biases in the education system. The research may also have implications for the dignity and privacy of students, particularly if the results are not anonymised or aggregated properly.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Biases in NLP pipeline",
+        "risk_category": "Discrimination",
+        "severity": "Medium",
+        "explanation": "The NLP pipeline may perpetuate biases against certain groups of students, such as those with non-English first languages or from lower socioeconomic backgrounds."
+      },
+      {
+        "risk": "Psychological harm to students",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Medium",
+        "explanation": "The study's focus on correlating emotional tone and writing style with academic grade outcomes may cause psychological harm to students who are already struggling with their academic performance."
+      },
+      {
+        "risk": "Lack of transparency in data collection and analysis",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The use of pseudonymised data and retrospective student consent via email may not provide sufficient transparency about the data collection and analysis process."
+      },
+      {
+        "risk": "Potential for dignitary harm",
+        "risk_category": "Dignity",
+        "severity": "Low",
+        "explanation": "The study's focus on analysing student essays may raise concerns about the dignity and privacy of students, particularly if the results are not anonymised or aggregated properly."
+      },
+      {
+        "risk": "Data governance and quality control",
+        "risk_category": "DataGovernance",
+        "severity": "Medium",
+        "explanation": "The study's use of a large corpus of essays raises concerns about data governance and quality control, particularly if the data is not properly anonymised or aggregated."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The researchers should discuss how the study's findings may be used to improve the education system and mitigate potential harms to students."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The researchers should consider how the study's use of NLP pipeline and data analysis may cause harm to students and take steps to mitigate these risks."
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The researchers should take steps to ensure that the NLP pipeline is fair and does not perpetuate biases against certain groups of students."
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The researchers should consider how the study's use of data and NLP pipeline may perpetuate biases and take steps to ameliorate these biases."
+      },
+      {
+        "requirement_id": "ACM005",
+        "requirement_text": "Respect intellectual property and data/code ownership — cite creators of artefacts used and use them as intended (respect licences)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The researchers should ensure that they respect the intellectual property and data/code ownership of the creators of the NLP pipeline and other artefacts used in the study."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The study's use of NLP pipeline and data analysis may perpetuate biases against certain groups of students, which raises concerns about non-discrimination."
+      },
+      {
+        "article": "Article 1",
+        "right_name": "Human Dignity",
+        "relevance": "The study's focus on analysing student essays may raise concerns about the dignity and privacy of students, particularly if the results are not anonymised or aggregated properly."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The study's use of student essays and data analysis may raise concerns about the private life of students, particularly if the results are not anonymised or aggregated properly."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The study's use of student data and NLP pipeline may raise concerns about data protection, particularly if the data is not properly anonymised or aggregated."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The use of biased algorithms can perpetuate discrimination against certain groups, highlighting the need for fairness and transparency in AI systems."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The use of AI systems can lead to false identifications and arrests, highlighting the need for robust testing and validation of AI systems."
+      },
+      {
+        "incident_id": "AIAAIC-014",
+        "incident_title": "YouTube Recommendation Radicalisation",
+        "lesson": "The use of AI systems can perpetuate biases and radicalisation, highlighting the need for transparency and accountability in AI systems."
+      },
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "The use of AI systems can perpetuate hate speech and discrimination, highlighting the need for robust content moderation and accountability in AI systems."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Use of fairness metrics and bias detection tools",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implementation of transparency and explainability measures",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Use of anonymisation and aggregation techniques",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Establishment of a data governance framework",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Regular auditing and testing of the NLP pipeline",
+        "priority": "Low"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Ensure that the NLP pipeline is fair and does not perpetuate biases against certain groups of students",
+      "Implement transparency and explainability measures to ensure that the study's findings are accurate and reliable",
+      "Use anonymisation and aggregation techniques to protect the privacy and dignity of students",
+      "Establish a data governance framework to ensure that the study's use of data is transparent and accountable"
+    ],
+    "tier2_reflective_prompts": [
+      "How may the study's use of NLP pipeline and data analysis perpetuate biases against certain groups of students?",
+      "What are the potential consequences of the study's findings for the education system and for students?",
+      "How may the study's use of anonymisation and aggregation techniques impact the accuracy and reliability of the findings?",
+      "What are the potential risks and benefits of using AI systems in education, and how may these be mitigated?"
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "student",
+        "sentiment",
+        "consent",
+        "emotion",
+        "gender",
+        "school",
+        "scor"
+      ],
+      "rights_matched": 7,
+      "requirements_retrieved": 129,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM024",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE049",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "ACM012",
+        "ACM023",
+        "ACM028",
+        "AI016",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R028",
+        "R085",
+        "R043",
+        "R044",
+        "R045",
+        "R055",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "R009",
+        "R015",
+        "R019",
+        "R022",
+        "R034",
+        "R039",
+        "R042",
+        "R046",
+        "R048",
+        "ACM003",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R023",
+        "R026",
+        "R047",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM003",
+        "ACM004",
+        "ACM005"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-003",
+        "AIAAIC-005"
+      ]
+    }
+  }
+}

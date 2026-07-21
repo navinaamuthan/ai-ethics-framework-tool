@@ -1,0 +1,24 @@
+{
+  "proposal_id": "P26",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This project proposes a WhatsApp-based crop-advisory chatbot for smallholder farmers in Maharashtra and Odisha. The bot answers irrigation, pest, and market-price questions using retrieval over public agricultural extension bulletins and open weather APIs. Conversations are logged in aggregate for service improvement; phone numbers are hashed after 30 days. No credit, subsidy, or enforcement decisions are attached to bot use. A subtle residual issue is that incorrect pest-treatment advice could cause crop loss for farmers who treat the bot as authoritative, yet the interface presents answers with high confidence and no uncertainty bands. The team will run a small accuracy pilot against agronomist answers but has not planned liability or escalation pathways when advice fails. No personal land-holding registries are ingested.",
+  "assessment": {
+    "overall_risk_level": "Medium",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art3_RightToIntegrity",
+        "right_name": "Right to Integrity",
+        "relevance": "The chatbot's potential to provide incorrect advice could cause financial loss and harm to farmers' livelihoods."
+      },
+      {
+        "article": "Art7_PrivateLife",
+        "right_name": "Right to Private Life",
+        "relevance": "The logging of conversations, even in aggregate, and the hashing of phone numbers after 30 days may raise concerns about the protection of farmers' personal data."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

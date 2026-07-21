@@ -1,0 +1,465 @@
+{
+  "proposal_id": "P21_negative_8b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T02:04:46.106245",
+  "proposal_text": "This research proposes to develop a machine learning credit-scoring model for a Nairobi-based digital lender serving unbanked and underbanked borrowers across Kenya. The model will predict default risk from mobile-money transaction histories, airtime purchase patterns, geolocation of cash-in/cash-out agents, phone contacts graph density, and device metadata. Training data cover approximately 2.4 million customers of a partner mobile-network operator, collected under the operator's terms of service rather than purpose-specific lending consent. Loan approval and pricing decisions will be fully automated for amounts under KES 50,000, with no human review unless the applicant formally complains. The researchers note that contact-graph features may encode ethnicity and socioeconomic clustering in urban informal settlements, but no demographic fairness audit across ethnic groups or counties is planned before pilot launch. Rejected applicants will receive a generic adverse-action notice without feature-level explanation. The study protocol has not yet been reviewed against the Kenya Data Protection Act 2019 or the EU Charter articles that would apply if the same pipeline were later ported to an EU migrant-lending product. Outputs will be shared with a commercial data broker without additional consent or purpose limitation.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "consent",
+    "fairness",
+    "predict",
+    "scor"
+  ],
+  "matched_rights": [
+    "Art21_NonDiscrimination",
+    "Art3_RightToIntegrity",
+    "Art47_RightToEffectiveRemedy",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 126,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 55.0,
+      "tf": 55,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 42.0,
+      "tf": 42,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 17.0,
+      "tf": 17,
+      "df": 48
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 15.0,
+      "tf": 15,
+      "df": 26
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 15
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "individual_treatment→Art21",
+  "assessment": {
+    "risk_summary": "The proposed credit-scoring model for a Nairobi-based digital lender poses significant risks to vulnerable groups, including potential discrimination and financial harm, due to the use of mobile-money transaction histories, airtime purchase patterns, and geolocation data without explicit consent. The model's reliance on biased data and lack of demographic fairness audit also raise concerns. Furthermore, the generic adverse-action notice without feature-level explanation may exacerbate harm to rejected applicants.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Discrimination against vulnerable groups",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The use of geolocation data and contact-graph features may encode ethnicity and socioeconomic clustering in urban informal settlements, perpetuating biases and discrimination."
+      },
+      {
+        "risk": "Financial harm to rejected applicants",
+        "risk_category": "FinancialHarm",
+        "severity": "High",
+        "explanation": "The generic adverse-action notice without feature-level explanation may exacerbate harm to rejected applicants."
+      },
+      {
+        "risk": "Privacy breach of sensitive customer data",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The collection and processing of sensitive customer data, including mobile-money transaction histories and airtime purchase patterns, without explicit consent raises significant privacy concerns."
+      },
+      {
+        "risk": "Lack of transparency and accountability",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "The model's operation, capabilities, and decision rationale are not adequately disclosed to end-users and stakeholders, compromising transparency and accountability."
+      },
+      {
+        "risk": "Surveillance of customers",
+        "risk_category": "Surveillance",
+        "severity": "Medium",
+        "explanation": "The use of geolocation data and contact-graph features may enable pervasive or disproportionate observation, tracking, or monitoring of customers."
+      },
+      {
+        "risk": "Data governance and stewardship issues",
+        "risk_category": "DataGovernance",
+        "severity": "Medium",
+        "explanation": "The collection and processing of sensitive customer data without explicit consent and the lack of demographic fairness audit raise concerns about data governance and stewardship."
+      },
+      {
+        "risk": "Reputational harm to the lender",
+        "risk_category": "ReputationalHarm",
+        "severity": "Medium",
+        "explanation": "The potential for biased decision-making and lack of transparency may damage the lender's reputation and credibility."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of potential harms and develop strategies to mitigate them."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Identify and mitigate potential harms arising from the collection and processing of sensitive customer data."
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a demographic fairness audit and develop strategies to address biases and discrimination."
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Regularly monitor and address biases in the model's outputs and decision-making processes."
+      },
+      {
+        "requirement_id": "ACM005",
+        "requirement_text": "Respect intellectual property and data/code ownership — cite creators of artefacts used and use them as intended (respect licences)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure proper citation and respect for intellectual property rights in the use of third-party data and code."
+      },
+      {
+        "requirement_id": "EUAIAct-001",
+        "requirement_text": "Personal data processing must be transparent, fair, and lawful",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop a transparent and fair data processing policy and obtain explicit consent from customers for the collection and processing of their sensitive data."
+      },
+      {
+        "requirement_id": "EUAIAct-002",
+        "requirement_text": "Personal data must be processed in a way that ensures appropriate security, including protection against unauthorised or unlawful processing, accidental loss, destruction or damage",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement robust security measures to protect sensitive customer data from unauthorised access, loss, or damage."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The use of geolocation data and contact-graph features may encode ethnicity and socioeconomic clustering in urban informal settlements, perpetuating biases and discrimination."
+      },
+      {
+        "article": "Article 3",
+        "right_name": "Right to Integrity",
+        "relevance": "The collection and processing of sensitive customer data without explicit consent raises concerns about the right to integrity."
+      },
+      {
+        "article": "Article 47",
+        "right_name": "Right to Effective Remedy",
+        "relevance": "The potential for biased decision-making and lack of transparency may damage the lender's reputation and credibility, compromising the right to effective remedy."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The use of geolocation data and contact-graph features may enable pervasive or disproportionate observation, tracking, or monitoring of customers, compromising their private life."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The collection and processing of sensitive customer data without explicit consent raises significant data protection concerns."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of fairness and transparency in AI decision-making processes."
+      },
+      {
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The need for regular monitoring and addressing of biases in AI decision-making processes."
+      },
+      {
+        "incident_id": "AIAAIC-016",
+        "incident_title": "Palantir ICE Surveillance System",
+        "lesson": "The risks of surveillance and data governance issues in AI systems."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct a thorough analysis of potential harms and develop strategies to mitigate them.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement robust security measures to protect sensitive customer data from unauthorised access, loss, or damage.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct a demographic fairness audit and develop strategies to address biases and discrimination.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Regularly monitor and address biases in the model's outputs and decision-making processes.",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Develop a transparent and fair data processing policy and obtain explicit consent from customers for the collection and processing of their sensitive data.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough analysis of potential harms and develop strategies to mitigate them.",
+      "Implement robust security measures to protect sensitive customer data from unauthorised access, loss, or damage.",
+      "Conduct a demographic fairness audit and develop strategies to address biases and discrimination.",
+      "Regularly monitor and address biases in the model's outputs and decision-making processes.",
+      "Develop a transparent and fair data processing policy and obtain explicit consent from customers for the collection and processing of their sensitive data."
+    ],
+    "tier2_reflective_prompts": [
+      "Consider the potential long-term consequences of the AI system on vulnerable groups.",
+      "Reflect on the importance of transparency and accountability in AI decision-making processes.",
+      "Think about the need for regular monitoring and addressing of biases in AI decision-making processes.",
+      "Ponder the risks of surveillance and data governance issues in AI systems.",
+      "Contemplate the importance of fairness and transparency in AI decision-making processes."
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "consent",
+        "fairness",
+        "predict",
+        "scor"
+      ],
+      "rights_matched": 5,
+      "requirements_retrieved": 126,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "R028",
+        "R085",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "HE003",
+        "HE004",
+        "HE017",
+        "R009",
+        "R011",
+        "R015",
+        "R019",
+        "R022",
+        "R034",
+        "R039",
+        "R042",
+        "R043",
+        "R044",
+        "R046",
+        "R048",
+        "R054",
+        "R076",
+        "ACM001",
+        "ACM017",
+        "ACM021",
+        "ACM035",
+        "AI002",
+        "AI015",
+        "AI017",
+        "AI018",
+        "AI019",
+        "AI020",
+        "AI022",
+        "AI026",
+        "AI028",
+        "AI030",
+        "HE002",
+        "HE005",
+        "HE006",
+        "HE024",
+        "HE026",
+        "HE027",
+        "HE028",
+        "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
+        "HE048",
+        "HE052",
+        "R010",
+        "R055",
+        "R074",
+        "R082",
+        "ACM003",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R023",
+        "R026",
+        "R040",
+        "R047",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "EUAIAct-001",
+        "EUAIAct-002"
+      ],
+      "incidents_sample": [
+        "AIAAIC-001",
+        "AIAAIC-002",
+        "AIAAIC-003",
+        "AIAAIC-004",
+        "AIAAIC-008"
+      ]
+    }
+  }
+}

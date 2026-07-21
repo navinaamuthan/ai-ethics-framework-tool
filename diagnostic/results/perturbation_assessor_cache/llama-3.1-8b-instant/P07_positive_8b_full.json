@@ -1,0 +1,275 @@
+{
+  "proposal_id": "P07_positive_8b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T02:07:24.307142",
+  "proposal_text": "This research proposes to apply sentiment analysis and linguistic style detection to a corpus of 5,000 anonymised undergraduate essays submitted to the School of English at Trinity College Dublin, with a bias audit to ensure fairness in correlation analysis.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "bias",
+    "fairness",
+    "school",
+    "sentiment"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art22_CulturalDiversity"
+  ],
+  "retrieved_requirements_count": 10,
+  "retrieved_incidents_count": 3,
+  "retrieved_risk_categories": [
+    {
+      "id": "ExpressionHarm",
+      "label": "Expression Harm",
+      "definition": "Risk of chilling, suppressing, or misrepresenting legitimate expression through AI content systems.",
+      "idf_score": 5.0174,
+      "rank_score": 5.0,
+      "tf": 5,
+      "df": 8
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 4.0,
+      "tf": 4,
+      "df": 48
+    },
+    {
+      "id": "DualUseMisuse",
+      "label": "Dual-Use Misuse",
+      "definition": "Risk that research or AI outputs intended for beneficial purposes are repurposed for harmful applications.",
+      "idf_score": 4.912,
+      "rank_score": 4.0,
+      "tf": 4,
+      "df": 9
+    },
+    {
+      "id": "PhysicalHarm",
+      "label": "Physical Harm",
+      "definition": "Risk of bodily injury, death, or physical safety compromise caused by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 4.0,
+      "tf": 4,
+      "df": 19
+    },
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 4.0,
+      "tf": 4,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 3.0,
+      "tf": 3,
+      "df": 101
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    },
+    {
+      "id": "DemocraticProcessHarm",
+      "label": "Democratic Process Harm",
+      "definition": "Risk of undermining democratic institutions, electoral processes, or civic participation through AI systems.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 3,
+      "df": 6
+    },
+    {
+      "id": "FunctionCreep",
+      "label": "Function Creep",
+      "definition": "Risk that an AI system is used beyond its originally defined and ethically approved purpose.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 1,
+      "df": 6
+    }
+  ],
+  "rights_disambiguation": "systemic_info→Art11/Art22",
+  "assessment": {
+    "risk_summary": "This research proposal involves sentiment analysis and linguistic style detection on anonymised undergraduate essays, which poses risks of expression harm, discrimination, and privacy breach. The bias audit aims to ensure fairness in correlation analysis, but the project's scope and potential impact on students' work and well-being must be carefully considered.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Expression harm through misrepresentation of students' work",
+        "risk_category": "ExpressionHarm",
+        "severity": "Medium",
+        "explanation": "The project's focus on sentiment analysis and linguistic style detection may inadvertently misrepresent students' work, potentially chilling or suppressing legitimate expression."
+      },
+      {
+        "risk": "Discrimination through biased correlation analysis",
+        "risk_category": "Discrimination",
+        "severity": "Medium",
+        "explanation": "The bias audit aims to ensure fairness, but the project's correlation analysis may still introduce biases that discriminate against certain groups of students."
+      },
+      {
+        "risk": "Privacy breach through unauthorised data processing",
+        "risk_category": "PrivacyBreach",
+        "severity": "Medium",
+        "explanation": "Although the essays are anonymised, the project still involves processing personal data, which may pose a risk of unauthorised data processing and disclosure."
+      },
+      {
+        "risk": "Transparency risk through inadequate disclosure of project scope and impact",
+        "risk_category": "Transparency",
+        "severity": "Low",
+        "explanation": "The project's scope and potential impact on students' work and well-being must be carefully considered and disclosed to ensure transparency and accountability."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM020",
+        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of the dataset's representativeness and communicate the results to stakeholders."
+      },
+      {
+        "requirement_id": "ACM023",
+        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of the project's potential impact on students' work and well-being and implement measures to mitigate any discriminatory effects."
+      },
+      {
+        "requirement_id": "ACM025",
+        "requirement_text": "Communicate whether approach could facilitate deceptive interactions causing harm (theft, fraud, harassment), impersonate public figures, influence political processes, or promote hate speech",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of the project's potential to facilitate deceptive interactions or promote hate speech and implement measures to mitigate any harmful effects."
+      },
+      {
+        "requirement_id": "HE012",
+        "requirement_text": "Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity or is sufficiently neutral",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of the dataset's representativeness and implement measures to ensure that the data reflects diversity or is sufficiently neutral."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 11",
+        "right_name": "FreedomOfExpression",
+        "relevance": "The project's focus on sentiment analysis and linguistic style detection may inadvertently misrepresent students' work, potentially chilling or suppressing legitimate expression."
+      },
+      {
+        "article": "Article 22",
+        "right_name": "CulturalDiversity",
+        "relevance": "The project's correlation analysis may still introduce biases that discriminate against certain groups of students, potentially undermining cultural diversity."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-014",
+        "incident_title": "YouTube Recommendation Radicalisation",
+        "lesson": "The project's focus on sentiment analysis and linguistic style detection may inadvertently misrepresent students' work, potentially chilling or suppressing legitimate expression."
+      },
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "The project's correlation analysis may still introduce biases that discriminate against certain groups of students, potentially undermining cultural diversity."
+      },
+      {
+        "incident_id": "AIAAIC-027",
+        "incident_title": "Spotify Mood Inference Patent",
+        "lesson": "The project's focus on sentiment analysis and linguistic style detection may inadvertently misrepresent students' work, potentially chilling or suppressing legitimate expression."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement a thorough bias audit to ensure fairness in correlation analysis",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct a thorough analysis of the dataset's representativeness and implement measures to ensure that the data reflects diversity or is sufficiently neutral",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Disclose the project's scope and potential impact on students' work and well-being to ensure transparency and accountability",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough analysis of the dataset's representativeness and communicate the results to stakeholders.",
+      "Conduct a thorough analysis of the project's potential impact on students' work and well-being and implement measures to mitigate any discriminatory effects.",
+      "Conduct a thorough analysis of the project's potential to facilitate deceptive interactions or promote hate speech and implement measures to mitigate any harmful effects."
+    ],
+    "tier2_reflective_prompts": [
+      "How will the project's correlation analysis ensure fairness and avoid biases?",
+      "What measures will be taken to mitigate any discriminatory effects on students' work and well-being?",
+      "How will the project's potential to facilitate deceptive interactions or promote hate speech be addressed?"
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "bias",
+        "fairness",
+        "school",
+        "sentiment"
+      ],
+      "rights_matched": 2,
+      "requirements_retrieved": 10,
+      "incidents_retrieved": 3,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM023",
+        "HE012",
+        "HE032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM023",
+        "HE012",
+        "HE032"
+      ],
+      "requirements_cited": [
+        "ACM020",
+        "ACM023",
+        "ACM025",
+        "HE012"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027"
+      ]
+    }
+  }
+}

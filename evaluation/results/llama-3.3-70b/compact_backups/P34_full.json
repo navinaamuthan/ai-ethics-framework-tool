@@ -1,0 +1,24 @@
+{
+  "proposal_id": "P34",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This research proposes clickstream-only 'engagement analytics' for an online continuing-education platform: page dwell time, quiz retries, and forum posts. No webcam or emotion recognition is used. Instructors see per-student engagement scores that may inform outreach emails. Scores are not used for formal grading. A subtle issue is that engagement proxies can disadvantage students with disability-related interaction patterns or shared-device access, and outreach based on low scores may feel surveillant. The proposal does not discuss reasonable-accommodation effects. Data stay on the university LMS.",
+  "assessment": {
+    "overall_risk_level": "Medium",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art7_PrivateLife",
+        "right_name": "Right to Private Life",
+        "relevance": "The use of engagement scores may feel surveillant to students."
+      },
+      {
+        "article": "Art21_NonDiscrimination",
+        "right_name": "Right to Non-Discrimination",
+        "relevance": "Students with disability-related interaction patterns may be disadvantaged by the engagement analytics."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

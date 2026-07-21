@@ -2,7 +2,7 @@
   "proposal_id": "P13",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-20T14:35:32.223953",
+  "timestamp": "2026-07-19T19:55:33.616519",
   "proposal_text": "This research proposes to conduct a bibliometric analysis of peer-reviewed publications on AI ethics from 2018-2025. The study will use the Scopus and Web of Science databases to identify all publications containing keywords related to AI ethics, responsible AI, algorithmic fairness, and AI governance. The analysis will examine publication trends, citation networks, geographic distribution of research groups, and thematic clustering using topic modelling. All data is publicly available metadata from academic databases. No personal data about individual researchers will be collected beyond publicly listed author names and institutional affiliations. The analysis will use standard bibliometric tools including VOSviewer and Bibliometrix. Results will identify gaps in the AI ethics literature to inform future research directions. No AI systems will be developed or deployed as part of this research.",
   "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
@@ -12,57 +12,375 @@
     "fairness"
   ],
   "matched_rights": [
-    "Art11_FreedomOfExpression",
-    "Art22_CulturalDiversity",
+    "Art20_EqualityBeforeLaw",
+    "Art21_NonDiscrimination",
+    "Art41_GoodAdministration",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 74,
+  "retrieved_requirements_count": 154,
   "retrieved_incidents_count": 8,
-  "retrieved_risk_categories": [
-    {
-      "id": "PhysicalHarm",
-      "label": "Physical Harm",
-      "definition": "Risk of bodily injury, death, or physical safety compromise caused by an AI system."
-    },
-    {
-      "id": "PsychologicalHarm",
-      "label": "Psychological Harm",
-      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system."
-    },
-    {
-      "id": "FinancialHarm",
-      "label": "Financial Harm",
-      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system."
-    },
-    {
-      "id": "ReputationalHarm",
-      "label": "Reputational Harm",
-      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions."
-    },
-    {
-      "id": "PrivacyBreach",
-      "label": "Privacy Breach",
-      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system."
-    },
-    {
-      "id": "Manipulation",
-      "label": "",
-      "definition": ""
-    },
-    {
-      "id": "Discrimination",
-      "label": "Discrimination",
-      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system."
-    },
-    {
-      "id": "Surveillance",
-      "label": "",
-      "definition": ""
-    }
-  ],
-  "rights_disambiguation": "systemic_info→Art11/Art22",
   "assessment": {
-    "error": "LLM returned empty response"
+    "risk_summary": "This research proposal involves a bibliometric analysis of peer-reviewed publications on AI ethics, using publicly available metadata from academic databases. The primary ethical risks identified are related to potential biases in the analysis, ensuring respect for intellectual property and data/code ownership, and considering possible risks and impacts of the research approach itself. The proposal does not involve personal data processing, AI system development, or deployment, which reduces the overall risk level. However, it is essential to ensure that the analysis is fair, transparent, and respectful of existing protocols and guidelines.",
+    "overall_risk_level": "Low",
+    "identified_risks": [
+      {
+        "risk": "Bias in analysis",
+        "severity": "Low",
+        "explanation": "The use of standard bibliometric tools and publicly available metadata reduces the risk of bias, but it is still essential to consider and ameliorate potential biases in the approach."
+      },
+      {
+        "risk": "Intellectual property and data/code ownership",
+        "severity": "Low",
+        "explanation": "The proposal must ensure that it respects intellectual property and data/code ownership, citing creators of artefacts used and using them as intended."
+      },
+      {
+        "risk": "Potential risks and impacts of the research approach",
+        "severity": "Low",
+        "explanation": "The proposal must consider possible risks and impacts of the research approach itself, including analysis of possible risks of applications."
+      },
+      {
+        "risk": "Lack of transparency and reproducibility",
+        "severity": "Low",
+        "explanation": "The proposal must ensure that the analysis is transparent, and results are reproducible, providing comprehensive evaluation of systems and their impacts."
+      },
+      {
+        "risk": "Non-compliance with existing protocols and guidelines",
+        "severity": "Low",
+        "explanation": "The proposal must comply with existing institutional protocols and guidelines, ensuring that the research is conducted in an ethical and responsible manner."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the analysis does not cause harm and consider potential risks and impacts of the research approach."
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider and ameliorate potential biases in the analysis and ensure that the approach is fair and transparent."
+      },
+      {
+        "requirement_id": "ACM005",
+        "requirement_text": "Respect intellectual property and data/code ownership — cite creators of artefacts used and use them as intended",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the proposal respects intellectual property and data/code ownership, citing creators of artefacts used and using them as intended."
+      },
+      {
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Provide comprehensive evaluation of systems and their impacts, including analysis of possible risks of applications."
+      },
+      {
+        "requirement_id": "ACM008",
+        "requirement_text": "Consider possible risks and impacts of the research approach itself",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider possible risks and impacts of the research approach itself, including analysis of possible risks of applications."
+      },
+      {
+        "requirement_id": "ACM009",
+        "requirement_text": "Access computing and communication resources only when authorised or compelled by public good",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the proposal accesses computing and communication resources only when authorised or compelled by public good."
+      },
+      {
+        "requirement_id": "ACM015",
+        "requirement_text": "Research involving human participants must follow existing institutional protocols",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the proposal complies with existing institutional protocols and guidelines, even though it does not involve human participants directly."
+      },
+      {
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the proposal minimises exposure of personally identifiable information, even though it uses publicly available metadata."
+      },
+      {
+        "requirement_id": "ACM021",
+        "requirement_text": "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider whether the technology used in the proposal can be used to harm, injure or kill people through direct application, side effects or misuse."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 20",
+        "right_name": "Equality Before Law",
+        "relevance": "The proposal must ensure that the analysis is fair and transparent, respecting the principle of equality before the law."
+      },
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The proposal must consider and ameliorate potential biases in the analysis, ensuring that the approach is fair and transparent, and does not discriminate against any individual or group."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The proposal must consider and ameliorate potential biases in the analysis, ensuring that the approach is fair and transparent, and does not discriminate against any individual or group."
+      },
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The proposal must ensure that the analysis does not cause harm and consider potential risks and impacts of the research approach."
+      },
+      {
+        "incident_id": "AIAAIC-007",
+        "incident_title": "Clearview AI Mass Facial Recognition Scraping",
+        "lesson": "The proposal must ensure that it respects intellectual property and data/code ownership, citing creators of artefacts used and using them as intended."
+      },
+      {
+        "incident_id": "AIAAIC-016",
+        "incident_title": "Palantir ICE Surveillance System",
+        "lesson": "The proposal must consider whether the technology used in the proposal can be used to harm, injure or kill people through direct application, side effects or misuse."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Ensure transparency and reproducibility of the analysis",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Consider and ameliorate potential biases in the analysis",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Respect intellectual property and data/code ownership",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Comply with existing institutional protocols and guidelines",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Provide comprehensive evaluation of systems and their impacts",
+        "priority": "Low"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Ensure that the analysis does not cause harm and consider potential risks and impacts of the research approach",
+      "Consider and ameliorate potential biases in the analysis",
+      "Respect intellectual property and data/code ownership",
+      "Comply with existing institutional protocols and guidelines",
+      "Provide comprehensive evaluation of systems and their impacts"
+    ],
+    "tier2_reflective_prompts": [
+      "How might the proposal's use of publicly available metadata impact the validity and reliability of the analysis?",
+      "What potential biases might be present in the analysis, and how can they be ameliorated?",
+      "How can the proposal ensure that it respects intellectual property and data/code ownership?",
+      "What are the potential risks and impacts of the research approach, and how can they be mitigated?"
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "personal data",
+        "fairness"
+      ],
+      "rights_matched": 5,
+      "requirements_retrieved": 154,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "HE014",
+        "HE038",
+        "R028",
+        "R085",
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028"
+      ],
+      "requirements_retrieved_ids": [
+        "HE014",
+        "HE038",
+        "R028",
+        "R085",
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R054",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM002",
+        "ACM003",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM009",
+        "ACM015",
+        "ACM016",
+        "ACM021"
+      ],
+      "incidents_sample": [
+        "AIAAIC-001",
+        "AIAAIC-002",
+        "AIAAIC-003",
+        "AIAAIC-022",
+        "AIAAIC-034"
+      ]
+    }
   }
 }

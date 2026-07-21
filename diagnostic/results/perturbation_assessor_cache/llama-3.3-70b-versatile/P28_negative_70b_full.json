@@ -1,0 +1,117 @@
+{
+  "proposal_id": "P28_negative_70b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T02:15:07.413304",
+  "proposal_text": "This research proposes a Spanish-language LLM chatbot that guides Bogotá residents through business-permit and construction-licence applications. The bot classifies query intent, retrieves municipal code passages, and drafts application forms. In a pilot ward, incomplete answers that the bot labels 'likely ineligible' will auto-close the digital ticket without human review to reduce backlog. Residents with limited literacy or non-standard Spanish dialects may be disproportionately auto-closed. Conversation logs retain national ID numbers entered into forms. The city asserts the bot is 'advisory only,' yet ticket closure has the practical effect of a refusal. No administrative-appeal pathway specific to bot closures is described. Outputs will be shared with a commercial data broker without additional consent or purpose limitation.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "administrative",
+    "chatbot",
+    "classif",
+    "consent"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 104,
+  "retrieved_incidents_count": 6,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 44.0,
+      "tf": 44,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 34.0,
+      "tf": 34,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 18.0,
+      "tf": 18,
+      "df": 26
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 15
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "error": "LLM returned empty response"
+  }
+}

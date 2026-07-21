@@ -1,0 +1,19 @@
+{
+  "proposal_id": "P35",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This project fine-tunes a large language model on 1.2 million de-identified clinical notes from an Irish hospital group to generate synthetic notes for downstream NLP shared tasks. The team claims synthetic outputs eliminate privacy risk and plans public release of the generator. Recent research shows membership inference and rare-condition memorisation can still leak training patients. No empirical privacy attack evaluation is budgeted. Synthetic notes will be used only for research benchmarks, not clinical care. Hospital legal counsel has approved release based on the 'synthetic = safe' claim alone.",
+  "assessment": {
+    "overall_risk_level": "High",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art8_DataProtection",
+        "right_name": "Data Protection",
+        "relevance": "The project's use of de-identified clinical notes and planned public release of the generator may still pose a risk to patients' data protection due to potential membership inference and rare-condition memorisation."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

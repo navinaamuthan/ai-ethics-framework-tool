@@ -1,0 +1,1194 @@
+  [SPARQL] GraphDB unreachable — falling back to local ontology TTL
+  [OK] Loaded local ontology: /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/ontology/ai-ethics-final.ttl (4399 triples)
+  [OK] GraphDB connected. Total triples: 4399
+
+=== Assessor 8b backend=groq model=llama-3.1-8b-instant max_req=10 → /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.1-8b ===
+  [OK] Groq connected. Available models: 15
+  [OK] Model 'llama-3.1-8b-instant' is available.
+[1/19] P22 Hiring Ranking Model with Caste-Correlated Proxies ...
+
+============================================================
+ASSESSING PROPOSAL: P22
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['employ', 'discriminat', 'employee', 'fairness', 'profil', 'recruit', 'scor']
+  Charter rights matched: 4
+  Requirements retrieved: 81
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Discrimination', 'Accountability', 'EmploymentHarm', 'DataGovernance', 'PsychologicalHarm', 'ReputationalHarm', 'FalseIdentification', 'DataBreach', 'FunctionCreep']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 9068 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6103, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6103, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6103, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.1-8b/P22_full.json
+  FAIL/parse: no risk level
+[2/19] P23 Social-Benefit Eligibility Triage in Brazil ...
+
+============================================================
+ASSESSING PROPOSAL: P23
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['scor', 'organisation', 'race', 'school', 'transfer']
+  Charter rights matched: 3
+  Requirements retrieved: 107
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8977 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6082, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  Response received: 6962 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.1-8b/P23_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 5
+  Requirements Cited: 5
+  Rights at Risk: 3
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+  OK risk=High rights=3
+[3/19] P24 Remote Exam Proctoring Across Southeast Asian Univ ...
+
+============================================================
+ASSESSING PROPOSAL: P24
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['student']
+  Charter rights matched: 2
+  Requirements retrieved: 63
+  Incidents retrieved: 6
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'ChildrenRights', 'DataGovernance', 'EmploymentHarm', 'ReputationalHarm', 'FalseIdentification', 'DataBreach', 'FunctionCreep']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8715 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6019, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6019, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6019, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.1-8b/P24_full.json
+  FAIL/parse: no risk level
+[4/19] P25 Arabic Social-Media Extremism Classifier for MENA  ...
+
+============================================================
+ASSESSING PROPOSAL: P25
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['classif', 'scor', 'minor', 'minority', 'protest', 'recruit', 'safety', 'union']
+  Charter rights matched: 4
+  Requirements retrieved: 60
+  Incidents retrieved: 8
+  Risk categories in scope: ['Accountability', 'Discrimination', 'PrivacyBreach', 'PsychologicalHarm', 'DualUseMisuse', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 9448 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6203, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6203, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6203, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.1-8b/P25_full.json
+  FAIL/parse: no risk level
+[5/19] P26 Smallholder Crop-Advisory Chatbot in Rural India ...
+
+============================================================
+ASSESSING PROPOSAL: P26
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['chatbot']
+  Charter rights matched: 1
+  Requirements retrieved: 47
+  Incidents retrieved: 3
+  Risk categories in scope: ['Accountability', 'PsychologicalHarm', 'Dignity', 'DualUseMisuse', 'Deception', 'EconomicHarm', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8788 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6046, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6046, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6046, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.1-8b/P26_full.json
+  FAIL/parse: no risk level
+[6/19] P27 Horizon Europe Biometric FRIA vs Open-Science Tens ...
+
+============================================================
+ASSESSING PROPOSAL: P27
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['biometric', 'patient', 'consent']
+  Charter rights matched: 5
+  Requirements retrieved: 110
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Discrimination', 'Dignity', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8896 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6094, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  Response received: 4696 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.1-8b/P27_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 8
+  Requirements Cited: 4
+  Rights at Risk: 3
+  Precedents Cited: 2
+  Mitigations: 3
+────────────────────────────────────────────────────────────
+  OK risk=High rights=3
+[7/19] P28 Municipal Permit Chatbot in Bogotá ...
+
+============================================================
+ASSESSING PROPOSAL: P28
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['administrative', 'chatbot', 'classif']
+  Charter rights matched: 1
+  Requirements retrieved: 47
+  Incidents retrieved: 3
+  Risk categories in scope: ['Accountability', 'PsychologicalHarm', 'Dignity', 'DualUseMisuse', 'Deception', 'EconomicHarm', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8691 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6028, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6028, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6028, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.1-8b/P28_full.json
+  FAIL/parse: no risk level
+[8/19] P29 Community Safety Hotspot Analytics without Arrest  ...
+
+============================================================
+ASSESSING PROPOSAL: P29
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['polic', 'discriminat', 'generat', 'predict', 'recommend', 'safety', 'scor', 'surveil']
+  Charter rights matched: 8
+  Requirements retrieved: 144
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8883 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 8263 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.1-8b/P29_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 5
+  Requirements Cited: 9
+  Rights at Risk: 5
+  Precedents Cited: 4
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+  OK risk=High rights=5
+[9/19] P30 Health Insurance Risk Pricing in South Africa ...
+
+============================================================
+ASSESSING PROPOSAL: P30
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21 (default keep)
+  Keywords found: ['race', 'fairness', 'health', 'medical', 'predict']
+  Charter rights matched: 4
+  Requirements retrieved: 82
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Discrimination', 'Accountability', 'DataGovernance', 'PsychologicalHarm', 'Surveillance', 'ReputationalHarm', 'FalseIdentification', 'DataBreach', 'FunctionCreep']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8796 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6062, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6062, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6062, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.1-8b/P30_full.json
+  FAIL/parse: no risk level
+[10/19] P31 Open African-Languages Speech Corpus with Personal ...
+
+============================================================
+ASSESSING PROPOSAL: P31
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['biometric', 'employ']
+  Charter rights matched: 3
+  Requirements retrieved: 109
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Dignity', 'Discrimination', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8613 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6044, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6044, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  Response received: 6441 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.1-8b/P31_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: LOW
+  Risks Identified: 6
+  Requirements Cited: 5
+  Rights at Risk: 3
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+  OK risk=High rights=3
+[11/19] P32 skip (exists)
+[12/19] P33 skip (exists)
+[13/19] P34 skip (exists)
+[14/19] P35 Synthetic Clinical Notes for NLP Training ...
+
+============================================================
+ASSESSING PROPOSAL: P35
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['generat', 'privacy', 'patient']
+  Charter rights matched: 3
+  Requirements retrieved: 109
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Dignity', 'Discrimination', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8499 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6014, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6014, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6014, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.1-8b/P35_full.json
+  FAIL/parse: no risk level
+[15/19] P36 skip (exists)
+[16/19] P37 skip (exists)
+[17/19] P38 skip (exists)
+[18/19] P39 Municipal Climate-Migration Risk Scoring ...
+
+============================================================
+ASSESSING PROPOSAL: P39
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['environment', 'scor', 'discriminat', 'polic', 'transparen']
+  Charter rights matched: 3
+  Requirements retrieved: 59
+  Incidents retrieved: 5
+  Risk categories in scope: ['Accountability', 'Discrimination', 'PsychologicalHarm', 'PrivacyBreach', 'EnvironmentalHarm', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8570 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 6128 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.1-8b/P39_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 6
+  Requirements Cited: 5
+  Rights at Risk: 3
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+  OK risk=High rights=3
+[19/19] P40 skip (exists)
+Done 8b: new=5 skipped=7 failed=7
+
+=== Assessor 70b backend=groq model=llama-3.3-70b-versatile max_req=10 → /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b ===
+  [OK] Groq connected. Available models: 15
+  [OK] Model 'llama-3.3-70b-versatile' is available.
+[1/19] P22 Hiring Ranking Model with Caste-Correlated Proxies ...
+
+============================================================
+ASSESSING PROPOSAL: P22
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['employ', 'discriminat', 'employee', 'fairness', 'profil', 'recruit', 'scor']
+  Charter rights matched: 4
+  Requirements retrieved: 81
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Discrimination', 'Accountability', 'EmploymentHarm', 'DataGovernance', 'PsychologicalHarm', 'ReputationalHarm', 'FalseIdentification', 'DataBreach', 'FunctionCreep']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 9068 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94843, Requested 6103. Please try again in 13m37.343999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94843, Requested 6103. Please try again in 13m37.343999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94843, Requested 6103. Please try again in 13m37.343999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P22_full.json
+  FAIL/parse: no risk level
+[2/19] P23 Social-Benefit Eligibility Triage in Brazil ...
+
+============================================================
+ASSESSING PROPOSAL: P23
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['scor', 'organisation', 'race', 'school', 'transfer']
+  Charter rights matched: 3
+  Requirements retrieved: 107
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8977 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94840, Requested 6082. Please try again in 13m16.608s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94840, Requested 6082. Please try again in 13m16.608s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94840, Requested 6082. Please try again in 13m16.608s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P23_full.json
+  FAIL/parse: no risk level
+[3/19] P24 Remote Exam Proctoring Across Southeast Asian Univ ...
+
+============================================================
+ASSESSING PROPOSAL: P24
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['student']
+  Charter rights matched: 2
+  Requirements retrieved: 63
+  Incidents retrieved: 6
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'ChildrenRights', 'DataGovernance', 'EmploymentHarm', 'ReputationalHarm', 'FalseIdentification', 'DataBreach', 'FunctionCreep']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8715 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94836, Requested 6019. Please try again in 12m18.72s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94836, Requested 6019. Please try again in 12m18.72s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94835, Requested 6019. Please try again in 12m17.856s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P24_full.json
+  FAIL/parse: no risk level
+[4/19] P25 Arabic Social-Media Extremism Classifier for MENA  ...
+
+============================================================
+ASSESSING PROPOSAL: P25
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['classif', 'scor', 'minor', 'minority', 'protest', 'recruit', 'safety', 'union']
+  Charter rights matched: 4
+  Requirements retrieved: 60
+  Incidents retrieved: 8
+  Risk categories in scope: ['Accountability', 'Discrimination', 'PrivacyBreach', 'PsychologicalHarm', 'DualUseMisuse', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 9448 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94832, Requested 6203. Please try again in 14m54.24s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94832, Requested 6203. Please try again in 14m54.24s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94832, Requested 6203. Please try again in 14m54.24s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P25_full.json
+  FAIL/parse: no risk level
+[5/19] P26 Smallholder Crop-Advisory Chatbot in Rural India ...
+
+============================================================
+ASSESSING PROPOSAL: P26
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['chatbot']
+  Charter rights matched: 1
+  Requirements retrieved: 47
+  Incidents retrieved: 3
+  Risk categories in scope: ['Accountability', 'PsychologicalHarm', 'Dignity', 'DualUseMisuse', 'Deception', 'EconomicHarm', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8788 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94828, Requested 6046. Please try again in 12m35.136s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94828, Requested 6046. Please try again in 12m35.136s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94828, Requested 6046. Please try again in 12m35.136s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P26_full.json
+  FAIL/parse: no risk level
+[6/19] P27 Horizon Europe Biometric FRIA vs Open-Science Tens ...
+
+============================================================
+ASSESSING PROPOSAL: P27
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['biometric', 'patient', 'consent']
+  Charter rights matched: 5
+  Requirements retrieved: 110
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Discrimination', 'Dignity', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8896 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94825, Requested 6094. Please try again in 13m14.016s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94825, Requested 6094. Please try again in 13m14.016s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94824, Requested 6094. Please try again in 13m13.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P27_full.json
+  FAIL/parse: no risk level
+[7/19] P28 Municipal Permit Chatbot in Bogotá ...
+
+============================================================
+ASSESSING PROPOSAL: P28
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['administrative', 'chatbot', 'classif']
+  Charter rights matched: 1
+  Requirements retrieved: 47
+  Incidents retrieved: 3
+  Risk categories in scope: ['Accountability', 'PsychologicalHarm', 'Dignity', 'DualUseMisuse', 'Deception', 'EconomicHarm', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8691 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94822, Requested 6028. Please try again in 12m14.4s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94822, Requested 6028. Please try again in 12m14.4s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94822, Requested 6028. Please try again in 12m14.4s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P28_full.json
+  FAIL/parse: no risk level
+[8/19] P29 Community Safety Hotspot Analytics without Arrest  ...
+
+============================================================
+ASSESSING PROPOSAL: P29
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['polic', 'discriminat', 'generat', 'predict', 'recommend', 'safety', 'scor', 'surveil']
+  Charter rights matched: 8
+  Requirements retrieved: 144
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8883 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94819, Requested 6091. Please try again in 13m6.24s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94819, Requested 6091. Please try again in 13m6.24s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94818, Requested 6091. Please try again in 13m5.376s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P29_full.json
+  FAIL/parse: no risk level
+[9/19] P30 Health Insurance Risk Pricing in South Africa ...
+
+============================================================
+ASSESSING PROPOSAL: P30
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21 (default keep)
+  Keywords found: ['race', 'fairness', 'health', 'medical', 'predict']
+  Charter rights matched: 4
+  Requirements retrieved: 82
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Discrimination', 'Accountability', 'DataGovernance', 'PsychologicalHarm', 'Surveillance', 'ReputationalHarm', 'FalseIdentification', 'DataBreach', 'FunctionCreep']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8796 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94815, Requested 6062. Please try again in 12m37.728s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94815, Requested 6062. Please try again in 12m37.728s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94815, Requested 6062. Please try again in 12m37.728s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P30_full.json
+  FAIL/parse: no risk level
+[10/19] P31 Open African-Languages Speech Corpus with Personal ...
+
+============================================================
+ASSESSING PROPOSAL: P31
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['biometric', 'employ']
+  Charter rights matched: 3
+  Requirements retrieved: 109
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Dignity', 'Discrimination', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8613 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94812, Requested 6044. Please try again in 12m19.584s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94812, Requested 6044. Please try again in 12m19.584s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94812, Requested 6044. Please try again in 12m19.584s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P31_full.json
+  FAIL/parse: no risk level
+[11/19] P32 Aggregated Mobile-Money Flow Heatmaps for Urban Pl ...
+
+============================================================
+ASSESSING PROPOSAL: P32
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: []
+  Charter rights matched: 0
+  Requirements retrieved: 0
+  Incidents retrieved: 0
+  Risk categories in scope: []
+  Rights disambiguation: not_applicable
+  [WARNING] No KG results retrieved. LLM will operate without grounding.
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 4604 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 7473 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P32_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: Medium
+  Confidence Flag: LOW
+  Risks Identified: 5
+  Requirements Cited: 5
+  Rights at Risk: 2
+  Precedents Cited: 3
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+  OK risk=Medium rights=2
+[12/19] P33 University FAQ Chatbot Logging Student Queries ...
+
+============================================================
+ASSESSING PROPOSAL: P33
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['student', 'chatbot', 'disabilit', 'health']
+  Charter rights matched: 3
+  Requirements retrieved: 108
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Dignity', 'DataGovernance', 'Discrimination', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8695 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99998, Requested 3524. Please try again in 50m43.008s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99997, Requested 3524. Please try again in 50m42.144s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99997, Requested 3524. Please try again in 50m42.144s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P33_full.json
+  FAIL/parse: no risk level
+[13/19] P34 Clickstream Engagement Analytics without Cameras ...
+
+============================================================
+ASSESSING PROPOSAL: P34
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['scor', 'student', 'disabilit', 'emotion', 'surveil']
+  Charter rights matched: 7
+  Requirements retrieved: 150
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Discrimination', 'DataGovernance', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8642 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99993, Requested 6057. Please try again in 1h27m7.2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99993, Requested 6057. Please try again in 1h27m7.2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99993, Requested 3533. Please try again in 50m46.464s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P34_full.json
+  FAIL/parse: no risk level
+[14/19] P35 Synthetic Clinical Notes for NLP Training ...
+
+============================================================
+ASSESSING PROPOSAL: P35
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['generat', 'privacy', 'patient']
+  Charter rights matched: 3
+  Requirements retrieved: 109
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Dignity', 'Discrimination', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8499 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99991, Requested 6014. Please try again in 1h26m28.32s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99990, Requested 6014. Please try again in 1h26m27.456s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99990, Requested 6014. Please try again in 1h26m27.456s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P35_full.json
+  FAIL/parse: no risk level
+[15/19] P36 Online Exam Attention Estimation from Webcam Pose ...
+
+============================================================
+ASSESSING PROPOSAL: P36
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['student', 'discriminat', 'disabilit', 'polic']
+  Charter rights matched: 5
+  Requirements retrieved: 83
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Discrimination', 'Accountability', 'DataGovernance', 'EmploymentHarm', 'PsychologicalHarm', 'ReputationalHarm', 'FalseIdentification', 'DataBreach', 'FunctionCreep']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8661 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99988, Requested 6049. Please try again in 1h26m55.968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99988, Requested 6049. Please try again in 1h26m55.968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99988, Requested 6049. Please try again in 1h26m55.968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P36_full.json
+  FAIL/parse: no risk level
+[16/19] P37 Refugee Resettlement Matching Algorithm ...
+
+============================================================
+ASSESSING PROPOSAL: P37
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21 (default keep)
+  Keywords found: ['discriminat', 'employ', 'health', 'predict', 'prediction', 'scor']
+  Charter rights matched: 3
+  Requirements retrieved: 107
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8731 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99985, Requested 3510. Please try again in 50m19.68s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99985, Requested 6034. Please try again in 1h26m40.416s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99985, Requested 6034. Please try again in 1h26m40.416s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P37_full.json
+  FAIL/parse: no risk level
+[17/19] P38 Dating-App Safety Classifier for LGBTQ+ Users in H ...
+
+============================================================
+ASSESSING PROPOSAL: P38
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21 (default keep)
+  Keywords found: ['classif', 'criminal', 'discriminat', 'harm', 'polic', 'privacy', 'profil', 'safety', 'transfer']
+  Charter rights matched: 8
+  Requirements retrieved: 142
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Discrimination', 'DataGovernance', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8722 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99982, Requested 3547. Please try again in 50m49.056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99982, Requested 3547. Please try again in 50m49.056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99982, Requested 6071. Please try again in 1h27m9.792s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P38_full.json
+  FAIL/parse: no risk level
+[18/19] P39 Municipal Climate-Migration Risk Scoring ...
+
+============================================================
+ASSESSING PROPOSAL: P39
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['environment', 'scor', 'discriminat', 'polic', 'transparen']
+  Charter rights matched: 3
+  Requirements retrieved: 59
+  Incidents retrieved: 5
+  Risk categories in scope: ['Accountability', 'Discrimination', 'PsychologicalHarm', 'PrivacyBreach', 'EnvironmentalHarm', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8570 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99979, Requested 5993. Please try again in 1h25m59.808s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99979, Requested 3469. Please try again in 49m39.071999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99979, Requested 3469. Please try again in 49m39.071999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P39_full.json
+  FAIL/parse: no risk level
+[19/19] P40 Workplace Emotion Analytics under 'Wellbeing' Fram ...
+
+============================================================
+ASSESSING PROPOSAL: P40
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 10
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['consent', 'emotion', 'employ', 'employee', 'scor', 'surveil', 'union', 'working conditions']
+  Charter rights matched: 6
+  Requirements retrieved: 119
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Discrimination', 'Dignity', 'EmploymentHarm', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8715 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99976, Requested 6061. Please try again in 1h26m55.968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99976, Requested 6061. Please try again in 1h26m55.968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99976, Requested 3537. Please try again in 50m35.232s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P40_full.json
+  FAIL/parse: no risk level
+Done 70b: new=1 skipped=0 failed=18
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+============================================================
+ASSESSING PROPOSAL: P34
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 25
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['scor', 'student', 'disabilit', 'emotion', 'surveil']
+  Charter rights matched: 7
+  Requirements retrieved: 150
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Discrimination', 'DataGovernance', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 12486 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 95000, Requested 6916. Please try again in 27m35.424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 95000, Requested 6916. Please try again in 27m35.424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 95000, Requested 6916. Please try again in 27m35.424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P34_full.json
+  FAIL/parse: no risk level
+[15/20] P35 Synthetic Clinical Notes for NLP Training ...
+
+============================================================
+ASSESSING PROPOSAL: P35
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 25
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['generat', 'privacy', 'patient']
+  Charter rights matched: 3
+  Requirements retrieved: 109
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Dignity', 'Discrimination', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 12118 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94997, Requested 6849. Please try again in 26m34.944s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94997, Requested 6849. Please try again in 26m34.944s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94997, Requested 6849. Please try again in 26m34.944s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P35_full.json
+  FAIL/parse: no risk level
+[16/20] P36 Online Exam Attention Estimation from Webcam Pose ...
+
+============================================================
+ASSESSING PROPOSAL: P36
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 25
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['student', 'discriminat', 'disabilit', 'polic']
+  Charter rights matched: 5
+  Requirements retrieved: 83
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Discrimination', 'Accountability', 'DataGovernance', 'EmploymentHarm', 'PsychologicalHarm', 'ReputationalHarm', 'FalseIdentification', 'DataBreach', 'FunctionCreep']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 11799 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94994, Requested 6842. Please try again in 26m26.304s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94994, Requested 6842. Please try again in 26m26.304s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94994, Requested 6842. Please try again in 26m26.304s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P36_full.json
+  FAIL/parse: no risk level
+[17/20] P37 Refugee Resettlement Matching Algorithm ...
+
+============================================================
+ASSESSING PROPOSAL: P37
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 25
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21 (default keep)
+  Keywords found: ['discriminat', 'employ', 'health', 'predict', 'prediction', 'scor']
+  Charter rights matched: 3
+  Requirements retrieved: 107
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 11707 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94992, Requested 6767. Please try again in 25m19.776s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94992, Requested 6767. Please try again in 25m19.776s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94992, Requested 6767. Please try again in 25m19.776s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P37_full.json
+  FAIL/parse: no risk level
+[18/20] P38 Dating-App Safety Classifier for LGBTQ+ Users in H ...
+
+============================================================
+ASSESSING PROPOSAL: P38
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 25
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21 (default keep)
+  Keywords found: ['classif', 'criminal', 'discriminat', 'harm', 'polic', 'privacy', 'profil', 'safety', 'transfer']
+  Charter rights matched: 8
+  Requirements retrieved: 142
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Discrimination', 'DataGovernance', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 12566 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94989, Requested 6930. Please try again in 27m38.015999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94988, Requested 6930. Please try again in 27m37.151999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94988, Requested 6930. Please try again in 27m37.151999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P38_full.json
+  FAIL/parse: no risk level
+[19/20] P39 Municipal Climate-Migration Risk Scoring ...
+
+============================================================
+ASSESSING PROPOSAL: P39
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 25
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['environment', 'scor', 'discriminat', 'polic', 'transparen']
+  Charter rights matched: 3
+  Requirements retrieved: 59
+  Incidents retrieved: 5
+  Risk categories in scope: ['Accountability', 'Discrimination', 'PsychologicalHarm', 'PrivacyBreach', 'EnvironmentalHarm', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 11445 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94985, Requested 6743. Please try again in 24m52.992s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94985, Requested 6743. Please try again in 24m52.992s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94985, Requested 6743. Please try again in 24m52.992s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P39_full.json
+  FAIL/parse: no risk level
+[20/20] P40 Workplace Emotion Analytics under 'Wellbeing' Fram ...
+
+============================================================
+ASSESSING PROPOSAL: P40
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 25
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['consent', 'emotion', 'employ', 'employee', 'scor', 'surveil', 'union', 'working conditions']
+  Charter rights matched: 6
+  Requirements retrieved: 119
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Discrimination', 'Dignity', 'EmploymentHarm', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 12334 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94976, Requested 6896. Please try again in 26m57.408s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94976, Requested 6896. Please try again in 26m57.408s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94976, Requested 6896. Please try again in 26m57.408s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/evaluation/results/llama-3.3-70b/P40_full.json
+  FAIL/parse: no risk level
+Done 70b: new=0 skipped=0 failed=20

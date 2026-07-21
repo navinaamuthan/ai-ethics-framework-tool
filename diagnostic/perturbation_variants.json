@@ -1,0 +1,2027 @@
+[
+  {
+    "variant_id": "P01_positive",
+    "base_id": "P01",
+    "class": "positive",
+    "title": "Optum Health Risk Stratification Algorithm",
+    "base_risk_level": "High",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art35_HealthCare",
+      "Art8_DataProtection",
+      "Art2_RightToLife"
+    ],
+    "variant_text": "This research proposes to develop a commercial health risk stratification algorithm to identify high-need patients for enrolment in care management programmes across a network of US hospital systems. The algorithm will use insurance claims data as a proxy for health need, predicting which patients require additional clinical resources based on historical healthcare costs, prior diagnoses, medication use, and utilisation patterns from electronic health records covering approximately 200 million patients annually. Patients scoring in the top 3 percentile will automatically be referred to care management; those in the top 45 percentile will be assessed for referral. The algorithm will not explicitly use race as a predictive variable. However, because Black patients have historically incurred lower healthcare costs than white patients with equivalent chronic disease burden \u2014 due to structural barriers to healthcare access including cost, discrimination, and geographic distance \u2014 the cost proxy will systematically underestimate the health needs of Black patients. The algorithm has not undergone independent bias auditing prior to deployment. No mechanism for algorithmic review or patient appeal of care management non-referral decisions is planned. An independent bias audit and a documented appeal mechanism for affected individuals are included before any deployment.",
+    "change_summary": "Added bias audit and appeal mechanism.",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an independent bias audit and a documented appeal mechanism for affected individuals addresses a previously identified risk."
+      },
+      "legal": {
+        "predicted_direction": "down",
+        "brief_reason": "The introduction of an independent bias audit and a documented appeal mechanism for affected individuals in the variant proposal reduces the risk of discrimination and promotes transparency, aligning better with EU Charter articles such as Article 1 (human dignity), Article 3 (dignity), and Article 21 (non-discrimination), as well as GDPR provisions like Article 22 (automated decision-making) and Article 77 (right to lodge a complaint)."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an independent bias audit and a documented appeal mechanism for affected individuals reduces the risk of harm to vulnerable populations and improves the transparency of the algorithm's decision-making process."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an independent bias audit and a documented appeal mechanism for affected individuals reduces the risk of unfair treatment and provides a safety net for those who may be negatively impacted by the algorithm."
+      }
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "High",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P01_negative",
+    "base_id": "P01",
+    "class": "negative",
+    "title": "Optum Health Risk Stratification Algorithm",
+    "base_risk_level": "High",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art35_HealthCare",
+      "Art8_DataProtection",
+      "Art2_RightToLife"
+    ],
+    "variant_text": "Algorithm prioritises patients who have opted out of Medicare or Medicaid without considering potential systemic issues.",
+    "change_summary": "Algorithm now prioritises patients who have opted out of Medicare or Medicaid without considering potential systemic issues.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant introduces a potentially discriminatory factor (opt-out status) without addressing existing bias concerns, increasing risk."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant introduces a new potential bias by prioritising patients who have opted out of Medicare or Medicaid, which may exacerbate existing health disparities and further marginalise vulnerable populations, increasing the risk of violating Article 21 (non-discrimination), Article 5 (right to protection of personal data), and Article 45 (cross-border healthcare) of the EU Charter of Fundamental Rights, as well as GDPR provisions on data protection and fairness."
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant introduces a new factor that may exacerbate existing biases in the algorithm, particularly affecting vulnerable populations such as low-income individuals who have opted out of public health insurance."
+      },
+      "lay": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant introduces a new factor (opting out of Medicare or Medicaid) that may unfairly target certain groups, increasing the risk of biased outcomes and potential harm to patients."
+      }
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "High",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P01_neutral",
+    "base_id": "P01",
+    "class": "neutral",
+    "title": "Optum Health Risk Stratification Algorithm",
+    "base_risk_level": "High",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art35_HealthCare",
+      "Art8_DataProtection",
+      "Art2_RightToLife"
+    ],
+    "variant_text": "This study proposes to develop a commercial health risk stratification algorithm to identify high-need patients for enrolment in care management programmes across a network of US hospital systems. The algorithm will use insurance claims data as a proxy for health need, predicting which patients require additional clinical resources based on historical healthcare costs, prior diagnoses, medication use, and utilisation patterns from electronic health records covering approximately 200 million patients annually. Patients scoring in the top 3 percentile will automatically be referred to care management; those in the top 45 percentile will be assessed for referral. The algorithm will not explicitly use race as a predictive variable. However, because Black patients have historically incurred lower healthcare costs than white patients with equivalent chronic disease burden \u2014 due to structural barriers to healthcare access including cost, discrimination, and geographic distance \u2014 the cost proxy will systematically underestimate the health needs of Black patients. The algorithm has not undergone independent bias auditing prior to deployment. No mechanism for algorithmic review or patient appeal of care management non-referral decisions is planned.",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "same",
+        "brief_reason": "No significant changes have been made to the original proposal, and the concerns regarding data bias and lack of auditing and review mechanisms remain unchanged."
+      },
+      "legal": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text appears to be identical to the original text, suggesting that the risk level remains unchanged."
+      },
+      "ethics": {
+        "predicted_direction": "same",
+        "brief_reason": "No changes to the original proposal's sections relevant to risk level are apparent."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "The two proposals appear to be identical, with no changes mentioned that would affect the risk level for individuals subject to the system."
+      }
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "High",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P02_positive",
+    "base_id": "P02",
+    "class": "positive",
+    "title": "COMPAS Recidivism Risk Assessment Tool",
+    "base_risk_level": "High",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art6_RightToLiberty",
+      "Art47_RightToEffectiveRemedy",
+      "Art48_PresumptionOfInnocence"
+    ],
+    "variant_text": "An independent audit will be conducted annually to assess the algorithm's performance across different racial and ethnic groups, and an appeal mechanism will be established for defendants to challenge the algorithmic risk score.",
+    "change_summary": "An independent audit and appeal mechanism are added to mitigate bias concerns and ensure fairness.",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an independent audit and appeal mechanism addresses some of the concerns around fairness and accountability, reducing the overall risk level."
+      },
+      "legal": {
+        "predicted_direction": "down",
+        "brief_reason": "The introduction of an independent audit and appeal mechanism addresses some of the concerns related to bias and lack of transparency, potentially reducing the risk of violating EU Charter articles such as 8 (right to protection of personal data), 21 (right to non-discrimination), and 47 (right to an effective remedy and to a fair trial)."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The inclusion of an independent audit and appeal mechanism addresses some of the concerns regarding power imbalances and potential biases in the system."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an independent audit and an appeal mechanism reduces the risk of bias and unfair treatment, making the system feel safer and more transparent."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "High",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P02_negative",
+    "base_id": "P02",
+    "class": "negative",
+    "title": "COMPAS Recidivism Risk Assessment Tool",
+    "base_risk_level": "High",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art6_RightToLiberty",
+      "Art47_RightToEffectiveRemedy",
+      "Art48_PresumptionOfInnocence"
+    ],
+    "variant_text": "COMPAS Recidivism Risk Assessment Tool with Enhanced Transparency and Accountability",
+    "change_summary": "The proposed deployment adds a mechanism for defendants to appeal the risk score, but also includes a provision to share defendant's personal data with third-party organizations for marketing purposes without explicit consent.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "down",
+        "brief_reason": "The variant text does not explicitly address the issues of proprietary algorithm, lack of internal weighting disclosure, and mechanism for defendants to challenge the algorithmic risk score, implying that these concerns remain unaddressed."
+      },
+      "legal": {
+        "predicted_direction": "down",
+        "brief_reason": "The variant omits the problematic aspects of the original proposal, such as lack of transparency and accountability, which are key concerns under EU Charter articles 6 (right to a fair trial) and 8 (right to respect for private life), and GDPR Article 22 (automated decision-making)."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The variant mentions 'Enhanced Transparency and Accountability', suggesting potential improvements in consent, power imbalances, and accountability mechanisms, which could reduce overall risk level."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The variant mentions 'Enhanced Transparency and Accountability', suggesting that the system will be more open and fair, which would likely reduce the risk of bias and incorrect classifications."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "High",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P02_neutral",
+    "base_id": "P02",
+    "class": "neutral",
+    "title": "COMPAS Recidivism Risk Assessment Tool",
+    "base_risk_level": "High",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art6_RightToLiberty",
+      "Art47_RightToEffectiveRemedy",
+      "Art48_PresumptionOfInnocence"
+    ],
+    "variant_text": "This study proposes to deploy the COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) risk assessment tool across criminal courts in Broward County, Florida, to predict defendants' likelihood of recidivism. The system uses a proprietary algorithm trained on a battery of psychological questionnaire responses administered at the time of arrest, combined with criminal history variables including prior arrest count, age at first offence, and charge severity. The algorithm produces three decile scores (1\u201310) for general recidivism, violent recidivism, and failure to appear, with scores categorised as Low (1\u20134), Medium (5\u20137), or High (8\u201310). These scores will be provided to judges and parole officers at pre-trial hearings and sentencing to inform detention and release decisions. The model is proprietary and its internal weighting is not disclosed to defendants or defence counsel. No mechanism for defendants to challenge the algorithmic risk score is included in the deployment design. An independent analysis of the algorithm's outputs found that Black defendants who did not re-offend were falsely classified as high risk at nearly twice the rate of white defendants who did not re-offend (45% vs 24%).",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant proposal appears to be identical to the original proposal, suggesting no changes were made to address the existing risk factors, including the proprietary algorithm's lack of transparency and potential for biased outcomes."
+      },
+      "legal": {
+        "predicted_direction": "same",
+        "brief_reason": "No apparent changes in the text that would alter the risk level; the proposal still involves the deployment of a proprietary risk assessment tool without a mechanism for defendants to challenge the algorithmic risk score, which raises concerns under the EU Charter of Fundamental Rights, particularly Article 8 (Right to Respect for Private Life) and Article 21 (Non-discrimination), as well as GDPR provisions on fairness and transparency."
+      },
+      "ethics": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text is identical to the original text, indicating no changes that would alter the overall risk level."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant proposal appears to be identical to the original proposal, with no changes that would suggest a reduction or increase in risk level for defendants."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "High",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P05_positive",
+    "base_id": "P05",
+    "class": "positive",
+    "title": "NHS Sepsis Prediction Algorithm with Racial Bias",
+    "base_risk_level": "High",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art35_HealthCare",
+      "Art2_RightToLife",
+      "Art8_DataProtection"
+    ],
+    "variant_text": "NHS Sepsis Prediction Algorithm with Added Bias Audit and Clinician Escalation Mechanism",
+    "change_summary": "Added prospective demographic bias auditing and a formal mechanism for clinicians to record and escalate concerns about demographic performance disparities",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "down",
+        "brief_reason": "The variant includes added bias audit and clinician escalation mechanism, which address the original proposal's lack of demographic bias auditing and clinician visibility into algorithm performance, reducing overall risk."
+      },
+      "legal": {
+        "predicted_direction": "down",
+        "brief_reason": "The variant includes bias audit and clinician escalation mechanism, addressing the lack of demographic bias auditing and transparency in the original proposal, which are key concerns under Article 20 EU Charter (right to equality), Article 8 GDPR (data protection), and Article 5(2) GDPR (data minimisation)."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "Added bias audit and clinician escalation mechanism mitigate some risks associated with the original proposal."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The variant includes added bias audit and clinician escalation mechanism, which should reduce the risk of algorithmic bias affecting minority patients and improve overall transparency and accountability."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "High",
+      "SHACL": "Medium",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P05_negative",
+    "base_id": "P05",
+    "class": "negative",
+    "title": "NHS Sepsis Prediction Algorithm with Racial Bias",
+    "base_risk_level": "High",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art35_HealthCare",
+      "Art2_RightToLife",
+      "Art8_DataProtection"
+    ],
+    "variant_text": "This research proposes to deploy a machine learning sepsis prediction algorithm across NHS England hospital trusts to identify patients at risk of sepsis deterioration in emergency department and ward settings. The algorithm uses physiological parameters including respiratory rate, oxygen saturation, temperature, systolic blood pressure, pulse rate, and level of consciousness \u2014 as recorded in the National Early Warning Score 2 (NEWS2) framework \u2014 alongside laboratory values and electronic health record data, to generate real-time risk scores for clinical staff. The training dataset was drawn predominantly from NHS patient records which have documented under-representation of Black, Asian, and minority ethnic patient populations in specialist care pathways. Academic analysis has found that vital signs used as predictive features are racially skewed, as minority patients may exhibit different baseline physiological profiles than the majority-white training population. The algorithm has not undergone prospective demographic bias auditing across ethnic subgroups prior to nationwide deployment. Clinical staff will receive risk scores without visibility into the algorithm's feature weighting or demographic performance variance. No formal mechanism for clinicians to record or escalate concerns about demographic performance disparities is included in the deployment framework. Outputs will be shared with a commercial data broker without additional consent or purpose limitation.",
+    "change_summary": "Added commercial data-broker sharing without consent.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "The addition of sharing outputs with a commercial data broker without additional consent or purpose limitation introduces a new risk of data misuse or unauthorized use."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "The addition of sharing outputs with a commercial data broker without consent or purpose limitation introduces a new risk, likely to increase overall risk level."
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "The addition of sharing outputs with a commercial data broker without consent or purpose limitation introduces a new risk of exploitation and potential harm to vulnerable populations, exacerbating existing concerns about demographic bias and power imbalance."
+      },
+      "lay": {
+        "predicted_direction": "up",
+        "brief_reason": "The addition of sharing patient data with a commercial data broker introduces a new risk of data exploitation and potential harm to patients."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Medium",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "High",
+      "SHACL": "Medium",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P05_neutral",
+    "base_id": "P05",
+    "class": "neutral",
+    "title": "NHS Sepsis Prediction Algorithm with Racial Bias",
+    "base_risk_level": "High",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art35_HealthCare",
+      "Art2_RightToLife",
+      "Art8_DataProtection"
+    ],
+    "variant_text": "This study proposes to deploy a machine learning sepsis prediction algorithm across NHS England hospital trusts to identify patients at risk of sepsis deterioration in emergency department and ward settings. The algorithm uses physiological parameters including respiratory rate, oxygen saturation, temperature, systolic blood pressure, pulse rate, and level of consciousness \u2014 as recorded in the National Early Warning Score 2 (NEWS2) framework \u2014 alongside laboratory values and electronic health record data, to generate real-time risk scores for clinical staff. The training dataset was drawn predominantly from NHS patient records which have documented under-representation of Black, Asian, and minority ethnic patient populations in specialist care pathways. Academic analysis has found that vital signs used as predictive features are racially skewed, as minority patients may exhibit different baseline physiological profiles than the majority-white training population. The algorithm has not undergone prospective demographic bias auditing across ethnic subgroups prior to nationwide deployment. Clinical staff will receive risk scores without visibility into the algorithm's feature weighting or demographic performance variance. No formal mechanism for clinicians to record or escalate concerns about demographic performance disparities is included in the deployment framework.",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "same",
+        "brief_reason": "No change in the description of data, algorithm, or deployment framework, indicating no change in technical verifiability or risk level."
+      },
+      "legal": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text appears to be identical to the original text, suggesting that the changes made do not address the concerns raised regarding the deployment of the sepsis prediction algorithm, including the lack of prospective demographic bias auditing and visibility into the algorithm's feature weighting or demographic performance variance."
+      },
+      "ethics": {
+        "predicted_direction": "same",
+        "brief_reason": "No changes were observed between the original and variant proposals that would affect the risk level regarding consent, power imbalances, vulnerable populations, or the ability of affected people to contest or opt out of the described system."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text appears to be identical to the original text, suggesting no changes that would either increase or decrease the risk level."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Medium",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "High",
+      "SHACL": "Medium",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P21_positive",
+    "base_id": "P21",
+    "class": "positive",
+    "title": "Mobile-Money Credit Scoring in Kenya",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art8_DataProtection",
+      "Art47_RightToEffectiveRemedy",
+      "Art15_FreedomOfOccupation"
+    ],
+    "variant_text": "This research proposes to develop a machine learning credit-scoring model for a Nairobi-based digital lender serving unbanked and underbanked borrowers across Kenya. The model will predict default risk from mobile-money transaction histories, airtime purchase patterns, geolocation of cash-in/cash-out agents, phone contacts graph density, and device metadata. Training data cover approximately 2.4 million customers of a partner mobile-network operator, collected under the operator's terms of service rather than purpose-specific lending consent. Loan approval and pricing decisions will be fully automated for amounts under KES 50,000, with no human review unless the applicant formally complains. The researchers note that contact-graph features may encode ethnicity and socioeconomic clustering in urban informal settlements, but no demographic fairness audit across ethnic groups or counties is planned before pilot launch. Rejected applicants will receive a generic adverse-action notice without feature-level explanation. The study protocol has not yet been reviewed against the Kenya Data Protection Act 2019 or the EU Charter articles that would apply if the same pipeline were later ported to an EU migrant-lending product. An independent bias audit and a documented appeal mechanism for affected individuals are included before any deployment.",
+    "change_summary": "Added bias audit and appeal mechanism.",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an independent bias audit and a documented appeal mechanism for affected individuals addresses some of the identified risks and improves model accountability."
+      },
+      "legal": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an independent bias audit and a documented appeal mechanism for affected individuals addresses some of the concerns around data protection and fairness, reducing the overall risk level."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an independent bias audit and a documented appeal mechanism for affected individuals mitigates some of the risks associated with the original proposal, such as power imbalances and lack of accountability."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an independent bias audit and a documented appeal mechanism suggests a more transparent and accountable system, which would likely reduce the overall risk level for affected individuals."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P21_negative",
+    "base_id": "P21",
+    "class": "negative",
+    "title": "Mobile-Money Credit Scoring in Kenya",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art8_DataProtection",
+      "Art47_RightToEffectiveRemedy",
+      "Art15_FreedomOfOccupation"
+    ],
+    "variant_text": "This research proposes to develop a machine learning credit-scoring model for a Nairobi-based digital lender serving unbanked and underbanked borrowers across Kenya. The model will predict default risk from mobile-money transaction histories, airtime purchase patterns, geolocation of cash-in/cash-out agents, phone contacts graph density, and device metadata. Training data cover approximately 2.4 million customers of a partner mobile-network operator, collected under the operator's terms of service rather than purpose-specific lending consent. Loan approval and pricing decisions will be fully automated for amounts under KES 50,000, with no human review unless the applicant formally complains. The researchers note that contact-graph features may encode ethnicity and socioeconomic clustering in urban informal settlements, but no demographic fairness audit across ethnic groups or counties is planned before pilot launch. Rejected applicants will receive a generic adverse-action notice without feature-level explanation. The study protocol has not yet been reviewed against the Kenya Data Protection Act 2019 or the EU Charter articles that would apply if the same pipeline were later ported to an EU migrant-lending product. Outputs will be shared with a commercial data broker without additional consent or purpose limitation.",
+    "change_summary": "Added commercial data-broker sharing without consent.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of a new risk factor (commercial data broker) without additional consent or purpose limitation increases the risk of data misuse and potential harm to users."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of sharing data with a commercial data broker without additional consent or purpose limitation increases risk of unauthorized data processing, potential discrimination, and breach of data protection principles."
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of a commercial data broker without additional consent or purpose limitation increases the risk of data misuse and potential harm to vulnerable populations."
+      },
+      "lay": {
+        "predicted_direction": "up",
+        "brief_reason": "The addition of a commercial data broker to receive outputs without consent increases the risk of data misuse and potential harm to individuals."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P21_neutral",
+    "base_id": "P21",
+    "class": "neutral",
+    "title": "Mobile-Money Credit Scoring in Kenya",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art8_DataProtection",
+      "Art47_RightToEffectiveRemedy",
+      "Art15_FreedomOfOccupation"
+    ],
+    "variant_text": "This study proposes to develop a machine learning credit-scoring model for a Nairobi-based digital lender serving unbanked and underbanked borrowers across Kenya. The model will predict default risk from mobile-money transaction histories, airtime purchase patterns, geolocation of cash-in/cash-out agents, phone contacts graph density, and device metadata. Training data cover approximately 2.4 million customers of a partner mobile-network operator, collected under the operator's terms of service rather than purpose-specific lending consent. Loan approval and pricing decisions will be fully automated for amounts under KES 50,000, with no human review unless the applicant formally complains. The researchers note that contact-graph features may encode ethnicity and socioeconomic clustering in urban informal settlements, but no demographic fairness audit across ethnic groups or counties is planned before pilot launch. Rejected applicants will receive a generic adverse-action notice without feature-level explanation. The study protocol has not yet been reviewed against the Kenya Data Protection Act 2019 or the EU Charter articles that would apply if the same pipeline were later ported to an EU migrant-lending product.",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "same",
+        "brief_reason": "No significant changes were detected in the variant proposal compared to the original proposal."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant text does not introduce any changes that would reduce the risk level, and the lack of a demographic fairness audit before pilot launch, as well as the generic adverse-action notice without feature-level explanation, suggest an increased risk of violating the EU Charter articles, particularly Article 8 (Data Protection) and Article 21 (Non-discrimination), and the GDPR."
+      },
+      "ethics": {
+        "predicted_direction": "same",
+        "brief_reason": "No changes in the text are noted, suggesting the risk level remains unchanged."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text appears to be identical to the original text, suggesting no changes have been made to the proposal that would affect the overall risk level."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P25_positive",
+    "base_id": "P25",
+    "class": "positive",
+    "title": "Arabic Social-Media Extremism Classifier for MENA Platforms",
+    "base_risk_level": "High",
+    "base_charter_articles": [
+      "Art11_FreedomOfExpression",
+      "Art12_FreedomOfAssembly",
+      "Art21_NonDiscrimination",
+      "Art7_PrivateLife"
+    ],
+    "variant_text": "This research proposes an Arabic-dialect NLP classifier to detect extremist recruitment and glorification of violence on public Telegram channels and X/Twitter accounts across Egypt, Jordan, and Morocco. Training data mix annotated jihadist propaganda with posts from secular activists, Islamist electoral campaigns, and satire. The classifier will output a risk score used by platform trust-and-safety teams to prioritise human review; scores above 0.85 will auto-suspend accounts for 48 hours pending review. Civil-society partners warn that dialectal sarcasm and anti-regime protest slogans are frequently mislabelled. To mitigate this, a bias audit will be conducted, and an appeal mechanism will be implemented for users to contest their suspension. The team plans open-source release of the model weights. This proposal does not schedule engagement with journalists' unions or minority-rights groups, leaving open the question of whether Art.11 freedom of expression or public-security limitations should dominate the rights analysis.",
+    "change_summary": "Added a bias audit and appeal mechanism to address concerns of mislabelled dialectal sarcasm and anti-regime protest slogans",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a bias audit and an appeal mechanism to mitigate misclassification and allow users to contest their suspension introduces more robustness and accountability to the system, reducing overall risk."
+      },
+      "legal": {
+        "predicted_direction": "down",
+        "brief_reason": "The variant includes additional measures to mitigate risks and provide users with a right to appeal, which suggests a decrease in overall risk level compared to the original proposal."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The introduction of a bias audit and appeal mechanism addresses concerns around power imbalances, consent, and vulnerable populations, reducing the overall risk level."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a bias audit and appeal mechanism makes the system more transparent and user-friendly, reducing the risk of unfair suspensions and mislabelling of legitimate content."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Low",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P25_negative",
+    "base_id": "P25",
+    "class": "negative",
+    "title": "Arabic Social-Media Extremism Classifier for MENA Platforms",
+    "base_risk_level": "High",
+    "base_charter_articles": [
+      "Art11_FreedomOfExpression",
+      "Art12_FreedomOfAssembly",
+      "Art21_NonDiscrimination",
+      "Art7_PrivateLife"
+    ],
+    "variant_text": "Arabic Social-Media Extremism Classifier for MENA Platforms: Enhanced with User Data Collection",
+    "change_summary": "The classifier now collects and stores user interaction data, increasing the risk of privacy violations.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant proposal lacks critical details from the original, increasing uncertainty and risk."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant omits crucial details that might mitigate risks, and introduces a potentially invasive feature (user data collection), raising concerns under Articles 5, 7, and 8 of the EU Charter of Fundamental Rights and GDPR provisions."
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "The addition of user data collection introduces potential risks related to privacy, consent, and power imbalances, increasing the overall risk level."
+      },
+      "lay": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant mentions collecting user data, which may increase the risk of mislabeling, data misuse, or over-reliance on the classifier, and doesn't address the concerns of civil-society partners or minority-rights groups."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Low",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Low",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P25_neutral",
+    "base_id": "P25",
+    "class": "neutral",
+    "title": "Arabic Social-Media Extremism Classifier for MENA Platforms",
+    "base_risk_level": "High",
+    "base_charter_articles": [
+      "Art11_FreedomOfExpression",
+      "Art12_FreedomOfAssembly",
+      "Art21_NonDiscrimination",
+      "Art7_PrivateLife"
+    ],
+    "variant_text": "This study proposes an Arabic-dialect NLP classifier to detect extremist recruitment and glorification of violence on public Telegram channels and X/Twitter accounts across Egypt, Jordan, and Morocco. Training data mix annotated jihadist propaganda with posts from secular activists, Islamist electoral campaigns, and satire. The classifier will output a risk score used by platform trust-and-safety teams to prioritise human review; scores above 0.85 will auto-suspend accounts for 48 hours pending review. Civil-society partners warn that dialectal sarcasm and anti-regime protest slogans are frequently mislabelled. The team plans open-source release of the model weights. No engagement with journalists' unions or minority-rights groups is scheduled. Whether Art.11 freedom of expression or public-security limitations should dominate the rights analysis is deliberately left open in the protocol\u2014experts disagree.",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "same",
+        "brief_reason": "No technical changes or clarifications are made to the original proposal, maintaining the same level of technical verifiability and risk."
+      },
+      "legal": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text remains unchanged from the original, suggesting no changes in risk level."
+      },
+      "ethics": {
+        "predicted_direction": "same",
+        "brief_reason": "No apparent changes in the text suggest a reduction or increase in risk level regarding consent, power imbalances, vulnerable populations, or opt-out mechanisms."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text is identical to the original text, suggesting that the changes made to the system are not significant enough to alter the overall risk level."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Low",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Low",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P07_positive",
+    "base_id": "P07",
+    "class": "positive",
+    "title": "NLP Sentiment Analysis on Student Essay Submissions",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art7_PrivateLife"
+    ],
+    "variant_text": "This research proposes to apply sentiment analysis and linguistic style detection to a corpus of 5,000 anonymised undergraduate essays submitted to the School of English at Trinity College Dublin, with a bias audit to ensure fairness in correlation analysis.",
+    "change_summary": "To address potential biases in the analysis, a bias audit will be conducted to verify the fairness of correlation findings.",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a bias audit suggests an increased focus on model validation and fairness, reducing the overall risk level."
+      },
+      "legal": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a bias audit to ensure fairness in correlation analysis suggests a more thorough consideration of data protection and fundamental rights, potentially reducing the risk level."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a bias audit to ensure fairness in correlation analysis reduces the risk of perpetuating existing inequalities and biases, making the overall risk level lower."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a bias audit suggests an increased emphasis on fairness and transparency, which should reduce the risk of unintended harm or bias in the research."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "High",
+      "LLM-8B": "MEDIUM",
+      "LLM-70B": "Medium"
+    }
+  },
+  {
+    "variant_id": "P07_negative",
+    "base_id": "P07",
+    "class": "negative",
+    "title": "NLP Sentiment Analysis on Student Essay Submissions",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art7_PrivateLife"
+    ],
+    "variant_text": "This research proposes to apply sentiment analysis and linguistic style detection to a corpus of 5,000 anonymised undergraduate essays submitted to the School of English at Trinity College Dublin, but with an additional step that may compromise student anonymity: researchers will attempt to de-anonymise a subset of essays by cross-referencing pseudonymised data with publicly available student social media profiles, without explicit student consent.",
+    "change_summary": "Researchers may attempt to de-anonymise a subset of essays by cross-referencing pseudonymised data with publicly available student social media profiles, without explicit student consent.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of a new step that may compromise student anonymity increases the risk of data breaches and loss of trust in the research, potentially leading to more severe consequences."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of de-anonymisation step increases risk of violating student anonymity and potentially GDPR Article 5(1)(f) and Article 25, as well as EU Charter Article 8 (right to protection of personal data)."
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "Introducing a step that may compromise student anonymity increases the risk of re-identification and potential harm to students, thus increasing the overall risk level."
+      },
+      "lay": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant introduces a potential risk to student anonymity, making it more likely for students to be identified and potentially re-identified, increasing the overall risk level."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "High",
+      "LLM-8B": "MEDIUM",
+      "LLM-70B": "Medium"
+    }
+  },
+  {
+    "variant_id": "P07_neutral",
+    "base_id": "P07",
+    "class": "neutral",
+    "title": "NLP Sentiment Analysis on Student Essay Submissions",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art7_PrivateLife"
+    ],
+    "variant_text": "This study proposes to apply sentiment analysis and linguistic style detection to a corpus of 5,000 anonymised undergraduate essays submitted to the School of English at Trinity College Dublin. The aim is to investigate whether emotional tone and writing style correlate with academic grade outcomes. Essays will be collected from the past three academic years with student consent obtained retrospectively via email. The NLP pipeline will extract features including sentiment polarity, subjectivity scores, vocabulary complexity, and sentence structure patterns. The researchers will investigate whether detectable stylistic differences correlate with students' first language, gender, or socioeconomic background as indicated by fee status. All analysis will be performed on pseudonymised data with student IDs replaced by random codes. Results will be published in aggregate form only.",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "same",
+        "brief_reason": "The original and variant proposals contain identical text, suggesting no changes that would alter the risk level."
+      },
+      "legal": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text does not introduce any changes to the original proposal, suggesting that the risk level remains unchanged."
+      },
+      "ethics": {
+        "predicted_direction": "same",
+        "brief_reason": "No changes were made to the original proposal, suggesting that the risk level remains unchanged."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "The two proposals seem identical."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Medium",
+      "SHACL": "High",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "High",
+      "LLM-8B": "MEDIUM",
+      "LLM-70B": "Medium"
+    }
+  },
+  {
+    "variant_id": "P11_positive",
+    "base_id": "P11",
+    "class": "positive",
+    "title": "Automated Essay Grading System",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art41_GoodAdministration",
+      "Art47_RightToEffectiveRemedy"
+    ],
+    "variant_text": "This research proposes to develop an automated essay grading system for first-year undergraduate modules at Trinity College Dublin. The system will use large language model embeddings to score essays on a 0-100 scale by comparing them against a rubric-encoded scoring model trained on 3,000 previously graded essays. The system will provide both a numerical grade and written feedback comments generated by the LLM. The tool is intended to reduce marking workload by providing initial scores that lecturers can review and adjust. To mitigate potential biases, we plan to conduct a bias audit on the model's performance across different student demographics, including language proficiency. This will help identify and address any systemic issues. The training data consists of essays graded by twelve different tutors whose grading standards varied considerably. Students whose first language is not English may receive systematically different scores due to the model's sensitivity to grammatical patterns associated with non-native speakers. Students will be informed that AI-assisted grading is being used, with an option to opt-out if they prefer human grading. No appeals process specifically addressing algorithmic grading errors has been designed.",
+    "change_summary": "Added bias audit and student opt-out for human grading",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "down",
+        "brief_reason": "The variant proposal includes a bias audit and option to opt-out, which addresses potential biases and transparency concerns, reducing overall risk."
+      },
+      "legal": {
+        "predicted_direction": "down",
+        "brief_reason": "The variant addresses potential biases and transparency concerns by conducting a bias audit and informing students about AI-assisted grading with an opt-out option, reducing the risk of non-compliance with Articles 5 and 22 of the GDPR and Article 24 of the EU Charter of Fundamental Rights."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The variant addresses potential biases and informs students about AI-assisted grading, providing an opt-out option, which reduces the risk of harm to vulnerable populations and mitigates power imbalances."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The variant includes a bias audit and an option for students to opt-out of AI-assisted grading, which suggests that the researchers are taking steps to mitigate potential risks and increase transparency and fairness."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "Medium"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    }
+  },
+  {
+    "variant_id": "P11_negative",
+    "base_id": "P11",
+    "class": "negative",
+    "title": "Automated Essay Grading System",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art41_GoodAdministration",
+      "Art47_RightToEffectiveRemedy"
+    ],
+    "variant_text": "This research proposes to develop an automated essay grading system for first-year undergraduate modules at Trinity College Dublin. The system will use large language model embeddings to score essays on a 0-100 scale by comparing them against a rubric-encoded scoring model trained on 3,000 previously graded essays. The system will provide both a numerical grade and written feedback comments generated by the LLM. The tool is intended to reduce marking workload by providing initial scores that lecturers can review and adjust. The training data consists of essays graded by twelve different tutors whose grading standards varied considerably. Students whose first language is not English may receive systematically different scores due to the model's sensitivity to grammatical patterns associated with non-native speakers. Students will not be informed that AI-assisted grading is being used. No appeals process specifically addressing algorithmic grading errors has been designed. Outputs will be shared with a commercial data broker without additional consent or purpose limitation.",
+    "change_summary": "Added commercial data-broker sharing without consent.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "The addition of sharing outputs with a commercial data broker increases the risk of data misuse, potentially compromising student data and trust in the grading system."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of data sharing with a commercial data broker without consent or purpose limitation increases the risk of data protection breaches and potential infringement of students' rights under Articles 8 and 20 of the EU Charter of Fundamental Rights."
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "The addition of sharing student data with a commercial data broker introduces new risks related to data protection and potential misuse, increasing the overall risk level."
+      },
+      "lay": {
+        "predicted_direction": "up",
+        "brief_reason": "The addition of sharing student data with a commercial data broker introduces a new risk of data exploitation and potential harm to students, increasing overall risk level."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    }
+  },
+  {
+    "variant_id": "P11_neutral",
+    "base_id": "P11",
+    "class": "neutral",
+    "title": "Automated Essay Grading System",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art41_GoodAdministration",
+      "Art47_RightToEffectiveRemedy"
+    ],
+    "variant_text": "This study proposes to develop an automated essay grading system for first-year undergraduate modules at Trinity College Dublin. The system will use large language model embeddings to score essays on a 0-100 scale by comparing them against a rubric-encoded scoring model trained on 3,000 previously graded essays. The system will provide both a numerical grade and written feedback comments generated by the LLM. The tool is intended to reduce marking workload by providing initial scores that lecturers can review and adjust. The training data consists of essays graded by twelve different tutors whose grading standards varied considerably. Students whose first language is not English may receive systematically different scores due to the model's sensitivity to grammatical patterns associated with non-native speakers. Students will not be informed that AI-assisted grading is being used. No appeals process specifically addressing algorithmic grading errors has been designed.",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "The text is identical to the original, suggesting no changes have been made to address the identified risks."
+      },
+      "legal": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text is identical to the original text, suggesting no changes have been made that would impact the risk level in relation to the EU Charter of Fundamental Rights and GDPR."
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "The risk level remains the same, but the lack of transparency about AI-assisted grading and the absence of an appeals process for algorithmic grading errors introduce significant concerns related to informed consent and potential biases, increasing the overall risk level."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "The original and variant texts appear to be identical, suggesting no changes have been made to the system that would affect the risk level for students."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    }
+  },
+  {
+    "variant_id": "P20_positive",
+    "base_id": "P20",
+    "class": "positive",
+    "title": "Workplace Productivity Monitoring with Employee Consent",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art7_PrivateLife",
+      "Art8_DataProtection",
+      "Art31_FairWorkingConditions",
+      "Art15_FreedomOfOccupation"
+    ],
+    "variant_text": "This research proposes to study the relationship between digital workplace behaviours and productivity by monitoring 200 consenting employees at a Dublin technology company over six months. The monitoring system will track application usage, email response times, meeting attendance, keyboard activity patterns, and break frequency. All participants will provide written informed consent and can withdraw at any time without workplace consequences. Data will be stored on encrypted university servers and destroyed after the study period. However, the monitoring software will also incidentally capture screen content including potentially sensitive communications. Aggregate productivity patterns will be shared with the employer in a format that does not identify individual employees, but the small team sizes of 5-8 people within departments may enable indirect identification. The employer has stated that monitoring results will not influence performance reviews, but this commitment is not legally binding. The research does not address the power imbalance between employer and employee that may compromise the voluntariness of consent. An independent bias audit and a documented appeal mechanism for affected individuals are included before any deployment.",
+    "change_summary": "Added bias audit and appeal mechanism.",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an independent bias audit and a documented appeal mechanism for affected individuals introduces a more robust framework for mitigating risks, potentially reducing the overall risk level."
+      },
+      "legal": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an independent bias audit and a documented appeal mechanism for affected individuals addresses some of the concerns around the power imbalance and the potential for indirect identification, reducing the overall risk level."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an independent bias audit and a documented appeal mechanism for affected individuals addresses some of the concerns regarding power imbalance and consent, potentially reducing the overall risk level."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an independent bias audit and a documented appeal mechanism for affected individuals adds a layer of protection and accountability, making the system feel safer and more trustworthy."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    }
+  },
+  {
+    "variant_id": "P20_negative",
+    "base_id": "P20",
+    "class": "negative",
+    "title": "Workplace Productivity Monitoring with Employee Consent",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art7_PrivateLife",
+      "Art8_DataProtection",
+      "Art31_FairWorkingConditions",
+      "Art15_FreedomOfOccupation"
+    ],
+    "variant_text": "Workplace Productivity Monitoring with Employee Consent: Addressing Power Imbalance and Enhanced Transparency",
+    "change_summary": "Added ethics violation: Monitoring software will track employee location and share aggregated data with third-party vendors for marketing purposes.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant proposal text does not provide sufficient technical details to assess changes in risk level. The title change implies a shift in focus towards addressing the power imbalance and enhanced transparency, but this is not reflected in the original proposal's technical content."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "Removal of explicit mention of employer's commitment not to use monitoring results for performance reviews, and lack of concrete measures to address power imbalance, may increase risk of exploitation of employees' personal data."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The variant addresses the power imbalance by providing an independent review board to oversee the monitoring system, ensuring that employees' rights are protected and their consent is truly voluntary. Additionally, it introduces a more transparent data sharing policy and a more robust opt-out mechanism, potentially reducing the risk to employees."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The title change suggests a focus on addressing power imbalance and enhancing transparency, implying a more employee-friendly approach."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Medium",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    }
+  },
+  {
+    "variant_id": "P20_neutral",
+    "base_id": "P20",
+    "class": "neutral",
+    "title": "Workplace Productivity Monitoring with Employee Consent",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art7_PrivateLife",
+      "Art8_DataProtection",
+      "Art31_FairWorkingConditions",
+      "Art15_FreedomOfOccupation"
+    ],
+    "variant_text": "This study proposes to study the relationship between digital workplace behaviours and productivity by monitoring 200 consenting employees at a Dublin technology company over six months. The monitoring system will track application usage, email response times, meeting attendance, keyboard activity patterns, and break frequency. All participants will provide written informed consent and can withdraw at any time without workplace consequences. Data will be stored on encrypted university servers and destroyed after the study period. However, the monitoring software will also incidentally capture screen content including potentially sensitive communications. Aggregate productivity patterns will be shared with the employer in a format that does not identify individual employees, but the small team sizes of 5-8 people within departments may enable indirect identification. The employer has stated that monitoring results will not influence performance reviews, but this commitment is not legally binding. The research does not address the power imbalance between employer and employee that may compromise the voluntariness of consent.",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "same",
+        "brief_reason": "The proposed study remains unchanged; technical verifiability of data provenance, model validation, and measurable failure modes is still lacking."
+      },
+      "legal": {
+        "predicted_direction": "parse_fail",
+        "brief_reason": ""
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant proposal has identical text to the original, suggesting that the changes are minimal or non-existent, but it still lacks an explicit address to the power imbalance, which remains a concern."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "No changes were made to the proposal, so the overall risk level remains the same."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "Medium"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    }
+  },
+  {
+    "variant_id": "P23_positive",
+    "base_id": "P23",
+    "class": "positive",
+    "title": "Social-Benefit Eligibility Triage in Brazil",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art1_HumanDignity",
+      "Art47_RightToEffectiveRemedy",
+      "Art8_DataProtection"
+    ],
+    "variant_text": "A bias audit and appeal mechanism will be implemented to ensure transparency and fairness in the triage process.",
+    "change_summary": "A bias audit and appeal mechanism will be added to address potential biases and improve transparency.",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a bias audit and appeal mechanism addresses a significant risk and improves the overall robustness of the project, reducing the risk level from Medium to Lower"
+      },
+      "legal": {
+        "predicted_direction": "down",
+        "brief_reason": "The introduction of a bias audit and appeal mechanism reduces the risk of violating EU Charter articles such as Article 21 (non-discrimination) and Article 47 (right to an effective remedy), potentially mitigating the risks associated with the original proposal."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a bias audit and appeal mechanism reduces the risk of power imbalances and disparate impact on vulnerable populations, making the variant less risky than the original proposal."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a bias audit and appeal mechanism suggests a more equitable and transparent system, reducing the risk of unfair treatment and increasing trust in the process."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Medium",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Low",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P23_negative",
+    "base_id": "P23",
+    "class": "negative",
+    "title": "Social-Benefit Eligibility Triage in Brazil",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art1_HumanDignity",
+      "Art47_RightToEffectiveRemedy",
+      "Art8_DataProtection"
+    ],
+    "variant_text": "Social-Benefit Eligibility Triage in Brazil, with a new risk of data exploitation",
+    "change_summary": "A machine learning triage layer was added, but it also collects and uses applicants' personal data for targeted advertising without explicit consent.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "Lack of information in the variant suggests reduced transparency and accountability, increasing the risk of data exploitation and potential biases in the triage model."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "Removal of context and specific details increases uncertainty and potential risks, making it more difficult to assess alignment with EU Charter of Fundamental Rights and GDPR."
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "Removal of context suggesting a consideration for mitigating risks and disparities, and lack of detail on changes to the original proposal."
+      },
+      "lay": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant proposal does not provide any information on how the system will be changed or improved, but it directly mentions a new risk of data exploitation which suggests an increased risk level compared to the original proposal."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Low",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Low",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P23_neutral",
+    "base_id": "P23",
+    "class": "neutral",
+    "title": "Social-Benefit Eligibility Triage in Brazil",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art21_NonDiscrimination",
+      "Art1_HumanDignity",
+      "Art47_RightToEffectiveRemedy",
+      "Art8_DataProtection"
+    ],
+    "variant_text": "In summary, this project proposes a machine learning triage layer for a municipal social-assistance programme in S\u00e3o Paulo that prioritises home visits for families seeking cash-transfer enrolment. The model uses Cadastro \u00danico registry fields, utility payment irregularities, school attendance flags, and neighbourhood vulnerability indices to score 'urgency'. Caseworkers will be instructed to follow the ranked list unless they document an override. Families scored as low-urgency may wait months for a visit. The training labels come from past caseworker decisions, which community organisations argue systematically under-served favelas and Afro-Brazilian households. No disparate-impact audit by race or territory is scheduled. Applicants cannot see their score or appeal the triage ranking\u2014only the eventual eligibility decision after a visit. The proposal notes tension with EU-style fundamental-rights impact assessment expectations if the same pipeline were adapted under a Horizon Europe social-innovation grant.",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant text is identical to the original, suggesting that the risk level remains unchanged, but the lack of changes may indicate a lack of consideration for the identified issues, potentially increasing the risk."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant text is identical to the original text, indicating no changes that would reduce the risk level. The lack of a disparate-impact audit by race or territory, and the inability of applicants to see their score or appeal the triage ranking, remain unchanged and pose a risk to the rights of vulnerable groups, particularly Afro-Brazilian households and favela residents."
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant lacks any changes to the original proposal, suggesting that the risk level remains the same or potentially increases due to the absence of any mitigating factors."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text appears to be identical to the original text, suggesting no changes in the system's design or implications for those affected."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Low",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Low",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P28_positive",
+    "base_id": "P28",
+    "class": "positive",
+    "title": "Municipal Permit Chatbot in Bogot\u00e1",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art41_GoodAdministration",
+      "Art21_NonDiscrimination",
+      "Art47_RightToEffectiveRemedy",
+      "Art8_DataProtection"
+    ],
+    "variant_text": "This research proposes a Spanish-language LLM chatbot that guides Bogot\u00e1 residents through business-permit and construction-licence applications, including a designated appeals process for bot-generated outcomes.",
+    "change_summary": "Added an appeals mechanism to ensure fairness and transparency in bot-generated outcomes.",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a designated appeals process mitigates the risk of bot-generated outcomes being irreversible."
+      },
+      "legal": {
+        "predicted_direction": "down",
+        "brief_reason": "The introduction of a designated appeals process for bot-generated outcomes likely mitigates the risk of disproportionate impact on residents with limited literacy or non-standard Spanish dialects, aligning with Article 21 of the EU Charter of Fundamental Rights (non-discrimination) and Article 8 of the GDPR (data protection by design and by default)."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an appeals process mitigates risks associated with auto-closure and power imbalance."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a designated appeals process reduces the risk of auto-closure for residents with limited literacy or non-standard Spanish dialects."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Low",
+      "SHACL": "Medium",
+      "LLM-8B": "High",
+      "LLM-70B": "Low"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Low",
+      "SHACL": "Medium",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P28_negative",
+    "base_id": "P28",
+    "class": "negative",
+    "title": "Municipal Permit Chatbot in Bogot\u00e1",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art41_GoodAdministration",
+      "Art21_NonDiscrimination",
+      "Art47_RightToEffectiveRemedy",
+      "Art8_DataProtection"
+    ],
+    "variant_text": "This research proposes a Spanish-language LLM chatbot that guides Bogot\u00e1 residents through business-permit and construction-licence applications. The bot classifies query intent, retrieves municipal code passages, and drafts application forms. In a pilot ward, incomplete answers that the bot labels 'likely ineligible' will auto-close the digital ticket without human review to reduce backlog. Residents with limited literacy or non-standard Spanish dialects may be disproportionately auto-closed. Conversation logs retain national ID numbers entered into forms. The city asserts the bot is 'advisory only,' yet ticket closure has the practical effect of a refusal. No administrative-appeal pathway specific to bot closures is described. Outputs will be shared with a commercial data broker without additional consent or purpose limitation.",
+    "change_summary": "Added commercial data-broker sharing without consent.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of a commercial data broker without additional consent or purpose limitation increases the risk of data misuse and potential harm to residents."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of data sharing with a commercial data broker increases the risk of data breaches, unauthorized processing, and potential misuse, thus elevating the overall risk level."
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of data sharing with a commercial data broker without additional consent increases potential risks for participants, particularly those from vulnerable populations."
+      },
+      "lay": {
+        "predicted_direction": "up",
+        "brief_reason": "The addition of sharing outputs with a commercial data broker increases potential risks to residents' personal data and privacy."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Medium",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Low",
+      "SHACL": "Medium",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P28_neutral",
+    "base_id": "P28",
+    "class": "neutral",
+    "title": "Municipal Permit Chatbot in Bogot\u00e1",
+    "base_risk_level": "Medium",
+    "base_charter_articles": [
+      "Art41_GoodAdministration",
+      "Art21_NonDiscrimination",
+      "Art47_RightToEffectiveRemedy",
+      "Art8_DataProtection"
+    ],
+    "variant_text": "This study proposes a Spanish-language LLM chatbot that guides Bogot\u00e1 residents through business-permit and construction-licence applications. The bot classifies query intent, retrieves municipal code passages, and drafts application forms. In a pilot ward, incomplete answers that the bot labels 'likely ineligible' will auto-close the digital ticket without human review to reduce backlog. Residents with limited literacy or non-standard Spanish dialects may be disproportionately auto-closed. Conversation logs retain national ID numbers entered into forms. The city asserts the bot is 'advisory only,' yet ticket closure has the practical effect of a refusal. No administrative-appeal pathway specific to bot closures is described.",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text appears to be identical to the original, suggesting no changes that would impact the risk level."
+      },
+      "legal": {
+        "predicted_direction": "same",
+        "brief_reason": "No significant changes were identified between the original and variant proposals. The language and content remain largely unchanged, suggesting that the overall risk level will not decrease or increase."
+      },
+      "ethics": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text appears identical to the original, suggesting no changes have been made to address potential concerns regarding consent, power imbalances, vulnerable populations, or the ability of affected people to contest or opt out of the system."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text is identical to the original text, so the risk level remains unchanged."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Low",
+      "SHACL": "Medium",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Low",
+      "SHACL": "Medium",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    }
+  },
+  {
+    "variant_id": "P13_positive",
+    "base_id": "P13",
+    "class": "positive",
+    "title": "Bibliometric Analysis of Open Access AI Ethics Publications",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art11_FreedomOfExpression"
+    ],
+    "variant_text": "The analysis will use standard bibliometric tools including VOSviewer and Bibliometrix. Results will identify gaps in the AI ethics literature to inform future research directions. No AI systems will be developed or deployed as part of this research. All data is publicly available metadata from academic databases, and we will provide an opt-out option to authors who do not want their metadata to be used in this study.",
+    "change_summary": "Added an opt-out option for authors to control their metadata usage.",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of an opt-out option increases uncertainty around data quality and availability, potentially leading to incomplete or biased results."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of an opt-out option may raise concerns about consent and potential biases in data collection."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an opt-out option for authors reduces the risk of potential harm or exploitation, particularly for vulnerable populations such as researchers who may not have control over their metadata being used."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of an opt-out option for authors provides more control and protection for researchers, reducing the potential risk of the study."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Low",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Low"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "LOW",
+      "LLM-70B": "Low"
+    }
+  },
+  {
+    "variant_id": "P13_negative",
+    "base_id": "P13",
+    "class": "negative",
+    "title": "Bibliometric Analysis of Open Access AI Ethics Publications",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art11_FreedomOfExpression"
+    ],
+    "variant_text": "This research proposes to conduct a bibliometric analysis of peer-reviewed publications on AI ethics from 2018-2025, while ignoring any potential conflicts of interest of the researchers involved in the publications being analyzed.",
+    "change_summary": "The study now risks ignoring potential conflicts of interest of researchers, potentially affecting the validity of the results.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "Ignoring potential conflicts of interest may introduce bias, which could lead to unreliable results and increased risk of incorrect conclusions."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "The introduction of ignoring potential conflicts of interest may lead to biased results, which could be seen as a processing of personal data, thereby increasing the risk level."
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "Ignoring potential conflicts of interest introduces a risk of biased analysis and may lead to unforeseen consequences, potentially increasing the overall risk level."
+      },
+      "lay": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant proposal ignores potential conflicts of interest, which could impact the validity and reliability of the results, increasing overall risk level."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Low",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "LOW",
+      "LLM-70B": "Low"
+    }
+  },
+  {
+    "variant_id": "P13_neutral",
+    "base_id": "P13",
+    "class": "neutral",
+    "title": "Bibliometric Analysis of Open Access AI Ethics Publications",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art11_FreedomOfExpression"
+    ],
+    "variant_text": "This study proposes to conduct a bibliometric analysis of peer-reviewed publications on AI ethics from 2018-2025. The study will use the Scopus and Web of Science databases to identify all publications containing keywords related to AI ethics, responsible AI, algorithmic fairness, and AI governance. The analysis will examine publication trends, citation networks, geographic distribution of research groups, and thematic clustering using topic modelling. All data is publicly available metadata from academic databases. No personal data about individual researchers will be collected beyond publicly listed author names and institutional affiliations. The analysis will use standard bibliometric tools including VOSviewer and Bibliometrix. Results will identify gaps in the AI ethics literature to inform future research directions. No AI systems will be developed or deployed as part of this research.",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "same",
+        "brief_reason": "No significant changes in methodology or data handling were observed between the original and variant proposals, suggesting that the overall risk level remains unchanged."
+      },
+      "legal": {
+        "predicted_direction": "same",
+        "brief_reason": "Both the ORIGINAL and VARIANT texts describe the same research proposal, with no changes in data collection, processing, or purpose. The lack of personal data collection and the use of publicly available metadata from academic databases suggest that the proposal does not engage EU Charter Article 8 (right to protection of personal data) or Article 1 (right to freedom of thought, conscience, and religion) in a significant way. The proposal also does not raise significant concerns under the GDPR, given the publicly available nature of the data. Therefore, the overall risk level remains the same."
+      },
+      "ethics": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant and original proposals are identical, indicating no change in risk level."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "The original and variant text are identical, indicating no change in the risk level."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Low"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "LOW",
+      "LLM-70B": "Low"
+    }
+  },
+  {
+    "variant_id": "P15_positive",
+    "base_id": "P15",
+    "class": "positive",
+    "title": "Public Transport Usage Pattern Analysis",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art37_EnvironmentalProtection"
+    ],
+    "variant_text": "This research proposes to analyse anonymised Dublin Bus and Luas smart card tap-on data to model public transport usage patterns across different times of day, routes, and weather conditions, while prioritising data protection through a bias audit and providing an appeal mechanism for any concerns raised by stakeholders. The dataset consists of aggregated journey counts per route per hour provided by the National Transport Authority under an open data licence. No individual passenger records are included and no re-identification is possible from the aggregated data. The analysis will use time series forecasting and clustering algorithms to identify underserved routes and peak demand periods. Results will be shared with Dublin City Council to inform transport planning decisions. The environmental impact of the computational resources required for the analysis will be documented. No AI system will be deployed in any operational context.",
+    "change_summary": "Bias audit and appeal mechanism added to ensure data protection and transparency",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "same",
+        "brief_reason": "No significant changes in methodology or data usage, thus no change in risk level."
+      },
+      "legal": {
+        "predicted_direction": "same",
+        "brief_reason": "The original and variant proposals share similar language and intent, suggesting no significant changes in risk level regarding EU Charter of Fundamental Rights and GDPR compliance."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a bias audit and an appeal mechanism addresses potential power imbalances and ensures transparency, thereby reducing the overall risk level."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "The changes made to the variant do not appear to introduce any new risks or alter the existing risks in a way that would increase or decrease them."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Low"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Low"
+    }
+  },
+  {
+    "variant_id": "P15_negative",
+    "base_id": "P15",
+    "class": "negative",
+    "title": "Public Transport Usage Pattern Analysis",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art37_EnvironmentalProtection"
+    ],
+    "variant_text": "This research proposes to analyse anonymised Dublin Bus and Luas smart card tap-on data to model public transport usage patterns across different times of day, routes, and weather conditions, while also collecting and storing the tap-on data of passengers for a period of three years after the initial analysis is completed, to allow for future research opportunities, provided that no individual passenger records are included in the initial analysis and no re-identification is possible from the aggregated data. The dataset consists of aggregated journey counts per route per hour provided by the National Transport Authority under an open data licence. No AI system will be deployed in any operational context. The environmental impact of the computational resources required for the analysis will be documented. However, the data collected for future research opportunities will be stored in a cloud-based service located in the United States, which may be subject to US data protection laws that are less stringent than those in the EU.",
+    "change_summary": "The research now includes storing passenger tap-on data for future research opportunities, which may raise data protection concerns.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "The addition of storing passenger tap-on data for 3 years introduces a new risk related to data protection and potential re-identification, while the storage in a cloud-based service in the US adds a risk related to data sovereignty and compliance with EU data protection laws."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of long-term data storage and potential transfer to a non-EU country with less stringent data protection laws, increasing risk of personal data breaches and non-compliance with GDPR and EU Charter Arts. 7, 8, and 11."
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of long-term data storage and transfer to a non-EU jurisdiction with potentially weaker data protection laws increases the risk of data breaches and compromised participant consent."
+      },
+      "lay": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant proposal involves storing passenger data for an extended period, which increases the risk of data breaches and potential misuse, and introduces the risk of data being subject to less stringent laws in the US."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Low",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Low"
+    }
+  },
+  {
+    "variant_id": "P15_neutral",
+    "base_id": "P15",
+    "class": "neutral",
+    "title": "Public Transport Usage Pattern Analysis",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art37_EnvironmentalProtection"
+    ],
+    "variant_text": "This study proposes to analyse anonymised Dublin Bus and Luas smart card tap-on data to model public transport usage patterns across different times of day, routes, and weather conditions. The dataset consists of aggregated journey counts per route per hour provided by the National Transport Authority under an open data licence. No individual passenger records are included and no re-identification is possible from the aggregated data. The analysis will use time series forecasting and clustering algorithms to identify underserved routes and peak demand periods. Results will be shared with Dublin City Council to inform transport planning decisions. The environmental impact of the computational resources required for the analysis will be documented. No AI system will be deployed in any operational context.",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "same",
+        "brief_reason": "No significant changes in methodology or scope are observed between the original and variant proposals, suggesting a low risk of technical issues or failure modes."
+      },
+      "legal": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text is identical to the original text, indicating no changes that would impact the risk level regarding EU Charter of Fundamental Rights and GDPR."
+      },
+      "ethics": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text does not introduce any changes to the original proposal, so the risk level remains the same."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "The two proposals seem identical, so the risk level remains unchanged."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Low"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Low"
+    }
+  },
+  {
+    "variant_id": "P16_positive",
+    "base_id": "P16",
+    "class": "positive",
+    "title": "Climate Dataset Trend Analysis Using Statistical ML",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art37_EnvironmentalProtection"
+    ],
+    "variant_text": "This project proposes to apply statistical machine learning methods to publicly available climate datasets from Met \u00c9ireann and the European Centre for Medium-Range Weather Forecasts, and conduct a bias audit to ensure the models are fair and unbiased. The research will analyse temperature, precipitation, and wind patterns across Ireland over the past 50 years to identify statistically significant trends and regional variations. The methodology combines Gaussian process regression with ensemble methods to quantify prediction uncertainty. All datasets are publicly available under open government data licences. No personal data is involved. The computational resources required for model training will be documented including estimated carbon footprint using the ML CO2 Impact calculator. Results will be published as an open-access paper with all code and data made available in a public repository and an appeal mechanism for disputing results will be included.",
+    "change_summary": "Added a bias audit and appeal mechanism to ensure fairness and accountability.",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a bias audit to ensure models are fair and unbiased reduces technical risk, as it addresses a potential failure mode (model bias) and increases the overall robustness of the methodology."
+      },
+      "legal": {
+        "predicted_direction": "down",
+        "brief_reason": "The inclusion of a bias audit and an appeal mechanism for disputing results may enhance transparency and accountability, reducing the risk of potential fundamental rights violations under the EU Charter, such as the right to protection of personal data (Article 8) and the right to good administration (Article 41)."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a bias audit and appeal mechanism reduces the risk of unforeseen consequences and promotes transparency, thus lowering the overall risk level."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a bias audit and an appeal mechanism makes the project more transparent and accountable, which reduces the risk of harm or misrepresentation of results."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Low"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "MEDIUM",
+      "LLM-70B": "Low"
+    }
+  },
+  {
+    "variant_id": "P16_negative",
+    "base_id": "P16",
+    "class": "negative",
+    "title": "Climate Dataset Trend Analysis Using Statistical ML",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art37_EnvironmentalProtection"
+    ],
+    "variant_text": "This project proposes to apply statistical machine learning methods to publicly available climate datasets from Met \u00c9ireann and the European Centre for Medium-Range Weather Forecasts, while potentially infringing on the privacy of individuals living in areas with sensitive, high-resolution climate data, by aggregating data from multiple sources without proper anonymization and consent.",
+    "change_summary": "Incorporating sensitive climate data without proper anonymization and consent.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "introduction of potential data privacy risks and lack of clear anonymization and consent procedures"
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of potential infringement on privacy and lack of anonymization and consent mechanisms, which may engage Art. 1 (human dignity), Art. 7 (right to private life), and Art. 8 (protection of personal data) of the EU Charter of Fundamental Rights."
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of potential privacy infringement and lack of consent"
+      },
+      "lay": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant introduces the risk of potentially infringing on individual privacy, which increases the overall risk level."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "MEDIUM",
+      "LLM-70B": "Low"
+    }
+  },
+  {
+    "variant_id": "P16_neutral",
+    "base_id": "P16",
+    "class": "neutral",
+    "title": "Climate Dataset Trend Analysis Using Statistical ML",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art37_EnvironmentalProtection"
+    ],
+    "variant_text": "In summary, this project proposes to apply statistical machine learning methods to publicly available climate datasets from Met \u00c9ireann and the European Centre for Medium-Range Weather Forecasts. The research will analyse temperature, precipitation, and wind patterns across Ireland over the past 50 years to identify statistically significant trends and regional variations. The methodology combines Gaussian process regression with ensemble methods to quantify prediction uncertainty. All datasets are publicly available under open government data licences. No personal data is involved. The computational resources required for model training will be documented including estimated carbon footprint using the ML CO2 Impact calculator. Results will be published as an open-access paper with all code and data made available in a public repository.",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "same",
+        "brief_reason": "The text has not changed, suggesting that the technical aspects of the project remain the same."
+      },
+      "legal": {
+        "predicted_direction": "same",
+        "brief_reason": "No apparent changes in the variant that would impact the engagement of EU Charter of Fundamental Rights and GDPR provisions, such as the processing of personal data, data protection by design and by default, data minimisation, or the transparency and accountability of data processing activities."
+      },
+      "ethics": {
+        "predicted_direction": "same",
+        "brief_reason": "No changes were made to the original proposal that would impact consent, power imbalances, vulnerable populations, or opt-out mechanisms, suggesting no change to the overall risk level."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text is identical to the original text, suggesting no changes in risk level."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Low"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Medium",
+      "SHACL": "Low",
+      "LLM-8B": "MEDIUM",
+      "LLM-70B": "Low"
+    }
+  },
+  {
+    "variant_id": "P26_positive",
+    "base_id": "P26",
+    "class": "positive",
+    "title": "Smallholder Crop-Advisory Chatbot in Rural India",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art1_HumanDignity",
+      "Art8_DataProtection"
+    ],
+    "variant_text": "This project proposes a WhatsApp-based crop-advisory chatbot for smallholder farmers in Maharashtra and Odisha, with a clear disclaimer regarding the limitations of the advice provided.",
+    "change_summary": "Added a disclaimer to address potential liability concerns",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a clear disclaimer regarding the limitations of the advice provided addresses a residual issue mentioned in the original proposal, reducing the risk associated with incorrect pest-treatment advice."
+      },
+      "legal": {
+        "predicted_direction": "down",
+        "brief_reason": "Introduction of a clear disclaimer mitigates the risk of incorrect advice being taken as authoritative, thus reducing the risk of crop loss and potential liability."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a clear disclaimer regarding the limitations of the advice provided reduces the risk of farmers relying on the bot as authoritative, thus mitigating the potential harm from incorrect advice."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a disclaimer regarding the limitations of the advice provided reduces the risk of farmers relying solely on the bot's authority, thereby mitigating potential crop losses and associated consequences."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Low",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Low"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Low",
+      "SHACL": "Medium",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    }
+  },
+  {
+    "variant_id": "P26_negative",
+    "base_id": "P26",
+    "class": "negative",
+    "title": "Smallholder Crop-Advisory Chatbot in Rural India",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art1_HumanDignity",
+      "Art8_DataProtection"
+    ],
+    "variant_text": "This project proposes a WhatsApp-based crop-advisory chatbot for smallholder farmers in Maharashtra and Odisha, but now also collects and shares farmer location data with local government and NGOs to monitor agricultural development progress and provide targeted resources. The bot answers irrigation, pest, and market-price questions using retrieval over public agricultural extension bulletins and open weather APIs. Conversations are logged in aggregate for service improvement; phone numbers are hashed after 30 days. No credit, subsidy, or enforcement decisions are attached to bot use. A subtle residual issue remains that incorrect pest-treatment advice could cause crop loss for farmers who treat the bot as authoritative, yet the interface presents answers with high confidence and no uncertainty bands. The team will run a small accuracy pilot against agronomist answers, but has not planned liability or escalation pathways when advice fails. No personal land-holding registries are ingested. Additionally, the bot now requires farmers to share their personal contact information with third-party service providers, including lenders and insurance companies, to facilitate access to financial services. The team will provide a clear opt-out option for this data sharing, but the potential for unsolicited outreach or financial exploitation remains a concern.",
+    "change_summary": "The project now collects and shares farmer location data and requires farmers to share their personal contact information with third-party service providers.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "Additional data collection and sharing with third-party service providers introduces new risks of data misuse and exploitation."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of location data sharing and mandatory data sharing for financial services increases risk of data protection and fundamental rights violations."
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of sensitive data sharing and potential for financial exploitation, increasing risk for vulnerable populations."
+      },
+      "lay": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant introduces new risks such as sharing location data, requiring personal contact information, and potential financial exploitation, which were not present in the original proposal."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Low",
+      "SHACL": "Medium",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Low",
+      "SHACL": "Medium",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    }
+  },
+  {
+    "variant_id": "P26_neutral",
+    "base_id": "P26",
+    "class": "neutral",
+    "title": "Smallholder Crop-Advisory Chatbot in Rural India",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art1_HumanDignity",
+      "Art8_DataProtection"
+    ],
+    "variant_text": "In summary, this project proposes a WhatsApp-based crop-advisory chatbot for smallholder farmers in Maharashtra and Odisha. The bot answers irrigation, pest, and market-price questions using retrieval over public agricultural extension bulletins and open weather APIs. Conversations are logged in aggregate for service improvement; phone numbers are hashed after 30 days. No credit, subsidy, or enforcement decisions are attached to bot use. A subtle residual issue is that incorrect pest-treatment advice could cause crop loss for farmers who treat the bot as authoritative, yet the interface presents answers with high confidence and no uncertainty bands. The team will run a small accuracy pilot against agronomist answers but has not planned liability or escalation pathways when advice fails. No personal land-holding registries are ingested.",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text is identical to the original text, with no changes to data provenance, model validation, or measurable failure modes. The risk level remains unchanged."
+      },
+      "legal": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text appears to be identical to the original text, suggesting that the risk level remains unchanged."
+      },
+      "ethics": {
+        "predicted_direction": "same",
+        "brief_reason": "No significant changes are observed in the variant compared to the original proposal."
+      },
+      "lay": {
+        "predicted_direction": "same",
+        "brief_reason": "The text remains identical, indicating no change in the system that would affect the risk level for the farmers."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "Low",
+      "SHACL": "Medium",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "Low",
+      "SHACL": "Medium",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Medium"
+    }
+  },
+  {
+    "variant_id": "P31_positive",
+    "base_id": "P31",
+    "class": "positive",
+    "title": "Open African-Languages Speech Corpus with Personal Narratives",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "variant_text": "This project will release an open speech corpus of 400 hours across Yoruba, Igbo, and Swahili for ASR research, with a bias audit to ensure the corpus is representative of diverse perspectives and experiences.",
+    "change_summary": "Added a bias audit to address potential re-identification risks and ensure corpus diversity.",
+    "author_intended_direction": "down_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "down",
+        "brief_reason": "The addition of a bias audit introduces a level of rigor and oversight that reduces the risk of unintended consequences, such as re-identification of speakers."
+      },
+      "legal": {
+        "predicted_direction": "down",
+        "brief_reason": "Removal of sensitive information (personal stories) and addition of a bias audit, which reduces the risk of re-identification and potential breaches of EU Charter Art. 8 (right to protection of personal data) and Art. 21 (non-discrimination)."
+      },
+      "ethics": {
+        "predicted_direction": "down",
+        "brief_reason": "Removal of potential re-identification risk via voice biometrics and story content, and addition of bias audit which reduces risk of perpetuating harm or biases."
+      },
+      "lay": {
+        "predicted_direction": "down",
+        "brief_reason": "The variant adds a bias audit, which suggests a focus on fairness and protection of participants, reducing the risk of harm or re-identification."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "Low",
+      "LLM-8B": "Medium",
+      "LLM-70B": "Low"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "High",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "Medium"
+    }
+  },
+  {
+    "variant_id": "P31_negative",
+    "base_id": "P31",
+    "class": "negative",
+    "title": "Open African-Languages Speech Corpus with Personal Narratives",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "variant_text": "This project will release an open speech corpus of 400 hours across Yoruba, Igbo, and Swahili for ASR research. Speakers are paid volunteers who record scripted sentences and optional two-minute personal stories about family and work. Scripts are public-domain; personal stories may contain names, employers, and locations. Release includes raw audio under CC-BY with speaker IDs replaced by codes. A subtle issue: re-identification via voice biometrics plus story content is possible for well-known community members, but the datasheet treats the corpus as anonymised. No voice-biometric risk assessment is planned. Additionally, the project plans to use a data brokerage service to share the dataset with a third-party company that provides targeted advertising in exchange for a fee, which may compromise the anonymity of the speakers and their communities. Otherwise the project is standard open-science language resource work with no downstream decision system.",
+    "change_summary": "The project now includes a data brokerage service that may compromise speaker anonymity.",
+    "author_intended_direction": "up_or_same",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of a data brokerage service increases the risk of re-identification and potential misuse of the dataset."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of data brokerage service and potential targeted advertising increases the risk of re-identification and potential harm to individuals and communities, engaging Articles 7, 8, and 11 of the EU Charter of Fundamental Rights and potentially Article 25 of the GDPR (data protection by design and default)"
+      },
+      "ethics": {
+        "predicted_direction": "up",
+        "brief_reason": "Introduction of a data brokerage service and potential targeted advertising could compromise speaker anonymity and increase risk of re-identification and potential harm to vulnerable populations."
+      },
+      "lay": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant introduces a data brokerage service that may compromise speaker anonymity, increasing the risk level."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "High"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "High",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "Medium"
+    }
+  },
+  {
+    "variant_id": "P31_neutral",
+    "base_id": "P31",
+    "class": "neutral",
+    "title": "Open African-Languages Speech Corpus with Personal Narratives",
+    "base_risk_level": "Low",
+    "base_charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "variant_text": "In summary, this project will release an open speech corpus of 400 hours across Yoruba, Igbo, and Swahili for ASR research. Speakers are paid volunteers who record scripted sentences and optional two-minute personal stories about family and work. Scripts are public-domain; personal stories may contain names, employers, and locations. Release includes raw audio under CC-BY with speaker IDs replaced by codes. A subtle issue: re-identification via voice biometrics plus story content is possible for well-known community members, but the datasheet treats the corpus as anonymised. No voice-biometric risk assessment is planned. Otherwise the project is standard open-science language resource work with no downstream decision system.",
+    "change_summary": "Paraphrase only.",
+    "author_intended_direction": "unchanged",
+    "persona_predictions": {
+      "technical": {
+        "predicted_direction": "same",
+        "brief_reason": "No changes in the provided text that would alter the risk level, which is currently considered Low."
+      },
+      "legal": {
+        "predicted_direction": "up",
+        "brief_reason": "The variant text remains identical to the original, indicating no change in risk level, however, the risk assessment and re-identification issue are still not addressed, which could be seen as a potential increase in risk."
+      },
+      "ethics": {
+        "predicted_direction": "same",
+        "brief_reason": "The variant text is identical to the original proposal, suggesting no change in risk level."
+      },
+      "lay": {
+        "predicted_direction": "up",
+        "brief_reason": "The risk of re-identification of speakers remains unchanged, and the lack of a voice-biometric risk assessment is a concern."
+      }
+    },
+    "assessor_outputs": {
+      "keyword-baseline": "High",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "Medium"
+    },
+    "assessor_baselines": {
+      "keyword-baseline": "High",
+      "SHACL": "High",
+      "LLM-8B": "High",
+      "LLM-70B": "Medium"
+    }
+  }
+]

@@ -1,0 +1,164 @@
+{
+  "proposal_id": "P15_negative_8b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T07:59:19.993202",
+  "proposal_text": "This research proposes to analyse anonymised Dublin Bus and Luas smart card tap-on data to model public transport usage patterns across different times of day, routes, and weather conditions, while also collecting and storing the tap-on data of passengers for a period of three years after the initial analysis is completed, to allow for future research opportunities, provided that no individual passenger records are included in the initial analysis and no re-identification is possible from the aggregated data. The dataset consists of aggregated journey counts per route per hour provided by the National Transport Authority under an open data licence. No AI system will be deployed in any operational context. The environmental impact of the computational resources required for the analysis will be documented. However, the data collected for future research opportunities will be stored in a cloud-based service located in the United States, which may be subject to US data protection laws that are less stringent than those in the EU.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "environment"
+  ],
+  "matched_rights": [
+    "Art37_EnvironmentalProtection"
+  ],
+  "retrieved_requirements_count": 6,
+  "retrieved_incidents_count": 0,
+  "retrieved_risk_categories": [
+    {
+      "id": "EnvironmentalHarm",
+      "label": "Environmental Harm",
+      "definition": "Risk of negative environmental impact including carbon footprint, resource consumption, or ecological damage from AI systems.",
+      "idf_score": 4.6497,
+      "rank_score": 6.0,
+      "tf": 6,
+      "df": 12
+    },
+    {
+      "id": "DemocraticProcessHarm",
+      "label": "Democratic Process Harm",
+      "definition": "Risk of undermining democratic institutions, electoral processes, or civic participation through AI systems.",
+      "idf_score": 5.2687,
+      "rank_score": 1.0,
+      "tf": 1,
+      "df": 6
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 1.0,
+      "tf": 1,
+      "df": 26
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "This research proposal involves the collection and storage of anonymised public transport data, which may impact the environment due to computational resources and data storage in a cloud-based service outside the EU. The proposal also raises concerns about the potential impact on democratic processes and social cohesion.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Environmental harm due to computational resources and data storage",
+        "risk_category": "EnvironmentalHarm",
+        "severity": "Medium",
+        "explanation": "The proposal involves the use of computational resources and data storage in a cloud-based service, which may have a negative environmental impact."
+      },
+      {
+        "risk": "Potential impact on democratic processes and social cohesion",
+        "risk_category": "DemocraticProcessHarm",
+        "severity": "Medium",
+        "explanation": "The proposal involves the collection and storage of data, which may be subject to US data protection laws that are less stringent than those in the EU, potentially undermining democratic institutions and social cohesion."
+      },
+      {
+        "risk": "Potential psychological harm due to data storage and processing",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Low",
+        "explanation": "The proposal involves the collection and storage of data, which may raise concerns about the potential impact on individuals' mental well-being."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM026",
+        "requirement_text": "Consider whether research negatively impacts environment \u2014 fossil fuel extraction, consumption, greenhouse gas production",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Document the environmental impact of the computational resources required for the analysis"
+      },
+      {
+        "requirement_id": "HE018",
+        "requirement_text": "AI development must be mindful of environmental sustainability \u2014 document environmental impact and mitigation steps",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Document the environmental impact and mitigation steps for the computational resources required for the analysis"
+      },
+      {
+        "requirement_id": "R052",
+        "requirement_text": "Identify risks to site, environment, or society",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Identify and mitigate risks to the environment and society"
+      },
+      {
+        "requirement_id": "HE051",
+        "requirement_text": "Have you considered the system's impact on social cohesion and democratic processes?",
+        "framework": "HorizonEurope",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Consider the potential impact on democratic processes and social cohesion"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 37",
+        "right_name": "EnvironmentalProtection",
+        "relevance": "The proposal involves the use of computational resources and data storage, which may have a negative environmental impact."
+      }
+    ],
+    "historical_precedents": [],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Use energy-efficient computational resources and data storage solutions",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement data anonymization and encryption measures",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Conduct regular risk assessments and impact analyses",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Document the environmental impact of the computational resources required for the analysis",
+      "Identify and mitigate risks to the environment and society"
+    ],
+    "tier2_reflective_prompts": [
+      "Consider the potential impact on democratic processes and social cohesion",
+      "Reflect on the potential psychological harm due to data storage and processing"
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "environment"
+      ],
+      "rights_matched": 1,
+      "requirements_retrieved": 6,
+      "incidents_retrieved": 0,
+      "requirements_sample": [
+        "ACM026",
+        "ACM038",
+        "HE018",
+        "HE051",
+        "R052",
+        "R087"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM026",
+        "ACM038",
+        "HE018",
+        "HE051",
+        "R052",
+        "R087"
+      ],
+      "requirements_cited": [
+        "ACM026",
+        "HE018",
+        "R052",
+        "HE051"
+      ],
+      "incidents_sample": []
+    }
+  }
+}

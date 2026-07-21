@@ -1,8 +1,11 @@
 {
   "proposal_id": "P10",
   "mode": "full",
-  "timestamp": "2026-07-05T16:03:25.609644",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T20:18:37.742075",
   "proposal_text": "This project aims to develop an NLP-based tool for detecting health-related misinformation on Irish social media platforms. The system will collect public posts from Twitter/X, Reddit, and Facebook groups discussing topics including vaccination, cancer treatments, and mental health remedies. The tool will classify posts as verified, unverified, or misleading using a combination of source credibility scoring and claim verification against WHO and HSE published guidelines. The dataset will include approximately 500,000 public posts collected via platform APIs. While posts are publicly available, the tool will process usernames and account metadata to assess source credibility patterns. The researchers plan to publish a list of accounts identified as frequent misinformation sources. The tool does not account for satire, cultural context, or legitimate medical debate where scientific consensus has not been established.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "data",
     "health",
@@ -24,124 +27,103 @@
   "retrieved_requirements_count": 174,
   "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "The proposed NLP-based tool for detecting health-related misinformation on Irish social media platforms poses risks to several Charter rights, including Freedom of Expression (Article 11), Non-Discrimination (Article 21), and Data Protection (Article 8). The project also involves processing personal data without explicit consent, which is a high-risk activity. Furthermore, the tool's potential to negatively impact democratic processes and social relations raises concerns.",
-    "overall_risk_level": "High",
+    "risk_summary": "The research proposal involves processing public social media posts to detect health-related misinformation, which may raise concerns about data protection, privacy, and potential biases in the tool's classification. The project also plans to publish a list of accounts identified as frequent misinformation sources, which could lead to reputational harm or discrimination against individuals.",
+    "overall_risk_level": "Medium",
     "identified_risks": [
       {
-        "risk": "Processing of special category data about vulnerable groups without explicit consent",
-        "severity": "High",
-        "explanation": "The project involves processing personal data related to health, which is considered special category data. The researchers plan to publish a list of accounts identified as frequent misinformation sources, which raises concerns about the potential for harm and discrimination."
-      },
-      {
-        "risk": "Potential negative impact on democratic processes and social relations",
-        "severity": "High",
-        "explanation": "The tool's ability to classify posts as verified, unverified, or misleading could potentially influence public opinion and negatively impact democratic processes. Additionally, the project's focus on health-related misinformation may inadvertently amplify existing social biases."
-      },
-      {
-        "risk": "Bias in input data and algorithmic design",
+        "risk": "Data protection and privacy concerns due to processing of public social media posts",
         "severity": "Medium",
-        "explanation": "The researchers plan to use a combination of source credibility scoring and claim verification against WHO and HSE published guidelines. However, the tool does not account for satire, cultural context, or legitimate medical debate where scientific consensus has not been established."
+        "explanation": "The project involves collecting and processing large amounts of public social media data, which may contain personally identifiable information (PII) such as usernames and account metadata. Although the data is publicly available, the tool will process PII to assess source credibility patterns."
+      },
+      {
+        "risk": "Potential biases in the tool's classification",
+        "severity": "Medium",
+        "explanation": "The project does not account for satire, cultural context, or legitimate medical debate where scientific consensus has not been established. This may lead to biased classification of posts and potential harm to individuals or groups."
+      },
+      {
+        "risk": "Reputational harm or discrimination against individuals due to publication of misinformation sources",
+        "severity": "Medium",
+        "explanation": "The project plans to publish a list of accounts identified as frequent misinformation sources, which could lead to reputational harm or discrimination against individuals."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM020",
-        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated (Mandatory)",
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms (Mandatory)",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the dataset's representativeness and diversity"
-      },
-      {
-        "requirement_id": "HE019",
-        "requirement_text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations (Mandatory)",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment of the tool's potential impact on democratic processes and social relations"
-      },
-      {
-        "requirement_id": "EUAIAct AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system) (Mandatory)",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Determine whether the project requires a FRIA assessment"
+        "action_needed": "Discuss potential harms and mitigation strategies in the project proposal."
       },
       {
         "requirement_id": "ACM002",
         "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm (Mandatory)",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment of the project's potential harm"
+        "action_needed": "Consider potential harms and take steps to mitigate them in the project design."
       },
       {
-        "requirement_id": "HE032",
-        "requirement_text": "Input, training and output data must all be analysed for bias — verify data accounts for diversity in gender, race, age, sexual orientation, national origin, religion, health, disability (Mandatory)",
-        "framework": "HorizonEurope",
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information (Mandatory)",
+        "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the dataset's bias and diversity"
+        "action_needed": "Ensure that the project complies with data protection regulations and protects PII."
       },
       {
-        "requirement_id": "EUAIAct AI016",
-        "requirement_text": "Specify what humans can and cannot do — ability to correct outputs, ability to opt out, override capability (Mandatory)",
+        "requirement_id": "ACM028",
+        "requirement_text": "Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Assess the tool's classification for potential biases and take steps to mitigate them."
+      },
+      {
+        "requirement_id": "EUAIAct-001",
+        "requirement_text": "Data protection by design and default (Article 25 EU AI Act)",
         "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Clearly specify the human oversight mechanisms for the tool's outputs"
+        "action_needed": "Design the project with data protection in mind from the outset."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 11",
-        "right_name": "Freedom of Expression",
-        "relevance": "The project involves processing personal data related to health, which may impact individuals' freedom of expression"
-      },
-      {
-        "article": "Article 21",
-        "right_name": "Non-Discrimination",
-        "relevance": "The tool's potential to negatively impact democratic processes and social relations raises concerns about non-discrimination"
-      },
-      {
-        "article": "Article 8",
+        "article": "Article 8 DataProtection",
         "right_name": "Data Protection",
-        "relevance": "The project involves processing personal data without explicit consent, which is a high-risk activity"
+        "relevance": "The project involves processing large amounts of public social media data, which may contain PII. This raises concerns about data protection and the right to privacy."
+      },
+      {
+        "article": "Article 21 NonDiscrimination",
+        "right_name": "Non-Discrimination",
+        "relevance": "The project's classification may lead to biased outcomes and potential harm to individuals or groups, which could be considered a form of discrimination."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-001",
-        "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "Conduct thorough bias assessments and mitigation strategies to prevent similar incidents"
-      },
-      {
         "incident_id": "AIAAIC-002",
         "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "Implement robust oversight mechanisms to prevent false positives and ensure accuracy"
+        "lesson": "The project should take steps to mitigate potential biases in the tool's classification and ensure that the project complies with data protection regulations."
       },
       {
-        "incident_id": "AIAAIC-003",
-        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "Develop clear guidelines for AI system behavior and implement robust content moderation"
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "The project should be aware of the potential for hate speech or misinformation to spread through social media platforms and take steps to mitigate this risk."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct thorough bias assessments and mitigation strategies to prevent similar incidents",
+        "mitigation": "Implement bias detection and mitigation techniques in the tool's classification",
         "priority": "High"
       },
       {
-        "mitigation": "Implement robust oversight mechanisms to prevent false positives and ensure accuracy",
+        "mitigation": "Ensure that the project complies with data protection regulations and protects PII",
         "priority": "Medium"
-      },
-      {
-        "mitigation": "Develop clear guidelines for AI system behavior and implement robust content moderation",
-        "priority": "Low"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough analysis of the dataset's representativeness and diversity",
-      "Conduct a thorough risk assessment of the tool's potential impact on democratic processes and social relations"
+      "Discuss potential harms and mitigation strategies in the project proposal.",
+      "Consider potential harms and take steps to mitigate them in the project design."
     ],
     "tier2_reflective_prompts": [
-      "Consider the potential for bias in input data and algorithmic design",
-      "Develop clear guidelines for AI system behavior and implement robust content moderation"
+      "Assess the tool's classification for potential biases and take steps to mitigate them.",
+      "Design the project with data protection in mind from the outset."
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -346,12 +328,11 @@
         "R073"
       ],
       "requirements_cited": [
-        "ACM020",
-        "HE019",
-        "EUAIAct AI001",
+        "ACM001",
         "ACM002",
-        "HE032",
-        "EUAIAct AI016"
+        "ACM006",
+        "ACM028",
+        "EUAIAct-001"
       ],
       "incidents_sample": [
         "AIAAIC-014",

@@ -1,0 +1,7 @@
+{
+  "assessment": {
+    "overall_risk_level": "Low"
+  },
+  "mode": "compact_risk",
+  "model": "llama-3.1-8b-instant"
+}

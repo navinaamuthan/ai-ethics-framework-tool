@@ -1,0 +1,292 @@
+{
+  "proposal_id": "P26_neutral_8b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T08:02:40.110952",
+  "proposal_text": "In summary, this project proposes a WhatsApp-based crop-advisory chatbot for smallholder farmers in Maharashtra and Odisha. The bot answers irrigation, pest, and market-price questions using retrieval over public agricultural extension bulletins and open weather APIs. Conversations are logged in aggregate for service improvement; phone numbers are hashed after 30 days. No credit, subsidy, or enforcement decisions are attached to bot use. A subtle residual issue is that incorrect pest-treatment advice could cause crop loss for farmers who treat the bot as authoritative, yet the interface presents answers with high confidence and no uncertainty bands. The team will run a small accuracy pilot against agronomist answers but has not planned liability or escalation pathways when advice fails. No personal land-holding registries are ingested.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "chatbot"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity"
+  ],
+  "retrieved_requirements_count": 47,
+  "retrieved_incidents_count": 3,
+  "retrieved_risk_categories": [
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 24.0,
+      "tf": 24,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 14.0,
+      "tf": 14,
+      "df": 26
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "DualUseMisuse",
+      "label": "Dual-Use Misuse",
+      "definition": "Risk that research or AI outputs intended for beneficial purposes are repurposed for harmful applications.",
+      "idf_score": 4.912,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 9
+    },
+    {
+      "id": "Deception",
+      "label": "Deception",
+      "definition": "Risk that an AI system misleads users about its nature, capabilities, or the provenance of its outputs.",
+      "idf_score": 4.442,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 15
+    },
+    {
+      "id": "EconomicHarm",
+      "label": "Economic Harm",
+      "definition": "Risk of systemic or population-level economic disadvantage caused by AI systems (distinct from individual FinancialHarm).",
+      "idf_score": 4.6497,
+      "rank_score": 5.0,
+      "tf": 5,
+      "df": 12
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The WhatsApp-based crop-advisory chatbot for smallholder farmers in Maharashtra and Odisha poses risks to human dignity, psychological harm, and potential economic harm due to incorrect pest-treatment advice. The lack of planned liability or escalation pathways when advice fails also raises concerns. Additionally, the team's failure to consider the potential consequences of the chatbot's high-confidence answers without uncertainty bands is a concern.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Incorrect pest-treatment advice could cause crop loss for farmers who treat the bot as authoritative",
+        "risk_category": "Dignity",
+        "severity": "Medium",
+        "explanation": "The chatbot's high-confidence answers without uncertainty bands may lead to farmers relying on incorrect advice, causing harm to their livelihoods."
+      },
+      {
+        "risk": "Lack of planned liability or escalation pathways when advice fails",
+        "risk_category": "Accountability",
+        "severity": "Medium",
+        "explanation": "The team's failure to plan for potential consequences of incorrect advice may leave farmers without a clear path for redress."
+      },
+      {
+        "risk": "Potential economic harm to farmers due to incorrect advice",
+        "risk_category": "EconomicHarm",
+        "severity": "Medium",
+        "explanation": "The chatbot's incorrect advice could lead to economic losses for farmers, impacting their livelihoods and well-being."
+      },
+      {
+        "risk": "Transparency risk due to lack of disclosure about the chatbot's limitations and potential biases",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The team's failure to disclose the chatbot's limitations and potential biases may lead to a lack of trust among farmers and undermine the chatbot's effectiveness."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being \u2014 discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The team must discuss and mitigate potential harms caused by the chatbot's incorrect advice."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm \u2014 consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The team must consider the potential harms caused by the chatbot's incorrect advice and take steps to mitigate them."
+      },
+      {
+        "requirement_id": "ACM019",
+        "requirement_text": "Respect terms of datasets with defined licences (CC 4.0, MIT etc)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The team must respect the terms of the datasets used in the chatbot and ensure that they are properly licensed."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 1",
+        "right_name": "HumanDignity",
+        "relevance": "The chatbot's incorrect advice could undermine the dignity of farmers by causing them economic harm and impacting their livelihoods."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The importance of monitoring and controlling AI outputs to prevent harm to users."
+      },
+      {
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "The need for careful consideration of potential biases and harm in AI systems."
+      },
+      {
+        "incident_id": "AIAAIC-009",
+        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
+        "lesson": "The importance of considering the potential consequences of AI systems on human life and well-being."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement a system for farmers to report incorrect advice and provide feedback to improve the chatbot's performance.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop a clear plan for liability and escalation pathways when advice fails.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Provide transparency about the chatbot's limitations and potential biases to farmers.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Discuss and mitigate potential harms caused by the chatbot's incorrect advice.",
+      "Consider the potential harms caused by the chatbot's incorrect advice and take steps to mitigate them.",
+      "Respect the terms of the datasets used in the chatbot and ensure that they are properly licensed."
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential consequences of the chatbot's high-confidence answers without uncertainty bands?",
+      "How can the team ensure that farmers are aware of the chatbot's limitations and potential biases?",
+      "What are the potential economic harms to farmers due to incorrect advice and how can they be mitigated?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "chatbot"
+      ],
+      "rights_matched": 1,
+      "requirements_retrieved": 47,
+      "incidents_retrieved": 3,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE019",
+        "HE021",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE042",
+        "HE049",
+        "HE050",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM019"
+      ],
+      "incidents_sample": [
+        "AIAAIC-003",
+        "AIAAIC-005",
+        "AIAAIC-009"
+      ]
+    }
+  }
+}

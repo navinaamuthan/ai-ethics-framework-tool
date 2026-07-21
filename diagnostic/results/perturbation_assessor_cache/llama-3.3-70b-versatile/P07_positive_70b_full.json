@@ -1,0 +1,292 @@
+{
+  "proposal_id": "P07_positive_70b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T02:07:39.984578",
+  "proposal_text": "This research proposes to apply sentiment analysis and linguistic style detection to a corpus of 5,000 anonymised undergraduate essays submitted to the School of English at Trinity College Dublin, with a bias audit to ensure fairness in correlation analysis.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "bias",
+    "fairness",
+    "school",
+    "sentiment"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art22_CulturalDiversity"
+  ],
+  "retrieved_requirements_count": 10,
+  "retrieved_incidents_count": 3,
+  "retrieved_risk_categories": [
+    {
+      "id": "ExpressionHarm",
+      "label": "Expression Harm",
+      "definition": "Risk of chilling, suppressing, or misrepresenting legitimate expression through AI content systems.",
+      "idf_score": 5.0174,
+      "rank_score": 5.0,
+      "tf": 5,
+      "df": 8
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 4.0,
+      "tf": 4,
+      "df": 48
+    },
+    {
+      "id": "DualUseMisuse",
+      "label": "Dual-Use Misuse",
+      "definition": "Risk that research or AI outputs intended for beneficial purposes are repurposed for harmful applications.",
+      "idf_score": 4.912,
+      "rank_score": 4.0,
+      "tf": 4,
+      "df": 9
+    },
+    {
+      "id": "PhysicalHarm",
+      "label": "Physical Harm",
+      "definition": "Risk of bodily injury, death, or physical safety compromise caused by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 4.0,
+      "tf": 4,
+      "df": 19
+    },
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 4.0,
+      "tf": 4,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 3.0,
+      "tf": 3,
+      "df": 101
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    },
+    {
+      "id": "DemocraticProcessHarm",
+      "label": "Democratic Process Harm",
+      "definition": "Risk of undermining democratic institutions, electoral processes, or civic participation through AI systems.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 3,
+      "df": 6
+    },
+    {
+      "id": "FunctionCreep",
+      "label": "Function Creep",
+      "definition": "Risk that an AI system is used beyond its originally defined and ethically approved purpose.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 1,
+      "df": 6
+    }
+  ],
+  "rights_disambiguation": "systemic_info→Art11/Art22",
+  "assessment": {
+    "risk_summary": "The proposed research on sentiment analysis and linguistic style detection of undergraduate essays poses risks related to discrimination, expression harm, and privacy breach. The use of anonymised data may not fully mitigate these risks, and the potential for bias in the analysis could lead to unfair treatment of individuals or groups. Additionally, the research may have implications for transparency and accountability in AI decision-making. The overall risk level is considered Medium, as the research involves personal data processing with consent and AI-assisted decision support.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Discrimination in essay grading",
+        "risk_category": "Discrimination",
+        "severity": "Medium",
+        "explanation": "The sentiment analysis and linguistic style detection may inadvertently discriminate against certain groups of students, potentially affecting their academic outcomes."
+      },
+      {
+        "risk": "Expression harm through biased analysis",
+        "risk_category": "ExpressionHarm",
+        "severity": "Medium",
+        "explanation": "The research may perpetuate existing biases in the analysis, potentially harming students who express themselves in ways that are not aligned with the dominant cultural or linguistic norms."
+      },
+      {
+        "risk": "Privacy breach through data handling",
+        "risk_category": "PrivacyBreach",
+        "severity": "Low",
+        "explanation": "Although the data is anonymised, there is still a risk of privacy breach if the data is not handled and stored properly."
+      },
+      {
+        "risk": "Lack of transparency in AI decision-making",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The research may not provide sufficient transparency into the AI decision-making process, potentially leading to a lack of trust in the results."
+      },
+      {
+        "risk": "Dual-use misuse of research findings",
+        "risk_category": "DualUseMisuse",
+        "severity": "Low",
+        "explanation": "The research findings could potentially be misused for purposes other than their intended academic application, such as discrimination or surveillance."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM020",
+        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the dataset is representative of the intended population and communicate the results"
+      },
+      {
+        "requirement_id": "ACM023",
+        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of potential discrimination and exclusion risks"
+      },
+      {
+        "requirement_id": "ACM025",
+        "requirement_text": "Communicate whether approach could facilitate deceptive interactions causing harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Assess the potential for deceptive interactions and communicate the results"
+      },
+      {
+        "requirement_id": "ACM027",
+        "requirement_text": "Research must not build upon or facilitate illegal activity",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the research does not facilitate illegal activity"
+      },
+      {
+        "requirement_id": "HE012",
+        "requirement_text": "Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity or is sufficiently neutral",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Specify steps to ensure data representativeness and diversity"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 11",
+        "right_name": "Freedom of Expression",
+        "relevance": "The research may potentially harm students' freedom of expression if the analysis is biased or discriminatory."
+      },
+      {
+        "article": "Article 22",
+        "right_name": "Cultural Diversity",
+        "relevance": "The research may potentially neglect or marginalise certain cultural or linguistic groups, thereby threatening cultural diversity."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-014",
+        "incident_title": "YouTube Recommendation Radicalisation",
+        "lesson": "The potential for AI systems to perpetuate and amplify harmful or biased content is a significant concern"
+      },
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "AI systems can be used to spread hate speech and amplify harmful content, leading to real-world harm"
+      },
+      {
+        "incident_id": "AIAAIC-027",
+        "incident_title": "Spotify Mood Inference Patent",
+        "lesson": "AI systems can be used to infer sensitive information about individuals, potentially leading to privacy breaches or manipulation"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct thorough bias audits and testing",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement transparent and explainable AI decision-making processes",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Ensure diverse and representative datasets",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Develop and implement robust data handling and storage procedures",
+        "priority": "Low"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct thorough bias audits and testing",
+      "Implement transparent and explainable AI decision-making processes",
+      "Ensure diverse and representative datasets"
+    ],
+    "tier2_reflective_prompts": [
+      "How might the research findings be misused or repurposed for harmful applications?",
+      "What are the potential long-term consequences of the research on students' academic outcomes and well-being?"
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "bias",
+        "fairness",
+        "school",
+        "sentiment"
+      ],
+      "rights_matched": 2,
+      "requirements_retrieved": 10,
+      "incidents_retrieved": 3,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM023",
+        "HE012",
+        "HE032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM023",
+        "HE012",
+        "HE032"
+      ],
+      "requirements_cited": [
+        "ACM020",
+        "ACM023",
+        "ACM025",
+        "ACM027",
+        "HE012"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027"
+      ]
+    }
+  }
+}

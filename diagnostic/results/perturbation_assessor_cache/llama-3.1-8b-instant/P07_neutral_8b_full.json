@@ -1,0 +1,432 @@
+{
+  "proposal_id": "P07_neutral_8b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T07:48:48.827915",
+  "proposal_text": "This study proposes to apply sentiment analysis and linguistic style detection to a corpus of 5,000 anonymised undergraduate essays submitted to the School of English at Trinity College Dublin. The aim is to investigate whether emotional tone and writing style correlate with academic grade outcomes. Essays will be collected from the past three academic years with student consent obtained retrospectively via email. The NLP pipeline will extract features including sentiment polarity, subjectivity scores, vocabulary complexity, and sentence structure patterns. The researchers will investigate whether detectable stylistic differences correlate with students' first language, gender, or socioeconomic background as indicated by fee status. All analysis will be performed on pseudonymised data with student IDs replaced by random codes. Results will be published in aggregate form only.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "student",
+    "sentiment",
+    "consent",
+    "emotion",
+    "gender",
+    "school",
+    "scor"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art1_HumanDignity",
+    "Art21_NonDiscrimination",
+    "Art24_RightsOfChild",
+    "Art3_RightToIntegrity",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 129,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 54.0,
+      "tf": 54,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 41.0,
+      "tf": 41,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 21.0,
+      "tf": 21,
+      "df": 26
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 18.0,
+      "tf": 18,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 15
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "This study involves sentiment analysis and linguistic style detection on anonymised undergraduate essays, which may lead to potential biases and harm to students' dignity and well-being. The analysis may also reveal sensitive information about students' socioeconomic background and first language, which could be used to discriminate against them. Furthermore, the study's reliance on pseudonymised data does not entirely mitigate the risks of data breach and privacy breach.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Potential biases and harm to students' dignity and well-being",
+        "risk_category": "Dignity",
+        "severity": "Medium",
+        "explanation": "The study may reveal sensitive information about students' socioeconomic background and first language, which could be used to discriminate against them."
+      },
+      {
+        "risk": "Data breach and privacy breach",
+        "risk_category": "PrivacyBreach",
+        "severity": "Medium",
+        "explanation": "Although the data is pseudonymised, there is still a risk of unauthorised collection, processing, or disclosure of personal data."
+      },
+      {
+        "risk": "Potential for discrimination",
+        "risk_category": "Discrimination",
+        "severity": "Medium",
+        "explanation": "The study's reliance on pseudonymised data does not entirely mitigate the risks of discrimination against students based on their socioeconomic background and first language."
+      },
+      {
+        "risk": "Lack of transparency",
+        "risk_category": "Transparency",
+        "severity": "Low",
+        "explanation": "The study's methods and results may not be clearly disclosed to students and stakeholders, which could lead to a lack of understanding and trust in the research findings."
+      },
+      {
+        "risk": "Potential for manipulation",
+        "risk_category": "Manipulation",
+        "severity": "Low",
+        "explanation": "The study's findings may be used to manipulate students' perceptions of their academic abilities and performance."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Discuss potential biases and harm to students' dignity and well-being, and ways to mitigate such harms"
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider how the data, code, and outcomes of this research may cause harm to students and ways to mitigate such harm"
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider and ameliorate biases in the approach and data that may perpetuate discrimination against students"
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider and ameliorate biases in the data and code that may lead to biased outputs"
+      },
+      {
+        "requirement_id": "ACM005",
+        "requirement_text": "Respect intellectual property and data/code ownership — cite creators of artefacts used and use them as intended (respect licences)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Cite the creators of the artefacts used in this research and respect their intellectual property rights"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The study's reliance on pseudonymised data does not entirely mitigate the risks of discrimination against students based on their socioeconomic background and first language."
+      },
+      {
+        "article": "Article 1",
+        "right_name": "Human Dignity",
+        "relevance": "The study may reveal sensitive information about students' socioeconomic background and first language, which could be used to discriminate against them and undermine their human dignity."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The study's reliance on pseudonymised data does not entirely mitigate the risks of unauthorised collection, processing, or disclosure of personal data, which could infringe on students' private life."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The study's reliance on pseudonymised data does not entirely mitigate the risks of data breach and privacy breach, which could infringe on students' data protection rights."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The study highlights the importance of considering and ameliorating biases in data and code that may lead to biased outputs, as seen in the Amazon hiring algorithm incident."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The study's reliance on pseudonymised data does not entirely mitigate the risks of data breach and privacy breach, as seen in the Detroit police facial recognition incident."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Use robust data anonymisation techniques to protect students' personal data",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement transparent and explainable AI methods to mitigate biases and ensure fairness",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Regularly monitor and evaluate the study's methods and results for potential biases and harm",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Provide clear and transparent information to students and stakeholders about the study's methods and results",
+        "priority": "Low"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Discuss potential biases and harm to students' dignity and well-being, and ways to mitigate such harms",
+      "Consider how the data, code, and outcomes of this research may cause harm to students and ways to mitigate such harm",
+      "Consider and ameliorate biases in the approach and data that may perpetuate discrimination against students",
+      "Consider and ameliorate biases in the data and code that may lead to biased outputs",
+      "Cite the creators of the artefacts used in this research and respect their intellectual property rights"
+    ],
+    "tier2_reflective_prompts": [
+      "How may the study's findings be used to manipulate students' perceptions of their academic abilities and performance?",
+      "What measures can be taken to ensure that the study's methods and results are transparent and explainable?",
+      "How can the study's reliance on pseudonymised data be mitigated to protect students' personal data and prevent data breach and privacy breach?"
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "student",
+        "sentiment",
+        "consent",
+        "emotion",
+        "gender",
+        "school",
+        "scor"
+      ],
+      "rights_matched": 7,
+      "requirements_retrieved": 129,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM024",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE049",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "ACM012",
+        "ACM023",
+        "ACM028",
+        "AI016",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R028",
+        "R085",
+        "R043",
+        "R044",
+        "R045",
+        "R055",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "R009",
+        "R015",
+        "R019",
+        "R022",
+        "R034",
+        "R039",
+        "R042",
+        "R046",
+        "R048",
+        "ACM003",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R023",
+        "R026",
+        "R047",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM003",
+        "ACM004",
+        "ACM005"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-003",
+        "AIAAIC-005"
+      ]
+    }
+  }
+}

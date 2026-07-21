@@ -1,0 +1,406 @@
+{
+  "proposal_id": "P23_neutral_8b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T02:13:03.229458",
+  "proposal_text": "In summary, this project proposes a machine learning triage layer for a municipal social-assistance programme in São Paulo that prioritises home visits for families seeking cash-transfer enrolment. The model uses Cadastro Único registry fields, utility payment irregularities, school attendance flags, and neighbourhood vulnerability indices to score 'urgency'. Caseworkers will be instructed to follow the ranked list unless they document an override. Families scored as low-urgency may wait months for a visit. The training labels come from past caseworker decisions, which community organisations argue systematically under-served favelas and Afro-Brazilian households. No disparate-impact audit by race or territory is scheduled. Applicants cannot see their score or appeal the triage ranking—only the eventual eligibility decision after a visit. The proposal notes tension with EU-style fundamental-rights impact assessment expectations if the same pipeline were adapted under a Horizon Europe social-innovation grant.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "scor",
+    "organisation",
+    "race",
+    "school",
+    "transfer"
+  ],
+  "matched_rights": [
+    "Art21_NonDiscrimination",
+    "Art47_RightToEffectiveRemedy",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 107,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 48.0,
+      "tf": 48,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 33.0,
+      "tf": 33,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 17.0,
+      "tf": 17,
+      "df": 48
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 13.0,
+      "tf": 13,
+      "df": 26
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 15
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "This project proposes a machine learning triage layer for a municipal social-assistance programme in São Paulo, which may lead to disparate-impact issues, lack of transparency, and potential harm to vulnerable groups. The model uses sensitive data and may perpetuate biases, compromising the rights of families seeking cash-transfer enrolment. The lack of audit and oversight mechanisms further exacerbates the risks.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Disparate-impact issues and biases in the model",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The model uses sensitive data and may perpetuate biases, compromising the rights of families seeking cash-transfer enrolment."
+      },
+      {
+        "risk": "Lack of transparency in the model's operation and decision-making process",
+        "risk_category": "Transparency",
+        "severity": "High",
+        "explanation": "Applicants cannot see their score or appeal the triage ranking, which may lead to a lack of trust and understanding of the decision-making process."
+      },
+      {
+        "risk": "Potential harm to vulnerable groups, including Afro-Brazilian households and favelas",
+        "risk_category": "PsychologicalHarm",
+        "severity": "High",
+        "explanation": "The model may perpetuate biases and lead to delayed or denied services for vulnerable groups, causing psychological harm and distress."
+      },
+      {
+        "risk": "Inadequate data governance and stewardship",
+        "risk_category": "DataGovernance",
+        "severity": "High",
+        "explanation": "The model uses sensitive data, but there is no mention of data quality controls, provenance, or audit mechanisms, which may lead to data breaches or misuse."
+      },
+      {
+        "risk": "Surveillance and tracking of individuals",
+        "risk_category": "Surveillance",
+        "severity": "High",
+        "explanation": "The model may lead to the surveillance and tracking of individuals, compromising their right to privacy and autonomy."
+      },
+      {
+        "risk": "Lack of accountability and oversight mechanisms",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "There is no mention of audit or oversight mechanisms, which may lead to a lack of accountability and transparency in the decision-making process."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough impact assessment to identify potential harms and develop mitigation strategies."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment to identify potential harms and develop mitigation strategies."
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough bias audit to identify potential biases and develop mitigation strategies."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain informed consent from individuals and protect their personally identifiable information."
+      },
+      {
+        "requirement_id": "EUAIAct-001",
+        "requirement_text": "High-risk AI systems must undergo a thorough impact assessment and risk management plan",
+        "framework": "EU AI Act",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough impact assessment and develop a risk management plan to mitigate potential harms."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The model may perpetuate biases and lead to disparate-impact issues, compromising the right to non-discrimination."
+      },
+      {
+        "article": "Article 47",
+        "right_name": "RightToEffectiveRemedy",
+        "relevance": "The lack of audit and oversight mechanisms may lead to a lack of effective remedy for individuals affected by the model's decisions."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The model uses sensitive data and may lead to data breaches or misuse, compromising the right to data protection."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The importance of conducting thorough bias audits and developing mitigation strategies to prevent disparate-impact issues."
+      },
+      {
+        "incident_id": "AIAAIC-008",
+        "incident_title": "PredPol Predictive Policing Algorithmic Bias",
+        "lesson": "The need for transparency and accountability in AI decision-making processes to prevent biased outcomes."
+      },
+      {
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
+        "lesson": "The importance of conducting thorough impact assessments and developing mitigation strategies to prevent biased outcomes in high-stakes decision-making processes."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct a thorough impact assessment to identify potential harms and develop mitigation strategies.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct a thorough bias audit to identify potential biases and develop mitigation strategies.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Obtain informed consent from individuals and protect their personally identifiable information.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop and implement transparent and accountable decision-making processes.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough impact assessment to identify potential harms and develop mitigation strategies.",
+      "Conduct a thorough bias audit to identify potential biases and develop mitigation strategies.",
+      "Obtain informed consent from individuals and protect their personally identifiable information."
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential harms of this model, and how can we mitigate them?",
+      "How can we ensure that the model is fair and unbiased?",
+      "What are the potential consequences of this model on vulnerable groups?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "scor",
+        "organisation",
+        "race",
+        "school",
+        "transfer"
+      ],
+      "rights_matched": 3,
+      "requirements_retrieved": 107,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "R028",
+        "R085",
+        "ACM001",
+        "ACM017",
+        "ACM021",
+        "ACM035",
+        "AI002",
+        "AI015",
+        "AI017",
+        "AI018",
+        "AI019",
+        "AI020",
+        "AI022",
+        "AI026",
+        "AI028",
+        "AI030",
+        "HE002",
+        "HE005",
+        "HE006",
+        "HE024",
+        "HE026",
+        "HE027",
+        "HE028",
+        "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
+        "HE048",
+        "HE052",
+        "R010",
+        "R054",
+        "R055",
+        "R074",
+        "R082",
+        "ACM003",
+        "ACM005",
+        "ACM006",
+        "ACM008",
+        "ACM009",
+        "ACM010",
+        "ACM015",
+        "ACM016",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI012",
+        "AI013",
+        "AI014",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE010",
+        "HE011",
+        "HE031",
+        "HE034",
+        "HE035",
+        "HE036",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R019",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R042",
+        "R047",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R067",
+        "R068",
+        "R069",
+        "R070",
+        "R071",
+        "R072",
+        "R073",
+        "R083",
+        "R084"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM003",
+        "ACM006",
+        "EUAIAct-001"
+      ],
+      "incidents_sample": [
+        "AIAAIC-001",
+        "AIAAIC-002",
+        "AIAAIC-003",
+        "AIAAIC-004",
+        "AIAAIC-008"
+      ]
+    }
+  }
+}

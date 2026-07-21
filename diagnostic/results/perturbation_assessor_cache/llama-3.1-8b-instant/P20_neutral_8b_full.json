@@ -1,0 +1,390 @@
+{
+  "proposal_id": "P20_neutral_8b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T02:11:22.600880",
+  "proposal_text": "This study proposes to study the relationship between digital workplace behaviours and productivity by monitoring 200 consenting employees at a Dublin technology company over six months. The monitoring system will track application usage, email response times, meeting attendance, keyboard activity patterns, and break frequency. All participants will provide written informed consent and can withdraw at any time without workplace consequences. Data will be stored on encrypted university servers and destroyed after the study period. However, the monitoring software will also incidentally capture screen content including potentially sensitive communications. Aggregate productivity patterns will be shared with the employer in a format that does not identify individual employees, but the small team sizes of 5-8 people within departments may enable indirect identification. The employer has stated that monitoring results will not influence performance reviews, but this commitment is not legally binding. The research does not address the power imbalance between employer and employee that may compromise the voluntariness of consent.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "employ",
+    "monitor",
+    "consent",
+    "employee",
+    "workplace",
+    "track"
+  ],
+  "matched_rights": [
+    "Art15_FreedomOfOccupation",
+    "Art31_FairWorkingConditions",
+    "Art3_RightToIntegrity",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 82,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 49.0,
+      "tf": 49,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 21.0,
+      "tf": 21,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 48
+    },
+    {
+      "id": "EmploymentHarm",
+      "label": "Employment Harm",
+      "definition": "Risk of unfair exclusion, surveillance, or adverse treatment of workers or job applicants by AI systems.",
+      "idf_score": 4.1701,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 20
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 26
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 15
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "AddictionRisk",
+      "label": "Addiction Risk",
+      "definition": "Risk that AI system design exploits psychological vulnerabilities to create compulsive usage patterns.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 5,
+      "df": 6
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The research proposal involves monitoring employees' digital workplace behaviors and productivity, which may compromise their privacy and potentially lead to indirect identification. The monitoring system also captures screen content, including sensitive communications, and the employer may use the results to influence performance reviews. The power imbalance between employer and employee may compromise the voluntariness of consent.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "PrivacyBreach",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The monitoring system captures screen content, including potentially sensitive communications, and the data may be used to indirectly identify employees."
+      },
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The power imbalance between employer and employee may compromise the voluntariness of consent, potentially leading to unfair treatment of certain groups."
+      },
+      {
+        "risk": "PsychologicalHarm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Medium",
+        "explanation": "The monitoring system may create a sense of surveillance and anxiety among employees, potentially leading to mental distress."
+      },
+      {
+        "risk": "DataGovernance",
+        "risk_category": "DataGovernance",
+        "severity": "Medium",
+        "explanation": "The data collected may be used for purposes other than the original intent, potentially leading to misuse."
+      },
+      {
+        "risk": "Transparency",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The research does not provide clear information about how the data will be used, stored, and protected, potentially leading to a lack of trust among employees."
+      },
+      {
+        "risk": "Well-being",
+        "risk_category": "Well-being",
+        "severity": "Low",
+        "explanation": "The research does not address the environmental impact of the monitoring system, potentially leading to unnecessary energy consumption and e-waste."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a bias analysis and implement measures to mitigate any identified biases."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from employees and implement robust data protection measures."
+      },
+      {
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment and implement measures to mitigate any identified risks."
+      },
+      {
+        "requirement_id": "EUAIAct-001",
+        "requirement_text": "Ensure that data processing is fair, transparent, and lawful",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Provide clear information about data collection, storage, and use, and obtain explicit consent from employees."
+      },
+      {
+        "requirement_id": "EUAIAct-002",
+        "requirement_text": "Ensure that data is processed in a way that respects the rights of individuals",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement robust data protection measures and ensure that data is not used for purposes other than the original intent."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 7",
+        "right_name": "PrivateLife",
+        "relevance": "The research involves monitoring employees' digital workplace behaviors and productivity, potentially compromising their private life."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The research involves collecting and processing employees' personal data, potentially compromising their data protection rights."
+      },
+      {
+        "article": "Article 15",
+        "right_name": "FreedomOfOccupation",
+        "relevance": "The research involves monitoring employees' productivity, potentially influencing their freedom of occupation."
+      },
+      {
+        "article": "Article 31",
+        "right_name": "FairWorkingConditions",
+        "relevance": "The research involves monitoring employees' digital workplace behaviors and productivity, potentially compromising their fair working conditions."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-015",
+        "incident_title": "Uber Surge Pricing Discrimination",
+        "lesson": "The research should be aware of the potential for discriminatory practices and implement measures to mitigate any identified biases."
+      },
+      {
+        "incident_id": "AIAAIC-021",
+        "incident_title": "HireVue Automated Video Interview Bias",
+        "lesson": "The research should be aware of the potential for bias in AI systems and implement measures to mitigate any identified biases."
+      },
+      {
+        "incident_id": "AIAAIC-022",
+        "incident_title": "Deliveroo Algorithmic Dismissal",
+        "lesson": "The research should be aware of the potential for AI systems to perpetuate existing biases and implement measures to mitigate any identified biases."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement robust data protection measures, including encryption and secure data storage.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Provide clear information about data collection, storage, and use, and obtain explicit consent from employees.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct a thorough risk assessment and implement measures to mitigate any identified risks.",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Implement measures to mitigate any identified biases, including bias analysis and mitigation strategies.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a bias analysis and implement measures to mitigate any identified biases.",
+      "Obtain explicit consent from employees and implement robust data protection measures.",
+      "Conduct a thorough risk assessment and implement measures to mitigate any identified risks."
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential risks and benefits of the research?",
+      "How will the research ensure that data is processed in a way that respects the rights of individuals?",
+      "What measures will be taken to mitigate any identified biases?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "employ",
+        "monitor",
+        "consent",
+        "employee",
+        "workplace",
+        "track"
+      ],
+      "rights_matched": 5,
+      "requirements_retrieved": 82,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM011",
+        "ACM037",
+        "HE020",
+        "R020",
+        "R050",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "HE003"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM011",
+        "ACM037",
+        "HE020",
+        "R020",
+        "R050",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "HE003",
+        "HE004",
+        "HE017",
+        "R009",
+        "R011",
+        "R015",
+        "R019",
+        "R022",
+        "R034",
+        "R039",
+        "R042",
+        "R043",
+        "R044",
+        "R046",
+        "R048",
+        "R054",
+        "R076",
+        "ACM003",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R023",
+        "R026",
+        "R040",
+        "R047",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE013",
+        "HE033",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM003",
+        "ACM006",
+        "ACM007",
+        "EUAIAct-001",
+        "EUAIAct-002"
+      ],
+      "incidents_sample": [
+        "AIAAIC-015",
+        "AIAAIC-021",
+        "AIAAIC-022",
+        "AIAAIC-002",
+        "AIAAIC-007"
+      ]
+    }
+  }
+}

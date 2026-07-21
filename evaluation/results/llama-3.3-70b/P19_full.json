@@ -2,8 +2,9 @@
   "proposal_id": "P19",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-05T19:06:50.350428",
+  "timestamp": "2026-07-19T19:57:28.982403",
   "proposal_text": "This research proposes a collaboration between Trinity College Dublin and Johns Hopkins University to develop an AI diagnostic model for rare genetic conditions. The project requires sharing patient genomic data and medical imaging between Ireland and the United States. The Irish dataset of 2,000 patients was collected under GDPR with consent for domestic research use only. The US dataset was collected under HIPAA regulations. The researchers propose to use federated learning to train the model without raw data leaving each jurisdiction, but the federated learning protocol requires sharing model gradient updates which have been shown in recent research to be vulnerable to reconstruction attacks that can recover individual patient data. The project has received funding approval but cross-border data transfer impact assessments have not been completed. The rare disease patient population is small enough that anonymisation may not prevent re-identification. No patient advisory group has been consulted on the data sharing arrangements.",
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "data",
@@ -28,223 +29,181 @@
   "retrieved_requirements_count": 181,
   "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "The proposed AI diagnostic model for rare genetic conditions poses significant ethical risks due to the sharing of patient genomic data and medical imaging between Ireland and the United States. The use of federated learning, while intended to protect data, may still be vulnerable to reconstruction attacks, potentially compromising patient privacy. Additionally, the small size of the rare disease patient population increases the risk of re-identification, even with anonymization measures in place. The lack of consultation with a patient advisory group on data sharing arrangements further exacerbates these concerns.",
+    "risk_summary": "The proposed research project involves sharing patient genomic data and medical imaging between Ireland and the United States, which poses significant risks to patient privacy and data protection. The use of federated learning to train the model may not be sufficient to prevent reconstruction attacks, and the small size of the rare disease patient population may make anonymisation ineffective. Additionally, the project lacks consultation with a patient advisory group and has not completed cross-border data transfer impact assessments. The project's potential to contribute to the diagnosis of rare genetic conditions must be weighed against these risks.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Re-identification of patients through federated learning",
+        "risk": "Reconstruction attacks on model gradient updates",
         "severity": "High",
-        "explanation": "The sharing of model gradient updates, despite the use of federated learning, could potentially allow for the reconstruction of individual patient data, thus compromising their privacy."
+        "explanation": "Recent research has shown that model gradient updates can be vulnerable to reconstruction attacks, which could compromise patient data"
       },
       {
-        "risk": "Insufficient anonymization",
+        "risk": "Ineffective anonymisation",
         "severity": "High",
-        "explanation": "Given the small size of the rare disease patient population, anonymization measures may not be sufficient to prevent re-identification, especially if the data is combined with other publicly available information."
+        "explanation": "The small size of the rare disease patient population may make anonymisation ineffective, potentially leading to re-identification of patients"
       },
       {
-        "risk": "Lack of patient consent for international data sharing",
-        "severity": "High",
-        "explanation": "The initial consent provided by patients for domestic research use only does not cover the international sharing of their data, which could be a violation of their rights and trust."
-      },
-      {
-        "risk": "Vulnerability to data breaches",
+        "risk": "Lack of patient advisory group consultation",
         "severity": "Medium",
-        "explanation": "The transfer of sensitive medical data across borders increases the risk of data breaches, which could have severe consequences for the patients involved."
+        "explanation": "The project has not consulted with a patient advisory group on the data sharing arrangements, which may lead to inadequate consideration of patient concerns"
       },
       {
-        "risk": "Bias in AI model",
+        "risk": "Insufficient cross-border data transfer impact assessments",
         "severity": "Medium",
-        "explanation": "The development of the AI diagnostic model may inadvertently introduce biases, particularly if the training data is not representative of the diverse patient population, leading to potential misdiagnoses or unequal treatment."
+        "explanation": "The project has not completed cross-border data transfer impact assessments, which may lead to inadequate consideration of data protection risks"
       },
       {
-        "risk": "Lack of transparency and explainability",
+        "risk": "Potential for biased model outputs",
         "severity": "Medium",
-        "explanation": "The complexity of the AI model and the federated learning approach may make it difficult to provide transparent and explainable results, which is crucial for building trust among patients and healthcare professionals."
-      },
-      {
-        "risk": "Dependence on technology",
-        "severity": "Low",
-        "explanation": "The reliance on AI for diagnostic purposes may lead to over-reliance on technology, potentially undermining the role of human judgment in medical decision-making."
+        "explanation": "The project may perpetuate biases in the data or model outputs, which could lead to unfair or discriminatory outcomes"
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough impact assessment to identify potential harms and develop strategies to mitigate them."
+        "action_needed": "Obtain informed consent from patients and implement robust privacy protections"
       },
       {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement robust safeguards to prevent harm, including data protection measures and transparent communication with patients."
+        "action_needed": "Conduct a comprehensive evaluation of the project's potential risks and impacts"
       },
       {
-        "requirement_id": "ACM013",
-        "requirement_text": "Discuss dual use potential — ways research could be misused and mitigations",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider the potential for the AI model to be used in ways that could cause harm and develop strategies to prevent such misuse."
-      },
-      {
-        "requirement_id": "EUAIAct AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a FRIA to assess the risks associated with the AI system and develop strategies to mitigate them."
-      },
-      {
-        "requirement_id": "HorizonEurope HE001",
-        "requirement_text": "AI system must not deprive end-users or affected persons of ability to make decisions about their own lives or remove basic freedoms",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the AI system is designed to respect the autonomy of patients and healthcare professionals, providing them with the ability to make informed decisions."
-      },
-      {
-        "requirement_id": "HorizonEurope HE015",
-        "requirement_text": "Possible negative social impacts on certain groups must be mitigated, including impacts beyond algorithmic bias",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the potential social impacts of the AI system and develop strategies to mitigate any negative effects."
-      },
-      {
-        "requirement_id": "ACM036",
-        "requirement_text": "Have you considered whether your NLP/ML system could out, profile or endanger vulnerable individuals?",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider the potential for the AI model to disproportionately affect vulnerable populations and develop strategies to prevent such outcomes."
-      },
-      {
-        "requirement_id": "EUAIAct AI021",
-        "requirement_text": "Determine FRIA outcome status: Unacceptable Risk / High Residual Risk / Risks Acceptable / Risks Mitigated",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Determine the FRIA outcome status and develop strategies to address any unacceptable or high residual risks."
-      },
-      {
-        "requirement_id": "HorizonEurope HE016",
-        "requirement_text": "Methods to identify and mitigate negative social impacts in medium and longer term must be documented in proposal",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Document the methods for identifying and mitigating negative social impacts in the proposal and ensure that they are implemented throughout the project."
-      },
-      {
-        "requirement_id": "ACM032",
-        "requirement_text": "High-risk models must be released with safeguards for controlled use (e.g. code of conduct for access)",
+        "requirement_id": "ACM008",
+        "requirement_text": "Consider possible risks and impacts of the research approach itself (not just applications)",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop and implement safeguards for the controlled use of the AI model, including a code of conduct for access."
+        "action_needed": "Consider the potential risks and impacts of the federated learning approach"
+      },
+      {
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Minimise exposure of personally identifiable information in the datasets"
+      },
+      {
+        "requirement_id": "ACM017",
+        "requirement_text": "Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from patients or explain why consent was not obtained"
+      },
+      {
+        "requirement_id": "ACM022",
+        "requirement_text": "Consider risk that applications could open security vulnerabilities or cause serious accidents — recommend or implement protections",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider the potential risks of security vulnerabilities or serious accidents and implement protections"
+      },
+      {
+        "requirement_id": "ACM024",
+        "requirement_text": "Consult local laws before collecting or analysing bulk surveillance data — surveillance must not predict protected categories or endanger individual well-being",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consult local laws and ensure that the project does not predict protected categories or endanger individual well-being"
+      },
+      {
+        "requirement_id": "ACM029",
+        "requirement_text": "Provide data and model documentation via structured templates (Model Cards, Datasheets for Datasets)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Provide data and model documentation via structured templates"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 1",
         "right_name": "Human Dignity",
-        "relevance": "The potential for re-identification and misuse of patient data could compromise human dignity."
+        "relevance": "The project's potential to compromise patient data and privacy may infringe on the right to human dignity"
       },
       {
         "article": "Article 3",
         "right_name": "Right to Integrity",
-        "relevance": "The use of AI for diagnostic purposes may raise concerns about the integrity of the decision-making process and the potential for biases or errors."
+        "relevance": "The project's potential to compromise patient data and privacy may infringe on the right to integrity"
       },
       {
         "article": "Article 7",
         "right_name": "Private Life",
-        "relevance": "The sharing of patient data across borders and the potential for re-identification could compromise the right to private life."
+        "relevance": "The project's potential to compromise patient data and privacy may infringe on the right to private life"
       },
       {
         "article": "Article 8",
         "right_name": "Data Protection",
-        "relevance": "The processing of sensitive medical data and the potential for data breaches could compromise the right to data protection."
+        "relevance": "The project's potential to compromise patient data and privacy may infringe on the right to data protection"
       },
       {
         "article": "Article 35",
         "right_name": "Health Care",
-        "relevance": "The development and deployment of the AI model may have implications for the right to health care, particularly if it is used to inform treatment decisions or allocate resources."
+        "relevance": "The project's potential to contribute to the diagnosis of rare genetic conditions may impact the right to health care"
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-003",
         "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The importance of considering the potential for AI systems to produce harmful or biased outputs and implementing safeguards to prevent such outcomes."
-      },
-      {
-        "incident_id": "AIAAIC-009",
-        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The need for rigorous testing and validation of AI systems, particularly in high-stakes applications, to ensure that they are safe and reliable."
-      },
-      {
-        "incident_id": "AIAAIC-017",
-        "incident_title": "IBM Watson Oncology Unsafe Recommendations",
-        "lesson": "The potential for AI systems to produce unsafe or biased recommendations, particularly in high-stakes applications such as healthcare, and the need for robust validation and testing."
-      },
-      {
-        "incident_id": "AIAAIC-018",
-        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
-        "lesson": "The potential for AI systems to amplify or perpetuate harmful or biased content, particularly in social media applications, and the need for robust safeguards to prevent such outcomes."
-      },
-      {
-        "incident_id": "AIAAIC-025",
-        "incident_title": "Amazon Alexa Recording Children Without Consent",
-        "lesson": "The importance of considering the potential for AI systems to collect or process sensitive data without consent, particularly in applications that involve vulnerable populations such as children."
-      },
-      {
-        "incident_id": "AIAAIC-026",
-        "incident_title": "Facial Recognition in UK Schools",
-        "lesson": "The potential for AI systems to be used in ways that compromise privacy or autonomy, particularly in applications that involve vulnerable populations such as children."
-      },
-      {
-        "incident_id": "AIAAIC-044",
-        "incident_title": "Stable Diffusion CSAM Generation",
-        "lesson": "The potential for AI systems to produce or disseminate harmful or illegal content, particularly in applications that involve generative models or deep learning."
+        "lesson": "The importance of considering the potential risks and impacts of AI systems"
       },
       {
         "incident_id": "AIAAIC-005",
         "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The importance of considering the potential for AI systems to produce biased or discriminatory outputs, particularly in applications that involve image or speech recognition."
+        "lesson": "The potential for AI systems to perpetuate biases and discriminatory outcomes"
+      },
+      {
+        "incident_id": "AIAAIC-009",
+        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
+        "lesson": "The importance of considering the potential risks and impacts of AI systems in real-world applications"
+      },
+      {
+        "incident_id": "AIAAIC-017",
+        "incident_title": "IBM Watson Oncology Unsafe Recommendations",
+        "lesson": "The potential for AI systems to provide unsafe or inaccurate recommendations in high-stakes applications"
+      },
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "The potential for AI systems to amplify harmful or discriminatory content"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct a thorough impact assessment to identify potential harms and develop strategies to mitigate them",
+        "mitigation": "Obtain informed consent from patients",
         "priority": "High"
       },
       {
-        "mitigation": "Implement robust safeguards for the controlled use of the AI model, including a code of conduct for access",
+        "mitigation": "Implement robust privacy protections",
         "priority": "High"
       },
       {
-        "mitigation": "Develop and implement methods for identifying and mitigating negative social impacts in the medium and longer term",
+        "mitigation": "Conduct a comprehensive evaluation of the project's potential risks and impacts",
         "priority": "High"
       },
       {
-        "mitigation": "Ensure that the AI system is designed to respect the autonomy of patients and healthcare professionals, providing them with the ability to make informed decisions",
+        "mitigation": "Consider the potential risks and impacts of the federated learning approach",
         "priority": "Medium"
       },
       {
-        "mitigation": "Consider the potential for the AI model to disproportionately affect vulnerable populations and develop strategies to prevent such outcomes",
-        "priority": "Medium"
-      },
-      {
-        "mitigation": "Document the methods for identifying and mitigating negative social impacts in the proposal and ensure that they are implemented throughout the project",
+        "mitigation": "Minimise exposure of personally identifiable information in the datasets",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough impact assessment to identify potential harms and develop strategies to mitigate them",
-      "Implement robust safeguards for the controlled use of the AI model, including a code of conduct for access",
-      "Ensure that the AI system is designed to respect the autonomy of patients and healthcare professionals, providing them with the ability to make informed decisions",
-      "Develop and implement methods for identifying and mitigating negative social impacts in the medium and longer term",
-      "Document the methods for identifying and mitigating negative social impacts in the proposal and ensure that they are implemented throughout the project"
+      "Obtain informed consent from patients",
+      "Implement robust privacy protections",
+      "Conduct a comprehensive evaluation of the project's potential risks and impacts",
+      "Consider the potential risks and impacts of the federated learning approach",
+      "Minimise exposure of personally identifiable information in the datasets"
     ],
     "tier2_reflective_prompts": [
-      "Consider the potential for the AI model to produce biased or discriminatory outputs and develop strategies to prevent such outcomes",
-      "Reflect on the potential for the AI system to be used in ways that compromise privacy or autonomy, particularly in applications that involve vulnerable populations",
-      "Think about the potential for the AI model to amplify or perpetuate harmful or biased content, particularly in social media applications, and develop strategies to prevent such outcomes"
+      "What are the potential risks and impacts of the project on patient data and privacy?",
+      "How can the project ensure that it does not perpetuate biases or discriminatory outcomes?",
+      "What are the potential risks and impacts of the federated learning approach on patient data and privacy?",
+      "How can the project ensure that it is transparent and accountable in its use of patient data and AI systems?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -458,16 +417,14 @@
         "R074"
       ],
       "requirements_cited": [
-        "ACM001",
-        "ACM002",
-        "ACM013",
-        "EUAIAct AI001",
-        "HorizonEurope HE001",
-        "HorizonEurope HE015",
-        "ACM036",
-        "EUAIAct AI021",
-        "HorizonEurope HE016",
-        "ACM032"
+        "ACM006",
+        "ACM007",
+        "ACM008",
+        "ACM016",
+        "ACM017",
+        "ACM022",
+        "ACM024",
+        "ACM029"
       ],
       "incidents_sample": [
         "AIAAIC-003",

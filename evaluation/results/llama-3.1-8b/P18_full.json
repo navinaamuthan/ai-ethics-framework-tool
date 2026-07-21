@@ -1,8 +1,11 @@
 {
   "proposal_id": "P18",
   "mode": "full",
-  "timestamp": "2026-07-05T16:14:59.662406",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T20:41:40.669912",
   "proposal_text": "This project proposes to develop an autonomous AI research assistant capable of independently searching the web, reading academic papers, summarising findings, and drafting literature review sections. The agent will use a large language model with tool-use capabilities including web browsing, PDF parsing, database querying, and file creation. The agent will operate with minimal human oversight, executing multi-step research tasks overnight and presenting results for review the following morning. The system will access academic databases using the researcher's institutional credentials. The agent may encounter and process personal data, copyrighted material, and sensitive research findings during its autonomous web browsing. No guardrails have been implemented to prevent the agent from accessing restricted databases, submitting forms, or interacting with external services beyond its intended scope. The researchers plan to evaluate the agent's output quality but have not addressed accountability for errors, hallucinated citations, or unintended data access.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "data",
     "personal data",
@@ -20,28 +23,28 @@
   "retrieved_requirements_count": 178,
   "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "The proposed autonomous AI research assistant poses significant risks due to its potential to access and process personal data, copyrighted material, and sensitive research findings without explicit consent or adequate guardrails. The system's ability to execute multi-step research tasks with minimal human oversight also raises concerns about accountability for errors and unintended consequences.",
+    "risk_summary": "The proposed autonomous AI research assistant poses significant risks due to its potential to access and process personal data, copyrighted material, and sensitive research findings without proper guardrails. The system's ability to execute multi-step tasks with minimal human oversight also increases the likelihood of errors, hallucinated citations, or unintended data access.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Unintended data access and processing of personal data without consent",
+        "risk": "Unauthorized access to personal data",
         "severity": "High",
-        "explanation": "The system's autonomous web browsing capabilities may lead to the collection and processing of personal data, potentially violating EU AI Act requirements (AI001-AI021)."
+        "explanation": "The system may encounter and process personal data during its autonomous web browsing without explicit consent."
       },
       {
-        "risk": "Lack of accountability for errors and hallucinated citations",
+        "risk": "Copyright infringement",
+        "severity": "Medium",
+        "explanation": "The agent may access copyrighted material without proper licensing or citation."
+      },
+      {
+        "risk": "Data breaches due to lack of security measures",
         "severity": "High",
-        "explanation": "The researchers' plan to evaluate output quality does not address the potential consequences of errors or inaccuracies, which could compromise the integrity of research findings."
+        "explanation": "No guardrails have been implemented to prevent the agent from accessing restricted databases, submitting forms, or interacting with external services beyond its intended scope."
       },
       {
-        "risk": "Potential misuse of AI system for malicious purposes",
-        "severity": "Medium",
-        "explanation": "The system's capabilities and lack of guardrails may facilitate its use for unintended purposes, such as data scraping or cyber attacks, which could have severe consequences (ACM013)."
-      },
-      {
-        "risk": "Unintended consequences of AI-driven research decisions",
-        "severity": "Medium",
-        "explanation": "The system's autonomous decision-making may lead to unforeseen outcomes, potentially affecting individuals or groups in ways not anticipated by the researchers (HorizonEurope HE002)."
+        "risk": "Unintended data access and errors",
+        "severity": "High",
+        "explanation": "The system's ability to execute multi-step tasks with minimal human oversight increases the likelihood of errors, hallucinated citations, or unintended data access."
       }
     ],
     "applicable_requirements": [
@@ -49,66 +52,79 @@
         "requirement_id": "ACM001",
         "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms (Mandatory)",
         "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory"
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment of the system's potential impacts on individuals, groups, and society."
       },
       {
-        "requirement_id": "EUAIAct AI008",
-        "requirement_text": "State the intended purpose of the AI system (Mandatory)",
-        "framework": "EU AI Act",
-        "tier": "Tier 1 Mandatory"
-      },
-      {
-        "requirement_id": "HorizonEurope HE003",
-        "requirement_text": "AI system must not subordinate, coerce, deceive, manipulate, objectify or dehumanize end-users or affected persons (Mandatory)",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory"
-      },
-      {
-        "requirement_id": "ACM019",
-        "requirement_text": "Respect terms of datasets with defined licences (CC 4.0, MIT etc) (Mandatory)",
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm (Mandatory)",
         "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory"
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement measures to prevent the system from causing harm, such as unauthorized access to personal data or copyright infringement."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from individuals whose personal data the system may access and implement measures to protect their personally identifiable information."
+      },
+      {
+        "requirement_id": "EUAIAct-001",
+        "requirement_text": "Ensure that AI systems are transparent, explainable, and fair (Mandatory)",
+        "framework": "EU AI Act",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement mechanisms to ensure the system's decision-making processes are transparent, explainable, and fair."
+      },
+      {
+        "requirement_id": "ACM029",
+        "requirement_text": "Provide data and model documentation via structured templates (Model Cards, Datasheets for Datasets) (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Create and maintain accurate and detailed documentation of the system's data and models."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 7",
-        "right_name": "PrivateLife",
-        "relevance": "The AI system's access to personal data and web browsing capabilities may compromise individuals' right to private life."
+        "article": "Article 7 PrivateLife",
+        "right_name": "Right to private life",
+        "relevance": "The system's potential access to personal data without explicit consent may infringe on individuals' right to private life."
       },
       {
-        "article": "Article 8",
-        "right_name": "DataProtection",
-        "relevance": "The processing of personal data without explicit consent or adequate safeguards may violate the EU Charter's Data Protection right."
+        "article": "Article 8 DataProtection",
+        "right_name": "Right to data protection",
+        "relevance": "The system's handling of personal data and lack of transparency in its decision-making processes may violate individuals' right to data protection."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-003",
         "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The incident highlights the importance of implementing guardrails and safeguards to prevent AI systems from generating harmful or offensive content."
+        "lesson": "The importance of implementing guardrails and measures to prevent AI systems from causing harm, especially when they have the potential to access and process sensitive information."
       },
       {
-        "incident_id": "AIAAIC-009",
-        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The incident demonstrates the need for careful consideration of potential consequences and risks associated with autonomous decision-making in AI systems."
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "The need for diversity and inclusion in AI development, as well as the importance of addressing biases in data and algorithms."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement robust guardrails and safeguards to prevent unintended data access and processing.",
+        "mitigation": "Implement robust security measures to prevent unauthorized access to personal data and copyrighted material.",
         "priority": "High"
       },
       {
-        "mitigation": "Develop and implement clear accountability mechanisms for errors and inaccuracies in AI-driven research decisions.",
+        "mitigation": "Develop and maintain accurate and detailed documentation of the system's data and models.",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough risk assessment and identify potential consequences of AI system's actions."
+      "Conduct a thorough risk assessment of the system's potential impacts on individuals, groups, and society.",
+      "Implement measures to prevent the system from causing harm."
     ],
     "tier2_reflective_prompts": [
-      "Consider the potential long-term social impacts of the AI system on vulnerable groups and develop strategies to mitigate these effects (HorizonEurope HE015)."
+      "How can we ensure that the system's decision-making processes are transparent, explainable, and fair?",
+      "What measures can be taken to address biases in data and algorithms?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -316,9 +332,10 @@
       ],
       "requirements_cited": [
         "ACM001",
-        "EUAIAct AI008",
-        "HorizonEurope HE003",
-        "ACM019"
+        "ACM002",
+        "ACM006",
+        "EUAIAct-001",
+        "ACM029"
       ],
       "incidents_sample": [
         "AIAAIC-003",

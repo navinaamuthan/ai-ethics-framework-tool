@@ -2,7 +2,7 @@
   "proposal_id": "P04",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-20T14:32:57.006884",
+  "timestamp": "2026-07-19T19:52:25.471552",
   "proposal_text": "This research proposes to develop a machine learning-based ad delivery optimisation system for deployment on a major social media platform. The system will use a multi-objective optimisation algorithm that maximises ad relevance scores and advertiser return on investment by predicting which users are most likely to engage with each advertisement. The algorithm will use thousands of user behavioural, demographic, and interest signals — excluding explicit race and gender variables — to determine ad delivery. The system will operate as a real-time auction where advertisers bid for impression opportunities, with the platform's relevance prediction model determining which users see which ads. An academic audit of this system found that even when advertisers set their targeting parameters to be fully inclusive with no demographic restrictions, the optimisation algorithm delivered employment ads predominantly to men and housing ads predominantly to white users. This skew was caused by the algorithm's financial optimisation function, which learned that majority-group users were cheaper to reach and more likely to engage. The system does not include pre-deployment fairness auditing. No mechanism for individual users to understand why they are or are not shown specific opportunity-related advertisements is planned.",
   "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
@@ -30,98 +30,34 @@
   ],
   "retrieved_requirements_count": 177,
   "retrieved_incidents_count": 8,
-  "retrieved_risk_categories": [
-    {
-      "id": "PsychologicalHarm",
-      "label": "Psychological Harm",
-      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system."
-    },
-    {
-      "id": "FinancialHarm",
-      "label": "Financial Harm",
-      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system."
-    },
-    {
-      "id": "PhysicalHarm",
-      "label": "Physical Harm",
-      "definition": "Risk of bodily injury, death, or physical safety compromise caused by an AI system."
-    },
-    {
-      "id": "ReputationalHarm",
-      "label": "Reputational Harm",
-      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions."
-    },
-    {
-      "id": "PrivacyBreach",
-      "label": "Privacy Breach",
-      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system."
-    },
-    {
-      "id": "Manipulation",
-      "label": "",
-      "definition": ""
-    },
-    {
-      "id": "Discrimination",
-      "label": "Discrimination",
-      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system."
-    },
-    {
-      "id": "EconomicHarm",
-      "label": "",
-      "definition": ""
-    },
-    {
-      "id": "EmploymentHarm",
-      "label": "",
-      "definition": ""
-    },
-    {
-      "id": "Accountability",
-      "label": "",
-      "definition": ""
-    }
-  ],
-  "rights_disambiguation": "individual_treatment→Art21",
   "assessment": {
-    "risk_summary": "The proposed machine learning-based ad delivery optimisation system poses significant ethical risks, including discrimination, privacy breaches, and manipulation. The system's financial optimisation function may perpetuate biases against certain groups, leading to unfair treatment and potential harm. Additionally, the lack of transparency and accountability in the system's decision-making process raises concerns about privacy and reputational harm. The system's potential to facilitate deceptive interactions and influence user behavior also poses risks to individuals and society.",
+    "risk_summary": "The proposed machine learning-based ad delivery optimisation system poses significant ethical risks, including potential discrimination against certain groups, invasion of user privacy, and lack of transparency in ad delivery decisions. The system's reliance on user behavioural, demographic, and interest signals may perpetuate biases and stereotypes, leading to unfair treatment of individuals. Furthermore, the absence of pre-deployment fairness auditing and mechanisms for users to understand ad delivery decisions exacerbates these risks. The system's potential to amplify existing social inequalities and biases is a major concern.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Discrimination against certain groups",
-        "risk_category": "Discrimination",
+        "risk": "Discrimination",
         "severity": "High",
-        "explanation": "The system's financial optimisation function may learn to target certain groups based on their demographic characteristics, leading to unfair treatment and potential harm."
+        "explanation": "The system's algorithm may learn and perpetuate biases against certain groups, leading to unfair treatment and discrimination."
       },
       {
-        "risk": "Privacy breaches",
-        "risk_category": "PrivacyBreach",
+        "risk": "Privacy invasion",
         "severity": "Medium",
-        "explanation": "The system's use of thousands of user behavioral, demographic, and interest signals may compromise user privacy if not properly protected."
+        "explanation": "The system's use of user behavioural, demographic, and interest signals may infringe on users' right to privacy."
       },
       {
-        "risk": "Manipulation of user behavior",
-        "risk_category": "Manipulation",
-        "severity": "Medium",
-        "explanation": "The system's ability to influence user behavior through targeted advertising may be used to manipulate users into making certain decisions or taking certain actions."
-      },
-      {
-        "risk": "Lack of transparency and accountability",
-        "risk_category": "Accountability",
+        "risk": "Lack of transparency",
         "severity": "High",
-        "explanation": "The system's lack of transparency and accountability in its decision-making process raises concerns about the potential for unfair treatment and harm to individuals and groups."
+        "explanation": "The absence of mechanisms for users to understand ad delivery decisions and the lack of pre-deployment fairness auditing may lead to a lack of trust and accountability in the system."
       },
       {
-        "risk": "Environmental impact",
-        "risk_category": "Well-being",
-        "severity": "Low",
-        "explanation": "The system's energy consumption and environmental impact may be significant, particularly if it is deployed on a large scale."
+        "risk": "Amplification of social inequalities",
+        "severity": "High",
+        "explanation": "The system's potential to amplify existing social inequalities and biases is a major concern, particularly in the context of employment and housing ads."
       },
       {
-        "risk": "Reputational harm",
-        "risk_category": "ReputationalHarm",
+        "risk": "Inadequate data protection",
         "severity": "Medium",
-        "explanation": "The system's potential to facilitate deceptive interactions and influence user behavior may damage the reputation of the social media platform and its users."
+        "explanation": "The system's use of user data may not be adequately protected, potentially leading to data breaches or misuse."
       }
     ],
     "applicable_requirements": [
@@ -133,117 +69,107 @@
         "action_needed": "Implement fairness auditing and bias mitigation strategies"
       },
       {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Regularly inspect and address biases in the system's data and algorithms"
+      },
+      {
         "requirement_id": "ACM006",
         "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement robust privacy protections and obtain informed consent from users"
+        "action_needed": "Obtain informed consent from users and implement robust data protection measures"
       },
       {
         "requirement_id": "ACM007",
         "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment and evaluation of the system's impacts"
+        "action_needed": "Conduct thorough risk assessments and evaluations of the system's potential impacts"
       },
       {
         "requirement_id": "ACM016",
         "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Minimise the collection and use of personally identifiable information"
+        "action_needed": "Minimise the use of personally identifiable information and obtain informed consent where necessary"
+      },
+      {
+        "requirement_id": "ACM021",
+        "requirement_text": "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider the potential risks and harms associated with the system's deployment"
       },
       {
         "requirement_id": "ACM023",
         "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Assess the potential for discrimination and negative impacts on individuals and groups"
-      },
-      {
-        "requirement_id": "ACM027",
-        "requirement_text": "Research must not build upon or facilitate illegal activity — strongly discourage work that denies rights to privacy, speech, health, liberty, security, legal personhood, freedom of conscience/religion",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the system does not facilitate illegal activity or deny human rights"
+        "action_needed": "Assess the system's potential to discriminate or negatively impact certain groups"
       },
       {
         "requirement_id": "ACM028",
         "requirement_text": "Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Inspect the system for biases and limitations and take steps to mitigate them"
-      },
-      {
-        "requirement_id": "ACM029",
-        "requirement_text": "Provide data and model documentation via structured templates (Model Cards, Datasheets for Datasets)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Provide transparent documentation of the system's data and models"
+        "action_needed": "Regularly inspect the system's models and datasets for biases and limitations"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The system's potential to discriminate against certain groups raises concerns about the right to non-discrimination"
-      },
-      {
-        "article": "Article 7",
-        "right_name": "Private Life",
-        "relevance": "The system's use of personally identifiable information raises concerns about the right to private life"
-      },
-      {
-        "article": "Article 8",
-        "right_name": "Data Protection",
-        "relevance": "The system's collection and use of personal data raises concerns about the right to data protection"
+        "relevance": "The system's potential to discriminate against certain groups is a major concern, particularly in the context of employment and housing ads."
       },
       {
         "article": "Article 20",
-        "right_name": "Equality Before Law",
-        "relevance": "The system's potential to perpetuate biases and discrimination raises concerns about the right to equality before the law"
+        "right_name": "Equality Before the Law",
+        "relevance": "The system's algorithm may perpetuate biases and stereotypes, leading to unfair treatment and discrimination."
       },
       {
         "article": "Article 23",
         "right_name": "Gender Equality",
-        "relevance": "The system's potential to perpetuate gender biases raises concerns about the right to gender equality"
+        "relevance": "The system's potential to amplify existing social inequalities and biases is a major concern, particularly in the context of employment and housing ads."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The system's use of user behavioural, demographic, and interest signals may infringe on users' right to privacy."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The system's use of user data may not be adequately protected, potentially leading to data breaches or misuse."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of fairness auditing and bias mitigation in AI systems"
+        "lesson": "The importance of fairness auditing and bias mitigation in AI systems, particularly in high-stakes applications such as hiring."
       },
       {
         "incident_id": "AIAAIC-002",
         "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The potential for AI systems to perpetuate discrimination and harm individuals"
+        "lesson": "The potential risks and harms associated with the deployment of AI systems, particularly in law enforcement and surveillance applications."
       },
       {
         "incident_id": "AIAAIC-015",
         "incident_title": "Uber Surge Pricing Discrimination",
-        "lesson": "The importance of transparency and accountability in AI systems"
-      },
-      {
-        "incident_id": "AIAAIC-018",
-        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
-        "lesson": "The potential for AI systems to facilitate harm and discrimination"
+        "lesson": "The potential for AI systems to perpetuate biases and discriminate against certain groups, particularly in the context of pricing and resource allocation."
       },
       {
         "incident_id": "AIAAIC-021",
         "incident_title": "HireVue Automated Video Interview Bias",
-        "lesson": "The importance of fairness auditing and bias mitigation in AI systems"
+        "lesson": "The importance of fairness auditing and bias mitigation in AI systems, particularly in high-stakes applications such as hiring and employment."
       },
       {
         "incident_id": "AIAAIC-022",
         "incident_title": "Deliveroo Algorithmic Dismissal",
-        "lesson": "The potential for AI systems to perpetuate discrimination and harm individuals"
-      },
-      {
-        "incident_id": "AIAAIC-027",
-        "incident_title": "Spotify Mood Inference Patent",
-        "lesson": "The importance of transparency and accountability in AI systems"
+        "lesson": "The potential risks and harms associated with the deployment of AI systems, particularly in the context of employment and worker rights."
       }
     ],
     "recommended_mitigations": [
@@ -252,31 +178,31 @@
         "priority": "High"
       },
       {
-        "mitigation": "Implement robust privacy protections and obtain informed consent from users",
+        "mitigation": "Obtain informed consent from users and implement robust data protection measures",
         "priority": "High"
       },
       {
-        "mitigation": "Conduct a thorough risk assessment and evaluation of the system's impacts",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Minimise the collection and use of personally identifiable information",
+        "mitigation": "Conduct thorough risk assessments and evaluations of the system's potential impacts",
         "priority": "Medium"
       },
       {
-        "mitigation": "Provide transparent documentation of the system's data and models",
+        "mitigation": "Regularly inspect and address biases in the system's data and algorithms",
         "priority": "Medium"
+      },
+      {
+        "mitigation": "Develop and implement mechanisms for users to understand ad delivery decisions",
+        "priority": "Low"
       }
     ],
     "tier1_mandatory_actions": [
       "Implement fairness auditing and bias mitigation strategies",
-      "Implement robust privacy protections and obtain informed consent from users",
-      "Conduct a thorough risk assessment and evaluation of the system's impacts"
+      "Obtain informed consent from users and implement robust data protection measures",
+      "Conduct thorough risk assessments and evaluations of the system's potential impacts"
     ],
     "tier2_reflective_prompts": [
-      "What are the potential biases and limitations of the system?",
-      "How can the system be designed to mitigate discrimination and harm?",
-      "What are the potential risks and impacts of the system on individuals and society?"
+      "How might the system's algorithm perpetuate biases and stereotypes, and what strategies can be implemented to mitigate these risks?",
+      "What are the potential risks and harms associated with the deployment of the system, and how can these be addressed?",
+      "How can the system be designed to promote transparency and accountability in ad delivery decisions?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -487,13 +413,13 @@
       ],
       "requirements_cited": [
         "ACM003",
+        "ACM004",
         "ACM006",
         "ACM007",
         "ACM016",
+        "ACM021",
         "ACM023",
-        "ACM027",
-        "ACM028",
-        "ACM029"
+        "ACM028"
       ],
       "incidents_sample": [
         "AIAAIC-014",

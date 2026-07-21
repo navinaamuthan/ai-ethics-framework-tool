@@ -1,0 +1,53 @@
+{
+  "proposal_id": "P06",
+  "proposal_text": "This project proposes to install camera-based emotion recognition systems in six secondary school classrooms in Dublin to study the relationship between student emotional engagement and learning outcomes. The system will use computer vision to classify student facial expressions into six emotional categories (happy, sad, angry, surprised, fearful, neutral) at 5-second intervals throughout lessons. Data will be collected over one academic term covering approximately 180 students aged 13-17. Parental consent will be obtained but students will not be given an individual opt-out mechanism that allows them to remain in the classroom without being monitored. The emotion recognition system has been validated primarily on adult Western faces and has not been tested for accuracy on adolescent faces or faces from diverse ethnic backgrounds. Aggregated emotional engagement scores will be shared with teachers to inform pedagogical adjustments.",
+  "assessment": {
+    "overall_risk_level": "High",
+    "risk_summary": "Emotion recognition on minors without opt-out.",
+    "identified_risks": [
+      {
+        "risk": "Child monitoring without opt-out",
+        "risk_category": "ChildrenRights",
+        "severity": "High",
+        "explanation": "Art24"
+      },
+      {
+        "risk": "Lack of AI disclosure to students",
+        "risk_category": "Accountability",
+        "severity": "Medium",
+        "explanation": "Transparency section HE021"
+      },
+      {
+        "risk": "Demographic bias in emotion model",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "adult Western faces"
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "HE021",
+        "requirement_text": "Disclose AI interaction",
+        "framework": "HorizonEurope"
+      },
+      {
+        "requirement_id": "R027",
+        "requirement_text": "Describe target population",
+        "framework": "REAMS"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 24",
+        "right_name": "Rights of the Child"
+      }
+    ],
+    "historical_precedents": [],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Provide individual opt-out",
+        "priority": "High"
+      }
+    ]
+  }
+}

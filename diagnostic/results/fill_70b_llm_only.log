@@ -1,0 +1,21 @@
+  [OK] Groq connected. Available models: 15
+  [OK] Model 'llama-3.3-70b-versatile' is available.
+need ['P21', 'P22', 'P23', 'P24', 'P25', 'P26', 'P27', 'P28', 'P29', 'P30', 'P31', 'P33', 'P34', 'P35', 'P36', 'P37', 'P38', 'P39', 'P40']
+[1/19] P21
+
+============================================================
+ASSESSING PROPOSAL: P21
+Mode: llm_only | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 25
+============================================================
+
+[Step 1] Building LLM-only prompt (no KG context)...
+
+[Step 2] Calling LLM...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99652, Requested 4945. Please try again in 1h6m11.807999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99652, Requested 4945. Please try again in 1h6m11.807999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkj1cmx8feg84n8m5yvvzp95` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99652, Requested 2220. Please try again in 26m57.408s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [PROTECTED] Existing valid result at ../evaluation/results/llama-3.3-70b/P21_llm_only.json was NOT overwritten by this failure. Failure details saved to ../evaluation/results/llama-3.3-70b/P21_llm_only_FAILED_20260721_002415.json instead.
+ fail 1, sleep 45s

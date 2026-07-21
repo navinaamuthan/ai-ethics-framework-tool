@@ -1,0 +1,18 @@
+{
+  "proposal_id": "P23_negative_70b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T07:50:48.512678",
+  "proposal_text": "Social-Benefit Eligibility Triage in Brazil, with a new risk of data exploitation",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [],
+  "matched_rights": [],
+  "retrieved_requirements_count": 0,
+  "retrieved_incidents_count": 0,
+  "retrieved_risk_categories": [],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "error": "LLM returned empty response"
+  }
+}

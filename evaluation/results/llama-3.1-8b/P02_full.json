@@ -1,8 +1,11 @@
 {
   "proposal_id": "P02",
   "mode": "full",
-  "timestamp": "2026-07-05T15:41:33.925215",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T19:54:58.025025",
   "proposal_text": "This research proposes to deploy the COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) risk assessment tool across criminal courts in Broward County, Florida, to predict defendants' likelihood of recidivism. The system uses a proprietary algorithm trained on a battery of psychological questionnaire responses administered at the time of arrest, combined with criminal history variables including prior arrest count, age at first offence, and charge severity. The algorithm produces three decile scores (1–10) for general recidivism, violent recidivism, and failure to appear, with scores categorised as Low (1–4), Medium (5–7), or High (8–10). These scores will be provided to judges and parole officers at pre-trial hearings and sentencing to inform detention and release decisions. The model is proprietary and its internal weighting is not disclosed to defendants or defence counsel. No mechanism for defendants to challenge the algorithmic risk score is included in the deployment design. An independent analysis of the algorithm's outputs found that Black defendants who did not re-offend were falsely classified as high risk at nearly twice the rate of white defendants who did not re-offend (45% vs 24%).",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "predict",
     "profil",
@@ -22,103 +25,96 @@
   "retrieved_requirements_count": 167,
   "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "This research proposal involves the deployment of a COMPAS risk assessment tool in criminal courts, which has been shown to have racial bias. The system uses proprietary algorithms and does not provide mechanisms for defendants to challenge their scores. This raises concerns about fairness, discrimination, and the potential for harm.",
+    "risk_summary": "The proposed deployment of the COMPAS risk assessment tool poses significant ethical risks due to its potential for racial bias, lack of transparency in algorithmic decision-making, and impact on vulnerable populations.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Racial bias in AI decision-making",
+        "risk": "Racial bias in algorithmic decision-making",
         "severity": "High",
-        "explanation": "The COMPAS algorithm has been shown to falsely classify Black defendants as high risk at nearly twice the rate of white defendants."
+        "explanation": "The COMPAS algorithm has been found to falsely classify Black defendants as high risk at nearly twice the rate of white defendants, highlighting a significant racial bias."
       },
       {
-        "risk": "Lack of transparency and accountability",
+        "risk": "Lack of transparency and accountability in algorithmic decision-making",
         "severity": "High",
-        "explanation": "The proprietary nature of the algorithm and lack of mechanisms for defendants to challenge their scores raises concerns about transparency and accountability."
+        "explanation": "The proprietary nature of the algorithm and lack of disclosure of internal weighting mechanisms make it difficult for defendants to challenge the risk score."
       },
       {
-        "risk": "Potential for harm to vulnerable groups",
+        "risk": "Potential for discriminatory impact on vulnerable populations",
         "severity": "Medium",
-        "explanation": "The deployment of this tool in criminal courts has the potential to impact defendants' lives and liberty, particularly those from marginalized communities."
+        "explanation": "The COMPAS tool may perpetuate existing biases in the criminal justice system, disproportionately affecting marginalized communities."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment and mitigation plan to address potential harms."
+        "action_needed": "Conduct a thorough analysis of the potential harms and benefits of the COMPAS tool."
       },
       {
-        "requirement_id": "AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a FRIA assessment to determine the level of risk associated with this deployment."
-      },
-      {
-        "requirement_id": "HE012",
-        "requirement_text": "Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity or is sufficiently neutral",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop a plan to ensure that the data used in this deployment is representative of the target population and reflects diversity."
-      },
-      {
-        "requirement_id": "ACM023",
-        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the potential for discrimination and negative impacts in this deployment."
+        "action_needed": "Implement measures to mitigate racial bias in the algorithm."
       },
       {
-        "requirement_id": "REAMS R027",
-        "requirement_text": "Describe general characteristics of target population (vulnerability status, children, staff/students)",
-        "framework": "REAMS",
+        "requirement_id": "EUAIAct-001",
+        "requirement_text": "Ensure that AI systems do not discriminate against individuals or groups on grounds such as race, ethnicity, or national origin",
+        "framework": "EU AI Act",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Provide a detailed description of the target population and their characteristics."
+        "action_needed": "Conduct regular audits to detect and address potential biases in the algorithm."
+      },
+      {
+        "requirement_id": "HorizonEurope-002",
+        "requirement_text": "Ensure that research projects involving human participants follow existing institutional protocols (IRB or equivalent) — if no formal process exists, undergo equivalent informal ethics review",
+        "framework": "Horizon Europe",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain IRB approval for the proposed deployment of the COMPAS tool."
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The deployment of this tool has the potential to discriminate against defendants from marginalized communities."
+        "relevance": "The COMPAS tool may perpetuate existing biases in the criminal justice system, disproportionately affecting marginalized communities."
       },
       {
         "article": "Article 47",
-        "right_name": "RightToEffectiveRemedy",
-        "relevance": "Defendants may not have access to effective remedies to challenge their scores, raising concerns about due process and fairness."
+        "right_name": "Right To Effective Remedy",
+        "relevance": "Defendants may not have an effective remedy to challenge the risk score due to the lack of transparency and accountability in algorithmic decision-making."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-004",
         "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
-        "lesson": "The COMPAS algorithm has been shown to have racial bias in the past, highlighting the need for careful consideration and mitigation strategies in this deployment."
+        "lesson": "The importance of addressing racial bias in algorithmic decision-making and ensuring transparency and accountability in AI systems."
       },
       {
         "incident_id": "AIAAIC-008",
         "incident_title": "PredPol Predictive Policing Algorithmic Bias",
-        "lesson": "Predictive policing algorithms have been shown to perpetuate biases and discrimination, emphasizing the importance of transparency and accountability in AI decision-making."
+        "lesson": "The need for regular audits to detect and address potential biases in AI systems."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct a thorough risk assessment and mitigation plan to address potential harms.",
+        "mitigation": "Implement measures to mitigate racial bias in the algorithm, such as data curation and model regularization.",
         "priority": "High"
       },
       {
-        "mitigation": "Develop a plan to ensure that the data used in this deployment is representative of the target population and reflects diversity.",
+        "mitigation": "Conduct regular audits to detect and address potential biases in the algorithm.",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a FRIA assessment",
-      "Provide a detailed description of the target population and their characteristics"
+      "Obtain IRB approval for the proposed deployment of the COMPAS tool.",
+      "Implement measures to mitigate racial bias in the algorithm."
     ],
     "tier2_reflective_prompts": [
-      "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse.",
-      "Assess whether notification to market surveillance authority is required or exempt under Art 46-1."
+      "What are the potential long-term consequences of deploying the COMPAS tool?",
+      "How can we ensure that the COMPAS tool is transparent and accountable?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -315,11 +311,10 @@
         "R073"
       ],
       "requirements_cited": [
-        "ACM002",
-        "AI001",
-        "HE012",
-        "ACM023",
-        "REAMS R027"
+        "ACM001",
+        "ACM003",
+        "EUAIAct-001",
+        "HorizonEurope-002"
       ],
       "incidents_sample": [
         "AIAAIC-001",

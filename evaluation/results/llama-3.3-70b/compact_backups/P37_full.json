@@ -1,0 +1,34 @@
+{
+  "proposal_id": "P37",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This project partners with a European resettlement NGO to rank refugee cases for limited placement slots using employability predictions, language scores, family composition, and health flags. Rankings influence which families are proposed to municipalities. Nationality and religion are excluded, but language and education features correlate with origin country. Rejected families receive no detailed explanation. Humanitarian lawyers disagree whether this primarily engages Art.1 dignity, Art.21 non-discrimination, Art.18 (asylum-related) analogues via dignity/liberty, or is a legitimate scarce-resource allocation outside Charter framing. The model has not been audited for nationality proxy effects. Affected communities were not consulted in feature design.",
+  "assessment": {
+    "overall_risk_level": "High",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art1_HumanDignity",
+        "right_name": "Human Dignity",
+        "relevance": "The ranking system may compromise the dignity of rejected families who receive no detailed explanation."
+      },
+      {
+        "article": "Art21_NonDiscrimination",
+        "right_name": "Non-Discrimination",
+        "relevance": "The use of language and education features may correlate with origin country, potentially leading to indirect discrimination."
+      },
+      {
+        "article": "Art7_PrivateLife",
+        "right_name": "Private Life",
+        "relevance": "The collection and use of personal data, such as family composition and health flags, may infringe on the right to private life."
+      },
+      {
+        "article": "Art8_DataProtection",
+        "right_name": "Data Protection",
+        "relevance": "The lack of transparency and audit in the model's use of personal data raises concerns about data protection."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

@@ -1,8 +1,11 @@
 {
   "proposal_id": "P14",
   "mode": "full",
-  "timestamp": "2026-07-05T16:08:55.937655",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T20:29:57.384690",
   "proposal_text": "This project aims to develop an NLP pipeline to assist researchers in conducting systematic literature reviews. The tool will automate the screening of academic paper abstracts against predefined inclusion and exclusion criteria, reducing the manual workload of the initial screening phase. The system will use pre-trained transformer models to classify abstracts as relevant or irrelevant based on researcher-defined criteria. The tool will be evaluated on a benchmark of three previously completed systematic reviews where human screening decisions are available as ground truth. All data consists of publicly available academic abstracts. The tool will provide a confidence score alongside each classification to guide manual verification. The researchers will open-source the tool for academic use. No personal data is involved at any stage.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "data",
     "personal data",
@@ -19,89 +22,85 @@
   "retrieved_requirements_count": 164,
   "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "The proposed NLP pipeline for systematic literature review screening involves processing publicly available academic abstracts, but requires careful consideration of potential biases and negative impacts on certain groups. The tool's use of pre-trained transformer models and classification based on researcher-defined criteria may introduce risks related to algorithmic bias and discrimination. Additionally, the open-source nature of the tool raises concerns about its potential misuse or unintended consequences.",
+    "risk_summary": "The proposed NLP pipeline for systematic literature review assistance involves processing publicly available academic abstracts, but its potential impact on researchers' workload and efficiency may lead to biases in the classification process. The system's reliance on pre-trained transformer models raises concerns about data quality, model robustness, and potential security vulnerabilities.",
     "overall_risk_level": "Medium",
     "identified_risks": [
       {
-        "risk": "Algorithmic bias and discrimination",
-        "severity": "High",
-        "explanation": "The use of pre-trained transformer models and classification based on researcher-defined criteria may introduce biases against certain groups, particularly if the training data is not representative or diverse."
+        "risk": "Bias in classification process due to reliance on pre-trained models",
+        "severity": "Medium",
+        "explanation": "The system's performance may be influenced by the quality of the pre-trained models, which could lead to biased results if not properly evaluated and mitigated."
       },
       {
-        "risk": "Misuse or unintended consequences of open-source tool",
-        "severity": "Medium",
-        "explanation": "The open-source nature of the tool raises concerns about its potential misuse or unintended consequences, particularly if it is used in contexts where it may cause harm to individuals or groups."
-      },
-      {
-        "risk": "Bias in input data and algorithmic design",
-        "severity": "Medium",
-        "explanation": "The proposal does not explicitly address the potential for bias in the input data and algorithmic design, which could lead to discriminatory outcomes or negative impacts on certain groups."
+        "risk": "Potential security vulnerabilities in model deployment",
+        "severity": "Low",
+        "explanation": "The system will provide a confidence score alongside each classification, but there is still a risk of data leakage or unauthorized access if proper security measures are not implemented."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM023",
-        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the potential for algorithmic bias and discrimination in the tool's design and operation."
+        "action_needed": "Discuss potential biases in the classification process and propose mitigation strategies"
       },
       {
-        "requirement_id": "HE013",
-        "requirement_text": "Document how bias in input data and algorithmic design will be identified and avoided",
-        "framework": "HorizonEurope",
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop a plan to identify and mitigate potential biases in the tool's input data and algorithmic design."
+        "action_needed": "Evaluate the system's performance on diverse datasets and propose strategies to mitigate potential biases"
       },
       {
-        "requirement_id": "HE032",
-        "requirement_text": "Input, training and output data must all be analysed for bias — verify data accounts for diversity in gender, race, age, sexual orientation, national origin, religion, health, disability",
-        "framework": "HorizonEurope",
+        "requirement_id": "ACM010",
+        "requirement_text": "Design and implement systems that are robustly and usably secure — especially systems close to production deployment",
+        "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the input, training, and output data to ensure that it is representative and diverse."
+        "action_needed": "Implement proper security measures to prevent data leakage or unauthorized access"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The tool's potential for algorithmic bias and discrimination may infringe on the right to non-discrimination, particularly if it is used in contexts where it may cause harm to individuals or groups."
+        "relevance": "The system's potential bias in classification may lead to discriminatory outcomes against certain groups of researchers."
       },
       {
-        "article": "Article 8",
-        "right_name": "DataProtection",
-        "relevance": "The tool's processing of publicly available academic abstracts raises concerns about data protection and the potential for unauthorized access or misuse."
+        "article": "Article 41",
+        "right_name": "Good Administration",
+        "relevance": "The system's reliance on pre-trained models may lead to inefficient or ineffective administration of research resources if not properly evaluated and mitigated."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of careful consideration of potential biases in algorithmic decision-making and the need for regular monitoring and evaluation to prevent discriminatory outcomes."
+        "lesson": "The importance of evaluating and mitigating biases in AI systems, particularly those that may perpetuate discriminatory outcomes against certain groups."
       },
       {
-        "incident_id": "AIAAIC-034",
-        "incident_title": "China Social Credit System AI Scoring",
-        "lesson": "The risks associated with using AI systems to make high-stakes decisions about individuals or groups, particularly if the system is not transparent or accountable."
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The need for transparent and accountable AI decision-making processes to prevent biased outcomes, particularly in high-stakes applications such as law enforcement or hiring."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct regular audits and evaluations of the tool's performance and potential biases",
+        "mitigation": "Regularly evaluate the system's performance on diverse datasets and propose strategies to mitigate potential biases",
         "priority": "High"
       },
       {
-        "mitigation": "Develop a plan for addressing potential biases in the tool's input data and algorithmic design",
+        "mitigation": "Implement proper security measures to prevent data leakage or unauthorized access",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough analysis of the potential for algorithmic bias and discrimination in the tool's design and operation.",
-      "Develop a plan to identify and mitigate potential biases in the tool's input data and algorithmic design."
+      "Discuss potential biases in the classification process and propose mitigation strategies",
+      "Evaluate the system's performance on diverse datasets and propose strategies to mitigate potential biases",
+      "Implement proper security measures to prevent data leakage or unauthorized access"
     ],
     "tier2_reflective_prompts": [
-      "How will you ensure that the tool is used in ways that promote fairness, equity, and transparency?",
-      "What measures will you take to prevent the tool from being used for discriminatory or malicious purposes?"
+      "How might the system's reliance on pre-trained models influence its performance and potential biases?",
+      "What steps can be taken to ensure that the system is transparent and accountable in its decision-making processes?"
     ],
     "reams_clearance_likely": true,
     "confidence_flag": "HIGH",
@@ -294,9 +293,9 @@
         "R073"
       ],
       "requirements_cited": [
-        "ACM023",
-        "HE013",
-        "HE032"
+        "ACM001",
+        "ACM003",
+        "ACM010"
       ],
       "incidents_sample": [
         "AIAAIC-001",

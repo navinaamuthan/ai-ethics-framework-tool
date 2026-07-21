@@ -1,0 +1,328 @@
+{
+  "proposal_id": "P01_negative_8b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T01:59:13.934359",
+  "proposal_text": "Algorithm prioritises patients who have opted out of Medicare or Medicaid without considering potential systemic issues.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "patient"
+  ],
+  "matched_rights": [
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 57,
+  "retrieved_incidents_count": 3,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 40.0,
+      "tf": 40,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 101
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 15
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 6.0,
+      "tf": 6,
+      "df": 48
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 5.0,
+      "tf": 5,
+      "df": 19
+    },
+    {
+      "id": "EmploymentHarm",
+      "label": "Employment Harm",
+      "definition": "Risk of unfair exclusion, surveillance, or adverse treatment of workers or job applicants by AI systems.",
+      "idf_score": 4.1701,
+      "rank_score": 4.0,
+      "tf": 4,
+      "df": 20
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "DataBreach",
+      "label": "Data Breach",
+      "definition": "Risk of unauthorised access to or leakage of personal data held or processed by an AI system.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 2,
+      "df": 6
+    },
+    {
+      "id": "FunctionCreep",
+      "label": "Function Creep",
+      "definition": "Risk that an AI system is used beyond its originally defined and ethically approved purpose.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 2,
+      "df": 6
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The proposed algorithm prioritises patients who have opted out of Medicare or Medicaid without considering potential systemic issues, posing risks to fairness, discrimination, and accountability.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Discrimination against vulnerable groups without explicit consent",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The algorithm's prioritisation may unfairly disadvantage patients who have opted out of Medicare or Medicaid, perpetuating systemic issues."
+      },
+      {
+        "risk": "Lack of transparency and accountability in decision-making",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "The algorithm's decision-making process may not be transparent, making it difficult for affected individuals to understand and contest the decisions."
+      },
+      {
+        "risk": "Potential for data governance issues",
+        "risk_category": "DataGovernance",
+        "severity": "Medium",
+        "explanation": "The algorithm may process sensitive patient data without adequate data stewardship, provenance, or quality controls."
+      },
+      {
+        "risk": "Risk of privacy breach",
+        "risk_category": "PrivacyBreach",
+        "severity": "Medium",
+        "explanation": "The algorithm may handle personal data without obtaining informed consent, potentially leading to a privacy breach."
+      },
+      {
+        "risk": "Risk of reputational harm",
+        "risk_category": "ReputationalHarm",
+        "severity": "Medium",
+        "explanation": "The algorithm's decisions may damage the reputation of patients who have opted out of Medicare or Medicaid."
+      },
+      {
+        "risk": "Risk of function creep",
+        "risk_category": "FunctionCreep",
+        "severity": "Medium",
+        "explanation": "The algorithm may be used beyond its originally defined and ethically approved purpose, potentially leading to unintended consequences."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of the algorithm's potential biases and develop strategies to mitigate them."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from patients before processing their personal data and implement robust data protection measures."
+      },
+      {
+        "requirement_id": "ACM008",
+        "requirement_text": "Consider possible risks and impacts of the research approach itself (not just applications)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment of the algorithm's potential impacts on patients and develop strategies to mitigate them."
+      },
+      {
+        "requirement_id": "ACM009",
+        "requirement_text": "Access computing and communication resources only when authorised or compelled by public good",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the algorithm only accesses computing and communication resources when authorised or compelled by public good."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The algorithm may handle personal data without obtaining informed consent, potentially violating the right to data protection."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
+        "lesson": "The importance of considering potential biases in algorithmic decision-making and developing strategies to mitigate them."
+      },
+      {
+        "incident_id": "AIAAIC-007",
+        "incident_title": "Clearview AI Mass Facial Recognition Scraping",
+        "lesson": "The need for robust data protection measures to prevent unauthorised data collection and processing."
+      },
+      {
+        "incident_id": "AIAAIC-011",
+        "incident_title": "Facebook Discriminatory Ad Targeting",
+        "lesson": "The potential for algorithmic decision-making to perpetuate systemic issues and discriminate against vulnerable groups."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct regular audits and testing to ensure the algorithm's fairness and accuracy.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop and implement robust data protection measures to prevent unauthorised data collection and processing.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Provide transparency and explainability in the algorithm's decision-making process.",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Ensure that the algorithm only accesses computing and communication resources when authorised or compelled by public good.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough analysis of the algorithm's potential biases and develop strategies to mitigate them.",
+      "Obtain explicit consent from patients before processing their personal data and implement robust data protection measures.",
+      "Conduct a thorough risk assessment of the algorithm's potential impacts on patients and develop strategies to mitigate them.",
+      "Ensure that the algorithm only accesses computing and communication resources when authorised or compelled by public good."
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential biases in the algorithm's decision-making process?",
+      "How can we ensure that the algorithm only accesses computing and communication resources when authorised or compelled by public good?",
+      "What are the potential risks and impacts of the algorithm on patients?",
+      "How can we provide transparency and explainability in the algorithm's decision-making process?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "patient"
+      ],
+      "rights_matched": 1,
+      "requirements_retrieved": 57,
+      "incidents_retrieved": 3,
+      "requirements_sample": [
+        "ACM003",
+        "ACM005",
+        "ACM006",
+        "ACM008",
+        "ACM009",
+        "ACM010",
+        "ACM015",
+        "ACM016",
+        "ACM022",
+        "ACM031"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM003",
+        "ACM005",
+        "ACM006",
+        "ACM008",
+        "ACM009",
+        "ACM010",
+        "ACM015",
+        "ACM016",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI012",
+        "AI013",
+        "AI014",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE010",
+        "HE011",
+        "HE013",
+        "HE031",
+        "HE033",
+        "HE034",
+        "HE035",
+        "HE036",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R019",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R042",
+        "R047",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R067",
+        "R068",
+        "R069",
+        "R070",
+        "R071",
+        "R072",
+        "R073",
+        "R074",
+        "R083",
+        "R084"
+      ],
+      "requirements_cited": [
+        "ACM003",
+        "ACM006",
+        "ACM008",
+        "ACM009"
+      ],
+      "incidents_sample": [
+        "AIAAIC-006",
+        "AIAAIC-007",
+        "AIAAIC-011"
+      ]
+    }
+  }
+}

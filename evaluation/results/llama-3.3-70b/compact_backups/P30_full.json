@@ -1,0 +1,34 @@
+{
+  "proposal_id": "P30",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This research proposes a gradient-boosting model to set individual loading factors for a private medical scheme in Johannesburg and Cape Town. Features include claims history, pharmacy fills, wearable step counts (opt-in), and residential suburb codes. Race is not an input, but suburb codes strongly proxy apartheid-era spatial segregation. Members in the highest predicted-cost decile face premium increases up to 40% or coverage exclusions for elective procedures. The scheme plans no suburb- or race-disaggregated fairness audit, citing proprietary actuarial practice. Members cannot obtain a meaningful explanation of their loading beyond 'actuarial risk.' The National Health Insurance reform context makes the private-scheme impact politically sensitive.",
+  "assessment": {
+    "overall_risk_level": "High",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art21_NonDiscrimination",
+        "right_name": "Non-Discrimination",
+        "relevance": "The use of suburb codes as a proxy for apartheid-era spatial segregation may lead to discriminatory outcomes."
+      },
+      {
+        "article": "Art7_PrivateLife",
+        "right_name": "Private Life",
+        "relevance": "The collection of wearable step counts and pharmacy fills may infringe on members' right to private life."
+      },
+      {
+        "article": "Art8_DataProtection",
+        "right_name": "Data Protection",
+        "relevance": "The handling of sensitive member data, including claims history and residential suburb codes, raises concerns about data protection."
+      },
+      {
+        "article": "Art41_GoodAdministration",
+        "right_name": "Good Administration",
+        "relevance": "The lack of transparency and explanation for loading factors may violate the right to good administration."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "proposal_id": "P13_neutral_8b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T07:55:34.854718",
+  "proposal_text": "This study proposes to conduct a bibliometric analysis of peer-reviewed publications on AI ethics from 2018-2025. The study will use the Scopus and Web of Science databases to identify all publications containing keywords related to AI ethics, responsible AI, algorithmic fairness, and AI governance. The analysis will examine publication trends, citation networks, geographic distribution of research groups, and thematic clustering using topic modelling. All data is publicly available metadata from academic databases. No personal data about individual researchers will be collected beyond publicly listed author names and institutional affiliations. The analysis will use standard bibliometric tools including VOSviewer and Bibliometrix. Results will identify gaps in the AI ethics literature to inform future research directions. No AI systems will be developed or deployed as part of this research.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "fairness",
+    "personal data"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art22_CulturalDiversity",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 74,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 48.0,
+      "tf": 48,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 15.0,
+      "tf": 15,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 15
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 26
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "systemic_info\u2192Art11/Art22",
+  "assessment": {
+    "risk_summary": "This study involves the analysis of publicly available metadata from academic databases, but there are risks of data governance, discrimination, and psychological harm due to the potential biases in the data and the analysis methods.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "DataGovernance",
+        "risk_category": "DataGovernance",
+        "severity": "Medium",
+        "explanation": "The study involves the use of publicly available metadata from academic databases, but there is a risk of inadequate data stewardship and provenance controls."
+      },
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
+        "severity": "Medium",
+        "explanation": "The study may perpetuate biases in the data and analysis methods, leading to unfair differential treatment of individuals or groups."
+      },
+      {
+        "risk": "PsychologicalHarm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Medium",
+        "explanation": "The study may lead to mental distress or emotional damage if the results are misinterpreted or used inappropriately."
+      },
+      {
+        "risk": "Transparency",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The study may not adequately disclose its operation, capabilities, limitations, or decision rationale to end-users and stakeholders."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate \u2014 consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider and ameliorate biases in the data and analysis methods."
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider and ameliorate biases in the data and analysis methods."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy \u2014 obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "No personal data about individual researchers will be collected beyond publicly listed author names and institutional affiliations."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 11",
+        "right_name": "FreedomOfExpression",
+        "relevance": "The study may impact the freedom of expression of researchers and authors by analyzing their publications."
+      },
+      {
+        "article": "Article 22",
+        "right_name": "CulturalDiversity",
+        "relevance": "The study may impact the cultural diversity of researchers and authors by analyzing their publications."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "PrivateLife",
+        "relevance": "The study may impact the private life of researchers and authors by analyzing their publications."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The study may impact the data protection of researchers and authors by analyzing their publications."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-014",
+        "incident_title": "YouTube Recommendation Radicalisation",
+        "lesson": "The study should consider the potential for biased recommendations and take steps to mitigate them."
+      },
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "The study should consider the potential for hate speech and take steps to mitigate it."
+      },
+      {
+        "incident_id": "AIAAIC-027",
+        "incident_title": "Spotify Mood Inference Patent",
+        "lesson": "The study should consider the potential for biased mood inference and take steps to mitigate it."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Use diverse and representative datasets to mitigate biases.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement transparency and explainability measures to ensure that the results are understandable and trustworthy.",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Consider the potential for biased recommendations and take steps to mitigate them.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Consider and ameliorate biases in the data and analysis methods.",
+      "Implement transparency and explainability measures."
+    ],
+    "tier2_reflective_prompts": [
+      "Consider the potential for biased recommendations and take steps to mitigate them.",
+      "Reflect on the potential impact on cultural diversity and take steps to mitigate it."
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "fairness",
+        "personal data"
+      ],
+      "rights_matched": 4,
+      "requirements_retrieved": 74,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM023",
+        "HE012",
+        "HE032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM023",
+        "HE012",
+        "HE032",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R054",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE013",
+        "HE033",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM003",
+        "ACM004",
+        "ACM006"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-002",
+        "AIAAIC-007"
+      ]
+    }
+  }
+}

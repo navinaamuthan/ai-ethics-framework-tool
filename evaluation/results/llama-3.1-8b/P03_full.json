@@ -1,8 +1,11 @@
 {
   "proposal_id": "P03",
   "mode": "full",
-  "timestamp": "2026-07-05T15:44:21.333684",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T19:57:18.075671",
   "proposal_text": "This research proposes to deploy Amazon Rekognition, a cloud-based facial recognition system, for use by law enforcement agencies across the United States to identify individuals in real-time surveillance footage, body camera recordings, and crime scene images. The system can identify and track up to 100 faces in a single image and match them against databases of tens of millions of faces drawn from arrest records and public sources. The system will be marketed to local police departments as a tool for identifying persons of interest in criminal investigations. The default confidence threshold of 80% will be used for initial deployment, with Amazon recommending a 99% threshold for law enforcement use — a discrepancy between default settings and recommended settings that has not been addressed in the deployment contract. An ACLU audit found that at 80% confidence, Rekognition falsely matched 28 members of the US Congress to criminal mugshots, with disproportionate false positives for people of colour including six members of the Congressional Black Caucus. No independent demographic bias audit has been conducted prior to law enforcement deployment. No independent oversight mechanism or accountability framework for false match consequences has been established.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "bias",
     "data",
@@ -31,106 +34,106 @@
   "retrieved_requirements_count": 190,
   "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "The research proposal involves the deployment of Amazon Rekognition, a facial recognition system, for use by law enforcement agencies to identify individuals in real-time surveillance footage. This raises concerns about biometric data processing, criminal justice, and potential biases against vulnerable groups.",
+    "risk_summary": "The proposed research involves the deployment of Amazon Rekognition, a facial recognition system, for use by law enforcement agencies to identify individuals in real-time surveillance footage. This raises concerns about potential biases, false positives, and consequences for individuals, particularly those from vulnerable groups.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Biometric data processing without explicit consent",
+        "risk": "Biases in facial recognition technology leading to discriminatory outcomes",
         "severity": "High",
-        "explanation": "The proposal involves the use of facial recognition technology to process biometric data, which is a high-risk activity that requires explicit consent from individuals."
+        "explanation": "The system has been shown to have a high rate of false positives, particularly for people of colour. Without an independent demographic bias audit, it is unclear whether the system will perpetuate existing biases."
       },
       {
-        "risk": "Potential biases against vulnerable groups",
+        "risk": "Lack of transparency and accountability in deployment and use",
         "severity": "High",
-        "explanation": "The ACLU audit found disproportionate false positives for people of color, including six members of the Congressional Black Caucus. This raises concerns about potential biases in the system's decision-making process."
+        "explanation": "The default confidence threshold of 80% has not been addressed in the deployment contract, and there is no independent oversight mechanism or accountability framework for false match consequences."
       },
       {
-        "risk": "Lack of independent oversight and accountability framework",
+        "risk": "Potential harm to individuals through misidentification or wrongful arrest",
         "severity": "High",
-        "explanation": "The proposal lacks an independent oversight mechanism or accountability framework for false match consequences, which increases the risk of harm to individuals and communities."
+        "explanation": "The system's ability to identify and track up to 100 faces in a single image raises concerns about the potential for misidentification, particularly in situations where there are multiple individuals with similar features."
+      },
+      {
+        "risk": "Processing of special category data without explicit consent",
+        "severity": "High",
+        "explanation": "The system will be processing biometric data, including facial recognition information, which is considered special category data under the GDPR. Without explicit consent from individuals, this raises concerns about potential violations of their rights."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM020",
-        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated (Mandatory)",
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the dataset's representativeness and provide evidence to support claims of diversity."
+        "action_needed": "The researchers should conduct a thorough analysis of the potential harms associated with this technology and provide recommendations for mitigating these harms."
       },
       {
-        "requirement_id": "HE019",
-        "requirement_text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations (Mandatory)",
-        "framework": "HorizonEurope",
+        "requirement_id": "ACM003",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough assessment of the system's potential impact on democratic processes and social relations."
+        "action_needed": "The researchers should conduct a thorough analysis of the potential harms associated with this technology and provide recommendations for mitigating these harms."
       },
       {
-        "requirement_id": "AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system) (Mandatory)",
-        "framework": "EUAIAct",
+        "requirement_id": "EUAIAct-001",
+        "requirement_text": "High-risk AI systems must undergo rigorous testing and evaluation before deployment",
+        "framework": "EU AI Act",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Determine whether the organization is required to conduct a FRIA and take necessary steps to comply with EU AI Act regulations."
+        "action_needed": "The researchers should conduct a thorough testing and evaluation of the system to ensure that it meets the requirements for high-risk AI systems."
       },
       {
-        "requirement_id": "HE042",
-        "requirement_text": "Test whether users understand they are interacting with non-human agent (Mandatory)",
-        "framework": "HorizonEurope",
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct user testing to ensure that law enforcement agencies understand they are interacting with a facial recognition system."
-      },
-      {
-        "requirement_id": "HE050",
-        "requirement_text": "Have you considered whether your AI system could be misused or diverted from its original purpose (function creep)? (Reflective)",
-        "framework": "HorizonEurope",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider potential misuse scenarios and develop strategies to prevent function creep."
+        "action_needed": "The researchers should ensure that they have obtained the necessary informed consent from individuals before processing their biometric data."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 1 HumanDignity",
-        "right_name": "Human Dignity",
-        "relevance": "The proposal involves the use of facial recognition technology, which raises concerns about human dignity and potential biases against vulnerable groups."
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The system has been shown to have a high rate of false positives, particularly for people of colour. Without an independent demographic bias audit, it is unclear whether the system will perpetuate existing biases."
       },
       {
-        "article": "Article 7 PrivateLife",
-        "right_name": "Right to Privacy",
-        "relevance": "The proposal involves the processing of biometric data without explicit consent, which raises concerns about individuals' right to privacy."
+        "article": "Article 7",
+        "right_name": "PrivateLife",
+        "relevance": "The system will be processing biometric data, including facial recognition information, which is considered special category data under the GDPR. Without explicit consent from individuals, this raises concerns about potential violations of their rights."
       },
       {
-        "article": "Article 8 DataProtection",
-        "right_name": "Data Protection",
-        "relevance": "The proposal involves the processing of personal data, which raises concerns about data protection and potential biases in decision-making processes."
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The system will be processing biometric data, including facial recognition information, which is considered special category data under the GDPR. Without explicit consent from individuals, this raises concerns about potential violations of their rights."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-002",
         "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The incident highlights the importance of conducting thorough testing and validation of facial recognition systems to prevent false arrests and ensure accuracy."
+        "lesson": "The importance of conducting thorough testing and evaluation before deployment, particularly for high-risk AI systems."
       },
       {
         "incident_id": "AIAAIC-005",
         "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The incident demonstrates the need for AI systems to be designed with fairness and transparency in mind, particularly when processing sensitive data such as facial recognition."
+        "lesson": "The need to address biases in facial recognition technology and ensure that they do not perpetuate existing discriminatory outcomes."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement robust testing and validation protocols to ensure accuracy and prevent false positives.",
+        "mitigation": "Conduct an independent demographic bias audit before deployment",
         "priority": "High"
       },
       {
-        "mitigation": "Develop and implement a clear accountability framework for false match consequences.",
+        "mitigation": "Establish an independent oversight mechanism and accountability framework for false match consequences",
         "priority": "High"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct thorough testing and validation of the facial recognition system to ensure accuracy and prevent false positives."
+      "Conduct a thorough analysis of the potential harms associated with this technology and provide recommendations for mitigating these harms.",
+      "Ensure that they have obtained the necessary informed consent from individuals before processing their biometric data."
     ],
     "tier2_reflective_prompts": [
-      "Consider potential misuse scenarios and develop strategies to prevent function creep."
+      "What are the potential consequences of deploying this system without addressing its biases?",
+      "How can we ensure that the system is used in a way that respects the rights and dignity of all individuals?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -355,11 +358,10 @@
         "R073"
       ],
       "requirements_cited": [
-        "ACM020",
-        "HE019",
-        "AI001",
-        "HE042",
-        "HE050"
+        "ACM001",
+        "ACM003",
+        "EUAIAct-001",
+        "ACM006"
       ],
       "incidents_sample": [
         "AIAAIC-014",

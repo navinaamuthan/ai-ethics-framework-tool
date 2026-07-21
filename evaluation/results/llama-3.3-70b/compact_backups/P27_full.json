@@ -1,0 +1,34 @@
+{
+  "proposal_id": "P27",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This Horizon Europe consortium proposes a multi-site study of gait-and-face biometrics to recognise patients with rare neurological disorders across clinics in Ireland, Germany, and Spain. The technical work package will train a multimodal recognition model on clinic video and release model checkpoints and a 'de-identified' embedding database under an open-science deliverable required by the grant agreement. A parallel ethics work package notes that the same system may qualify as high-risk biometric categorisation under the EU AI Act, triggering an Art.27-style fundamental-rights impact assessment (FRIA) and possibly restricting public release of embeddings. The consortium has not resolved whether open deliverables or FRIA containment wins when they conflict. Patient consent forms mention research use but not public model release. No independent FRIA has been completed before the first data freeze.",
+  "assessment": {
+    "overall_risk_level": "High",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art8_DataProtection",
+        "right_name": "Data Protection",
+        "relevance": "The proposal involves the use of biometric data, including gait and face recognition, which may put the right to data protection at risk."
+      },
+      {
+        "article": "Art7_PrivateLife",
+        "right_name": "Right to Private Life",
+        "relevance": "The collection and potential public release of biometric data may infringe on patients' right to private life."
+      },
+      {
+        "article": "Art41_GoodAdministration",
+        "right_name": "Right to Good Administration",
+        "relevance": "The lack of clarity on whether open deliverables or FRIA containment takes precedence may indicate poor administration and decision-making."
+      },
+      {
+        "article": "Art47_RightToEffectiveRemedy",
+        "right_name": "Right to Effective Remedy",
+        "relevance": "Patients may not have an effective remedy if their biometric data is misused or if they are not properly informed about the use of their data."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

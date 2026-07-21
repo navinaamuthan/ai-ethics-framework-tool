@@ -2,7 +2,7 @@
   "proposal_id": "P03",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-20T14:32:37.398304",
+  "timestamp": "2026-07-19T19:52:05.868649",
   "proposal_text": "This research proposes to deploy Amazon Rekognition, a cloud-based facial recognition system, for use by law enforcement agencies across the United States to identify individuals in real-time surveillance footage, body camera recordings, and crime scene images. The system can identify and track up to 100 faces in a single image and match them against databases of tens of millions of faces drawn from arrest records and public sources. The system will be marketed to local police departments as a tool for identifying persons of interest in criminal investigations. The default confidence threshold of 80% will be used for initial deployment, with Amazon recommending a 99% threshold for law enforcement use — a discrepancy between default settings and recommended settings that has not been addressed in the deployment contract. An ACLU audit found that at 80% confidence, Rekognition falsely matched 28 members of the US Congress to criminal mugshots, with disproportionate false positives for people of colour including six members of the Congressional Black Caucus. No independent demographic bias audit has been conducted prior to law enforcement deployment. No independent oversight mechanism or accountability framework for false match consequences has been established.",
   "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
@@ -33,245 +33,198 @@
   ],
   "retrieved_requirements_count": 190,
   "retrieved_incidents_count": 8,
-  "retrieved_risk_categories": [
-    {
-      "id": "PsychologicalHarm",
-      "label": "Psychological Harm",
-      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system."
-    },
-    {
-      "id": "FinancialHarm",
-      "label": "Financial Harm",
-      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system."
-    },
-    {
-      "id": "PhysicalHarm",
-      "label": "Physical Harm",
-      "definition": "Risk of bodily injury, death, or physical safety compromise caused by an AI system."
-    },
-    {
-      "id": "ReputationalHarm",
-      "label": "Reputational Harm",
-      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions."
-    },
-    {
-      "id": "PrivacyBreach",
-      "label": "Privacy Breach",
-      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system."
-    },
-    {
-      "id": "Manipulation",
-      "label": "",
-      "definition": ""
-    },
-    {
-      "id": "Discrimination",
-      "label": "Discrimination",
-      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system."
-    }
-  ],
-  "rights_disambiguation": "individual_treatment→Art21",
   "assessment": {
-    "risk_summary": "The proposed deployment of Amazon Rekognition for law enforcement agencies poses significant risks of discrimination, privacy breaches, and physical harm due to its potential for false matches, particularly against people of color. The system's default confidence threshold of 80% has been shown to produce disproportionate false positives, and the lack of independent demographic bias audit and oversight mechanism exacerbates these risks. Furthermore, the use of facial recognition technology raises concerns about surveillance, manipulation, and reputational harm. The risks are heightened by the potential for the technology to be used in consequential decisions, such as criminal investigations, without adequate safeguards.",
+    "risk_summary": "The proposed deployment of Amazon Rekognition for law enforcement agencies poses significant ethical risks, including potential for false matches, disproportionate false positives for people of colour, and lack of independent oversight mechanisms. The system's use of biometric data and potential for consequential decisions also raises concerns about privacy, non-discrimination, and human dignity. Furthermore, the discrepancy between the default confidence threshold and the recommended threshold for law enforcement use has not been addressed, which may lead to inaccurate results. The research proposal also lacks an independent demographic bias audit, which is essential to ensure the system's fairness and accuracy.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
         "risk": "False matches and misidentification",
-        "risk_category": "Discrimination",
         "severity": "High",
-        "explanation": "The system's default confidence threshold of 80% has been shown to produce disproportionate false positives, particularly against people of color."
+        "explanation": "The system's false match rate, particularly for people of colour, poses a significant risk of misidentification and potential wrongful arrest or detention."
       },
       {
-        "risk": "Privacy breaches",
-        "risk_category": "PrivacyBreach",
+        "risk": "Disproportionate impact on vulnerable groups",
         "severity": "High",
-        "explanation": "The use of facial recognition technology raises concerns about the unauthorized collection, processing, and disclosure of personal data."
+        "explanation": "The system's potential for disproportionate false positives for people of colour raises concerns about discrimination and unequal treatment."
       },
       {
-        "risk": "Physical harm",
-        "risk_category": "PhysicalHarm",
+        "risk": "Lack of independent oversight mechanisms",
         "severity": "High",
-        "explanation": "The potential for false matches and misidentification could lead to wrongful arrests, detention, or other physical harm to individuals."
+        "explanation": "The absence of independent oversight mechanisms to address false match consequences and ensure accountability poses a significant risk to individuals and communities."
       },
       {
-        "risk": "Surveillance and manipulation",
-        "risk_category": "Manipulation",
+        "risk": "Privacy concerns and potential for surveillance",
         "severity": "Medium",
-        "explanation": "The use of facial recognition technology raises concerns about surveillance and manipulation, particularly in the context of law enforcement agencies."
-      },
-      {
-        "risk": "Reputational harm",
-        "risk_category": "ReputationalHarm",
-        "severity": "Medium",
-        "explanation": "The potential for false matches and misidentification could lead to reputational harm to individuals and communities."
+        "explanation": "The system's use of biometric data and potential for real-time surveillance raises concerns about privacy and the potential for mass surveillance."
       },
       {
         "risk": "Lack of transparency and accountability",
-        "risk_category": "Discrimination",
-        "severity": "High",
-        "explanation": "The lack of independent demographic bias audit and oversight mechanism exacerbates the risks of discrimination and privacy breaches."
+        "severity": "Medium",
+        "explanation": "The research proposal's lack of transparency about the system's development, deployment, and potential biases raises concerns about accountability and the potential for unchecked power."
       },
       {
-        "risk": "Environmental and well-being concerns",
-        "risk_category": "PrivacyBreach",
-        "severity": "Low",
-        "explanation": "The use of cloud-based facial recognition technology raises concerns about environmental impact and well-being, particularly in terms of energy consumption and e-waste generation."
+        "risk": "Potential for discrimination and bias",
+        "severity": "High",
+        "explanation": "The system's potential for bias and discrimination, particularly against people of colour, raises significant concerns about fairness and equality."
+      },
+      {
+        "risk": "Inadequate testing and validation",
+        "severity": "Medium",
+        "explanation": "The research proposal's lack of independent testing and validation of the system's accuracy and fairness raises concerns about its reliability and potential for errors."
       }
     ],
     "applicable_requirements": [
       {
         "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough impact assessment to identify potential harms and benefits"
+        "action_needed": "Conduct a thorough analysis of the system's potential harms and develop strategies to mitigate them"
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop and implement measures to prevent harm and ensure the system's safety and reliability"
       },
       {
         "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct an independent demographic bias audit to identify and mitigate potential biases"
+        "action_needed": "Conduct an independent demographic bias audit and develop strategies to address any biases or disparities found"
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop and implement measures to detect and address biases in the system's data and outputs"
       },
       {
         "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement robust privacy measures to protect personal data"
+        "action_needed": "Develop and implement measures to protect individuals' privacy and ensure their informed consent is obtained where required"
       },
       {
-        "requirement_id": "ACM014",
-        "requirement_text": "All human research subjects or participants must receive appropriate compensation",
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that all individuals whose data is used in the system receive appropriate compensation and consent"
+        "action_needed": "Conduct a thorough evaluation of the system's impacts and potential risks, and develop strategies to mitigate them"
       },
       {
-        "requirement_id": "ACM016",
-        "requirement_text": "Datasets should minimise exposure of personally identifiable information",
+        "requirement_id": "ACM008",
+        "requirement_text": "Consider possible risks and impacts of the research approach itself (not just applications)",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement data minimization techniques to reduce the risk of privacy breaches"
+        "action_needed": "Develop and implement measures to address the potential risks and impacts of the research approach"
       },
       {
         "requirement_id": "ACM021",
-        "requirement_text": "Consider whether technology can be used to harm, injure or kill people",
+        "requirement_text": "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment to identify potential physical harm risks"
+        "action_needed": "Develop and implement measures to prevent the system's use in ways that could cause harm to individuals or communities"
       },
       {
         "requirement_id": "ACM022",
-        "requirement_text": "Consider risk that applications could open security vulnerabilities or cause serious accidents",
+        "requirement_text": "Consider risk that applications could open security vulnerabilities or cause serious accidents — recommend or implement protections",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement robust security measures to prevent security vulnerabilities and accidents"
-      },
-      {
-        "requirement_id": "ACM023",
-        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough impact assessment to identify potential discrimination risks"
-      },
-      {
-        "requirement_id": "ACM024",
-        "requirement_text": "Consult local laws before collecting or analysing bulk surveillance data",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Consult local laws and regulations regarding surveillance data collection and analysis"
+        "action_needed": "Develop and implement measures to address potential security vulnerabilities and prevent serious accidents"
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 21",
-        "right_name": "Non-Discrimination",
-        "relevance": "The proposed deployment of Amazon Rekognition raises concerns about discrimination, particularly against people of color"
+        "article": "Article 1",
+        "right_name": "Human Dignity",
+        "relevance": "The system's potential for false matches and misidentification raises concerns about human dignity and the potential for wrongful arrest or detention"
       },
       {
         "article": "Article 7",
-        "right_name": "PrivateLife",
-        "relevance": "The use of facial recognition technology raises concerns about privacy breaches and surveillance"
+        "right_name": "Private Life",
+        "relevance": "The system's use of biometric data and potential for real-time surveillance raises concerns about privacy and the potential for mass surveillance"
       },
       {
         "article": "Article 8",
-        "right_name": "DataProtection",
-        "relevance": "The proposed deployment of Amazon Rekognition raises concerns about data protection and the unauthorized collection, processing, and disclosure of personal data"
+        "right_name": "Data Protection",
+        "relevance": "The system's collection and processing of biometric data raises concerns about data protection and the potential for unauthorized use or disclosure"
       },
       {
-        "article": "Article 1",
-        "right_name": "HumanDignity",
-        "relevance": "The potential for false matches and misidentification could lead to reputational harm and compromise human dignity"
+        "article": "Article 20",
+        "right_name": "Equality Before Law",
+        "relevance": "The system's potential for disproportionate false positives for people of colour raises concerns about equality before the law and the potential for discriminatory treatment"
       },
       {
-        "article": "Article 6",
-        "right_name": "RightToLiberty",
-        "relevance": "The potential for false matches and misidentification could lead to wrongful arrests, detention, or other physical harm to individuals, compromising their right to liberty"
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The system's potential for bias and discrimination, particularly against people of colour, raises significant concerns about non-discrimination and the potential for unequal treatment"
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-002",
-        "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The use of facial recognition technology can lead to false arrests and misidentification, highlighting the need for robust testing and validation"
-      },
-      {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The use of AI systems can perpetuate biases and discrimination, highlighting the need for thorough testing and validation"
+        "lesson": "The importance of addressing bias and ensuring fairness in AI systems, particularly in high-stakes applications like hiring and law enforcement"
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The potential risks and consequences of deploying facial recognition systems without adequate testing, validation, and oversight"
+      },
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The importance of ensuring that AI systems are designed and developed with safety and reliability in mind, and that they are tested and validated before deployment"
       },
       {
         "incident_id": "AIAAIC-005",
         "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The use of AI systems can perpetuate biases and discrimination, highlighting the need for thorough testing and validation"
+        "lesson": "The potential for AI systems to perpetuate and amplify existing biases and stereotypes, particularly against marginalized communities"
       },
       {
         "incident_id": "AIAAIC-009",
         "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The use of AI systems can have physical harm consequences, highlighting the need for robust testing and validation"
-      },
-      {
-        "incident_id": "AIAAIC-014",
-        "incident_title": "YouTube Recommendation Radicalisation",
-        "lesson": "The use of AI systems can have psychological harm consequences, highlighting the need for robust testing and validation"
+        "lesson": "The importance of ensuring that AI systems are designed and developed with safety and reliability in mind, and that they are tested and validated before deployment in high-stakes applications"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct a thorough impact assessment to identify potential harms and benefits",
+        "mitigation": "Conduct an independent demographic bias audit",
         "priority": "High"
       },
       {
-        "mitigation": "Implement robust privacy measures to protect personal data",
+        "mitigation": "Develop and implement measures to address potential biases and disparities",
         "priority": "High"
       },
       {
-        "mitigation": "Conduct an independent demographic bias audit to identify and mitigate potential biases",
+        "mitigation": "Establish independent oversight mechanisms to address false match consequences and ensure accountability",
         "priority": "High"
       },
       {
-        "mitigation": "Implement data minimization techniques to reduce the risk of privacy breaches",
+        "mitigation": "Develop and implement measures to protect individuals' privacy and ensure their informed consent is obtained where required",
         "priority": "Medium"
       },
       {
-        "mitigation": "Ensure that all individuals whose data is used in the system receive appropriate compensation and consent",
+        "mitigation": "Conduct thorough testing and validation of the system's accuracy and fairness",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough impact assessment to identify potential harms and benefits",
-      "Implement robust privacy measures to protect personal data",
-      "Conduct an independent demographic bias audit to identify and mitigate potential biases",
-      "Implement data minimization techniques to reduce the risk of privacy breaches",
-      "Ensure that all individuals whose data is used in the system receive appropriate compensation and consent"
+      "Conduct a thorough analysis of the system's potential harms and develop strategies to mitigate them",
+      "Develop and implement measures to prevent harm and ensure the system's safety and reliability",
+      "Conduct an independent demographic bias audit and develop strategies to address any biases or disparities found",
+      "Develop and implement measures to detect and address biases in the system's data and outputs",
+      "Develop and implement measures to protect individuals' privacy and ensure their informed consent is obtained where required"
     ],
     "tier2_reflective_prompts": [
-      "What are the potential consequences of deploying Amazon Rekognition for law enforcement agencies?",
-      "How can we ensure that the system is fair and does not discriminate against certain groups?",
-      "What are the potential risks and benefits of using facial recognition technology in this context?",
-      "How can we mitigate the risks of false matches and misidentification?",
-      "What are the potential environmental and well-being concerns associated with the use of cloud-based facial recognition technology?"
+      "What are the potential risks and impacts of the research approach itself, and how can they be addressed?",
+      "How can the system's potential for bias and discrimination be mitigated, and what strategies can be developed to address any biases or disparities found?",
+      "What measures can be taken to ensure the system's transparency and accountability, and how can they be implemented?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -497,14 +450,14 @@
       ],
       "requirements_cited": [
         "ACM001",
+        "ACM002",
         "ACM003",
+        "ACM004",
         "ACM006",
-        "ACM014",
-        "ACM016",
+        "ACM007",
+        "ACM008",
         "ACM021",
-        "ACM022",
-        "ACM023",
-        "ACM024"
+        "ACM022"
       ],
       "incidents_sample": [
         "AIAAIC-014",

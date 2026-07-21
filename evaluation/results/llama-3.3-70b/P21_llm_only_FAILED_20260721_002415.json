@@ -1,0 +1,12 @@
+{
+  "proposal_id": "P21",
+  "mode": "llm_only",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T00:24:15.740305",
+  "proposal_text": "This research proposes to develop a machine learning credit-scoring model for a Nairobi-based digital lender serving unbanked and underbanked borrowers across Kenya. The model will predict default risk from mobile-money transaction histories, airtime purchase patterns, geolocation of cash-in/cash-out agents, phone contacts graph density, and device metadata. Training data cover approximately 2.4 million customers of a partner mobile-network operator, collected under the operator's terms of service rather than purpose-specific lending consent. Loan approval and pricing decisions will be fully automated for amounts under KES 50,000, with no human review unless the applicant formally complains. The researchers note that contact-graph features may encode ethnicity and socioeconomic clustering in urban informal settlements, but no demographic fairness audit across ethnic groups or counties is planned before pilot launch. Rejected applicants will receive a generic adverse-action notice without feature-level explanation. The study protocol has not yet been reviewed against the Kenya Data Protection Act 2019 or the EU Charter articles that would apply if the same pipeline were later ported to an EU migrant-lending product.",
+  "context_max_requirements": 25,
+  "llm_model": "llama-3.3-70b-versatile",
+  "assessment": {
+    "error": "LLM returned empty response"
+  }
+}

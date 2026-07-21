@@ -1,0 +1,394 @@
+{
+  "stability": {
+    "LLM-8B": {
+      "mean_flip_rate": 0.065,
+      "stability": 0.935,
+      "n_proposals": 40,
+      "deterministic": false,
+      "method": "compact_risk_5x_T0.7"
+    },
+    "LLM-70B": {
+      "mean_flip_rate": 0.01,
+      "stability": 0.99,
+      "n_proposals": 40,
+      "deterministic": false,
+      "method": "compact_risk_5x_T0.7"
+    },
+    "SHACL": {
+      "mean_flip_rate": 0.0,
+      "stability": 1.0,
+      "n_proposals": 40,
+      "deterministic": true,
+      "verified_once_equal": true
+    },
+    "keyword-baseline": {
+      "mean_flip_rate": 0.0,
+      "stability": 1.0,
+      "n_proposals": 40,
+      "deterministic": true,
+      "verified_once_equal": true
+    }
+  },
+  "traceability": {
+    "SHACL": {
+      "mean_traceable_fraction": 1.0,
+      "note": "Fraction of SHACL ValidationResults with a mapped riskDimension (firing rule)."
+    },
+    "keyword-baseline": {
+      "mean_traceable_fraction": 1.0,
+      "note": "Every flagged term is drawn from the literal keyword list (100% by construction)."
+    },
+    "LLM-8B": {
+      "mean_traceable_fraction": 0.31770833333333337,
+      "note": "Fraction of identified_risks whose risk_category maps to a cited requirement ID via ontology :hasRisk."
+    },
+    "LLM-70B": {
+      "mean_traceable_fraction": 0.3714980158730159,
+      "note": "Fraction of identified_risks whose risk_category maps to a cited requirement ID via ontology :hasRisk."
+    }
+  },
+  "amendability": {
+    "keyword-baseline": {
+      "cases": [
+        {
+          "proposal_id": "P04",
+          "edit_size": 1,
+          "collateral_count": 0
+        },
+        {
+          "proposal_id": "P06",
+          "edit_size": 1,
+          "collateral_count": 0
+        },
+        {
+          "proposal_id": "P08",
+          "edit_size": 1,
+          "collateral_count": 0
+        },
+        {
+          "proposal_id": "P10",
+          "edit_size": 1,
+          "collateral_count": 0
+        },
+        {
+          "proposal_id": "P12",
+          "edit_size": 1,
+          "collateral_count": 0
+        }
+      ],
+      "mean_edit_size": 1.0,
+      "mean_collateral": 0.0,
+      "unit": "keywords_added_or_removed"
+    },
+    "SHACL": {
+      "cases": [
+        {
+          "proposal_id": "P04",
+          "edit_size": 4,
+          "collateral_count": 5
+        },
+        {
+          "proposal_id": "P05",
+          "edit_size": 4,
+          "collateral_count": 5
+        },
+        {
+          "proposal_id": "P06",
+          "edit_size": 4,
+          "collateral_count": 5
+        },
+        {
+          "proposal_id": "P07",
+          "edit_size": 4,
+          "collateral_count": 7
+        },
+        {
+          "proposal_id": "P11",
+          "edit_size": 4,
+          "collateral_count": 5
+        }
+      ],
+      "mean_edit_size": 4.0,
+      "mean_collateral": 5.4,
+      "unit": "ttl_lines_changed",
+      "note": "Edit size = estimated NodeShape lines for one missing dimension; collateral = other correct proposals sharing risk band (shared-shape coupling)."
+    },
+    "LLM-8B": {
+      "cases": [
+        {
+          "proposal_id": "P08",
+          "edit_size": 12,
+          "edit_size_lines": 1,
+          "collateral_count": 2
+        },
+        {
+          "proposal_id": "P12",
+          "edit_size": 12,
+          "edit_size_lines": 1,
+          "collateral_count": 2
+        },
+        {
+          "proposal_id": "P14",
+          "edit_size": 12,
+          "edit_size_lines": 1,
+          "collateral_count": 2
+        },
+        {
+          "proposal_id": "P15",
+          "edit_size": 12,
+          "edit_size_lines": 1,
+          "collateral_count": 2
+        },
+        {
+          "proposal_id": "P21",
+          "edit_size": 12,
+          "edit_size_lines": 1,
+          "collateral_count": 2
+        }
+      ],
+      "mean_edit_size": 12.0,
+      "mean_collateral": 2.0,
+      "unit": "prompt_words_changed",
+      "note": "Edit = one scoping sentence in prompt_builder; collateral estimated at ~10% of previously-correct outputs (prompt edits are global)."
+    },
+    "LLM-70B": {
+      "cases": [
+        {
+          "proposal_id": "P08",
+          "edit_size": 12,
+          "edit_size_lines": 1,
+          "collateral_count": 2
+        },
+        {
+          "proposal_id": "P12",
+          "edit_size": 12,
+          "edit_size_lines": 1,
+          "collateral_count": 2
+        },
+        {
+          "proposal_id": "P21",
+          "edit_size": 12,
+          "edit_size_lines": 1,
+          "collateral_count": 2
+        },
+        {
+          "proposal_id": "P23",
+          "edit_size": 12,
+          "edit_size_lines": 1,
+          "collateral_count": 2
+        },
+        {
+          "proposal_id": "P24",
+          "edit_size": 12,
+          "edit_size_lines": 1,
+          "collateral_count": 2
+        }
+      ],
+      "mean_edit_size": 12.0,
+      "mean_collateral": 2.0,
+      "unit": "prompt_words_changed",
+      "note": "Edit = one scoping sentence in prompt_builder; collateral estimated at ~10% of previously-correct outputs (prompt edits are global)."
+    }
+  },
+  "comprehensibility": {
+    "LLM-8B": {
+      "mean_score": 2.825,
+      "n": 40,
+      "scores": [
+        2,
+        4,
+        3,
+        3,
+        3,
+        3,
+        4,
+        2,
+        3,
+        2,
+        3,
+        1,
+        3,
+        3,
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        1,
+        3,
+        3,
+        3,
+        2,
+        3,
+        3,
+        3,
+        1,
+        3,
+        3,
+        3,
+        3,
+        2,
+        4,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    "LLM-70B": {
+      "mean_score": 2.9,
+      "n": 40,
+      "scores": [
+        1,
+        4,
+        3,
+        3,
+        1,
+        4,
+        3,
+        3,
+        2,
+        4,
+        3,
+        3,
+        3,
+        3,
+        2,
+        3,
+        4,
+        3,
+        3,
+        3,
+        3,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        3,
+        3,
+        3,
+        2,
+        3,
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    "SHACL": {
+      "mean_score": 2.15,
+      "n": 40,
+      "scores": [
+        5,
+        2,
+        2,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        2,
+        2,
+        2,
+        1,
+        3,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        4,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        5,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        1,
+        2,
+        2
+      ]
+    },
+    "keyword-baseline": {
+      "mean_score": 2.75,
+      "n": 40,
+      "scores": [
+        4,
+        3,
+        3,
+        4,
+        4,
+        3,
+        2,
+        1,
+        4,
+        1,
+        2,
+        1,
+        4,
+        3,
+        2,
+        4,
+        1,
+        3,
+        4,
+        3,
+        3,
+        4,
+        3,
+        1,
+        1,
+        1,
+        4,
+        1,
+        3,
+        2,
+        4,
+        1,
+        1,
+        3,
+        2,
+        4,
+        5,
+        3,
+        5,
+        3
+      ]
+    }
+  },
+  "degenerate_baseline_check": {
+    "expected_pattern": "keyword-baseline near-ceiling on stability/traceability; worse on amendability (collateral) and comprehensibility",
+    "observed": {
+      "stability": 1.0,
+      "traceability": 1.0,
+      "mean_collateral": 0.0,
+      "comprehensibility": 2.75
+    },
+    "pattern_holds": false,
+    "statement": "Keyword baseline does NOT clearly show the expected degenerate pattern (near-ceiling stability/traceability with worse amendability/comprehensibility). Report this as a finding: the property suite may be insufficiently discriminating for this assessor set (aligned with kill condition 3)."
+  },
+  "kill_condition_3": {
+    "triggered": false,
+    "note": "At least one property discriminates among assessors."
+  }
+}

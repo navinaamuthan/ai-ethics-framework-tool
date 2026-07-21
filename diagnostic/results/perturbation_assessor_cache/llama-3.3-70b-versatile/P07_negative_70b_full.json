@@ -1,0 +1,449 @@
+{
+  "proposal_id": "P07_negative_70b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T02:08:08.259275",
+  "proposal_text": "This research proposes to apply sentiment analysis and linguistic style detection to a corpus of 5,000 anonymised undergraduate essays submitted to the School of English at Trinity College Dublin, but with an additional step that may compromise student anonymity: researchers will attempt to de-anonymise a subset of essays by cross-referencing pseudonymised data with publicly available student social media profiles, without explicit student consent.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "student",
+    "consent",
+    "profil",
+    "school",
+    "sentiment",
+    "social media"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art24_RightsOfChild",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 77,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 47.0,
+      "tf": 47,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 17.0,
+      "tf": 17,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 26
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 48
+    },
+    {
+      "id": "ChildrenRights",
+      "label": "Children Rights",
+      "definition": "Risk of harm to children's rights, development, or best interests arising from AI systems affecting minors.",
+      "idf_score": 4.5066,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 14
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 15
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The research proposal poses significant ethical risks due to the potential de-anonymisation of student essays, which could lead to privacy breaches, discrimination, and psychological harm. The use of pseudonymised data and cross-referencing with publicly available social media profiles raises concerns about data governance and transparency. Additionally, the potential for biased sentiment analysis and linguistic style detection could perpetuate existing social inequalities. The proposal's attempt to de-anonymise essays without explicit student consent further exacerbates these risks.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "De-anonymisation of student essays",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The proposal's attempt to de-anonymise essays without explicit student consent could lead to unauthorised collection, processing, or disclosure of personal data."
+      },
+      {
+        "risk": "Biased sentiment analysis and linguistic style detection",
+        "risk_category": "Discrimination",
+        "severity": "Medium",
+        "explanation": "The use of biased models could perpetuate existing social inequalities and lead to unfair differential treatment of individuals or groups."
+      },
+      {
+        "risk": "Lack of transparency in data collection and processing",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The proposal's use of pseudonymised data and cross-referencing with publicly available social media profiles raises concerns about data governance and transparency."
+      },
+      {
+        "risk": "Potential for psychological harm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Medium",
+        "explanation": "The potential for biased sentiment analysis and linguistic style detection could lead to mental distress, manipulation, or emotional damage caused by the AI system."
+      },
+      {
+        "risk": "Inadequate data governance",
+        "risk_category": "DataGovernance",
+        "severity": "Medium",
+        "explanation": "The proposal's use of pseudonymised data and cross-referencing with publicly available social media profiles raises concerns about data stewardship, provenance, and quality controls in AI pipelines."
+      },
+      {
+        "risk": "Risk of false identification",
+        "risk_category": "FalseIdentification",
+        "severity": "Low",
+        "explanation": "The proposal's attempt to de-anonymise essays could lead to incorrect identity attribution with consequential harm."
+      },
+      {
+        "risk": "Risk of reputational harm",
+        "risk_category": "ReputationalHarm",
+        "severity": "Low",
+        "explanation": "The proposal's use of biased models could lead to damage to an individual's or organisation's reputation through AI-generated outputs or decisions."
+      },
+      {
+        "risk": "Risk of accountability",
+        "risk_category": "Accountability",
+        "severity": "Medium",
+        "explanation": "The proposal's use of AI systems for sentiment analysis and linguistic style detection raises concerns about the ability of affected persons to obtain explanation, contestation, or remedy for AI-mediated decisions."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the sentiment analysis and linguistic style detection models are fair and unbiased."
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the data used for training the models is diverse and representative, and that the models are regularly audited for bias."
+      },
+      {
+        "requirement_id": "ACM005",
+        "requirement_text": "Respect intellectual property and data/code ownership — cite creators of artefacts used and use them as intended",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that all data and models used in the proposal are properly cited and used in accordance with their licences."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from students before collecting and processing their essays, and ensure that all personally identifiable information is protected."
+      },
+      {
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough evaluation of the proposal's potential risks and impacts, including the potential for bias, discrimination, and psychological harm."
+      },
+      {
+        "requirement_id": "EUAIAct-01",
+        "requirement_text": "Ensure that AI systems are transparent, explainable, and fair",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the proposal's AI systems are transparent, explainable, and fair, and that they do not perpetuate existing social inequalities."
+      },
+      {
+        "requirement_id": "HorizonEurope-01",
+        "requirement_text": "Ensure that research is conducted in accordance with ethical principles and values",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the proposal is conducted in accordance with ethical principles and values, including respect for privacy, transparency, and accountability."
+      },
+      {
+        "requirement_id": "REAMS-01",
+        "requirement_text": "Ensure that research is conducted in accordance with ethical principles and values",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the proposal is conducted in accordance with ethical principles and values, including respect for privacy, transparency, and accountability."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 7",
+        "right_name": "PrivateLife",
+        "relevance": "The proposal's attempt to de-anonymise essays without explicit student consent could lead to a breach of students' right to private life."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The proposal's use of pseudonymised data and cross-referencing with publicly available social media profiles raises concerns about data protection and the potential for unauthorised collection, processing, or disclosure of personal data."
+      },
+      {
+        "article": "Article 11",
+        "right_name": "FreedomOfExpression",
+        "relevance": "The proposal's use of biased models could lead to a restriction of students' freedom of expression, particularly if the models are used to evaluate or grade student work."
+      },
+      {
+        "article": "Article 24",
+        "right_name": "RightsOfChild",
+        "relevance": "The proposal's potential impact on minors, particularly if the essays are written by minors, raises concerns about the protection of children's rights and well-being."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-014",
+        "incident_title": "YouTube Recommendation Radicalisation",
+        "lesson": "The use of biased models can lead to the perpetuation of existing social inequalities and the amplification of harmful content."
+      },
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "The use of AI systems can lead to the amplification of harmful content, particularly if the systems are not designed with transparency and accountability in mind."
+      },
+      {
+        "incident_id": "AIAAIC-027",
+        "incident_title": "Spotify Mood Inference Patent",
+        "lesson": "The use of AI systems to infer personal characteristics, such as mood or personality, raises concerns about privacy and data protection."
+      },
+      {
+        "incident_id": "AIAAIC-025",
+        "incident_title": "Amazon Alexa Recording Children Without Consent",
+        "lesson": "The use of AI systems to collect and process personal data, particularly from minors, raises concerns about privacy and data protection."
+      },
+      {
+        "incident_id": "AIAAIC-026",
+        "incident_title": "Facial Recognition in UK Schools",
+        "lesson": "The use of AI systems, particularly facial recognition, in educational settings raises concerns about privacy, data protection, and the potential for biased decision-making."
+      },
+      {
+        "incident_id": "AIAAIC-044",
+        "incident_title": "Stable Diffusion CSAM Generation",
+        "lesson": "The use of AI systems to generate harmful content, particularly child sexual abuse material, raises concerns about the potential for AI systems to be used for malicious purposes."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The use of AI systems, particularly facial recognition, can lead to false identifications and wrongful arrests, particularly if the systems are not designed with transparency and accountability in mind."
+      },
+      {
+        "incident_id": "AIAAIC-007",
+        "incident_title": "Clearview AI Mass Facial Recognition Scraping",
+        "lesson": "The use of AI systems to collect and process personal data, particularly facial recognition data, raises concerns about privacy and data protection."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Obtain explicit consent from students before collecting and processing their essays",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Ensure that the sentiment analysis and linguistic style detection models are fair and unbiased",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement transparency and accountability measures, such as explainable AI and human oversight",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Conduct regular audits to ensure that the AI systems are not perpetuating existing social inequalities",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Develop and implement a comprehensive data protection policy",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Obtain explicit consent from students before collecting and processing their essays",
+      "Ensure that the sentiment analysis and linguistic style detection models are fair and unbiased",
+      "Implement transparency and accountability measures, such as explainable AI and human oversight"
+    ],
+    "tier2_reflective_prompts": [
+      "How might the proposal's use of AI systems perpetuate existing social inequalities?",
+      "What are the potential risks and impacts of the proposal on students, particularly minors?",
+      "How can the proposal be designed to ensure transparency, accountability, and fairness?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "student",
+        "consent",
+        "profil",
+        "school",
+        "sentiment",
+        "social media"
+      ],
+      "rights_matched": 4,
+      "requirements_retrieved": 77,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "R027",
+        "R043",
+        "R044"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "R027",
+        "R043",
+        "R044",
+        "R045",
+        "R055",
+        "R081",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R054",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE013",
+        "HE033",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "EUAIAct-01",
+        "HorizonEurope-01",
+        "REAMS-01"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-025",
+        "AIAAIC-026"
+      ]
+    }
+  }
+}

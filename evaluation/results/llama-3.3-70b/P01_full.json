@@ -2,7 +2,7 @@
   "proposal_id": "P01",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-20T14:31:57.444994",
+  "timestamp": "2026-07-19T19:51:19.904442",
   "proposal_text": "This research proposes to develop a commercial health risk stratification algorithm to identify high-need patients for enrolment in care management programmes across a network of US hospital systems. The algorithm will use insurance claims data as a proxy for health need, predicting which patients require additional clinical resources based on historical healthcare costs, prior diagnoses, medication use, and utilisation patterns from electronic health records covering approximately 200 million patients annually. Patients scoring in the top 3 percentile will automatically be referred to care management; those in the top 45 percentile will be assessed for referral. The algorithm will not explicitly use race as a predictive variable. However, because Black patients have historically incurred lower healthcare costs than white patients with equivalent chronic disease burden — due to structural barriers to healthcare access including cost, discrimination, and geographic distance — the cost proxy will systematically underestimate the health needs of Black patients. The algorithm has not undergone independent bias auditing prior to deployment. No mechanism for algorithmic review or patient appeal of care management non-referral decisions is planned.",
   "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
@@ -31,88 +31,34 @@
   ],
   "retrieved_requirements_count": 170,
   "retrieved_incidents_count": 8,
-  "retrieved_risk_categories": [
-    {
-      "id": "PsychologicalHarm",
-      "label": "Psychological Harm",
-      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system."
-    },
-    {
-      "id": "FinancialHarm",
-      "label": "Financial Harm",
-      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system."
-    },
-    {
-      "id": "PhysicalHarm",
-      "label": "Physical Harm",
-      "definition": "Risk of bodily injury, death, or physical safety compromise caused by an AI system."
-    },
-    {
-      "id": "ReputationalHarm",
-      "label": "Reputational Harm",
-      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions."
-    },
-    {
-      "id": "PrivacyBreach",
-      "label": "Privacy Breach",
-      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system."
-    },
-    {
-      "id": "Discrimination",
-      "label": "Discrimination",
-      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system."
-    },
-    {
-      "id": "EconomicHarm",
-      "label": "",
-      "definition": ""
-    },
-    {
-      "id": "Accountability",
-      "label": "",
-      "definition": ""
-    }
-  ],
-  "rights_disambiguation": "individual_treatment→Art21",
   "assessment": {
-    "risk_summary": "The proposed health risk stratification algorithm poses significant risks to patients, particularly Black patients, due to potential biases in the cost proxy used to predict health needs. The algorithm's lack of independent bias auditing and absence of mechanisms for algorithmic review or patient appeal of care management non-referral decisions exacerbate these risks. Furthermore, the use of insurance claims data and electronic health records raises concerns about privacy and data protection. The algorithm's potential to discriminate against certain groups, cause physical harm, and compromise patient privacy are all significant ethical concerns.",
+    "risk_summary": "The proposed health risk stratification algorithm poses significant ethical risks due to its potential to perpetuate biases against vulnerable groups, particularly Black patients, and its lack of transparency and accountability mechanisms. The algorithm's reliance on insurance claims data as a proxy for health need may systematically underestimate the health needs of Black patients, leading to unequal access to care management programmes. Furthermore, the absence of independent bias auditing and mechanisms for algorithmic review or patient appeal raises concerns about the fairness and accountability of the decision-making process. The use of sensitive patient data without explicit consent also raises concerns about data protection and privacy.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Bias in cost proxy",
-        "risk_category": "Discrimination",
+        "risk": "Bias in algorithmic decision-making",
         "severity": "High",
-        "explanation": "The algorithm's use of cost as a proxy for health need may systematically underestimate the health needs of Black patients due to structural barriers to healthcare access."
+        "explanation": "The algorithm's reliance on insurance claims data may perpetuate biases against Black patients, leading to unequal access to care management programmes."
       },
       {
-        "risk": "Lack of independent bias auditing",
-        "risk_category": "Discrimination",
+        "risk": "Lack of transparency and accountability",
         "severity": "High",
-        "explanation": "The algorithm has not undergone independent bias auditing prior to deployment, which increases the risk of biased outcomes."
+        "explanation": "The absence of independent bias auditing and mechanisms for algorithmic review or patient appeal raises concerns about the fairness and accountability of the decision-making process."
       },
       {
-        "risk": "No mechanism for algorithmic review or patient appeal",
-        "risk_category": "Accountability",
-        "severity": "High",
-        "explanation": "The absence of mechanisms for algorithmic review or patient appeal of care management non-referral decisions compromises patient autonomy and accountability."
-      },
-      {
-        "risk": "Privacy concerns",
-        "risk_category": "PrivacyBreach",
+        "risk": "Data protection and privacy concerns",
         "severity": "Medium",
-        "explanation": "The use of insurance claims data and electronic health records raises concerns about patient privacy and data protection."
+        "explanation": "The use of sensitive patient data without explicit consent raises concerns about data protection and privacy."
       },
       {
-        "risk": "Physical harm",
-        "risk_category": "PhysicalHarm",
+        "risk": "Unequal access to healthcare",
+        "severity": "High",
+        "explanation": "The algorithm's potential to perpetuate biases against vulnerable groups may lead to unequal access to care management programmes."
+      },
+      {
+        "risk": "Lack of patient appeal mechanism",
         "severity": "Medium",
-        "explanation": "The algorithm's potential to misclassify patients or delay necessary care may result in physical harm to patients."
-      },
-      {
-        "risk": "Reputational harm",
-        "risk_category": "ReputationalHarm",
-        "severity": "Low",
-        "explanation": "The algorithm's potential to discriminate against certain groups may damage the reputation of the healthcare providers using the algorithm."
+        "explanation": "The absence of a mechanism for patients to appeal care management non-referral decisions raises concerns about patient autonomy and dignity."
       }
     ],
     "applicable_requirements": [
@@ -121,146 +67,151 @@
         "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct independent bias auditing and implement measures to address potential biases in the algorithm"
+        "action_needed": "Conduct independent bias auditing and implement mechanisms to address potential biases."
       },
       {
         "requirement_id": "ACM004",
         "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement data preprocessing techniques to reduce bias in the data and monitor the algorithm's performance for biased outcomes"
+        "action_needed": "Implement data preprocessing techniques to address biases in the data and ensure that the algorithm is fair and unbiased."
       },
       {
         "requirement_id": "ACM006",
         "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain informed consent from patients and implement measures to protect patient privacy and data security"
+        "action_needed": "Obtain explicit consent from patients for the use of their sensitive data and implement robust data protection measures."
       },
       {
         "requirement_id": "ACM007",
         "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a comprehensive evaluation of the algorithm's potential risks and impacts on patients and healthcare providers"
+        "action_needed": "Conduct a comprehensive evaluation of the algorithm's potential impacts and risks, including its potential to perpetuate biases and unequal access to healthcare."
       },
       {
         "requirement_id": "ACM014",
         "requirement_text": "All human research subjects or participants must receive appropriate compensation — respect minimum hourly rate in region where work is carried out",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that patients participating in the study receive appropriate compensation for their time and effort"
+        "action_needed": "Ensure that patients who participate in the care management programmes receive fair compensation for their time and effort."
       },
       {
         "requirement_id": "ACM016",
         "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement data anonymization techniques to minimize the exposure of personally identifiable information"
+        "action_needed": "Implement data anonymization techniques to minimize the exposure of personally identifiable information."
       },
       {
         "requirement_id": "ACM021",
         "requirement_text": "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the algorithm's potential risks and impacts on patients, including the potential for physical harm"
+        "action_needed": "Conduct a thorough analysis of the potential risks and harms associated with the algorithm's deployment."
       },
       {
         "requirement_id": "ACM023",
         "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to prevent discrimination and ensure that the algorithm is fair and unbiased"
+        "action_needed": "Implement mechanisms to prevent the algorithm from perpetuating biases and unequal access to healthcare."
       },
       {
         "requirement_id": "ACM027",
         "requirement_text": "Research must not build upon or facilitate illegal activity — strongly discourage work that denies rights to privacy, speech, health, liberty, security, legal personhood, freedom of conscience/religion",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the algorithm is designed and implemented in a way that respects patient rights and dignity"
+        "action_needed": "Ensure that the algorithm is designed and deployed in a way that respects patients' rights to privacy, autonomy, and dignity."
       }
     ],
     "charter_rights_at_risk": [
       {
+        "article": "Article 20",
+        "right_name": "Equality Before Law",
+        "relevance": "The algorithm's potential to perpetuate biases against vulnerable groups may lead to unequal access to care management programmes, violating the principle of equality before the law."
+      },
+      {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The algorithm's potential to discriminate against certain groups, particularly Black patients, is a significant concern"
+        "relevance": "The algorithm's reliance on insurance claims data may perpetuate biases against Black patients, leading to discriminatory outcomes."
       },
       {
         "article": "Article 35",
-        "right_name": "HealthCare",
-        "relevance": "The algorithm's potential to misclassify patients or delay necessary care may compromise patient access to healthcare"
-      },
-      {
-        "article": "Article 7",
-        "right_name": "PrivateLife",
-        "relevance": "The use of insurance claims data and electronic health records raises concerns about patient privacy and data protection"
-      },
-      {
-        "article": "Article 8",
-        "right_name": "DataProtection",
-        "relevance": "The algorithm's potential to process and store large amounts of patient data raises concerns about data protection and security"
+        "right_name": "Health Care",
+        "relevance": "The algorithm's potential to perpetuate biases and unequal access to healthcare may violate patients' right to access healthcare."
       },
       {
         "article": "Article 41",
-        "right_name": "GoodAdministration",
-        "relevance": "The algorithm's potential to compromise patient autonomy and accountability is a significant concern"
+        "right_name": "Good Administration",
+        "relevance": "The absence of independent bias auditing and mechanisms for algorithmic review or patient appeal raises concerns about the fairness and accountability of the decision-making process, violating the principle of good administration."
+      },
+      {
+        "article": "Article 47",
+        "right_name": "Right to Effective Remedy",
+        "relevance": "The absence of a mechanism for patients to appeal care management non-referral decisions raises concerns about patients' right to an effective remedy."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of auditing algorithms for bias and ensuring that they are fair and unbiased"
+        "lesson": "The importance of auditing algorithms for biases and implementing mechanisms to address potential biases."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The potential risks and harms associated with the deployment of AI systems in high-stakes decision-making contexts."
       },
       {
         "incident_id": "AIAAIC-011",
         "incident_title": "Facebook Discriminatory Ad Targeting",
-        "lesson": "The potential for algorithms to discriminate against certain groups and the importance of implementing measures to prevent discrimination"
+        "lesson": "The importance of ensuring that AI systems are designed and deployed in a way that respects users' rights to non-discrimination and equality."
       },
       {
         "incident_id": "AIAAIC-013",
         "incident_title": "Apple Card Gender Discrimination",
-        "lesson": "The importance of ensuring that algorithms are fair and unbiased, particularly in high-stakes decision-making contexts"
+        "lesson": "The potential for AI systems to perpetuate biases and discriminatory outcomes, particularly in contexts where sensitive data is involved."
       },
       {
         "incident_id": "AIAAIC-017",
         "incident_title": "IBM Watson Oncology Unsafe Recommendations",
-        "lesson": "The potential for algorithms to cause physical harm and the importance of ensuring that they are thoroughly tested and validated before deployment"
+        "lesson": "The importance of ensuring that AI systems are designed and deployed in a way that prioritizes patient safety and well-being."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct independent bias auditing and implement measures to address potential biases in the algorithm",
+        "mitigation": "Conduct independent bias auditing and implement mechanisms to address potential biases",
         "priority": "High"
       },
       {
-        "mitigation": "Implement data preprocessing techniques to reduce bias in the data and monitor the algorithm's performance for biased outcomes",
+        "mitigation": "Implement data preprocessing techniques to address biases in the data and ensure that the algorithm is fair and unbiased",
         "priority": "High"
       },
       {
-        "mitigation": "Obtain informed consent from patients and implement measures to protect patient privacy and data security",
+        "mitigation": "Obtain explicit consent from patients for the use of their sensitive data and implement robust data protection measures",
         "priority": "High"
       },
       {
-        "mitigation": "Conduct a comprehensive evaluation of the algorithm's potential risks and impacts on patients and healthcare providers",
+        "mitigation": "Implement mechanisms for algorithmic review or patient appeal of care management non-referral decisions",
         "priority": "Medium"
       },
       {
-        "mitigation": "Implement measures to prevent discrimination and ensure that the algorithm is fair and unbiased",
+        "mitigation": "Conduct a comprehensive evaluation of the algorithm's potential impacts and risks, including its potential to perpetuate biases and unequal access to healthcare",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct independent bias auditing and implement measures to address potential biases in the algorithm",
-      "Implement data preprocessing techniques to reduce bias in the data and monitor the algorithm's performance for biased outcomes",
-      "Obtain informed consent from patients and implement measures to protect patient privacy and data security",
-      "Conduct a comprehensive evaluation of the algorithm's potential risks and impacts on patients and healthcare providers"
+      "Conduct independent bias auditing and implement mechanisms to address potential biases",
+      "Implement data preprocessing techniques to address biases in the data and ensure that the algorithm is fair and unbiased",
+      "Obtain explicit consent from patients for the use of their sensitive data and implement robust data protection measures",
+      "Implement mechanisms for algorithmic review or patient appeal of care management non-referral decisions"
     ],
     "tier2_reflective_prompts": [
-      "How might the algorithm's potential biases and limitations impact patient outcomes and healthcare providers?",
-      "What measures can be taken to prevent discrimination and ensure that the algorithm is fair and unbiased?",
-      "How can the algorithm's performance be monitored and evaluated to ensure that it is functioning as intended and not causing harm to patients?"
+      "How might the algorithm's reliance on insurance claims data perpetuate biases against vulnerable groups?",
+      "What mechanisms can be implemented to ensure that the algorithm is fair and unbiased?",
+      "How can the algorithm be designed and deployed in a way that respects patients' rights to privacy, autonomy, and dignity?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",

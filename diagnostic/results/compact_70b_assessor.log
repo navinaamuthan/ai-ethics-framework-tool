@@ -1,0 +1,36 @@
+  [OK] Groq connected. Available models: 15
+  [OK] Model 'llama-3.3-70b-versatile' is available.
+need 16: ['P24', 'P25', 'P26', 'P27', 'P28', 'P29', 'P30', 'P31', 'P33', 'P34', 'P35', 'P36', 'P37', 'P38', 'P39', 'P40']
+[1/16] P24
+  OK risk=High rights=3
+[2/16] P25
+  OK risk=High rights=4
+[3/16] P26
+  OK risk=Medium rights=2
+[4/16] P27
+  OK risk=High rights=4
+[5/16] P28
+  OK risk=High rights=5
+[6/16] P29
+  OK risk=Medium rights=2
+[7/16] P30
+  OK risk=High rights=4
+[8/16] P31
+  OK risk=Medium rights=2
+[9/16] P33
+  OK risk=Medium rights=2
+[10/16] P34
+  OK risk=Medium rights=2
+[11/16] P35
+  OK risk=High rights=1
+[12/16] P36
+  OK risk=High rights=3
+[13/16] P37
+  OK risk=High rights=4
+[14/16] P38
+  OK risk=Medium rights=3
+[15/16] P39
+  OK risk=High rights=3
+[16/16] P40
+  OK risk=High rights=4
+DONE remaining=[]

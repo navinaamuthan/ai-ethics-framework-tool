@@ -1,0 +1,94 @@
+{
+  "scope_note": "A unit test for assessor behaviour under known-direction change, not a claim about real-world deployment prediction.",
+  "n_variants": 45,
+  "selected_base_ids": [
+    "P01",
+    "P02",
+    "P05",
+    "P21",
+    "P25",
+    "P07",
+    "P11",
+    "P20",
+    "P23",
+    "P28",
+    "P13",
+    "P15",
+    "P16",
+    "P26",
+    "P31"
+  ],
+  "sensitivity_rates": {
+    "SHACL": {
+      "positive": {
+        "n": 15,
+        "hits": 15,
+        "rate": 1.0
+      },
+      "negative": {
+        "n": 15,
+        "hits": 11,
+        "rate": 0.7333333333333333
+      },
+      "neutral": {
+        "n": 15,
+        "hits": 15,
+        "rate": 1.0
+      }
+    },
+    "LLM-8B": {
+      "positive": {
+        "n": 15,
+        "hits": 10,
+        "rate": 0.6666666666666666
+      },
+      "negative": {
+        "n": 15,
+        "hits": 12,
+        "rate": 0.8
+      },
+      "neutral": {
+        "n": 15,
+        "hits": 10,
+        "rate": 0.6666666666666666
+      }
+    },
+    "LLM-70B": {
+      "positive": {
+        "n": 15,
+        "hits": 14,
+        "rate": 0.9333333333333333
+      },
+      "negative": {
+        "n": 15,
+        "hits": 15,
+        "rate": 1.0
+      },
+      "neutral": {
+        "n": 15,
+        "hits": 14,
+        "rate": 0.9333333333333333
+      }
+    },
+    "keyword-baseline": {
+      "positive": {
+        "n": 15,
+        "hits": 7,
+        "rate": 0.4666666666666667
+      },
+      "negative": {
+        "n": 15,
+        "hits": 12,
+        "rate": 0.8
+      },
+      "neutral": {
+        "n": 15,
+        "hits": 15,
+        "rate": 1.0
+      }
+    }
+  },
+  "persona_inter_rater_kappa_on_direction": 0.8346936131623267,
+  "persona_author_direction_agreement_rate": 0.8994413407821229,
+  "n_persona_pairs": 264
+}

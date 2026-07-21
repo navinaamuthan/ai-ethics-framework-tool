@@ -1,0 +1,448 @@
+{
+  "proposal_id": "P34",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-20T23:37:13.534411",
+  "proposal_text": "This research proposes clickstream-only 'engagement analytics' for an online continuing-education platform: page dwell time, quiz retries, and forum posts. No webcam or emotion recognition is used. Instructors see per-student engagement scores that may inform outreach emails. Scores are not used for formal grading. A subtle issue is that engagement proxies can disadvantage students with disability-related interaction patterns or shared-device access, and outreach based on low scores may feel surveillant. The proposal does not discuss reasonable-accommodation effects. Data stay on the university LMS.",
+  "context_max_requirements": 25,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "scor",
+    "student",
+    "disabilit",
+    "emotion",
+    "surveil"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity",
+    "Art21_NonDiscrimination",
+    "Art24_RightsOfChild",
+    "Art3_RightToIntegrity",
+    "Art47_RightToEffectiveRemedy",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 150,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 58.0,
+      "tf": 58,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 54.0,
+      "tf": 54,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 21.0,
+      "tf": 21,
+      "df": 26
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 18.0,
+      "tf": 18,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 15
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 16
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 3,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The proposed research involves clickstream analytics for an online continuing-education platform, which may disadvantage students with disability-related interaction patterns or shared-device access, and raises concerns about surveillance and data protection. The use of engagement proxies may lead to biased decision-making and potential harm to students. The platform's data storage on the university LMS also raises questions about data governance and protection.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Bias in engagement proxies",
+        "risk_category": "Discrimination",
+        "severity": "Medium",
+        "explanation": "The use of engagement proxies may disadvantage students with disability-related interaction patterns or shared-device access."
+      },
+      {
+        "risk": "Surveillance and data protection",
+        "risk_category": "PrivacyBreach",
+        "severity": "Medium",
+        "explanation": "The platform's data storage on the university LMS raises questions about data governance and protection."
+      },
+      {
+        "risk": "Potential harm to students",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Medium",
+        "explanation": "The use of engagement proxies may lead to biased decision-making and potential harm to students."
+      },
+      {
+        "risk": "Transparency and explainability",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The platform's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders."
+      },
+      {
+        "risk": "Data governance and protection",
+        "risk_category": "DataGovernance",
+        "severity": "Medium",
+        "explanation": "The platform's data storage on the university LMS raises questions about data governance and protection."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Discuss potential harms and mitigation strategies"
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider potential harms and take steps to mitigate them"
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider potential biases and take steps to ameliorate them"
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain informed consent and protect personally identifiable information"
+      },
+      {
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Minimise exposure of personally identifiable information"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The use of engagement proxies may disadvantage students with disability-related interaction patterns or shared-device access."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The platform's data storage on the university LMS raises questions about data governance and protection."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The platform's data storage on the university LMS raises questions about data governance and protection."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of considering potential biases in AI systems and taking steps to ameliorate them."
+      },
+      {
+        "incident_id": "AIAAIC-025",
+        "incident_title": "Amazon Alexa Recording Children Without Consent",
+        "lesson": "The importance of obtaining informed consent and protecting personally identifiable information in AI systems."
+      },
+      {
+        "incident_id": "AIAAIC-026",
+        "incident_title": "Facial Recognition in UK Schools",
+        "lesson": "The importance of considering potential harms and taking steps to mitigate them in AI systems."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement bias detection and mitigation techniques",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Obtain informed consent from students and parents",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Minimise exposure of personally identifiable information",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Provide transparent and explainable decision-making processes",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Discuss potential harms and mitigation strategies",
+      "Consider potential harms and take steps to mitigate them",
+      "Consider potential biases and take steps to ameliorate them",
+      "Obtain informed consent and protect personally identifiable information"
+    ],
+    "tier2_reflective_prompts": [
+      "How might the use of engagement proxies disadvantage students with disability-related interaction patterns or shared-device access?",
+      "What steps can be taken to mitigate potential harms and biases in the AI system?",
+      "How can the platform's data storage on the university LMS be made more transparent and accountable?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "scor",
+        "student",
+        "disabilit",
+        "emotion",
+        "surveil"
+      ],
+      "rights_matched": 7,
+      "requirements_retrieved": 150,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE019",
+        "HE021",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE042",
+        "HE049",
+        "HE050",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "ACM012",
+        "ACM023",
+        "ACM028",
+        "AI016",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R028",
+        "R085",
+        "R043",
+        "R044",
+        "R045",
+        "R055",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "R009",
+        "R015",
+        "R019",
+        "R022",
+        "R034",
+        "R039",
+        "R042",
+        "R046",
+        "R048",
+        "ACM017",
+        "ACM021",
+        "ACM035",
+        "AI002",
+        "AI015",
+        "AI018",
+        "AI019",
+        "AI020",
+        "AI022",
+        "AI026",
+        "AI028",
+        "AI030",
+        "HE024",
+        "HE026",
+        "HE028",
+        "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
+        "HE048",
+        "HE052",
+        "R074",
+        "ACM003",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R023",
+        "R026",
+        "R047",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM003",
+        "ACM006",
+        "ACM016"
+      ],
+      "incidents_sample": [
+        "AIAAIC-003",
+        "AIAAIC-005",
+        "AIAAIC-009",
+        "AIAAIC-001",
+        "AIAAIC-002"
+      ]
+    }
+  }
+}

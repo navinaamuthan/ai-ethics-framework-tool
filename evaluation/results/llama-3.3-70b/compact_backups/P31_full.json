@@ -1,0 +1,24 @@
+{
+  "proposal_id": "P31",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This project will release an open speech corpus of 400 hours across Yoruba, Igbo, and Swahili for ASR research. Speakers are paid volunteers who record scripted sentences and optional two-minute personal stories about family and work. Scripts are public-domain; personal stories may contain names, employers, and locations. Release includes raw audio under CC-BY with speaker IDs replaced by codes. A subtle issue: re-identification via voice biometrics plus story content is possible for well-known community members, but the datasheet treats the corpus as anonymised. No voice-biometric risk assessment is planned. Otherwise the project is standard open-science language resource work with no downstream decision system.",
+  "assessment": {
+    "overall_risk_level": "Medium",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art7_PrivateLife",
+        "right_name": "Right to Private Life",
+        "relevance": "The release of personal stories may contain sensitive information about the speakers, such as names, employers, and locations, which could compromise their right to private life."
+      },
+      {
+        "article": "Art8_DataProtection",
+        "right_name": "Right to Data Protection",
+        "relevance": "The potential for re-identification via voice biometrics plus story content poses a risk to the speakers' personal data, which is not adequately addressed by replacing speaker IDs with codes."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

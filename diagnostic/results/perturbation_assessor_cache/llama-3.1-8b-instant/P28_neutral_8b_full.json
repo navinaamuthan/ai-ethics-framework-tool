@@ -1,0 +1,332 @@
+{
+  "proposal_id": "P28_neutral_8b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T02:15:09.576733",
+  "proposal_text": "This study proposes a Spanish-language LLM chatbot that guides Bogotá residents through business-permit and construction-licence applications. The bot classifies query intent, retrieves municipal code passages, and drafts application forms. In a pilot ward, incomplete answers that the bot labels 'likely ineligible' will auto-close the digital ticket without human review to reduce backlog. Residents with limited literacy or non-standard Spanish dialects may be disproportionately auto-closed. Conversation logs retain national ID numbers entered into forms. The city asserts the bot is 'advisory only,' yet ticket closure has the practical effect of a refusal. No administrative-appeal pathway specific to bot closures is described.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "administrative",
+    "chatbot",
+    "classif"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity"
+  ],
+  "retrieved_requirements_count": 47,
+  "retrieved_incidents_count": 3,
+  "retrieved_risk_categories": [
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 24.0,
+      "tf": 24,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 14.0,
+      "tf": 14,
+      "df": 26
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "DualUseMisuse",
+      "label": "Dual-Use Misuse",
+      "definition": "Risk that research or AI outputs intended for beneficial purposes are repurposed for harmful applications.",
+      "idf_score": 4.912,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 9
+    },
+    {
+      "id": "Deception",
+      "label": "Deception",
+      "definition": "Risk that an AI system misleads users about its nature, capabilities, or the provenance of its outputs.",
+      "idf_score": 4.442,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 15
+    },
+    {
+      "id": "EconomicHarm",
+      "label": "Economic Harm",
+      "definition": "Risk of systemic or population-level economic disadvantage caused by AI systems (distinct from individual FinancialHarm).",
+      "idf_score": 4.6497,
+      "rank_score": 5.0,
+      "tf": 5,
+      "df": 12
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The proposed Spanish-language LLM chatbot for Bogotá residents may cause PsychologicalHarm, Dignity risks, and Accountability issues due to auto-closure of digital tickets without human review, potential misclassification of query intent, and lack of administrative-appeal pathway. The system also retains national ID numbers, which may lead to DataBreach and PrivacyBreach risks. Furthermore, the chatbot's advisory-only nature may be misleading, causing Deception risks.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "PsychologicalHarm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "High",
+        "explanation": "Auto-closure of digital tickets without human review may cause mental distress and emotional damage to residents with limited literacy or non-standard Spanish dialects."
+      },
+      {
+        "risk": "Dignity",
+        "risk_category": "Dignity",
+        "severity": "High",
+        "explanation": "The chatbot's potential misclassification of query intent and auto-closure of digital tickets may undermine human dignity by degrading or objectifying residents."
+      },
+      {
+        "risk": "Accountability",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "Residents may not be able to obtain explanation, contestation, or remedy for AI-mediated decisions due to lack of administrative-appeal pathway."
+      },
+      {
+        "risk": "DataBreach",
+        "risk_category": "DataBreach",
+        "severity": "High",
+        "explanation": "Retention of national ID numbers may lead to unauthorized access and misuse of sensitive information."
+      },
+      {
+        "risk": "PrivacyBreach",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "Retention of national ID numbers and potential misclassification of query intent may compromise residents' right to privacy."
+      },
+      {
+        "risk": "Deception",
+        "risk_category": "Deception",
+        "severity": "High",
+        "explanation": "The chatbot's advisory-only nature may be misleading, causing users to rely on the system's outputs without understanding its limitations and potential biases."
+      },
+      {
+        "risk": "Transparency",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The system's operation, capabilities, limitations, and decision rationale may not be adequately disclosed to end-users and stakeholders, potentially leading to mistrust and dissatisfaction."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment and develop strategies to mitigate potential harms."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement robust data protection measures and ensure that the system does not cause harm to individuals or groups."
+      },
+      {
+        "requirement_id": "ACM019",
+        "requirement_text": "Respect terms of datasets with defined licences (CC 4.0, MIT etc)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the system complies with the terms of the datasets used and respects the rights of data contributors."
+      },
+      {
+        "requirement_id": "EUAIAct-001",
+        "requirement_text": "Personal data must be processed lawfully, fairly and in a transparent manner",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement transparent data processing practices and ensure that users are aware of how their data is being used."
+      },
+      {
+        "requirement_id": "HorizonEurope-002",
+        "requirement_text": "Ensure that AI systems are designed and developed with human values and well-being in mind",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Design the system with human values and well-being in mind, and ensure that it does not cause harm to individuals or groups."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 1",
+        "right_name": "HumanDignity",
+        "relevance": "The system's potential misclassification of query intent and auto-closure of digital tickets may undermine human dignity by degrading or objectifying residents."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The importance of designing AI systems with human values and well-being in mind, and ensuring that they do not cause harm to individuals or groups."
+      },
+      {
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "The need for transparent data processing practices and ensuring that users are aware of how their data is being used."
+      },
+      {
+        "incident_id": "AIAAIC-009",
+        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
+        "lesson": "The importance of designing AI systems with safety and accountability in mind, and ensuring that they do not cause harm to individuals or groups."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement robust data protection measures and ensure that the system does not cause harm to individuals or groups.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Design the system with human values and well-being in mind, and ensure that it does not cause harm to individuals or groups.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Ensure that the system complies with the terms of the datasets used and respects the rights of data contributors.",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Implement transparent data processing practices and ensure that users are aware of how their data is being used.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough risk assessment and develop strategies to mitigate potential harms.",
+      "Implement robust data protection measures and ensure that the system does not cause harm to individuals or groups."
+    ],
+    "tier2_reflective_prompts": [
+      "How can we ensure that the system is designed and developed with human values and well-being in mind?",
+      "What measures can we take to prevent the system from causing harm to individuals or groups?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "administrative",
+        "chatbot",
+        "classif"
+      ],
+      "rights_matched": 1,
+      "requirements_retrieved": 47,
+      "incidents_retrieved": 3,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE019",
+        "HE021",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE042",
+        "HE049",
+        "HE050",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM019",
+        "EUAIAct-001",
+        "HorizonEurope-002"
+      ],
+      "incidents_sample": [
+        "AIAAIC-003",
+        "AIAAIC-005",
+        "AIAAIC-009"
+      ]
+    }
+  }
+}

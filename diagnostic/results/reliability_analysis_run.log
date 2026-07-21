@@ -1,0 +1,49 @@
+========================================================================
+Diagnostic methodology — reliability analysis
+========================================================================
+Loaded 480 annotations; 40 proposals; 18 articles.
+
+--- Within-stratum (persona means) ---
+  technical: risk κ=0.466  rights κ=0.347
+  legal: risk κ=0.751  rights κ=0.642
+  ethics: risk κ=0.582  rights κ=0.408
+  lay: risk κ=0.659  rights κ=0.399
+  MEAN within risk=0.614  rights=0.449
+
+--- Cross-stratum (run 1) ---
+  MEAN cross risk=0.434  rights=0.349
+
+--- Headline test (bootstrap 95% CIs, 10k) ---
+  within risk 0.614 CI[0.5093319587038961, 0.6933512756583954]
+  cross  risk 0.434 CI[0.25206742922403075, 0.5859457318280847]
+  Directional but inconclusive: mean(within-stratum κ) > mean(cross-stratum κ), but bootstrap 95% CIs overlap, so the pre-registered non-overlap criterion for supporting the frame hypothesis is not met. Kill condition 1 is NOT triggered. Report as suggestive, not confirmatory. Reliability-ceiling computation still holds.
+  kill_condition_1_triggered_risk=False
+
+--- Info-sufficiency filter ---
+  info≥3: n=36 within=0.6244084599272259 cross=0.45911595028722774
+  info<3: n=4 within=0.375 cross=0.1388888888888889
+  ambiguous_low_info_low_agree: ['P38']
+  contested_high_info_low_agree: ['P06', 'P07', 'P09', 'P10', 'P11', 'P12', 'P14', 'P15', 'P17', 'P20', 'P25', 'P27', 'P30', 'P31', 'P33', 'P36']
+  clear_high_info_high_agree: ['P01', 'P02', 'P03', 'P04', 'P05', 'P08', 'P13', 'P16', 'P18', 'P19', 'P21', 'P23', 'P24', 'P26', 'P28', 'P29', 'P32', 'P34', 'P39', 'P40']
+  noisy_low_info_high_agree: ['P22', 'P35', 'P37']
+
+--- Assessor vs GT + decision rule ---
+  LLM-8B: n=40 riskκ=0.209 rightsκ=0.531
+  LLM-70B: n=40 riskκ=0.377 rightsκ=0.690
+  keyword-baseline: n=40 riskκ=0.093 rightsκ=0.282
+  SHACL: n=40 riskκ=0.154 rightsκ=0.320
+  ceiling (max within-stratum risk κ)=0.751
+  noise band (1−ceiling)=0.249
+  kill_condition_2_triggered=False
+    LLM-70B vs LLM-8B: gap=0.167 → not_discriminable
+    LLM-70B vs SHACL: gap=0.222 → not_discriminable
+    LLM-70B vs keyword-baseline: gap=0.284 → discriminable
+    LLM-8B vs SHACL: gap=0.055 → not_discriminable
+    LLM-8B vs keyword-baseline: gap=0.117 → not_discriminable
+    SHACL vs keyword-baseline: gap=0.062 → not_discriminable
+
+--- LOO + D-study ---
+  LOO within risk [0.598, 0.629]  cross [0.400, 0.452]
+  D-study: {'formula': 'Spearman-Brown: ρ* = (kρ)/(1+(k-1)ρ), k=n*/n_obs', 'n_obs': 40, 'projected_n60': 0.7050524256112582, 'projected_n100': 0.7993601619424218}
+
+Wrote /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/reliability_report.json

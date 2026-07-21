@@ -1,0 +1,2039 @@
+Assessing variants...
+
+============================================================
+ASSESSING PROPOSAL: P01_negative_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [SPARQL] GraphDB unreachable — falling back to local ontology TTL
+  [OK] Loaded local ontology: /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/ontology/ai-ethics-final.ttl (4399 triples)
+  Keywords found: ['patient']
+  Charter rights matched: 1
+  Requirements retrieved: 57
+  Incidents retrieved: 3
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'DataGovernance', 'Discrimination', 'Surveillance', 'EmploymentHarm', 'ReputationalHarm', 'FalseIdentification', 'DataBreach', 'FunctionCreep']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6539 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 5805 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P01_negative_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: LOW
+  Risks Identified: 6
+  Requirements Cited: 4
+  Rights at Risk: 1
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P01_negative_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['patient']
+  Charter rights matched: 1
+  Requirements retrieved: 57
+  Incidents retrieved: 3
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'DataGovernance', 'Discrimination', 'Surveillance', 'EmploymentHarm', 'ReputationalHarm', 'FalseIdentification', 'DataBreach', 'FunctionCreep']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6539 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 7821 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P01_negative_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: LOW
+  Risks Identified: 5
+  Requirements Cited: 8
+  Rights at Risk: 4
+  Precedents Cited: 3
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+  assessed 2/45 P01_negative: {'keyword-baseline': 'Medium', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P01_neutral_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['patient', 'health', 'predict', 'bias', 'diagnos', 'discriminat', 'race', 'scor']
+  Charter rights matched: 6
+  Requirements retrieved: 112
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8370 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 6144 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P01_neutral_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 5
+  Requirements Cited: 5
+  Rights at Risk: 4
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P01_neutral_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['patient', 'health', 'predict', 'bias', 'diagnos', 'discriminat', 'race', 'scor']
+  Charter rights matched: 6
+  Requirements retrieved: 112
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8370 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 8963 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P01_neutral_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 5
+  Requirements Cited: 8
+  Rights at Risk: 5
+  Precedents Cited: 5
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+  assessed 3/45 P01_neutral: {'keyword-baseline': 'High', 'SHACL': 'High', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P02_positive_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['racial', 'scor']
+  Charter rights matched: 1
+  Requirements retrieved: 21
+  Incidents retrieved: 3
+  Risk categories in scope: ['Discrimination', 'GenderHarm', 'WorkplaceSafetyRisk', 'Accountability', 'DataGovernance', 'EmploymentHarm', 'FalseIdentification', 'DataBreach', 'DemocraticProcessHarm', 'FunctionCreep']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6801 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 5389 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P02_positive_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: LOW
+  Risks Identified: 6
+  Requirements Cited: 4
+  Rights at Risk: 1
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P02_positive_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['racial', 'scor']
+  Charter rights matched: 1
+  Requirements retrieved: 21
+  Incidents retrieved: 3
+  Risk categories in scope: ['Discrimination', 'GenderHarm', 'WorkplaceSafetyRisk', 'Accountability', 'DataGovernance', 'EmploymentHarm', 'FalseIdentification', 'DataBreach', 'DemocraticProcessHarm', 'FunctionCreep']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6801 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 9432 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P02_positive_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: LOW
+  Risks Identified: 8
+  Requirements Cited: 9
+  Rights at Risk: 4
+  Precedents Cited: 3
+  Mitigations: 7
+────────────────────────────────────────────────────────────
+  assessed 4/45 P02_positive: {'keyword-baseline': 'Medium', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P02_negative_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['accountab', 'transparen']
+  Charter rights matched: 2
+  Requirements retrieved: 90
+  Incidents retrieved: 6
+  Risk categories in scope: ['Accountability', 'PrivacyBreach', 'PsychologicalHarm', 'Deception', 'Dignity', 'DataGovernance', 'FinancialHarm', 'ReputationalHarm', 'Transparency', 'FalseIdentification']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6947 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 6483 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P02_negative_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: LOW
+  Risks Identified: 6
+  Requirements Cited: 4
+  Rights at Risk: 2
+  Precedents Cited: 2
+  Mitigations: 3
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P02_negative_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['accountab', 'transparen']
+  Charter rights matched: 2
+  Requirements retrieved: 90
+  Incidents retrieved: 6
+  Risk categories in scope: ['Accountability', 'PrivacyBreach', 'PsychologicalHarm', 'Deception', 'Dignity', 'DataGovernance', 'FinancialHarm', 'ReputationalHarm', 'Transparency', 'FalseIdentification']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6947 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 9832 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P02_negative_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: LOW
+  Risks Identified: 9
+  Requirements Cited: 8
+  Rights at Risk: 2
+  Precedents Cited: 6
+  Mitigations: 7
+────────────────────────────────────────────────────────────
+  assessed 5/45 P02_negative: {'keyword-baseline': 'High', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P02_neutral_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['scor', 'criminal', 'classif', 'predict', 'profil']
+  Charter rights matched: 5
+  Requirements retrieved: 111
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8238 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 6914 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P02_neutral_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 6
+  Requirements Cited: 5
+  Rights at Risk: 5
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P02_neutral_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['scor', 'criminal', 'classif', 'predict', 'profil']
+  Charter rights matched: 5
+  Requirements retrieved: 111
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8238 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 10183 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P02_neutral_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 8
+  Requirements Cited: 8
+  Rights at Risk: 5
+  Precedents Cited: 8
+  Mitigations: 7
+────────────────────────────────────────────────────────────
+  assessed 6/45 P02_neutral: {'keyword-baseline': 'High', 'SHACL': 'High', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P05_positive_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21 (default keep)
+  Keywords found: ['bias', 'predict', 'prediction']
+  Charter rights matched: 2
+  Requirements retrieved: 53
+  Incidents retrieved: 5
+  Risk categories in scope: ['Accountability', 'Discrimination', 'PrivacyBreach', 'PsychologicalHarm', 'Dignity', 'GenderHarm', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6728 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 8463 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P05_positive_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 8
+  Requirements Cited: 5
+  Rights at Risk: 2
+  Precedents Cited: 5
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P05_positive_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21 (default keep)
+  Keywords found: ['bias', 'predict', 'prediction']
+  Charter rights matched: 2
+  Requirements retrieved: 53
+  Incidents retrieved: 5
+  Risk categories in scope: ['Accountability', 'Discrimination', 'PrivacyBreach', 'PsychologicalHarm', 'Dignity', 'GenderHarm', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6728 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 7281 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P05_positive_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 5
+  Requirements Cited: 8
+  Rights at Risk: 2
+  Precedents Cited: 5
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+  assessed 7/45 P05_positive: {'keyword-baseline': 'High', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P05_negative_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['patient', 'scor', 'minor', 'minority', 'predict', 'staff', 'bias', 'consent', 'generat', 'health', 'prediction', 'profil', 'racial']
+  Charter rights matched: 8
+  Requirements retrieved: 122
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8664 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 6750 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P05_negative_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 5
+  Requirements Cited: 6
+  Rights at Risk: 7
+  Precedents Cited: 3
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P05_negative_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['patient', 'scor', 'minor', 'minority', 'predict', 'staff', 'bias', 'consent', 'generat', 'health', 'prediction', 'profil', 'racial']
+  Charter rights matched: 8
+  Requirements retrieved: 122
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8664 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 11243 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P05_negative_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 8
+  Requirements Cited: 8
+  Rights at Risk: 8
+  Precedents Cited: 8
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+  assessed 8/45 P05_negative: {'keyword-baseline': 'High', 'SHACL': 'Medium', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P05_neutral_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['patient', 'scor', 'minor', 'minority', 'predict', 'staff', 'bias', 'generat', 'health', 'prediction', 'profil', 'racial']
+  Charter rights matched: 8
+  Requirements retrieved: 122
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8558 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 7223 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P05_neutral_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 5
+  Requirements Cited: 6
+  Rights at Risk: 5
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P05_neutral_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['patient', 'scor', 'minor', 'minority', 'predict', 'staff', 'bias', 'generat', 'health', 'prediction', 'profil', 'racial']
+  Charter rights matched: 8
+  Requirements retrieved: 122
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8558 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 11762 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P05_neutral_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 8
+  Requirements Cited: 8
+  Rights at Risk: 8
+  Precedents Cited: 8
+  Mitigations: 7
+────────────────────────────────────────────────────────────
+  assessed 9/45 P05_neutral: {'keyword-baseline': 'High', 'SHACL': 'Medium', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P21_positive_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['bias', 'consent', 'fairness', 'predict', 'scor']
+  Charter rights matched: 4
+  Requirements retrieved: 109
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8314 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 8879 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P21_positive_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 8
+  Requirements Cited: 7
+  Rights at Risk: 4
+  Precedents Cited: 4
+  Mitigations: 6
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P21_positive_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['bias', 'consent', 'fairness', 'predict', 'scor']
+  Charter rights matched: 4
+  Requirements retrieved: 109
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8314 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 9147 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P21_positive_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 5
+  Requirements Cited: 8
+  Rights at Risk: 4
+  Precedents Cited: 5
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+  assessed 10/45 P21_positive: {'keyword-baseline': 'High', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P21_negative_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['consent', 'fairness', 'predict', 'scor']
+  Charter rights matched: 5
+  Requirements retrieved: 126
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8322 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 8838 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P21_negative_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 7
+  Requirements Cited: 7
+  Rights at Risk: 5
+  Precedents Cited: 3
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P21_negative_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['consent', 'fairness', 'predict', 'scor']
+  Charter rights matched: 5
+  Requirements retrieved: 126
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8322 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 10673 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P21_negative_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 8
+  Requirements Cited: 8
+  Rights at Risk: 5
+  Precedents Cited: 8
+  Mitigations: 8
+────────────────────────────────────────────────────────────
+  assessed 11/45 P21_negative: {'keyword-baseline': 'High', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P21_neutral_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['consent', 'fairness', 'predict', 'scor']
+  Charter rights matched: 3
+  Requirements retrieved: 107
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8159 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 8270 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P21_neutral_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 8
+  Requirements Cited: 6
+  Rights at Risk: 3
+  Precedents Cited: 3
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P21_neutral_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['consent', 'fairness', 'predict', 'scor']
+  Charter rights matched: 3
+  Requirements retrieved: 107
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8159 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 9252 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P21_neutral_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 8
+  Requirements Cited: 8
+  Rights at Risk: 3
+  Precedents Cited: 5
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+  assessed 12/45 P21_neutral: {'keyword-baseline': 'Medium', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P25_positive_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['classif', 'scor', 'bias', 'minor', 'minority', 'protest', 'recruit', 'safety', 'union']
+  Charter rights matched: 4
+  Requirements retrieved: 60
+  Incidents retrieved: 8
+  Risk categories in scope: ['Accountability', 'Discrimination', 'PrivacyBreach', 'PsychologicalHarm', 'DualUseMisuse', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8093 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 5819 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P25_positive_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 5
+  Requirements Cited: 4
+  Rights at Risk: 3
+  Precedents Cited: 3
+  Mitigations: 3
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P25_positive_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['classif', 'scor', 'bias', 'minor', 'minority', 'protest', 'recruit', 'safety', 'union']
+  Charter rights matched: 4
+  Requirements retrieved: 60
+  Incidents retrieved: 8
+  Risk categories in scope: ['Accountability', 'Discrimination', 'PrivacyBreach', 'PsychologicalHarm', 'DualUseMisuse', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8093 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 12282 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P25_positive_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 8
+  Requirements Cited: 8
+  Rights at Risk: 4
+  Precedents Cited: 8
+  Mitigations: 7
+────────────────────────────────────────────────────────────
+  assessed 13/45 P25_positive: {'keyword-baseline': 'High', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P25_negative_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['classif']
+  Charter rights matched: 0
+  Requirements retrieved: 0
+  Incidents retrieved: 0
+  Risk categories in scope: []
+  Rights disambiguation: not_applicable
+  [WARNING] No KG results retrieved. LLM will operate without grounding.
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 4035 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 5124 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P25_negative_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: LOW
+  Risks Identified: 5
+  Requirements Cited: 3
+  Rights at Risk: 3
+  Precedents Cited: 2
+  Mitigations: 3
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P25_negative_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['classif']
+  Charter rights matched: 0
+  Requirements retrieved: 0
+  Incidents retrieved: 0
+  Risk categories in scope: []
+  Rights disambiguation: not_applicable
+  [WARNING] No KG results retrieved. LLM will operate without grounding.
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 4035 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 7915 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P25_negative_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: LOW
+  Risks Identified: 5
+  Requirements Cited: 8
+  Rights at Risk: 4
+  Precedents Cited: 4
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+  assessed 14/45 P25_negative: {'keyword-baseline': 'Low', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P25_neutral_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['classif', 'scor', 'minor', 'minority', 'protest', 'recruit', 'safety', 'union']
+  Charter rights matched: 4
+  Requirements retrieved: 60
+  Incidents retrieved: 8
+  Risk categories in scope: ['Accountability', 'Discrimination', 'PrivacyBreach', 'PsychologicalHarm', 'DualUseMisuse', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7971 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 5775 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P25_neutral_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 4
+  Requirements Cited: 4
+  Rights at Risk: 3
+  Precedents Cited: 3
+  Mitigations: 3
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P25_neutral_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['classif', 'scor', 'minor', 'minority', 'protest', 'recruit', 'safety', 'union']
+  Charter rights matched: 4
+  Requirements retrieved: 60
+  Incidents retrieved: 8
+  Risk categories in scope: ['Accountability', 'Discrimination', 'PrivacyBreach', 'PsychologicalHarm', 'DualUseMisuse', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7971 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 8594 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P25_neutral_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 5
+  Requirements Cited: 8
+  Rights at Risk: 4
+  Precedents Cited: 8
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+  assessed 15/45 P25_neutral: {'keyword-baseline': 'Low', 'SHACL': 'High', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P07_positive_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → systemic_info→Art11/Art22 (removed Art21 family)
+  Keywords found: ['bias', 'fairness', 'school', 'sentiment']
+  Charter rights matched: 2
+  Requirements retrieved: 10
+  Incidents retrieved: 3
+  Risk categories in scope: ['ExpressionHarm', 'Discrimination', 'DualUseMisuse', 'PhysicalHarm', 'PrivacyBreach', 'Accountability', 'FinancialHarm', 'Transparency', 'DemocraticProcessHarm', 'FunctionCreep']
+  Rights disambiguation: systemic_info→Art11/Art22
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7322 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 6228 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P07_positive_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: Medium
+  Confidence Flag: LOW
+  Risks Identified: 4
+  Requirements Cited: 4
+  Rights at Risk: 2
+  Precedents Cited: 3
+  Mitigations: 3
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P07_positive_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → systemic_info→Art11/Art22 (removed Art21 family)
+  Keywords found: ['bias', 'fairness', 'school', 'sentiment']
+  Charter rights matched: 2
+  Requirements retrieved: 10
+  Incidents retrieved: 3
+  Risk categories in scope: ['ExpressionHarm', 'Discrimination', 'DualUseMisuse', 'PhysicalHarm', 'PrivacyBreach', 'Accountability', 'FinancialHarm', 'Transparency', 'DemocraticProcessHarm', 'FunctionCreep']
+  Rights disambiguation: systemic_info→Art11/Art22
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7322 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 5705 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P07_positive_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: Medium
+  Confidence Flag: LOW
+  Risks Identified: 5
+  Requirements Cited: 5
+  Rights at Risk: 2
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+  assessed 16/45 P07_positive: {'keyword-baseline': 'High', 'SHACL': 'Low', 'LLM-8B': 'Medium', 'LLM-70B': 'Medium'}
+
+============================================================
+ASSESSING PROPOSAL: P07_negative_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['student', 'consent', 'profil', 'school', 'sentiment', 'social media']
+  Charter rights matched: 4
+  Requirements retrieved: 77
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Discrimination', 'ChildrenRights', 'DataGovernance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7498 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 6622 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P07_negative_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 6
+  Requirements Cited: 4
+  Rights at Risk: 4
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P07_negative_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['student', 'consent', 'profil', 'school', 'sentiment', 'social media']
+  Charter rights matched: 4
+  Requirements retrieved: 77
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Discrimination', 'ChildrenRights', 'DataGovernance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7498 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 10573 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P07_negative_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 8
+  Requirements Cited: 8
+  Rights at Risk: 4
+  Precedents Cited: 8
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+  assessed 17/45 P07_negative: {'keyword-baseline': 'Medium', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P07_neutral_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['student', 'sentiment', 'consent', 'emotion', 'gender', 'school', 'scor']
+  Charter rights matched: 7
+  Requirements retrieved: 129
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Discrimination', 'DataGovernance', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7989 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 4502 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P07_neutral_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: MEDIUM
+  Confidence Flag: HIGH
+  Risks Identified: 4
+  Requirements Cited: 4
+  Rights at Risk: 2
+  Precedents Cited: 2
+  Mitigations: 3
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P07_neutral_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['student', 'sentiment', 'consent', 'emotion', 'gender', 'school', 'scor']
+  Charter rights matched: 7
+  Requirements retrieved: 129
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Discrimination', 'DataGovernance', 'Dignity', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7989 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 7912 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P07_neutral_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: Medium
+  Confidence Flag: HIGH
+  Risks Identified: 5
+  Requirements Cited: 5
+  Rights at Risk: 4
+  Precedents Cited: 4
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+  assessed 18/45 P07_neutral: {'keyword-baseline': 'Medium', 'SHACL': 'High', 'LLM-8B': None, 'LLM-70B': 'Medium'}
+
+============================================================
+ASSESSING PROPOSAL: P11_positive_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['scor', 'student', 'bias', 'generat']
+  Charter rights matched: 6
+  Requirements retrieved: 113
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8392 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 7517 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P11_positive_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 6
+  Requirements Cited: 5
+  Rights at Risk: 3
+  Precedents Cited: 3
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P11_positive_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['scor', 'student', 'bias', 'generat']
+  Charter rights matched: 6
+  Requirements retrieved: 113
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8392 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 7580 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P11_positive_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: Medium
+  Confidence Flag: HIGH
+  Risks Identified: 5
+  Requirements Cited: 8
+  Rights at Risk: 3
+  Precedents Cited: 5
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+  assessed 19/45 P11_positive: {'keyword-baseline': 'High', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': 'Medium'}
+
+============================================================
+ASSESSING PROPOSAL: P11_negative_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['scor', 'student', 'consent', 'generat']
+  Charter rights matched: 5
+  Requirements retrieved: 118
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8139 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 7519 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P11_negative_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 7
+  Requirements Cited: 5
+  Rights at Risk: 5
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P11_negative_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['scor', 'student', 'consent', 'generat']
+  Charter rights matched: 5
+  Requirements retrieved: 118
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8139 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 10860 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P11_negative_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 8
+  Requirements Cited: 8
+  Rights at Risk: 5
+  Precedents Cited: 8
+  Mitigations: 5
+────────────────────────────────────────────────────────────
+  assessed 20/45 P11_negative: {'keyword-baseline': 'High', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P11_neutral_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['scor', 'student', 'generat']
+  Charter rights matched: 4
+  Requirements retrieved: 111
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7999 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 6270 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P11_neutral_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 5
+  Requirements Cited: 5
+  Rights at Risk: 3
+  Precedents Cited: 2
+  Mitigations: 3
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P11_neutral_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['scor', 'student', 'generat']
+  Charter rights matched: 4
+  Requirements retrieved: 111
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7999 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 95728, Requested 4402. Please try again in 1m52.32s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 95728, Requested 5855. Please try again in 22m47.712s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 95728, Requested 4402. Please try again in 1m52.32s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P11_neutral_70b_full.json
+  assessed 21/45 P11_neutral: {'keyword-baseline': 'Medium', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': None}
+
+============================================================
+ASSESSING PROPOSAL: P20_positive_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['employ', 'monitor', 'consent', 'employee', 'workplace', 'bias', 'track']
+  Charter rights matched: 6
+  Requirements retrieved: 101
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'EmploymentHarm', 'PsychologicalHarm', 'DataGovernance', 'ReputationalHarm', 'FinancialHarm', 'FalseIdentification', 'AddictionRisk']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8278 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 5961 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P20_positive_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 6
+  Requirements Cited: 4
+  Rights at Risk: 5
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P20_positive_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21
+  Keywords found: ['employ', 'monitor', 'consent', 'employee', 'workplace', 'bias', 'track']
+  Charter rights matched: 6
+  Requirements retrieved: 101
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'EmploymentHarm', 'PsychologicalHarm', 'DataGovernance', 'ReputationalHarm', 'FinancialHarm', 'FalseIdentification', 'AddictionRisk']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8278 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 11394 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P20_positive_70b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 8
+  Requirements Cited: 8
+  Rights at Risk: 5
+  Precedents Cited: 7
+  Mitigations: 6
+────────────────────────────────────────────────────────────
+  assessed 22/45 P20_positive: {'keyword-baseline': 'High', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': 'High'}
+
+============================================================
+ASSESSING PROPOSAL: P20_negative_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['consent', 'employ', 'employee', 'monitor', 'transparen', 'workplace']
+  Charter rights matched: 4
+  Requirements retrieved: 70
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'EmploymentHarm', 'PsychologicalHarm', 'DataGovernance', 'ReputationalHarm', 'FinancialHarm', 'FalseIdentification', 'FunctionCreep']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7067 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 4842 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P20_negative_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: Medium
+  Confidence Flag: HIGH
+  Risks Identified: 5
+  Requirements Cited: 4
+  Rights at Risk: 4
+  Precedents Cited: 3
+  Mitigations: 3
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P20_negative_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['consent', 'employ', 'employee', 'monitor', 'transparen', 'workplace']
+  Charter rights matched: 4
+  Requirements retrieved: 70
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'EmploymentHarm', 'PsychologicalHarm', 'DataGovernance', 'ReputationalHarm', 'FinancialHarm', 'FalseIdentification', 'FunctionCreep']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7067 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99894, Requested 4041. Please try again in 56m39.84s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99894, Requested 4243. Please try again in 59m34.368s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99894, Requested 4243. Please try again in 59m34.368s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P20_negative_70b_full.json
+  assessed 23/45 P20_negative: {'keyword-baseline': 'Medium', 'SHACL': 'Medium', 'LLM-8B': 'Medium', 'LLM-70B': None}
+
+============================================================
+ASSESSING PROPOSAL: P20_neutral_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['employ', 'monitor', 'consent', 'employee', 'workplace', 'track']
+  Charter rights matched: 5
+  Requirements retrieved: 82
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'EmploymentHarm', 'PsychologicalHarm', 'DataGovernance', 'ReputationalHarm', 'FinancialHarm', 'FalseIdentification', 'AddictionRisk']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8137 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 6497 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P20_neutral_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 6
+  Requirements Cited: 5
+  Rights at Risk: 4
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P20_neutral_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['employ', 'monitor', 'consent', 'employee', 'workplace', 'track']
+  Charter rights matched: 5
+  Requirements retrieved: 82
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'EmploymentHarm', 'PsychologicalHarm', 'DataGovernance', 'ReputationalHarm', 'FinancialHarm', 'FalseIdentification', 'AddictionRisk']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 8137 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99859, Requested 4410. Please try again in 1h1m28.415999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99859, Requested 4208. Please try again in 58m33.888s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99859, Requested 4208. Please try again in 58m33.888s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P20_neutral_70b_full.json
+  assessed 24/45 P20_neutral: {'keyword-baseline': 'Medium', 'SHACL': 'Low', 'LLM-8B': 'High', 'LLM-70B': None}
+
+============================================================
+ASSESSING PROPOSAL: P23_positive_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21 (default keep)
+  Keywords found: ['bias', 'fairness', 'transparen']
+  Charter rights matched: 2
+  Requirements retrieved: 23
+  Incidents retrieved: 3
+  Risk categories in scope: ['Discrimination', 'GenderHarm', 'Accountability', 'WorkplaceSafetyRisk', 'DataGovernance', 'EmploymentHarm', 'FalseIdentification', 'DataBreach', 'DemocraticProcessHarm', 'FunctionCreep']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6716 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 4644 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P23_positive_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: MEDIUM
+  Confidence Flag: LOW
+  Risks Identified: 4
+  Requirements Cited: 3
+  Rights at Risk: 2
+  Precedents Cited: 3
+  Mitigations: 3
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P23_positive_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  [DISAMBIGUATION] bias keywords → individual_treatment→Art21 (default keep)
+  Keywords found: ['bias', 'fairness', 'transparen']
+  Charter rights matched: 2
+  Requirements retrieved: 23
+  Incidents retrieved: 3
+  Risk categories in scope: ['Discrimination', 'GenderHarm', 'Accountability', 'WorkplaceSafetyRisk', 'DataGovernance', 'EmploymentHarm', 'FalseIdentification', 'DataBreach', 'DemocraticProcessHarm', 'FunctionCreep']
+  Rights disambiguation: individual_treatment→Art21
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6716 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99826, Requested 5594. Please try again in 1h18m2.88s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99826, Requested 4141. Please try again in 57m7.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99826, Requested 4141. Please try again in 57m7.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P23_positive_70b_full.json
+  assessed 25/45 P23_positive: {'keyword-baseline': 'High', 'SHACL': 'Medium', 'LLM-8B': None, 'LLM-70B': None}
+
+============================================================
+ASSESSING PROPOSAL: P23_negative_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: []
+  Charter rights matched: 0
+  Requirements retrieved: 0
+  Incidents retrieved: 0
+  Risk categories in scope: []
+  Rights disambiguation: not_applicable
+  [WARNING] No KG results retrieved. LLM will operate without grounding.
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 4021 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 7982 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P23_negative_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: LOW
+  Risks Identified: 5
+  Requirements Cited: 6
+  Rights at Risk: 4
+  Precedents Cited: 2
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P23_negative_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: []
+  Charter rights matched: 0
+  Requirements retrieved: 0
+  Incidents retrieved: 0
+  Risk categories in scope: []
+  Rights disambiguation: not_applicable
+  [WARNING] No KG results retrieved. LLM will operate without grounding.
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 4021 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99778, Requested 3542. Please try again in 47m48.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99778, Requested 3340. Please try again in 44m53.952s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99778, Requested 4995. Please try again in 1h8m43.872s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P23_negative_70b_full.json
+  assessed 26/45 P23_negative: {'keyword-baseline': 'Low', 'SHACL': 'High', 'LLM-8B': 'High', 'LLM-70B': None}
+
+============================================================
+ASSESSING PROPOSAL: P23_neutral_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['scor', 'organisation', 'race', 'school', 'transfer']
+  Charter rights matched: 3
+  Requirements retrieved: 107
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7951 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 6529 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P23_neutral_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 6
+  Requirements Cited: 5
+  Rights at Risk: 3
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P23_neutral_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['scor', 'organisation', 'race', 'school', 'transfer']
+  Charter rights matched: 3
+  Requirements retrieved: 107
+  Incidents retrieved: 8
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'Discrimination', 'PsychologicalHarm', 'DataGovernance', 'Surveillance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7951 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99707, Requested 4397. Please try again in 59m5.856s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99707, Requested 4195. Please try again in 56m11.328s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99707, Requested 4195. Please try again in 56m11.328s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P23_neutral_70b_full.json
+  assessed 27/45 P23_neutral: {'keyword-baseline': 'Low', 'SHACL': 'High', 'LLM-8B': 'High', 'LLM-70B': None}
+
+============================================================
+ASSESSING PROPOSAL: P28_positive_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['chatbot', 'generat']
+  Charter rights matched: 1
+  Requirements retrieved: 47
+  Incidents retrieved: 3
+  Risk categories in scope: ['Accountability', 'PsychologicalHarm', 'Dignity', 'DualUseMisuse', 'Deception', 'EconomicHarm', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6801 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 4174 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P28_positive_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: LOW
+  Risks Identified: 5
+  Requirements Cited: 3
+  Rights at Risk: 1
+  Precedents Cited: 3
+  Mitigations: 3
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P28_positive_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['chatbot', 'generat']
+  Charter rights matched: 1
+  Requirements retrieved: 47
+  Incidents retrieved: 3
+  Risk categories in scope: ['Accountability', 'PsychologicalHarm', 'Dignity', 'DualUseMisuse', 'Deception', 'EconomicHarm', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 6801 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99640, Requested 3959. Please try again in 51m49.536s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99640, Requested 4161. Please try again in 54m44.064s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99640, Requested 4161. Please try again in 54m44.064s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P28_positive_70b_full.json
+  assessed 28/45 P28_positive: {'keyword-baseline': 'Low', 'SHACL': 'Medium', 'LLM-8B': 'High', 'LLM-70B': None}
+
+============================================================
+ASSESSING PROPOSAL: P28_negative_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['administrative', 'chatbot', 'classif', 'consent']
+  Charter rights matched: 2
+  Requirements retrieved: 104
+  Incidents retrieved: 6
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Dignity', 'Discrimination', 'DataGovernance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7611 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 6601 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P28_negative_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: HIGH
+  Risks Identified: 9
+  Requirements Cited: 5
+  Rights at Risk: 2
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P28_negative_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['administrative', 'chatbot', 'classif', 'consent']
+  Charter rights matched: 2
+  Requirements retrieved: 104
+  Incidents retrieved: 6
+  Risk categories in scope: ['PrivacyBreach', 'Accountability', 'PsychologicalHarm', 'Dignity', 'Discrimination', 'DataGovernance', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7611 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99631, Requested 4127. Please try again in 54m6.912s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99631, Requested 4329. Please try again in 57m1.44s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99631, Requested 4127. Please try again in 54m6.912s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P28_negative_70b_full.json
+  assessed 29/45 P28_negative: {'keyword-baseline': 'High', 'SHACL': 'Medium', 'LLM-8B': 'High', 'LLM-70B': None}
+
+============================================================
+ASSESSING PROPOSAL: P28_neutral_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['administrative', 'chatbot', 'classif']
+  Charter rights matched: 1
+  Requirements retrieved: 47
+  Incidents retrieved: 3
+  Risk categories in scope: ['Accountability', 'PsychologicalHarm', 'Dignity', 'DualUseMisuse', 'Deception', 'EconomicHarm', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7324 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  Response received: 6297 characters
+
+[Step 5] Parsing JSON response...
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.1-8b-instant/P28_neutral_8b_full.json
+
+────────────────────────────────────────────────────────────
+ASSESSMENT COMPLETE
+  Risk Level: High
+  Confidence Flag: LOW
+  Risks Identified: 7
+  Requirements Cited: 5
+  Rights at Risk: 1
+  Precedents Cited: 3
+  Mitigations: 4
+────────────────────────────────────────────────────────────
+
+============================================================
+ASSESSING PROPOSAL: P28_neutral_70b
+Mode: full | Backend: groq | Model: llama-3.3-70b-versatile | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: ['administrative', 'chatbot', 'classif']
+  Charter rights matched: 1
+  Requirements retrieved: 47
+  Incidents retrieved: 3
+  Risk categories in scope: ['Accountability', 'PsychologicalHarm', 'Dignity', 'DualUseMisuse', 'Deception', 'EconomicHarm', 'FinancialHarm', 'ReputationalHarm', 'FalseIdentification', 'Transparency']
+  Rights disambiguation: not_applicable
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 7324 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98358, Requested 5712. Please try again in 58m36.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (2/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98358, Requested 5712. Please try again in 58m36.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  Retrying... (3/3)
+  [GROQ ERROR] Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ky122nkde4ht3v7w9a4ac5ap` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98358, Requested 5712. Please try again in 58m36.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+  [ERROR] LLM returned empty response.
+  [SAVED] /Users/navinaamuthan/Dissertation/ai-ethics-framework-tool/diagnostic/results/perturbation_assessor_cache/llama-3.3-70b-versatile/P28_neutral_70b_full.json
+  assessed 30/45 P28_neutral: {'keyword-baseline': 'Low', 'SHACL': 'Medium', 'LLM-8B': 'High', 'LLM-70B': None}
+
+============================================================
+ASSESSING PROPOSAL: P13_positive_8b
+Mode: full | Backend: groq | Model: llama-3.1-8b-instant | Context reqs: 5
+============================================================
+
+[Step 1] Extracting keywords from proposal...
+  Keywords found: []
+  Charter rights matched: 0
+  Requirements retrieved: 0
+  Incidents retrieved: 0
+  Risk categories in scope: []
+  Rights disambiguation: not_applicable
+  [WARNING] No KG results retrieved. LLM will operate without grounding.
+
+[Step 2] Building context from KG retrieval...
+
+[Step 3] Building assessment prompt...
+  Prompt length: 4361 characters
+
+[Step 4] Calling LLM (this may take 30-60 seconds)...

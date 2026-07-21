@@ -1,8 +1,11 @@
 {
   "proposal_id": "P13",
   "mode": "full",
-  "timestamp": "2026-07-05T16:07:32.371102",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T20:27:14.688393",
   "proposal_text": "This research proposes to conduct a bibliometric analysis of peer-reviewed publications on AI ethics from 2018-2025. The study will use the Scopus and Web of Science databases to identify all publications containing keywords related to AI ethics, responsible AI, algorithmic fairness, and AI governance. The analysis will examine publication trends, citation networks, geographic distribution of research groups, and thematic clustering using topic modelling. All data is publicly available metadata from academic databases. No personal data about individual researchers will be collected beyond publicly listed author names and institutional affiliations. The analysis will use standard bibliometric tools including VOSviewer and Bibliometrix. Results will identify gaps in the AI ethics literature to inform future research directions. No AI systems will be developed or deployed as part of this research.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "data",
     "personal data",
@@ -18,84 +21,90 @@
   "retrieved_requirements_count": 154,
   "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "This research proposal involves bibliometric analysis of peer-reviewed publications on AI ethics, which may raise concerns about data representation and bias. Although the study does not involve personal data or consequential decisions, it is essential to ensure that the analysis is fair and unbiased.",
-    "overall_risk_level": "Medium",
+    "risk_summary": "This research proposal involves a bibliometric analysis of peer-reviewed publications on AI ethics, which may raise concerns about the potential for biased or discriminatory outcomes. However, since all data is publicly available metadata from academic databases and no personal data will be collected beyond publicly listed author names and institutional affiliations, the risks are considered LOW.",
+    "overall_risk_level": "LOW",
     "identified_risks": [
       {
-        "risk": "Bias in bibliometric analysis",
-        "severity": "Medium",
-        "explanation": "The study may inadvertently perpetuate biases present in the existing literature, which could impact the accuracy of the results."
+        "risk": "Potential for biased or discriminatory outcomes in bibliometric analysis",
+        "severity": "MEDIUM",
+        "explanation": "The research may inadvertently perpetuate biases present in the existing literature, which could have negative consequences."
       },
       {
-        "risk": "Lack of transparency and accountability",
-        "severity": "Low",
-        "explanation": "The research proposal does not provide clear information about how the analysis will be conducted or how the results will be used."
+        "risk": "Inadequate consideration of intellectual property and data/code ownership",
+        "severity": "LOW",
+        "explanation": "The proposal does not explicitly address how it will respect intellectual property rights and data/code ownership."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "HE012",
-        "requirement_text": "Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity or is sufficiently neutral.",
-        "framework": "HorizonEurope",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Specify steps to ensure the bibliometric analysis is fair and unbiased."
-      },
-      {
-        "requirement_id": "R085",
-        "requirement_text": "Have you considered anti-discrimination and bias implications of your AI/technology research?",
-        "framework": "REAMS",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider the potential for bias in the bibliometric analysis and discuss mitigation strategies."
-      },
-      {
         "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm.",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm (Mandatory)",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Consider the potential for harm in the bibliometric analysis and discuss mitigation strategies."
+        "action_needed": "Consider potential harm and take steps to mitigate it"
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Be aware of potential biases in the data and take steps to address them"
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that all data is publicly available and does not contain personally identifiable information"
+      },
+      {
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system) (Mandatory)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Determine if the research requires a FRIA assessment"
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 21",
-        "right_name": "Non-Discrimination",
-        "relevance": "The study may inadvertently perpetuate biases present in the existing literature, which could impact the accuracy of the results and potentially discriminate against certain groups."
+        "article": "Article 20 EqualityBeforeLaw",
+        "right_name": "Equality Before Law",
+        "relevance": "The research may inadvertently perpetuate biases present in the existing literature, which could have negative consequences for equality before the law"
       },
       {
-        "article": "Article 41",
-        "right_name": "Good Administration",
-        "relevance": "The research proposal does not provide clear information about how the analysis will be conducted or how the results will be used, which may impact the transparency and accountability of the study."
+        "article": "Article 21 NonDiscrimination",
+        "right_name": "Non-Discrimination",
+        "relevance": "The research may inadvertently perpetuate biases present in the existing literature, which could have negative consequences for non-discrimination"
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of considering bias in AI systems, particularly when dealing with sensitive data or making consequential decisions."
+        "lesson": "Be aware of potential biases in data and take steps to address them"
       },
       {
         "incident_id": "AIAAIC-003",
         "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The need for careful consideration and testing of AI systems to prevent unintended consequences."
+        "lesson": "Consider the potential consequences of AI systems on society"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Use diverse and representative datasets to ensure the bibliometric analysis is fair and unbiased.",
-        "priority": "High"
+        "mitigation": "Use bias detection and mitigation techniques in bibliometric analysis",
+        "priority": "MEDIUM"
       },
       {
-        "mitigation": "Provide clear information about how the analysis will be conducted and how the results will be used.",
-        "priority": "Medium"
+        "mitigation": "Clearly document all data sources and methods used in the research",
+        "priority": "LOW"
       }
     ],
     "tier1_mandatory_actions": [
-      "Specify steps to ensure the bibliometric analysis is fair and unbiased (HE012)",
-      "Consider the potential for bias in the bibliometric analysis and discuss mitigation strategies (R085)"
+      "ACM002, ACM004, ACM006, AI001"
     ],
     "tier2_reflective_prompts": [
-      "How will you ensure that the bibliometric analysis is fair and unbiased?",
-      "What steps will you take to mitigate any potential biases or harm caused by the study?"
+      "How can you ensure that your research does not perpetuate biases present in the existing literature?",
+      "What steps will you take to address potential biases in the data?"
     ],
     "reams_clearance_likely": true,
     "confidence_flag": "HIGH",
@@ -277,9 +286,10 @@
         "R074"
       ],
       "requirements_cited": [
-        "HE012",
-        "R085",
-        "ACM002"
+        "ACM002",
+        "ACM004",
+        "ACM006",
+        "AI001"
       ],
       "incidents_sample": [
         "AIAAIC-001",

@@ -1,8 +1,11 @@
 {
   "proposal_id": "P15",
   "mode": "full",
-  "timestamp": "2026-07-05T16:10:28.237287",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T20:32:35.137875",
   "proposal_text": "This research proposes to analyse anonymised Dublin Bus and Luas smart card tap-on data to model public transport usage patterns across different times of day, routes, and weather conditions. The dataset consists of aggregated journey counts per route per hour provided by the National Transport Authority under an open data licence. No individual passenger records are included and no re-identification is possible from the aggregated data. The analysis will use time series forecasting and clustering algorithms to identify underserved routes and peak demand periods. Results will be shared with Dublin City Council to inform transport planning decisions. The environmental impact of the computational resources required for the analysis will be documented. No AI system will be deployed in any operational context.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "data",
     "environment"
@@ -14,91 +17,92 @@
     "Art8_DataProtection"
   ],
   "retrieved_requirements_count": 139,
-  "retrieved_incidents_count": 7,
+  "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "This research proposal involves the analysis of anonymised public transport data, which poses some risks to environmental protection and data protection. The use of time series forecasting and clustering algorithms may also have unintended consequences on social cohesion and democratic processes.",
+    "risk_summary": "This research proposal involves the analysis of anonymised public transport data, which poses risks to privacy and potentially environmental impact. The use of time series forecasting and clustering algorithms may also perpetuate biases in data and model outputs.",
     "overall_risk_level": "Medium",
     "identified_risks": [
       {
-        "risk": "Environmental impact of computational resources required for the analysis",
-        "severity": "Medium",
-        "explanation": "The research proposal mentions documenting the environmental impact, but it is unclear how this will be done and what mitigation steps will be taken."
+        "risk": "Perpetuation of biases in data and model outputs",
+        "severity": "High",
+        "explanation": "The research proposal does not explicitly address how biases will be considered and ameliorated, which is a mandatory requirement (ACM003)."
       },
       {
-        "risk": "Potential bias in data analysis and modeling",
-        "severity": "Low",
-        "explanation": "The use of clustering algorithms may lead to biased results if not properly validated and tested."
+        "risk": "Environmental impact of computational resources",
+        "severity": "Medium",
+        "explanation": "The proposal mentions documenting the environmental impact, but it is unclear whether this will be sufficient to mitigate potential risks (ACM026)."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "HE018",
-        "requirement_text": "AI development must be mindful of environmental sustainability — document environmental impact and mitigation steps",
-        "framework": "HorizonEurope",
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Document the environmental impact of computational resources required for the analysis"
+        "action_needed": "Develop a plan to address potential biases in data and model outputs"
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Regularly review and update the analysis to ensure it does not perpetuate biases"
       },
       {
         "requirement_id": "ACM026",
         "requirement_text": "Consider whether research negatively impacts environment — fossil fuel extraction, consumption, greenhouse gas production",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Consider the environmental impact of computational resources required for the analysis"
+        "action_needed": "Document and mitigate the environmental impact of computational resources"
       },
       {
-        "requirement_id": "R052",
-        "requirement_text": "Identify risks to site, environment, or society",
-        "framework": "REAMS",
+        "requirement_id": "AI002",
+        "requirement_text": "Record necessity status: FRIA Required or FRIA Not Required",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Identify potential risks to the environment and society"
-      },
-      {
-        "requirement_id": "HE051",
-        "requirement_text": "Have you considered the system's impact on social cohesion and democratic processes?",
-        "framework": "HorizonEurope",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider the potential impact of the research on social cohesion and democratic processes"
+        "action_needed": "Determine whether a FRIA is required for this research"
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 37 EnvironmentalProtection",
-        "right_name": "Environmental Protection",
-        "relevance": "The research proposal involves the analysis of anonymised public transport data, which may have an environmental impact"
+        "article": "Article 7 PrivateLife",
+        "right_name": "Right to private life",
+        "relevance": "The analysis of anonymised public transport data may still pose risks to individuals' right to privacy"
       },
       {
-        "article": "Article 41 GoodAdministration",
-        "right_name": "Good Administration",
-        "relevance": "The use of time series forecasting and clustering algorithms may also have unintended consequences on social cohesion and democratic processes"
+        "article": "Article 8 DataProtection",
+        "right_name": "Right to protection of personal data",
+        "relevance": "Although the data is anonymised, there is still a risk that it could be re-identified or linked to other datasets"
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-006",
         "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
-        "lesson": "Bias in data analysis and modeling can lead to unfair outcomes"
+        "lesson": "The importance of regularly reviewing and updating analysis to prevent perpetuation of biases"
       },
       {
-        "incident_id": "AIAAIC-034",
-        "incident_title": "China Social Credit System AI Scoring",
-        "lesson": "AI systems can have unintended consequences on social cohesion and democratic processes"
+        "incident_id": "AIAAIC-011",
+        "incident_title": "Facebook Discriminatory Ad Targeting",
+        "lesson": "The need for careful consideration of potential biases in data and model outputs"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Use of environmentally friendly computational resources",
+        "mitigation": "Regularly review and update the analysis to ensure it does not perpetuate biases",
         "priority": "High"
       },
       {
-        "mitigation": "Validation and testing of data analysis and modeling methods",
+        "mitigation": "Document and mitigate the environmental impact of computational resources",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Document the environmental impact of computational resources required for the analysis"
+      "Develop a plan to address potential biases in data and model outputs"
     ],
     "tier2_reflective_prompts": [
-      "Consider the potential impact of the research on social cohesion and democratic processes"
+      "How will you ensure that the analysis does not perpetuate biases?",
+      "What measures will you take to mitigate the environmental impact of computational resources?"
     ],
     "reams_clearance_likely": true,
     "confidence_flag": "LOW",
@@ -109,7 +113,7 @@
       ],
       "rights_matched": 4,
       "requirements_retrieved": 139,
-      "incidents_retrieved": 7,
+      "incidents_retrieved": 8,
       "requirements_sample": [
         "ACM026",
         "ACM038",
@@ -264,10 +268,10 @@
         "R074"
       ],
       "requirements_cited": [
-        "HE018",
+        "ACM003",
+        "ACM004",
         "ACM026",
-        "R052",
-        "HE051"
+        "AI002"
       ],
       "incidents_sample": [
         "AIAAIC-022",

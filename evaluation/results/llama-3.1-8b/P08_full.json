@@ -1,8 +1,11 @@
 {
   "proposal_id": "P08",
   "mode": "full",
-  "timestamp": "2026-07-05T15:58:07.527493",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-19T20:12:53.799209",
   "proposal_text": "This project proposes to develop a conversational AI chatbot to provide initial mental health support triage for university students. The chatbot will conduct a structured conversational assessment to evaluate symptoms of anxiety and depression using validated clinical screening instruments (PHQ-9, GAD-7) adapted into conversational format. Based on the assessment, the chatbot will recommend one of three pathways: self-help resources, a scheduled counselling appointment, or immediate crisis intervention referral. The chatbot will store conversation logs for quality improvement purposes. Student data will be pseudonymised but linked to student records to enable follow-up. The chatbot will include a disclaimer that it is not a substitute for professional mental health care. The system has not been validated against clinical assessments performed by qualified professionals. Conversations will be processed by an external cloud-based NLP service.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "data",
     "health",
@@ -23,89 +26,101 @@
   "retrieved_requirements_count": 176,
   "retrieved_incidents_count": 8,
   "assessment": {
-    "risk_summary": "The proposed conversational AI chatbot for mental health support triage poses risks to student data protection, autonomy, and potential harm from biased or inadequate recommendations. The system's reliance on external cloud-based NLP services also raises concerns about data security and control.",
-    "overall_risk_level": "Medium",
+    "risk_summary": "The proposed conversational AI chatbot for mental health support triage involves processing personal data, making consequential decisions, and storing conversation logs. This raises concerns about privacy, informed consent, and potential biases in decision-making.",
+    "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Student data protection and confidentiality",
+        "risk": "Inadequate protection of student data and lack of explicit consent for processing special category data",
         "severity": "High",
-        "explanation": "The chatbot will store conversation logs, including pseudonymised student data linked to their records, which may compromise students' right to privacy (Article 7 PrivateLife)."
+        "explanation": "The project involves collecting sensitive mental health information from students, which requires robust data protection measures to ensure confidentiality and anonymity."
       },
       {
-        "risk": "Potential harm from biased or inadequate recommendations",
+        "risk": "Potential biases in decision-making due to limited validation against clinical assessments",
         "severity": "Medium",
-        "explanation": "The chatbot's reliance on clinical screening instruments adapted into conversational format may lead to inaccurate assessments, causing undue stress or anxiety for students (Article 35 HealthCare)."
+        "explanation": "The chatbot's recommendations are based on a structured conversational assessment, but its accuracy and reliability have not been extensively validated against professional clinical evaluations."
       },
       {
-        "risk": "Data security and control",
-        "severity": "Low",
-        "explanation": "The external cloud-based NLP service processing conversations raises concerns about data security and control, potentially compromising student data protection (Article 7 PrivateLife)."
+        "risk": "Inadequate transparency and accountability in decision-making processes",
+        "severity": "High",
+        "explanation": "The project does not provide clear information about how the chatbot's recommendations are made or how decisions are arrived at, which may lead to mistrust and lack of accountability."
+      },
+      {
+        "risk": "Potential for misuse or exploitation of student data by third-party service providers",
+        "severity": "High",
+        "explanation": "The project involves processing student data through an external cloud-based NLP service, which raises concerns about data security and potential breaches."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM020",
-        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated",
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the dataset's representativeness and provide clear communication about any limitations or biases."
+        "action_needed": "Conduct a thorough risk assessment and mitigation plan to address potential harms"
       },
       {
-        "requirement_id": "HE019",
-        "requirement_text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations",
-        "framework": "HorizonEurope",
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough assessment of the chatbot's potential impact on democratic processes and social relations."
+        "action_needed": "Develop a clear data protection policy and obtain explicit consent from students for processing special category data"
       },
       {
-        "requirement_id": "EUAIAct AI008",
-        "requirement_text": "State the intended purpose of the AI system",
-        "framework": "EUAIAct",
+        "requirement_id": "EUAIAct-001",
+        "requirement_text": "Ensure that any processing of personal data is lawful, fair, transparent, and secure",
+        "framework": "EU AI Act",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Clearly articulate the chatbot's intended purpose and primary function."
+        "action_needed": "Conduct a Data Protection Impact Assessment (DPIA) to identify and mitigate potential risks"
+      },
+      {
+        "requirement_id": "HorizonEurope-002",
+        "requirement_text": "Ensure that research projects respect the rights of individuals, particularly in relation to data protection and privacy",
+        "framework": "Horizon Europe",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop a clear data management plan and ensure compliance with relevant EU regulations"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 7 PrivateLife",
-        "right_name": "Right to Privacy",
-        "relevance": "The chatbot's storage of conversation logs and pseudonymised student data linked to their records may compromise students' right to privacy."
+        "right_name": "Right to private life",
+        "relevance": "The project involves processing sensitive personal data, which raises concerns about the right to private life."
       },
       {
-        "article": "Article 35 HealthCare",
-        "right_name": "Right to Healthcare",
-        "relevance": "The chatbot's potential for inaccurate assessments may cause undue stress or anxiety for students, compromising their right to healthcare."
+        "article": "Article 8 DataProtection",
+        "right_name": "Right to protection of personal data",
+        "relevance": "The project requires robust data protection measures to ensure confidentiality and anonymity of student data."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-026",
-        "incident_title": "Facial Recognition in UK Schools",
-        "lesson": "The use of facial recognition technology in schools has raised concerns about data protection, privacy, and potential bias. This precedent highlights the importance of careful consideration and mitigation strategies when implementing AI systems that collect or process sensitive personal data."
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The importance of designing AI systems that are transparent, accountable, and respectful of human rights."
       },
       {
         "incident_id": "AIAAIC-005",
         "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "This incident demonstrates the potential for AI systems to perpetuate biases and stereotypes, leading to harm and offense. It emphasizes the need for thorough testing, evaluation, and mitigation strategies to prevent such incidents."
+        "lesson": "The need for AI systems to be designed with fairness, equity, and respect for diversity in mind."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement robust data protection measures, including encryption and secure storage protocols.",
+        "mitigation": "Implement robust data protection measures, including encryption and secure storage of student data.",
         "priority": "High"
       },
       {
-        "mitigation": "Conduct thorough testing and evaluation of the chatbot's accuracy and potential biases.",
+        "mitigation": "Develop a clear data management plan and ensure compliance with relevant EU regulations.",
         "priority": "Medium"
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough analysis of the dataset's representativeness and provide clear communication about any limitations or biases (ACM020).",
-      "Clearly articulate the chatbot's intended purpose and primary function (EUAIAct AI008)."
+      "Conduct a thorough risk assessment and mitigation plan to address potential harms",
+      "Develop a clear data protection policy and obtain explicit consent from students for processing special category data"
     ],
     "tier2_reflective_prompts": [
-      "Consider the potential impact on democratic processes and social relations (HE019).",
-      "Evaluate the chatbot's potential for inaccurate assessments and develop strategies to mitigate such harm (Article 35 HealthCare)."
+      "How will the project ensure that AI decision-making processes are transparent, accountable, and respectful of human rights?",
+      "What measures will be taken to mitigate potential biases in decision-making?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -311,9 +326,10 @@
         "R074"
       ],
       "requirements_cited": [
-        "ACM020",
-        "HE019",
-        "EUAIAct AI008"
+        "ACM001",
+        "ACM006",
+        "EUAIAct-001",
+        "HorizonEurope-002"
       ],
       "incidents_sample": [
         "AIAAIC-014",

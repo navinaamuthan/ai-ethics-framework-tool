@@ -1,0 +1,356 @@
+{
+  "proposal_id": "P35",
+  "mode": "full",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-21T00:11:05.613144",
+  "proposal_text": "This project fine-tunes a large language model on 1.2 million de-identified clinical notes from an Irish hospital group to generate synthetic notes for downstream NLP shared tasks. The team claims synthetic outputs eliminate privacy risk and plans public release of the generator. Recent research shows membership inference and rare-condition memorisation can still leak training patients. No empirical privacy attack evaluation is budgeted. Synthetic notes will be used only for research benchmarks, not clinical care. Hospital legal counsel has approved release based on the 'synthetic = safe' claim alone.",
+  "context_max_requirements": 12,
+  "llm_model": "llama3.1:8b",
+  "keywords": [
+    "generat",
+    "privacy",
+    "patient"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 109,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 48.0,
+      "tf": 48,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 34.0,
+      "tf": 34,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 19.0,
+      "tf": 19,
+      "df": 26
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 48
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "This project fine-tunes a large language model on de-identified clinical notes to generate synthetic notes, which may still leak training patients' information. The team plans public release of the generator without empirical privacy attack evaluation. Synthetic notes will be used for research benchmarks only.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Membership inference and rare-condition memorisation can leak training patients' information",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The project involves processing special category data about vulnerable groups (patients) without explicit consent."
+      },
+      {
+        "risk": "Synthetic notes may cause psychological harm to patients if their information is leaked",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Medium",
+        "explanation": "The project involves generating synthetic notes that may contain sensitive patient information, which could lead to emotional distress or manipulation."
+      },
+      {
+        "risk": "Lack of transparency in the generator's operation and capabilities may cause harm to patients",
+        "risk_category": "Transparency",
+        "severity": "High",
+        "explanation": "The team plans public release of the generator without adequate disclosure of its operation, capabilities, and limitations."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The team should discuss the potential risks of membership inference and rare-condition memorisation and propose mitigation strategies."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The team should conduct empirical privacy attack evaluation to assess the risks of membership inference and rare-condition memorisation."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The team should ensure that patients' information is anonymised or de-identified in accordance with applicable laws and regulations."
+      },
+      {
+        "requirement_id": "EUAIAct_15",
+        "requirement_text": "Data protection by design and default — implement technical and organisational measures to protect personal data",
+        "framework": "EU AI Act",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The team should implement technical and organisational measures to protect patients' information, such as encryption and access controls."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The project involves processing special category data about vulnerable groups (patients) without explicit consent."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The team plans public release of the generator without empirical privacy attack evaluation, which may compromise patients' personal data."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The project should be designed to avoid generating harmful or offensive content."
+      },
+      {
+        "incident_id": "AIAAIC-011",
+        "incident_title": "Facebook Discriminatory Ad Targeting",
+        "lesson": "The team should ensure that the generator does not perpetuate biases in data and model outputs."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement technical and organisational measures to protect patients' information, such as encryption and access controls.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct empirical privacy attack evaluation to assess the risks of membership inference and rare-condition memorisation.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Ensure that patients' information is anonymised or de-identified in accordance with applicable laws and regulations."
+    ],
+    "tier2_reflective_prompts": [
+      "How can the team ensure that the generator does not perpetuate biases in data and model outputs? What measures can be taken to mitigate the risks of membership inference and rare-condition memorisation?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "generat",
+        "privacy",
+        "patient"
+      ],
+      "rights_matched": 3,
+      "requirements_retrieved": 109,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE019",
+        "HE021",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE042",
+        "HE049",
+        "HE050",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE013",
+        "HE033",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM006",
+        "EUAIAct_15"
+      ],
+      "incidents_sample": [
+        "AIAAIC-003",
+        "AIAAIC-005",
+        "AIAAIC-009",
+        "AIAAIC-002",
+        "AIAAIC-007"
+      ]
+    }
+  }
+}

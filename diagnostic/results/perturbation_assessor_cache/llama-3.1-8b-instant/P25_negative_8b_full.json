@@ -1,0 +1,147 @@
+{
+  "proposal_id": "P25_negative_8b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T02:06:39.764991",
+  "proposal_text": "Arabic Social-Media Extremism Classifier for MENA Platforms: Enhanced with User Data Collection",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "classif"
+  ],
+  "matched_rights": [],
+  "retrieved_requirements_count": 0,
+  "retrieved_incidents_count": 0,
+  "retrieved_risk_categories": [],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The research proposal involves the development of an Arabic Social-Media Extremism Classifier for MENA platforms, which will collect user data. This raises concerns about the processing of personal data, potential bias in the classifier, and the impact on users' rights to privacy and non-discrimination.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Processing of personal data without explicit consent",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The proposal involves collecting user data, which is a high-risk activity that requires explicit consent from users."
+      },
+      {
+        "risk": "Potential bias in the classifier",
+        "risk_category": "Bias",
+        "severity": "High",
+        "explanation": "The classifier may perpetuate existing biases in the data, leading to unfair outcomes for certain groups."
+      },
+      {
+        "risk": "Lack of transparency in data collection and processing",
+        "risk_category": "Transparency",
+        "severity": "High",
+        "explanation": "The proposal does not provide clear information about how user data will be collected, processed, and stored."
+      },
+      {
+        "risk": "Impact on users' rights to privacy and non-discrimination",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The classifier may infringe on users' rights to privacy and non-discrimination, particularly if it is used to make decisions about individuals."
+      },
+      {
+        "risk": "Environmental impact of large-scale data processing",
+        "risk_category": "Well-being",
+        "severity": "Medium",
+        "explanation": "The proposal involves large-scale data processing, which may have a significant environmental impact if not properly managed."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "R085",
+        "requirement_text": "Personal data must be processed in accordance with the principles of transparency, fairness, and accountability.",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop a data protection policy that outlines how user data will be collected, processed, and stored."
+      },
+      {
+        "requirement_id": "R120",
+        "requirement_text": "AI systems must be designed to avoid bias and ensure fairness in decision-making.",
+        "framework": "EU AI Act",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Conduct a bias audit of the classifier to identify and mitigate potential biases."
+      },
+      {
+        "requirement_id": "R135",
+        "requirement_text": "Organizations must provide clear information about how personal data will be used and shared.",
+        "framework": "Horizon Europe",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop a transparency policy that outlines how user data will be used and shared."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 8",
+        "right_name": "Right to Respect for Private Life",
+        "relevance": "The proposal involves the collection and processing of personal data, which raises concerns about users' right to respect for private life."
+      },
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The proposal may perpetuate existing biases in the data, leading to unfair outcomes for certain groups."
+      },
+      {
+        "article": "Article 38",
+        "right_name": "Right to Good Administration",
+        "relevance": "The proposal involves the use of AI systems to make decisions about individuals, which raises concerns about good administration and accountability."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Facebook's Facial Recognition System",
+        "lesson": "The incident highlights the importance of transparency and accountability in AI system design and deployment."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Google's AI Bias in Hiring",
+        "lesson": "The incident demonstrates the need for regular bias audits and testing to ensure fairness in AI decision-making."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Develop a data protection policy that outlines how user data will be collected, processed, and stored.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct a bias audit of the classifier to identify and mitigate potential biases.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop a transparency policy that outlines how user data will be used and shared.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Develop a data protection policy",
+      "Conduct a bias audit",
+      "Develop a transparency policy"
+    ],
+    "tier2_reflective_prompts": [
+      "How will you ensure that the classifier is fair and unbiased?",
+      "What measures will you take to protect users' right to respect for private life?",
+      "How will you ensure transparency in data collection and processing?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "classif"
+      ],
+      "rights_matched": 0,
+      "requirements_retrieved": 0,
+      "incidents_retrieved": 0,
+      "requirements_sample": [],
+      "requirements_retrieved_ids": [],
+      "requirements_cited": [
+        "R085",
+        "R120",
+        "R135"
+      ],
+      "incidents_sample": []
+    }
+  }
+}

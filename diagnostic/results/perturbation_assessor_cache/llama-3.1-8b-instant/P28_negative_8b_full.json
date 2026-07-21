@@ -1,0 +1,414 @@
+{
+  "proposal_id": "P28_negative_8b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T02:15:02.047101",
+  "proposal_text": "This research proposes a Spanish-language LLM chatbot that guides Bogotá residents through business-permit and construction-licence applications. The bot classifies query intent, retrieves municipal code passages, and drafts application forms. In a pilot ward, incomplete answers that the bot labels 'likely ineligible' will auto-close the digital ticket without human review to reduce backlog. Residents with limited literacy or non-standard Spanish dialects may be disproportionately auto-closed. Conversation logs retain national ID numbers entered into forms. The city asserts the bot is 'advisory only,' yet ticket closure has the practical effect of a refusal. No administrative-appeal pathway specific to bot closures is described. Outputs will be shared with a commercial data broker without additional consent or purpose limitation.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "administrative",
+    "chatbot",
+    "classif",
+    "consent"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 104,
+  "retrieved_incidents_count": 6,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 44.0,
+      "tf": 44,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 34.0,
+      "tf": 34,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 18.0,
+      "tf": 18,
+      "df": 26
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 15
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "This research proposal involves a Spanish-language LLM chatbot that guides Bogotá residents through business-permit and construction-licence applications, which poses risks of PrivacyBreach, Accountability, PsychologicalHarm, Dignity, Discrimination, DataGovernance, and FalseIdentification.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "PrivacyBreach",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The chatbot retains national ID numbers entered into forms without explicit consent."
+      },
+      {
+        "risk": "Accountability",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "Residents with limited literacy or non-standard Spanish dialects may be disproportionately auto-closed without human review."
+      },
+      {
+        "risk": "PsychologicalHarm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "High",
+        "explanation": "The chatbot's auto-closure of digital tickets may cause mental distress or emotional damage to affected residents."
+      },
+      {
+        "risk": "Dignity",
+        "risk_category": "Dignity",
+        "severity": "High",
+        "explanation": "The chatbot's classification of query intent and retrieval of municipal code passages may objectify or dehumanize residents."
+      },
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The chatbot's language processing may perpetuate biases and unfairly treat residents with limited literacy or non-standard Spanish dialects."
+      },
+      {
+        "risk": "DataGovernance",
+        "risk_category": "DataGovernance",
+        "severity": "High",
+        "explanation": "The chatbot's retention of national ID numbers and conversation logs may compromise data quality and security."
+      },
+      {
+        "risk": "FalseIdentification",
+        "risk_category": "FalseIdentification",
+        "severity": "High",
+        "explanation": "The chatbot's language processing may lead to incorrect identity attribution or misclassification of query intent."
+      },
+      {
+        "risk": "Transparency",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The chatbot's operation, capabilities, and limitations are not adequately disclosed to end-users and stakeholders."
+      },
+      {
+        "risk": "Well-being",
+        "risk_category": "Well-being",
+        "severity": "Medium",
+        "explanation": "The chatbot's environmental impact and compute requirements are not disclosed, which may compromise environmental well-being."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment and mitigation plan to address potential harms."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement robust data protection measures and ensure that the chatbot's outputs do not cause harm to residents."
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement bias mitigation techniques and ensure that the chatbot's language processing does not perpetuate biases."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from residents before retaining their national ID numbers and conversation logs."
+      },
+      {
+        "requirement_id": "EUAIAct-001",
+        "requirement_text": "Personal data must be processed in accordance with the principles of lawfulness, fairness, transparency, and accountability",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement robust data protection measures and ensure that the chatbot's outputs are transparent and accountable."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 1",
+        "right_name": "HumanDignity",
+        "relevance": "The chatbot's classification of query intent and retrieval of municipal code passages may objectify or dehumanize residents."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The chatbot's retention of national ID numbers and conversation logs may compromise data quality and security."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The chatbot's outputs can cause harm to individuals or groups if not properly designed and tested."
+      },
+      {
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
+        "lesson": "Bias in AI systems can perpetuate discrimination and unfair treatment of individuals or groups."
+      },
+      {
+        "incident_id": "AIAAIC-007",
+        "incident_title": "Clearview AI Mass Facial Recognition Scraping",
+        "lesson": "Mass collection of personal data without consent can compromise data quality and security."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement robust data protection measures to ensure the security and integrity of personal data.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct a thorough risk assessment and mitigation plan to address potential harms.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement bias mitigation techniques to ensure that the chatbot's language processing does not perpetuate biases.",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Obtain explicit consent from residents before retaining their national ID numbers and conversation logs.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough risk assessment and mitigation plan to address potential harms.",
+      "Implement robust data protection measures to ensure the security and integrity of personal data.",
+      "Implement bias mitigation techniques to ensure that the chatbot's language processing does not perpetuate biases.",
+      "Obtain explicit consent from residents before retaining their national ID numbers and conversation logs."
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential harms of the chatbot's outputs?",
+      "How can we ensure that the chatbot's language processing does not perpetuate biases?",
+      "What are the implications of mass collection of personal data without consent?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "administrative",
+        "chatbot",
+        "classif",
+        "consent"
+      ],
+      "rights_matched": 2,
+      "requirements_retrieved": 104,
+      "incidents_retrieved": 6,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE019",
+        "HE021",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE042",
+        "HE049",
+        "HE050",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "ACM003",
+        "ACM005",
+        "ACM006",
+        "ACM008",
+        "ACM009",
+        "ACM010",
+        "ACM015",
+        "ACM016",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI012",
+        "AI013",
+        "AI014",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE010",
+        "HE011",
+        "HE013",
+        "HE031",
+        "HE033",
+        "HE034",
+        "HE035",
+        "HE036",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R019",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R042",
+        "R047",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R067",
+        "R068",
+        "R069",
+        "R070",
+        "R071",
+        "R072",
+        "R073",
+        "R074",
+        "R083",
+        "R084"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM003",
+        "ACM006",
+        "EUAIAct-001"
+      ],
+      "incidents_sample": [
+        "AIAAIC-003",
+        "AIAAIC-005",
+        "AIAAIC-009",
+        "AIAAIC-006",
+        "AIAAIC-007"
+      ]
+    }
+  }
+}

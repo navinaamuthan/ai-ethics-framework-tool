@@ -1,0 +1,383 @@
+{
+  "proposal_id": "P16_neutral_8b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T08:01:43.320552",
+  "proposal_text": "In summary, this project proposes to apply statistical machine learning methods to publicly available climate datasets from Met \u00c9ireann and the European Centre for Medium-Range Weather Forecasts. The research will analyse temperature, precipitation, and wind patterns across Ireland over the past 50 years to identify statistically significant trends and regional variations. The methodology combines Gaussian process regression with ensemble methods to quantify prediction uncertainty. All datasets are publicly available under open government data licences. No personal data is involved. The computational resources required for model training will be documented including estimated carbon footprint using the ML CO2 Impact calculator. Results will be published as an open-access paper with all code and data made available in a public repository.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "carbon",
+    "personal data",
+    "predict",
+    "prediction"
+  ],
+  "matched_rights": [
+    "Art21_NonDiscrimination",
+    "Art37_EnvironmentalProtection",
+    "Art47_RightToEffectiveRemedy",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 120,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 51.0,
+      "tf": 51,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 35.0,
+      "tf": 35,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 17.0,
+      "tf": 17,
+      "df": 48
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 15.0,
+      "tf": 15,
+      "df": 26
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 15
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "This project involves publicly available climate datasets and statistical machine learning methods to identify trends and regional variations. However, there are risks related to data governance, transparency, and potential biases in the analysis. The project's methodology combines Gaussian process regression with ensemble methods, which may perpetuate biases if not properly addressed.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "DataGovernance",
+        "risk_category": "DataGovernance",
+        "severity": "Medium",
+        "explanation": "The project involves publicly available datasets, but the methodology combines Gaussian process regression with ensemble methods, which may perpetuate biases if not properly addressed."
+      },
+      {
+        "risk": "Transparency",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The project's operation, capabilities, limitations, or decision rationale may not be adequately disclosed to end-users and stakeholders."
+      },
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
+        "severity": "Medium",
+        "explanation": "The project's analysis may perpetuate biases if not properly addressed, leading to unfair differential treatment of individuals or groups based on protected characteristics."
+      },
+      {
+        "risk": "PsychologicalHarm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Low",
+        "explanation": "The project's analysis is focused on climate trends and does not involve direct interaction with individuals, reducing the risk of mental distress, manipulation, coercion, or emotional damage."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being \u2014 discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Discuss potential biases and ways to mitigate them in the project's methodology."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm \u2014 consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider potential risks and harms associated with the project's methodology and data."
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate \u2014 consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider and address potential biases in the project's methodology and data."
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider and address potential biases in the project's data and methodology."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The project's analysis may perpetuate biases if not properly addressed, leading to unfair differential treatment of individuals or groups based on protected characteristics."
+      },
+      {
+        "article": "Article 37",
+        "right_name": "EnvironmentalProtection",
+        "relevance": "The project involves climate datasets and analysis, which may have implications for environmental protection."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The project should consider and address potential biases in the methodology and data to avoid perpetuating unfair differential treatment of individuals or groups based on protected characteristics."
+      },
+      {
+        "incident_id": "AIAAIC-008",
+        "incident_title": "PredPol Predictive Policing Algorithmic Bias",
+        "lesson": "The project should consider and address potential biases in the methodology and data to avoid perpetuating unfair differential treatment of individuals or groups based on protected characteristics."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Regularly review and update the project's methodology and data to ensure they are free from biases.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Provide transparent documentation of the project's methodology and data, including any potential biases or limitations.",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Establish a process for addressing and mitigating potential biases in the project's data and methodology.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Address potential biases in the project's methodology and data.",
+      "Provide transparent documentation of the project's methodology and data."
+    ],
+    "tier2_reflective_prompts": [
+      "Consider the potential implications of the project's analysis on environmental protection.",
+      "Reflect on the potential biases in the project's methodology and data."
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "carbon",
+        "personal data",
+        "predict",
+        "prediction"
+      ],
+      "rights_matched": 5,
+      "requirements_retrieved": 120,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "R028",
+        "R085",
+        "ACM026",
+        "ACM038",
+        "HE018",
+        "HE051",
+        "R052",
+        "R087",
+        "ACM001",
+        "ACM017",
+        "ACM021",
+        "ACM035",
+        "AI002",
+        "AI015",
+        "AI017",
+        "AI018",
+        "AI019",
+        "AI020",
+        "AI022",
+        "AI026",
+        "AI028",
+        "AI030",
+        "HE002",
+        "HE005",
+        "HE006",
+        "HE024",
+        "HE026",
+        "HE027",
+        "HE028",
+        "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
+        "HE048",
+        "HE052",
+        "R010",
+        "R054",
+        "R055",
+        "R074",
+        "R082",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM003",
+        "ACM004"
+      ],
+      "incidents_sample": [
+        "AIAAIC-001",
+        "AIAAIC-002",
+        "AIAAIC-003",
+        "AIAAIC-004",
+        "AIAAIC-008"
+      ]
+    }
+  }
+}

@@ -1,0 +1,450 @@
+{
+  "proposal_id": "P25_positive_70b",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T02:06:31.997540",
+  "proposal_text": "This research proposes an Arabic-dialect NLP classifier to detect extremist recruitment and glorification of violence on public Telegram channels and X/Twitter accounts across Egypt, Jordan, and Morocco. Training data mix annotated jihadist propaganda with posts from secular activists, Islamist electoral campaigns, and satire. The classifier will output a risk score used by platform trust-and-safety teams to prioritise human review; scores above 0.85 will auto-suspend accounts for 48 hours pending review. Civil-society partners warn that dialectal sarcasm and anti-regime protest slogans are frequently mislabelled. To mitigate this, a bias audit will be conducted, and an appeal mechanism will be implemented for users to contest their suspension. The team plans open-source release of the model weights. This proposal does not schedule engagement with journalists' unions or minority-rights groups, leaving open the question of whether Art.11 freedom of expression or public-security limitations should dominate the rights analysis.",
+  "context_max_requirements": 5,
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "classif",
+    "scor",
+    "bias",
+    "minor",
+    "minority",
+    "protest",
+    "recruit",
+    "safety",
+    "union"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art12_FreedomOfAssembly",
+    "Art21_NonDiscrimination",
+    "Art47_RightToEffectiveRemedy"
+  ],
+  "retrieved_requirements_count": 60,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 26.0,
+      "tf": 26,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 14.0,
+      "tf": 14,
+      "df": 48
+    },
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 77
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 26
+    },
+    {
+      "id": "DualUseMisuse",
+      "label": "Dual-Use Misuse",
+      "definition": "Risk that research or AI outputs intended for beneficial purposes are repurposed for harmful applications.",
+      "idf_score": 4.912,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 9
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 16
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "individual_treatment→Art21",
+  "assessment": {
+    "risk_summary": "This research proposal involves developing an Arabic-dialect NLP classifier to detect extremist recruitment and glorification of violence on public Telegram channels and X/Twitter accounts, which poses risks related to freedom of expression, non-discrimination, and psychological harm. The classifier's potential to mislabel dialectal sarcasm and anti-regime protest slogans as extremist content raises concerns about false identification and reputational harm. Furthermore, the auto-suspension of accounts based on the classifier's output may lead to transparency and accountability issues. The proposal's lack of engagement with journalists' unions and minority-rights groups exacerbates these concerns.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Mislabelling of dialectal sarcasm and anti-regime protest slogans as extremist content",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The classifier's potential to mislabel certain types of content may lead to unfair differential treatment of individuals or groups based on protected characteristics."
+      },
+      {
+        "risk": "False identification of individuals as extremists",
+        "risk_category": "FalseIdentification",
+        "severity": "High",
+        "explanation": "The classifier's output may lead to incorrect identity attribution with consequential harm, such as reputational damage or economic loss."
+      },
+      {
+        "risk": "Psychological harm caused by auto-suspension of accounts",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Medium",
+        "explanation": "The auto-suspension of accounts may cause mental distress or emotional damage to individuals who are incorrectly identified as extremists."
+      },
+      {
+        "risk": "Lack of transparency in the classifier's decision-making process",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The proposal's lack of transparency in the classifier's decision-making process may lead to accountability issues and undermine trust in the system."
+      },
+      {
+        "risk": "Potential for dual-use misuse of the classifier",
+        "risk_category": "DualUseMisuse",
+        "severity": "Medium",
+        "explanation": "The classifier's potential for dual-use misuse, such as being repurposed for harmful applications, raises concerns about its impact on society and human well-being."
+      },
+      {
+        "risk": "Reputational harm caused by the classifier's output",
+        "risk_category": "ReputationalHarm",
+        "severity": "Medium",
+        "explanation": "The classifier's output may damage the reputation of individuals or organisations, particularly if they are incorrectly identified as extremists."
+      },
+      {
+        "risk": "Privacy breach due to the collection and processing of personal data",
+        "risk_category": "PrivacyBreach",
+        "severity": "Low",
+        "explanation": "The proposal involves the collection and processing of personal data, which poses a risk of unauthorised collection, processing, or disclosure of personal data."
+      },
+      {
+        "risk": "Dignity concerns related to the objectification of individuals",
+        "risk_category": "Dignity",
+        "severity": "Low",
+        "explanation": "The classifier's potential to objectify individuals or undermine human dignity raises concerns about its impact on society and human well-being."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of the potential harms and benefits of the classifier and develop strategies to mitigate its negative impacts."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop a plan to minimize the risk of harm caused by the classifier, including the potential for false identification and reputational harm."
+      },
+      {
+        "requirement_id": "ACM017",
+        "requirement_text": "Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from participants or provide a clear explanation for why consent was not obtained."
+      },
+      {
+        "requirement_id": "ACM019",
+        "requirement_text": "Respect terms of datasets with defined licences (CC 4.0, MIT etc)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the terms of the datasets used in the proposal are respected and that any necessary licenses are obtained."
+      },
+      {
+        "requirement_id": "ACM020",
+        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct an assessment of the datasets used in the proposal to ensure that they are representative of the intended population and substantiate any claims of diverse representation."
+      },
+      {
+        "requirement_id": "EUAIAct-1",
+        "requirement_text": "Ensure that AI systems are transparent, explainable, and fair",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop a plan to ensure that the classifier is transparent, explainable, and fair, including the development of a clear explanation for its decision-making process."
+      },
+      {
+        "requirement_id": "HorizonEurope-1",
+        "requirement_text": "Ensure that research is conducted in a responsible and ethical manner",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct the research in a responsible and ethical manner, including ensuring that the classifier is developed and used in a way that respects human rights and dignity."
+      },
+      {
+        "requirement_id": "TCDREAMS-1",
+        "requirement_text": "Ensure that research is conducted in accordance with the principles of respect, care, and beneficence",
+        "framework": "TCDREAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct the research in accordance with the principles of respect, care, and beneficence, including ensuring that the classifier is developed and used in a way that respects human rights and dignity."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 11",
+        "right_name": "Freedom of Expression",
+        "relevance": "The proposal's potential to restrict freedom of expression, particularly in the context of auto-suspension of accounts, raises concerns about its impact on this right."
+      },
+      {
+        "article": "Article 12",
+        "right_name": "Freedom of Assembly",
+        "relevance": "The proposal's potential to restrict freedom of assembly, particularly in the context of detecting extremist recruitment, raises concerns about its impact on this right."
+      },
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The proposal's potential to discriminate against certain individuals or groups, particularly in the context of false identification, raises concerns about its impact on this right."
+      },
+      {
+        "article": "Article 47",
+        "right_name": "Right to Effective Remedy",
+        "relevance": "The proposal's potential to restrict access to effective remedy, particularly in the context of auto-suspension of accounts, raises concerns about its impact on this right."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-014",
+        "incident_title": "YouTube Recommendation Radicalisation",
+        "lesson": "The potential for AI systems to radicalize individuals or promote extremist content highlights the need for careful consideration of the potential impacts of the classifier on society and human well-being."
+      },
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "The potential for AI systems to amplify hate speech or promote discrimination highlights the need for careful consideration of the potential impacts of the classifier on society and human well-being."
+      },
+      {
+        "incident_id": "AIAAIC-027",
+        "incident_title": "Spotify Mood Inference Patent",
+        "lesson": "The potential for AI systems to infer sensitive information about individuals, such as their mood or emotions, highlights the need for careful consideration of the potential impacts of the classifier on privacy and data protection."
+      },
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The potential for AI systems to perpetuate biases or discriminate against certain individuals or groups highlights the need for careful consideration of the potential impacts of the classifier on fairness and non-discrimination."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The potential for AI systems to lead to false identification or misidentification of individuals highlights the need for careful consideration of the potential impacts of the classifier on accuracy and reliability."
+      },
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The potential for AI systems to produce harmful or offensive outputs highlights the need for careful consideration of the potential impacts of the classifier on society and human well-being."
+      },
+      {
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The potential for AI systems to perpetuate biases or discriminate against certain individuals or groups highlights the need for careful consideration of the potential impacts of the classifier on fairness and non-discrimination."
+      },
+      {
+        "incident_id": "AIAAIC-008",
+        "incident_title": "PredPol Predictive Policing Algorithmic Bias",
+        "lesson": "The potential for AI systems to perpetuate biases or discriminate against certain individuals or groups highlights the need for careful consideration of the potential impacts of the classifier on fairness and non-discrimination."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Develop a clear explanation for the classifier's decision-making process",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement a robust appeal mechanism for users to contest their suspension",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct regular audits to ensure the classifier is fair and unbiased",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Develop a plan to minimize the risk of harm caused by the classifier",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Ensure that the classifier is transparent, explainable, and fair",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Develop a plan to respect the terms of the datasets used in the proposal",
+        "priority": "Low"
+      },
+      {
+        "mitigation": "Conduct an assessment of the datasets used in the proposal to ensure that they are representative of the intended population",
+        "priority": "Low"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough analysis of the potential harms and benefits of the classifier and develop strategies to mitigate its negative impacts",
+      "Develop a plan to minimize the risk of harm caused by the classifier",
+      "Obtain explicit consent from participants or provide a clear explanation for why consent was not obtained",
+      "Ensure that the terms of the datasets used in the proposal are respected and that any necessary licenses are obtained",
+      "Conduct an assessment of the datasets used in the proposal to ensure that they are representative of the intended population and substantiate any claims of diverse representation"
+    ],
+    "tier2_reflective_prompts": [
+      "How might the classifier be used in ways that are not intended or anticipated?",
+      "What are the potential long-term consequences of using the classifier, and how might they be mitigated?",
+      "How might the classifier be perceived by different stakeholders, and what are the potential implications of these perceptions?",
+      "What are the potential risks and benefits of using the classifier in different contexts or applications?",
+      "How might the classifier be improved or modified to better address the needs and concerns of different stakeholders?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "classif",
+        "scor",
+        "bias",
+        "minor",
+        "minority",
+        "protest",
+        "recruit",
+        "safety",
+        "union"
+      ],
+      "rights_matched": 4,
+      "requirements_retrieved": 60,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM002",
+        "ACM012",
+        "ACM013"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "R028",
+        "R085",
+        "ACM001",
+        "ACM017",
+        "ACM021",
+        "ACM035",
+        "AI002",
+        "AI015",
+        "AI017",
+        "AI018",
+        "AI019",
+        "AI020",
+        "AI022",
+        "AI026",
+        "AI028",
+        "AI030",
+        "HE002",
+        "HE005",
+        "HE006",
+        "HE024",
+        "HE026",
+        "HE027",
+        "HE028",
+        "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
+        "HE048",
+        "HE052",
+        "R010",
+        "R054",
+        "R055",
+        "R074",
+        "R082"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM017",
+        "ACM019",
+        "ACM020",
+        "EUAIAct-1",
+        "HorizonEurope-1",
+        "TCDREAMS-1"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-001",
+        "AIAAIC-002"
+      ]
+    }
+  }
+}

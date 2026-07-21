@@ -1,0 +1,112 @@
+{
+  "proposal_id": "P32",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-20T23:36:32.093672",
+  "proposal_text": "This research proposes to publish weekly heatmaps of mobile-money cash-in and cash-out volumes at 500-metre grid cells for Kampala, using operator data aggregated under a national statistics memorandum. No individual wallet IDs are released. The stated purpose is transit and market-infrastructure planning. A subtle residual risk is that thin cells in peri-urban areas may still permit inference about specific large traders when combined with public business registries, yet the proposal asserts 'full anonymisation by aggregation.' No attacker model or k-anonymity threshold is specified. No enforcement or tax authority use is planned in the research protocol.",
+  "context_max_requirements": 25,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [],
+  "matched_rights": [],
+  "retrieved_requirements_count": 0,
+  "retrieved_incidents_count": 0,
+  "retrieved_risk_categories": [],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "This research proposal involves publishing heatmaps of mobile-money cash-in and cash-out volumes, which may pose risks to individual privacy and potentially infringe on the right to non-discrimination. Although the proposal asserts full anonymisation by aggregation, the lack of an attacker model or k-anonymity threshold increases the risk of inference about specific individuals. Furthermore, the potential for thin cells in peri-urban areas to reveal information about large traders when combined with public business registries adds to the risk.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Inference of individual identities from aggregated data",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The proposal's reliance on aggregated data may not be sufficient to prevent inference of individual identities, particularly when combined with public business registries."
+      },
+      {
+        "risk": "Disclosure of sensitive information about large traders",
+        "risk_category": "Surveillance",
+        "severity": "High",
+        "explanation": "Thin cells in peri-urban areas may reveal information about large traders, potentially infringing on their right to privacy."
+      },
+      {
+        "risk": "Lack of transparency in data processing and aggregation",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The proposal does not provide sufficient information about the data processing and aggregation methods used, which may compromise transparency and accountability."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "R085",
+        "requirement_text": "Ensure that personal data is processed in a way that ensures appropriate security, including protection against unauthorised or unlawful processing, accidental loss, destruction or damage.",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement appropriate security measures to protect the aggregated data against unauthorised or unlawful processing."
+      },
+      {
+        "requirement_id": "R123",
+        "requirement_text": "Ensure that data subjects are informed about the processing of their personal data, including the purposes and any third-party recipients.",
+        "framework": "EU AI Act",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Develop a data protection impact assessment to identify potential risks and develop measures to mitigate them."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 8",
+        "right_name": "Right to Respect for Private Life",
+        "relevance": "The proposal may infringe on the right to respect for private life by disclosing sensitive information about individuals."
+      },
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The proposal may infringe on the right to non-discrimination by disclosing sensitive information about individuals that may be used to discriminate against them."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Cambridge Analytica Data Breach",
+        "lesson": "The importance of implementing robust data protection measures to prevent unauthorised access to personal data."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Uber Data Breach",
+        "lesson": "The need for transparency and accountability in data processing and aggregation."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement k-anonymity threshold to prevent inference of individual identities",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop a data protection impact assessment to identify potential risks and develop measures to mitigate them",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Implement appropriate security measures to protect the aggregated data against unauthorised or unlawful processing",
+      "Ensure that data subjects are informed about the processing of their personal data, including the purposes and any third-party recipients"
+    ],
+    "tier2_reflective_prompts": [
+      "What measures will be taken to prevent inference of individual identities from aggregated data?",
+      "How will the proposal ensure transparency and accountability in data processing and aggregation?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [],
+      "rights_matched": 0,
+      "requirements_retrieved": 0,
+      "incidents_retrieved": 0,
+      "requirements_sample": [],
+      "requirements_retrieved_ids": [],
+      "requirements_cited": [
+        "R085",
+        "R123"
+      ],
+      "incidents_sample": []
+    }
+  }
+}
