@@ -10,4 +10,4 @@ cd analysis
 Outputs in `results/`:
 
 - `landscape_report.json` — coverage matrix, harm-without-governance gaps, overlap distribution, top evidenced requirements
-- `coverage_matrix.tex` — LaTeX tabular for the dissertation evaluation chapter
+- `coverage_matrix.tex` — LaTeX tabular for coverage reporting

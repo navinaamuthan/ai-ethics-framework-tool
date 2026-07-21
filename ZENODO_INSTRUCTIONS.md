@@ -22,8 +22,7 @@ I can't complete this one myself — it needs your Zenodo account. Here's exactl
    **Draft a new release**, pick tag `v2.0.0`, publish it.
 4. Zenodo automatically archives that release and mints a DOI within a few minutes. Check
    **zenodo.org/account/settings/github** for the badge/DOI once it appears.
-5. Add the DOI badge markdown Zenodo gives you to the top of `README.md`, and cite the DOI in the
-   dissertation's reproducibility section.
+5. Add the DOI badge markdown Zenodo gives you to the top of `README.md`.
 
 Every future GitHub release (v2.1.0, etc.) will auto-archive the same way — no repeated manual work.
 
@@ -39,7 +38,7 @@ Every future GitHub release (v2.1.0, etc.) will auto-archive the same way — no
 ## One honest caveat before you publish
 
 `.zenodo.json`'s `contributors` field lists Delaram Golpayegani by name as an ontology contributor.
-That's accurate (her seven-point review is documented in the dissertation and this repo), but it's
+That's accurate (her seven-point review is documented in this repo), but it's
 still attributing a named real person on a public, permanent record — worth a quick "I'm archiving
 this on Zenodo and crediting your review, let me know if you'd like the wording changed" message to
 her before you click publish, not because it's wrong, but because it's the kind of thing you'd want

@@ -17,7 +17,7 @@ An earlier verification pass (13 July 2026) loaded the ontology into a separate 
 
 ## A note on a fixed data-consistency bug
 
-Between 13 and 15 July 2026, the source Turtle file (`ai-ethics-final.ttl`) was deduplicated (two conflicting definitions of requirements R010 and R054 were merged into one each), but the production GraphDB repository had not yet been reloaded from the corrected file — a distinct step from editing the source file. This was caught and fixed on 15 July: the production repository was cleared and reloaded from the corrected source. Both exports here reflect the corrected, post-fix state. If you're comparing against evaluation numbers dated 14 July 2026 or earlier, be aware some of those (the RAGAS-style automated metrics specifically) were regenerated on 15 July for this reason — see the dissertation's Section 4.6 / the paper's RAGAS subsection for the full account.
+Between 13 and 15 July 2026, the source Turtle file (`ai-ethics-final.ttl`) was deduplicated (two conflicting definitions of requirements R010 and R054 were merged into one each), but the production GraphDB repository had not yet been reloaded from the corrected file — a distinct step from editing the source file. This was caught and fixed on 15 July: the production repository was cleared and reloaded from the corrected source. Both exports here reflect the corrected, post-fix state. If you're comparing against evaluation numbers dated 14 July 2026 or earlier, be aware some of those (the RAGAS-style automated metrics specifically) were regenerated on 15 July for this reason.
 
 ## Loading into your own triple store
 

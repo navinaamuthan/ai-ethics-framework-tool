@@ -38,5 +38,5 @@ Phase 4 work therefore:
 2. **Added** `TransparencyDisclosureShape`, `SustainabilityDisclosureShape`,
    `AssemblyAssociationShape` (Art12).
 3. **Did not** wire SHACL flags into the primary LLM prompt — keeping the two
-   arms independent so the dissertation can report agreement/disagreement as
-   evidence, rather than collapsing them into one opaque score.
+   arms independent so agreement/disagreement can be reported as evidence,
+   rather than collapsing them into one opaque score.

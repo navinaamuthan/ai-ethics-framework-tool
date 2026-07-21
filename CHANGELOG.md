@@ -7,9 +7,6 @@ PATCH for corrections to existing content.
 
 Every entry below is evidence-driven: each was triggered by a specific validation finding
 (expert review, an automated tool, or a targeted re-verification), not a stylistic preference.
-This is the record referenced from the dissertation's Design Science Research framing
-(`dissertation-latex/project/project.tex`, §Research Methodology) as the artifact's iterative
-build-evaluate cycle.
 
 ## [2.1.2] — 2026-07-20
 
@@ -106,8 +103,7 @@ build-evaluate cycle.
   Articles 13, 15, and 48 carry incident evidence but zero requirement coverage. All three gaps
   persisted under this deliberate augmentation (70→73 incidents). Scoped to the landscape re-analysis
   only; the primary 20-proposal evaluation continues to use the pre-augmentation 70-incident baseline
-  to keep those results comparable to their originally-reported values (see dissertation footnote,
-  Table "AIEF ontology structural summary").
+  to keep those results comparable to their originally-reported values.
 - **21 → 27 SHACL risk-rule shapes**: 6 compound/conjunctive rules added (`shacl/aief-risk-shapes.ttl`)
   demonstrating auditable multi-condition escalation logic (e.g. children + continuous monitoring +
   no safeguards → automatic priority-1 escalation) not expressible by the atomic rules alone.
@@ -151,8 +147,8 @@ build-evaluate cycle.
 
 ### Added
 - Initial public release. 63 classes / 19 object properties / 11 data properties (see note below —
-  these counts were themselves later found to undercount the true schema and corrected in v2.0.0's
-  contemporaneous dissertation text to 125/22/16, reflecting classes and properties always present in
+  these counts were themselves later found to undercount the true schema and corrected in v2.0.0 to
+  125/22/16, reflecting classes and properties always present in
   the source file but not previously tallied correctly).
 - Permanent namespace registered at `https://w3id.org/aief/` via the W3C Permanent Identifier
   Community Group.
@@ -167,5 +163,5 @@ build-evaluate cycle.
 listed as its own dated entry above because it was a measurement correction (an independent count
 against the actual source file, not a change to the file's content) rather than an ontology edit. It
 is documented here for completeness: the true counts were verified via `rdflib` parse and were true of
-the ontology from v1.0.0 onward; the dissertation's earlier, lower figures were simply never
+the ontology from v1.0.0 onward; earlier lower figures were simply never
 re-verified against the file until 2026-07-16.
