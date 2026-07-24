@@ -1,1 +1,1 @@
-{ "functions": { "app/api/assess/route.ts": { "maxDuration": 60 } } }
+{ "functions": { "app/api/assess/route.ts": { "maxDuration": 10 } } }
