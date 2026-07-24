@@ -10,7 +10,7 @@ export default function KGMetadata({
   confidence: string
 }) {
   return (
-    <footer className="border-t border-stone-200 pt-4 text-xs text-stone-500 font-mono flex flex-wrap gap-x-6 gap-y-1">
+    <footer className="flex shrink-0 flex-wrap gap-x-4 gap-y-0.5 font-mono text-[10px] text-stone-500">
       <span>model: {model}</span>
       <span>backend: {backend}</span>
       <span>confidence: {confidence}</span>

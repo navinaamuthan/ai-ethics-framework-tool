@@ -11,17 +11,19 @@ export default function RiskBanner({
 }) {
   const s = riskStyles[level] ?? riskStyles.Medium
   return (
-    <div className={`${s.bg} rounded-lg px-6 py-5 text-white flex flex-col sm:flex-row sm:items-center gap-3`}>
-      <div>
-        <div className="text-xs uppercase tracking-widest opacity-80">Overall risk level</div>
-        <div className="font-display text-4xl font-bold">{level.toUpperCase()}</div>
+    <div
+      className={`${s.bg} flex shrink-0 items-center gap-4 rounded-md border-2 border-black/10 px-4 py-2.5 text-white shadow-[4px_4px_0_0_rgba(0,0,0,0.12)]`}
+    >
+      <div className="flex items-baseline gap-3">
+        <span className="text-[10px] font-semibold uppercase tracking-[0.14em] opacity-80">Risk</span>
+        <span className="font-display text-2xl font-bold leading-none tracking-tight">{level.toUpperCase()}</span>
       </div>
-      <div className="sm:ml-auto flex flex-wrap gap-2 text-sm">
-        <span className="rounded-full bg-white/20 px-3 py-1">
-          Confidence: <strong>{confidence}</strong>
+      <div className="ml-auto flex flex-wrap items-center gap-1.5 text-[11px]">
+        <span className="rounded border border-white/25 bg-white/15 px-2.5 py-1 font-medium">
+          Confidence <strong className="ml-1">{confidence}</strong>
         </span>
-        <span className="rounded-full bg-white/20 px-3 py-1">
-          REAMS clearance likely: <strong>{reamsLikely ? "Yes" : "No"}</strong>
+        <span className="rounded border border-white/25 bg-white/15 px-2.5 py-1 font-medium">
+          REAMS likely <strong className="ml-1">{reamsLikely ? "Yes" : "No"}</strong>
         </span>
       </div>
     </div>

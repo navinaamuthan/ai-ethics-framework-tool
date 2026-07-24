@@ -5,3 +5,157 @@
 body {
   @apply bg-white text-stone-800 font-body antialiased;
 }
+
+@layer utilities {
+  .report-panel {
+    @apply min-h-0 overflow-y-auto overflow-x-hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #dcebe2 transparent;
+  }
+
+  .report-panel::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .report-panel::-webkit-scrollbar-thumb {
+    background: #dcebe2;
+    border-radius: 999px;
+  }
+}
+
+/* Idle-page atmosphere */
+.idle-atmosphere {
+  background-color: #e8f0eb;
+  background-image:
+    radial-gradient(ellipse 85% 65% at 0% 0%, rgba(37, 87, 63, 0.28), transparent 55%),
+    radial-gradient(ellipse 70% 55% at 100% 5%, rgba(20, 49, 36, 0.18), transparent 50%),
+    radial-gradient(ellipse 55% 45% at 75% 100%, rgba(46, 109, 79, 0.22), transparent 55%),
+    radial-gradient(ellipse 40% 35% at 40% 60%, rgba(255, 255, 255, 0.55), transparent 60%),
+    linear-gradient(155deg, #dcebe2 0%, #eef5f1 40%, #d4e5db 100%);
+}
+
+.idle-grid {
+  background-image:
+    linear-gradient(rgba(37, 87, 63, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 87, 63, 0.09) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 80% 75% at 50% 45%, black 15%, transparent 78%);
+}
+
+.idle-orb {
+  position: absolute;
+  border-radius: 42% 58% 55% 45%;
+  animation: idle-drift 16s ease-in-out infinite;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.idle-orb-a {
+  width: 32rem;
+  height: 32rem;
+  top: -10%;
+  left: -8%;
+  background: radial-gradient(circle at 35% 35%, rgba(37, 87, 63, 0.38), transparent 62%);
+  animation-delay: 0s;
+}
+
+.idle-orb-b {
+  width: 26rem;
+  height: 26rem;
+  top: 48%;
+  right: -6%;
+  background: radial-gradient(circle at 60% 40%, rgba(20, 49, 36, 0.3), transparent 68%);
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+.idle-orb-c {
+  width: 18rem;
+  height: 18rem;
+  bottom: 6%;
+  left: 22%;
+  background: radial-gradient(circle at 50% 50%, rgba(46, 109, 79, 0.26), transparent 68%);
+  animation-delay: -10s;
+  animation-duration: 24s;
+}
+
+.idle-ring {
+  position: absolute;
+  border: 2px solid rgba(37, 87, 63, 0.22);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: idle-pulse 9s ease-in-out infinite;
+}
+
+.idle-slash {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    -18deg,
+    transparent,
+    transparent 72px,
+    rgba(37, 87, 63, 0.035) 72px,
+    rgba(37, 87, 63, 0.035) 74px
+  );
+}
+
+@keyframes idle-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate3d(2.5%, -3%, 0) rotate(4deg);
+  }
+  66% {
+    transform: translate3d(-2%, 2.5%, 0) rotate(-3deg);
+  }
+}
+
+@keyframes idle-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise-in {
+  animation: rise-in 0.55s ease-out both;
+}
+
+.rise-in-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.rise-in-delay-2 {
+  animation-delay: 0.16s;
+}
+
+.rise-in-delay-3 {
+  animation-delay: 0.24s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .idle-orb,
+  .idle-ring,
+  .rise-in {
+    animation: none !important;
+  }
+}

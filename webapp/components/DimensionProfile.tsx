@@ -4,16 +4,9 @@ import type { Finding } from "@/lib/dimension-rules"
 export default function DimensionProfile({ findings }: { findings: Finding[] }) {
   if (!findings.length) {
     return (
-      <section className="rounded-lg border border-stone-200 bg-stone-50 px-5 py-4">
-        <h3 className="font-display text-lg font-semibold text-stone-800 mb-1">
-          Deterministic risk dimensions
-        </h3>
-        <p className="text-sm text-stone-500 mb-2">
-          Deterministic rule verdicts — computed without the LLM; rules and priorities are public data
-          in the repository.
-        </p>
-        <p className="text-sm text-stone-600">No risk-dimension flags. All scrutable rules pass.</p>
-      </section>
+      <p className="text-[11px] leading-snug text-stone-500">
+        No risk-dimension flags. All deterministic rules pass.
+      </p>
     )
   }
 
@@ -23,37 +16,28 @@ export default function DimensionProfile({ findings }: { findings: Finding[] }) 
   }, {})
 
   return (
-    <section className="rounded-lg border border-stone-200 bg-stone-50 px-5 py-4 space-y-3">
-      <div>
-        <h3 className="font-display text-lg font-semibold text-stone-800 mb-1">
-          Deterministic risk dimensions
-        </h3>
-        <p className="text-sm text-stone-500">
-          Deterministic rule verdicts — computed without the LLM; rules and priorities are public data
-          in the repository.
-        </p>
-      </div>
+    <div className="space-y-2">
       {Object.entries(byDim).map(([dim, items]) => (
         <div key={dim}>
-          <h4 className="text-sm font-semibold text-pine-800 mb-1">{dim}</h4>
+          <h4 className="mb-1 text-[10px] font-bold uppercase tracking-wide text-pine-800">{dim}</h4>
           <ul className="space-y-1">
             {items.map((f) => (
               <li
                 key={f.rule}
-                className={`text-sm px-3 py-2 rounded border ${
+                className={`rounded border px-2 py-1 text-[11px] leading-snug ${
                   f.severity === "violation"
                     ? "border-red-200 bg-red-50 text-red-900"
                     : "border-amber-200 bg-amber-50 text-amber-900"
                 }`}
               >
-                <span className="font-mono text-xs mr-2">P{f.priority}</span>
-                <span className="uppercase text-xs mr-2 tracking-wide">{f.severity}</span>
+                <span className="mr-1.5 font-mono text-[10px]">P{f.priority}</span>
+                <span className="mr-1.5 text-[9px] font-semibold uppercase tracking-wide">{f.severity}</span>
                 {f.rule}
               </li>
             ))}
           </ul>
         </div>
       ))}
-    </section>
+    </div>
   )
 }
