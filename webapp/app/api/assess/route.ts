@@ -3,7 +3,7 @@ import { retrieveFromKG } from "@/lib/kg-retrieval"
 import { buildPrompt } from "@/lib/prompt-builder"
 import { callLLM } from "@/lib/llm"
 
-export const maxDuration = 60 // Pro/Fluid; Hobby clamps to plan limit
+export const maxDuration = 60 // Vercel: allow up to 60s for LLM response
 
 export async function POST(req: NextRequest) {
   const { proposalText, model } = await req.json()
