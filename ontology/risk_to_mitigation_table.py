@@ -10,10 +10,17 @@ reusing the table if :hasRisk categories are ever added or renamed:
     grep -oE ':hasRisk\\s+[^.]+\\.' ai-ethics-final.ttl \\
         | grep -oE ':[A-Za-z]+' | grep -v '^:hasRisk$' | sort -u
 
-Source of the 12 mitigation-class values: every :TechnicalMeasure and
+Source of the 13 mitigation-class values: every :TechnicalMeasure and
 :OrganisationalMeasure subclass declared in ontology/ai-ethics-final.ttl
-(lines 166-180). No mitigation class is invented here; this table only
-recombines what already exists in the ontology.
+(the "MITIGATION SUBCLASSES" block). Twelve of these pre-existed; a
+thirteenth, :EnvironmentalSafeguard (an :OrganisationalMeasure), was added
+alongside this table specifically because none of the original 12
+plausibly addressed EnvironmentalHarm. Note: the ontology separately
+already had a class named :EnvironmentalImpactAssessment, but that one is
+a subclass of :AssessmentProcess (alongside :DPIAProcedure, :RiskAssessment,
+etc.) -- a process you carry out, not a mitigation measure you put in
+place. :EnvironmentalSafeguard was named to avoid colliding with that
+existing, semantically distinct class.
 
 Each risk category maps to a short, ordered list of mitigation classes
 (most-applicable first). A category maps to an empty list where none of the
@@ -78,13 +85,8 @@ RISK_TO_MITIGATION = {
     "Transparency":       [":GovernanceProcedure", ":AuditLog"],
     "Accountability":     [":AuditLog", ":GovernanceProcedure", ":EthicsReviewBoard"],
 
-    # --- Environmental risk: no existing mitigation class fits ---
-    # None of the 12 classes (all data-handling, fairness-process, or
-    # safety-oversight measures) plausibly address environmental impact.
-    # Leave unmapped rather than force a bad fit -- flag as an ontology gap
-    # in the dissertation update (Task 4.1), a legitimate small future-work
-    # item (a 13th class, e.g. :EnvironmentalImpactAssessment).
-    "EnvironmentalHarm":  [],
+    # --- Environmental risk ---
+    "EnvironmentalHarm":  [":EnvironmentalSafeguard"],
 }
 
 # Sanity checks a caller should run before using this table in Task 1.1 /
@@ -98,6 +100,7 @@ RISK_TO_MITIGATION = {
 #       ":AuditLog", ":StaffTraining", ":GovernanceProcedure",
 #       ":ComplaintMechanism", ":IncidentResponsePlan", ":EthicsReviewBoard",
 #       ":HumanOversight", ":ResponsibleReleasePolicy",
+#       ":EnvironmentalSafeguard",
 #   }
 #   for cats in RISK_TO_MITIGATION.values():
 #       assert set(cats) <= all_mitigation_classes, "unknown mitigation class used"

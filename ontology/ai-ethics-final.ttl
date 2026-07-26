@@ -178,6 +178,7 @@
 :EthicsReviewBoard rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
 :HumanOversight rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
 :ResponsibleReleasePolicy rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
+:EnvironmentalSafeguard rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
 
 # ===== ASSESSMENT PROCESS SUBCLASSES =====
 
