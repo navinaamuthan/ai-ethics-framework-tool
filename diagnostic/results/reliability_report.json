@@ -304,8 +304,8 @@
   "assessor_vs_gt": {
     "LLM-8B": {
       "n_proposals": 40,
-      "risk_kappa": 0.20948616600790512,
-      "rights_kappa": 0.5306052269601101
+      "risk_kappa": 0.12350597609561756,
+      "rights_kappa": 0.46161515453639085
     },
     "LLM-70B": {
       "n_proposals": 40,
@@ -331,10 +331,10 @@
         "assessor_a": "LLM-70B",
         "assessor_b": "LLM-8B",
         "kappa_a": 0.37682570593962994,
-        "kappa_b": 0.20948616600790512,
-        "gap": 0.16733953993172482,
+        "kappa_b": 0.12350597609561756,
+        "gap": 0.2533197298440124,
         "noise_band_1_minus_ceiling": 0.24929438016284677,
-        "verdict": "not_discriminable"
+        "verdict": "discriminable"
       },
       {
         "assessor_a": "LLM-70B",
@@ -357,18 +357,18 @@
       {
         "assessor_a": "LLM-8B",
         "assessor_b": "SHACL",
-        "kappa_a": 0.20948616600790512,
+        "kappa_a": 0.12350597609561756,
         "kappa_b": 0.15441176470588233,
-        "gap": 0.05507440130202279,
+        "gap": 0.030905788610264773,
         "noise_band_1_minus_ceiling": 0.24929438016284677,
         "verdict": "not_discriminable"
       },
       {
         "assessor_a": "LLM-8B",
         "assessor_b": "keyword-baseline",
-        "kappa_a": 0.20948616600790512,
+        "kappa_a": 0.12350597609561756,
         "kappa_b": 0.09262759924385637,
-        "gap": 0.11685856676404875,
+        "gap": 0.03087837685176119,
         "noise_band_1_minus_ceiling": 0.24929438016284677,
         "verdict": "not_discriminable"
       },
@@ -382,10 +382,10 @@
         "verdict": "not_discriminable"
       }
     ],
-    "n_discriminable": 1,
-    "n_not_discriminable": 5,
+    "n_discriminable": 2,
+    "n_not_discriminable": 4,
     "kill_condition_2_triggered": false,
-    "kill_condition_2_note": "Partial validity / floor-effect breakdown: 1 pair(s) discriminable, 5 not_discriminable (typically near-floor assessors whose gap < noise band). Accuracy-based ranking is valid for the discriminable pairs only."
+    "kill_condition_2_note": "Partial validity / floor-effect breakdown: 2 pair(s) discriminable, 4 not_discriminable (typically near-floor assessors whose gap < noise band). Accuracy-based ranking is valid for the discriminable pairs only."
   },
   "leave_one_out": {
     "n_reruns": 40,
@@ -405,7 +405,8 @@
   "kill_conditions": {
     "1_within_le_cross_risk": false,
     "2_all_gaps_within_noise_band": false,
-    "2_note": "Partial validity / floor-effect breakdown: 1 pair(s) discriminable, 5 not_discriminable (typically near-floor assessors whose gap < noise band). Accuracy-based ranking is valid for the discriminable pairs only.",
+    "2_note": "Partial validity / floor-effect breakdown: 2 pair(s) discriminable, 4 not_discriminable (typically near-floor assessors whose gap < noise band). Accuracy-based ranking is valid for the discriminable pairs only.",
     "3_property_suite": "evaluated in property_evaluator.py (Step 5)"
-  }
+  },
+  "week3_note": "LLM-8B assessments re-run post mitigation-taxonomy wiring (2026-07-26). LLM-70B assessments remain pre-mitigation-fix because Groq API was unreachable; interpret 70B rows as pre-fix baselines."
 }

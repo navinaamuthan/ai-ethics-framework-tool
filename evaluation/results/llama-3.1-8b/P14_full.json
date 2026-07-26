@@ -2,118 +2,295 @@
   "proposal_id": "P14",
   "mode": "full",
   "llm_backend": "ollama",
-  "timestamp": "2026-07-19T20:29:57.384690",
+  "timestamp": "2026-07-26T16:59:42.465012",
   "proposal_text": "This project aims to develop an NLP pipeline to assist researchers in conducting systematic literature reviews. The tool will automate the screening of academic paper abstracts against predefined inclusion and exclusion criteria, reducing the manual workload of the initial screening phase. The system will use pre-trained transformer models to classify abstracts as relevant or irrelevant based on researcher-defined criteria. The tool will be evaluated on a benchmark of three previously completed systematic reviews where human screening decisions are available as ground truth. All data consists of publicly available academic abstracts. The tool will provide a confidence score alongside each classification to guide manual verification. The researchers will open-source the tool for academic use. No personal data is involved at any stage.",
   "context_max_requirements": 25,
   "llm_model": "llama3.1:8b",
   "keywords": [
-    "data",
-    "personal data",
     "classif",
+    "personal data",
     "scor"
   ],
   "matched_rights": [
     "Art21_NonDiscrimination",
-    "Art41_GoodAdministration",
     "Art47_RightToEffectiveRemedy",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 164,
+  "retrieved_requirements_count": 114,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 51.0,
+      "tf": 51,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 35.0,
+      "tf": 35,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 17.0,
+      "tf": 17,
+      "df": 48
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 14.0,
+      "tf": 14,
+      "df": 26
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 15
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed NLP pipeline for systematic literature review assistance involves processing publicly available academic abstracts, but its potential impact on researchers' workload and efficiency may lead to biases in the classification process. The system's reliance on pre-trained transformer models raises concerns about data quality, model robustness, and potential security vulnerabilities.",
+    "risk_summary": "The proposed NLP pipeline for systematic literature reviews involves processing publicly available academic abstracts, but raises concerns about potential biases and fairness in the classification process. The system's reliance on pre-trained transformer models may perpetuate existing biases, and the lack of human oversight could exacerbate these issues.",
     "overall_risk_level": "Medium",
     "identified_risks": [
       {
-        "risk": "Bias in classification process due to reliance on pre-trained models",
+        "risk": "Bias in AI decision-making",
+        "risk_category": "Discrimination",
         "severity": "Medium",
-        "explanation": "The system's performance may be influenced by the quality of the pre-trained models, which could lead to biased results if not properly evaluated and mitigated."
+        "explanation": "The system's reliance on pre-trained transformer models may perpetuate existing biases, and the lack of human oversight could exacerbate these issues."
       },
       {
-        "risk": "Potential security vulnerabilities in model deployment",
-        "severity": "Low",
-        "explanation": "The system will provide a confidence score alongside each classification, but there is still a risk of data leakage or unauthorized access if proper security measures are not implemented."
+        "risk": "Lack of transparency in AI decision-making",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders."
       }
     ],
     "applicable_requirements": [
       {
         "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms (Mandatory)",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Discuss potential biases in the classification process and propose mitigation strategies"
+        "action_needed": "Conduct a thorough analysis of potential biases in the system's decision-making process and implement measures to mitigate these risks."
       },
       {
         "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate (Mandatory)",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Evaluate the system's performance on diverse datasets and propose strategies to mitigate potential biases"
+        "action_needed": "Regularly audit the system's performance for bias and implement measures to address any identified issues."
       },
       {
-        "requirement_id": "ACM010",
-        "requirement_text": "Design and implement systems that are robustly and usably secure — especially systems close to production deployment",
-        "framework": "ACMConference",
+        "requirement_id": "AI011",
+        "requirement_text": "Identify categories of natural persons and groups likely to be affected by the AI system in the specific context (Mandatory)",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement proper security measures to prevent data leakage or unauthorized access"
+        "action_needed": "Conduct a thorough analysis of the potential impact on different groups and individuals, including those with protected characteristics."
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The system's potential bias in classification may lead to discriminatory outcomes against certain groups of researchers."
+        "relevance": "The system's decision-making process may perpetuate existing biases and discriminate against certain groups or individuals."
       },
       {
-        "article": "Article 41",
-        "right_name": "Good Administration",
-        "relevance": "The system's reliance on pre-trained models may lead to inefficient or ineffective administration of research resources if not properly evaluated and mitigated."
+        "article": "Article 47",
+        "right_name": "RightToEffectiveRemedy",
+        "relevance": "The lack of transparency in the system's operation and decision-making process may limit the ability of affected parties to seek redress."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-001",
-        "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of evaluating and mitigating biases in AI systems, particularly those that may perpetuate discriminatory outcomes against certain groups."
-      },
-      {
         "incident_id": "AIAAIC-004",
         "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
-        "lesson": "The need for transparent and accountable AI decision-making processes to prevent biased outcomes, particularly in high-stakes applications such as law enforcement or hiring."
+        "lesson": "The importance of auditing AI systems for bias and implementing measures to address any identified issues."
+      },
+      {
+        "incident_id": "AIAAIC-008",
+        "incident_title": "PredPol Predictive Policing Algorithmic Bias",
+        "lesson": "The need for transparency in AI decision-making and the potential consequences of biased algorithms on marginalized communities."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Regularly evaluate the system's performance on diverse datasets and propose strategies to mitigate potential biases",
-        "priority": "High"
+        "mitigation": "Regular auditing and bias testing",
+        "mitigation_id": "AuditLog",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Implement proper security measures to prevent data leakage or unauthorized access",
-        "priority": "Medium"
+        "mitigation": "Human oversight and review",
+        "mitigation_id": "HumanOversight",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Discuss potential biases in the classification process and propose mitigation strategies",
-      "Evaluate the system's performance on diverse datasets and propose strategies to mitigate potential biases",
-      "Implement proper security measures to prevent data leakage or unauthorized access"
+      "Conduct a thorough analysis of potential biases in the system's decision-making process",
+      "Implement measures to mitigate these risks"
     ],
     "tier2_reflective_prompts": [
-      "How might the system's reliance on pre-trained models influence its performance and potential biases?",
-      "What steps can be taken to ensure that the system is transparent and accountable in its decision-making processes?"
+      "How can we ensure that our AI system is fair and unbiased?",
+      "What steps can we take to address any identified issues?"
     ],
     "reams_clearance_likely": true,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
-        "data",
-        "personal data",
         "classif",
+        "personal data",
         "scor"
       ],
-      "rights_matched": 5,
-      "requirements_retrieved": 164,
+      "rights_matched": 4,
+      "requirements_retrieved": 114,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM002",
         "ACM012",
@@ -148,89 +325,33 @@
         "R027",
         "R028",
         "R085",
-        "ACM016",
+        "ACM001",
         "ACM017",
-        "ACM018",
         "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
+        "ACM035",
         "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI008",
-        "AI009",
-        "AI010",
-        "AI012",
         "AI015",
+        "AI017",
         "AI018",
+        "AI019",
         "AI020",
+        "AI022",
         "AI026",
-        "AI027",
         "AI028",
-        "AI029",
         "AI030",
         "HE002",
-        "HE006",
-        "HE011",
-        "HE022",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE041",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM001",
-        "ACM035",
-        "AI017",
-        "AI019",
-        "AI022",
         "HE005",
+        "HE006",
+        "HE024",
+        "HE026",
         "HE027",
+        "HE028",
         "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
         "HE048",
+        "HE052",
         "R010",
         "R054",
         "R055",
@@ -270,9 +391,14 @@
         "R084",
         "ACM006",
         "ACM009",
+        "ACM016",
+        "AI012",
         "AI014",
         "HE010",
+        "HE011",
+        "HE034",
         "HE035",
+        "HE046",
         "R005",
         "R014",
         "R018",
@@ -281,6 +407,7 @@
         "R024",
         "R025",
         "R029",
+        "R030",
         "R031",
         "R033",
         "R063",
@@ -295,14 +422,14 @@
       "requirements_cited": [
         "ACM001",
         "ACM003",
-        "ACM010"
+        "AI011"
       ],
       "incidents_sample": [
         "AIAAIC-001",
         "AIAAIC-002",
         "AIAAIC-003",
-        "AIAAIC-022",
-        "AIAAIC-034"
+        "AIAAIC-004",
+        "AIAAIC-008"
       ]
     }
   }

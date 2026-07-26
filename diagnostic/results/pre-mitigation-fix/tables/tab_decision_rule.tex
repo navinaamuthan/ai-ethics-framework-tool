@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\caption{Decision rule: assessor-pair accuracy gaps vs noise band implied by the reliability ceiling.}
+\label{tab:decision_rule}
+\begin{tabular}{llccc}
+\toprule
+Pair & $\kappa_a$ & $\kappa_b$ & Gap & Verdict \\
+\midrule
+LLM-70B vs LLM-8B & 0.377 & 0.209 & 0.167 & not discriminable \\
+LLM-70B vs SHACL & 0.377 & 0.154 & 0.222 & not discriminable \\
+LLM-70B vs keyword-baseline & 0.377 & 0.093 & 0.284 & discriminable \\
+LLM-8B vs SHACL & 0.209 & 0.154 & 0.055 & not discriminable \\
+LLM-8B vs keyword-baseline & 0.209 & 0.093 & 0.117 & not discriminable \\
+SHACL vs keyword-baseline & 0.154 & 0.093 & 0.062 & not discriminable \\
+\bottomrule
+\end{tabular}
+\end{table}

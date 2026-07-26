@@ -1,11 +1,11 @@
 {
   "proposal_id": "P27",
   "mode": "full",
-  "llm_backend": "groq",
-  "timestamp": "2026-07-20T23:43:08.590165",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-26T17:18:16.323381",
   "proposal_text": "This Horizon Europe consortium proposes a multi-site study of gait-and-face biometrics to recognise patients with rare neurological disorders across clinics in Ireland, Germany, and Spain. The technical work package will train a multimodal recognition model on clinic video and release model checkpoints and a 'de-identified' embedding database under an open-science deliverable required by the grant agreement. A parallel ethics work package notes that the same system may qualify as high-risk biometric categorisation under the EU AI Act, triggering an Art.27-style fundamental-rights impact assessment (FRIA) and possibly restricting public release of embeddings. The consortium has not resolved whether open deliverables or FRIA containment wins when they conflict. Patient consent forms mention research use but not public model release. No independent FRIA has been completed before the first data freeze.",
-  "context_max_requirements": 10,
-  "llm_model": "llama-3.1-8b-instant",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "biometric",
     "patient",
@@ -112,140 +112,177 @@
       "df": 5
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "This multi-site study of gait-and-face biometrics for rare neurological disorders poses significant risks of PrivacyBreach, Accountability, PsychologicalHarm, Discrimination, and Dignity due to the processing of biometric data, potential for biased model outputs, and lack of transparency in model release.",
+    "risk_summary": "The proposed research involves the collection and analysis of biometric data, including gait-and-face recognition, which poses significant risks to individuals' privacy, dignity, and autonomy. The use of high-risk AI systems may also trigger a Fundamental Rights Impact Assessment (FRIA) under the EU AI Act. Furthermore, the open-science deliverable required by the grant agreement raises concerns about transparency and accountability.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
         "risk": "PrivacyBreach",
         "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "Processing of biometric data without explicit consent for public model release"
-      },
-      {
-        "risk": "Accountability",
-        "risk_category": "Accountability",
-        "severity": "High",
-        "explanation": "Lack of transparency in model release and potential for biased model outputs"
-      },
-      {
-        "risk": "PsychologicalHarm",
-        "risk_category": "PsychologicalHarm",
-        "severity": "High",
-        "explanation": "Potential for biased model outputs and lack of transparency in model release"
-      },
-      {
-        "risk": "Discrimination",
-        "risk_category": "Discrimination",
-        "severity": "High",
-        "explanation": "Potential for biased model outputs and lack of transparency in model release"
+        "explanation": "The collection and analysis of biometric data, including gait-and-face recognition, poses a significant risk to individuals' privacy."
       },
       {
         "risk": "Dignity",
         "risk_category": "Dignity",
         "severity": "High",
-        "explanation": "Processing of biometric data without explicit consent for public model release"
+        "explanation": "The use of high-risk AI systems may undermine human dignity through biased or discriminatory decision-making."
       },
       {
-        "risk": "Transparency",
-        "risk_category": "Transparency",
+        "risk": "Accountability",
+        "risk_category": "Accountability",
+        "severity": "Medium",
+        "explanation": "The open-science deliverable required by the grant agreement raises concerns about transparency and accountability."
+      },
+      {
+        "risk": "PsychologicalHarm",
+        "risk_category": "PsychologicalHarm",
         "severity": "High",
-        "explanation": "Lack of transparency in model release and potential for biased model outputs"
+        "explanation": "The use of high-risk AI systems may cause mental distress, manipulation, coercion, or emotional damage to individuals."
       },
       {
         "risk": "Surveillance",
         "risk_category": "Surveillance",
         "severity": "Medium",
-        "explanation": "Processing of biometric data for clinical purposes"
-      },
-      {
-        "risk": "FalseIdentification",
-        "risk_category": "FalseIdentification",
-        "severity": "Medium",
-        "explanation": "Potential for facial-recognition false matches with consequential harm"
+        "explanation": "The collection and analysis of biometric data raises concerns about pervasive or disproportionate observation, tracking, or monitoring of individuals."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
-        "framework": "ACMConference",
+        "requirement_id": "ACM001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct thorough risk assessment and mitigation plan"
+        "action_needed": "Conduct a FRIA if required by the EU AI Act."
       },
       {
-        "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
-        "framework": "ACMConference",
+        "requirement_id": "ACM008",
+        "requirement_text": "State the intended purpose of the AI system",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement bias mitigation techniques and conduct fairness evaluation"
+        "action_needed": "Clearly state the intended purpose of the AI system in the research proposal."
       },
       {
-        "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
-        "framework": "ACMConference",
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain explicit consent for biometric data processing and implement robust data protection measures"
-      },
-      {
-        "requirement_id": "ACM009",
-        "requirement_text": "Access computing and communication resources only when authorised or compelled by public good",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure authorised access to computing resources and implement robust access controls"
+        "action_needed": "Conduct a FRIA if required by the EU AI Act."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 1",
-        "right_name": "HumanDignity",
-        "relevance": "Processing of biometric data without explicit consent for public model release"
+        "article": "Article 7 PrivateLife",
+        "right_name": "Right to Privacy",
+        "relevance": "The collection and analysis of biometric data raises concerns about individuals' right to privacy."
       },
       {
-        "article": "Article 7",
-        "right_name": "PrivateLife",
-        "relevance": "Processing of biometric data for clinical purposes"
-      },
-      {
-        "article": "Article 8",
-        "right_name": "DataProtection",
-        "relevance": "Processing of biometric data without explicit consent for public model release"
+        "article": "Article 8 DataProtection",
+        "right_name": "Data Protection",
+        "relevance": "The use of high-risk AI systems may undermine human dignity through biased or discriminatory decision-making, which is protected by the EU's General Data Protection Regulation (GDPR)."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-017",
         "incident_title": "IBM Watson Oncology Unsafe Recommendations",
-        "lesson": "Implement robust bias mitigation techniques and conduct thorough risk assessment"
+        "lesson": "The use of high-risk AI systems can lead to physical harm and accountability issues if not properly designed and deployed."
       },
       {
-        "incident_id": "AIAAIC-043",
-        "incident_title": "NHS UK Sepsis Algorithm Racial Bias",
-        "lesson": "Implement fairness evaluation and bias mitigation techniques"
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "Social media platforms can amplify hate speech, leading to physical harm and discrimination against marginalized groups."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement robust bias mitigation techniques and conduct thorough risk assessment",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Obtain explicit consent for biometric data processing and implement robust data protection measures",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Implement fairness evaluation and bias mitigation techniques",
-        "priority": "Medium"
+        "mitigation": "AccessControl",
+        "mitigation_id": "Access Control",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct thorough risk assessment and mitigation plan",
-      "Implement bias mitigation techniques and conduct fairness evaluation"
+      "Conduct a FRIA if required by the EU AI Act.",
+      "Clearly state the intended purpose of the AI system in the research proposal."
     ],
     "tier2_reflective_prompts": [
-      "What are the potential consequences of biased model outputs?",
-      "How can we ensure transparency in model release?"
+      "What measures will be taken to ensure transparency and accountability in the open-science deliverable?",
+      "How will the use of high-risk AI systems be justified and monitored?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -258,6 +295,21 @@
       "rights_matched": 5,
       "requirements_retrieved": 110,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM001",
         "ACM002",
@@ -383,10 +435,9 @@
         "R074"
       ],
       "requirements_cited": [
-        "ACM002",
-        "ACM003",
-        "ACM006",
-        "ACM009"
+        "ACM001",
+        "ACM008",
+        "AI001"
       ],
       "incidents_sample": [
         "AIAAIC-003",

@@ -1,0 +1,313 @@
+{
+  "proposal_id": "P28",
+  "mode": "full",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-21T00:02:45.538339",
+  "proposal_text": "This research proposes a Spanish-language LLM chatbot that guides Bogotá residents through business-permit and construction-licence applications. The bot classifies query intent, retrieves municipal code passages, and drafts application forms. In a pilot ward, incomplete answers that the bot labels 'likely ineligible' will auto-close the digital ticket without human review to reduce backlog. Residents with limited literacy or non-standard Spanish dialects may be disproportionately auto-closed. Conversation logs retain national ID numbers entered into forms. The city asserts the bot is 'advisory only,' yet ticket closure has the practical effect of a refusal. No administrative-appeal pathway specific to bot closures is described.",
+  "context_max_requirements": 12,
+  "llm_model": "llama3.1:8b",
+  "keywords": [
+    "administrative",
+    "chatbot",
+    "classif"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity"
+  ],
+  "retrieved_requirements_count": 47,
+  "retrieved_incidents_count": 3,
+  "retrieved_risk_categories": [
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 24.0,
+      "tf": 24,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 14.0,
+      "tf": 14,
+      "df": 26
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "DualUseMisuse",
+      "label": "Dual-Use Misuse",
+      "definition": "Risk that research or AI outputs intended for beneficial purposes are repurposed for harmful applications.",
+      "idf_score": 4.912,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 9
+    },
+    {
+      "id": "Deception",
+      "label": "Deception",
+      "definition": "Risk that an AI system misleads users about its nature, capabilities, or the provenance of its outputs.",
+      "idf_score": 4.442,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 15
+    },
+    {
+      "id": "EconomicHarm",
+      "label": "Economic Harm",
+      "definition": "Risk of systemic or population-level economic disadvantage caused by AI systems (distinct from individual FinancialHarm).",
+      "idf_score": 4.6497,
+      "rank_score": 5.0,
+      "tf": 5,
+      "df": 12
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The proposed Spanish-language LLM chatbot for Bogotá residents poses risks to human dignity, psychological harm, and accountability due to its potential to auto-close digital tickets without human review, disproportionately affecting vulnerable groups. The system's retention of national ID numbers and lack of administrative-appeal pathway also raise concerns.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Auto-closure of digital tickets without human review",
+        "risk_category": "Dignity",
+        "severity": "High",
+        "explanation": "The system's auto-closure feature may lead to the denial of services to residents, undermining their dignity."
+      },
+      {
+        "risk": "Disproportionate impact on vulnerable groups",
+        "risk_category": "Dignity",
+        "severity": "High",
+        "explanation": "Residents with limited literacy or non-standard Spanish dialects may be disproportionately affected by the auto-closure feature."
+      },
+      {
+        "risk": "Retention of national ID numbers",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The system's retention of national ID numbers raises concerns about data protection and privacy."
+      },
+      {
+        "risk": "Lack of administrative-appeal pathway",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "The absence of a clear appeal process for bot closures may lead to accountability issues and undermine trust in the system."
+      },
+      {
+        "risk": "Potential for psychological harm due to auto-closure",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Medium",
+        "explanation": "The auto-closure feature may cause stress, anxiety, or other forms of psychological harm to residents who are affected by it."
+      },
+      {
+        "risk": "Transparency concerns regarding system operation and decision-making",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The system's lack of transparency about its operation, capabilities, and decision-making processes may lead to mistrust among users."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment and mitigation plan to address the potential harms of the system."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement measures to prevent harm and ensure that the system operates in a way that respects human dignity and well-being."
+      },
+      {
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system) (Mandatory)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a risk assessment to determine if the deployment of this system requires a FRIA."
+      },
+      {
+        "requirement_id": "AI008",
+        "requirement_text": "State the intended purpose of the AI system (Mandatory)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Clearly articulate the intended purpose and use of the system to ensure transparency and accountability."
+      },
+      {
+        "requirement_id": "AI010",
+        "requirement_text": "Describe the intended use — specific deployment scenarios distinct from intended purpose (Mandatory)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Provide a detailed description of the system's intended use and deployment scenarios to ensure transparency and accountability."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 1",
+        "right_name": "HumanDignity",
+        "relevance": "The system's potential to auto-close digital tickets without human review may undermine the dignity of residents who are affected by it."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The incident highlights the importance of ensuring that AI systems operate in a way that respects human dignity and well-being."
+      },
+      {
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "The incident demonstrates the need for careful consideration of the potential biases and harms associated with AI systems."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement a clear appeal process for bot closures to ensure accountability and transparency.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct regular audits and risk assessments to identify potential harms and mitigate them.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough risk assessment and mitigation plan",
+      "Implement measures to prevent harm"
+    ],
+    "tier2_reflective_prompts": [
+      "How can the system be designed to minimize the risk of auto-closure?",
+      "What measures can be taken to ensure that the system operates in a way that respects human dignity and well-being?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "administrative",
+        "chatbot",
+        "classif"
+      ],
+      "rights_matched": 1,
+      "requirements_retrieved": 47,
+      "incidents_retrieved": 3,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE019",
+        "HE021",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE042",
+        "HE049",
+        "HE050",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "AI001",
+        "AI008",
+        "AI010"
+      ],
+      "incidents_sample": [
+        "AIAAIC-003",
+        "AIAAIC-005",
+        "AIAAIC-009"
+      ]
+    }
+  }
+}

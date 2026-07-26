@@ -2,9 +2,9 @@
   "proposal_id": "P25",
   "mode": "full",
   "llm_backend": "ollama",
-  "timestamp": "2026-07-20T23:54:29.873301",
+  "timestamp": "2026-07-26T17:15:18.632117",
   "proposal_text": "This research proposes an Arabic-dialect NLP classifier to detect extremist recruitment and glorification of violence on public Telegram channels and X/Twitter accounts across Egypt, Jordan, and Morocco. Training data mix annotated jihadist propaganda with posts from secular activists, Islamist electoral campaigns, and satire. The classifier will output a risk score used by platform trust-and-safety teams to prioritise human review; scores above 0.85 will auto-suspend accounts for 48 hours pending review. Civil-society partners warn that dialectal sarcasm and anti-regime protest slogans are frequently mislabelled. The team plans open-source release of the model weights. No engagement with journalists' unions or minority-rights groups is scheduled. Whether Art.11 freedom of expression or public-security limitations should dominate the rights analysis is deliberately left open in the protocol—experts disagree.",
-  "context_max_requirements": 12,
+  "context_max_requirements": 25,
   "llm_model": "llama3.1:8b",
   "keywords": [
     "classif",
@@ -116,126 +116,171 @@
       "df": 5
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed research on an Arabic-dialect NLP classifier to detect extremist recruitment and glorification of violence on public Telegram channels and X/Twitter accounts across Egypt, Jordan, and Morocco poses significant ethical risks due to its potential impact on freedom of expression, discrimination, and privacy. The use of annotated jihadist propaganda in the training data may lead to biased results, while the auto-suspension of accounts based on risk scores above 0.85 raises concerns about accountability and transparency.",
+    "risk_summary": "The proposed research involves developing an Arabic-dialect NLP classifier to detect extremist recruitment and glorification of violence on public social media platforms. The classifier will output a risk score used by platform trust-and-safety teams to prioritize human review, which may lead to account suspension. This raises concerns about the potential for biased or discriminatory outcomes, particularly given the use of annotated jihadist propaganda in the training data.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Biased classification leading to discrimination against certain groups",
+        "risk": "Discrimination",
         "risk_category": "Discrimination",
         "severity": "High",
-        "explanation": "The use of annotated jihadist propaganda in the training data may lead to biased results, which could discriminate against certain groups."
+        "explanation": "The use of annotated jihadist propaganda in the training data may lead to biased or discriminatory outcomes, particularly against certain religious or ethnic groups."
       },
       {
-        "risk": "Auto-suspension of accounts without adequate transparency and accountability mechanisms",
-        "risk_category": "Accountability",
-        "severity": "High",
-        "explanation": "The auto-suspension of accounts based on risk scores above 0.85 raises concerns about accountability and transparency."
-      },
-      {
-        "risk": "Potential for biased classification leading to psychological harm",
-        "risk_category": "PsychologicalHarm",
+        "risk": "PsychologicalHarm",
+        "risk_category": "Psychological Harm",
         "severity": "Medium",
-        "explanation": "The use of annotated jihadist propaganda in the training data may lead to biased results, which could cause psychological harm to individuals or groups."
+        "explanation": "The classifier's output may cause mental distress or emotional damage to individuals who are incorrectly flagged as extremist recruiters."
       },
       {
-        "risk": "Risk of unauthorised collection and processing of personal data",
-        "risk_category": "PrivacyBreach",
+        "risk": "FalseIdentification",
+        "risk_category": "False Identification",
         "severity": "High",
-        "explanation": "The classifier will output a risk score used by platform trust-and-safety teams to prioritise human review, which may involve the collection and processing of personal data without adequate consent."
+        "explanation": "The use of dialectal sarcasm and anti-regime protest slogans in the training data may lead to incorrect identification of individuals or groups."
       },
       {
-        "risk": "Potential for biased classification leading to reputational harm",
-        "risk_category": "ReputationalHarm",
+        "risk": "Transparency",
+        "risk_category": "Transparency",
         "severity": "Medium",
-        "explanation": "The use of annotated jihadist propaganda in the training data may lead to biased results, which could damage the reputation of individuals or groups."
-      },
-      {
-        "risk": "Risk of biased classification leading to financial harm",
-        "risk_category": "FinancialHarm",
-        "severity": "Low",
-        "explanation": "The auto-suspension of accounts based on risk scores above 0.85 may lead to financial loss for affected individuals or groups."
+        "explanation": "The classifier's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms (Mandatory)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the potential risks and benefits of the classifier and develop strategies to mitigate any negative impacts."
-      },
-      {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm (Mandatory)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment to identify potential harms and develop strategies to mitigate them."
-      },
-      {
-        "requirement_id": "EU001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system) (Mandatory)",
+        "requirement_id": "AI017",
+        "requirement_text": "Reference instructions for use provided by the AI system provider",
         "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Determine whether the classifier constitutes a high-risk AI system and, if so, conduct a FRIA."
+        "action_needed": "Provide clear instructions on how to use the classifier and its limitations."
       },
       {
-        "requirement_id": "ACM017",
-        "requirement_text": "Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained (Mandatory)",
-        "framework": "ACMConference",
+        "requirement_id": "HE002",
+        "requirement_text": "AI system must not autonomously make decisions about fundamental personal, economic, social or political issues normally decided by humans, without human oversight and redress",
+        "framework": "HorizonEurope",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain explicit consent from individuals whose data is used in the training dataset or provide a clear explanation for why consent was not obtained."
+        "action_needed": "Ensure that the classifier's output is reviewed and validated by human experts before any action is taken."
       },
       {
-        "requirement_id": "ACM028",
-        "requirement_text": "Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics (Mandatory)",
-        "framework": "ACMConference",
+        "requirement_id": "AI016",
+        "requirement_text": "Specify measures to be taken if risks materialise — internal governance arrangements and complaint mechanisms",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the classifier's performance and identify any potential biases or limitations."
+        "action_needed": "Establish clear procedures for addressing any issues or complaints related to the classifier's output."
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 11",
         "right_name": "FreedomOfExpression",
-        "relevance": "The auto-suspension of accounts based on risk scores above 0.85 may infringe upon the right to freedom of expression."
+        "relevance": "The classifier may inadvertently restrict freedom of expression by incorrectly flagging certain individuals or groups as extremist recruiters."
       },
       {
         "article": "Article 21",
         "right_name": "NonDiscrimination",
-        "relevance": "The use of annotated jihadist propaganda in the training data may lead to biased results, which could discriminate against certain groups."
+        "relevance": "The use of annotated jihadist propaganda in the training data may lead to biased or discriminatory outcomes, particularly against certain religious or ethnic groups."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-018",
-        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
-        "lesson": "The incident highlights the potential for AI systems to amplify hate speech and discrimination."
-      },
-      {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The incident demonstrates the potential for biased classification leading to discrimination against certain groups."
+        "lesson": "The importance of ensuring that AI systems are fair and unbiased, particularly in high-stakes applications like hiring."
+      },
+      {
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The need for transparent and explainable AI decision-making processes to prevent biased outcomes."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement transparent and explainable AI decision-making processes.",
-        "priority": "High"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "Human Oversight",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct regular audits and monitoring of the classifier's performance to identify any potential biases or limitations.",
-        "priority": "Medium"
+        "mitigation": "ComplaintMechanism",
+        "mitigation_id": "Complaint Mechanism",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Obtain explicit consent from individuals whose data is used in the training dataset",
-      "Conduct a thorough risk assessment to identify potential harms and develop strategies to mitigate them"
+      "Conduct a thorough risk assessment and impact analysis of the classifier's output.",
+      "Establish clear procedures for addressing any issues or complaints related to the classifier's output."
     ],
     "tier2_reflective_prompts": [
-      "What are the potential long-term consequences of using biased classification?",
-      "How can we ensure that the classifier does not perpetuate existing social biases?"
+      "What are the potential consequences of biased or discriminatory outcomes from the classifier?",
+      "How can we ensure that the classifier is fair and unbiased, particularly in high-stakes applications like social media moderation?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -253,6 +298,21 @@
       "rights_matched": 4,
       "requirements_retrieved": 60,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM020",
         "ACM025",
@@ -328,11 +388,9 @@
         "R082"
       ],
       "requirements_cited": [
-        "ACM001",
-        "ACM002",
-        "EU001",
-        "ACM017",
-        "ACM028"
+        "AI017",
+        "HE002",
+        "AI016"
       ],
       "incidents_sample": [
         "AIAAIC-014",

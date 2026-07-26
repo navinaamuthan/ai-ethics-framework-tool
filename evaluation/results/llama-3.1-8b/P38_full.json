@@ -1,11 +1,11 @@
 {
   "proposal_id": "P38",
   "mode": "full",
-  "llm_backend": "groq",
-  "timestamp": "2026-07-20T23:39:21.784584",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-26T17:33:52.591285",
   "proposal_text": "This research builds a classifier that flags potentially entrapment-related profiles and messages on a dating app used by LGBTQ+ people in jurisdictions where same-sex intimacy is criminalised. Flagged chats are queued for voluntary user warnings; the app does not notify police. False positives may chill legitimate intimate speech (Art.11 / private life); false negatives may enable harm. Community advisory board members disagree whether the dominant frame is safety, expression, privacy, or non-discrimination. Training labels come from moderator decisions in EU markets and may not transfer. The proposal leaves the primary Charter article intentionally under-determined.",
   "context_max_requirements": 25,
-  "llm_model": "llama-3.1-8b-instant",
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "classif",
     "criminal",
@@ -121,123 +121,160 @@
       "df": 5
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "individual_treatment→Art21",
   "assessment": {
-    "risk_summary": "This research proposal involves the development of a classifier that flags potentially entrapment-related profiles and messages on a dating app used by LGBTQ+ people in jurisdictions where same-sex intimacy is criminalised. The flagged chats are queued for voluntary user warnings, but the proposal does not address the potential risks of false positives or false negatives. The classifier may also perpetuate biases and discrimination against the LGBTQ+ community.",
+    "risk_summary": "This research proposal involves developing a classifier to flag potentially entrapment-related profiles and messages on a dating app used by LGBTQ+ people in jurisdictions where same-sex intimacy is criminalised, raising concerns about privacy breaches, discrimination, and psychological harm.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Discrimination against the LGBTQ+ community",
-        "risk_category": "Discrimination",
-        "severity": "High",
-        "explanation": "The classifier may perpetuate biases and discrimination against the LGBTQ+ community, particularly if the training data is not diverse and representative."
-      },
-      {
-        "risk": "False positives and false negatives",
-        "risk_category": "PsychologicalHarm",
-        "severity": "High",
-        "explanation": "The classifier may flag innocent users as potentially entrapment-related, leading to psychological harm and chilling of legitimate intimate speech."
-      },
-      {
-        "risk": "Lack of transparency and accountability",
-        "risk_category": "Accountability",
-        "severity": "High",
-        "explanation": "The proposal does not address the need for transparency and accountability in the classifier's decision-making process, which may lead to a lack of trust and confidence in the system."
-      },
-      {
-        "risk": "Potential for data breaches and privacy violations",
+        "risk": "PrivacyBreach",
         "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "The proposal does not address the need for robust data protection and privacy measures to prevent data breaches and violations."
+        "explanation": "The proposal involves processing personal data of LGBTQ+ individuals, which may lead to unauthorized collection, processing, or disclosure of sensitive information."
+      },
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The classifier may perpetuate biases against marginalized groups, leading to unfair differential treatment and potential harm to individuals."
+      },
+      {
+        "risk": "PsychologicalHarm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Medium",
+        "explanation": "False positives or negatives in the classifier's output may cause emotional distress or manipulation of users, particularly those from vulnerable groups."
       }
     ],
     "applicable_requirements": [
       {
         "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms.",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Discuss the potential risks of the classifier and propose mitigation strategies to address them."
+        "action_needed": "Conduct a thorough risk assessment and mitigation plan to address potential harms."
       },
       {
         "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm.",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Consider the potential harm that the classifier may cause and propose mitigation strategies to address it."
+        "action_needed": "Implement robust data protection measures and ensure transparency in the classifier's operation."
       },
       {
-        "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "requirement_id": "ACM023",
+        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access.",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Consider the potential biases in the classifier and propose mitigation strategies to address them."
-      },
-      {
-        "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Propose robust data protection and privacy measures to prevent data breaches and violations."
+        "action_needed": "Regularly audit the classifier for potential biases and ensure that it does not perpetuate discriminatory practices."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 21",
-        "right_name": "Non-Discrimination",
-        "relevance": "The classifier may perpetuate biases and discrimination against the LGBTQ+ community."
-      },
-      {
         "article": "Article 7",
-        "right_name": "Private Life",
-        "relevance": "The classifier may flag innocent users as potentially entrapment-related, leading to a chilling of legitimate intimate speech."
+        "right_name": "RightToLiberty",
+        "relevance": "The proposal may infringe upon individuals' right to liberty by potentially subjecting them to unfair treatment or discrimination."
       },
       {
         "article": "Article 8",
-        "right_name": "Data Protection",
-        "relevance": "The proposal does not address the need for robust data protection and privacy measures to prevent data breaches and violations."
+        "right_name": "DataProtection",
+        "relevance": "The classifier's operation and data collection practices may raise concerns about the protection of personal data and individual privacy."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-001",
-        "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of considering and addressing biases in AI systems."
-      },
-      {
         "incident_id": "AIAAIC-004",
         "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
-        "lesson": "The importance of considering and addressing biases in AI systems."
-      },
-      {
-        "incident_id": "AIAAIC-018",
-        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
-        "lesson": "The importance of considering and addressing the potential for AI systems to amplify hate speech and discrimination."
+        "lesson": "The importance of regular auditing and testing for biases in AI systems, particularly those that may perpetuate discriminatory practices."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Diverse and representative training data",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Robust data protection and privacy measures",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Transparency and accountability in decision-making process",
-        "priority": "High"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Discuss the potential risks of the classifier and propose mitigation strategies to address them.",
-      "Consider the potential harm that the classifier may cause and propose mitigation strategies to address it.",
-      "Consider the potential biases in the classifier and propose mitigation strategies to address them."
+      "Conduct a thorough risk assessment and mitigation plan",
+      "Implement robust data protection measures"
     ],
     "tier2_reflective_prompts": [
-      "How can we ensure that the classifier is fair and non-discriminatory?",
-      "What are the potential consequences of false positives and false negatives?",
-      "How can we ensure that the classifier is transparent and accountable in its decision-making process?"
+      "How will the classifier be audited for potential biases?",
+      "What measures will be taken to ensure transparency in the classifier's operation?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -256,6 +293,21 @@
       "rights_matched": 8,
       "requirements_retrieved": 142,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM001",
         "ACM002",
@@ -415,8 +467,7 @@
       "requirements_cited": [
         "ACM001",
         "ACM002",
-        "ACM003",
-        "ACM006"
+        "ACM023"
       ],
       "incidents_sample": [
         "AIAAIC-003",

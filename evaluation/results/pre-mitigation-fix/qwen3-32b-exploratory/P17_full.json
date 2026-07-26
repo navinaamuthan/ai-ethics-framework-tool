@@ -1,0 +1,440 @@
+{
+  "proposal_id": "P17",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-06T00:11:07.691456",
+  "proposal_text": "This research proposes to develop an NLP classifier to detect extremist recruitment content on social media platforms including Telegram, Twitter/X, and encrypted messaging forums. The classifier will be trained on a dataset of 20,000 annotated posts collected from known extremist channels alongside 20,000 non-extremist posts covering political activism, religious discussion, and protest organisation. The system must distinguish between legitimate political expression and genuine incitement to violence. The training data includes content in English, Arabic, and Irish. The researchers acknowledge the dual-use risk that the classifier could be repurposed for political censorship or suppression of minority viewpoints by authoritarian actors. The tool will be developed as open-source software. No content moderation decisions will be automated. The research does not include engagement with affected communities or civil liberties organisations in the design process.",
+  "context_max_requirements": 22,
+  "llm_model": "qwen/qwen3-32b",
+  "keywords": [
+    "data",
+    "minor",
+    "recruit",
+    "classif",
+    "minority",
+    "dual-use",
+    "content moder",
+    "social media"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art15_FreedomOfOccupation",
+    "Art1_HumanDignity",
+    "Art21_NonDiscrimination",
+    "Art22_CulturalDiversity",
+    "Art24_RightsOfChild",
+    "Art2_RightToLife",
+    "Art41_GoodAdministration",
+    "Art47_RightToEffectiveRemedy",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 191,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The research poses significant ethical risks due to its potential misuse for political censorship, bias in distinguishing extremist vs. legitimate political content, and lack of safeguards against deployment by authoritarian regimes. The open-source nature of the tool increases dual-use risks, while the training data may inadvertently expose personal information or perpetuate biases. The absence of community engagement exacerbates concerns about fairness and accountability.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Dual-use risk of the classifier being repurposed for political censorship or suppression of minority viewpoints",
+        "severity": "High",
+        "explanation": "Open-source deployment without safeguards could enable authoritarian actors to misuse the tool for content suppression, as seen in precedents like AIAAIC-018."
+      },
+      {
+        "risk": "Bias in classification between extremist and legitimate political content",
+        "severity": "High",
+        "explanation": "The system may disproportionately flag non-extremist political discourse, risking suppression of protected speech (Article 11) and violating Article 21 non-discrimination principles."
+      },
+      {
+        "risk": "Privacy violations from processing social media content",
+        "severity": "Medium",
+        "explanation": "Training data includes user-generated content without explicit consent for repurposing, raising concerns under ACM016 and Article 8 data protection requirements."
+      },
+      {
+        "risk": "Lack of community engagement in design process",
+        "severity": "Medium",
+        "explanation": "Exclusion of civil liberties organizations and affected communities increases risk of unintended harms, as highlighted in ACM011 and ACM015 requirements."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement safeguards against misuse in open-source distribution"
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct bias audits across political and cultural contexts"
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Anonymize training data and verify consent status of source content"
+      },
+      {
+        "requirement_id": "ACM021",
+        "requirement_text": "Consider whether technology can be used to harm through misuse",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Add watermarking or licensing restrictions to prevent authoritarian adoption"
+      },
+      {
+        "requirement_id": "ACM023",
+        "requirement_text": "Consider risks of discrimination or exclusion",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Validate classifier performance across marginalized groups"
+      },
+      {
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of system risks",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Publish third-party audit of false positive/negative rates"
+      },
+      {
+        "requirement_id": "ACM015",
+        "requirement_text": "Follow institutional ethics protocols for human participants",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Submit for formal ethics review by TCD REAMS committee"
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Ameliorate biases in data and model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement adversarial debiasing techniques for training data"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 11",
+        "right_name": "Freedom of Expression",
+        "relevance": "Classifier may suppress legitimate political discourse if thresholds are misapplied"
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Respect for Private Life",
+        "relevance": "Processing of social media content risks exposing personal communications"
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "Training data may contain PII without explicit consent as required by GDPR"
+      },
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "Biases in training data could lead to disproportionate flagging of minority viewpoints"
+      },
+      {
+        "article": "Article 22",
+        "right_name": "Cultural Diversity",
+        "relevance": "Language-specific models may fail to account for cultural context in Irish and Arabic content"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-014",
+        "incident_title": "YouTube Recommendation Radicalisation",
+        "lesson": "Content moderation systems can inadvertently amplify extremist content through feedback loops"
+      },
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "Lack of cultural context in moderation tools can enable targeted suppression of minority voices"
+      },
+      {
+        "incident_id": "AIAAIC-021",
+        "incident_title": "HireVue Automated Video Interview Bias",
+        "lesson": "Biases in training data can lead to discriminatory outcomes even with technical accuracy"
+      },
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "Open-source AI tools can be repurposed for harmful applications without safeguards"
+      },
+      {
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "Lack of diverse training data leads to discriminatory outputs"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Establish a governance board with civil liberties experts to oversee deployment",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement dynamic consent mechanisms for training data sources",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Add explainability features to classification decisions for human review",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Conduct longitudinal impact assessment with affected communities",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Formal ethics review by TCD REAMS committee",
+      "Anonymization of training data per ACM016",
+      "Bias audit with public reporting",
+      "Implementation of usage controls in open-source distribution"
+    ],
+    "tier2_reflective_prompts": [
+      "How might cultural context affect interpretation of 'extremist' content in Irish and Arabic datasets?",
+      "What long-term societal impacts could arise from automated classification of political speech?",
+      "Should the tool include opt-out mechanisms for content creators?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "minor",
+        "recruit",
+        "classif",
+        "minority",
+        "dual-use",
+        "content moder",
+        "social media"
+      ],
+      "rights_matched": 11,
+      "requirements_retrieved": 191,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM024",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE049",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "ACM012",
+        "ACM023",
+        "ACM028",
+        "AI016",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R028",
+        "R085",
+        "R043",
+        "R044",
+        "R045",
+        "R055",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI009",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE011",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM035",
+        "AI019",
+        "AI022",
+        "HE029",
+        "HE048",
+        "R074",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073"
+      ],
+      "requirements_cited": [
+        "ACM002",
+        "ACM003",
+        "ACM006",
+        "ACM021",
+        "ACM023",
+        "ACM007",
+        "ACM015",
+        "ACM004"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-015",
+        "AIAAIC-021"
+      ]
+    }
+  }
+}

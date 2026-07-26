@@ -1,0 +1,47 @@
+{
+  "results": [
+    {
+      "id": "P01",
+      "risk_level": "High",
+      "n_mits": 2,
+      "n_from_taxonomy": 2,
+      "retrieved_n": 13,
+      "overall": "High"
+    },
+    {
+      "id": "P06",
+      "risk_level": "High",
+      "n_mits": 2,
+      "n_from_taxonomy": 2,
+      "retrieved_n": 13,
+      "overall": "High"
+    },
+    {
+      "id": "P09",
+      "risk_level": "Medium",
+      "n_mits": 2,
+      "n_from_taxonomy": 2,
+      "retrieved_n": 13,
+      "overall": "High"
+    },
+    {
+      "id": "P12",
+      "risk_level": "Medium",
+      "n_mits": 2,
+      "n_from_taxonomy": 2,
+      "retrieved_n": 13,
+      "overall": "High"
+    },
+    {
+      "id": "P15",
+      "risk_level": "Low",
+      "n_mits": 2,
+      "n_from_taxonomy": 2,
+      "retrieved_n": 5,
+      "overall": "MEDIUM"
+    }
+  ],
+  "from_taxonomy_frac": 1.0,
+  "from_tax": 10,
+  "total": 10
+}

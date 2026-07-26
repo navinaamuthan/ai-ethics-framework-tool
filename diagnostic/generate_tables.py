@@ -151,6 +151,33 @@ Assessor & Stability & Traceability & Edit size & Collateral & Compreh. \\
     write("tab_property_scores.tex", body)
 
 
+def tab_consistency(cons: dict) -> None:
+    rows = []
+    for cfg in cons.get("configurations") or []:
+        rows.append(
+            f"{cfg['config']} & {cfg['n_risks']} & "
+            f"{_fmt(cfg.get('has_requirement_frac'), 3)} & "
+            f"{_fmt(cfg.get('has_mitigation_frac'), 3)} & "
+            f"{_fmt(cfg.get('mitigation_category_match_frac'), 3)} \\\\"
+        )
+    body = r"""
+\begin{table}[htbp]
+\centering
+\caption{Assessment consistency-check rates (fraction of identified risks).
+Shapes: requirement citation, mitigation present, mitigation matches risk-category rule table.}
+\label{tab:consistency_check}
+\begin{tabular}{lcccc}
+\toprule
+Configuration & $n$ risks & Has req. & Has mit. & Category match \\
+\midrule
+""" + "\n".join(rows) + r"""
+\bottomrule
+\end{tabular}
+\end{table}
+"""
+    write("tab_consistency_check.tex", body)
+
+
 def main() -> None:
     rel = json.loads((RESULTS / "reliability_report.json").read_text())
     tab_reliability_headline(rel)
@@ -168,6 +195,14 @@ def main() -> None:
         tab_properties(json.loads(prop_path.read_text()))
     else:
         print("SKIP property tables — report missing")
+
+    cons_path = ROOT.parent / "shacl" / "consistency_check_report_8b_post.json"
+    if not cons_path.exists():
+        cons_path = ROOT.parent / "shacl" / "consistency_check_report.json"
+    if cons_path.exists():
+        tab_consistency(json.loads(cons_path.read_text()))
+    else:
+        print("SKIP consistency tables — report missing")
 
     print("Headline figures (copy into prose if needed):")
     print("  within_risk", rel["headline_test"]["within_risk"]["mean"])

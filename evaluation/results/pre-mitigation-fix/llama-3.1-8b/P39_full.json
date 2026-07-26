@@ -1,0 +1,362 @@
+{
+  "proposal_id": "P39",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-20T23:44:40.986611",
+  "proposal_text": "This project scores neighbourhoods in a coastal EU city for 'climate-migration pressure' using flood models, housing tenure, and demographic composition, to prioritise adaptation spending. Scores are public. Housing advocates warn publication will accelerate insurance retreat and stigmatise migrant-heavy districts; planners argue transparency is required for democratic budgeting. Whether Art.21 non-discrimination, Art.37 environment, Art.1 dignity, or primarily environmental policy applies is contested. No individual decisions are automated. The demographic features make disparate neighbourhood effects likely.",
+  "context_max_requirements": 10,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "environment",
+    "scor",
+    "discriminat",
+    "polic",
+    "transparen"
+  ],
+  "matched_rights": [
+    "Art21_NonDiscrimination",
+    "Art37_EnvironmentalProtection",
+    "Art47_RightToEffectiveRemedy"
+  ],
+  "retrieved_requirements_count": 59,
+  "retrieved_incidents_count": 5,
+  "retrieved_risk_categories": [
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 23.0,
+      "tf": 23,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 13.0,
+      "tf": 13,
+      "df": 48
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 26
+    },
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 77
+    },
+    {
+      "id": "EnvironmentalHarm",
+      "label": "Environmental Harm",
+      "definition": "Risk of negative environmental impact including carbon footprint, resource consumption, or ecological damage from AI systems.",
+      "idf_score": 4.6497,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 12
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 16
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "individual_treatment→Art21",
+  "assessment": {
+    "risk_summary": "This project involves processing demographic data to score neighbourhoods for climate-migration pressure, which may lead to stigmatisation of migrant-heavy districts and disparate neighbourhood effects. The project may also accelerate insurance retreat and negatively impact vulnerable groups. Transparency and accountability are contested, and environmental policy is a primary concern.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Stigmatisation of migrant-heavy districts",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The project's scoring system may perpetuate negative stereotypes and reinforce existing social inequalities."
+      },
+      {
+        "risk": "Disparate neighbourhood effects",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The project's demographic features may lead to unequal treatment of neighbourhoods based on protected characteristics."
+      },
+      {
+        "risk": "Accelerated insurance retreat",
+        "risk_category": "FinancialHarm",
+        "severity": "High",
+        "explanation": "The project's scoring system may lead to increased insurance costs and decreased investment in vulnerable neighbourhoods."
+      },
+      {
+        "risk": "Environmental harm",
+        "risk_category": "EnvironmentalHarm",
+        "severity": "High",
+        "explanation": "The project's focus on climate-migration pressure may lead to increased emphasis on adaptation spending, potentially harming the environment."
+      },
+      {
+        "risk": "Lack of transparency",
+        "risk_category": "Transparency",
+        "severity": "High",
+        "explanation": "The project's scoring system and methodology may not be adequately disclosed to end-users and stakeholders."
+      },
+      {
+        "risk": "Accountability concerns",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "The project's scoring system may lead to unequal treatment of neighbourhoods, and affected persons may not be able to obtain explanation or contestation for AI-mediated decisions."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of potential harms and develop mitigation strategies."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment and develop mitigation strategies to prevent harm."
+      },
+      {
+        "requirement_id": "ACM017",
+        "requirement_text": "Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from participants or explain why consent was not obtained."
+      },
+      {
+        "requirement_id": "ACM023",
+        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of potential discriminatory impacts and develop mitigation strategies."
+      },
+      {
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough assessment to determine whether a FRIA is required."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "High"
+      },
+      {
+        "article": "Article 37",
+        "right_name": "EnvironmentalProtection",
+        "relevance": "High"
+      },
+      {
+        "article": "Article 47",
+        "right_name": "RightToEffectiveRemedy",
+        "relevance": "High"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of fairness and transparency in AI decision-making systems."
+      },
+      {
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The need for thorough testing and validation of AI decision-making systems to prevent bias and discrimination."
+      },
+      {
+        "incident_id": "AIAAIC-008",
+        "incident_title": "PredPol Predictive Policing Algorithmic Bias",
+        "lesson": "The importance of transparency and accountability in AI decision-making systems, particularly in high-stakes applications like law enforcement."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement fairness and transparency measures in the scoring system",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct thorough testing and validation of the scoring system",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop and implement mitigation strategies to prevent harm and promote well-being",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Ensure adequate transparency and accountability in the scoring system and methodology",
+        "priority": "High"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough analysis of potential harms and develop mitigation strategies.",
+      "Conduct a thorough risk assessment and develop mitigation strategies to prevent harm.",
+      "Obtain explicit consent from participants or explain why consent was not obtained.",
+      "Conduct a thorough analysis of potential discriminatory impacts and develop mitigation strategies.",
+      "Conduct a thorough assessment to determine whether a FRIA is required."
+    ],
+    "tier2_reflective_prompts": [
+      "How can we ensure that the scoring system is fair and transparent?",
+      "What measures can we take to prevent harm and promote well-being?",
+      "How can we ensure that the scoring system does not perpetuate negative stereotypes or reinforce existing social inequalities?",
+      "What steps can we take to address potential environmental harm?",
+      "How can we ensure that the scoring system is accountable and transparent?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "environment",
+        "scor",
+        "discriminat",
+        "polic",
+        "transparen"
+      ],
+      "rights_matched": 3,
+      "requirements_retrieved": 59,
+      "incidents_retrieved": 5,
+      "requirements_sample": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "R028",
+        "R085",
+        "ACM026",
+        "ACM038",
+        "HE018",
+        "HE051",
+        "R052",
+        "R087",
+        "ACM001",
+        "ACM017",
+        "ACM021",
+        "ACM035",
+        "AI002",
+        "AI015",
+        "AI017",
+        "AI018",
+        "AI019",
+        "AI020",
+        "AI022",
+        "AI026",
+        "AI028",
+        "AI030",
+        "HE002",
+        "HE005",
+        "HE006",
+        "HE024",
+        "HE026",
+        "HE027",
+        "HE028",
+        "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
+        "HE048",
+        "HE052",
+        "R010",
+        "R054",
+        "R055",
+        "R074",
+        "R082"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM017",
+        "ACM023",
+        "AI001"
+      ],
+      "incidents_sample": [
+        "AIAAIC-001",
+        "AIAAIC-002",
+        "AIAAIC-003",
+        "AIAAIC-004",
+        "AIAAIC-008"
+      ]
+    }
+  }
+}

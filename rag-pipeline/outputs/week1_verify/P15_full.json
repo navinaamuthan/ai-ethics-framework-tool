@@ -1,0 +1,183 @@
+{
+  "proposal_id": "P15",
+  "mode": "full",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-26T16:40:00.374605",
+  "proposal_text": "This research proposes to analyse anonymised Dublin Bus and Luas smart card tap-on data to model public transport usage patterns across different times of day, routes, and weather conditions. The dataset consists of aggregated journey counts per route per hour provided by the National Transport Authority under an open data licence. No individual passenger records are included and no re-identification is possible from the aggregated data. The analysis will use time series forecasting and clustering algorithms to identify underserved routes and peak demand periods. Results will be shared with Dublin City Council to inform transport planning decisions. The environmental impact of the computational resources required for the analysis will be documented. No AI system will be deployed in any operational context.",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
+  "keywords": [
+    "environment"
+  ],
+  "matched_rights": [
+    "Art37_EnvironmentalProtection"
+  ],
+  "retrieved_requirements_count": 6,
+  "retrieved_incidents_count": 0,
+  "retrieved_risk_categories": [
+    {
+      "id": "EnvironmentalHarm",
+      "label": "Environmental Harm",
+      "definition": "Risk of negative environmental impact including carbon footprint, resource consumption, or ecological damage from AI systems.",
+      "idf_score": 4.6497,
+      "rank_score": 6.0,
+      "tf": 6,
+      "df": 12
+    },
+    {
+      "id": "DemocraticProcessHarm",
+      "label": "Democratic Process Harm",
+      "definition": "Risk of undermining democratic institutions, electoral processes, or civic participation through AI systems.",
+      "idf_score": 5.2687,
+      "rank_score": 1.0,
+      "tf": 1,
+      "df": 6
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 1.0,
+      "tf": 1,
+      "df": 26
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The research proposal involves processing aggregated public transport data to model usage patterns, which may have environmental and psychological impacts. The analysis will also consider the computational resources required for the analysis.",
+    "overall_risk_level": "MEDIUM",
+    "identified_risks": [
+      {
+        "risk": "EnvironmentalHarm",
+        "risk_category": "EnvironmentalHarm",
+        "severity": "MEDIUM",
+        "explanation": "The research involves processing large datasets, which may result in significant computational resources and energy consumption."
+      },
+      {
+        "risk": "PsychologicalHarm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "LOW",
+        "explanation": "The aggregated data does not contain personal information, but the analysis may still have some psychological impact on individuals if not properly communicated."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM026",
+        "requirement_text": "Consider whether research negatively impacts environment — fossil fuel extraction, consumption, greenhouse gas production (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Document the environmental impact and mitigation steps of the computational resources required for the analysis."
+      },
+      {
+        "requirement_id": "HE018",
+        "requirement_text": "AI development must be mindful of environmental sustainability — document environmental impact and mitigation steps (Mandatory)",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Document the environmental impact and mitigation steps of the computational resources required for the analysis."
+      },
+      {
+        "requirement_id": "R052",
+        "requirement_text": "Identify risks to site, environment, or society (Mandatory)",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Identify and mitigate potential environmental impacts of the research."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "37",
+        "right_name": "EnvironmentalProtection",
+        "relevance": "The research may have a negative impact on the environment if not properly managed."
+      }
+    ],
+    "historical_precedents": [],
+    "recommended_mitigations": [
+      {
+        "mitigation": "EnvironmentalSafeguard",
+        "mitigation_id": "EnvironmentalSafeguard",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "EthicsReviewBoard",
+        "mitigation_id": "EthicsReviewBoard",
+        "priority": "Medium",
+        "from_taxonomy": true
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Document environmental impact and mitigation steps",
+      "Identify and mitigate potential environmental impacts"
+    ],
+    "tier2_reflective_prompts": [
+      "Consider the carbon footprint of training and deploying the model"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "environment"
+      ],
+      "rights_matched": 1,
+      "requirements_retrieved": 6,
+      "incidents_retrieved": 0,
+      "retrieved_mitigations": [
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "ResponsibleReleasePolicy"
+      ],
+      "requirements_sample": [
+        "ACM026",
+        "ACM038",
+        "HE018",
+        "HE051",
+        "R052",
+        "R087"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM026",
+        "ACM038",
+        "HE018",
+        "HE051",
+        "R052",
+        "R087"
+      ],
+      "requirements_cited": [
+        "ACM026",
+        "HE018",
+        "R052"
+      ],
+      "incidents_sample": []
+    }
+  }
+}

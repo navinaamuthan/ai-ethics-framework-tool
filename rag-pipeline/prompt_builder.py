@@ -4,6 +4,7 @@ Builds structured prompts for the ethics assessment LLM.
 Combines: research proposal + retrieved KG context → assessment prompt.
 
 Phase 2: risk-category taxonomy constraint + transparency/well-being surfacing rule.
+Week 1: mitigation taxonomy constraint (select from retrieved :hasMitigation options).
 """
 
 RISK_CALIBRATION = """
@@ -36,6 +37,7 @@ def build_context(
     total_requirements: int = None,
     max_requirement_text_chars: int = None,
     risk_categories: list = None,
+    mitigations: list = None,
 ) -> str:
     """Format retrieved KG data as human-readable context for the LLM."""
     total_requirements = total_requirements if total_requirements is not None else len(requirements)
@@ -57,7 +59,12 @@ def build_context(
         risk_bit = ""
         if r.get("risk_categories"):
             risk_bit = f" [risks: {', '.join(r['risk_categories'])}]"
-        req_lines.append(f"  [{fw}] {r['id']}: {text} ({tier_label}){section_bit}{risk_bit}")
+        mit_bit = ""
+        if r.get("mitigations"):
+            mit_bit = f" [mitigations: {', '.join(r['mitigations'])}]"
+        req_lines.append(
+            f"  [{fw}] {r['id']}: {text} ({tier_label}){section_bit}{risk_bit}{mit_bit}"
+        )
 
     inc_lines = []
     for i in incidents:
@@ -80,6 +87,15 @@ def build_context(
         else:
             risk_cat_lines.append(f"  - {c['id']}")
 
+    mit_lines = []
+    for m in mitigations or []:
+        label = m.get("label") or m.get("id", "")
+        definition = m.get("definition") or ""
+        if definition:
+            mit_lines.append(f"  - {m['id']} ({label}): {definition}")
+        else:
+            mit_lines.append(f"  - {m['id']} ({label})")
+
     context = f"""
 RETRIEVED ETHICS REQUIREMENTS FROM KNOWLEDGE GRAPH ({total_requirements} total, showing top {len(shown_requirements)}):
 {chr(10).join(req_lines) if req_lines else '  No requirements retrieved.'}
@@ -92,6 +108,9 @@ HISTORICAL AI INCIDENT PRECEDENTS ({len(incidents)} incidents):
 
 RISK CATEGORIES IN SCOPE FOR THIS PROPOSAL ({len(risk_categories or [])} categories from retrieved evidence):
 {chr(10).join(risk_cat_lines) if risk_cat_lines else '  No risk categories retrieved — use only formal AIEF RiskCategory labels if needed.'}
+
+RETRIEVED MITIGATION OPTIONS FROM KNOWLEDGE GRAPH ({len(mitigations or [])} classes linked via :hasMitigation on retrieved requirements):
+{chr(10).join(mit_lines) if mit_lines else '  No mitigation options retrieved from the modelled taxonomy.'}
 """
     return context
 
@@ -106,6 +125,22 @@ RISK CATEGORY CONSTRAINTS:
   lower severity than the primary risks. Transparency should be treated as a near-default concern for
   any AI system that interacts with end-users; environmental/well-being disclosure should be surfaced
   when compute, training scale, or environmental-impact requirements are in scope.
+"""
+
+_MITIGATION_INSTRUCTIONS = """
+MITIGATION CONSTRAINTS:
+- For each recommended mitigation, select from the "RETRIEVED MITIGATION OPTIONS FROM KNOWLEDGE GRAPH"
+  list above where applicable. Use the exact mitigation id (e.g. Encryption, HumanOversight) with no spaces.
+- Recommend enough taxonomy mitigations that EACH identified risk's risk_category is addressed by at least
+  one mitigation that is typical for that category (e.g. PrivacyBreach → Encryption/AccessControl/Pseudonymisation;
+  Discrimination → StaffTraining/EthicsReviewBoard; EnvironmentalHarm → EnvironmentalSafeguard).
+- If none of the retrieved options adequately address a risk, you may propose a specific alternative,
+  but state explicitly in the mitigation text that it is not drawn from the modelled taxonomy, and set
+  "from_taxonomy" to false.
+- Every recommended mitigation MUST include a boolean "from_taxonomy" field:
+  true when the mitigation id/name is drawn from the retrieved taxonomy options; false otherwise.
+- Prefer taxonomy mitigations whenever they fit; do not invent free-text substitutes for options
+  that are already listed above.
 """
 
 
@@ -128,6 +163,7 @@ INSTRUCTIONS:
 - Return your assessment as valid JSON only. No markdown. No explanation outside the JSON.
 - The JSON arrays must contain MULTIPLE items — never just 1 or 2 for a substantive proposal.
 {_RISK_CATEGORY_INSTRUCTIONS}
+{_MITIGATION_INSTRUCTIONS}
 {RISK_CALIBRATION}
 RESEARCH PROPOSAL:
 {proposal}
@@ -152,7 +188,7 @@ Return ONLY valid JSON:
     {{"incident_id": "e.g. AIAAIC-001", "incident_title": "...", "lesson": "..."}}
   ],
   "recommended_mitigations": [
-    {{"mitigation": "...", "priority": "High or Medium or Low"}}
+    {{"mitigation": "e.g. Encryption", "mitigation_id": "Encryption", "priority": "High or Medium or Low", "from_taxonomy": true}}
   ],
   "tier1_mandatory_actions": ["..."],
   "tier2_reflective_prompts": ["..."],
@@ -181,6 +217,7 @@ INSTRUCTIONS:
   DemocraticProcessHarm, AddictionRisk, Surveillance, Manipulation, ChildrenRights, Dignity,
   GenderHarm, EconomicHarm, EmploymentHarm, Accountability, LibertyViolation, ExpressionHarm).
   Do not invent free-text category labels.
+- For recommended_mitigations, set "from_taxonomy" to false (no KG taxonomy was provided in this mode).
 
 {RISK_CALIBRATION}
 RESEARCH PROPOSAL:
@@ -203,7 +240,7 @@ Return ONLY valid JSON:
     {{"incident_id": "e.g. AIAAIC-001", "incident_title": "...", "lesson": "..."}}
   ],
   "recommended_mitigations": [
-    {{"mitigation": "...", "priority": "High or Medium or Low"}}
+    {{"mitigation": "...", "priority": "High or Medium or Low", "from_taxonomy": false}}
   ],
   "tier1_mandatory_actions": ["..."],
   "tier2_reflective_prompts": ["..."],
@@ -216,7 +253,7 @@ Return ONLY valid JSON:
 if __name__ == "__main__":
     import argparse
 
-    from sparql_retrieval import retrieve_all_for_proposal
+    from sparql_retrieval import retrieve_all_for_proposal, set_retrieval_backend
     from synthetic_proposals import PROPOSALS
 
     parser = argparse.ArgumentParser(description="Build and preview assessment prompts")
@@ -227,10 +264,19 @@ if __name__ == "__main__":
         default=DEFAULT_MAX_REQUIREMENTS,
         help=f"Cap requirements in context (default: {DEFAULT_MAX_REQUIREMENTS})",
     )
+    parser.add_argument(
+        "--backend",
+        choices=["auto", "local", "graphdb"],
+        default="local",
+        help="SPARQL backend (default: local, so ontology edits are visible)",
+    )
     args = parser.parse_args()
 
+    set_retrieval_backend(args.backend)
     proposal = next(p for p in PROPOSALS if p["id"] == args.proposal_id)
-    reqs, incidents, rights, _, risk_cats = retrieve_all_for_proposal(proposal["proposal_text"])
+    reqs, incidents, rights, _, risk_cats, mitigations = retrieve_all_for_proposal(
+        proposal["proposal_text"]
+    )
     text_limit = requirement_text_char_limit(args.max_requirements)
     context = build_context(
         reqs,
@@ -240,13 +286,15 @@ if __name__ == "__main__":
         total_requirements=len(reqs),
         max_requirement_text_chars=text_limit,
         risk_categories=risk_cats,
+        mitigations=mitigations,
     )
     prompt = build_assessment_prompt(proposal["proposal_text"], context)
     print(f"Proposal: {args.proposal_id}")
     print(f"Retrieved requirements: {len(reqs)}")
     print(f"Shown in context: {min(args.max_requirements, len(reqs))}")
     print(f"Risk categories: {[c['id'] for c in risk_cats]}")
+    print(f"Mitigations: {[m['id'] for m in mitigations]}")
     print(f"Requirement text limit: {text_limit or 'none'}")
     print(f"Prompt length: {len(prompt)} characters (~{len(prompt) // 2} tokens est.)")
-    print("\n--- CONTEXT PREVIEW (first 2500 chars) ---")
-    print(context[:2500])
+    print("\n--- CONTEXT PREVIEW (first 3500 chars) ---")
+    print(context[:3500])

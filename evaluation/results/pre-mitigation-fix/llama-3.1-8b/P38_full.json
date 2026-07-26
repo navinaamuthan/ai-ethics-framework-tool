@@ -1,0 +1,430 @@
+{
+  "proposal_id": "P38",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-20T23:39:21.784584",
+  "proposal_text": "This research builds a classifier that flags potentially entrapment-related profiles and messages on a dating app used by LGBTQ+ people in jurisdictions where same-sex intimacy is criminalised. Flagged chats are queued for voluntary user warnings; the app does not notify police. False positives may chill legitimate intimate speech (Art.11 / private life); false negatives may enable harm. Community advisory board members disagree whether the dominant frame is safety, expression, privacy, or non-discrimination. Training labels come from moderator decisions in EU markets and may not transfer. The proposal leaves the primary Charter article intentionally under-determined.",
+  "context_max_requirements": 25,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "classif",
+    "criminal",
+    "discriminat",
+    "harm",
+    "polic",
+    "privacy",
+    "profil",
+    "safety",
+    "transfer"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity",
+    "Art21_NonDiscrimination",
+    "Art2_RightToLife",
+    "Art47_RightToEffectiveRemedy",
+    "Art48_PresumptionOfInnocence",
+    "Art6_RightToLiberty",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 142,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 52.0,
+      "tf": 52,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 51.0,
+      "tf": 51,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 21.0,
+      "tf": 21,
+      "df": 26
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 19.0,
+      "tf": 19,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 15
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 3,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "individual_treatment→Art21",
+  "assessment": {
+    "risk_summary": "This research proposal involves the development of a classifier that flags potentially entrapment-related profiles and messages on a dating app used by LGBTQ+ people in jurisdictions where same-sex intimacy is criminalised. The flagged chats are queued for voluntary user warnings, but the proposal does not address the potential risks of false positives or false negatives. The classifier may also perpetuate biases and discrimination against the LGBTQ+ community.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Discrimination against the LGBTQ+ community",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The classifier may perpetuate biases and discrimination against the LGBTQ+ community, particularly if the training data is not diverse and representative."
+      },
+      {
+        "risk": "False positives and false negatives",
+        "risk_category": "PsychologicalHarm",
+        "severity": "High",
+        "explanation": "The classifier may flag innocent users as potentially entrapment-related, leading to psychological harm and chilling of legitimate intimate speech."
+      },
+      {
+        "risk": "Lack of transparency and accountability",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "The proposal does not address the need for transparency and accountability in the classifier's decision-making process, which may lead to a lack of trust and confidence in the system."
+      },
+      {
+        "risk": "Potential for data breaches and privacy violations",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The proposal does not address the need for robust data protection and privacy measures to prevent data breaches and violations."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Discuss the potential risks of the classifier and propose mitigation strategies to address them."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider the potential harm that the classifier may cause and propose mitigation strategies to address it."
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider the potential biases in the classifier and propose mitigation strategies to address them."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Propose robust data protection and privacy measures to prevent data breaches and violations."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The classifier may perpetuate biases and discrimination against the LGBTQ+ community."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The classifier may flag innocent users as potentially entrapment-related, leading to a chilling of legitimate intimate speech."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The proposal does not address the need for robust data protection and privacy measures to prevent data breaches and violations."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of considering and addressing biases in AI systems."
+      },
+      {
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The importance of considering and addressing biases in AI systems."
+      },
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "The importance of considering and addressing the potential for AI systems to amplify hate speech and discrimination."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Diverse and representative training data",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Robust data protection and privacy measures",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Transparency and accountability in decision-making process",
+        "priority": "High"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Discuss the potential risks of the classifier and propose mitigation strategies to address them.",
+      "Consider the potential harm that the classifier may cause and propose mitigation strategies to address it.",
+      "Consider the potential biases in the classifier and propose mitigation strategies to address them."
+    ],
+    "tier2_reflective_prompts": [
+      "How can we ensure that the classifier is fair and non-discriminatory?",
+      "What are the potential consequences of false positives and false negatives?",
+      "How can we ensure that the classifier is transparent and accountable in its decision-making process?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "classif",
+        "criminal",
+        "discriminat",
+        "harm",
+        "polic",
+        "privacy",
+        "profil",
+        "safety",
+        "transfer"
+      ],
+      "rights_matched": 8,
+      "requirements_retrieved": 142,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE019",
+        "HE021",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE042",
+        "HE049",
+        "HE050",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "ACM012",
+        "ACM023",
+        "ACM028",
+        "AI016",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R028",
+        "R085",
+        "ACM017",
+        "ACM021",
+        "ACM035",
+        "AI002",
+        "AI015",
+        "AI018",
+        "AI019",
+        "AI020",
+        "AI022",
+        "AI026",
+        "AI028",
+        "AI030",
+        "HE024",
+        "HE026",
+        "HE028",
+        "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
+        "HE048",
+        "HE052",
+        "R055",
+        "R074",
+        "ACM027",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM003",
+        "ACM006"
+      ],
+      "incidents_sample": [
+        "AIAAIC-003",
+        "AIAAIC-005",
+        "AIAAIC-009",
+        "AIAAIC-001",
+        "AIAAIC-002"
+      ]
+    }
+  }
+}

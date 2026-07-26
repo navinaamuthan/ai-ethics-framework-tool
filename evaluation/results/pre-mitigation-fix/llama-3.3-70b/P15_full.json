@@ -1,0 +1,368 @@
+{
+  "proposal_id": "P15",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-19T19:56:11.289951",
+  "proposal_text": "This research proposes to analyse anonymised Dublin Bus and Luas smart card tap-on data to model public transport usage patterns across different times of day, routes, and weather conditions. The dataset consists of aggregated journey counts per route per hour provided by the National Transport Authority under an open data licence. No individual passenger records are included and no re-identification is possible from the aggregated data. The analysis will use time series forecasting and clustering algorithms to identify underserved routes and peak demand periods. Results will be shared with Dublin City Council to inform transport planning decisions. The environmental impact of the computational resources required for the analysis will be documented. No AI system will be deployed in any operational context.",
+  "context_max_requirements": 25,
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "data",
+    "environment"
+  ],
+  "matched_rights": [
+    "Art37_EnvironmentalProtection",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 139,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The research proposal involves the analysis of anonymised public transport data to model usage patterns, which poses low risks to individuals and society. However, there are potential risks related to data privacy, environmental impact, and the potential for biased outcomes. The proposal does not involve the processing of personal data, biometric data, or special category data, and no AI system will be deployed in an operational context. The main risks are related to the potential for biased models and the environmental impact of the computational resources required for the analysis.",
+    "overall_risk_level": "Low",
+    "identified_risks": [
+      {
+        "risk": "Data privacy risk",
+        "severity": "Low",
+        "explanation": "The data is anonymised and aggregated, and no individual passenger records are included, reducing the risk of data privacy breaches."
+      },
+      {
+        "risk": "Environmental impact risk",
+        "severity": "Low",
+        "explanation": "The proposal involves the use of computational resources, which may have an environmental impact, but the researchers will document the environmental impact of their analysis."
+      },
+      {
+        "risk": "Bias risk",
+        "severity": "Low",
+        "explanation": "The proposal involves the use of time series forecasting and clustering algorithms, which may be biased if not properly validated and tested."
+      },
+      {
+        "risk": "Lack of transparency risk",
+        "severity": "Low",
+        "explanation": "The proposal does not provide detailed information about the data, models, and algorithms used, which may reduce transparency and accountability."
+      },
+      {
+        "risk": "Inadequate evaluation risk",
+        "severity": "Low",
+        "explanation": "The proposal does not provide a comprehensive evaluation of the systems and their impacts, including analysis of possible risks of applications."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the models and algorithms used are fair and unbiased."
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Validate and test the models and algorithms to ensure they are not biased."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the data is anonymised and aggregated, and no individual passenger records are included."
+      },
+      {
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Provide a comprehensive evaluation of the systems and their impacts, including analysis of possible risks of applications."
+      },
+      {
+        "requirement_id": "ACM026",
+        "requirement_text": "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Consider the potential environmental impact of the computational resources required for the analysis."
+      },
+      {
+        "requirement_id": "ACM029",
+        "requirement_text": "Provide data and model documentation via structured templates (Model Cards, Datasheets for Datasets)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Provide data and model documentation via structured templates."
+      },
+      {
+        "requirement_id": "EUAIAct AI002",
+        "requirement_text": "Record necessity status: FRIA Required or FRIA Not Required",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Record the necessity status of the FRIA."
+      },
+      {
+        "requirement_id": "EUAIAct AI003",
+        "requirement_text": "Record when FRIA was created, modified, submitted, accepted",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Record the creation, modification, submission, and acceptance of the FRIA."
+      },
+      {
+        "requirement_id": "EUAIAct AI004",
+        "requirement_text": "Record who conducted the FRIA (organisation, personnel, contributors)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Record the organisation, personnel, and contributors who conducted the FRIA."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 37",
+        "right_name": "Environmental Protection",
+        "relevance": "The proposal involves the use of computational resources, which may have an environmental impact."
+      },
+      {
+        "article": "Article 41",
+        "right_name": "Good Administration",
+        "relevance": "The proposal involves the use of public transport data, which is subject to good administration principles."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-022",
+        "incident_title": "Deliveroo Algorithmic Dismissal",
+        "lesson": "The importance of ensuring that algorithms are fair and unbiased, and that they do not perpetuate existing social inequalities."
+      },
+      {
+        "incident_id": "AIAAIC-034",
+        "incident_title": "China Social Credit System AI Scoring",
+        "lesson": "The potential risks of using AI systems to score individuals, and the importance of ensuring that such systems are transparent and accountable."
+      },
+      {
+        "incident_id": "AIAAIC-036",
+        "incident_title": "Netherlands SyRI Welfare Surveillance System",
+        "lesson": "The importance of ensuring that AI systems are used in a way that respects human rights and dignity, and that they do not perpetuate existing social inequalities."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The potential risks of using AI systems for facial recognition, and the importance of ensuring that such systems are accurate and unbiased."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Ensure that the models and algorithms used are fair and unbiased",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Validate and test the models and algorithms to ensure they are not biased",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Provide a comprehensive evaluation of the systems and their impacts, including analysis of possible risks of applications",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Consider the potential environmental impact of the computational resources required for the analysis",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Provide data and model documentation via structured templates",
+        "priority": "Low"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Ensure that the models and algorithms used are fair and unbiased",
+      "Validate and test the models and algorithms to ensure they are not biased",
+      "Provide a comprehensive evaluation of the systems and their impacts, including analysis of possible risks of applications",
+      "Consider the potential environmental impact of the computational resources required for the analysis",
+      "Provide data and model documentation via structured templates"
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential risks and benefits of using AI systems for public transport analysis?",
+      "How can we ensure that the models and algorithms used are fair and unbiased?",
+      "What are the potential environmental impacts of the computational resources required for the analysis?",
+      "How can we ensure that the AI system is transparent and accountable?"
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "environment"
+      ],
+      "rights_matched": 4,
+      "requirements_retrieved": 139,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM026",
+        "ACM038",
+        "HE018",
+        "HE051",
+        "R052",
+        "R087",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM026",
+        "ACM038",
+        "HE018",
+        "HE051",
+        "R052",
+        "R087",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R054",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE013",
+        "HE033",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM003",
+        "ACM004",
+        "ACM006",
+        "ACM007",
+        "ACM026",
+        "ACM029",
+        "EUAIAct AI002",
+        "EUAIAct AI003",
+        "EUAIAct AI004"
+      ],
+      "incidents_sample": [
+        "AIAAIC-022",
+        "AIAAIC-034",
+        "AIAAIC-036",
+        "AIAAIC-002",
+        "AIAAIC-007"
+      ]
+    }
+  }
+}

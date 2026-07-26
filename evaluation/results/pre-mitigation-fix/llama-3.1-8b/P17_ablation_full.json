@@ -1,0 +1,149 @@
+{
+  "proposal_id": "P17_ablation",
+  "mode": "full",
+  "timestamp": "2026-06-27T14:04:41.816205",
+  "proposal_text": "This research proposes to develop an NLP classifier to detect extremist recruitment content on social media platforms including Telegram, Twitter/X, and encrypted messaging forums. The classifier will be trained on a dataset of 20,000 annotated posts collected from known extremist channels alongside 20,000 non-extremist posts covering political activism, religious discussion, and protest organisation. The system must distinguish between legitimate political expression and genuine incitement to violence. The training data includes content in English, Arabic, and Irish. The researchers acknowledge the dual-use risk that the classifier could be repurposed for political censorship or suppression of minority viewpoints by authoritarian actors. The tool will be developed as open-source software. No content moderation decisions will be automated. The research does not include engagement with affected communities or civil liberties organisations in the design process.",
+  "keywords": [
+    "data",
+    "minor",
+    "recruit",
+    "classif",
+    "minority",
+    "dual-use",
+    "content moder",
+    "social media"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art15_FreedomOfOccupation",
+    "Art1_HumanDignity",
+    "Art21_NonDiscrimination",
+    "Art22_CulturalDiversity",
+    "Art24_RightsOfChild",
+    "Art2_RightToLife",
+    "Art41_GoodAdministration",
+    "Art47_RightToEffectiveRemedy",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 191,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The proposal poses significant risks to individual freedoms, particularly in relation to freedom of expression and data protection. The potential for misuse or diversion from its original purpose is also a concern.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Misuse or diversion of the AI system",
+        "severity": "High",
+        "explanation": "The researchers acknowledge the dual-use risk, but no concrete measures are proposed to mitigate this risk."
+      },
+      {
+        "risk": "Infringement on individual freedoms (freedom of expression, data protection)",
+        "severity": "Medium-High",
+        "explanation": "The system may inadvertently or intentionally infringe on individual rights, particularly in relation to freedom of expression and data protection."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM027",
+        "requirement_text": "Research must not build upon or facilitate illegal activity — strongly discourage work that denies rights to privacy, speech, health, liberty, security, legal personhood, freedom of conscience/religion.",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Review and revise the proposal to ensure it does not facilitate or build upon illegal activity."
+      },
+      {
+        "requirement_id": "HE019",
+        "requirement_text": "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations.",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough assessment of the potential impact on democratic processes and social relations."
+      },
+      {
+        "requirement_id": "AI008",
+        "requirement_text": "State the intended purpose of the AI system.",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Clearly articulate the intended purpose of the AI system."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 11 FreedomOfExpression",
+        "right_name": "Freedom of Expression",
+        "relevance": "The system may inadvertently or intentionally infringe on individual rights to freedom of expression."
+      },
+      {
+        "article": "Article 7 PrivateLife",
+        "right_name": "Private Life",
+        "relevance": "The collection and analysis of personal data may infringe on individuals' right to private life."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-014",
+        "incident_title": "YouTube Recommendation Radicalisation",
+        "lesson": "This incident highlights the potential for AI systems to inadvertently or intentionally promote extremist ideologies, underscoring the need for careful consideration of the system's impact on democratic processes and social relations."
+      },
+      {
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "This incident demonstrates the potential for AI systems to perpetuate biases and stereotypes, emphasizing the need for thorough testing and evaluation of the system's performance."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement robust testing and evaluation procedures to ensure the system does not perpetuate biases or stereotypes.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Establish clear guidelines for content moderation and ensure that human oversight is maintained at all times.",
+        "priority": "Medium-High"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough risk assessment and mitigation plan",
+      "Implement robust testing and evaluation procedures",
+      "Establish clear guidelines for content moderation"
+    ],
+    "tier2_reflective_prompts": [
+      "How will the system be designed to prevent biases and stereotypes?",
+      "What measures will be taken to ensure that human oversight is maintained at all times?",
+      "How will the potential impact on democratic processes and social relations be assessed?"
+    ],
+    "reams_clearance_likely": false,
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "minor",
+        "recruit",
+        "classif",
+        "minority",
+        "dual-use",
+        "content moder",
+        "social media"
+      ],
+      "rights_matched": 11,
+      "requirements_retrieved": 191,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-015",
+        "AIAAIC-021"
+      ]
+    }
+  }
+}

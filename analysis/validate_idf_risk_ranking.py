@@ -53,7 +53,7 @@ def main(backend: str = "local") -> None:
 
     for p in PROPOSALS:
         pid = p["id"]
-        _reqs, _incs, _rights, _kws, risk_cats = retrieve_all_for_proposal(p["proposal_text"])
+        _reqs, _incs, _rights, _kws, risk_cats, _mits = retrieve_all_for_proposal(p["proposal_text"])
         top = [c["id"] for c in risk_cats]
         scores = {c["id"]: c.get("idf_score") for c in risk_cats}
         has_t = "Transparency" in top

@@ -122,6 +122,16 @@ def wrong_proposals(assessor: str) -> list[str]:
     return wrong[:5]
 
 
+def _backend_for_model(model: str) -> str:
+    """Local Ollama when model looks like an Ollama tag; otherwise Groq."""
+    if ":" in model or model.startswith("llama3.1"):
+        # llama3.1:8b (ollama) vs llama-3.1-8b-instant (groq)
+        if "instant" in model or "versatile" in model:
+            return "groq"
+        return "ollama"
+    return "groq"
+
+
 def _compact_risk_call(text: str, model: str) -> str | None:
     """Low-token risk label for stability (flip rate only needs overall_risk_level)."""
     prompt = (
@@ -130,7 +140,12 @@ def _compact_risk_call(text: str, model: str) -> str | None:
         f"PROPOSAL:\n{text[:2500]}"
     )
     raw = call_llm(
-        prompt, backend="groq", model=model, temperature=0.7, max_tokens=80, max_retries=2
+        prompt,
+        backend=_backend_for_model(model),
+        model=model,
+        temperature=0.7,
+        max_tokens=80,
+        max_retries=2,
     )
     if not raw:
         return None
@@ -143,8 +158,10 @@ def stability_llms() -> dict:
     """5 runs per proposal for LLM-8B and LLM-70B (compact risk-only; caches resume)."""
     STABILITY_CACHE.mkdir(parents=True, exist_ok=True)
     out = {}
+    # Prefer local Ollama for 8B when Groq is unreachable; 70B stays Groq-tagged
+    # and will reuse cache if API is down.
     configs = [
-        ("LLM-8B", "llama-3.1-8b-instant", "8b"),
+        ("LLM-8B", "llama3.1:8b", "8b"),
         ("LLM-70B", "llama-3.3-70b-versatile", "70b"),
     ]
     for name, model, tag in configs:
@@ -382,7 +399,9 @@ def amendability() -> dict:
 
 def comprehensibility() -> dict:
     out = {}
-    judge_model = "llama-3.1-8b-instant"
+    # Prefer local Ollama judge so Step 5 can finish without Groq.
+    judge_model = "llama3.1:8b"
+    judge_backend = "ollama"
     for name, folder in [
         ("LLM-8B", "llama-3.1-8b"),
         ("LLM-70B", "llama-3.3-70b"),
@@ -419,7 +438,9 @@ def comprehensibility() -> dict:
                 'Return JSON: {"score": <1-5>, "reason": "..."}\n\n'
                 f"ASSESSMENT OUTPUT:\n{blob}"
             )
-            raw = call_llm(prompt, backend="groq", model=judge_model, temperature=0.2, max_tokens=200)
+            raw = call_llm(
+                prompt, backend=judge_backend, model=judge_model, temperature=0.2, max_tokens=200
+            )
             parsed = parse_json_response(raw or "")
             try:
                 score = int(parsed.get("score"))

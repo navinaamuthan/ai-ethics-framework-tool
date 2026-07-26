@@ -1,0 +1,386 @@
+{
+  "proposal_id": "P20",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-05T19:11:02.203017",
+  "proposal_text": "This research proposes to study the relationship between digital workplace behaviours and productivity by monitoring 200 consenting employees at a Dublin technology company over six months. The monitoring system will track application usage, email response times, meeting attendance, keyboard activity patterns, and break frequency. All participants will provide written informed consent and can withdraw at any time without workplace consequences. Data will be stored on encrypted university servers and destroyed after the study period. However, the monitoring software will also incidentally capture screen content including potentially sensitive communications. Aggregate productivity patterns will be shared with the employer in a format that does not identify individual employees, but the small team sizes of 5-8 people within departments may enable indirect identification. The employer has stated that monitoring results will not influence performance reviews, but this commitment is not legally binding. The research does not address the power imbalance between employer and employee that may compromise the voluntariness of consent.",
+  "llm_model": "qwen/qwen3-32b",
+  "keywords": [
+    "data",
+    "consent",
+    "monitor",
+    "track",
+    "employ"
+  ],
+  "matched_rights": [
+    "Art15_FreedomOfOccupation",
+    "Art31_FairWorkingConditions",
+    "Art3_RightToIntegrity",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 150,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The research poses high ethical risks due to potential coercion in consent (employer-employee power imbalance), incidental capture of sensitive screen content (including private communications), and risks of indirect identification despite anonymization. The non-binding nature of the employer's commitment to avoid performance review use further exacerbates data misuse risks.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Coercion in consent due to employer-employee power dynamics",
+        "severity": "High",
+        "explanation": "Voluntariness of consent is compromised when participants fear workplace repercussions, violating ethical research principles"
+      },
+      {
+        "risk": "Unintended capture of sensitive screen content",
+        "severity": "High",
+        "explanation": "Monitoring software may record protected communications (e.g., medical/mental health discussions) without explicit consent"
+      },
+      {
+        "risk": "Indirect identification through small team sizes",
+        "severity": "High",
+        "explanation": "Aggregate data patterns may enable re-identification of individuals despite anonymization efforts"
+      },
+      {
+        "risk": "Psychological harm from workplace surveillance",
+        "severity": "Medium",
+        "explanation": "Constant monitoring may reduce psychological well-being through stress or self-censorship"
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Revise consent process to address power imbalance and clarify data handling"
+      },
+      {
+        "requirement_id": "HE003",
+        "requirement_text": "AI system must not subordinate, coerce, deceive, manipulate, objectify or dehumanize end-users",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement independent consent verification to ensure voluntariness"
+      },
+      {
+        "requirement_id": "R044",
+        "requirement_text": "Is assent required from participants due to vulnerability?",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Provide alternative participation pathways for employees uncomfortable with monitoring"
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct bias audit of monitoring software's data capture patterns"
+      },
+      {
+        "requirement_id": "R054",
+        "requirement_text": "Identify risks to participants: privacy, reputational, etc.",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Enhance data anonymization techniques to prevent indirect identification"
+      },
+      {
+        "requirement_id": "HE017",
+        "requirement_text": "AI system must not unduly reduce psychological well-being",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement mental health support resources for participants"
+      },
+      {
+        "requirement_id": "R046",
+        "requirement_text": "Time interval between information and consent (min 7 days recommended)",
+        "framework": "REAMS",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure 7+ day cooling-off period between information provision and consent"
+      },
+      {
+        "requirement_id": "ACM037",
+        "requirement_text": "Consider fair treatment/payment of annotators/crowdworkers",
+        "framework": "ACMConference",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Document compensation for employees' participation time"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 7",
+        "right_name": "Right to Privacy",
+        "relevance": "Continuous workplace monitoring infringes on private life"
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "Incidental capture of sensitive communications risks data minimization principles"
+      },
+      {
+        "article": "Article 31",
+        "right_name": "Fair Working Conditions",
+        "relevance": "Surveillance may create stressful work environments"
+      },
+      {
+        "article": "Article 15",
+        "right_name": "Freedom of Occupation",
+        "relevance": "Coercion in participation affects employment autonomy"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-021",
+        "incident_title": "HireVue Automated Video Interview Bias",
+        "lesson": "Workplace monitoring systems can perpetuate algorithmic bias against marginalized groups"
+      },
+      {
+        "incident_id": "AIAAIC-022",
+        "incident_title": "Deliveroo Algorithmic Dismissal",
+        "lesson": "Algorithmic workplace monitoring can lead to unfair treatment without human oversight"
+      },
+      {
+        "incident_id": "AIAAIC-036",
+        "incident_title": "Netherlands SyRI Welfare Surveillance System",
+        "lesson": "Aggregate data analysis can enable indirect identification and discrimination"
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "Incidental capture of sensitive data can lead to severe individual consequences"
+      },
+      {
+        "incident_id": "AIAAIC-034",
+        "incident_title": "China Social Credit System AI Scoring",
+        "lesson": "Workplace data collection can be repurposed for non-consensual monitoring"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement opt-out participation with no workplace consequences",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Use differential privacy techniques for aggregate reporting",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Establish independent ethics oversight for data handling",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Add explicit opt-in for screen content monitoring",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Create legally binding data usage agreements with employer",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Revise consent process to include independent third-party verification",
+      "Implement technical safeguards to prevent screen content capture",
+      "Conduct formal risk assessment for indirect identification risks",
+      "Establish clear data destruction protocols beyond study period"
+    ],
+    "tier2_reflective_prompts": [
+      "How might workplace culture be affected by this monitoring system?",
+      "What long-term impacts could arise from normalizing workplace surveillance?",
+      "Should employees receive compensation for their participation data?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "consent",
+        "monitor",
+        "track",
+        "employ"
+      ],
+      "rights_matched": 6,
+      "requirements_retrieved": 150,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM011",
+        "ACM037",
+        "HE020",
+        "R020",
+        "R050",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "HE003"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM011",
+        "ACM037",
+        "HE020",
+        "R020",
+        "R050",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "HE003",
+        "HE004",
+        "HE017",
+        "R009",
+        "R011",
+        "R015",
+        "R019",
+        "R022",
+        "R034",
+        "R039",
+        "R042",
+        "R043",
+        "R044",
+        "R046",
+        "R048",
+        "R054",
+        "R076",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM003",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R023",
+        "R026",
+        "R040",
+        "R047",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE013",
+        "HE033",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM006",
+        "HE003",
+        "R044",
+        "ACM004",
+        "R054",
+        "HE017",
+        "R046",
+        "ACM037"
+      ],
+      "incidents_sample": [
+        "AIAAIC-015",
+        "AIAAIC-021",
+        "AIAAIC-022",
+        "AIAAIC-034",
+        "AIAAIC-036"
+      ]
+    }
+  }
+}

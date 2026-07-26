@@ -2,152 +2,310 @@
   "proposal_id": "P04",
   "mode": "full",
   "llm_backend": "ollama",
-  "timestamp": "2026-07-19T20:00:33.318321",
+  "timestamp": "2026-07-26T16:45:50.943458",
   "proposal_text": "This research proposes to develop a machine learning-based ad delivery optimisation system for deployment on a major social media platform. The system will use a multi-objective optimisation algorithm that maximises ad relevance scores and advertiser return on investment by predicting which users are most likely to engage with each advertisement. The algorithm will use thousands of user behavioural, demographic, and interest signals — excluding explicit race and gender variables — to determine ad delivery. The system will operate as a real-time auction where advertisers bid for impression opportunities, with the platform's relevance prediction model determining which users see which ads. An academic audit of this system found that even when advertisers set their targeting parameters to be fully inclusive with no demographic restrictions, the optimisation algorithm delivered employment ads predominantly to men and housing ads predominantly to white users. This skew was caused by the algorithm's financial optimisation function, which learned that majority-group users were cheaper to reach and more likely to engage. The system does not include pre-deployment fairness auditing. No mechanism for individual users to understand why they are or are not shown specific opportunity-related advertisements is planned.",
   "context_max_requirements": 25,
   "llm_model": "llama3.1:8b",
   "keywords": [
-    "fairness",
-    "employ",
-    "prediction",
     "predict",
-    "scor",
-    "race",
+    "employ",
+    "fairness",
     "gender",
+    "prediction",
+    "race",
+    "scor",
     "social media"
   ],
   "matched_rights": [
     "Art11_FreedomOfExpression",
-    "Art15_FreedomOfOccupation",
-    "Art20_EqualityBeforeLaw",
     "Art21_NonDiscrimination",
-    "Art23_GenderEquality",
-    "Art31_FairWorkingConditions",
-    "Art41_GoodAdministration",
     "Art47_RightToEffectiveRemedy",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 177,
+  "retrieved_requirements_count": 120,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 51.0,
+      "tf": 51,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 38.0,
+      "tf": 38,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 18.0,
+      "tf": 18,
+      "df": 48
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 16.0,
+      "tf": 16,
+      "df": 26
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 15
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "individual_treatment→Art21",
   "assessment": {
-    "risk_summary": "The proposed machine learning-based ad delivery optimisation system poses significant risks to individual rights and freedoms, including discrimination, bias, and lack of transparency. The system's reliance on user behavioural data and demographic signals raises concerns about fairness, equality, and the potential for harm. Furthermore, the absence of pre-deployment auditing and mechanisms for users to understand why they are shown specific advertisements exacerbates these risks.",
+    "risk_summary": "The proposed ad delivery optimisation system poses significant risks to individuals and society, including discrimination, psychological harm, and privacy breaches. The system's reliance on user behavioural data and financial optimisation function may exacerbate existing biases and inequalities. Furthermore, the lack of transparency and fairness auditing mechanisms raises concerns about accountability and trustworthiness.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Bias in decision-making processes",
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
         "severity": "High",
-        "explanation": "The system's optimisation algorithm may perpetuate biases and discrimination, as evidenced by the academic audit findings."
+        "explanation": "The system's optimisation function may perpetuate existing biases and inequalities, leading to unfair treatment of certain groups."
       },
       {
-        "risk": "Lack of transparency and accountability",
+        "risk": "Psychological Harm",
+        "risk_category": "PsychologicalHarm",
         "severity": "High",
-        "explanation": "Users are not provided with clear explanations for why they see specific advertisements, making it difficult to hold the system accountable for its decisions."
+        "explanation": "The system's reliance on user behavioural data may lead to mental distress, manipulation, or emotional damage for individuals who are exposed to targeted advertisements."
       },
       {
-        "risk": "Inadequate data protection and privacy measures",
+        "risk": "Privacy Breach",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The system's collection and processing of user behavioural data pose a significant risk of unauthorised disclosure or misuse."
+      },
+      {
+        "risk": "Accountability",
+        "risk_category": "Accountability",
         "severity": "Medium",
-        "explanation": "The system processes user behavioural data, which raises concerns about data protection and privacy."
+        "explanation": "The lack of transparency and fairness auditing mechanisms raises concerns about accountability and trustworthiness."
       },
       {
-        "risk": "Potential for harm through discriminatory practices",
-        "severity": "High",
-        "explanation": "The system's reliance on demographic signals may lead to discriminatory practices, as seen in the academic audit findings."
+        "risk": "Data Governance",
+        "risk_category": "DataGovernance",
+        "severity": "Medium",
+        "explanation": "The system's reliance on user behavioural data may lead to inadequate data stewardship, provenance, or quality controls in AI pipelines."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms (Mandatory)",
-        "framework": "ACMConference",
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment and mitigation plan to address potential harms."
-      },
-      {
-        "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate (Mandatory)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement fairness auditing mechanisms and bias mitigation techniques to ensure the system does not perpetuate discrimination."
-      },
-      {
-        "requirement_id": "EUAIAct-001",
-        "requirement_text": "High-risk AI systems must undergo rigorous testing, validation, and certification (Mandatory)",
-        "framework": "EU AI Act",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Submit the system for EU AI Act certification and address any identified issues."
-      },
-      {
-        "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information (Mandatory)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement robust data protection measures, including obtaining explicit user consent for data collection and processing."
+        "action_needed": "Conduct a risk assessment and determine if the proposed system requires a FRIA."
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The system's reliance on demographic signals may lead to discriminatory practices."
+        "relevance": "The system's optimisation function may perpetuate existing biases and inequalities, leading to unfair treatment of certain groups."
       },
       {
-        "article": "Article 23",
-        "right_name": "Gender Equality",
-        "relevance": "The system's optimisation algorithm may perpetuate biases and discrimination, including gender-based bias."
-      },
-      {
-        "article": "Article 8",
-        "right_name": "DataProtection",
-        "relevance": "The system processes user behavioural data, which raises concerns about data protection and privacy."
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The system's collection and processing of user behavioural data pose a significant risk of unauthorised disclosure or misuse."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "Implement fairness auditing mechanisms and bias mitigation techniques to ensure the system does not perpetuate discrimination."
+        "lesson": "The importance of fairness auditing mechanisms in AI systems to prevent discrimination and ensure accountability."
       },
       {
-        "incident_id": "AIAAIC-015",
-        "incident_title": "Uber Surge Pricing Discrimination",
-        "lesson": "Conduct a thorough risk assessment and mitigation plan to address potential harms, including discriminatory practices."
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The need for transparency and explainability in AI decision-making processes to prevent bias and ensure trustworthiness."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement fairness auditing mechanisms and bias mitigation techniques.",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Obtain explicit user consent for data collection and processing.",
-        "priority": "Medium"
+        "mitigation": "Human Oversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough risk assessment and mitigation plan",
-      "Implement fairness auditing mechanisms and bias mitigation techniques"
+      "Conduct a risk assessment and determine if the proposed system requires a FRIA.",
+      "Implement fairness auditing mechanisms to prevent discrimination and ensure accountability."
     ],
     "tier2_reflective_prompts": [
-      "How can the system be designed to ensure transparency and accountability?",
-      "What measures can be taken to address potential harms, including discriminatory practices?"
+      "What additional measures can be taken to ensure transparency and explainability in AI decision-making processes?",
+      "How can the system's optimisation function be designed to prevent perpetuation of existing biases and inequalities?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
-        "fairness",
-        "employ",
-        "prediction",
         "predict",
-        "scor",
-        "race",
+        "employ",
+        "fairness",
         "gender",
+        "prediction",
+        "race",
+        "scor",
         "social media"
       ],
-      "rights_matched": 10,
-      "requirements_retrieved": 177,
+      "rights_matched": 5,
+      "requirements_retrieved": 120,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM020",
         "ACM025",
@@ -156,9 +314,9 @@
         "HE021",
         "HE042",
         "HE050",
-        "HE014",
-        "HE038",
-        "R028"
+        "ACM002",
+        "ACM012",
+        "ACM013"
       ],
       "requirements_retrieved_ids": [
         "ACM020",
@@ -168,10 +326,6 @@
         "HE021",
         "HE042",
         "HE050",
-        "HE014",
-        "HE038",
-        "R028",
-        "R085",
         "ACM002",
         "ACM012",
         "ACM013",
@@ -191,94 +345,35 @@
         "HE033",
         "HE037",
         "R027",
-        "ACM011",
-        "ACM037",
-        "HE020",
-        "R020",
-        "R050",
-        "ACM016",
+        "R028",
+        "R085",
+        "ACM001",
         "ACM017",
-        "ACM018",
         "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
+        "ACM035",
         "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI008",
-        "AI009",
-        "AI010",
-        "AI012",
         "AI015",
+        "AI017",
         "AI018",
+        "AI019",
         "AI020",
+        "AI022",
         "AI026",
-        "AI027",
         "AI028",
-        "AI029",
         "AI030",
         "HE002",
-        "HE006",
-        "HE011",
-        "HE022",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE041",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM001",
-        "ACM035",
-        "AI017",
-        "AI019",
-        "AI022",
         "HE005",
+        "HE006",
+        "HE024",
+        "HE026",
         "HE027",
+        "HE028",
         "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
         "HE048",
+        "HE052",
         "R010",
         "R054",
         "R055",
@@ -317,9 +412,14 @@
         "R084",
         "ACM006",
         "ACM009",
+        "ACM016",
+        "AI012",
         "AI014",
         "HE010",
+        "HE011",
+        "HE034",
         "HE035",
+        "HE046",
         "R005",
         "R014",
         "R018",
@@ -328,6 +428,7 @@
         "R024",
         "R025",
         "R029",
+        "R030",
         "R031",
         "R033",
         "R063",
@@ -340,17 +441,14 @@
         "R073"
       ],
       "requirements_cited": [
-        "ACM001",
-        "ACM003",
-        "EUAIAct-001",
-        "ACM006"
+        "AI001"
       ],
       "incidents_sample": [
         "AIAAIC-014",
         "AIAAIC-018",
         "AIAAIC-027",
-        "AIAAIC-015",
-        "AIAAIC-021"
+        "AIAAIC-001",
+        "AIAAIC-002"
       ]
     }
   }

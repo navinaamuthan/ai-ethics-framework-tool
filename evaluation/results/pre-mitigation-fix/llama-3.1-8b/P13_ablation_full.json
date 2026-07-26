@@ -1,0 +1,121 @@
+{
+  "proposal_id": "P13_ablation",
+  "mode": "full",
+  "timestamp": "2026-06-27T14:02:04.724090",
+  "proposal_text": "This research proposes to conduct a bibliometric analysis of peer-reviewed publications on AI ethics from 2018-2025. The study will use the Scopus and Web of Science databases to identify all publications containing keywords related to AI ethics, responsible AI, algorithmic fairness, and AI governance. The analysis will examine publication trends, citation networks, geographic distribution of research groups, and thematic clustering using topic modelling. All data is publicly available metadata from academic databases. No personal data about individual researchers will be collected beyond publicly listed author names and institutional affiliations. The analysis will use standard bibliometric tools including VOSviewer and Bibliometrix. Results will identify gaps in the AI ethics literature to inform future research directions. No AI systems will be developed or deployed as part of this research.",
+  "keywords": [
+    "data",
+    "personal data",
+    "fairness"
+  ],
+  "matched_rights": [
+    "Art20_EqualityBeforeLaw",
+    "Art21_NonDiscrimination",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 154,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The primary ethical risks identified in this proposal are related to data bias, algorithmic fairness, and potential negative social impacts. The research involves analyzing peer-reviewed publications on AI ethics, which may lead to the identification of gaps in the literature that could be misinterpreted or used to justify biased or discriminatory practices.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Bias in data and algorithmic design",
+        "severity": "High",
+        "explanation": "The research involves analyzing publication trends, citation networks, and thematic clustering using topic modelling, which may lead to the identification of biases in the data or algorithmic design."
+      },
+      {
+        "risk": "Negative social impacts on certain groups",
+        "severity": "Medium",
+        "explanation": "The research may identify gaps in the AI ethics literature that could be misinterpreted or used to justify biased or discriminatory practices, leading to negative social impacts on certain groups."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "HE012",
+        "requirement_text": "Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity or is sufficiently neutral.",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The researcher must specify steps to ensure the data used in this research is representative of the target population and reflects diversity or is sufficiently neutral."
+      },
+      {
+        "requirement_id": "HE013",
+        "requirement_text": "Document how bias in input data and algorithmic design will be identified and avoided.",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The researcher must document how bias in the input data and algorithmic design will be identified and avoided."
+      },
+      {
+        "requirement_id": "R085",
+        "requirement_text": "Have you considered anti-discrimination and bias implications of your AI/technology research?",
+        "framework": "REAMS",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "The researcher should reflect on the potential anti-discrimination and bias implications of this research."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "This right is at risk because the research may identify gaps in the AI ethics literature that could be misinterpreted or used to justify biased or discriminatory practices."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "This incident highlights the importance of considering anti-discrimination and bias implications in AI research, which is relevant to this proposal."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct a thorough analysis of the data used in this research to identify potential biases and take steps to mitigate them.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Document the methodology used to ensure that the data is representative of the target population and reflects diversity or is sufficiently neutral.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Specify steps to ensure the data used in this research is representative of the target population and reflects diversity or is sufficiently neutral.",
+      "Document how bias in the input data and algorithmic design will be identified and avoided."
+    ],
+    "tier2_reflective_prompts": [
+      "How may the results of this research be misinterpreted or used to justify biased or discriminatory practices?",
+      "What steps can be taken to mitigate potential negative social impacts on certain groups?"
+    ],
+    "reams_clearance_likely": true,
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "personal data",
+        "fairness"
+      ],
+      "rights_matched": 5,
+      "requirements_retrieved": 154,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "HE014",
+        "HE038",
+        "R028",
+        "R085",
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028"
+      ],
+      "incidents_sample": [
+        "AIAAIC-001",
+        "AIAAIC-002",
+        "AIAAIC-003",
+        "AIAAIC-022",
+        "AIAAIC-034"
+      ]
+    }
+  }
+}

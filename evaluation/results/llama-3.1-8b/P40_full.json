@@ -1,11 +1,11 @@
 {
   "proposal_id": "P40",
   "mode": "full",
-  "llm_backend": "groq",
-  "timestamp": "2026-07-20T23:40:28.690364",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-26T17:36:47.646749",
   "proposal_text": "This research pilots camera-based emotion analytics in a Lagos business-process outsourcing centre, framed as employee wellbeing support. Aggregated mood dashboards go to team leads; individuals scoring repeatedly 'distressed' are offered counselling referrals. Participation is described as voluntary but tied to a wellness bonus. Labour advocates call it surveillance that chills union organising; HR calls it duty-of-care. Consent voluntariness under wage pressure is disputed. The system was validated on Western face sets only. Expected Charter mapping (private life, data protection, fair working conditions, dignity) is reasonably contested in weight even when articles are listed.",
   "context_max_requirements": 25,
-  "llm_model": "llama-3.1-8b-instant",
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "consent",
     "emotion",
@@ -118,165 +118,176 @@
       "df": 5
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The research proposal involves camera-based emotion analytics in a Lagos business-process outsourcing centre, which raises concerns about privacy, surveillance, and potential harm to employees. The system's deployment and use may infringe on employees' right to privacy, freedom of occupation, and fair working conditions. The proposal's reliance on Western face sets for validation also raises concerns about bias and discrimination.",
+    "risk_summary": "The research proposal involves camera-based emotion analytics in a Lagos business-process outsourcing centre, raising concerns about employee wellbeing support, surveillance, and potential chilling effects on union organizing. The system's aggregated mood dashboards and counselling referrals may infringe on employees' private life and data protection rights. Additionally, the use of Western face sets for validation raises questions about representativeness and potential biases.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
         "risk": "PrivacyBreach",
         "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "The system collects and processes employees' emotional data without explicit consent, which may lead to unauthorised collection, processing, or disclosure of personal data."
-      },
-      {
-        "risk": "Surveillance",
-        "risk_category": "Surveillance",
-        "severity": "High",
-        "explanation": "The system's deployment and use may be perceived as surveillance, which may chill union organising and infringe on employees' right to privacy."
+        "explanation": "The system collects and processes personal data, including emotional analytics, which may be subject to unauthorized access or disclosure."
       },
       {
         "risk": "PsychologicalHarm",
         "risk_category": "PsychologicalHarm",
         "severity": "High",
-        "explanation": "The system's use may lead to mental distress, manipulation, or coercion of employees, particularly if they are not adequately informed or involved in the decision-making process."
-      },
-      {
-        "risk": "Discrimination",
-        "risk_category": "Discrimination",
-        "severity": "High",
-        "explanation": "The system's reliance on Western face sets for validation may perpetuate biases and lead to unfair differential treatment of employees from diverse backgrounds."
+        "explanation": "The system's aggregated mood dashboards and counselling referrals may cause mental distress or manipulation of employees."
       },
       {
         "risk": "Dignity",
         "risk_category": "Dignity",
-        "severity": "High",
-        "explanation": "The system's use may objectify or degrade employees, particularly if they are not adequately informed or involved in the decision-making process."
+        "severity": "Medium",
+        "explanation": "The use of emotion analytics may objectify or degrade human dignity, particularly if not implemented with transparency and accountability."
       },
       {
-        "risk": "Transparency",
-        "risk_category": "Transparency",
+        "risk": "Accountability",
+        "risk_category": "Accountability",
         "severity": "High",
-        "explanation": "The system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to employees and stakeholders, which may lead to mistrust and undermine the system's effectiveness."
+        "explanation": "Employees may not be able to obtain explanation or contestation for AI-mediated decisions affecting their wellbeing or employment status."
+      },
+      {
+        "risk": "Surveillance",
+        "risk_category": "Surveillance",
+        "severity": "Medium",
+        "explanation": "The system's use of camera-based emotion analytics may be perceived as surveillance, potentially chilling union organizing and free speech."
       }
     ],
     "applicable_requirements": [
       {
         "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms.",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Discuss potential harms and mitigation strategies in the proposal."
-      },
-      {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Consider potential harms and take measures to mitigate them in the proposal."
-      },
-      {
-        "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain explicit consent from employees and protect their personal data in the proposal."
+        "action_needed": "Conduct a thorough risk assessment and mitigation plan for potential harms."
       },
       {
         "requirement_id": "AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system).",
         "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a FRIA assessment to determine whether the organisation is obligated to conduct a FRIA."
+        "action_needed": "Conduct a FRIA assessment and implement necessary measures for transparency and accountability."
       },
       {
         "requirement_id": "AI008",
-        "requirement_text": "State the intended purpose of the AI system",
+        "requirement_text": "State the intended purpose of the AI system.",
         "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Clearly state the intended purpose of the AI system in the proposal."
+        "action_needed": "Clearly articulate the system's intended purpose and ensure alignment with organizational goals."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 15",
-        "right_name": "FreedomOfOccupation",
-        "relevance": "The system's deployment and use may infringe on employees' right to freedom of occupation."
-      },
-      {
-        "article": "Article 1",
-        "right_name": "HumanDignity",
-        "relevance": "The system's use may objectify or degrade employees, particularly if they are not adequately informed or involved in the decision-making process."
-      },
-      {
-        "article": "Article 31",
-        "right_name": "FairWorkingConditions",
-        "relevance": "The system's deployment and use may infringe on employees' right to fair working conditions."
-      },
-      {
-        "article": "Article 3",
-        "right_name": "RightToIntegrity",
-        "relevance": "The system's use may infringe on employees' right to integrity."
-      },
-      {
         "article": "Article 7",
         "right_name": "PrivateLife",
-        "relevance": "The system collects and processes employees' emotional data without explicit consent, which may lead to unauthorised collection, processing, or disclosure of personal data."
+        "relevance": "The system collects and processes personal data, potentially infringing on employees' private life rights."
       },
       {
         "article": "Article 8",
         "right_name": "DataProtection",
-        "relevance": "The system collects and processes employees' emotional data without explicit consent, which may lead to unauthorised collection, processing, or disclosure of personal data."
+        "relevance": "The system's handling of personal data may not meet EU data protection standards, putting employees' data at risk."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-015",
-        "incident_title": "Uber Surge Pricing Discrimination",
-        "lesson": "The use of AI systems can perpetuate biases and lead to unfair differential treatment of individuals or groups."
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "Implement robust content moderation and human oversight to prevent AI-generated outputs that may cause harm or offense."
       },
       {
-        "incident_id": "AIAAIC-021",
-        "incident_title": "HireVue Automated Video Interview Bias",
-        "lesson": "The use of AI systems can perpetuate biases and lead to unfair differential treatment of individuals or groups."
-      },
-      {
-        "incident_id": "AIAAIC-022",
-        "incident_title": "Deliveroo Algorithmic Dismissal",
-        "lesson": "The use of AI systems can lead to unfair exclusion or adverse treatment of workers or job applicants."
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "Ensure AI systems are trained on diverse and representative data sets to avoid perpetuating biases and stereotypes."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement transparency and accountability measures to ensure that employees are informed and involved in the decision-making process.",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Develop and deploy the AI system in a way that minimises the risk of bias and discrimination.",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Establish clear guidelines and protocols for the collection, processing, and disclosure of employees' emotional data.",
-        "priority": "Medium"
-      },
-      {
-        "mitigation": "Provide employees with adequate training and support to ensure that they understand the AI system's capabilities and limitations.",
-        "priority": "Medium"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "Human Oversight",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Discuss potential harms and mitigation strategies in the proposal.",
-      "Consider potential harms and take measures to mitigate them in the proposal.",
-      "Obtain explicit consent from employees and protect their personal data in the proposal.",
-      "Conduct a FRIA assessment to determine whether the organisation is obligated to conduct a FRIA.",
-      "Clearly state the intended purpose of the AI system in the proposal."
+      "Conduct a thorough risk assessment and mitigation plan for potential harms.",
+      "Implement necessary measures for transparency and accountability."
     ],
     "tier2_reflective_prompts": [
-      "What potential harms and mitigation strategies should be considered in the proposal?",
-      "How can the organisation ensure that employees are adequately informed and involved in the decision-making process?",
-      "What measures can be taken to minimise the risk of bias and discrimination in the AI system?",
-      "What guidelines and protocols should be established for the collection, processing, and disclosure of employees' emotional data?",
-      "What training and support should be provided to employees to ensure that they understand the AI system's capabilities and limitations?"
+      "Consider the potential chilling effects of surveillance on union organizing and free speech. Reflect on how to balance employee wellbeing with organizational goals."
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -294,6 +305,21 @@
       "rights_matched": 6,
       "requirements_retrieved": 119,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM001",
         "ACM002",
@@ -429,8 +455,6 @@
       ],
       "requirements_cited": [
         "ACM001",
-        "ACM002",
-        "ACM006",
         "AI001",
         "AI008"
       ],

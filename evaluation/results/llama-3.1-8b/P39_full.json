@@ -1,11 +1,11 @@
 {
   "proposal_id": "P39",
   "mode": "full",
-  "llm_backend": "groq",
-  "timestamp": "2026-07-20T23:44:40.986611",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-26T17:35:23.985918",
   "proposal_text": "This project scores neighbourhoods in a coastal EU city for 'climate-migration pressure' using flood models, housing tenure, and demographic composition, to prioritise adaptation spending. Scores are public. Housing advocates warn publication will accelerate insurance retreat and stigmatise migrant-heavy districts; planners argue transparency is required for democratic budgeting. Whether Art.21 non-discrimination, Art.37 environment, Art.1 dignity, or primarily environmental policy applies is contested. No individual decisions are automated. The demographic features make disparate neighbourhood effects likely.",
-  "context_max_requirements": 10,
-  "llm_model": "llama-3.1-8b-instant",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "environment",
     "scor",
@@ -112,152 +112,159 @@
       "df": 5
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "individual_treatment→Art21",
   "assessment": {
-    "risk_summary": "This project involves processing demographic data to score neighbourhoods for climate-migration pressure, which may lead to stigmatisation of migrant-heavy districts and disparate neighbourhood effects. The project may also accelerate insurance retreat and negatively impact vulnerable groups. Transparency and accountability are contested, and environmental policy is a primary concern.",
-    "overall_risk_level": "High",
+    "risk_summary": "This project scores neighbourhoods for 'climate-migration pressure' using flood models, housing tenure, and demographic composition. The scores are public, which may accelerate insurance retreat and stigmatise migrant-heavy districts. Disparate neighbourhood effects are likely due to the demographic features.",
+    "overall_risk_level": "Medium",
     "identified_risks": [
       {
-        "risk": "Stigmatisation of migrant-heavy districts",
+        "risk": "Discrimination",
         "risk_category": "Discrimination",
         "severity": "High",
-        "explanation": "The project's scoring system may perpetuate negative stereotypes and reinforce existing social inequalities."
+        "explanation": "The project's use of demographic composition may lead to unfair differential treatment of individuals or groups based on protected characteristics."
       },
       {
-        "risk": "Disparate neighbourhood effects",
-        "risk_category": "Discrimination",
-        "severity": "High",
-        "explanation": "The project's demographic features may lead to unequal treatment of neighbourhoods based on protected characteristics."
+        "risk": "PsychologicalHarm",
+        "risk_category": "Psychological Harm",
+        "severity": "Medium",
+        "explanation": "The publication of scores may cause mental distress, manipulation, coercion, or emotional damage for residents in migrant-heavy districts."
       },
       {
-        "risk": "Accelerated insurance retreat",
-        "risk_category": "FinancialHarm",
-        "severity": "High",
-        "explanation": "The project's scoring system may lead to increased insurance costs and decreased investment in vulnerable neighbourhoods."
-      },
-      {
-        "risk": "Environmental harm",
-        "risk_category": "EnvironmentalHarm",
-        "severity": "High",
-        "explanation": "The project's focus on climate-migration pressure may lead to increased emphasis on adaptation spending, potentially harming the environment."
-      },
-      {
-        "risk": "Lack of transparency",
-        "risk_category": "Transparency",
-        "severity": "High",
-        "explanation": "The project's scoring system and methodology may not be adequately disclosed to end-users and stakeholders."
-      },
-      {
-        "risk": "Accountability concerns",
-        "risk_category": "Accountability",
-        "severity": "High",
-        "explanation": "The project's scoring system may lead to unequal treatment of neighbourhoods, and affected persons may not be able to obtain explanation or contestation for AI-mediated decisions."
+        "risk": "EnvironmentalHarm",
+        "risk_category": "Environmental Harm",
+        "severity": "Low",
+        "explanation": "The project's use of flood models and demographic composition may have a negative environmental impact, but this is not the primary concern."
       }
     ],
     "applicable_requirements": [
       {
         "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms.",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of potential harms and develop mitigation strategies."
-      },
-      {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment and develop mitigation strategies to prevent harm."
-      },
-      {
-        "requirement_id": "ACM017",
-        "requirement_text": "Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain explicit consent from participants or explain why consent was not obtained."
-      },
-      {
-        "requirement_id": "ACM023",
-        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of potential discriminatory impacts and develop mitigation strategies."
+        "action_needed": "Discuss potential harms and mitigation strategies in the project proposal."
       },
       {
         "requirement_id": "AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system).",
         "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough assessment to determine whether a FRIA is required."
+        "action_needed": "Determine if the project requires a FRIA and document the assessment."
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "High"
+        "relevance": "The project's use of demographic composition may lead to unfair differential treatment of individuals or groups based on protected characteristics."
       },
       {
         "article": "Article 37",
-        "right_name": "EnvironmentalProtection",
-        "relevance": "High"
-      },
-      {
-        "article": "Article 47",
-        "right_name": "RightToEffectiveRemedy",
-        "relevance": "High"
+        "right_name": "Environmental Protection",
+        "relevance": "The project's use of flood models and demographic composition may have a negative environmental impact."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-001",
-        "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of fairness and transparency in AI decision-making systems."
-      },
-      {
         "incident_id": "AIAAIC-004",
         "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
-        "lesson": "The need for thorough testing and validation of AI decision-making systems to prevent bias and discrimination."
+        "lesson": "Carefully consider the potential for bias in AI systems, particularly when using demographic data."
       },
       {
         "incident_id": "AIAAIC-008",
         "incident_title": "PredPol Predictive Policing Algorithmic Bias",
-        "lesson": "The importance of transparency and accountability in AI decision-making systems, particularly in high-stakes applications like law enforcement."
+        "lesson": "Regularly monitor and evaluate AI system performance to prevent unfair differential treatment of individuals or groups."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement fairness and transparency measures in the scoring system",
-        "priority": "High"
+        "mitigation": "Human Oversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct thorough testing and validation of the scoring system",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Develop and implement mitigation strategies to prevent harm and promote well-being",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Ensure adequate transparency and accountability in the scoring system and methodology",
-        "priority": "High"
+        "mitigation": "Audit Log",
+        "mitigation_id": "AuditLog",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough analysis of potential harms and develop mitigation strategies.",
-      "Conduct a thorough risk assessment and develop mitigation strategies to prevent harm.",
-      "Obtain explicit consent from participants or explain why consent was not obtained.",
-      "Conduct a thorough analysis of potential discriminatory impacts and develop mitigation strategies.",
-      "Conduct a thorough assessment to determine whether a FRIA is required."
+      "Conduct a FRIA assessment and document the results.",
+      "Discuss potential harms and mitigation strategies in the project proposal."
     ],
     "tier2_reflective_prompts": [
-      "How can we ensure that the scoring system is fair and transparent?",
-      "What measures can we take to prevent harm and promote well-being?",
-      "How can we ensure that the scoring system does not perpetuate negative stereotypes or reinforce existing social inequalities?",
-      "What steps can we take to address potential environmental harm?",
-      "How can we ensure that the scoring system is accountable and transparent?"
+      "How can you ensure that the project's use of demographic composition does not lead to unfair differential treatment of individuals or groups? What steps will you take to mitigate any potential psychological harm caused by the publication of scores?"
     ],
-    "reams_clearance_likely": false,
+    "reams_clearance_likely": true,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
@@ -270,6 +277,21 @@
       "rights_matched": 3,
       "requirements_retrieved": 59,
       "incidents_retrieved": 5,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM002",
         "ACM012",
@@ -345,9 +367,6 @@
       ],
       "requirements_cited": [
         "ACM001",
-        "ACM002",
-        "ACM017",
-        "ACM023",
         "AI001"
       ],
       "incidents_sample": [

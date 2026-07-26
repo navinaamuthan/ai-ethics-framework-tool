@@ -95,7 +95,7 @@ def main():
         new_rights = get_matched_rights(extract_keywords(text), proposal=text)
         path = get_matched_rights.last_disambiguation
 
-        reqs, incs, rights, kws, risk_cats = retrieve_all_for_proposal(text)
+        reqs, incs, rights, kws, risk_cats, _mits = retrieve_all_for_proposal(text)
         risk_ids = [c["id"] for c in risk_cats]
         sections = sorted({
             r.get("section_reference") for r in reqs

@@ -2,9 +2,9 @@
   "proposal_id": "P21",
   "mode": "full",
   "llm_backend": "ollama",
-  "timestamp": "2026-07-20T23:37:26.115763",
+  "timestamp": "2026-07-26T17:08:57.763010",
   "proposal_text": "This research proposes to develop a machine learning credit-scoring model for a Nairobi-based digital lender serving unbanked and underbanked borrowers across Kenya. The model will predict default risk from mobile-money transaction histories, airtime purchase patterns, geolocation of cash-in/cash-out agents, phone contacts graph density, and device metadata. Training data cover approximately 2.4 million customers of a partner mobile-network operator, collected under the operator's terms of service rather than purpose-specific lending consent. Loan approval and pricing decisions will be fully automated for amounts under KES 50,000, with no human review unless the applicant formally complains. The researchers note that contact-graph features may encode ethnicity and socioeconomic clustering in urban informal settlements, but no demographic fairness audit across ethnic groups or counties is planned before pilot launch. Rejected applicants will receive a generic adverse-action notice without feature-level explanation. The study protocol has not yet been reviewed against the Kenya Data Protection Act 2019 or the EU Charter articles that would apply if the same pipeline were later ported to an EU migrant-lending product.",
-  "context_max_requirements": 12,
+  "context_max_requirements": 25,
   "llm_model": "llama3.1:8b",
   "keywords": [
     "consent",
@@ -111,120 +111,171 @@
       "df": 5
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "individual_treatment→Art21",
   "assessment": {
-    "risk_summary": "The proposed credit-scoring model for a Nairobi-based digital lender poses risks to privacy, discrimination, and transparency due to the use of sensitive personal data without explicit consent, potential biases in feature extraction, and lack of transparency in decision-making.",
+    "risk_summary": "This research proposal involves developing a machine learning credit-scoring model for a Nairobi-based digital lender, which raises concerns about data privacy, discrimination, and transparency.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
         "risk": "PrivacyBreach",
         "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "The model processes sensitive personal data without explicit consent from users."
+        "explanation": "The model will process sensitive personal data of approximately 2.4 million customers without explicit consent."
       },
       {
         "risk": "Discrimination",
         "risk_category": "Discrimination",
         "severity": "High",
-        "explanation": "The feature extraction process may encode ethnicity and socioeconomic clustering, leading to potential biases in decision-making."
-      },
-      {
-        "risk": "Transparency",
-        "risk_category": "Transparency",
-        "severity": "Medium",
-        "explanation": "The model's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders."
+        "explanation": "The contact-graph features may encode ethnicity and socioeconomic clustering in urban informal settlements, potentially leading to biased decision-making."
       },
       {
         "risk": "Accountability",
         "risk_category": "Accountability",
-        "severity": "High",
+        "severity": "Medium",
         "explanation": "Rejected applicants will receive a generic adverse-action notice without feature-level explanation."
       },
       {
-        "risk": "DataGovernance",
-        "risk_category": "DataGovernance",
-        "severity": "Medium",
-        "explanation": "The dataset contains sensitive personal data, and the model's training process may not adequately protect user privacy."
+        "risk": "Transparency",
+        "risk_category": "Transparency",
+        "severity": "High",
+        "explanation": "The model's operation, capabilities, and limitations are not adequately disclosed to end-users and stakeholders."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms.",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment and mitigation plan to address potential harms."
-      },
-      {
         "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm.",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment and mitigation plan to address potential harms."
+        "action_needed": "Conduct a thorough risk assessment and mitigation plan to prevent potential harms."
       },
       {
-        "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate.",
-        "framework": "ACMConference",
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough fairness audit and bias mitigation plan."
+        "action_needed": "Determine if the project falls under the EU AI Act and conduct a FRIA if required."
       },
       {
         "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information.",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain explicit consent from users for the collection, processing, and use of their personal data."
-      },
-      {
-        "requirement_id": "ACM015",
-        "requirement_text": "Research involving human participants must follow existing institutional protocols (IRB or equivalent) — if no formal process exists, undergo equivalent informal ethics review.",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct an IRB review and obtain necessary approvals before proceeding with the project."
+        "action_needed": "Obtain explicit consent from customers for data processing and implement robust data protection measures."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 21",
-        "right_name": "Non-Discrimination",
-        "relevance": "The model's feature extraction process may encode ethnicity and socioeconomic clustering, leading to potential biases in decision-making."
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The project involves processing sensitive personal data of approximately 2.4 million customers without explicit consent."
       },
       {
-        "article": "Article 47",
-        "right_name": "RightToEffectiveRemedy",
-        "relevance": "Rejected applicants will receive a generic adverse-action notice without feature-level explanation."
+        "article": "Article 21",
+        "right_name": "NonDiscrimination",
+        "relevance": "The contact-graph features may encode ethnicity and socioeconomic clustering in urban informal settlements, potentially leading to biased decision-making."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-004",
-        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
-        "lesson": "Conduct thorough fairness audits and bias mitigation plans to prevent similar incidents."
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "Avoid using biased data or algorithms that may perpetuate existing social inequalities."
       },
       {
-        "incident_id": "AIAAIC-008",
-        "incident_title": "PredPol Predictive Policing Algorithmic Bias",
-        "lesson": "Regularly review and update the model's performance to ensure it does not perpetuate biases."
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "Regularly audit and test AI systems for bias and take corrective action to prevent discriminatory outcomes."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement a fairness audit and bias mitigation plan.",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Obtain explicit consent from users for the collection, processing, and use of their personal data.",
-        "priority": "Medium"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "Human Oversight",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough risk assessment and mitigation plan to address potential harms.",
-      "Conduct a thorough fairness audit and bias mitigation plan."
+      "Conduct a thorough risk assessment and mitigation plan to prevent potential harms.",
+      "Determine if the project falls under the EU AI Act and conduct a FRIA if required."
     ],
     "tier2_reflective_prompts": [
-      "How will the model's decision-making process be transparent and explainable?",
-      "What measures will be taken to prevent biases in feature extraction?"
+      "How will you ensure that the model's operation, capabilities, and limitations are transparently disclosed to end-users and stakeholders?",
+      "What measures will be taken to prevent biased decision-making based on demographic data?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -238,6 +289,21 @@
       "rights_matched": 3,
       "requirements_retrieved": 107,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM002",
         "ACM012",
@@ -360,11 +426,9 @@
         "R084"
       ],
       "requirements_cited": [
-        "ACM001",
         "ACM002",
-        "ACM003",
-        "ACM006",
-        "ACM015"
+        "AI001",
+        "ACM006"
       ],
       "incidents_sample": [
         "AIAAIC-001",

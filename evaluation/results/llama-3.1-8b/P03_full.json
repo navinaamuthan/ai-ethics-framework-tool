@@ -2,157 +2,310 @@
   "proposal_id": "P03",
   "mode": "full",
   "llm_backend": "ollama",
-  "timestamp": "2026-07-19T19:57:18.075671",
+  "timestamp": "2026-07-26T16:44:25.022250",
   "proposal_text": "This research proposes to deploy Amazon Rekognition, a cloud-based facial recognition system, for use by law enforcement agencies across the United States to identify individuals in real-time surveillance footage, body camera recordings, and crime scene images. The system can identify and track up to 100 faces in a single image and match them against databases of tens of millions of faces drawn from arrest records and public sources. The system will be marketed to local police departments as a tool for identifying persons of interest in criminal investigations. The default confidence threshold of 80% will be used for initial deployment, with Amazon recommending a 99% threshold for law enforcement use — a discrepancy between default settings and recommended settings that has not been addressed in the deployment contract. An ACLU audit found that at 80% confidence, Rekognition falsely matched 28 members of the US Congress to criminal mugshots, with disproportionate false positives for people of colour including six members of the Congressional Black Caucus. No independent demographic bias audit has been conducted prior to law enforcement deployment. No independent oversight mechanism or accountability framework for false match consequences has been established.",
   "context_max_requirements": 25,
   "llm_model": "llama3.1:8b",
   "keywords": [
-    "bias",
-    "data",
-    "surveil",
-    "track",
-    "accountab",
-    "facial recogn",
-    "criminal",
-    "polic",
     "law enforce",
-    "recommend"
+    "criminal",
+    "recommend",
+    "accountab",
+    "bias",
+    "facial recogn",
+    "polic",
+    "surveil",
+    "track"
   ],
   "matched_rights": [
     "Art11_FreedomOfExpression",
     "Art1_HumanDignity",
-    "Art20_EqualityBeforeLaw",
     "Art21_NonDiscrimination",
-    "Art23_GenderEquality",
-    "Art41_GoodAdministration",
     "Art47_RightToEffectiveRemedy",
     "Art48_PresumptionOfInnocence",
     "Art6_RightToLiberty",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 190,
+  "retrieved_requirements_count": 142,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 53.0,
+      "tf": 53,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 50.0,
+      "tf": 50,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 22.0,
+      "tf": 22,
+      "df": 26
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 19.0,
+      "tf": 19,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 15
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 3,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "individual_treatment→Art21",
   "assessment": {
-    "risk_summary": "The proposed research involves the deployment of Amazon Rekognition, a facial recognition system, for use by law enforcement agencies to identify individuals in real-time surveillance footage. This raises concerns about potential biases, false positives, and consequences for individuals, particularly those from vulnerable groups.",
+    "risk_summary": "The proposed use of Amazon Rekognition for facial recognition in law enforcement raises concerns about privacy breaches, discrimination, and accountability. The system's potential to falsely identify individuals, particularly people of color, is a significant risk. Additionally, the lack of transparency and oversight mechanisms exacerbates these risks.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Biases in facial recognition technology leading to discriminatory outcomes",
+        "risk": "PrivacyBreach",
+        "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "The system has been shown to have a high rate of false positives, particularly for people of colour. Without an independent demographic bias audit, it is unclear whether the system will perpetuate existing biases."
+        "explanation": "The system processes sensitive personal data, including facial recognition information, without adequate safeguards or transparency."
       },
       {
-        "risk": "Lack of transparency and accountability in deployment and use",
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
         "severity": "High",
-        "explanation": "The default confidence threshold of 80% has not been addressed in the deployment contract, and there is no independent oversight mechanism or accountability framework for false match consequences."
+        "explanation": "The system's potential to falsely identify individuals, particularly people of color, raises concerns about discriminatory treatment and unequal access to justice."
       },
       {
-        "risk": "Potential harm to individuals through misidentification or wrongful arrest",
+        "risk": "Accountability",
+        "risk_category": "Accountability",
         "severity": "High",
-        "explanation": "The system's ability to identify and track up to 100 faces in a single image raises concerns about the potential for misidentification, particularly in situations where there are multiple individuals with similar features."
+        "explanation": "The lack of transparency and oversight mechanisms makes it difficult for affected individuals to obtain explanation or contestation for AI-mediated decisions."
       },
       {
-        "risk": "Processing of special category data without explicit consent",
+        "risk": "PsychologicalHarm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Medium",
+        "explanation": "The system's potential to cause emotional distress or mental harm through false identification and discriminatory treatment is a concern."
+      },
+      {
+        "risk": "Transparency",
+        "risk_category": "Transparency",
         "severity": "High",
-        "explanation": "The system will be processing biometric data, including facial recognition information, which is considered special category data under the GDPR. Without explicit consent from individuals, this raises concerns about potential violations of their rights."
+        "explanation": "The lack of transparency about the system's operation, capabilities, limitations, and decision rationale makes it difficult for end-users and stakeholders to make informed decisions."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "requirement_id": "ACM023",
+        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access.",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "The researchers should conduct a thorough analysis of the potential harms associated with this technology and provide recommendations for mitigating these harms."
-      },
-      {
-        "requirement_id": "ACM003",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "The researchers should conduct a thorough analysis of the potential harms associated with this technology and provide recommendations for mitigating these harms."
-      },
-      {
-        "requirement_id": "EUAIAct-001",
-        "requirement_text": "High-risk AI systems must undergo rigorous testing and evaluation before deployment",
-        "framework": "EU AI Act",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "The researchers should conduct a thorough testing and evaluation of the system to ensure that it meets the requirements for high-risk AI systems."
-      },
-      {
-        "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "The researchers should ensure that they have obtained the necessary informed consent from individuals before processing their biometric data."
+        "action_needed": "Conduct thorough risk assessments and implement measures to prevent discriminatory treatment."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 21",
-        "right_name": "Non-Discrimination",
-        "relevance": "The system has been shown to have a high rate of false positives, particularly for people of colour. Without an independent demographic bias audit, it is unclear whether the system will perpetuate existing biases."
-      },
-      {
         "article": "Article 7",
-        "right_name": "PrivateLife",
-        "relevance": "The system will be processing biometric data, including facial recognition information, which is considered special category data under the GDPR. Without explicit consent from individuals, this raises concerns about potential violations of their rights."
+        "right_name": "RightToLiberty",
+        "relevance": "The system's potential to falsely identify individuals raises concerns about the right to liberty and security of person."
       },
       {
         "article": "Article 8",
         "right_name": "DataProtection",
-        "relevance": "The system will be processing biometric data, including facial recognition information, which is considered special category data under the GDPR. Without explicit consent from individuals, this raises concerns about potential violations of their rights."
+        "relevance": "The system processes sensitive personal data, including facial recognition information, without adequate safeguards or transparency."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-002",
         "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The importance of conducting thorough testing and evaluation before deployment, particularly for high-risk AI systems."
-      },
-      {
-        "incident_id": "AIAAIC-005",
-        "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The need to address biases in facial recognition technology and ensure that they do not perpetuate existing discriminatory outcomes."
+        "lesson": "Implement robust oversight mechanisms and ensure that AI systems are transparent and accountable to prevent false identification and discriminatory treatment."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct an independent demographic bias audit before deployment",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Establish an independent oversight mechanism and accountability framework for false match consequences",
-        "priority": "High"
+        "mitigation": "AccessControl",
+        "mitigation_id": "AccessControl",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough analysis of the potential harms associated with this technology and provide recommendations for mitigating these harms.",
-      "Ensure that they have obtained the necessary informed consent from individuals before processing their biometric data."
+      "Conduct thorough risk assessments and implement measures to prevent discriminatory treatment.",
+      "Ensure that AI systems are transparent and accountable."
     ],
     "tier2_reflective_prompts": [
-      "What are the potential consequences of deploying this system without addressing its biases?",
-      "How can we ensure that the system is used in a way that respects the rights and dignity of all individuals?"
+      "What additional safeguards can be implemented to prevent false identification and discriminatory treatment?",
+      "How can the system's transparency and accountability be improved?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
-        "bias",
-        "data",
-        "surveil",
-        "track",
-        "accountab",
-        "facial recogn",
-        "criminal",
-        "polic",
         "law enforce",
-        "recommend"
+        "criminal",
+        "recommend",
+        "accountab",
+        "bias",
+        "facial recogn",
+        "polic",
+        "surveil",
+        "track"
       ],
-      "rights_matched": 11,
-      "requirements_retrieved": 190,
+      "rights_matched": 8,
+      "requirements_retrieved": 142,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM020",
         "ACM025",
@@ -214,10 +367,6 @@
         "R081",
         "R082",
         "R086",
-        "HE014",
-        "HE038",
-        "R028",
-        "R085",
         "ACM012",
         "ACM023",
         "ACM028",
@@ -229,79 +378,29 @@
         "HE032",
         "HE033",
         "HE037",
-        "ACM016",
+        "R028",
+        "R085",
         "ACM017",
-        "ACM018",
         "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
+        "ACM035",
         "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI009",
-        "AI012",
         "AI015",
         "AI018",
+        "AI019",
         "AI020",
+        "AI022",
         "AI026",
-        "AI027",
         "AI028",
-        "AI029",
         "AI030",
-        "HE011",
-        "HE023",
         "HE024",
-        "HE025",
         "HE026",
         "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM035",
-        "AI019",
-        "AI022",
         "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
         "HE048",
+        "HE052",
         "R055",
         "R074",
         "ACM003",
@@ -335,9 +434,14 @@
         "R084",
         "ACM006",
         "ACM009",
+        "ACM016",
+        "AI012",
         "AI014",
         "HE010",
+        "HE011",
+        "HE034",
         "HE035",
+        "HE046",
         "R005",
         "R014",
         "R018",
@@ -346,6 +450,7 @@
         "R024",
         "R025",
         "R029",
+        "R030",
         "R031",
         "R033",
         "R063",
@@ -358,10 +463,7 @@
         "R073"
       ],
       "requirements_cited": [
-        "ACM001",
-        "ACM003",
-        "EUAIAct-001",
-        "ACM006"
+        "ACM023"
       ],
       "incidents_sample": [
         "AIAAIC-014",

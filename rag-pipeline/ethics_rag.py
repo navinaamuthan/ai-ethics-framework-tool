@@ -62,6 +62,7 @@ def _enrich_assessment_metadata(
     reqs: list,
     incidents: list,
     rights: list,
+    mitigations: list = None,
 ) -> dict:
     """Add confidence flag and retrieval/citation metadata to assessment."""
     if "parse_error" in assessment:
@@ -79,6 +80,7 @@ def _enrich_assessment_metadata(
         "rights_matched": len(rights),
         "requirements_retrieved": len(reqs),
         "incidents_retrieved": len(incidents),
+        "retrieved_mitigations": [m["id"] for m in (mitigations or [])],
         "requirements_sample": [r["id"] for r in reqs[:10]],
         "requirements_retrieved_ids": [r["id"] for r in reqs],
         "requirements_cited": cited_ids,
@@ -143,18 +145,22 @@ def assess_proposal(
     # ── MODE: KG ONLY ──
     if mode == "kg_only":
         print("\n[Step 1] Extracting keywords...")
-        reqs, incidents, rights, keywords, risk_cats = retrieve_all_for_proposal(proposal)
+        reqs, incidents, rights, keywords, risk_cats, mitigations = retrieve_all_for_proposal(
+            proposal
+        )
         print(f"  Keywords: {keywords}")
         print(f"  Rights matched: {len(rights)}")
         print(f"  Requirements retrieved: {len(reqs)}")
         print(f"  Incidents retrieved: {len(incidents)}")
         print(f"  Risk categories: {[c['id'] for c in risk_cats]}")
+        print(f"  Mitigations retrieved: {[m['id'] for m in mitigations]}")
 
         result_metadata["keywords"] = keywords
         result_metadata["matched_rights"] = rights
         result_metadata["retrieved_requirements"] = reqs
         result_metadata["retrieved_incidents"] = incidents
         result_metadata["retrieved_risk_categories"] = risk_cats
+        result_metadata["retrieved_mitigations"] = mitigations
         result_metadata["rights_disambiguation"] = getattr(
             retrieve_all_for_proposal, "last_disambiguation", "not_applicable"
         )
@@ -164,6 +170,7 @@ def assess_proposal(
             "incidents_count": len(incidents),
             "rights_count": len(rights),
             "risk_categories_count": len(risk_cats),
+            "mitigations_count": len(mitigations),
             "confidence_flag": _confidence_flag(keywords, reqs),
             "_retrieval_metadata": {
                 "keywords": keywords,
@@ -171,6 +178,7 @@ def assess_proposal(
                 "requirements_retrieved": len(reqs),
                 "incidents_retrieved": len(incidents),
                 "risk_categories": [c["id"] for c in risk_cats],
+                "retrieved_mitigations": [m["id"] for m in mitigations],
                 "rights_disambiguation": result_metadata["rights_disambiguation"],
                 "requirements_sample": [r["id"] for r in reqs[:10]],
                 "requirements_retrieved_ids": [r["id"] for r in reqs],
@@ -212,12 +220,15 @@ def assess_proposal(
 
     # ── MODE: FULL PIPELINE (KG + LLM) ──
     print("\n[Step 1] Extracting keywords from proposal...")
-    reqs, incidents, rights, keywords, risk_cats = retrieve_all_for_proposal(proposal)
+    reqs, incidents, rights, keywords, risk_cats, mitigations = retrieve_all_for_proposal(
+        proposal
+    )
     print(f"  Keywords found: {keywords}")
     print(f"  Charter rights matched: {len(rights)}")
     print(f"  Requirements retrieved: {len(reqs)}")
     print(f"  Incidents retrieved: {len(incidents)}")
     print(f"  Risk categories in scope: {[c['id'] for c in risk_cats]}")
+    print(f"  Mitigations retrieved: {[m['id'] for m in mitigations]}")
     print(f"  Rights disambiguation: {getattr(retrieve_all_for_proposal, 'last_disambiguation', 'n/a')}")
 
     result_metadata["keywords"] = keywords
@@ -225,6 +236,7 @@ def assess_proposal(
     result_metadata["retrieved_requirements_count"] = len(reqs)
     result_metadata["retrieved_incidents_count"] = len(incidents)
     result_metadata["retrieved_risk_categories"] = risk_cats
+    result_metadata["retrieved_mitigations"] = mitigations
     result_metadata["rights_disambiguation"] = getattr(
         retrieve_all_for_proposal, "last_disambiguation", "not_applicable"
     )
@@ -241,6 +253,7 @@ def assess_proposal(
         total_requirements=len(reqs),
         max_requirement_text_chars=requirement_text_char_limit(context_max_requirements),
         risk_categories=risk_cats,
+        mitigations=mitigations,
     )
 
     print("\n[Step 3] Building assessment prompt...")
@@ -261,7 +274,7 @@ def assess_proposal(
     print("\n[Step 5] Parsing JSON response...")
     assessment = parse_json_response(raw_response)
     assessment = _enrich_assessment_metadata(
-        assessment, keywords, reqs, incidents, rights
+        assessment, keywords, reqs, incidents, rights, mitigations
     )
 
     result_metadata["assessment"] = assessment

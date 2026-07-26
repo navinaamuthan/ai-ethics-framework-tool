@@ -1,0 +1,416 @@
+{
+  "proposal_id": "P19",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-05T19:10:15.195330",
+  "proposal_text": "This research proposes a collaboration between Trinity College Dublin and Johns Hopkins University to develop an AI diagnostic model for rare genetic conditions. The project requires sharing patient genomic data and medical imaging between Ireland and the United States. The Irish dataset of 2,000 patients was collected under GDPR with consent for domestic research use only. The US dataset was collected under HIPAA regulations. The researchers propose to use federated learning to train the model without raw data leaving each jurisdiction, but the federated learning protocol requires sharing model gradient updates which have been shown in recent research to be vulnerable to reconstruction attacks that can recover individual patient data. The project has received funding approval but cross-border data transfer impact assessments have not been completed. The rare disease patient population is small enough that anonymisation may not prevent re-identification. No patient advisory group has been consulted on the data sharing arrangements.",
+  "llm_model": "qwen/qwen3-32b",
+  "keywords": [
+    "data",
+    "consent",
+    "medical",
+    "diagnos",
+    "patient",
+    "vulnerable",
+    "cross-border",
+    "transfer"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity",
+    "Art24_RightsOfChild",
+    "Art2_RightToLife",
+    "Art35_HealthCare",
+    "Art3_RightToIntegrity",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 181,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The primary ethical risks stem from cross-border data transfers of sensitive genomic and medical imaging data without completed impact assessments, vulnerabilities in federated learning gradient sharing that could enable data reconstruction, and potential re-identification of rare disease patients. The lack of patient advisory consultation and insufficient anonymization measures further exacerbate risks to data privacy and human dignity.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Gradient sharing vulnerabilities enabling data reconstruction",
+        "severity": "High",
+        "explanation": "Federated learning protocol's susceptibility to reconstruction attacks could expose sensitive patient data despite jurisdictional separation"
+      },
+      {
+        "risk": "Cross-border data transfer compliance gaps",
+        "severity": "High",
+        "explanation": "Uncompleted GDPR/HIPAA impact assessments for transatlantic data flows between GDPR and HIPAA frameworks"
+      },
+      {
+        "risk": "Re-identification risks in rare disease datasets",
+        "severity": "High",
+        "explanation": "Small patient populations make anonymization ineffective against linkage attacks or demographic inference"
+      },
+      {
+        "risk": "Lack of patient advisory group consultation",
+        "severity": "Medium",
+        "explanation": "No stakeholder input on data sharing arrangements for vulnerable rare disease population"
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct comprehensive harm analysis for data reconstruction risks"
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement differential privacy for gradient sharing"
+      },
+      {
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Complete Fundamental Rights Impact Assessment for cross-border data transfers"
+      },
+      {
+        "requirement_id": "HE002",
+        "requirement_text": "AI system must not autonomously make decisions about fundamental personal, economic, social or political issues normally decided by humans, without human oversight and redress",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Establish human oversight protocols for diagnostic model outputs"
+      },
+      {
+        "requirement_id": "ACM019",
+        "requirement_text": "Respect terms of datasets with defined licences (CC 4.0, MIT etc)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Verify GDPR/HIPAA compliance of federated learning implementation"
+      },
+      {
+        "requirement_id": "ACM020",
+        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Document demographic representativeness of rare disease datasets"
+      },
+      {
+        "requirement_id": "AI021",
+        "requirement_text": "Determine FRIA outcome status: Unacceptable Risk / High Residual Risk / Risks Acceptable / Risks Mitigated",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Classify risk level based on reconstruction attack vulnerability analysis"
+      },
+      {
+        "requirement_id": "HE015",
+        "requirement_text": "Possible negative social impacts on certain groups must be mitigated, including impacts beyond algorithmic bias",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop mitigation plan for rare disease population overrepresentation risks"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 7",
+        "right_name": "Right to Privacy",
+        "relevance": "Cross-border data transfers and gradient sharing vulnerabilities threaten data confidentiality"
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "Re-identification risks and incomplete anonymization compromise data subject rights"
+      },
+      {
+        "article": "Article 1",
+        "right_name": "Human Dignity",
+        "relevance": "Potential misuse of sensitive genetic information could dehumanize vulnerable patient groups"
+      },
+      {
+        "article": "Article 35",
+        "right_name": "Healthcare Rights",
+        "relevance": "Diagnostic model errors could impact access to appropriate medical treatment"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-017",
+        "incident_title": "IBM Watson Oncology Unsafe Recommendations",
+        "lesson": "Medical AI systems require rigorous validation to prevent harmful diagnostic errors"
+      },
+      {
+        "incident_id": "AIAAIC-009",
+        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
+        "lesson": "Autonomous systems with safety-critical functions need robust fail-safes and human oversight"
+      },
+      {
+        "incident_id": "AIAAIC-026",
+        "incident_title": "Facial Recognition in UK Schools",
+        "lesson": "Biometric data collection in vulnerable populations requires explicit consent and proportionality assessments"
+      },
+      {
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "Algorithmic bias in healthcare contexts could lead to misdiagnosis of underrepresented groups"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement homomorphic encryption for gradient sharing to prevent reconstruction attacks",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Establish cross-jurisdictional data transfer impact assessments with GDPR/HIPAA harmonization",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Form patient advisory group with rare disease representatives for data governance oversight",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Apply k-anonymity with differential privacy for all shared model updates",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Complete Fundamental Rights Impact Assessment (FRIA) for cross-border data transfers",
+      "Implement encryption protocols for gradient sharing",
+      "Establish patient advisory group for data governance",
+      "Conduct GDPR/HIPAA compliance audit for federated learning implementation"
+    ],
+    "tier2_reflective_prompts": [
+      "How might model outputs be misused for genetic discrimination by third parties?",
+      "What long-term social impacts could arise from imperfect rare disease diagnostics?",
+      "Should the project consider synthetic data generation to avoid real patient data sharing?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "consent",
+        "medical",
+        "diagnos",
+        "patient",
+        "vulnerable",
+        "cross-border",
+        "transfer"
+      ],
+      "rights_matched": 8,
+      "requirements_retrieved": 181,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE019",
+        "HE021",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE042",
+        "HE049",
+        "HE050",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "R043",
+        "R044",
+        "R045",
+        "R055",
+        "ACM027",
+        "AI024",
+        "R021",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "R009",
+        "R015",
+        "R019",
+        "R022",
+        "R034",
+        "R039",
+        "R042",
+        "R046",
+        "R048",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI009",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE011",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM003",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R023",
+        "R026",
+        "R047",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE013",
+        "HE033",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "AI001",
+        "HE002",
+        "ACM019",
+        "ACM020",
+        "AI021",
+        "HE015"
+      ],
+      "incidents_sample": [
+        "AIAAIC-003",
+        "AIAAIC-005",
+        "AIAAIC-009",
+        "AIAAIC-025",
+        "AIAAIC-026"
+      ]
+    }
+  }
+}

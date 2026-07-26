@@ -1,0 +1,353 @@
+{
+  "proposal_id": "P15",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-05T19:08:07.711359",
+  "proposal_text": "This research proposes to analyse anonymised Dublin Bus and Luas smart card tap-on data to model public transport usage patterns across different times of day, routes, and weather conditions. The dataset consists of aggregated journey counts per route per hour provided by the National Transport Authority under an open data licence. No individual passenger records are included and no re-identification is possible from the aggregated data. The analysis will use time series forecasting and clustering algorithms to identify underserved routes and peak demand periods. Results will be shared with Dublin City Council to inform transport planning decisions. The environmental impact of the computational resources required for the analysis will be documented. No AI system will be deployed in any operational context.",
+  "llm_model": "qwen/qwen3-32b",
+  "keywords": [
+    "data",
+    "environment"
+  ],
+  "matched_rights": [
+    "Art37_EnvironmentalProtection",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 139,
+  "retrieved_incidents_count": 7,
+  "assessment": {
+    "risk_summary": "The primary ethical risks stem from environmental impact of computational resources and potential indirect effects on transport equity. While data is anonymized, environmental sustainability and data transparency requirements must be addressed. No high-risk factors like personal data processing or autonomous decision-making are present.",
+    "overall_risk_level": "Low",
+    "identified_risks": [
+      {
+        "risk": "Environmental impact from computational resources",
+        "severity": "Low",
+        "explanation": "Time series forecasting and clustering require significant compute resources, necessitating documented mitigation steps"
+      },
+      {
+        "risk": "Data transparency and reproducibility",
+        "severity": "Low",
+        "explanation": "Mandatory documentation requirements for datasets and models must be fulfilled to ensure external scrutiny"
+      },
+      {
+        "risk": "Public administration bias in transport planning",
+        "severity": "Low",
+        "explanation": "Aggregated patterns could inadvertently reinforce existing transport inequities if analysis lacks equity considerations"
+      },
+      {
+        "risk": "Open data licensing compliance",
+        "severity": "Low",
+        "explanation": "Need to verify ongoing compliance with National Transport Authority's open data license terms"
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM026",
+        "requirement_text": "Consider whether research negatively impacts environment",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Document carbon footprint mitigation steps"
+      },
+      {
+        "requirement_id": "HE018",
+        "requirement_text": "AI development must be mindful of environmental sustainability",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Provide detailed environmental impact report"
+      },
+      {
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Confirm no PII exists in aggregated dataset"
+      },
+      {
+        "requirement_id": "ACM029",
+        "requirement_text": "Provide data and model documentation via structured templates",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Create Model Cards and Datasheets for all research artefacts"
+      },
+      {
+        "requirement_id": "ACM030",
+        "requirement_text": "Provide licences for released data or models",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Specify open data license terms for research outputs"
+      },
+      {
+        "requirement_id": "AI002",
+        "requirement_text": "Record necessity status: FRIA Required or Not Required",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Formally declare FRIA Not Required status"
+      },
+      {
+        "requirement_id": "AI008",
+        "requirement_text": "State the intended purpose of the AI system",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Document transport planning as primary purpose"
+      },
+      {
+        "requirement_id": "AI012",
+        "requirement_text": "Assess the likelihood that those persons/groups will be affected",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct stakeholder impact assessment for Dublin transport users"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 37",
+        "right_name": "EnvironmentalProtection",
+        "relevance": "Computational resources require energy consumption documentation"
+      },
+      {
+        "article": "Article 41",
+        "right_name": "GoodAdministration",
+        "relevance": "Transport planning decisions must maintain transparency and accountability"
+      },
+      {
+        "article": "Article 7",
+        "right_name": "PrivateLife",
+        "relevance": "Anonymization processes must maintain privacy guarantees"
+      },
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "Aggregated data processing must comply with GDPR principles"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-036",
+        "incident_title": "Netherlands SyRI Welfare Surveillance System",
+        "lesson": "Public sector data analysis requires explicit safeguards against indirect discrimination"
+      },
+      {
+        "incident_id": "AIAAIC-022",
+        "incident_title": "Deliveroo Algorithmic Dismissal",
+        "lesson": "Algorithmic transport systems can create inequitable outcomes if not designed with equity in mind"
+      },
+      {
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias",
+        "lesson": "Aggregated data analysis may perpetuate systemic biases without careful validation"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement energy-efficient computing protocols for model training",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Publish open-access Model Cards with usage limitations",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct equity impact assessment of transport pattern recommendations",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Verify ongoing compliance with open data license terms",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Document carbon footprint of computational resources",
+      "Create Model Cards and Datasheets for all research outputs",
+      "Formally declare FRIA Not Required status",
+      "Verify anonymization processes meet GDPR standards"
+    ],
+    "tier2_reflective_prompts": [
+      "How might transport pattern insights inadvertently reinforce existing mobility inequities?",
+      "What long-term environmental impacts could result from increased transport usage based on our findings?",
+      "Are there alternative open datasets that could achieve similar results with lower computational cost?"
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "environment"
+      ],
+      "rights_matched": 4,
+      "requirements_retrieved": 139,
+      "incidents_retrieved": 7,
+      "requirements_sample": [
+        "ACM026",
+        "ACM038",
+        "HE018",
+        "HE051",
+        "R052",
+        "R087",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM026",
+        "ACM038",
+        "HE018",
+        "HE051",
+        "R052",
+        "R087",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R054",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE013",
+        "HE033",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM026",
+        "HE018",
+        "ACM016",
+        "ACM029",
+        "ACM030",
+        "AI002",
+        "AI008",
+        "AI012"
+      ],
+      "incidents_sample": [
+        "AIAAIC-022",
+        "AIAAIC-034",
+        "AIAAIC-036",
+        "AIAAIC-002",
+        "AIAAIC-007"
+      ]
+    }
+  }
+}

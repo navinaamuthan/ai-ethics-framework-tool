@@ -2,142 +2,307 @@
   "proposal_id": "P18",
   "mode": "full",
   "llm_backend": "ollama",
-  "timestamp": "2026-07-19T20:41:40.669912",
+  "timestamp": "2026-07-26T17:04:31.184276",
   "proposal_text": "This project proposes to develop an autonomous AI research assistant capable of independently searching the web, reading academic papers, summarising findings, and drafting literature review sections. The agent will use a large language model with tool-use capabilities including web browsing, PDF parsing, database querying, and file creation. The agent will operate with minimal human oversight, executing multi-step research tasks overnight and presenting results for review the following morning. The system will access academic databases using the researcher's institutional credentials. The agent may encounter and process personal data, copyrighted material, and sensitive research findings during its autonomous web browsing. No guardrails have been implemented to prevent the agent from accessing restricted databases, submitting forms, or interacting with external services beyond its intended scope. The researchers plan to evaluate the agent's output quality but have not addressed accountability for errors, hallucinated citations, or unintended data access.",
   "context_max_requirements": 25,
   "llm_model": "llama3.1:8b",
   "keywords": [
-    "data",
-    "personal data",
+    "autonomous",
     "accountab",
-    "autonomous"
+    "personal data"
   ],
   "matched_rights": [
     "Art1_HumanDignity",
     "Art2_RightToLife",
-    "Art41_GoodAdministration",
-    "Art47_RightToEffectiveRemedy",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 178,
+  "retrieved_requirements_count": 109,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 47.0,
+      "tf": 47,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 35.0,
+      "tf": 35,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 19.0,
+      "tf": 19,
+      "df": 26
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 48
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed autonomous AI research assistant poses significant risks due to its potential to access and process personal data, copyrighted material, and sensitive research findings without proper guardrails. The system's ability to execute multi-step tasks with minimal human oversight also increases the likelihood of errors, hallucinated citations, or unintended data access.",
+    "risk_summary": "The proposed autonomous AI research assistant poses significant risks to human dignity, privacy, and accountability due to its potential for biased decision-making, data breaches, and lack of transparency.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Unauthorized access to personal data",
+        "risk": "PrivacyBreach",
+        "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "The system may encounter and process personal data during its autonomous web browsing without explicit consent."
+        "explanation": "The agent may encounter and process personal data during its autonomous web browsing."
       },
       {
-        "risk": "Copyright infringement",
+        "risk": "Accountability",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "The researchers have not addressed accountability for errors, hallucinated citations, or unintended data access."
+      },
+      {
+        "risk": "Dignity",
+        "risk_category": "Dignity",
         "severity": "Medium",
-        "explanation": "The agent may access copyrighted material without proper licensing or citation."
+        "explanation": "The agent's biased decision-making may undermine human dignity through AI system design or use."
       },
       {
-        "risk": "Data breaches due to lack of security measures",
+        "risk": "PsychologicalHarm",
+        "risk_category": "PsychologicalHarm",
         "severity": "High",
-        "explanation": "No guardrails have been implemented to prevent the agent from accessing restricted databases, submitting forms, or interacting with external services beyond its intended scope."
-      },
-      {
-        "risk": "Unintended data access and errors",
-        "severity": "High",
-        "explanation": "The system's ability to execute multi-step tasks with minimal human oversight increases the likelihood of errors, hallucinated citations, or unintended data access."
+        "explanation": "The agent's potential for biased decision-making and lack of transparency may cause mental distress, manipulation, coercion, or emotional damage."
       }
     ],
     "applicable_requirements": [
       {
         "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms (Mandatory)",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms.",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment of the system's potential impacts on individuals, groups, and society."
+        "action_needed": "Discuss potential harms and mitigation strategies."
       },
       {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm (Mandatory)",
+        "requirement_id": "EUAIAct AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system).",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Determine if the organization is required to conduct a FRIA."
+      },
+      {
+        "requirement_id": "ACM024",
+        "requirement_text": "Consult local laws before collecting or analysing bulk surveillance data — surveillance must not predict protected categories or endanger individual well-being.",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to prevent the system from causing harm, such as unauthorized access to personal data or copyright infringement."
-      },
-      {
-        "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information (Mandatory)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain explicit consent from individuals whose personal data the system may access and implement measures to protect their personally identifiable information."
-      },
-      {
-        "requirement_id": "EUAIAct-001",
-        "requirement_text": "Ensure that AI systems are transparent, explainable, and fair (Mandatory)",
-        "framework": "EU AI Act",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement mechanisms to ensure the system's decision-making processes are transparent, explainable, and fair."
-      },
-      {
-        "requirement_id": "ACM029",
-        "requirement_text": "Provide data and model documentation via structured templates (Model Cards, Datasheets for Datasets) (Mandatory)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Create and maintain accurate and detailed documentation of the system's data and models."
+        "action_needed": "Consult relevant laws and regulations."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 7 PrivateLife",
-        "right_name": "Right to private life",
-        "relevance": "The system's potential access to personal data without explicit consent may infringe on individuals' right to private life."
+        "article": "Article 7",
+        "right_name": "PrivateLife",
+        "relevance": "The agent's potential for biased decision-making and lack of transparency may infringe on individuals' right to private life."
       },
       {
-        "article": "Article 8 DataProtection",
-        "right_name": "Right to data protection",
-        "relevance": "The system's handling of personal data and lack of transparency in its decision-making processes may violate individuals' right to data protection."
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The agent's handling of personal data may violate the right to data protection."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-003",
-        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The importance of implementing guardrails and measures to prevent AI systems from causing harm, especially when they have the potential to access and process sensitive information."
+        "incident_id": "AIAAIC-017",
+        "incident_title": "IBM Watson Oncology Unsafe Recommendations",
+        "lesson": "Implement robust safety measures and human oversight to prevent harm."
       },
       {
-        "incident_id": "AIAAIC-005",
-        "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The need for diversity and inclusion in AI development, as well as the importance of addressing biases in data and algorithms."
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "Monitor and address potential biases in AI systems to prevent harm."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement robust security measures to prevent unauthorized access to personal data and copyrighted material.",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Develop and maintain accurate and detailed documentation of the system's data and models.",
-        "priority": "Medium"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "Human Oversight",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough risk assessment of the system's potential impacts on individuals, groups, and society.",
-      "Implement measures to prevent the system from causing harm."
+      "Implement robust safety measures and human oversight.",
+      "Consult relevant laws and regulations."
     ],
     "tier2_reflective_prompts": [
-      "How can we ensure that the system's decision-making processes are transparent, explainable, and fair?",
-      "What measures can be taken to address biases in data and algorithms?"
+      "How can the agent's decision-making be made more transparent?",
+      "What safeguards can be put in place to prevent data breaches?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
-        "data",
-        "personal data",
+        "autonomous",
         "accountab",
-        "autonomous"
+        "personal data"
       ],
-      "rights_matched": 6,
-      "requirements_retrieved": 178,
+      "rights_matched": 4,
+      "requirements_retrieved": 109,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM001",
         "ACM002",
@@ -198,82 +363,6 @@
         "R081",
         "R082",
         "R086",
-        "ACM016",
-        "ACM017",
-        "ACM018",
-        "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
-        "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI009",
-        "AI012",
-        "AI015",
-        "AI018",
-        "AI020",
-        "AI026",
-        "AI027",
-        "AI028",
-        "AI029",
-        "AI030",
-        "HE011",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM035",
-        "AI019",
-        "AI022",
-        "AI023",
-        "HE029",
-        "HE048",
-        "R055",
-        "R074",
         "ACM003",
         "ACM004",
         "ACM005",
@@ -306,11 +395,16 @@
         "R084",
         "ACM006",
         "ACM009",
+        "ACM016",
+        "AI012",
         "AI014",
         "HE010",
+        "HE011",
         "HE013",
         "HE033",
+        "HE034",
         "HE035",
+        "HE046",
         "R005",
         "R014",
         "R018",
@@ -319,6 +413,7 @@
         "R024",
         "R025",
         "R029",
+        "R030",
         "R031",
         "R033",
         "R063",
@@ -328,14 +423,13 @@
         "R069",
         "R070",
         "R072",
-        "R073"
+        "R073",
+        "R074"
       ],
       "requirements_cited": [
         "ACM001",
-        "ACM002",
-        "ACM006",
-        "EUAIAct-001",
-        "ACM029"
+        "EUAIAct AI001",
+        "ACM024"
       ],
       "incidents_sample": [
         "AIAAIC-003",

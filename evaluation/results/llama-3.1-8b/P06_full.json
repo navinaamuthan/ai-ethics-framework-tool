@@ -2,152 +2,304 @@
   "proposal_id": "P06",
   "mode": "full",
   "llm_backend": "ollama",
-  "timestamp": "2026-07-19T20:06:43.574356",
+  "timestamp": "2026-07-26T16:48:44.606667",
   "proposal_text": "This project proposes to install camera-based emotion recognition systems in six secondary school classrooms in Dublin to study the relationship between student emotional engagement and learning outcomes. The system will use computer vision to classify student facial expressions into six emotional categories (happy, sad, angry, surprised, fearful, neutral) at 5-second intervals throughout lessons. Data will be collected over one academic term covering approximately 180 students aged 13-17. Parental consent will be obtained but students will not be given an individual opt-out mechanism that allows them to remain in the classroom without being monitored. The emotion recognition system has been validated primarily on adult Western faces and has not been tested for accuracy on adolescent faces or faces from diverse ethnic backgrounds. Aggregated emotional engagement scores will be shared with teachers to inform pedagogical adjustments.",
   "context_max_requirements": 25,
   "llm_model": "llama3.1:8b",
   "keywords": [
-    "data",
-    "consent",
+    "emotion",
     "student",
-    "school",
-    "monitor",
     "classif",
-    "scor",
-    "emotion"
+    "consent",
+    "monitor",
+    "school",
+    "scor"
   ],
   "matched_rights": [
     "Art1_HumanDignity",
     "Art21_NonDiscrimination",
     "Art24_RightsOfChild",
     "Art3_RightToIntegrity",
-    "Art41_GoodAdministration",
     "Art47_RightToEffectiveRemedy",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 196,
+  "retrieved_requirements_count": 150,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 58.0,
+      "tf": 58,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 54.0,
+      "tf": 54,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 21.0,
+      "tf": 21,
+      "df": 26
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 18.0,
+      "tf": 18,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 15
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 16
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 3,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed emotion recognition system in secondary school classrooms raises concerns about student privacy, potential biases in data collection and analysis, and the lack of explicit opt-out mechanisms for students. The system's accuracy on adolescent faces from diverse ethnic backgrounds is also a concern.",
+    "risk_summary": "The proposed emotion recognition system in secondary school classrooms poses risks to student privacy, dignity, and potentially discriminatory outcomes. The system's accuracy on adolescent faces from diverse backgrounds is untested, and parental consent does not provide students with an opt-out mechanism.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Invasion of Student Privacy",
+        "risk": "PrivacyBreach",
+        "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "The camera-based emotion recognition system will collect and analyze student facial expressions without explicit consent, potentially infringing on their right to privacy."
+        "explanation": "The system will collect personal data on approximately 180 students without explicit consent for individual opt-out."
       },
       {
-        "risk": "Bias in Data Collection and Analysis",
+        "risk": "Dignity",
+        "risk_category": "Dignity",
+        "severity": "High",
+        "explanation": "The system's accuracy and potential biases may undermine student dignity, particularly if it misclassifies or stereotypes certain groups."
+      },
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
         "severity": "Medium",
-        "explanation": "The system's accuracy has not been validated for adolescent faces or faces from diverse ethnic backgrounds, which may lead to biased results and potential harm to certain student groups."
+        "explanation": "The system's untested accuracy on diverse faces may lead to discriminatory outcomes, potentially harming students from underrepresented backgrounds."
       },
       {
-        "risk": "Lack of Explicit Opt-Out Mechanism",
+        "risk": "PsychologicalHarm",
+        "risk_category": "PsychologicalHarm",
         "severity": "High",
-        "explanation": "Students will not be given an individual opt-out mechanism that allows them to remain in the classroom without being monitored, potentially forcing them to participate in data collection against their will."
+        "explanation": "The system's potential for misclassification or biased outputs may cause mental distress or emotional damage to students."
       }
     ],
     "applicable_requirements": [
       {
         "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms (Mandatory)",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms.",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of potential harms and mitigation strategies."
-      },
-      {
-        "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information (Mandatory)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain explicit consent from students and their parents, and ensure that data is protected in accordance with GDPR regulations."
-      },
-      {
-        "requirement_id": "ACM028",
-        "requirement_text": "Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics (Mandatory)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the system's accuracy and potential biases, and implement measures to mitigate any identified issues."
-      },
-      {
-        "requirement_id": "EUAIAct-001",
-        "requirement_text": "Ensure that personal data is processed in accordance with EU GDPR regulations (Mandatory)",
-        "framework": "EU AI Act",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to ensure compliance with GDPR regulations, including obtaining explicit consent from students and their parents."
-      },
-      {
-        "requirement_id": "ACM014",
-        "requirement_text": "All human research subjects or participants must receive appropriate compensation — respect minimum hourly rate in region where work is carried out (Mandatory)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that students and their parents are compensated fairly for their participation in the study."
+        "action_needed": "Conduct thorough risk assessment and mitigation strategies for potential harms."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 7 PrivateLife",
-        "right_name": "Right to Privacy",
-        "relevance": "The proposed emotion recognition system will collect and analyze student facial expressions without explicit consent, potentially infringing on their right to privacy."
+        "article": "7",
+        "right_name": "DataProtection",
+        "relevance": "The system's collection of personal data on students without explicit consent violates the right to data protection."
       },
       {
-        "article": "Article 21 NonDiscrimination",
-        "right_name": "Non-Discrimination",
-        "relevance": "The system's accuracy has not been validated for adolescent faces or faces from diverse ethnic backgrounds, which may lead to biased results and potential harm to certain student groups."
-      },
-      {
-        "article": "Article 24 RightsOfChild",
-        "right_name": "Rights of the Child",
-        "relevance": "The proposed emotion recognition system raises concerns about the rights of children, including their right to privacy and protection from discrimination."
+        "article": "1",
+        "right_name": "HumanDignity",
+        "relevance": "The system's potential for biased or inaccurate outputs may undermine student dignity, violating their human rights."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-026",
-        "incident_title": "Facial Recognition in UK Schools",
-        "lesson": "The use of facial recognition technology in schools has raised concerns about student privacy and potential biases in data collection and analysis."
+        "incident_id": "AIAAIC-025",
+        "incident_title": "Amazon Alexa Recording Children Without Consent",
+        "lesson": "Implement robust consent mechanisms and ensure transparency in data collection and use."
       },
       {
-        "incident_id": "AIAAIC-002",
-        "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The use of facial recognition technology by law enforcement agencies has raised concerns about accuracy, bias, and potential harm to certain groups."
+        "incident_id": "AIAAIC-026",
+        "incident_title": "Facial Recognition in UK Schools",
+        "lesson": "Conduct thorough risk assessments and implement mitigation strategies to prevent discriminatory outcomes."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement measures to ensure compliance with GDPR regulations, including obtaining explicit consent from students and their parents.",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct a thorough analysis of the system's accuracy and potential biases, and implement measures to mitigate any identified issues.",
-        "priority": "Medium"
+        "mitigation": "Pseudonymisation",
+        "mitigation_id": "Pseudonymisation",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Obtain explicit consent from students and their parents",
-      "Ensure compliance with GDPR regulations"
+      "Conduct thorough risk assessment and mitigation strategies for potential harms.",
+      "Implement robust consent mechanisms and ensure transparency in data collection and use."
     ],
     "tier2_reflective_prompts": [
-      "Consider the potential long-term consequences of using facial recognition technology in schools",
-      "Reflect on the potential biases and limitations of the system, and implement measures to mitigate any identified issues."
+      "Consider the potential biases and limitations of the system's accuracy on diverse faces.",
+      "Reflect on how to ensure the system does not perpetuate or exacerbate existing social inequalities."
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
-        "data",
-        "consent",
+        "emotion",
         "student",
-        "school",
-        "monitor",
         "classif",
-        "scor",
-        "emotion"
+        "consent",
+        "monitor",
+        "school",
+        "scor"
       ],
-      "rights_matched": 8,
-      "requirements_retrieved": 196,
+      "rights_matched": 7,
+      "requirements_retrieved": 150,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM001",
         "ACM002",
@@ -238,79 +390,27 @@
         "R042",
         "R046",
         "R048",
-        "ACM016",
         "ACM017",
-        "ACM018",
         "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
+        "ACM035",
         "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI009",
-        "AI012",
         "AI015",
         "AI018",
+        "AI019",
         "AI020",
+        "AI022",
         "AI026",
-        "AI027",
         "AI028",
-        "AI029",
         "AI030",
-        "HE011",
-        "HE023",
         "HE024",
-        "HE025",
         "HE026",
         "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM035",
-        "AI019",
-        "AI022",
         "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
         "HE048",
+        "HE052",
         "R074",
         "ACM003",
         "ACM008",
@@ -337,9 +437,14 @@
         "R083",
         "R084",
         "ACM009",
+        "ACM016",
+        "AI012",
         "AI014",
         "HE010",
+        "HE011",
+        "HE034",
         "HE035",
+        "HE046",
         "R005",
         "R014",
         "R018",
@@ -347,6 +452,7 @@
         "R024",
         "R025",
         "R029",
+        "R030",
         "R031",
         "R033",
         "R063",
@@ -359,11 +465,7 @@
         "R073"
       ],
       "requirements_cited": [
-        "ACM001",
-        "ACM006",
-        "ACM028",
-        "EUAIAct-001",
-        "ACM014"
+        "ACM001"
       ],
       "incidents_sample": [
         "AIAAIC-003",

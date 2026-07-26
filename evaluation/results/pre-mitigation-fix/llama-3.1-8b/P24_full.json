@@ -1,0 +1,295 @@
+{
+  "proposal_id": "P24",
+  "mode": "full",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-20T23:51:10.543856",
+  "proposal_text": "This research proposes a shared remote-proctoring platform for five public universities in Indonesia, Malaysia, and the Philippines. During timed exams, the system records webcam video, microphone audio, screen activity, and keystroke dynamics, flagging 'suspicious behaviour' via a proprietary model trained primarily on North American student footage. Flagged sessions are queued for human review; unflagged sessions are auto-cleared. Students in shared housing report false flags when family members enter the frame. The model has not been validated on darker skin tones under typical tropical indoor lighting. Students must accept continuous recording to sit the exam; no alternative invigilation path is offered. Recordings are retained for twelve months on a Singapore cloud vendor. Universities have not published false-positive rates by campus or demographic group.",
+  "context_max_requirements": 12,
+  "llm_model": "llama3.1:8b",
+  "keywords": [
+    "student"
+  ],
+  "matched_rights": [
+    "Art24_RightsOfChild",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 63,
+  "retrieved_incidents_count": 6,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 43.0,
+      "tf": 43,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 48
+    },
+    {
+      "id": "ChildrenRights",
+      "label": "Children Rights",
+      "definition": "Risk of harm to children's rights, development, or best interests arising from AI systems affecting minors.",
+      "idf_score": 4.5066,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 14
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 15
+    },
+    {
+      "id": "EmploymentHarm",
+      "label": "Employment Harm",
+      "definition": "Risk of unfair exclusion, surveillance, or adverse treatment of workers or job applicants by AI systems.",
+      "idf_score": 4.1701,
+      "rank_score": 6.0,
+      "tf": 6,
+      "df": 20
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "DataBreach",
+      "label": "Data Breach",
+      "definition": "Risk of unauthorised access to or leakage of personal data held or processed by an AI system.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 2,
+      "df": 6
+    },
+    {
+      "id": "FunctionCreep",
+      "label": "Function Creep",
+      "definition": "Risk that an AI system is used beyond its originally defined and ethically approved purpose.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 2,
+      "df": 6
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The proposed shared remote-proctoring platform raises concerns about privacy breaches, discrimination, and children's rights due to its use of webcam video, microphone audio, and keystroke dynamics for flagging 'suspicious behaviour'. The model has not been validated on darker skin tones under typical tropical indoor lighting. Students must accept continuous recording to sit the exam; no alternative invigilation path is offered.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "PrivacyBreach",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The platform records webcam video, microphone audio, and keystroke dynamics without explicit consent from students."
+      },
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The model has not been validated on darker skin tones under typical tropical indoor lighting, which may lead to biased flagging of 'suspicious behaviour'."
+      },
+      {
+        "risk": "ChildrenRights",
+        "risk_category": "ChildrenRights",
+        "severity": "Medium",
+        "explanation": "Students in shared housing report false flags when family members enter the frame, potentially affecting minors."
+      },
+      {
+        "risk": "Accountability",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "Universities have not published false-positive rates by campus or demographic group."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Validate the model on diverse skin tones under typical tropical indoor lighting."
+      },
+      {
+        "requirement_id": "AI011",
+        "requirement_text": "Identify categories of natural persons and groups likely to be affected by the AI system in the specific context (Mandatory)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment to identify potential impacts on students, particularly those from diverse backgrounds."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 24",
+        "right_name": "RightsOfChild",
+        "relevance": "The platform's impact on minors in shared housing may violate their rights."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The continuous recording of students' webcam video, microphone audio, and keystroke dynamics raises concerns about data protection."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-025",
+        "incident_title": "Amazon Alexa Recording Children Without Consent",
+        "lesson": "Prioritize transparency and consent when collecting personal data from minors."
+      },
+      {
+        "incident_id": "AIAAIC-026",
+        "incident_title": "Facial Recognition in UK Schools",
+        "lesson": "Be cautious when using AI-powered tools that may perpetuate biases or infringe on children's rights."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement a more robust validation process for the model, including testing on diverse skin tones under typical tropical indoor lighting.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Publish regular false-positive rates by campus and demographic group to ensure accountability.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough risk assessment to identify potential impacts on students, particularly those from diverse backgrounds."
+    ],
+    "tier2_reflective_prompts": [
+      "How can the platform be designed to minimize biases and ensure fairness for all students? What measures can be taken to address concerns about data protection and children's rights?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "student"
+      ],
+      "rights_matched": 2,
+      "requirements_retrieved": 63,
+      "incidents_retrieved": 6,
+      "requirements_sample": [
+        "R027",
+        "R043",
+        "R044",
+        "R045",
+        "R055",
+        "R081",
+        "ACM003",
+        "ACM005",
+        "ACM006",
+        "ACM008"
+      ],
+      "requirements_retrieved_ids": [
+        "R027",
+        "R043",
+        "R044",
+        "R045",
+        "R055",
+        "R081",
+        "ACM003",
+        "ACM005",
+        "ACM006",
+        "ACM008",
+        "ACM009",
+        "ACM010",
+        "ACM015",
+        "ACM016",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI012",
+        "AI013",
+        "AI014",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE010",
+        "HE011",
+        "HE013",
+        "HE031",
+        "HE033",
+        "HE034",
+        "HE035",
+        "HE036",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R019",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R042",
+        "R047",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R067",
+        "R068",
+        "R069",
+        "R070",
+        "R071",
+        "R072",
+        "R073",
+        "R074",
+        "R083",
+        "R084"
+      ],
+      "requirements_cited": [
+        "ACM003",
+        "AI011"
+      ],
+      "incidents_sample": [
+        "AIAAIC-025",
+        "AIAAIC-026",
+        "AIAAIC-044",
+        "AIAAIC-006",
+        "AIAAIC-007"
+      ]
+    }
+  }
+}

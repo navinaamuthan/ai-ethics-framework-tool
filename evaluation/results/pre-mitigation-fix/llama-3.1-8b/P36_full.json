@@ -1,0 +1,432 @@
+{
+  "proposal_id": "P36",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-20T23:37:58.600833",
+  "proposal_text": "This research estimates 'attention' during online university exams from webcam head-pose and gaze proxies, producing a per-student attention timeline for instructor review after the exam. Timelines are not auto-fail triggers. Students must enable the webcam to sit the exam. Disability advocates argue gaze proxies discriminate against neurodivergent students; the exam board argues attention analytics are ordinary pedagogy. Whether Art.21 non-discrimination, Art.7 private life, Art.1 dignity, or primarily education-policy rather than Charter law applies is contested among reasonable experts. No demographic validation is reported.",
+  "context_max_requirements": 25,
+  "llm_model": "llama-3.1-8b-instant",
+  "keywords": [
+    "student",
+    "discriminat",
+    "disabilit",
+    "polic"
+  ],
+  "matched_rights": [
+    "Art21_NonDiscrimination",
+    "Art23_GenderEquality",
+    "Art24_RightsOfChild",
+    "Art26_DisabilityIntegration",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 83,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 47.0,
+      "tf": 47,
+      "df": 77
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 19.0,
+      "tf": 19,
+      "df": 48
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 17.0,
+      "tf": 17,
+      "df": 101
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 15
+    },
+    {
+      "id": "EmploymentHarm",
+      "label": "Employment Harm",
+      "definition": "Risk of unfair exclusion, surveillance, or adverse treatment of workers or job applicants by AI systems.",
+      "idf_score": 4.1701,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 20
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 26
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "DataBreach",
+      "label": "Data Breach",
+      "definition": "Risk of unauthorised access to or leakage of personal data held or processed by an AI system.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 4,
+      "df": 6
+    },
+    {
+      "id": "FunctionCreep",
+      "label": "Function Creep",
+      "definition": "Risk that an AI system is used beyond its originally defined and ethically approved purpose.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 4,
+      "df": 6
+    }
+  ],
+  "rights_disambiguation": "individual_treatment→Art21",
+  "assessment": {
+    "risk_summary": "This research proposal involves the use of AI to estimate student attention during online exams, which raises concerns about privacy, discrimination, and potential harm to students, particularly those with neurodivergent conditions. The use of webcam head-pose and gaze proxies may perpetuate biases and discriminate against certain groups. The proposal also lacks transparency and accountability mechanisms, which are essential for ensuring the well-being of students and the integrity of the exam process.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "PrivacyBreach",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The use of webcam head-pose and gaze proxies may involve the collection and processing of personal data without explicit consent."
+      },
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The use of gaze proxies may perpetuate biases and discriminate against neurodivergent students."
+      },
+      {
+        "risk": "PsychologicalHarm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "High",
+        "explanation": "The use of AI to estimate student attention may cause mental distress or anxiety in students, particularly those who are already vulnerable."
+      },
+      {
+        "risk": "Accountability",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "The proposal lacks transparency and accountability mechanisms, which are essential for ensuring the well-being of students and the integrity of the exam process."
+      },
+      {
+        "risk": "DataGovernance",
+        "risk_category": "DataGovernance",
+        "severity": "Medium",
+        "explanation": "The proposal does not provide sufficient information about data stewardship, provenance, or quality controls in AI pipelines."
+      },
+      {
+        "risk": "FunctionCreep",
+        "risk_category": "FunctionCreep",
+        "severity": "Medium",
+        "explanation": "The use of AI to estimate student attention may lead to the collection and processing of additional personal data without explicit consent."
+      },
+      {
+        "risk": "Transparency",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The proposal lacks transparency about the methods used to estimate student attention and the potential biases involved."
+      },
+      {
+        "risk": "Well-being",
+        "risk_category": "Well-being",
+        "severity": "Medium",
+        "explanation": "The use of AI to estimate student attention may have unintended consequences on student well-being, particularly if the methods used are biased or inaccurate."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment to identify potential harm and develop strategies to mitigate it."
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop and implement strategies to mitigate biases and ensure fairness in the use of AI to estimate student attention."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from students before collecting and processing their personal data and implement robust data protection measures to prevent unauthorized access or disclosure."
+      },
+      {
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment to determine whether the use of AI to estimate student attention constitutes a high-risk AI system and, if so, develop a FRIA to mitigate potential harm."
+      },
+      {
+        "requirement_id": "AI011",
+        "requirement_text": "Identify categories of natural persons and groups likely to be affected by the AI system in the specific context",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Identify the categories of students who may be affected by the use of AI to estimate student attention and develop strategies to mitigate potential harm to these groups."
+      },
+      {
+        "requirement_id": "AI012",
+        "requirement_text": "Assess the likelihood that those persons/groups will be affected",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment to determine the likelihood of harm to students and develop strategies to mitigate potential harm."
+      },
+      {
+        "requirement_id": "AI013",
+        "requirement_text": "Identify consequences and impacts on affected persons/groups",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Identify the potential consequences and impacts of the use of AI to estimate student attention on students and develop strategies to mitigate potential harm."
+      },
+      {
+        "requirement_id": "AI014",
+        "requirement_text": "Identify specific risks of harm to fundamental rights",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Identify the specific risks of harm to fundamental rights, such as the right to non-discrimination and the right to data protection, and develop strategies to mitigate potential harm."
+      },
+      {
+        "requirement_id": "HE007",
+        "requirement_text": "AI system must process personal data lawfully, fairly and transparently",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Process personal data lawfully, fairly, and transparently, and ensure that students are aware of how their data is being used and protected."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The use of gaze proxies may perpetuate biases and discriminate against neurodivergent students."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The use of AI to estimate student attention may involve the collection and processing of personal data without explicit consent."
+      },
+      {
+        "article": "Article 26",
+        "right_name": "DisabilityIntegration",
+        "relevance": "The use of gaze proxies may perpetuate biases and discriminate against neurodivergent students."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The use of AI in hiring processes can perpetuate biases and discriminate against certain groups."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The use of AI in law enforcement can lead to false arrests and perpetuate biases."
+      },
+      {
+        "incident_id": "AIAAIC-025",
+        "incident_title": "Amazon Alexa Recording Children Without Consent",
+        "lesson": "The use of AI in consumer products can lead to the collection and processing of personal data without explicit consent."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement robust data protection measures to prevent unauthorized access or disclosure of personal data.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop and implement strategies to mitigate biases and ensure fairness in the use of AI to estimate student attention.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct a thorough risk assessment to identify potential harm and develop strategies to mitigate it.",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Obtain explicit consent from students before collecting and processing their personal data.",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Ensure transparency about the methods used to estimate student attention and the potential biases involved.",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough risk assessment to identify potential harm and develop strategies to mitigate it.",
+      "Develop and implement strategies to mitigate biases and ensure fairness in the use of AI to estimate student attention.",
+      "Obtain explicit consent from students before collecting and processing their personal data.",
+      "Implement robust data protection measures to prevent unauthorized access or disclosure of personal data."
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential biases and limitations of the use of gaze proxies in estimating student attention?",
+      "How can we ensure that the use of AI to estimate student attention is fair and transparent?",
+      "What are the potential consequences and impacts of the use of AI to estimate student attention on students?",
+      "How can we mitigate the risks of harm to fundamental rights, such as the right to non-discrimination and the right to data protection?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "student",
+        "discriminat",
+        "disabilit",
+        "polic"
+      ],
+      "rights_matched": 5,
+      "requirements_retrieved": 83,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "R028",
+        "R085",
+        "R043",
+        "R044",
+        "R045",
+        "R055",
+        "R081",
+        "HE014",
+        "HE038",
+        "ACM003",
+        "ACM005",
+        "ACM006",
+        "ACM008",
+        "ACM009",
+        "ACM010",
+        "ACM015",
+        "ACM016",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI012",
+        "AI013",
+        "AI014",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE010",
+        "HE011",
+        "HE031",
+        "HE034",
+        "HE035",
+        "HE036",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R019",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R042",
+        "R047",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R067",
+        "R068",
+        "R069",
+        "R070",
+        "R071",
+        "R072",
+        "R073",
+        "R074",
+        "R083",
+        "R084"
+      ],
+      "requirements_cited": [
+        "ACM002",
+        "ACM003",
+        "ACM006",
+        "AI001",
+        "AI011",
+        "AI012",
+        "AI013",
+        "AI014",
+        "HE007"
+      ],
+      "incidents_sample": [
+        "AIAAIC-001",
+        "AIAAIC-002",
+        "AIAAIC-003",
+        "AIAAIC-011",
+        "AIAAIC-013"
+      ]
+    }
+  }
+}

@@ -2,137 +2,305 @@
   "proposal_id": "P09",
   "mode": "full",
   "llm_backend": "ollama",
-  "timestamp": "2026-07-19T20:15:52.644023",
+  "timestamp": "2026-07-26T16:52:52.510135",
   "proposal_text": "This research proposes to build a recommendation system for academic module selection at Trinity College Dublin. The system will analyse historical student records including module choices, grades achieved, attendance patterns, and degree outcomes to recommend optimal module combinations for current students. The dataset covers 20,000 student records from the past ten years. Students will receive personalised module recommendations through the student portal alongside existing manual advising. The system will use collaborative filtering to identify students with similar academic profiles and recommend modules that led to positive outcomes for comparable students. The researchers acknowledge that historical patterns may reflect systemic inequalities in module access and outcomes. The model will not account for disability accommodations or students who changed programmes. Student consent for the use of historical academic records in the training dataset has not been explicitly obtained.",
   "context_max_requirements": 25,
   "llm_model": "llama3.1:8b",
   "keywords": [
-    "data",
-    "consent",
     "student",
-    "profil",
+    "recommend",
+    "consent",
     "disabilit",
-    "recommend"
+    "profil"
   ],
   "matched_rights": [
     "Art11_FreedomOfExpression",
     "Art1_HumanDignity",
-    "Art21_NonDiscrimination",
     "Art24_RightsOfChild",
-    "Art26_DisabilityIntegration",
-    "Art3_RightToIntegrity",
-    "Art41_GoodAdministration",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 193,
+  "retrieved_requirements_count": 113,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 50.0,
+      "tf": 50,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 36.0,
+      "tf": 36,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 21.0,
+      "tf": 21,
+      "df": 26
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 15
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed recommendation system for academic module selection at Trinity College Dublin involves processing historical student records, including personal data, without explicit consent. This raises concerns about the potential for bias and discrimination in the recommendations, as well as the impact on students' privacy and autonomy.",
-    "overall_risk_level": "MEDIUM",
+    "risk_summary": "The proposed recommendation system for academic module selection at Trinity College Dublin poses risks to student privacy, data governance, and potential biases in the algorithm.",
+    "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Bias and discrimination in recommendation system",
-        "severity": "Medium",
-        "explanation": "The system may perpetuate systemic inequalities in module access and outcomes, particularly if it does not account for disability accommodations or students who changed programmes."
-      },
-      {
-        "risk": "Inadequate consent for data processing",
+        "risk": "PrivacyBreach",
+        "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "Student consent for the use of historical academic records in the training dataset has not been explicitly obtained."
+        "explanation": "The system will process historical student records including personally identifiable information without explicit consent."
       },
       {
-        "risk": "Potential harm to students' privacy and autonomy",
+        "risk": "DataGovernance",
+        "risk_category": "DataGovernance",
+        "severity": "High",
+        "explanation": "The dataset covers 20,000 student records from the past ten years, which may reflect systemic inequalities in module access and outcomes."
+      },
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
         "severity": "Medium",
-        "explanation": "The system will have access to sensitive information about students, including their module choices, grades, attendance patterns, and degree outcomes."
+        "explanation": "The algorithm may perpetuate biases if not properly designed to account for disability accommodations or students who changed programmes."
+      },
+      {
+        "risk": "PsychologicalHarm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "High",
+        "explanation": "Students may experience mental distress or manipulation due to the system's recommendations."
       }
     ],
     "applicable_requirements": [
       {
         "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms (Mandatory)",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms.",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the potential risks and benefits of the recommendation system."
+        "action_needed": "Conduct a thorough risk assessment and mitigation plan."
       },
       {
-        "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate (Mandatory)",
-        "framework": "ACMConference",
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system).",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop a plan to address potential biases in the recommendation system."
-      },
-      {
-        "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information (Mandatory)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain explicit consent from students for the use of their historical academic records in the training dataset."
-      },
-      {
-        "requirement_id": "EUAIAct-001",
-        "requirement_text": "Personal data processing must be transparent and fair, and individuals must have control over their personal data (Mandatory)",
-        "framework": "EU AI Act",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the recommendation system is transparent about how it uses student data and provides clear options for students to control their data."
+        "action_needed": "Conduct a FRIA assessment and implement necessary measures."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 21",
-        "right_name": "Non-Discrimination",
-        "relevance": "The recommendation system may perpetuate systemic inequalities in module access and outcomes, particularly if it does not account for disability accommodations or students who changed programmes."
-      },
-      {
         "article": "Article 7",
         "right_name": "PrivateLife",
-        "relevance": "The system will have access to sensitive information about students, including their module choices, grades, attendance patterns, and degree outcomes."
+        "relevance": "The system's processing of personally identifiable information may infringe on students' right to private life."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The system's collection and storage of student data may violate the EU Charter of Fundamental Rights' data protection provisions."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-001",
-        "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of considering potential biases in AI systems and developing strategies to address them."
+        "incident_id": "AIAAIC-025",
+        "incident_title": "Amazon Alexa Recording Children Without Consent",
+        "lesson": "Implement robust consent mechanisms to protect children's personal data."
       },
       {
-        "incident_id": "AIAAIC-002",
-        "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The risks associated with using facial recognition technology, particularly in law enforcement contexts."
+        "incident_id": "AIAAIC-026",
+        "incident_title": "Facial Recognition in UK Schools",
+        "lesson": "Avoid using facial recognition technology in educational settings without proper safeguards."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement bias detection and mitigation techniques in the recommendation system.",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Develop a plan to address potential biases in the recommendation system.",
-        "priority": "Medium"
+        "mitigation": "Pseudonymisation",
+        "mitigation_id": "Pseudonymisation",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough analysis of the potential risks and benefits of the recommendation system.",
-      "Obtain explicit consent from students for the use of their historical academic records in the training dataset."
+      "Conduct a thorough risk assessment and mitigation plan.",
+      "Implement necessary measures to protect students' private life and data protection rights."
     ],
     "tier2_reflective_prompts": [
-      "How will you ensure that the recommendation system is transparent about how it uses student data?",
-      "What strategies will you develop to address potential biases in the recommendation system?"
+      "How can the system's recommendations be designed to promote diversity and inclusion?",
+      "What safeguards will be implemented to prevent biases in the algorithm?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
-        "data",
-        "consent",
         "student",
-        "profil",
+        "recommend",
+        "consent",
         "disabilit",
-        "recommend"
+        "profil"
       ],
-      "rights_matched": 9,
-      "requirements_retrieved": 193,
+      "rights_matched": 5,
+      "requirements_retrieved": 113,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM020",
         "ACM025",
@@ -194,107 +362,14 @@
         "R081",
         "R082",
         "R086",
-        "ACM012",
-        "ACM023",
-        "ACM028",
-        "AI016",
-        "AI023",
-        "AI024",
-        "HE012",
-        "HE013",
-        "HE032",
-        "HE033",
-        "HE037",
-        "R028",
-        "R085",
         "R043",
         "R044",
         "R045",
         "R055",
-        "HE014",
-        "HE038",
+        "ACM003",
         "ACM004",
         "ACM005",
-        "ACM006",
         "ACM007",
-        "R009",
-        "R015",
-        "R019",
-        "R022",
-        "R034",
-        "R039",
-        "R042",
-        "R046",
-        "R048",
-        "ACM016",
-        "ACM017",
-        "ACM018",
-        "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
-        "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI009",
-        "AI012",
-        "AI015",
-        "AI018",
-        "AI020",
-        "AI026",
-        "AI027",
-        "AI028",
-        "AI029",
-        "AI030",
-        "HE011",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM003",
         "ACM008",
         "ACM010",
         "ACM015",
@@ -308,26 +383,39 @@
         "HE009",
         "HE031",
         "HE036",
+        "R019",
         "R023",
         "R026",
+        "R042",
         "R047",
+        "R048",
         "R049",
         "R067",
         "R068",
         "R071",
         "R083",
         "R084",
+        "ACM006",
         "ACM009",
+        "ACM016",
+        "AI012",
         "AI014",
         "HE010",
+        "HE011",
+        "HE013",
+        "HE033",
+        "HE034",
         "HE035",
+        "HE046",
         "R005",
         "R014",
         "R018",
         "R021",
+        "R022",
         "R024",
         "R025",
         "R029",
+        "R030",
         "R031",
         "R033",
         "R063",
@@ -342,9 +430,7 @@
       ],
       "requirements_cited": [
         "ACM001",
-        "ACM003",
-        "ACM006",
-        "EUAIAct-001"
+        "AI001"
       ],
       "incidents_sample": [
         "AIAAIC-014",

@@ -1,11 +1,11 @@
 {
   "proposal_id": "P23",
   "mode": "full",
-  "llm_backend": "groq",
-  "timestamp": "2026-07-20T23:42:36.903229",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-26T17:12:11.945186",
   "proposal_text": "This project proposes a machine learning triage layer for a municipal social-assistance programme in São Paulo that prioritises home visits for families seeking cash-transfer enrolment. The model uses Cadastro Único registry fields, utility payment irregularities, school attendance flags, and neighbourhood vulnerability indices to score 'urgency'. Caseworkers will be instructed to follow the ranked list unless they document an override. Families scored as low-urgency may wait months for a visit. The training labels come from past caseworker decisions, which community organisations argue systematically under-served favelas and Afro-Brazilian households. No disparate-impact audit by race or territory is scheduled. Applicants cannot see their score or appeal the triage ranking—only the eventual eligibility decision after a visit. The proposal notes tension with EU-style fundamental-rights impact assessment expectations if the same pipeline were adapted under a Horizon Europe social-innovation grant.",
-  "context_max_requirements": 10,
-  "llm_model": "llama-3.1-8b-instant",
+  "context_max_requirements": 25,
+  "llm_model": "llama3.1:8b",
   "keywords": [
     "scor",
     "organisation",
@@ -112,141 +112,165 @@
       "df": 5
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "This project proposes a machine learning triage layer for a municipal social-assistance programme in São Paulo that prioritises home visits for families seeking cash-transfer enrolment, raising concerns about potential biases and lack of transparency in the decision-making process.",
+    "risk_summary": "The proposed machine learning triage layer for a municipal social-assistance programme in São Paulo raises concerns about discrimination, psychological harm, and transparency.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Bias in the triage layer may result in disparate impact on vulnerable groups",
+        "risk": "Discrimination against Afro-Brazilian households",
         "risk_category": "Discrimination",
         "severity": "High",
-        "explanation": "The model uses Cadastro Único registry fields, utility payment irregularities, school attendance flags, and neighbourhood vulnerability indices to score 'urgency', which may perpetuate existing biases against Afro-Brazilian households and favelas."
+        "explanation": "The model uses Cadastro Único registry fields, utility payment irregularities, school attendance flags, and neighbourhood vulnerability indices to score 'urgency', which may perpetuate biases against certain groups."
       },
       {
-        "risk": "Lack of transparency in the decision-making process may lead to mistrust and undermine the social-assistance programme",
-        "risk_category": "Transparency",
-        "severity": "High",
-        "explanation": "Families scored as low-urgency may wait months for a visit, and applicants cannot see their score or appeal the triage ranking."
-      },
-      {
-        "risk": "Potential for data breaches or unauthorised access to sensitive information",
-        "risk_category": "PrivacyBreach",
-        "severity": "High",
-        "explanation": "The proposal notes tension with EU-style fundamental-rights impact assessment expectations if the same pipeline were adapted under a Horizon Europe social-innovation grant."
-      },
-      {
-        "risk": "Risk of psychological harm to families who are denied access to the social-assistance programme due to the triage layer's decisions",
+        "risk": "Psychological harm due to delayed home visits for low-urgency families",
         "risk_category": "PsychologicalHarm",
         "severity": "High",
-        "explanation": "The proposal notes that families scored as low-urgency may wait months for a visit, which may cause emotional distress and anxiety."
+        "explanation": "Families scored as low-urgency may wait months for a visit, which could cause mental distress and emotional damage."
       },
       {
-        "risk": "Potential for accountability issues due to lack of oversight and transparency in the decision-making process",
-        "risk_category": "Accountability",
-        "severity": "High",
-        "explanation": "Caseworkers will be instructed to follow the ranked list unless they document an override, which may lead to inconsistent and unfair treatment of families."
+        "risk": "Transparency issues due to lack of disclosure about triage ranking and scoring",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "Applicants cannot see their score or appeal the triage ranking—only the eventual eligibility decision after a visit."
       }
     ],
     "applicable_requirements": [
-      {
-        "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough impact assessment to identify potential biases and harms in the triage layer."
-      },
-      {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement robust data protection measures to prevent data breaches and unauthorised access to sensitive information."
-      },
       {
         "requirement_id": "ACM003",
         "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a disparate-impact audit by race or territory to identify potential biases in the triage layer."
+        "action_needed": "Conduct a disparate-impact audit by race or territory"
       },
       {
-        "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
-        "framework": "ACMConference",
+        "requirement_id": "EUAIAct AI014",
+        "requirement_text": "Identify specific risks of harm to fundamental rights",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to protect the privacy of families and ensure that their sensitive information is not disclosed without their consent."
+        "action_needed": "Assess the likelihood and consequences of discrimination against Afro-Brazilian households"
       },
       {
-        "requirement_id": "ACM008",
-        "requirement_text": "Consider possible risks and impacts of the research approach itself (not just applications)",
+        "requirement_id": "ACM021",
+        "requirement_text": "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment to identify potential risks and impacts of the triage layer on families and the social-assistance programme."
+        "action_needed": "Evaluate the potential for psychological harm due to delayed home visits"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The triage layer may perpetuate existing biases against Afro-Brazilian households and favelas."
-      },
-      {
-        "article": "Article 47",
-        "right_name": "RightToEffectiveRemedy",
-        "relevance": "Families may not have access to effective remedies for any harm caused by the triage layer's decisions."
+        "relevance": "The model may perpetuate biases against Afro-Brazilian households"
       },
       {
         "article": "Article 8",
         "right_name": "DataProtection",
-        "relevance": "The proposal notes tension with EU-style fundamental-rights impact assessment expectations if the same pipeline were adapted under a Horizon Europe social-innovation grant."
+        "relevance": "The use of personal data in the triage ranking and scoring process"
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-004",
         "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
-        "lesson": "The importance of conducting thorough impact assessments to identify potential biases and harms in AI systems."
+        "lesson": "Conduct thorough testing and validation to prevent bias in AI systems"
       },
       {
         "incident_id": "AIAAIC-008",
         "incident_title": "PredPol Predictive Policing Algorithmic Bias",
-        "lesson": "The need for transparency and accountability in AI decision-making processes to prevent biases and harm to vulnerable groups."
-      },
-      {
-        "incident_id": "AIAAIC-011",
-        "incident_title": "Facebook Discriminatory Ad Targeting",
-        "lesson": "The importance of implementing robust data protection measures to prevent data breaches and unauthorised access to sensitive information."
+        "lesson": "Implement transparency measures to ensure accountability and trust in AI decision-making"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement a disparate-impact audit by race or territory to identify potential biases in the triage layer.",
-        "priority": "High"
+        "mitigation": "Human Oversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct a thorough impact assessment to identify potential biases and harms in the triage layer.",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Implement robust data protection measures to prevent data breaches and unauthorised access to sensitive information.",
-        "priority": "High"
-      },
-      {
-        "mitigation": "Ensure transparency and accountability in the decision-making process by providing clear explanations for the triage layer's decisions.",
-        "priority": "Medium"
+        "mitigation": "Complaint Mechanism",
+        "mitigation_id": "ComplaintMechanism",
+        "priority": "Medium",
+        "from_taxonomy": false
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough impact assessment to identify potential biases and harms in the triage layer.",
-      "Implement robust data protection measures to prevent data breaches and unauthorised access to sensitive information.",
-      "Conduct a disparate-impact audit by race or territory to identify potential biases in the triage layer.",
-      "Ensure transparency and accountability in the decision-making process by providing clear explanations for the triage layer's decisions."
+      "Conduct a disparate-impact audit by race or territory",
+      "Assess the likelihood and consequences of discrimination against Afro-Brazilian households"
     ],
     "tier2_reflective_prompts": [
-      "What are the potential risks and impacts of the triage layer on families and the social-assistance programme?",
-      "How can we ensure that the triage layer is fair and unbiased?",
-      "What measures can we take to protect the privacy of families and ensure that their sensitive information is not disclosed without their consent?"
+      "How can you ensure that the model is fair and unbiased?",
+      "What measures will be taken to prevent psychological harm due to delayed home visits?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -261,6 +285,21 @@
       "rights_matched": 3,
       "requirements_retrieved": 107,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM002",
         "ACM012",
@@ -383,11 +422,9 @@
         "R084"
       ],
       "requirements_cited": [
-        "ACM001",
-        "ACM002",
         "ACM003",
-        "ACM006",
-        "ACM008"
+        "EUAIAct AI014",
+        "ACM021"
       ],
       "incidents_sample": [
         "AIAAIC-001",

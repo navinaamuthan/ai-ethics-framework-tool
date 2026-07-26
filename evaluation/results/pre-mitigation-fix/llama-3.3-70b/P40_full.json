@@ -1,0 +1,505 @@
+{
+  "proposal_id": "P40",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T01:22:23.980765",
+  "proposal_text": "This research pilots camera-based emotion analytics in a Lagos business-process outsourcing centre, framed as employee wellbeing support. Aggregated mood dashboards go to team leads; individuals scoring repeatedly 'distressed' are offered counselling referrals. Participation is described as voluntary but tied to a wellness bonus. Labour advocates call it surveillance that chills union organising; HR calls it duty-of-care. Consent voluntariness under wage pressure is disputed. The system was validated on Western face sets only. Expected Charter mapping (private life, data protection, fair working conditions, dignity) is reasonably contested in weight even when articles are listed.",
+  "context_max_requirements": 10,
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "consent",
+    "emotion",
+    "employ",
+    "employee",
+    "scor",
+    "surveil",
+    "union",
+    "working conditions"
+  ],
+  "matched_rights": [
+    "Art15_FreedomOfOccupation",
+    "Art1_HumanDignity",
+    "Art31_FairWorkingConditions",
+    "Art3_RightToIntegrity",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 119,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 50.0,
+      "tf": 50,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 39.0,
+      "tf": 39,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 20.0,
+      "tf": 20,
+      "df": 26
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 48
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "EmploymentHarm",
+      "label": "Employment Harm",
+      "definition": "Risk of unfair exclusion, surveillance, or adverse treatment of workers or job applicants by AI systems.",
+      "idf_score": 4.1701,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 20
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The proposed research on camera-based emotion analytics in a Lagos business-process outsourcing centre poses significant ethical risks, including potential breaches of privacy, dignity, and fair working conditions. The use of facial recognition technology and the collection of sensitive emotional data raise concerns about surveillance, manipulation, and psychological harm. Furthermore, the system's validation on Western face sets only may perpetuate biases and discrimination against non-Western individuals. The voluntariness of consent is also disputed due to the tie to a wellness bonus, which may exert pressure on employees to participate.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Privacy breach",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The collection and processing of sensitive emotional data may lead to unauthorised disclosure or misuse."
+      },
+      {
+        "risk": "Dignity violation",
+        "risk_category": "Dignity",
+        "severity": "High",
+        "explanation": "The use of facial recognition technology may objectify or undermine human dignity, particularly if the system is not transparent or fair."
+      },
+      {
+        "risk": "Psychological harm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "High",
+        "explanation": "The system's potential to cause mental distress, manipulation, or emotional damage is significant, particularly if the counselling referrals are not adequate or accessible."
+      },
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
+        "severity": "Medium",
+        "explanation": "The system's validation on Western face sets only may perpetuate biases and discrimination against non-Western individuals."
+      },
+      {
+        "risk": "Lack of transparency",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The system's operation, capabilities, and limitations may not be adequately disclosed to end-users and stakeholders, leading to mistrust or misuse."
+      },
+      {
+        "risk": "Employment harm",
+        "risk_category": "EmploymentHarm",
+        "severity": "Medium",
+        "explanation": "The system's potential to surveil or unfairly treat workers may lead to adverse employment outcomes or harm."
+      },
+      {
+        "risk": "Accountability gap",
+        "risk_category": "Accountability",
+        "severity": "Medium",
+        "explanation": "The system's decision-making process and potential biases may not be explainable or contestable, leading to a lack of accountability."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough impact assessment to identify potential harms and benefits"
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement measures to prevent or mitigate potential harms, such as data breaches or psychological harm"
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Validate the system on diverse face sets and implement measures to prevent biases and discrimination"
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct regular audits to detect and address potential biases in the system"
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain informed consent from participants and implement measures to protect personally identifiable information"
+      },
+      {
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of systems and their impacts",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct regular evaluations to assess the system's performance, impact, and potential risks"
+      },
+      {
+        "requirement_id": "ACM008",
+        "requirement_text": "Consider possible risks and impacts of the research approach itself",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment to identify potential risks and impacts of the research approach"
+      },
+      {
+        "requirement_id": "ACM009",
+        "requirement_text": "Access computing and communication resources only when authorised or compelled by public good",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the system is accessed and used only by authorised personnel and for legitimate purposes"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 1",
+        "right_name": "HumanDignity",
+        "relevance": "The system's potential to objectify or undermine human dignity is significant"
+      },
+      {
+        "article": "Article 7",
+        "right_name": "PrivateLife",
+        "relevance": "The collection and processing of sensitive emotional data may infringe on the right to private life"
+      },
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The system's potential to breach data protection principles is significant"
+      },
+      {
+        "article": "Article 15",
+        "right_name": "FreedomOfOccupation",
+        "relevance": "The system's potential to surveil or unfairly treat workers may infringe on the right to freedom of occupation"
+      },
+      {
+        "article": "Article 31",
+        "right_name": "FairWorkingConditions",
+        "relevance": "The system's potential to create unfair working conditions is significant"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-015",
+        "incident_title": "Uber Surge Pricing Discrimination",
+        "lesson": "The importance of ensuring that AI systems do not perpetuate biases or discrimination"
+      },
+      {
+        "incident_id": "AIAAIC-021",
+        "incident_title": "HireVue Automated Video Interview Bias",
+        "lesson": "The need to validate AI systems on diverse datasets to prevent biases and discrimination"
+      },
+      {
+        "incident_id": "AIAAIC-022",
+        "incident_title": "Deliveroo Algorithmic Dismissal",
+        "lesson": "The importance of ensuring that AI systems are transparent and explainable in their decision-making processes"
+      },
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The need to ensure that AI systems are designed and tested to prevent harmful outputs or behaviors"
+      },
+      {
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "The importance of ensuring that AI systems are validated on diverse datasets to prevent biases and discrimination"
+      },
+      {
+        "incident_id": "AIAAIC-009",
+        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
+        "lesson": "The need to ensure that AI systems are designed and tested to prevent harm to humans"
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The importance of ensuring that AI systems are accurate and reliable in their decision-making processes"
+      },
+      {
+        "incident_id": "AIAAIC-007",
+        "incident_title": "Clearview AI Mass Facial Recognition Scraping",
+        "lesson": "The need to ensure that AI systems are transparent and respectful of human rights and dignity"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct a thorough impact assessment to identify potential harms and benefits",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement measures to prevent or mitigate potential harms, such as data breaches or psychological harm",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Validate the system on diverse face sets and implement measures to prevent biases and discrimination",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Obtain informed consent from participants and implement measures to protect personally identifiable information",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Conduct regular evaluations to assess the system's performance, impact, and potential risks",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Ensure that the system is accessed and used only by authorised personnel and for legitimate purposes",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough impact assessment to identify potential harms and benefits",
+      "Implement measures to prevent or mitigate potential harms, such as data breaches or psychological harm",
+      "Validate the system on diverse face sets and implement measures to prevent biases and discrimination",
+      "Obtain informed consent from participants and implement measures to protect personally identifiable information",
+      "Conduct regular evaluations to assess the system's performance, impact, and potential risks"
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential risks and benefits of using camera-based emotion analytics in a business-process outsourcing centre?",
+      "How can we ensure that the system is transparent and explainable in its decision-making processes?",
+      "What measures can we take to prevent or mitigate potential harms, such as data breaches or psychological harm?",
+      "How can we validate the system on diverse face sets and implement measures to prevent biases and discrimination?",
+      "What are the potential consequences of using AI systems that are not transparent or fair?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "consent",
+        "emotion",
+        "employ",
+        "employee",
+        "scor",
+        "surveil",
+        "union",
+        "working conditions"
+      ],
+      "rights_matched": 6,
+      "requirements_retrieved": 119,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE019",
+        "HE021",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE042",
+        "HE049",
+        "HE050",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "ACM037",
+        "HE020",
+        "R020",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "R009",
+        "R015",
+        "R019",
+        "R022",
+        "R034",
+        "R039",
+        "R042",
+        "R043",
+        "R044",
+        "R046",
+        "R048",
+        "ACM003",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM027",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R023",
+        "R026",
+        "R047",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE013",
+        "HE033",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM003",
+        "ACM004",
+        "ACM006",
+        "ACM007",
+        "ACM008",
+        "ACM009"
+      ],
+      "incidents_sample": [
+        "AIAAIC-015",
+        "AIAAIC-021",
+        "AIAAIC-022",
+        "AIAAIC-003",
+        "AIAAIC-005"
+      ]
+    }
+  },
+  "compact_prompt": false
+}

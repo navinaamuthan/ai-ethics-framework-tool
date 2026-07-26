@@ -1,0 +1,432 @@
+{
+  "proposal_id": "P09",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-05T19:03:10.846454",
+  "proposal_text": "This research proposes to build a recommendation system for academic module selection at Trinity College Dublin. The system will analyse historical student records including module choices, grades achieved, attendance patterns, and degree outcomes to recommend optimal module combinations for current students. The dataset covers 20,000 student records from the past ten years. Students will receive personalised module recommendations through the student portal alongside existing manual advising. The system will use collaborative filtering to identify students with similar academic profiles and recommend modules that led to positive outcomes for comparable students. The researchers acknowledge that historical patterns may reflect systemic inequalities in module access and outcomes. The model will not account for disability accommodations or students who changed programmes. Student consent for the use of historical academic records in the training dataset has not been explicitly obtained.",
+  "llm_model": "qwen/qwen3-32b",
+  "keywords": [
+    "data",
+    "consent",
+    "student",
+    "profil",
+    "disabilit",
+    "recommend"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art1_HumanDignity",
+    "Art21_NonDiscrimination",
+    "Art24_RightsOfChild",
+    "Art26_DisabilityIntegration",
+    "Art3_RightToIntegrity",
+    "Art41_GoodAdministration",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 193,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The research involves processing personal academic data without explicit consent, risks perpetuating systemic inequalities in module access, and lacks safeguards for vulnerable groups like disabled students or those changing programs. The recommendation system could influence critical academic decisions, raising concerns about autonomy and data protection.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Processing personal academic records without explicit consent",
+        "severity": "High",
+        "explanation": "EU AI Act and ACM guidelines require explicit consent for personal data use, which has not been obtained here"
+      },
+      {
+        "risk": "Reinforcing historical systemic inequalities in module access",
+        "severity": "High",
+        "explanation": "Collaborative filtering may replicate biases in historical data patterns"
+      },
+      {
+        "risk": "Lack of safeguards for disabled students and program changers",
+        "severity": "High",
+        "explanation": "Excludes critical subpopulations from recommendation logic"
+      },
+      {
+        "risk": "Potential for function creep beyond module recommendations",
+        "severity": "Medium",
+        "explanation": "System could be repurposed for other high-stakes academic decisions"
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM019",
+        "requirement_text": "Respect terms of datasets with defined licences",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Verify legal basis for using historical academic records"
+      },
+      {
+        "requirement_id": "AI001",
+        "requirement_text": "Assess obligation to conduct FRIA",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct full Fundamental Rights Impact Assessment"
+      },
+      {
+        "requirement_id": "ACM024",
+        "requirement_text": "Consult local laws before collecting bulk surveillance data",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain GDPR-compliant consent for data use"
+      },
+      {
+        "requirement_id": "HE002",
+        "requirement_text": "AI must not autonomously make decisions about personal issues",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement human oversight for all recommendations"
+      },
+      {
+        "requirement_id": "ACM036",
+        "requirement_text": "Consider if NLP/ML system could endanger vulnerable individuals",
+        "framework": "ACMConference",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Add disability accommodation parameters to model"
+      },
+      {
+        "requirement_id": "HE050",
+        "requirement_text": "Test for potential misuse/function creep",
+        "framework": "HorizonEurope",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Establish usage boundaries in deployment policy"
+      },
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Discuss societal harms and mitigations",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Publish bias mitigation strategy for historical data"
+      },
+      {
+        "requirement_id": "AI021",
+        "requirement_text": "Determine FRIA outcome status",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Classify system as high-risk under GDPR Article 9"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "Processing of personal academic records without explicit consent"
+      },
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "Risk of perpetuating historical access inequalities"
+      },
+      {
+        "article": "Article 26",
+        "right_name": "Disability Integration",
+        "relevance": "Exclusion of disability accommodations from recommendation logic"
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "Use of sensitive academic performance data"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "Biases in training data can lead to discriminatory outcomes"
+      },
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "Recommendation systems can amplify harmful patterns"
+      },
+      {
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "Lack of diverse training data leads to harmful misclassifications"
+      },
+      {
+        "incident_id": "AIAAIC-027",
+        "incident_title": "Spotify Mood Inference Patent",
+        "lesson": "Inference from academic/behavioral data raises privacy concerns"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Implement GDPR-compliant opt-in consent process for all historical records",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Add bias correction mechanisms for historical data patterns",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Create disability accommodation module for recommendation system",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Establish human oversight protocol for all recommendation outputs",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Publish transparency report on data limitations and model constraints",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Obtain explicit consent for data usage",
+      "Conduct FRIA and publish results",
+      "Implement human-in-the-loop oversight",
+      "Add disability accommodation parameters",
+      "Establish data anonymization protocols"
+    ],
+    "tier2_reflective_prompts": [
+      "How might recommendations impact students from non-traditional academic backgrounds?",
+      "What long-term effects could arise from algorithmic influence on module selection?",
+      "Should the system be restricted to specific student cohorts initially?",
+      "How to balance academic freedom with recommendation guidance?",
+      "What safeguards are needed for students changing programs?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "data",
+        "consent",
+        "student",
+        "profil",
+        "disabilit",
+        "recommend"
+      ],
+      "rights_matched": 9,
+      "requirements_retrieved": 193,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM024",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE049",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "ACM012",
+        "ACM023",
+        "ACM028",
+        "AI016",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R028",
+        "R085",
+        "R043",
+        "R044",
+        "R045",
+        "R055",
+        "HE014",
+        "HE038",
+        "ACM004",
+        "ACM005",
+        "ACM006",
+        "ACM007",
+        "R009",
+        "R015",
+        "R019",
+        "R022",
+        "R034",
+        "R039",
+        "R042",
+        "R046",
+        "R048",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI009",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE011",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM003",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R023",
+        "R026",
+        "R047",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM019",
+        "AI001",
+        "ACM024",
+        "HE002",
+        "ACM036",
+        "HE050",
+        "ACM001",
+        "AI021"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
+        "AIAAIC-003",
+        "AIAAIC-005"
+      ]
+    }
+  }
+}

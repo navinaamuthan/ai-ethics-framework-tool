@@ -1,0 +1,81 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix aief:   <https://w3id.org/aief/> .
+@prefix aiefsh: <https://w3id.org/aief/shapes#> .
+
+#################################################################
+# AIEF consistency shapes — Week 2 (additive; does not replace
+# aief-risk-shapes.ttl). These shapes validate an *assessment output*
+# that has been lifted to RDF by rag-pipeline/output_to_rdf.py, not a
+# raw ResearchProposal description.
+#
+# MitigationCategoryMatchShape reads aief:typicallyMitigatedBy triples
+# that output_to_rdf.py (and run_consistency_check.py) materialise from
+# ontology/risk_to_mitigation_table.py — the single source of truth shared
+# with Task 1.1 — so the population script and this check cannot drift.
+#################################################################
+
+aiefsh: a owl:Ontology ;
+    rdfs:label "AIEF assessment consistency shapes" ;
+    rdfs:comment "SHACL shapes checking mutual consistency of identified risks, cited requirements, and recommended mitigations in an AIEF assessment output." ;
+    sh:declare [
+        sh:prefix "aief" ;
+        sh:namespace "https://w3id.org/aief/"^^xsd:anyURI
+    ] .
+
+#################################################################
+# Shape 1 — every identified risk cites ≥1 requirement
+#################################################################
+aiefsh:RiskHasRequirementShape a sh:NodeShape ;
+    sh:targetClass aief:IdentifiedRisk ;
+    rdfs:label "Identified risk must cite a requirement" ;
+    sh:severity sh:Violation ;
+    sh:property [
+        sh:path aief:assessmentCitesRequirement ;
+        sh:minCount 1 ;
+        sh:message "A risk was identified with no supporting requirement citation." ;
+    ] .
+
+#################################################################
+# Shape 2 — every identified risk has ≥1 mitigation
+#################################################################
+aiefsh:RiskHasMitigationShape a sh:NodeShape ;
+    sh:targetClass aief:IdentifiedRisk ;
+    rdfs:label "Identified risk must have a mitigation" ;
+    sh:severity sh:Violation ;
+    sh:property [
+        sh:path aief:assessmentHasMitigation ;
+        sh:minCount 1 ;
+        sh:message "A risk was identified with no corresponding mitigation." ;
+    ] .
+
+#################################################################
+# Shape 3 — mitigation category must match the risk category's
+# typical mitigations (from the Task 1.1 rule table).
+#
+# Fires when the risk has a category AND none of its attached
+# mitigations appear in that category's typicallyMitigatedBy set.
+# A PrivacyBreach risk mitigated only by StaffTraining fails here.
+#################################################################
+aiefsh:MitigationCategoryMatchShape a sh:NodeShape ;
+    sh:targetClass aief:IdentifiedRisk ;
+    rdfs:label "Mitigation must match risk-category rule table" ;
+    sh:severity sh:Violation ;
+    sh:sparql [
+        sh:message "Mitigation(s) attached to this risk do not match the modelled mitigation classes for its risk category (see ontology/risk_to_mitigation_table.py)." ;
+        sh:prefixes aiefsh: ;
+        sh:select """
+            SELECT $this WHERE {
+                $this aief:assessmentRiskCategory ?cat .
+                # Category has at least one modelled typical mitigation
+                FILTER EXISTS { ?cat aief:typicallyMitigatedBy ?any }
+                # None of the attached mitigations are in that set
+                FILTER NOT EXISTS {
+                    $this aief:assessmentHasMitigation ?mit .
+                    ?cat aief:typicallyMitigatedBy ?mit .
+                }
+            }
+        """ ;
+    ] .

@@ -534,11 +534,11 @@ get_matched_rights.last_match_meta = {}  # type: ignore[attr-defined]
 
 
 def retrieve_requirements_by_right(charter_article: str) -> list:
-    """Get all requirements mapped to a given Charter right (incl. section + risks)."""
-    # Two-step friendly query: fetch req fields, then risks separately in Python
+    """Get all requirements mapped to a given Charter right (incl. section + risks + mitigations)."""
+    # Two-step friendly query: fetch req fields, then risks/mitigations separately in Python
     # (GROUP_CONCAT + OPTIONAL is unreliable under rdflib).
     query = f"""
-    SELECT DISTINCT ?reqID ?text ?framework ?tier ?mandatory ?sectionReference ?riskLocal
+    SELECT DISTINCT ?reqID ?text ?framework ?tier ?mandatory ?sectionReference ?riskLocal ?mitLocal
     WHERE {{
         ?req :mapsToRight :{charter_article} ;
              :requirementID ?reqID ;
@@ -551,13 +551,17 @@ def retrieve_requirements_by_right(charter_article: str) -> list:
             ?req :hasRisk ?risk .
             BIND(STRAFTER(STR(?risk), "/aief/") AS ?riskLocal)
         }}
+        OPTIONAL {{
+            ?req :hasMitigation ?mit .
+            BIND(STRAFTER(STR(?mit), "/aief/") AS ?mitLocal)
+        }}
         BIND(STRAFTER(STR(?fw), "/aief/") AS ?framework)
         BIND(STRAFTER(STR(?tierNode), "/aief/") AS ?tier)
     }}
     ORDER BY ?reqID
     """
     rows = sparql_query(query)
-    # Collapse multi-risk rows into one binding with riskCategories CSV
+    # Collapse multi-risk / multi-mitigation rows into one binding with CSV fields
     by_id = {}
     for r in rows:
         req_id = r.get("reqID", {}).get("value", "")
@@ -572,17 +576,78 @@ def retrieve_requirements_by_right(charter_article: str) -> list:
                 "mandatory": r.get("mandatory", {}),
                 "sectionReference": r.get("sectionReference", {}),
                 "riskCategories": {"type": "literal", "value": ""},
+                "mitigations": {"type": "literal", "value": ""},
                 "_risks": [],
+                "_mits": [],
             }
         risk = r.get("riskLocal", {}).get("value", "")
         if risk and risk not in by_id[req_id]["_risks"]:
             by_id[req_id]["_risks"].append(risk)
+        mit = r.get("mitLocal", {}).get("value", "")
+        if mit and mit not in by_id[req_id]["_mits"]:
+            by_id[req_id]["_mits"].append(mit)
     out = []
     for item in by_id.values():
         risks = item.pop("_risks")
+        mits = item.pop("_mits")
         item["riskCategories"] = {"type": "literal", "value": ",".join(risks)}
+        item["mitigations"] = {"type": "literal", "value": ",".join(mits)}
         out.append(item)
     return out
+
+
+def _parse_csv_list(binding: dict, key: str) -> list:
+    raw = binding.get(key, {}).get("value", "")
+    if not raw:
+        return []
+    return [x.strip() for x in raw.split(",") if x.strip()]
+
+
+def aggregate_retrieved_mitigations(reqs: list) -> list:
+    """Deduplicate mitigation class IDs from retrieved requirements, sorted."""
+    seen: set[str] = set()
+    ordered: list[str] = []
+    for r in reqs:
+        for m in r.get("mitigations", []) or []:
+            if m and m not in seen:
+                seen.add(m)
+                ordered.append(m)
+    return sorted(ordered)
+
+
+def retrieve_mitigation_definitions(mitigation_names: list) -> list:
+    """Fetch rdfs:label / rdfs:comment for mitigation class IRIs (best-effort)."""
+    if not mitigation_names:
+        return []
+    values = " ".join(f":{m}" for m in mitigation_names)
+    query = f"""
+    SELECT ?mitLocal ?label ?comment WHERE {{
+        VALUES ?mit {{ {values} }}
+        OPTIONAL {{ ?mit rdfs:label ?label }}
+        OPTIONAL {{ ?mit rdfs:comment ?comment }}
+        BIND(STRAFTER(STR(?mit), "/aief/") AS ?mitLocal)
+    }}
+    """
+    results = sparql_query(query)
+    by_id = {}
+    for r in results:
+        mid = r.get("mitLocal", {}).get("value", "")
+        if not mid:
+            continue
+        by_id[mid] = {
+            "id": mid,
+            "label": r.get("label", {}).get("value", "") or mid,
+            "definition": r.get("comment", {}).get("value", ""),
+        }
+    ordered = []
+    for name in mitigation_names:
+        if name in by_id:
+            ordered.append(by_id[name])
+        else:
+            # Fallback: split CamelCase for a readable label
+            spaced = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", name)
+            ordered.append({"id": name, "label": spaced, "definition": ""})
+    return ordered
 
 
 def retrieve_incidents_by_right(charter_article: str, limit: int = 3) -> list:
@@ -788,7 +853,10 @@ def requirement_ids_for_risk_category(category: str, candidate_ids: list) -> lis
 def retrieve_all_for_proposal(proposal: str):
     """
     Full retrieval pipeline for a proposal.
-    Returns: (requirements_list, incidents_list, matched_rights, keywords, risk_categories)
+    Returns: (requirements_list, incidents_list, matched_rights, keywords,
+              risk_categories, retrieved_mitigations)
+    where retrieved_mitigations is a deduplicated list of mitigation dicts
+    ({id, label, definition}) drawn from :hasMitigation on retrieved requirements.
     """
     keywords = extract_keywords(proposal)
     matched_rights = get_matched_rights(keywords, proposal=proposal)
@@ -810,6 +878,7 @@ def retrieve_all_for_proposal(proposal: str):
                     "mandatory": r.get("mandatory", {}).get("value", ""),
                     "section_reference": r.get("sectionReference", {}).get("value", ""),
                     "risk_categories": _parse_risk_list(r),
+                    "mitigations": _parse_csv_list(r, "mitigations"),
                 })
 
     all_incidents = []
@@ -829,10 +898,20 @@ def retrieve_all_for_proposal(proposal: str):
     all_incidents = all_incidents[:8]
     risk_categories = retrieve_risk_categories_for_proposal(all_reqs, all_incidents)
 
+    mit_ids = aggregate_retrieved_mitigations(all_reqs)
+    retrieved_mitigations = retrieve_mitigation_definitions(mit_ids)
+
     # Attach audit metadata on the risk_categories list object for callers that want it
     retrieve_all_for_proposal.last_disambiguation = disambiguation_path  # type: ignore[attr-defined]
 
-    return all_reqs, all_incidents, matched_rights, keywords, risk_categories
+    return (
+        all_reqs,
+        all_incidents,
+        matched_rights,
+        keywords,
+        risk_categories,
+        retrieved_mitigations,
+    )
 
 
 retrieve_all_for_proposal.last_disambiguation = "not_applicable"  # type: ignore[attr-defined]
@@ -888,12 +967,14 @@ if __name__ == "__main__":
         print(f"  riskCategories: {sample.get('riskCategories', {}).get('value', '')}")
 
     print("\n5. Testing full retrieval pipeline...")
-    all_reqs, all_incs, all_rights, all_kws, all_risks = retrieve_all_for_proposal(test_text)
+    all_reqs, all_incs, all_rights, all_kws, all_risks, all_mits = retrieve_all_for_proposal(test_text)
     print(f"  Keywords: {all_kws}")
     print(f"  Rights matched: {len(all_rights)}")
     print(f"  Requirements retrieved: {len(all_reqs)}")
     print(f"  Incidents retrieved: {len(all_incs)}")
     print(f"  Risk categories in scope: {[c['id'] for c in all_risks]}")
+    print(f"  Mitigations retrieved: {[m['id'] for m in all_mits]}")
+    assert all_mits, "retrieved requirements should carry :hasMitigation options"
 
     print("\n" + "=" * 60)
     print("ALL TESTS PASSED" if all_reqs else "SOME TESTS FAILED")

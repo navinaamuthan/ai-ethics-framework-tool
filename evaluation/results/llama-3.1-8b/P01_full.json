@@ -2,166 +2,329 @@
   "proposal_id": "P01",
   "mode": "full",
   "llm_backend": "ollama",
-  "timestamp": "2026-07-19T19:50:59.520395",
+  "timestamp": "2026-07-26T16:42:01.515711",
   "proposal_text": "This research proposes to develop a commercial health risk stratification algorithm to identify high-need patients for enrolment in care management programmes across a network of US hospital systems. The algorithm will use insurance claims data as a proxy for health need, predicting which patients require additional clinical resources based on historical healthcare costs, prior diagnoses, medication use, and utilisation patterns from electronic health records covering approximately 200 million patients annually. Patients scoring in the top 3 percentile will automatically be referred to care management; those in the top 45 percentile will be assessed for referral. The algorithm will not explicitly use race as a predictive variable. However, because Black patients have historically incurred lower healthcare costs than white patients with equivalent chronic disease burden — due to structural barriers to healthcare access including cost, discrimination, and geographic distance — the cost proxy will systematically underestimate the health needs of Black patients. The algorithm has not undergone independent bias auditing prior to deployment. No mechanism for algorithmic review or patient appeal of care management non-referral decisions is planned.",
   "context_max_requirements": 25,
   "llm_model": "llama3.1:8b",
   "keywords": [
-    "bias",
-    "discriminat",
-    "data",
-    "health",
-    "diagnos",
     "patient",
+    "health",
     "predict",
-    "scor",
-    "race"
+    "bias",
+    "diagnos",
+    "discriminat",
+    "race",
+    "scor"
   ],
   "matched_rights": [
-    "Art20_EqualityBeforeLaw",
     "Art21_NonDiscrimination",
     "Art23_GenderEquality",
-    "Art26_DisabilityIntegration",
     "Art2_RightToLife",
     "Art35_HealthCare",
-    "Art41_GoodAdministration",
     "Art47_RightToEffectiveRemedy",
-    "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 170,
+  "retrieved_requirements_count": 112,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 50.0,
+      "tf": 50,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 35.0,
+      "tf": 35,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 19.0,
+      "tf": 19,
+      "df": 48
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 15.0,
+      "tf": 15,
+      "df": 26
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 15
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "individual_treatment→Art21",
   "assessment": {
-    "risk_summary": "The research proposal involves the development of a commercial health risk stratification algorithm that may systematically underestimate the health needs of Black patients due to structural barriers to healthcare access. The algorithm has not undergone independent bias auditing prior to deployment, and no mechanism for algorithmic review or patient appeal of care management non-referral decisions is planned.",
+    "risk_summary": "This research proposal involves the development of a commercial health risk stratification algorithm that may perpetuate biases against vulnerable groups, particularly Black patients. The algorithm's use of insurance claims data as a proxy for health need may systematically underestimate the health needs of Black patients due to structural barriers to healthcare access.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Bias in the algorithm against Black patients",
+        "risk": "Discrimination against vulnerable groups, particularly Black patients",
+        "risk_category": "Discrimination",
         "severity": "High",
-        "explanation": "The algorithm may systematically underestimate the health needs of Black patients due to structural barriers to healthcare access, which could lead to unequal treatment and exacerbate existing health disparities."
+        "explanation": "The algorithm's use of insurance claims data as a proxy for health need may perpetuate biases against Black patients due to structural barriers to healthcare access."
       },
       {
-        "risk": "Lack of transparency and accountability in decision-making processes",
+        "risk": "PrivacyBreach through the collection and processing of sensitive patient data",
+        "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "The algorithm will automatically refer patients scoring in the top 3 percentile for care management without human review, and those in the top 45 percentile will be assessed for referral. This lack of transparency and accountability may lead to unfair treatment and unequal access to healthcare services."
+        "explanation": "The algorithm will process sensitive patient data, including prior diagnoses, medication use, and utilisation patterns."
       },
       {
-        "risk": "Inadequate protection of sensitive data",
-        "severity": "Medium",
-        "explanation": "The algorithm will process large amounts of sensitive health data, including insurance claims data and electronic health records. However, the proposal does not provide adequate information on how this data will be protected and secured."
+        "risk": "Accountability for AI-mediated decisions affecting patients' care management",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "Patients scoring in the top 3 percentile will automatically be referred to care management; those in the top 45 percentile will be assessed for referral, but no mechanism for algorithmic review or patient appeal is planned."
       },
       {
-        "risk": "Lack of patient consent and autonomy",
-        "severity": "Medium",
-        "explanation": "The algorithm will automatically refer patients for care management without their explicit consent or input. This lack of patient autonomy may lead to unequal treatment and exacerbate existing health disparities."
+        "risk": "PsychologicalHarm through the potential for biased decision-making and unequal access to healthcare",
+        "risk_category": "PsychologicalHarm",
+        "severity": "High",
+        "explanation": "The algorithm's biases may lead to unequal access to healthcare, causing psychological harm to patients who are denied care or receive inadequate care."
+      },
+      {
+        "risk": "DataGovernance through the potential for biased data collection and processing",
+        "risk_category": "DataGovernance",
+        "severity": "High",
+        "explanation": "The algorithm's use of insurance claims data as a proxy for health need may perpetuate biases against Black patients due to structural barriers to healthcare access."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "requirement_id": "AI028",
+        "requirement_text": "Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of the algorithm's data and decision-making processes to identify and mitigate any biases."
+      },
+      {
+        "requirement_id": "ACM028",
+        "requirement_text": "Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct independent bias auditing of the algorithm prior to deployment and implement measures to mitigate any identified biases."
-      },
-      {
-        "requirement_id": "ACM004",
-        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct regular audits of the algorithm's performance to identify any biases or disparities in treatment recommendations."
-      },
-      {
-        "requirement_id": "EUAIAct-001",
-        "requirement_text": "Ensure that AI systems are transparent, explainable and fair",
-        "framework": "EU AI Act",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to ensure the transparency, explainability, and fairness of the algorithm's decision-making processes."
-      },
-      {
-        "requirement_id": "HorizonEurope-002",
-        "requirement_text": "Ensure that AI systems are designed and developed with human values in mind",
-        "framework": "Horizon Europe",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct regular reviews of the algorithm's design and development to ensure that it aligns with human values and promotes fairness, transparency, and accountability."
+        "action_needed": "Conduct a thorough analysis of the algorithm's data and decision-making processes to identify and mitigate any biases."
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The algorithm may systematically underestimate the health needs of Black patients due to structural barriers to healthcare access, which could lead to unequal treatment and exacerbate existing health disparities."
+        "relevance": "The algorithm's use of insurance claims data as a proxy for health need may perpetuate biases against Black patients due to structural barriers to healthcare access."
       },
       {
-        "article": "Article 35",
-        "right_name": "HealthCare",
-        "relevance": "The algorithm will automatically refer patients for care management without their explicit consent or input, which may lead to unequal treatment and exacerbate existing health disparities."
+        "article": "Article 23",
+        "right_name": "GenderEquality",
+        "relevance": "The algorithm's use of insurance claims data as a proxy for health need may perpetuate biases against Black patients, including those related to gender and sexuality."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of auditing AI systems for bias and ensuring that they are fair and transparent in their decision-making processes."
+        "lesson": "The importance of addressing biases in AI decision-making processes to prevent discrimination against vulnerable groups."
       },
       {
-        "incident_id": "AIAAIC-002",
-        "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The potential risks of using facial recognition technology, including the risk of false arrests and unequal treatment."
+        "incident_id": "AIAAIC-013",
+        "incident_title": "Apple Card Gender Discrimination",
+        "lesson": "The need for transparent and unbiased AI decision-making processes to prevent economic harm and promote fairness."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct regular audits of the algorithm's performance to identify any biases or disparities in treatment recommendations.",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Implement measures to ensure the transparency, explainability, and fairness of the algorithm's decision-making processes.",
-        "priority": "Medium"
+        "mitigation": "EthicsReviewBoard",
+        "mitigation_id": "Ethics Review Board",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct independent bias auditing of the algorithm prior to deployment",
-      "Implement measures to mitigate any identified biases in the algorithm."
+      "Conduct a thorough analysis of the algorithm's data and decision-making processes to identify and mitigate any biases."
     ],
     "tier2_reflective_prompts": [
-      "What are the potential risks and consequences of using this algorithm in a real-world setting?",
-      "How can we ensure that the algorithm is fair, transparent, and accountable in its decision-making processes?"
+      "How can we ensure that our AI system is fair, transparent, and unbiased in its decision-making processes?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
-        "bias",
-        "discriminat",
-        "data",
-        "health",
-        "diagnos",
         "patient",
+        "health",
         "predict",
-        "scor",
-        "race"
+        "bias",
+        "diagnos",
+        "discriminat",
+        "race",
+        "scor"
       ],
-      "rights_matched": 10,
-      "requirements_retrieved": 170,
+      "rights_matched": 6,
+      "requirements_retrieved": 112,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
-        "HE014",
-        "HE038",
-        "R028",
-        "R085",
         "ACM002",
         "ACM012",
         "ACM013",
         "ACM019",
         "ACM023",
-        "ACM028"
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023"
       ],
       "requirements_retrieved_ids": [
-        "HE014",
-        "HE038",
-        "R028",
-        "R085",
         "ACM002",
         "ACM012",
         "ACM013",
@@ -181,6 +344,8 @@
         "HE033",
         "HE037",
         "R027",
+        "R028",
+        "R085",
         "ACM001",
         "ACM014",
         "ACM032",
@@ -188,152 +353,94 @@
         "R080",
         "ACM027",
         "R021",
-        "ACM016",
         "ACM017",
-        "ACM018",
         "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
+        "ACM035",
         "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI008",
-        "AI009",
-        "AI010",
-        "AI012",
         "AI015",
+        "AI017",
         "AI018",
+        "AI019",
         "AI020",
+        "AI022",
         "AI026",
-        "AI027",
         "AI028",
-        "AI029",
         "AI030",
         "HE002",
-        "HE006",
-        "HE011",
-        "HE022",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE041",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM035",
-        "AI017",
-        "AI019",
-        "AI022",
         "HE005",
+        "HE006",
+        "HE024",
+        "HE026",
         "HE027",
+        "HE028",
         "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
         "HE048",
+        "HE052",
         "R010",
         "R054",
         "R055",
         "R074",
         "R082",
         "ACM003",
-        "ACM004",
         "ACM005",
-        "ACM007",
+        "ACM006",
         "ACM008",
+        "ACM009",
         "ACM010",
         "ACM015",
+        "ACM016",
         "ACM022",
         "ACM031",
-        "ACM036",
         "AI011",
+        "AI012",
         "AI013",
+        "AI014",
         "AI025",
         "HE007",
         "HE008",
         "HE009",
-        "HE031",
-        "HE036",
-        "R019",
-        "R023",
-        "R026",
-        "R040",
-        "R042",
-        "R047",
-        "R048",
-        "R049",
-        "R067",
-        "R068",
-        "R071",
-        "R083",
-        "R084",
-        "ACM006",
-        "ACM009",
-        "AI014",
         "HE010",
+        "HE011",
+        "HE031",
+        "HE034",
         "HE035",
+        "HE036",
+        "HE046",
         "R005",
         "R014",
         "R018",
+        "R019",
         "R022",
+        "R023",
         "R024",
         "R025",
+        "R026",
         "R029",
+        "R030",
         "R031",
         "R033",
+        "R042",
+        "R047",
         "R063",
         "R064",
         "R065",
         "R066",
+        "R067",
+        "R068",
         "R069",
         "R070",
+        "R071",
         "R072",
-        "R073"
+        "R073",
+        "R083",
+        "R084"
       ],
       "requirements_cited": [
-        "ACM003",
-        "ACM004",
-        "EUAIAct-001",
-        "HorizonEurope-002"
+        "AI028",
+        "ACM028"
       ],
       "incidents_sample": [
         "AIAAIC-001",

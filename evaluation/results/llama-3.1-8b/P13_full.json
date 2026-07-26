@@ -2,231 +2,317 @@
   "proposal_id": "P13",
   "mode": "full",
   "llm_backend": "ollama",
-  "timestamp": "2026-07-19T20:27:14.688393",
+  "timestamp": "2026-07-26T16:58:27.960540",
   "proposal_text": "This research proposes to conduct a bibliometric analysis of peer-reviewed publications on AI ethics from 2018-2025. The study will use the Scopus and Web of Science databases to identify all publications containing keywords related to AI ethics, responsible AI, algorithmic fairness, and AI governance. The analysis will examine publication trends, citation networks, geographic distribution of research groups, and thematic clustering using topic modelling. All data is publicly available metadata from academic databases. No personal data about individual researchers will be collected beyond publicly listed author names and institutional affiliations. The analysis will use standard bibliometric tools including VOSviewer and Bibliometrix. Results will identify gaps in the AI ethics literature to inform future research directions. No AI systems will be developed or deployed as part of this research.",
   "context_max_requirements": 25,
   "llm_model": "llama3.1:8b",
   "keywords": [
-    "data",
-    "personal data",
-    "fairness"
+    "fairness",
+    "personal data"
   ],
   "matched_rights": [
-    "Art20_EqualityBeforeLaw",
-    "Art21_NonDiscrimination",
-    "Art41_GoodAdministration",
+    "Art11_FreedomOfExpression",
+    "Art22_CulturalDiversity",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 154,
+  "retrieved_requirements_count": 74,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 48.0,
+      "tf": 48,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 15.0,
+      "tf": 15,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 15
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 26
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "systemic_info→Art11/Art22",
   "assessment": {
-    "risk_summary": "This research proposal involves a bibliometric analysis of peer-reviewed publications on AI ethics, which may raise concerns about the potential for biased or discriminatory outcomes. However, since all data is publicly available metadata from academic databases and no personal data will be collected beyond publicly listed author names and institutional affiliations, the risks are considered LOW.",
-    "overall_risk_level": "LOW",
+    "risk_summary": "This research proposal involves a bibliometric analysis of peer-reviewed publications on AI ethics, which may pose risks related to data governance, transparency, and accountability.",
+    "overall_risk_level": "Medium",
     "identified_risks": [
       {
-        "risk": "Potential for biased or discriminatory outcomes in bibliometric analysis",
-        "severity": "MEDIUM",
-        "explanation": "The research may inadvertently perpetuate biases present in the existing literature, which could have negative consequences."
+        "risk": "DataGovernance",
+        "risk_category": "Data Governance",
+        "severity": "Medium",
+        "explanation": "The study involves processing publicly available metadata from academic databases, but there is a risk of inadequate data stewardship and provenance controls."
       },
       {
-        "risk": "Inadequate consideration of intellectual property and data/code ownership",
-        "severity": "LOW",
-        "explanation": "The proposal does not explicitly address how it will respect intellectual property rights and data/code ownership."
+        "risk": "Transparency",
+        "risk_category": "Transparency",
+        "severity": "Low",
+        "explanation": "The research may not adequately disclose its operation, capabilities, limitations, or decision rationale to end-users and stakeholders."
+      },
+      {
+        "risk": "Accountability",
+        "risk_category": "Accountability",
+        "severity": "Medium",
+        "explanation": "The study may involve the processing of personal data about individual researchers, which could lead to accountability issues if not handled properly."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm (Mandatory)",
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Consider potential harm and take steps to mitigate it"
+        "action_needed": "Review the study's methodology for potential biases and implement measures to mitigate them."
       },
       {
-        "requirement_id": "ACM004",
-        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs (Mandatory)",
-        "framework": "ACMConference",
+        "requirement_id": "HE007",
+        "requirement_text": "AI system must process personal data lawfully, fairly and transparently",
+        "framework": "HorizonEurope",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Be aware of potential biases in the data and take steps to address them"
+        "action_needed": "Ensure that the study's processing of personal data is lawful, fair, and transparent."
       },
       {
-        "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information (Mandatory)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that all data is publicly available and does not contain personally identifiable information"
-      },
-      {
-        "requirement_id": "AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system) (Mandatory)",
+        "requirement_id": "EUAIAct-011",
+        "requirement_text": "Identify categories of natural persons and groups likely to be affected by the AI system in the specific context",
         "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Determine if the research requires a FRIA assessment"
+        "action_needed": "Identify potential stakeholders who may be affected by the study's findings."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 20 EqualityBeforeLaw",
-        "right_name": "Equality Before Law",
-        "relevance": "The research may inadvertently perpetuate biases present in the existing literature, which could have negative consequences for equality before the law"
+        "article": "Article 7",
+        "right_name": "PrivateLife",
+        "relevance": "The research involves processing personal data about individual researchers, which could impact their private life."
       },
       {
-        "article": "Article 21 NonDiscrimination",
-        "right_name": "Non-Discrimination",
-        "relevance": "The research may inadvertently perpetuate biases present in the existing literature, which could have negative consequences for non-discrimination"
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The study may involve the processing of personal data, which requires adequate protection measures."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-001",
-        "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "Be aware of potential biases in data and take steps to address them"
-      },
-      {
-        "incident_id": "AIAAIC-003",
-        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "Consider the potential consequences of AI systems on society"
+        "incident_id": "AIAAIC-016",
+        "incident_title": "Palantir ICE Surveillance System",
+        "lesson": "Surveillance and privacy breaches can have severe consequences; implement robust safeguards to prevent similar incidents."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Use bias detection and mitigation techniques in bibliometric analysis",
-        "priority": "MEDIUM"
+        "mitigation": "AccessControl",
+        "mitigation_id": "AccessControl",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Clearly document all data sources and methods used in the research",
-        "priority": "LOW"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "ACM002, ACM004, ACM006, AI001"
+      "Ensure transparency and accountability in data processing.",
+      "Implement measures to mitigate potential biases."
     ],
     "tier2_reflective_prompts": [
-      "How can you ensure that your research does not perpetuate biases present in the existing literature?",
-      "What steps will you take to address potential biases in the data?"
+      "Consider the long-term implications of the study's findings on stakeholders.",
+      "Reflect on the potential consequences of inadequate data governance."
     ],
     "reams_clearance_likely": true,
-    "confidence_flag": "HIGH",
+    "confidence_flag": "LOW",
     "_retrieval_metadata": {
       "keywords": [
-        "data",
-        "personal data",
-        "fairness"
+        "fairness",
+        "personal data"
       ],
-      "rights_matched": 5,
-      "requirements_retrieved": 154,
+      "rights_matched": 4,
+      "requirements_retrieved": 74,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
-        "HE014",
-        "HE038",
-        "R028",
-        "R085",
-        "ACM002",
-        "ACM012",
-        "ACM013",
-        "ACM019",
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
         "ACM023",
-        "ACM028"
+        "HE012",
+        "HE032"
       ],
       "requirements_retrieved_ids": [
-        "HE014",
-        "HE038",
-        "R028",
-        "R085",
-        "ACM002",
-        "ACM012",
-        "ACM013",
-        "ACM019",
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
         "ACM023",
-        "ACM028",
-        "AI001",
-        "AI016",
-        "AI021",
-        "AI023",
-        "AI024",
         "HE012",
-        "HE013",
-        "HE015",
-        "HE016",
         "HE032",
-        "HE033",
-        "HE037",
-        "R027",
-        "ACM016",
-        "ACM017",
-        "ACM018",
-        "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
-        "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI008",
-        "AI009",
-        "AI010",
-        "AI012",
-        "AI015",
-        "AI018",
-        "AI020",
-        "AI026",
-        "AI027",
-        "AI028",
-        "AI029",
-        "AI030",
-        "HE002",
-        "HE006",
-        "HE011",
-        "HE022",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE041",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
         "ACM003",
         "ACM004",
         "ACM005",
@@ -235,7 +321,6 @@
         "ACM010",
         "ACM015",
         "ACM022",
-        "ACM027",
         "ACM031",
         "ACM036",
         "AI011",
@@ -262,9 +347,16 @@
         "R084",
         "ACM006",
         "ACM009",
+        "ACM016",
+        "AI012",
         "AI014",
         "HE010",
+        "HE011",
+        "HE013",
+        "HE033",
+        "HE034",
         "HE035",
+        "HE046",
         "R005",
         "R014",
         "R018",
@@ -273,6 +365,7 @@
         "R024",
         "R025",
         "R029",
+        "R030",
         "R031",
         "R033",
         "R063",
@@ -286,17 +379,16 @@
         "R074"
       ],
       "requirements_cited": [
-        "ACM002",
-        "ACM004",
-        "ACM006",
-        "AI001"
+        "ACM003",
+        "HE007",
+        "EUAIAct-011"
       ],
       "incidents_sample": [
-        "AIAAIC-001",
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027",
         "AIAAIC-002",
-        "AIAAIC-003",
-        "AIAAIC-022",
-        "AIAAIC-034"
+        "AIAAIC-007"
       ]
     }
   }

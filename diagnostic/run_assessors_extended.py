@@ -27,12 +27,16 @@ sys.path.insert(0, str(ROOT))
 from synthetic_proposals_extended import PROPOSALS  # noqa: E402
 from ethics_rag import assess_proposal  # noqa: E402
 from llm_caller import test_groq_connection  # noqa: E402
-from sparql_retrieval import test_connection as test_sparql  # noqa: E402
+from sparql_retrieval import test_connection as test_sparql, set_retrieval_backend  # noqa: E402
 
 MODELS = {
-    # Both via Groq; keep max_requirements≤12 so 8B stays under free-tier TPM.
+    # Default: Groq for both. Override via --backend ollama for local 8B.
     "8b": ("groq", "llama-3.1-8b-instant", EVAL / "llama-3.1-8b"),
     "70b": ("groq", "llama-3.3-70b-versatile", EVAL / "llama-3.3-70b"),
+}
+
+OLLAMA_MODELS = {
+    "8b": ("ollama", "llama3.1:8b", EVAL / "llama-3.1-8b"),
 }
 
 
@@ -111,14 +115,30 @@ def main() -> None:
         default=12,
         help="Cap KG requirements in prompt (smaller = fits Groq TPM).",
     )
+    parser.add_argument(
+        "--backend",
+        choices=["groq", "ollama"],
+        default="groq",
+        help="LLM backend (ollama only supports 8b locally)",
+    )
     args = parser.parse_args()
 
+    # Prefer local TTL so Week-1 :hasMitigation population is visible without
+    # re-importing GraphDB.
+    set_retrieval_backend("local")
     if not test_sparql():
-        raise SystemExit("GraphDB/SPARQL not reachable — start GraphDB first.")
+        raise SystemExit("SPARQL/local ontology not reachable.")
 
+    catalog = OLLAMA_MODELS if args.backend == "ollama" else MODELS
     for key in [k.strip() for k in args.models.split(",") if k.strip()]:
-        if key not in MODELS:
-            raise SystemExit(f"Unknown model key {key}")
+        if key not in catalog:
+            raise SystemExit(
+                f"Unknown/unsupported model key {key} for backend={args.backend}. "
+                f"Available: {sorted(catalog)}"
+            )
+        backend, model, out_dir = catalog[key]
+        # Temporarily bind into MODELS shape expected by run_model
+        MODELS[key] = (backend, model, out_dir)
         run_model(
             key,
             force=args.force,

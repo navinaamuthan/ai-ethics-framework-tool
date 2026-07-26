@@ -2,9 +2,9 @@
   "proposal_id": "P30",
   "mode": "full",
   "llm_backend": "ollama",
-  "timestamp": "2026-07-21T00:07:10.011368",
+  "timestamp": "2026-07-26T17:22:41.183744",
   "proposal_text": "This research proposes a gradient-boosting model to set individual loading factors for a private medical scheme in Johannesburg and Cape Town. Features include claims history, pharmacy fills, wearable step counts (opt-in), and residential suburb codes. Race is not an input, but suburb codes strongly proxy apartheid-era spatial segregation. Members in the highest predicted-cost decile face premium increases up to 40% or coverage exclusions for elective procedures. The scheme plans no suburb- or race-disaggregated fairness audit, citing proprietary actuarial practice. Members cannot obtain a meaningful explanation of their loading beyond 'actuarial risk.' The National Health Insurance reform context makes the private-scheme impact politically sensitive.",
-  "context_max_requirements": 12,
+  "context_max_requirements": 25,
   "llm_model": "llama3.1:8b",
   "keywords": [
     "race",
@@ -113,106 +113,162 @@
       "df": 6
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "individual_treatment→Art21",
   "assessment": {
-    "risk_summary": "This research proposal involves a gradient-boosting model to set individual loading factors for a private medical scheme in Johannesburg and Cape Town, which may lead to unfair differential treatment of individuals or groups based on protected characteristics. The use of suburb codes as a proxy for apartheid-era spatial segregation raises concerns about discrimination and potential harm to vulnerable populations.",
+    "risk_summary": "The proposed research involves a gradient-boosting model to set individual loading factors for a private medical scheme in Johannesburg and Cape Town, raising concerns about data governance, discrimination, accountability, and psychological harm.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Discrimination",
+        "risk": "DataGovernance (Data Governance)",
+        "risk_category": "DataGovernance",
+        "severity": "High",
+        "explanation": "The model uses suburb codes as a proxy for apartheid-era spatial segregation, which may perpetuate biases and discrimination."
+      },
+      {
+        "risk": "Discrimination (Discrimination)",
         "risk_category": "Discrimination",
         "severity": "High",
-        "explanation": "The use of suburb codes as a proxy for apartheid-era spatial segregation may perpetuate biases and lead to unfair differential treatment of individuals or groups based on protected characteristics."
+        "explanation": "The use of suburb codes as a proxy for race may lead to unfair differential treatment of individuals or groups based on protected characteristics."
       },
       {
-        "risk": "PrivacyBreach",
-        "risk_category": "PrivacyBreach",
-        "severity": "Medium",
-        "explanation": "The model processes sensitive personal data, including claims history, pharmacy fills, wearable step counts, and residential suburb codes, which may be subject to unauthorized collection or disclosure."
-      },
-      {
-        "risk": "Accountability",
+        "risk": "Accountability (Accountability)",
         "risk_category": "Accountability",
-        "severity": "High",
-        "explanation": "Members cannot obtain a meaningful explanation of their loading factors beyond 'actuarial risk,' which may lead to lack of transparency and accountability in AI-mediated decisions."
-      },
-      {
-        "risk": "DataGovernance",
-        "risk_category": "DataGovernance",
         "severity": "Medium",
-        "explanation": "The model's reliance on suburb codes as a proxy for apartheid-era spatial segregation raises concerns about data quality, provenance, and stewardship."
+        "explanation": "Members cannot obtain a meaningful explanation of their loading factors beyond 'actuarial risk', which may lead to a lack of transparency and accountability."
       },
       {
-        "risk": "PsychologicalHarm",
+        "risk": "PsychologicalHarm (Psychological Harm)",
         "risk_category": "PsychologicalHarm",
-        "severity": "Low",
-        "explanation": "While the model may lead to unfair differential treatment of individuals or groups based on protected characteristics, it is unlikely to cause direct psychological harm to members."
+        "severity": "Medium",
+        "explanation": "The model's predictions may cause mental distress or emotional damage to individuals who face premium increases or coverage exclusions."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate.",
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms.",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough fairness audit to identify and address potential biases in the model."
+        "action_needed": "Conduct a thorough risk assessment and mitigation plan to address potential harms."
       },
       {
-        "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information.",
-        "framework": "ACMConference",
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system).",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement robust data protection measures to safeguard sensitive personal data."
-      },
-      {
-        "requirement_id": "EUAIAct-001",
-        "requirement_text": "Ensure that AI systems are transparent, explainable, and fair.",
-        "framework": "EU AI Act",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop a clear explanation of the model's decision-making process and provide meaningful explanations to members."
+        "action_needed": "Determine if the organization is required to conduct a FRIA and implement necessary measures."
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The use of suburb codes as a proxy for apartheid-era spatial segregation may perpetuate biases and lead to unfair differential treatment of individuals or groups based on protected characteristics."
+        "relevance": "The use of suburb codes as a proxy for race may lead to unfair differential treatment of individuals or groups based on protected characteristics."
       },
       {
         "article": "Article 35",
         "right_name": "HealthCare",
-        "relevance": "The model's impact on healthcare access and affordability raises concerns about the right to healthcare."
+        "relevance": "The model's predictions may affect access to healthcare services and coverage."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-006",
         "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
-        "lesson": "Conduct thorough fairness audits to identify and address potential biases in AI systems, particularly those that may perpetuate historical injustices."
+        "lesson": "The importance of addressing biases in AI systems, particularly in high-stakes applications like healthcare."
       },
       {
         "incident_id": "AIAAIC-043",
         "incident_title": "NHS UK Sepsis Algorithm Racial Bias",
-        "lesson": "Implement robust data protection measures to safeguard sensitive personal data and ensure transparency in AI decision-making processes."
+        "lesson": "The need for transparent and explainable AI decision-making to prevent biases and ensure fairness."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct thorough fairness audits to identify and address potential biases in the model.",
-        "priority": "High"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "Human Oversight",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Develop a clear explanation of the model's decision-making process and provide meaningful explanations to members.",
-        "priority": "Medium"
+        "mitigation": "EthicsReviewBoard",
+        "mitigation_id": "Ethics Review Board",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough fairness audit",
-      "Implement robust data protection measures"
+      "Conduct a thorough risk assessment and mitigation plan"
     ],
     "tier2_reflective_prompts": [
-      "Consider potential biases in the model and develop strategies to address them.",
-      "Reflect on the impact of the model on healthcare access and affordability."
+      "Consider the potential biases in the model's predictions and develop strategies to address them"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -227,6 +283,21 @@
       "rights_matched": 4,
       "requirements_retrieved": 82,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM002",
         "ACM012",
@@ -324,9 +395,8 @@
         "R084"
       ],
       "requirements_cited": [
-        "ACM003",
-        "ACM006",
-        "EUAIAct-001"
+        "ACM001",
+        "AI001"
       ],
       "incidents_sample": [
         "AIAAIC-001",
