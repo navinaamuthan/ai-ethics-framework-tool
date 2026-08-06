@@ -474,7 +474,6 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/aief/noteText">
-        <rdfs:domain rdf:resource="https://w3id.org/aief/Requirement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>note text</rdfs:label>
     </owl:DatatypeProperty>

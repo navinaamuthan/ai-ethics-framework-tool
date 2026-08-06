@@ -283,7 +283,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/aief/noteText
 :noteText rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Requirement ;
           rdfs:range xsd:string ;
           rdfs:label "note text" .
 

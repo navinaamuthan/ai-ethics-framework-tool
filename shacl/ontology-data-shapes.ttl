@@ -100,11 +100,19 @@ aief:IncidentIDUniqueShape a sh:NodeShape ;
                 ?other aief:incidentID ?id . FILTER(?other != $this) } """ ;
     ] .
 
-aief:EvidenceRequirementConsistencyShape a sh:NodeShape ;
-    sh:targetClass aief:Requirement ;
-    sh:sparql [
-        sh:message "A requirement demanding evidence (requiresEvidence) should be Tier 1 Mandatory, not Tier 2 Reflective (a Reflective-tier requirement demanding hard evidence is a modelling inconsistency)." ;
-        sh:select """PREFIX aief: <https://w3id.org/aief/>
-            SELECT $this WHERE {
-                $this aief:requiresEvidence ?e ; aief:hasTier aief:Tier2_Reflective . } """ ;
-    ] .
+# EvidenceRequirementConsistencyShape (retired): originally asserted that a
+# Tier 2 Reflective requirement carrying requiresEvidence was, by
+# definition, a modelling inconsistency. Checked against the data, this
+# assumption does not hold: of the 30 Tier 2 requirements, 18 correctly carry
+# no requiresEvidence and 12 do (e.g. HE028 "risk assessment", ACM013 "dual
+# use discussion", HE045 "feedback mechanism"), each a genuine Horizon
+# Europe or ACM ethics-by-design reflective item that legitimately suggests
+# what evidence would demonstrate engagement without making that evidence
+# mandatory -- exactly the tier-1-mandatory/tier-2-reflective distinction
+# this project's own assessment output relies on. The general pattern the
+# shape was built to check (111 Tier 1 requirements correctly carry
+# requiresEvidence) is real; the absolute claim that no Tier 2 exception can
+# be legitimate was not. Retired rather than corrected into a new rule,
+# since no clean replacement predicate was identified; the 12 cases above
+# were reviewed individually and confirmed as legitimate, not as a defect
+# needing further fixing.

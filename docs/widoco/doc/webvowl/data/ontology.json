@@ -98,7 +98,7 @@
     "id" : "81",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "85",
+    "id" : "86",
     "type" : "owl:Class"
   }, {
     "id" : "74",
@@ -174,10 +174,10 @@
     "type" : "owl:equivalentClass"
   }, {
     "id" : "141",
-    "type" : "owl:equivalentClass"
+    "type" : "owl:Class"
   }, {
     "id" : "143",
-    "type" : "owl:Class"
+    "type" : "owl:equivalentClass"
   }, {
     "id" : "145",
     "type" : "owl:Class"
@@ -185,10 +185,10 @@
     "id" : "32",
     "type" : "owl:Class"
   }, {
-    "id" : "148",
+    "id" : "132",
     "type" : "owl:Class"
   }, {
-    "id" : "132",
+    "id" : "148",
     "type" : "owl:Class"
   }, {
     "id" : "33",
@@ -251,10 +251,10 @@
     "id" : "62",
     "type" : "owl:Class"
   }, {
-    "id" : "162",
+    "id" : "131",
     "type" : "owl:Class"
   }, {
-    "id" : "131",
+    "id" : "162",
     "type" : "owl:Class"
   }, {
     "id" : "152",
@@ -275,10 +275,10 @@
     "id" : "159",
     "type" : "owl:Class"
   }, {
-    "id" : "182",
+    "id" : "47",
     "type" : "owl:Class"
   }, {
-    "id" : "47",
+    "id" : "182",
     "type" : "owl:Class"
   }, {
     "id" : "26",
@@ -317,11 +317,11 @@
     "id" : "200",
     "type" : "owl:Class"
   }, {
-    "id" : "189",
-    "type" : "owl:equivalentClass"
-  }, {
     "id" : "112",
     "type" : "owl:Class"
+  }, {
+    "id" : "189",
+    "type" : "owl:equivalentClass"
   }, {
     "id" : "76",
     "type" : "owl:Class"
@@ -344,11 +344,11 @@
     "id" : "116",
     "type" : "owl:Class"
   }, {
-    "id" : "142",
-    "type" : "owl:equivalentClass"
-  }, {
     "id" : "221",
     "type" : "owl:Class"
+  }, {
+    "id" : "144",
+    "type" : "owl:equivalentClass"
   }, {
     "id" : "118",
     "type" : "owl:Class"
@@ -386,11 +386,11 @@
     "id" : "28",
     "type" : "owl:Class"
   }, {
-    "id" : "39",
-    "type" : "owl:equivalentClass"
-  }, {
     "id" : "213",
     "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:equivalentClass"
   }, {
     "id" : "52",
     "type" : "rdfs:Literal"
@@ -443,7 +443,7 @@
     "id" : "190",
     "type" : "owl:Class"
   }, {
-    "id" : "144",
+    "id" : "142",
     "type" : "owl:Class"
   }, {
     "id" : "161",
@@ -452,14 +452,14 @@
     "id" : "25",
     "type" : "owl:Class"
   }, {
-    "id" : "82",
-    "type" : "owl:equivalentClass"
-  }, {
     "id" : "128",
     "type" : "owl:Class"
   }, {
     "id" : "129",
     "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:equivalentClass"
   }, {
     "id" : "99",
     "type" : "owl:Class"
@@ -506,11 +506,11 @@
     "id" : "202",
     "type" : "owl:Class"
   }, {
-    "id" : "238",
-    "type" : "owl:equivalentClass"
-  }, {
     "id" : "22",
     "type" : "owl:Class"
+  }, {
+    "id" : "238",
+    "type" : "owl:equivalentClass"
   }, {
     "id" : "11",
     "type" : "owl:Class"
@@ -557,17 +557,17 @@
     "id" : "46",
     "type" : "owl:Class"
   }, {
-    "id" : "150",
-    "type" : "owl:equivalentClass"
-  }, {
     "id" : "122",
     "type" : "owl:Class"
   }, {
-    "id" : "153",
+    "id" : "150",
     "type" : "owl:equivalentClass"
   }, {
     "id" : "126",
     "type" : "owl:Class"
+  }, {
+    "id" : "153",
+    "type" : "owl:equivalentClass"
   }, {
     "id" : "207",
     "type" : "owl:Class"
@@ -590,11 +590,11 @@
     "id" : "130",
     "type" : "owl:Class"
   }, {
-    "id" : "241",
-    "type" : "owl:equivalentClass"
-  }, {
     "id" : "164",
     "type" : "owl:Class"
+  }, {
+    "id" : "241",
+    "type" : "owl:equivalentClass"
   } ],
   "classAttribute" : [ {
     "iri" : "https://w3id.org/aief/PersonalData",
@@ -742,16 +742,16 @@
       "undefined" : "AI Incident"
     },
     "individuals" : [ {
-      "iri" : "https://w3id.org/aief/AIAAIC_013",
-      "baseIri" : "https://w3id.org/aief",
-      "labels" : {
-        "IRI-based" : "AIAAIC_013"
-      }
-    }, {
       "iri" : "https://w3id.org/aief/AIAAIC_057",
       "baseIri" : "https://w3id.org/aief",
       "labels" : {
         "IRI-based" : "AIAAIC_057"
+      }
+    }, {
+      "iri" : "https://w3id.org/aief/AIAAIC_013",
+      "baseIri" : "https://w3id.org/aief",
+      "labels" : {
+        "IRI-based" : "AIAAIC_013"
       }
     }, {
       "iri" : "https://w3id.org/aief/AIAAIC_058",
@@ -766,16 +766,16 @@
         "IRI-based" : "AIAAIC_014"
       }
     }, {
-      "iri" : "https://w3id.org/aief/AIAAIC_015",
-      "baseIri" : "https://w3id.org/aief",
-      "labels" : {
-        "IRI-based" : "AIAAIC_015"
-      }
-    }, {
       "iri" : "https://w3id.org/aief/AIAAIC_059",
       "baseIri" : "https://w3id.org/aief",
       "labels" : {
         "IRI-based" : "AIAAIC_059"
+      }
+    }, {
+      "iri" : "https://w3id.org/aief/AIAAIC_015",
+      "baseIri" : "https://w3id.org/aief",
+      "labels" : {
+        "IRI-based" : "AIAAIC_015"
       }
     }, {
       "iri" : "https://w3id.org/aief/AIAAIC_016",
@@ -862,16 +862,16 @@
         "IRI-based" : "AIAAIC_012"
       }
     }, {
-      "iri" : "https://w3id.org/aief/AIAAIC_002",
-      "baseIri" : "https://w3id.org/aief",
-      "labels" : {
-        "IRI-based" : "AIAAIC_002"
-      }
-    }, {
       "iri" : "https://w3id.org/aief/AIAAIC_046",
       "baseIri" : "https://w3id.org/aief",
       "labels" : {
         "IRI-based" : "AIAAIC_046"
+      }
+    }, {
+      "iri" : "https://w3id.org/aief/AIAAIC_002",
+      "baseIri" : "https://w3id.org/aief",
+      "labels" : {
+        "IRI-based" : "AIAAIC_002"
       }
     }, {
       "iri" : "https://w3id.org/aief/AIAAIC_047",
@@ -886,16 +886,16 @@
         "IRI-based" : "AIAAIC_003"
       }
     }, {
-      "iri" : "https://w3id.org/aief/AIAAIC_004",
-      "baseIri" : "https://w3id.org/aief",
-      "labels" : {
-        "IRI-based" : "AIAAIC_004"
-      }
-    }, {
       "iri" : "https://w3id.org/aief/AIAAIC_048",
       "baseIri" : "https://w3id.org/aief",
       "labels" : {
         "IRI-based" : "AIAAIC_048"
+      }
+    }, {
+      "iri" : "https://w3id.org/aief/AIAAIC_004",
+      "baseIri" : "https://w3id.org/aief",
+      "labels" : {
+        "IRI-based" : "AIAAIC_004"
       }
     }, {
       "iri" : "https://w3id.org/aief/AIAAIC_049",
@@ -1072,16 +1072,16 @@
         "IRI-based" : "AIAAIC_024"
       }
     }, {
-      "iri" : "https://w3id.org/aief/AIAAIC_069",
-      "baseIri" : "https://w3id.org/aief",
-      "labels" : {
-        "IRI-based" : "AIAAIC_069"
-      }
-    }, {
       "iri" : "https://w3id.org/aief/AIAAIC_025",
       "baseIri" : "https://w3id.org/aief",
       "labels" : {
         "IRI-based" : "AIAAIC_025"
+      }
+    }, {
+      "iri" : "https://w3id.org/aief/AIAAIC_069",
+      "baseIri" : "https://w3id.org/aief",
+      "labels" : {
+        "IRI-based" : "AIAAIC_069"
       }
     }, {
       "iri" : "https://w3id.org/aief/AIAAIC_026",
@@ -1132,22 +1132,16 @@
         "IRI-based" : "AIAAIC_063"
       }
     }, {
-      "iri" : "https://w3id.org/aief/AIAAIC_020",
-      "baseIri" : "https://w3id.org/aief",
-      "labels" : {
-        "IRI-based" : "AIAAIC_020"
-      }
-    }, {
       "iri" : "https://w3id.org/aief/AIAAIC_064",
       "baseIri" : "https://w3id.org/aief",
       "labels" : {
         "IRI-based" : "AIAAIC_064"
       }
     }, {
-      "iri" : "https://w3id.org/aief/AIAAIC_065",
+      "iri" : "https://w3id.org/aief/AIAAIC_020",
       "baseIri" : "https://w3id.org/aief",
       "labels" : {
-        "IRI-based" : "AIAAIC_065"
+        "IRI-based" : "AIAAIC_020"
       }
     }, {
       "iri" : "https://w3id.org/aief/AIAAIC_021",
@@ -1156,10 +1150,10 @@
         "IRI-based" : "AIAAIC_021"
       }
     }, {
-      "iri" : "https://w3id.org/aief/AIAAIC_066",
+      "iri" : "https://w3id.org/aief/AIAAIC_065",
       "baseIri" : "https://w3id.org/aief",
       "labels" : {
-        "IRI-based" : "AIAAIC_066"
+        "IRI-based" : "AIAAIC_065"
       }
     }, {
       "iri" : "https://w3id.org/aief/AIAAIC_022",
@@ -1168,16 +1162,22 @@
         "IRI-based" : "AIAAIC_022"
       }
     }, {
-      "iri" : "https://w3id.org/aief/AIAAIC_023",
+      "iri" : "https://w3id.org/aief/AIAAIC_066",
       "baseIri" : "https://w3id.org/aief",
       "labels" : {
-        "IRI-based" : "AIAAIC_023"
+        "IRI-based" : "AIAAIC_066"
       }
     }, {
       "iri" : "https://w3id.org/aief/AIAAIC_067",
       "baseIri" : "https://w3id.org/aief",
       "labels" : {
         "IRI-based" : "AIAAIC_067"
+      }
+    }, {
+      "iri" : "https://w3id.org/aief/AIAAIC_023",
+      "baseIri" : "https://w3id.org/aief",
+      "labels" : {
+        "IRI-based" : "AIAAIC_023"
       }
     } ],
     "comment" : {
@@ -1241,7 +1241,7 @@
     "comment" : {
       "undefined" : "Risk that AI system design exploits psychological vulnerabilities to create compulsive usage patterns."
     },
-    "id" : "85",
+    "id" : "86",
     "superClasses" : [ "79" ]
   }, {
     "iri" : "https://w3id.org/aief/Art31_FairWorkingConditions",
@@ -2371,20 +2371,6 @@
         "IRI-based" : "HE027"
       }
     }, {
-      "iri" : "https://w3id.org/aief/ACM008",
-      "baseIri" : "https://w3id.org/aief",
-      "annotations" : {
-        "requiresEvidence" : [ {
-          "identifier" : "requiresEvidence",
-          "language" : "undefined",
-          "value" : "Method risk discussion",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "ACM008"
-      }
-    }, {
       "iri" : "https://w3id.org/aief/HE024",
       "baseIri" : "https://w3id.org/aief",
       "annotations" : {
@@ -2397,6 +2383,20 @@
       },
       "labels" : {
         "IRI-based" : "HE024"
+      }
+    }, {
+      "iri" : "https://w3id.org/aief/ACM008",
+      "baseIri" : "https://w3id.org/aief",
+      "annotations" : {
+        "requiresEvidence" : [ {
+          "identifier" : "requiresEvidence",
+          "language" : "undefined",
+          "value" : "Method risk discussion",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ACM008"
       }
     }, {
       "iri" : "https://w3id.org/aief/ACM009",
@@ -2795,20 +2795,6 @@
         "IRI-based" : "AI026"
       }
     }, {
-      "iri" : "https://w3id.org/aief/ACM030",
-      "baseIri" : "https://w3id.org/aief",
-      "annotations" : {
-        "requiresEvidence" : [ {
-          "identifier" : "requiresEvidence",
-          "language" : "undefined",
-          "value" : "Licence document",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "ACM030"
-      }
-    }, {
       "iri" : "https://w3id.org/aief/AI025",
       "baseIri" : "https://w3id.org/aief",
       "annotations" : {
@@ -2821,6 +2807,20 @@
       },
       "labels" : {
         "IRI-based" : "AI025"
+      }
+    }, {
+      "iri" : "https://w3id.org/aief/ACM030",
+      "baseIri" : "https://w3id.org/aief",
+      "annotations" : {
+        "requiresEvidence" : [ {
+          "identifier" : "requiresEvidence",
+          "language" : "undefined",
+          "value" : "Licence document",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ACM030"
       }
     }, {
       "iri" : "https://w3id.org/aief/AI020",
@@ -2979,26 +2979,6 @@
         "IRI-based" : "AI017"
       }
     }, {
-      "iri" : "https://w3id.org/aief/HE041",
-      "baseIri" : "https://w3id.org/aief",
-      "annotations" : {
-        "requiresEvidence" : [ {
-          "identifier" : "requiresEvidence",
-          "language" : "undefined",
-          "value" : "Explainability artefacts",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "HE041"
-      }
-    }, {
-      "iri" : "https://w3id.org/aief/R010",
-      "baseIri" : "https://w3id.org/aief",
-      "labels" : {
-        "IRI-based" : "R010"
-      }
-    }, {
       "iri" : "https://w3id.org/aief/AI016",
       "baseIri" : "https://w3id.org/aief",
       "annotations" : {
@@ -3011,6 +2991,26 @@
       },
       "labels" : {
         "IRI-based" : "AI016"
+      }
+    }, {
+      "iri" : "https://w3id.org/aief/R010",
+      "baseIri" : "https://w3id.org/aief",
+      "labels" : {
+        "IRI-based" : "R010"
+      }
+    }, {
+      "iri" : "https://w3id.org/aief/HE041",
+      "baseIri" : "https://w3id.org/aief",
+      "annotations" : {
+        "requiresEvidence" : [ {
+          "identifier" : "requiresEvidence",
+          "language" : "undefined",
+          "value" : "Explainability artefacts",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HE041"
       }
     }, {
       "iri" : "https://w3id.org/aief/R013",
@@ -3033,6 +3033,12 @@
         "IRI-based" : "AI019"
       }
     }, {
+      "iri" : "https://w3id.org/aief/R012",
+      "baseIri" : "https://w3id.org/aief",
+      "labels" : {
+        "IRI-based" : "R012"
+      }
+    }, {
       "iri" : "https://w3id.org/aief/AI018",
       "baseIri" : "https://w3id.org/aief",
       "annotations" : {
@@ -3045,12 +3051,6 @@
       },
       "labels" : {
         "IRI-based" : "AI018"
-      }
-    }, {
-      "iri" : "https://w3id.org/aief/R012",
-      "baseIri" : "https://w3id.org/aief",
-      "labels" : {
-        "IRI-based" : "R012"
       }
     }, {
       "iri" : "https://w3id.org/aief/R019",
@@ -3367,20 +3367,6 @@
         "IRI-based" : "R004"
       }
     }, {
-      "iri" : "https://w3id.org/aief/AI009",
-      "baseIri" : "https://w3id.org/aief",
-      "annotations" : {
-        "requiresEvidence" : [ {
-          "identifier" : "requiresEvidence",
-          "language" : "undefined",
-          "value" : "Duration/frequency declaration",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "AI009"
-      }
-    }, {
       "iri" : "https://w3id.org/aief/R003",
       "baseIri" : "https://w3id.org/aief",
       "annotations" : {
@@ -3393,6 +3379,20 @@
       },
       "labels" : {
         "IRI-based" : "R003"
+      }
+    }, {
+      "iri" : "https://w3id.org/aief/AI009",
+      "baseIri" : "https://w3id.org/aief",
+      "annotations" : {
+        "requiresEvidence" : [ {
+          "identifier" : "requiresEvidence",
+          "language" : "undefined",
+          "value" : "Duration/frequency declaration",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AI009"
       }
     }, {
       "iri" : "https://w3id.org/aief/R006",
@@ -3415,12 +3415,6 @@
         "IRI-based" : "R005"
       }
     }, {
-      "iri" : "https://w3id.org/aief/HE051",
-      "baseIri" : "https://w3id.org/aief",
-      "labels" : {
-        "IRI-based" : "HE051"
-      }
-    }, {
       "iri" : "https://w3id.org/aief/AI006",
       "baseIri" : "https://w3id.org/aief",
       "annotations" : {
@@ -3433,6 +3427,18 @@
       },
       "labels" : {
         "IRI-based" : "AI006"
+      }
+    }, {
+      "iri" : "https://w3id.org/aief/HE051",
+      "baseIri" : "https://w3id.org/aief",
+      "labels" : {
+        "IRI-based" : "HE051"
+      }
+    }, {
+      "iri" : "https://w3id.org/aief/HE052",
+      "baseIri" : "https://w3id.org/aief",
+      "labels" : {
+        "IRI-based" : "HE052"
       }
     }, {
       "iri" : "https://w3id.org/aief/AI005",
@@ -3449,10 +3455,10 @@
         "IRI-based" : "AI005"
       }
     }, {
-      "iri" : "https://w3id.org/aief/HE052",
+      "iri" : "https://w3id.org/aief/R002",
       "baseIri" : "https://w3id.org/aief",
       "labels" : {
-        "IRI-based" : "HE052"
+        "IRI-based" : "R002"
       }
     }, {
       "iri" : "https://w3id.org/aief/AI008",
@@ -3467,12 +3473,6 @@
       },
       "labels" : {
         "IRI-based" : "AI008"
-      }
-    }, {
-      "iri" : "https://w3id.org/aief/R002",
-      "baseIri" : "https://w3id.org/aief",
-      "labels" : {
-        "IRI-based" : "R002"
       }
     }, {
       "iri" : "https://w3id.org/aief/HE050",
@@ -3542,7 +3542,7 @@
       }
     } ],
     "comment" : {
-      "undefined" : "An ethics requirement specifying an action that must be performed. Aligned with ODRL Duty."
+      "undefined" : "An ethics requirement that must be fulfilled. Aligned with ODRL Duty."
     },
     "id" : "98",
     "superClasses" : [ "36", "99" ]
@@ -3734,7 +3734,7 @@
       "IRI-based" : "RiskCategory",
       "undefined" : "Risk Category"
     },
-    "subClasses" : [ "112", "113", "114", "115", "116", "117", "103", "118", "119", "104", "120", "121", "122", "123", "124", "125", "126", "111", "78", "127", "128", "129", "130", "85", "131", "132", "133", "134" ],
+    "subClasses" : [ "112", "113", "114", "115", "116", "117", "103", "118", "119", "104", "120", "121", "122", "123", "124", "125", "126", "111", "78", "127", "128", "129", "130", "86", "131", "132", "133", "134" ],
     "comment" : {
       "undefined" : "A category of harm or risk that an AI system may cause to individuals, groups, or society."
     },
@@ -3808,7 +3808,7 @@
     "label" : {
       "IRI-based" : "DataProtection"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "139"
   }, {
     "iri" : "https://w3id.org/aief/RecruitmentMaterial",
@@ -3827,11 +3827,24 @@
     "label" : {
       "IRI-based" : "RightsOfChild"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "140"
   }, {
+    "iri" : "https://w3id.org/aief/NotApplicable",
+    "baseIri" : "https://w3id.org/aief",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NotApplicable",
+      "undefined" : "Not Applicable"
+    },
+    "comment" : {
+      "undefined" : "The requirement does not apply to this research project given its specific context and scope."
+    },
+    "id" : "141",
+    "superClasses" : [ "142" ]
+  }, {
     "iri" : "https://w3id.org/aief/Art2_RightToLife",
-    "equivalent" : [ "142" ],
+    "equivalent" : [ "144" ],
     "baseIri" : "https://w3id.org/aief",
     "instances" : 0,
     "annotations" : {
@@ -3850,21 +3863,8 @@
       "undefined" : "Everyone has the right to life."
     },
     "attributes" : [ "equivalent" ],
-    "id" : "141",
-    "superClasses" : [ "66" ]
-  }, {
-    "iri" : "https://w3id.org/aief/NotApplicable",
-    "baseIri" : "https://w3id.org/aief",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "NotApplicable",
-      "undefined" : "Not Applicable"
-    },
-    "comment" : {
-      "undefined" : "The requirement does not apply to this research project given its specific context and scope."
-    },
     "id" : "143",
-    "superClasses" : [ "144" ]
+    "superClasses" : [ "66" ]
   }, {
     "iri" : "https://w3id.org/aief/Compliant",
     "baseIri" : "https://w3id.org/aief",
@@ -3877,7 +3877,7 @@
       "undefined" : "The requirement is fully satisfied by the research project."
     },
     "id" : "145",
-    "superClasses" : [ "144" ]
+    "superClasses" : [ "142" ]
   }, {
     "iri" : "https://w3id.org/aief/PIL_ParticipantInfoLeaflet",
     "baseIri" : "https://w3id.org/aief",
@@ -3888,19 +3888,6 @@
     },
     "id" : "32",
     "superClasses" : [ "8" ]
-  }, {
-    "iri" : "https://w3id.org/aief/Mitigation",
-    "baseIri" : "https://w3id.org/aief",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Mitigation",
-      "undefined" : "Mitigation Measure"
-    },
-    "subClasses" : [ "136", "106" ],
-    "comment" : {
-      "undefined" : "A technical or organisational measure that reduces the likelihood or severity of an identified risk."
-    },
-    "id" : "148"
   }, {
     "iri" : "https://w3id.org/aief/FinancialHarm",
     "baseIri" : "https://w3id.org/aief",
@@ -3914,6 +3901,19 @@
     },
     "id" : "132",
     "superClasses" : [ "79" ]
+  }, {
+    "iri" : "https://w3id.org/aief/Mitigation",
+    "baseIri" : "https://w3id.org/aief",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Mitigation",
+      "undefined" : "Mitigation Measure"
+    },
+    "subClasses" : [ "136", "106" ],
+    "comment" : {
+      "undefined" : "A technical or organisational measure that reduces the likelihood or severity of an identified risk."
+    },
+    "id" : "148"
   }, {
     "iri" : "https://w3id.org/aief/ModelCard",
     "baseIri" : "https://w3id.org/aief",
@@ -4081,7 +4081,7 @@
       "IRI-based" : "Title1_Dignity",
       "undefined" : "Title I — Dignity"
     },
-    "subClasses" : [ "149", "137", "141", "81" ],
+    "subClasses" : [ "149", "137", "143", "81" ],
     "comment" : {
       "undefined" : "EU Charter of Fundamental Rights Title I covering Articles 1–5 on human dignity."
     },
@@ -4146,7 +4146,7 @@
     },
     "label" : {
       "IRI-based" : "ACMConference",
-      "undefined" : "ACM Conference"
+      "undefined" : "ACM/NeurIPS Research Ethics Guidelines"
     },
     "subClasses" : [ "110", "138", "184", "80" ],
     "comment" : {
@@ -4161,7 +4161,7 @@
     "label" : {
       "IRI-based" : "EffectiveRemedy"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "100"
   }, {
     "iri" : "https://w3id.org/aief/BiasAssessment",
@@ -4183,7 +4183,7 @@
     "label" : {
       "IRI-based" : "FreedomOfExpression"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "108"
   }, {
     "iri" : "https://w3id.org/aief/EmploymentHarm",
@@ -4221,16 +4221,6 @@
     "id" : "62",
     "superClasses" : [ "60" ]
   }, {
-    "iri" : "https://w3id.org/aief/AuditLog",
-    "baseIri" : "https://w3id.org/aief",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AuditLog",
-      "en" : "Audit Log"
-    },
-    "id" : "162",
-    "superClasses" : [ "106" ]
-  }, {
     "iri" : "https://w3id.org/aief/Manipulation",
     "baseIri" : "https://w3id.org/aief",
     "instances" : 0,
@@ -4243,6 +4233,16 @@
     },
     "id" : "131",
     "superClasses" : [ "79" ]
+  }, {
+    "iri" : "https://w3id.org/aief/AuditLog",
+    "baseIri" : "https://w3id.org/aief",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuditLog",
+      "en" : "Audit Log"
+    },
+    "id" : "162",
+    "superClasses" : [ "106" ]
   }, {
     "iri" : "https://w3id.org/aief/Art38_ConsumerProtection",
     "baseIri" : "https://w3id.org/aief",
@@ -4350,16 +4350,6 @@
     "id" : "159",
     "superClasses" : [ "15" ]
   }, {
-    "iri" : "https://w3id.org/aief/EnvironmentalSafeguard",
-    "baseIri" : "https://w3id.org/aief",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "EnvironmentalSafeguard",
-      "en" : "Environmental Safeguard"
-    },
-    "id" : "182",
-    "superClasses" : [ "136" ]
-  }, {
     "iri" : "https://w3id.org/aief/Tier1_Mandatory",
     "baseIri" : "https://w3id.org/aief",
     "instances" : 0,
@@ -4372,6 +4362,16 @@
     },
     "id" : "47",
     "superClasses" : [ "45" ]
+  }, {
+    "iri" : "https://w3id.org/aief/EnvironmentalSafeguard",
+    "baseIri" : "https://w3id.org/aief",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnvironmentalSafeguard",
+      "en" : "Environmental Safeguard"
+    },
+    "id" : "182",
+    "superClasses" : [ "136" ]
   }, {
     "iri" : "https://w3id.org/aief/DPOLetterOfCompletion",
     "baseIri" : "https://w3id.org/aief",
@@ -4399,7 +4399,7 @@
       "undefined" : "Permission"
     },
     "comment" : {
-      "undefined" : "An ethics requirement that permits a specific action under defined conditions. Aligned with ODRL Permission."
+      "undefined" : "An ethics requirement specifying an action that is permitted under defined conditions. Aligned with ODRL Permission."
     },
     "id" : "35",
     "superClasses" : [ "36", "202" ]
@@ -4410,7 +4410,7 @@
     "label" : {
       "IRI-based" : "GenderEquality"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "219"
   }, {
     "iri" : "https://w3id.org/aief/Art15_FreedomOfOccupation",
@@ -4546,6 +4546,19 @@
     "id" : "200",
     "superClasses" : [ "49" ]
   }, {
+    "iri" : "https://w3id.org/aief/DemocraticProcessHarm",
+    "baseIri" : "https://w3id.org/aief",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DemocraticProcessHarm",
+      "undefined" : "Democratic Process Harm"
+    },
+    "comment" : {
+      "undefined" : "Risk of undermining democratic institutions, electoral processes, or civic participation through AI systems."
+    },
+    "id" : "112",
+    "superClasses" : [ "79" ]
+  }, {
     "iri" : "https://w3id.org/aief/Art8_DataProtection",
     "equivalent" : [ "139" ],
     "baseIri" : "https://w3id.org/aief",
@@ -4568,19 +4581,6 @@
     "attributes" : [ "equivalent" ],
     "id" : "189",
     "superClasses" : [ "62" ]
-  }, {
-    "iri" : "https://w3id.org/aief/DemocraticProcessHarm",
-    "baseIri" : "https://w3id.org/aief",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "DemocraticProcessHarm",
-      "undefined" : "Democratic Process Harm"
-    },
-    "comment" : {
-      "undefined" : "Risk of undermining democratic institutions, electoral processes, or civic participation through AI systems."
-    },
-    "id" : "112",
-    "superClasses" : [ "79" ]
   }, {
     "iri" : "https://w3id.org/aief/Art37_EnvironmentalProtection",
     "baseIri" : "https://w3id.org/aief",
@@ -4609,7 +4609,7 @@
     "label" : {
       "IRI-based" : "NonDiscrimination"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "248"
   }, {
     "iri" : "https://w3id.org/aief/HumanOversight",
@@ -4656,7 +4656,7 @@
       "undefined" : "The requirement is not satisfied and remediation is required before ethics approval."
     },
     "id" : "231",
-    "superClasses" : [ "144" ]
+    "superClasses" : [ "142" ]
   }, {
     "iri" : "https://w3id.org/aief/Deception",
     "baseIri" : "https://w3id.org/aief",
@@ -4671,15 +4671,6 @@
     "id" : "116",
     "superClasses" : [ "79" ]
   }, {
-    "iri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights#RightToLife",
-    "baseIri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "RightToLife"
-    },
-    "attributes" : [ "equivalent", "external" ],
-    "id" : "142"
-  }, {
     "iri" : "https://w3id.org/aief/RiskAssessment",
     "baseIri" : "https://w3id.org/aief",
     "instances" : 0,
@@ -4692,6 +4683,15 @@
     },
     "id" : "221",
     "superClasses" : [ "69" ]
+  }, {
+    "iri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights#RightToLife",
+    "baseIri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RightToLife"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "144"
   }, {
     "iri" : "https://w3id.org/aief/ReputationalHarm",
     "baseIri" : "https://w3id.org/aief",
@@ -4835,7 +4835,7 @@
       "undefined" : "The requirement is partially satisfied but gaps remain that must be addressed."
     },
     "id" : "229",
-    "superClasses" : [ "144" ]
+    "superClasses" : [ "142" ]
   }, {
     "iri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights#HealthCare",
     "baseIri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights",
@@ -4843,7 +4843,7 @@
     "label" : {
       "IRI-based" : "HealthCare"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "166"
   }, {
     "iri" : "https://w3id.org/aief/DataProtectionOfficer",
@@ -4877,15 +4877,6 @@
     "id" : "28",
     "superClasses" : [ "8" ]
   }, {
-    "iri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights#PresumptionOfInnocence",
-    "baseIri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "PresumptionOfInnocence"
-    },
-    "attributes" : [ "equivalent", "external" ],
-    "id" : "39"
-  }, {
     "iri" : "https://w3id.org/aief/FundingBody",
     "baseIri" : "https://w3id.org/aief",
     "instances" : 0,
@@ -4895,6 +4886,15 @@
     },
     "id" : "213",
     "superClasses" : [ "49" ]
+  }, {
+    "iri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights#PresumptionOfInnocence",
+    "baseIri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PresumptionOfInnocence"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "39"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "52",
@@ -5080,11 +5080,11 @@
       "IRI-based" : "ComplianceStatus",
       "undefined" : "Compliance Status"
     },
-    "subClasses" : [ "143", "145", "229", "231" ],
+    "subClasses" : [ "141", "145", "229", "231" ],
     "comment" : {
       "undefined" : "The compliance state of a requirement within a given research project assessment."
     },
-    "id" : "144"
+    "id" : "142"
   }, {
     "iri" : "https://w3id.org/aief/SurveillanceData",
     "baseIri" : "https://w3id.org/aief",
@@ -5108,15 +5108,6 @@
     },
     "id" : "25",
     "superClasses" : [ "8" ]
-  }, {
-    "iri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights#PersonalIntegrity",
-    "baseIri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "PersonalIntegrity"
-    },
-    "attributes" : [ "equivalent", "external" ],
-    "id" : "82"
   }, {
     "iri" : "https://w3id.org/aief/ChildrenRights",
     "baseIri" : "https://w3id.org/aief",
@@ -5143,6 +5134,15 @@
     },
     "id" : "129",
     "superClasses" : [ "79" ]
+  }, {
+    "iri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights#PersonalIntegrity",
+    "baseIri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PersonalIntegrity"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "82"
   }, {
     "iri" : "http://www.w3.org/ns/odrl/2/Duty",
     "baseIri" : "http://www.w3.org/ns/odrl/2",
@@ -5232,7 +5232,7 @@
     "label" : {
       "IRI-based" : "GoodAdministration"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "305"
   }, {
     "iri" : "https://w3id.org/aief/DPIAProcedure",
@@ -5305,7 +5305,7 @@
     "label" : {
       "IRI-based" : "LibertyAndSecurityOfPerson"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "316"
   }, {
     "iri" : "https://w3id.org/aief/EthicsCommittee",
@@ -5341,15 +5341,6 @@
     "attributes" : [ "external" ],
     "id" : "202"
   }, {
-    "iri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights#EqualityBeforeLaw",
-    "baseIri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "EqualityBeforeLaw"
-    },
-    "attributes" : [ "equivalent", "external" ],
-    "id" : "238"
-  }, {
     "iri" : "https://w3id.org/aief/GardaVettingCertificate",
     "baseIri" : "https://w3id.org/aief",
     "instances" : 0,
@@ -5359,6 +5350,15 @@
     },
     "id" : "22",
     "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights#EqualityBeforeLaw",
+    "baseIri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EqualityBeforeLaw"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "238"
   }, {
     "iri" : "https://w3id.org/aief/Art22_CulturalDiversity",
     "baseIri" : "https://w3id.org/aief",
@@ -5497,15 +5497,6 @@
     "id" : "46",
     "superClasses" : [ "45" ]
   }, {
-    "iri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights#HumanDignity",
-    "baseIri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "HumanDignity"
-    },
-    "attributes" : [ "equivalent", "external" ],
-    "id" : "150"
-  }, {
     "iri" : "https://w3id.org/aief/Surveillance",
     "baseIri" : "https://w3id.org/aief",
     "instances" : 0,
@@ -5517,6 +5508,28 @@
       "undefined" : "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system."
     },
     "id" : "122",
+    "superClasses" : [ "79" ]
+  }, {
+    "iri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights#HumanDignity",
+    "baseIri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HumanDignity"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "150"
+  }, {
+    "iri" : "https://w3id.org/aief/FalseIdentification",
+    "baseIri" : "https://w3id.org/aief",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FalseIdentification",
+      "undefined" : "False Identification"
+    },
+    "comment" : {
+      "undefined" : "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm."
+    },
+    "id" : "126",
     "superClasses" : [ "79" ]
   }, {
     "iri" : "https://w3id.org/aief/Art41_GoodAdministration",
@@ -5541,19 +5554,6 @@
     "attributes" : [ "equivalent" ],
     "id" : "153",
     "superClasses" : [ "64" ]
-  }, {
-    "iri" : "https://w3id.org/aief/FalseIdentification",
-    "baseIri" : "https://w3id.org/aief",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "FalseIdentification",
-      "undefined" : "False Identification"
-    },
-    "comment" : {
-      "undefined" : "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm."
-    },
-    "id" : "126",
-    "superClasses" : [ "79" ]
   }, {
     "iri" : "https://w3id.org/aief/Annotator",
     "baseIri" : "https://w3id.org/aief",
@@ -5666,15 +5666,6 @@
     "id" : "130",
     "superClasses" : [ "79" ]
   }, {
-    "iri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights#PrivateLife",
-    "baseIri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "PrivateLife"
-    },
-    "attributes" : [ "equivalent", "external" ],
-    "id" : "241"
-  }, {
     "iri" : "https://w3id.org/aief/Anonymisation",
     "baseIri" : "https://w3id.org/aief",
     "instances" : 0,
@@ -5684,6 +5675,15 @@
     },
     "id" : "164",
     "superClasses" : [ "106" ]
+  }, {
+    "iri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights#PrivateLife",
+    "baseIri" : "https://w3c-cg.github.io/dpv/2.3/legal/eu/rights",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PrivateLife"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "241"
   } ],
   "property" : [ {
     "id" : "0",
@@ -5752,7 +5752,7 @@
     "id" : "83",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "86",
+    "id" : "85",
     "type" : "owl:objectProperty"
   }, {
     "id" : "87",
@@ -6208,17 +6208,17 @@
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "0"
   }, {
     "range" : "2",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "3"
   }, {
     "range" : "2",
     "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "5"
   }, {
     "iri" : "https://w3id.org/aief/evidenceDescription",
@@ -6234,27 +6234,27 @@
   }, {
     "range" : "2",
     "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "10"
   }, {
     "range" : "2",
     "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "12"
   }, {
     "range" : "2",
     "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "16"
   }, {
     "range" : "2",
     "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "18"
   }, {
     "range" : "36",
     "domain" : "35",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "34"
   }, {
     "iri" : "https://w3id.org/aief/coderAgreement",
@@ -6270,57 +6270,57 @@
   }, {
     "range" : "55",
     "domain" : "54",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "53"
   }, {
     "range" : "58",
     "domain" : "57",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "56"
   }, {
     "range" : "60",
     "domain" : "55",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "59"
   }, {
     "range" : "60",
     "domain" : "62",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "61"
   }, {
     "range" : "60",
     "domain" : "64",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "63"
   }, {
     "range" : "60",
     "domain" : "66",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "65"
   }, {
     "range" : "60",
     "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "67"
   }, {
     "range" : "38",
     "domain" : "71",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "70"
   }, {
     "range" : "38",
     "domain" : "37",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "72"
   }, {
     "range" : "55",
     "domain" : "74",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "73"
   }, {
     "range" : "55",
     "domain" : "76",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "75"
   }, {
     "iri" : "https://w3id.org/aief/requirementID",
@@ -6343,16 +6343,16 @@
     },
     "domain" : "36",
     "attributes" : [ "object" ],
-    "id" : "86"
+    "id" : "85"
   }, {
     "range" : "62",
     "domain" : "88",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "87"
   }, {
     "range" : "62",
     "domain" : "90",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "89"
   }, {
     "iri" : "https://w3id.org/aief/incidentTitle",
@@ -6368,12 +6368,12 @@
   }, {
     "range" : "62",
     "domain" : "94",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "93"
   }, {
     "range" : "60",
     "domain" : "38",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "95"
   }, {
     "iri" : "https://w3id.org/aief/hasTier",
@@ -6394,7 +6394,7 @@
       "IRI-based" : "noteText",
       "undefined" : "note text"
     },
-    "domain" : "36",
+    "domain" : "51",
     "attributes" : [ "datatype" ],
     "id" : "101"
   }, {
@@ -6423,37 +6423,37 @@
   }, {
     "range" : "15",
     "domain" : "159",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "158"
   }, {
     "range" : "15",
     "domain" : "161",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "160"
   }, {
     "range" : "15",
     "domain" : "168",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "167"
   }, {
     "range" : "15",
     "domain" : "170",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "169"
   }, {
     "range" : "15",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "171"
   }, {
     "range" : "15",
     "domain" : "173",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "172"
   }, {
     "range" : "15",
     "domain" : "154",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "174"
   }, {
     "iri" : "https://w3id.org/aief/mitigatedBy",
@@ -6481,47 +6481,47 @@
   }, {
     "range" : "49",
     "domain" : "195",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "194"
   }, {
     "range" : "49",
     "domain" : "107",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "196"
   }, {
     "range" : "49",
     "domain" : "198",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "197"
   }, {
     "range" : "49",
     "domain" : "200",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "199"
   }, {
     "range" : "202",
     "domain" : "35",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "201"
   }, {
     "range" : "49",
     "domain" : "109",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "203"
   }, {
     "range" : "49",
     "domain" : "151",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "204"
   }, {
     "range" : "49",
     "domain" : "48",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "205"
   }, {
     "range" : "49",
     "domain" : "207",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "206"
   }, {
     "iri" : "https://w3id.org/aief/incidentYear",
@@ -6537,12 +6537,12 @@
   }, {
     "range" : "49",
     "domain" : "211",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "210"
   }, {
     "range" : "49",
     "domain" : "213",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "212"
   }, {
     "iri" : "https://w3id.org/aief/involvesData",
@@ -6580,69 +6580,58 @@
   }, {
     "range" : "69",
     "domain" : "221",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "220"
   }, {
     "range" : "69",
     "domain" : "223",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "222"
   }, {
     "range" : "69",
     "domain" : "156",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "224"
   }, {
     "range" : "49",
     "domain" : "226",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "225"
   }, {
-    "range" : "144",
+    "range" : "142",
     "domain" : "145",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "227"
   }, {
-    "range" : "144",
+    "range" : "142",
     "domain" : "229",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "228"
   }, {
-    "range" : "144",
+    "range" : "142",
     "domain" : "231",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "230"
   }, {
     "range" : "99",
     "domain" : "98",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "232"
   }, {
     "range" : "69",
     "domain" : "96",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "233"
   }, {
     "range" : "69",
     "domain" : "187",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "234"
   }, {
     "range" : "69",
     "domain" : "68",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "235"
-  }, {
-    "iri" : "https://w3id.org/aief/isRelatedTo",
-    "baseIri" : "https://w3id.org/aief",
-    "range" : "36",
-    "label" : {
-      "IRI-based" : "isRelatedTo",
-      "undefined" : "is related to"
-    },
-    "domain" : "36",
-    "attributes" : [ "object", "symmetric" ],
-    "id" : "236"
   }, {
     "iri" : "https://w3id.org/aief/hasImpactOn",
     "baseIri" : "https://w3id.org/aief",
@@ -6653,6 +6642,17 @@
     },
     "domain" : "79",
     "attributes" : [ "object" ],
+    "id" : "236"
+  }, {
+    "iri" : "https://w3id.org/aief/isRelatedTo",
+    "baseIri" : "https://w3id.org/aief",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "isRelatedTo",
+      "undefined" : "is related to"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "symmetric" ],
     "id" : "237"
   }, {
     "iri" : "https://w3id.org/aief/requirementText",
@@ -6668,22 +6668,22 @@
   }, {
     "range" : "36",
     "domain" : "57",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "242"
   }, {
     "range" : "36",
     "domain" : "98",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "243"
   }, {
-    "range" : "144",
-    "domain" : "143",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "142",
+    "domain" : "141",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "244"
   }, {
     "range" : "8",
     "domain" : "33",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "245"
   }, {
     "iri" : "https://w3id.org/aief/sectionReference",
@@ -6710,37 +6710,37 @@
   }, {
     "range" : "8",
     "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "250"
   }, {
     "range" : "8",
     "domain" : "31",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "251"
   }, {
     "range" : "8",
     "domain" : "28",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "252"
   }, {
     "range" : "8",
     "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "253"
   }, {
     "range" : "8",
     "domain" : "30",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "254"
   }, {
     "range" : "8",
     "domain" : "29",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "255"
   }, {
     "range" : "8",
     "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "256"
   }, {
     "iri" : "https://w3id.org/aief/mitigates",
@@ -6756,22 +6756,22 @@
   }, {
     "range" : "8",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "257"
   }, {
     "range" : "8",
     "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "258"
   }, {
     "range" : "8",
     "domain" : "25",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "259"
   }, {
     "iri" : "https://w3id.org/aief/hasComplianceStatus",
     "baseIri" : "https://w3id.org/aief",
-    "range" : "144",
+    "range" : "142",
     "label" : {
       "IRI-based" : "hasComplianceStatus",
       "undefined" : "has compliance status"
@@ -6804,7 +6804,7 @@
   }, {
     "range" : "8",
     "domain" : "21",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "263"
   }, {
     "iri" : "https://w3id.org/aief/hasRisk",
@@ -6820,12 +6820,12 @@
   }, {
     "range" : "8",
     "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "265"
   }, {
     "range" : "8",
     "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "266"
   }, {
     "iri" : "https://w3id.org/aief/demonstratesRisk",
@@ -6852,52 +6852,52 @@
   }, {
     "range" : "79",
     "domain" : "123",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "270"
   }, {
     "range" : "79",
     "domain" : "125",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "271"
   }, {
     "range" : "79",
     "domain" : "124",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "272"
   }, {
     "range" : "79",
     "domain" : "120",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "273"
   }, {
     "range" : "79",
     "domain" : "104",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "274"
   }, {
     "range" : "79",
     "domain" : "122",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "275"
   }, {
     "range" : "79",
     "domain" : "121",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "276"
   }, {
     "range" : "79",
     "domain" : "103",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "277"
   }, {
     "range" : "79",
     "domain" : "117",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "278"
   }, {
     "range" : "79",
     "domain" : "119",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "279"
   }, {
     "iri" : "https://w3id.org/aief/triggersReviewLevel",
@@ -6913,17 +6913,17 @@
   }, {
     "range" : "79",
     "domain" : "118",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "281"
   }, {
     "range" : "79",
     "domain" : "116",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "282"
   }, {
     "range" : "79",
     "domain" : "115",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "283"
   }, {
     "iri" : "https://w3id.org/aief/hasEvidence",
@@ -6939,32 +6939,32 @@
   }, {
     "range" : "79",
     "domain" : "114",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "285"
   }, {
     "range" : "45",
     "domain" : "47",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "286"
   }, {
     "range" : "45",
     "domain" : "46",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "287"
   }, {
     "range" : "79",
     "domain" : "113",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "288"
   }, {
     "range" : "79",
     "domain" : "112",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "289"
   }, {
     "range" : "40",
     "domain" : "42",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "290"
   }, {
     "iri" : "https://w3id.org/aief/dateExtracted",
@@ -6980,7 +6980,7 @@
   }, {
     "range" : "40",
     "domain" : "41",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "293"
   }, {
     "iri" : "https://w3id.org/aief/hasStakeholder",
@@ -6996,32 +6996,32 @@
   }, {
     "range" : "40",
     "domain" : "44",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "295"
   }, {
     "range" : "40",
     "domain" : "43",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "296"
   }, {
     "range" : "66",
     "domain" : "81",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "297"
   }, {
     "range" : "66",
-    "domain" : "141",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "143",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "298"
   }, {
     "range" : "106",
     "domain" : "162",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "299"
   }, {
     "range" : "106",
     "domain" : "105",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "300"
   }, {
     "iri" : "https://w3id.org/aief/frameworkVersion",
@@ -7037,7 +7037,7 @@
   }, {
     "range" : "66",
     "domain" : "137",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "303"
   }, {
     "iri" : "https://w3id.org/aief/complementedBy",
@@ -7053,117 +7053,117 @@
   }, {
     "range" : "66",
     "domain" : "149",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "306"
   }, {
     "range" : "64",
     "domain" : "153",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "307"
   }, {
     "range" : "148",
     "domain" : "136",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "308"
   }, {
     "range" : "79",
     "domain" : "134",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "309"
   }, {
     "range" : "64",
     "domain" : "152",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "310"
   }, {
     "range" : "148",
     "domain" : "106",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "311"
   }, {
     "range" : "79",
     "domain" : "131",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "312"
   }, {
     "range" : "79",
-    "domain" : "85",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "86",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "313"
   }, {
     "range" : "79",
     "domain" : "133",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "314"
   }, {
     "range" : "79",
     "domain" : "132",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "315"
   }, {
     "range" : "79",
     "domain" : "129",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "317"
   }, {
     "range" : "79",
     "domain" : "128",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "318"
   }, {
     "range" : "79",
     "domain" : "130",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "319"
   }, {
     "range" : "79",
     "domain" : "111",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "320"
   }, {
     "range" : "79",
     "domain" : "126",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "321"
   }, {
     "range" : "79",
     "domain" : "127",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "322"
   }, {
     "range" : "79",
     "domain" : "78",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "323"
   }, {
     "range" : "62",
     "domain" : "192",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "324"
   }, {
     "range" : "62",
     "domain" : "191",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "325"
   }, {
     "range" : "62",
     "domain" : "155",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "326"
   }, {
     "range" : "62",
     "domain" : "193",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "327"
   }, {
     "range" : "62",
     "domain" : "188",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "328"
   }, {
     "range" : "62",
     "domain" : "190",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "329"
   }, {
     "iri" : "https://w3id.org/aief/impactsRight",
@@ -7179,7 +7179,7 @@
   }, {
     "range" : "62",
     "domain" : "189",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "331"
   }, {
     "iri" : "https://w3id.org/aief/hasAssessmentProcess",
@@ -7206,37 +7206,37 @@
   }, {
     "range" : "42",
     "domain" : "138",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "336"
   }, {
     "range" : "42",
     "domain" : "110",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "337"
   }, {
     "range" : "42",
     "domain" : "80",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "338"
   }, {
     "range" : "42",
     "domain" : "184",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "339"
   }, {
     "range" : "136",
     "domain" : "181",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "340"
   }, {
     "range" : "136",
     "domain" : "180",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "341"
   }, {
     "range" : "136",
     "domain" : "183",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "342"
   }, {
     "iri" : "https://w3id.org/aief/hasRequirement",
@@ -7252,17 +7252,17 @@
   }, {
     "range" : "136",
     "domain" : "182",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "343"
   }, {
     "range" : "136",
     "domain" : "179",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "344"
   }, {
     "range" : "136",
     "domain" : "178",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "345"
   }, {
     "iri" : "https://w3id.org/aief/tierLevel",
@@ -7278,27 +7278,27 @@
   }, {
     "range" : "136",
     "domain" : "135",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "347"
   }, {
     "range" : "106",
     "domain" : "164",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "348"
   }, {
     "range" : "106",
     "domain" : "163",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "349"
   }, {
     "range" : "136",
     "domain" : "177",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "350"
   }, {
     "range" : "106",
     "domain" : "165",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "351"
   } ]
 }

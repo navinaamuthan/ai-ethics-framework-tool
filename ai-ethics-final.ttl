@@ -337,9 +337,15 @@
     rdfs:label "evidence description" .
 
 :noteText rdf:type owl:DatatypeProperty ;
-    rdfs:domain :Requirement ;
     rdfs:range xsd:string ;
     rdfs:label "note text" .
+    # No rdfs:domain: this free-text annotation is used on both
+    # :Requirement (178 assertions) and :Incident (3 assertions)
+    # individuals. It previously carried "rdfs:domain :Requirement",
+    # which is false against actual usage and, under RDFS inference,
+    # wrongly typed the 3 Incident users as Requirement, causing
+    # RequirementShape to fail on them (see shacl/validate_ontology_shapes.py
+    # findings, corrected in the same pass as this change).
 
 :dateExtracted rdf:type owl:DatatypeProperty ;
     rdfs:domain :Requirement ;
