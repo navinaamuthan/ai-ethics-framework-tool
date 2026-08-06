@@ -2,11 +2,19 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix : <https://w3id.org/aief/> .
 
 <https://w3id.org/aief/> rdf:type owl:Ontology ;
-    rdfs:label "AI-Assisted Ethics Assessment Framework" ;
-    rdfs:comment "Ontology for multi-framework AI ethics compliance assessment" .
+    rdfs:label "AI-Assisted Ethics Assessment Framework"@en ;
+    rdfs:comment "Ontology for multi-framework AI ethics compliance assessment"@en ;
+    dcterms:title "AI Ethics Assessment Framework (AIEF) Ontology"@en ;
+    dcterms:description "An OWL ontology and RDF knowledge graph harmonising 207 governance requirements drawn from the TCD REAMS research-ethics process, the EU AI Act, Horizon Europe ethics guidance, and the ACM/NeurIPS professional codes, mapped to the EU Charter of Fundamental Rights and linked to documented AI-incident precedents. Developed as part of an MSc dissertation at Trinity College Dublin."@en ;
+    dcterms:creator "Navina Ganapathy Amuthan" ;
+    dcterms:created "2026-06-26"^^xsd:date ;
+    dcterms:modified "2026-08-06"^^xsd:date ;
+    owl:versionInfo "2.1.2" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
 
 # ===== TOP-LEVEL CLASSES =====
 
@@ -91,17 +99,17 @@
 
 # ===== STAKEHOLDER SUBCLASSES =====
 
-:Researcher rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:Supervisor rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:PrincipalInvestigator rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:EthicsCommittee rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:DataSubject rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:Participant rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:Annotator rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:AIDeployer rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:MarketSurveillanceAuthority rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:DataProtectionOfficer rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:FundingBody rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
+:Researcher rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Researcher"@en .
+:Supervisor rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Supervisor"@en .
+:PrincipalInvestigator rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Principal Investigator"@en .
+:EthicsCommittee rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Ethics Committee"@en .
+:DataSubject rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Data Subject"@en .
+:Participant rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Participant"@en .
+:Annotator rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Annotator"@en .
+:AIDeployer rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "AI Deployer"@en .
+:MarketSurveillanceAuthority rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Market Surveillance Authority"@en .
+:DataProtectionOfficer rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Data Protection Officer"@en .
+:FundingBody rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Funding Body"@en .
 
 # ===== EVIDENCE SUBCLASSES =====
 
@@ -114,11 +122,11 @@
 :FRIA rdf:type owl:Class ; rdfs:subClassOf :Evidence .
 :ModelCard rdf:type owl:Class ; rdfs:subClassOf :Evidence .
 :DataSheet rdf:type owl:Class ; rdfs:subClassOf :Evidence .
-:PIL_ParticipantInfoLeaflet rdf:type owl:Class ; rdfs:subClassOf :Evidence .
+:PIL_ParticipantInfoLeaflet rdf:type owl:Class ; rdfs:subClassOf :Evidence ; rdfs:label "Participant Information Leaflet"@en .
 :EthicsApproval rdf:type owl:Class ; rdfs:subClassOf :Evidence .
-:GardaVettingCertificate rdf:type owl:Class ; rdfs:subClassOf :Evidence .
-:RecruitmentMaterial rdf:type owl:Class ; rdfs:subClassOf :Evidence .
-:DPOLetterOfCompletion rdf:type owl:Class ; rdfs:subClassOf :Evidence .
+:GardaVettingCertificate rdf:type owl:Class ; rdfs:subClassOf :Evidence ; rdfs:label "Garda Vetting Certificate"@en .
+:RecruitmentMaterial rdf:type owl:Class ; rdfs:subClassOf :Evidence ; rdfs:label "Recruitment Material"@en .
+:DPOLetterOfCompletion rdf:type owl:Class ; rdfs:subClassOf :Evidence ; rdfs:label "DPO Letter of Completion"@en .
 
 # ===== RISK CATEGORY SUBCLASSES =====
 
@@ -153,31 +161,32 @@
 
 # ===== DATA CATEGORY SUBCLASSES =====
 
-:PersonalData rdf:type owl:Class ; rdfs:subClassOf :DataCategory .
-:SpecialCategoryData rdf:type owl:Class ; rdfs:subClassOf :DataCategory .
-:PseudonymisedData rdf:type owl:Class ; rdfs:subClassOf :DataCategory .
-:AnonymisedData rdf:type owl:Class ; rdfs:subClassOf :DataCategory .
-:TrainingData rdf:type owl:Class ; rdfs:subClassOf :DataCategory .
-:InferredData rdf:type owl:Class ; rdfs:subClassOf :DataCategory .
-:SurveillanceData rdf:type owl:Class ; rdfs:subClassOf :DataCategory .
+:PersonalData rdf:type owl:Class ; rdfs:subClassOf :DataCategory ; rdfs:label "Personal Data"@en .
+:SpecialCategoryData rdf:type owl:Class ; rdfs:subClassOf :DataCategory ; rdfs:label "Special Category Data"@en .
+:PseudonymisedData rdf:type owl:Class ; rdfs:subClassOf :DataCategory ; rdfs:label "Pseudonymised Data"@en .
+:AnonymisedData rdf:type owl:Class ; rdfs:subClassOf :DataCategory ; rdfs:label "Anonymised Data"@en .
+:TrainingData rdf:type owl:Class ; rdfs:subClassOf :DataCategory ; rdfs:label "Training Data"@en .
+:InferredData rdf:type owl:Class ; rdfs:subClassOf :DataCategory ; rdfs:label "Inferred Data"@en .
+:SurveillanceData rdf:type owl:Class ; rdfs:subClassOf :DataCategory ; rdfs:label "Surveillance Data"@en .
 
 # ===== MITIGATION SUBCLASSES =====
 
-:TechnicalMeasure rdf:type owl:Class ; rdfs:subClassOf :Mitigation .
-:Encryption rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure .
-:Pseudonymisation rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure .
-:Anonymisation rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure .
-:AccessControl rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure .
-:AuditLog rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure .
+:TechnicalMeasure rdf:type owl:Class ; rdfs:subClassOf :Mitigation ; rdfs:label "Technical Measure"@en .
+:Encryption rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure ; rdfs:label "Encryption"@en .
+:Pseudonymisation rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure ; rdfs:label "Pseudonymisation"@en .
+:Anonymisation rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure ; rdfs:label "Anonymisation"@en .
+:AccessControl rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure ; rdfs:label "Access Control"@en .
+:AuditLog rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure ; rdfs:label "Audit Log"@en .
 
-:OrganisationalMeasure rdf:type owl:Class ; rdfs:subClassOf :Mitigation .
-:StaffTraining rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
-:GovernanceProcedure rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
-:ComplaintMechanism rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
-:IncidentResponsePlan rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
-:EthicsReviewBoard rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
-:HumanOversight rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
-:ResponsibleReleasePolicy rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
+:OrganisationalMeasure rdf:type owl:Class ; rdfs:subClassOf :Mitigation ; rdfs:label "Organisational Measure"@en .
+:StaffTraining rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Staff Training"@en .
+:GovernanceProcedure rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Governance Procedure"@en .
+:ComplaintMechanism rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Complaint Mechanism"@en .
+:IncidentResponsePlan rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Incident Response Plan"@en .
+:EthicsReviewBoard rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Ethics Review Board"@en .
+:HumanOversight rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Human Oversight"@en .
+:ResponsibleReleasePolicy rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Responsible Release Policy"@en .
+:EnvironmentalSafeguard rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Environmental Safeguard"@en .
 
 # ===== ASSESSMENT PROCESS SUBCLASSES =====
 
@@ -363,6 +372,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :assignedTo :Researcher ;
+    :hasMitigation :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :IncidentResponsePlan , :ResponsibleReleasePolicy , :StaffTraining ;
     :hasRisk :ChildrenRights , :EmploymentHarm , :PsychologicalHarm , :ReputationalHarm , :WorkplaceSafetyRisk .
 
 :R005 rdf:type :Obligation ;
@@ -377,6 +387,7 @@
     :requiresEvidence :Certificate ;
     :mapsToRight :Art8_DataProtection ;
     :legalBasis "GDPR Art 39(1)(b)" ;
+    :hasMitigation :AccessControl , :Encryption , :GovernanceProcedure , :Pseudonymisation , :ResponsibleReleasePolicy ;
     :hasRisk :PrivacyBreach , :ReputationalHarm .
 
 :R010 rdf:type :Obligation ;
@@ -390,6 +401,7 @@
     :assignedTo :Researcher ;
     :mapsToRight :Art1_HumanDignity , :Art47_RightToEffectiveRemedy ;
     :triggersReviewLevel "Level 3" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :ResponsibleReleasePolicy , :StaffTraining ;
     :hasRisk :Accountability , :Dignity , :DualUseMisuse , :EconomicHarm , :FinancialHarm , :LibertyViolation , :PsychologicalHarm .
 
 :R019 rdf:type :Obligation ;
@@ -405,6 +417,7 @@
     :mapsToRight :Art8_DataProtection ;
     :legalBasis "GDPR Art 6-7" ;
     :appliesTo :DataSubject ;
+    :hasMitigation :AccessControl , :Encryption , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :Pseudonymisation ;
     :hasRisk :ChildrenRights , :PrivacyBreach , :PsychologicalHarm .
 
 :R027 rdf:type :Obligation ;
@@ -418,6 +431,7 @@
     :assignedTo :Researcher ;
     :mapsToRight :Art24_RightsOfChild , :Art21_NonDiscrimination ;
     :triggersReviewLevel "Level 3" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :IncidentResponsePlan , :StaffTraining ;
     :hasRisk :ChildrenRights , :Discrimination , :EmploymentHarm , :PsychologicalHarm , :WorkplaceSafetyRisk .
 
 :R042 rdf:type :Obligation ;
@@ -432,6 +446,7 @@
     :requiresEvidence :ConsentForm ;
     :mapsToRight :Art8_DataProtection , :Art7_PrivateLife ;
     :legalBasis "GDPR Art 7" ;
+    :hasMitigation :AccessControl , :Encryption , :GovernanceProcedure , :HumanOversight , :Pseudonymisation ;
     :hasRisk :PrivacyBreach , :Surveillance .
 
 :R054 rdf:type :Obligation ;
@@ -444,6 +459,7 @@
     :hasTier :Tier1_Mandatory ;
     :assignedTo :Researcher ;
     :mapsToRight :Art1_HumanDignity , :Art3_RightToIntegrity , :Art7_PrivateLife ;
+    :hasMitigation :AccessControl , :AuditLog , :ComplaintMechanism , :Encryption , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :IncidentResponsePlan , :Pseudonymisation , :ResponsibleReleasePolicy , :StaffTraining ;
     :hasRisk :Dignity , :EconomicHarm , :FinancialHarm , :FunctionCreep , :PhysicalHarm , :PrivacyBreach , :PsychologicalHarm , :ReputationalHarm , :Surveillance .
 
 :R071 rdf:type :Obligation ;
@@ -458,7 +474,7 @@
     :mapsToRight :Art8_DataProtection ;
     :legalBasis "GDPR Art 32" ;
     :involvesData :PersonalData ;
-    :hasMitigation :Encryption , :AccessControl ;
+    :hasMitigation :AccessControl , :AuditLog , :Encryption , :GovernanceProcedure , :HumanOversight , :Pseudonymisation ;
     :hasRisk :DataBreach , :DataGovernance , :PrivacyBreach , :Surveillance .
 
 :R074 rdf:type :Obligation ;
@@ -472,6 +488,7 @@
     :assignedTo :Researcher ;
     :mapsToRight :Art8_DataProtection ;
     :legalBasis "GDPR Art 35" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R085 rdf:type :Obligation ;
@@ -485,6 +502,7 @@
     :assignedTo :Researcher ;
     :mapsToRight :Art21_NonDiscrimination , :Art23_GenderEquality ;
     :noteText "Key gap — REAMS does not explicitly cover this" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy , :StaffTraining ;
     :hasRisk :Accountability , :DemocraticProcessHarm , :Discrimination , :GenderHarm .
 
 
@@ -494,21 +512,24 @@
 
 :impactsRight rdf:type owl:ObjectProperty ;
     rdfs:domain :Incident ;
-    rdfs:range :EUCharterRight .
+    rdfs:range :EUCharterRight ;
+    rdfs:label "impacts right"@en .
 
 :demonstratesRisk rdf:type owl:ObjectProperty ;
     rdfs:domain :Incident ;
-    rdfs:range :RiskCategory .
+    rdfs:range :RiskCategory ;
+    rdfs:label "demonstrates risk"@en .
 
 :supportsRequirement rdf:type owl:ObjectProperty ;
     rdfs:domain :Incident ;
-    rdfs:range :Requirement .
+    rdfs:range :Requirement ;
+    rdfs:label "supports requirement"@en .
 
-:incidentID rdf:type owl:DatatypeProperty .
-:incidentTitle rdf:type owl:DatatypeProperty .
-:incidentYear rdf:type owl:DatatypeProperty .
-:aiCapability rdf:type owl:DatatypeProperty .
-:coderAgreement rdf:type owl:DatatypeProperty .
+:incidentID rdf:type owl:DatatypeProperty ; rdfs:label "incident ID"@en .
+:incidentTitle rdf:type owl:DatatypeProperty ; rdfs:label "incident title"@en .
+:incidentYear rdf:type owl:DatatypeProperty ; rdfs:label "incident year"@en .
+:aiCapability rdf:type owl:DatatypeProperty ; rdfs:label "AI capability"@en .
+:coderAgreement rdf:type owl:DatatypeProperty ; rdfs:label "coder agreement"@en .
 
 :AIAAIC_001 rdf:type :Incident ;
  :incidentID "AIAAIC-001" ; :incidentTitle "Amazon Hiring Algorithm Gender Bias" ; :incidentYear "2018" ;
@@ -1123,6 +1144,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "If not PI, PI must also approve" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R003 rdf:type :Obligation ;
@@ -1135,6 +1157,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Declaration (Yes/No)" ;
     :legalBasis "Research integrity" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R004 rdf:type :Obligation ;
@@ -1148,6 +1171,7 @@
     :requiresEvidence "Certificate upload required" ;
     :legalBasis "Research integrity" ;
     :noteText "PhD: CA7000; Staff: Epigeum" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R005 rdf:type :Obligation ;
@@ -1171,6 +1195,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Student apps must include Primary Supervisor" ;
+    :hasMitigation :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight ;
     :hasRisk :ChildrenRights , :PsychologicalHarm .
 
 :R007 rdf:type :Obligation ;
@@ -1182,6 +1207,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Cannot edit application online" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R008 rdf:type :Obligation ;
@@ -1192,6 +1218,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R009 rdf:type :Obligation ;
@@ -1203,6 +1230,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Determines entire question set" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R011 rdf:type :Obligation ;
@@ -1215,6 +1243,7 @@
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 1 Human dignity; Art 3 Right to integrity" ;
     :noteText "Any selection except 'none' → Level 3" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :Accountability , :Deception , :DualUseMisuse .
 
 :R012 rdf:type :Obligation ;
@@ -1225,6 +1254,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R013 rdf:type :Obligation ;
@@ -1235,6 +1265,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R014 rdf:type :Obligation ;
@@ -1247,6 +1278,7 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Ch V (international transfers)" ;
     :noteText "Foreign country triggers insurance check" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R015 rdf:type :Obligation ;
@@ -1259,6 +1291,7 @@
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 3 Right to integrity of person" ;
     :noteText "Answers 3-5 → Level 3" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R016 rdf:type :Obligation ;
@@ -1270,6 +1303,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Triggers funding tab" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R017 rdf:type :Obligation ;
@@ -1281,6 +1315,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Phased dependent studies need separate ethics per phase" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R018 rdf:type :Obligation ;
@@ -1292,6 +1327,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 14 (secondary data)" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R019 rdf:type :Obligation ;
@@ -1316,6 +1352,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Excess triggers justification" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R021 rdf:type :Obligation ;
@@ -1329,6 +1366,7 @@
     :legalBasis "HRR 2018/2021" ;
     :noteText "Charter Mapping: Art 35 Health care" ;
     :noteText "Triggers Health Research tab" ;
+    :hasMitigation :AccessControl , :Encryption , :HumanOversight , :IncidentResponsePlan , :Pseudonymisation ;
     :hasRisk :PhysicalHarm , :PrivacyBreach .
 
 :R022 rdf:type :Obligation ;
@@ -1340,6 +1378,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :legalBasis "HRR 2018/2021" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R023 rdf:type :Obligation ;
@@ -1353,6 +1392,7 @@
     :legalBasis "GDPR Art 5-6" ;
     :noteText "Charter Mapping: Art 8 Protection of personal data" ;
     :noteText "Yes → cannot route to Level 1; triggers DP section" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R024 rdf:type :Obligation ;
@@ -1366,6 +1406,7 @@
     :legalBasis "GDPR Recital 26" ;
     :noteText "Charter Mapping: Art 8" ;
     :noteText "Still personal data under GDPR" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R025 rdf:type :Obligation ;
@@ -1379,6 +1420,7 @@
     :legalBasis "GDPR Art 6" ;
     :noteText "Charter Mapping: Art 8" ;
     :noteText "Yes → cannot route to Level 1" ;
+    :hasMitigation :AccessControl , :AuditLog , :ComplaintMechanism , :Encryption , :EthicsReviewBoard , :Pseudonymisation , :StaffTraining ;
     :hasRisk :Discrimination , :EmploymentHarm , :PrivacyBreach .
 
 :R026 rdf:type :Obligation ;
@@ -1391,6 +1433,7 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 5(1)(e)" ;
     :noteText "Charter Mapping: Art 8" ;
+    :hasMitigation :AccessControl , :AuditLog , :ComplaintMechanism , :Encryption , :EthicsReviewBoard , :Pseudonymisation , :StaffTraining ;
     :hasRisk :Discrimination , :EmploymentHarm , :PrivacyBreach .
 
 :R027 rdf:type :Obligation ;
@@ -1414,6 +1457,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R029 rdf:type :Obligation ;
@@ -1425,6 +1469,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "One entry per site" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R030 rdf:type :Obligation ;
@@ -1436,6 +1481,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Permission documentation upload" ;
+    :hasMitigation :GovernanceProcedure ;
     :hasRisk :IntellectualProperty .
 
 :R031 rdf:type :Obligation ;
@@ -1449,6 +1495,7 @@
     :requiresEvidence "DPIA attachment if yes" ;
     :legalBasis "GDPR Art 35" ;
     :noteText "Charter Mapping: Art 8" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R032 rdf:type :Obligation ;
@@ -1460,6 +1507,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Each method → required attachment" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R033 rdf:type :Obligation ;
@@ -1471,6 +1519,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Low-risk methods → can route to Level 1" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R034 rdf:type :Obligation ;
@@ -1483,6 +1532,7 @@
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 3 Right to integrity" ;
     :noteText "Yes → Level 3" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R035 rdf:type :Obligation ;
@@ -1493,6 +1543,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R036 rdf:type :Obligation ;
@@ -1503,6 +1554,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R037 rdf:type :Obligation ;
@@ -1513,6 +1565,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R038 rdf:type :Obligation ;
@@ -1524,6 +1577,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Convenience, purposeful, snowball etc." ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R039 rdf:type :Obligation ;
@@ -1535,6 +1589,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Needed for informed consent" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R040 rdf:type :Obligation ;
@@ -1547,6 +1602,7 @@
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 21 Non-discrimination" ;
     :noteText "Dependent relationship → mitigation needed" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R041 rdf:type :Obligation ;
@@ -1558,6 +1614,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Recruitment material attachment" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :StaffTraining ;
     :hasRisk :Discrimination , :EmploymentHarm .
 
 :R042 rdf:type :Obligation ;
@@ -1582,6 +1639,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 26 Integration of persons with disabilities" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R044 rdf:type :Obligation ;
@@ -1593,6 +1651,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 24 Rights of child" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R045 rdf:type :Obligation ;
@@ -1607,6 +1666,7 @@
     :legalBasis "Children Act 2001" ;
     :noteText "Charter Mapping: Art 24 Rights of child" ;
     :noteText "Required for contact with children" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R046 rdf:type :Obligation ;
@@ -1619,6 +1679,7 @@
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 8" ;
     :noteText "<7 days needs justification" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R047 rdf:type :Obligation ;
@@ -1631,6 +1692,7 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 13-14" ;
     :noteText "Charter Mapping: Art 8" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R048 rdf:type :Obligation ;
@@ -1643,6 +1705,7 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 7(3), Art 17" ;
     :noteText "Charter Mapping: Art 8" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R049 rdf:type :Obligation ;
@@ -1653,6 +1716,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R050 rdf:type :Obligation ;
@@ -1664,6 +1728,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 31 Fair working conditions" ;
+    :hasMitigation :EthicsReviewBoard , :HumanOversight , :IncidentResponsePlan ;
     :hasRisk :PhysicalHarm , :PsychologicalHarm .
 
 :R051 rdf:type :Obligation ;
@@ -1674,6 +1739,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :EthicsReviewBoard , :HumanOversight ;
     :hasRisk :PsychologicalHarm .
 
 :R052 rdf:type :Obligation ;
@@ -1686,6 +1752,7 @@
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 37 Environmental protection" ;
     :noteText "Site name revelation is common risk" ;
+    :hasMitigation :EnvironmentalSafeguard ;
     :hasRisk :EnvironmentalHarm .
 
 :R053 rdf:type :Obligation ;
@@ -1697,6 +1764,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R055 rdf:type :Obligation ;
@@ -1709,6 +1777,7 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "Children First Act 2015" ;
     :noteText "Charter Mapping: Art 24 Rights of child" ;
+    :hasMitigation :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight ;
     :hasRisk :ChildrenRights , :PsychologicalHarm .
 
 :R056 rdf:type :Obligation ;
@@ -1720,6 +1789,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier2_Reflective ;
     :noteText "May be none — that is acceptable" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R057 rdf:type :Obligation ;
@@ -1731,6 +1801,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :noteText "Excludes funding COI (separate section)" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability , :IntellectualProperty .
 
 :R058 rdf:type :Obligation ;
@@ -1741,6 +1812,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R059 rdf:type :Obligation ;
@@ -1751,6 +1823,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R060 rdf:type :Obligation ;
@@ -1761,6 +1834,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R061 rdf:type :Obligation ;
@@ -1773,6 +1847,7 @@
     :hasTier :Tier1_Mandatory ;
     :noteText "Charter Mapping: Art 16 Freedom to conduct business" ;
     :noteText "If yes: clarify IP rights" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :Accountability , :Deception .
 
 :R062 rdf:type :Obligation ;
@@ -1783,6 +1858,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R063 rdf:type :Obligation ;
@@ -1796,6 +1872,7 @@
     :legalBasis "GDPR Art 39(1)(b)" ;
     :noteText "Charter Mapping: Art 8" ;
     :noteText "Cannot proceed without Yes" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R064 rdf:type :Obligation ;
@@ -1809,6 +1886,7 @@
     :legalBasis "GDPR Art 33-34" ;
     :noteText "Charter Mapping: Art 8" ;
     :noteText "Cannot proceed without Yes" ;
+    :hasMitigation :AccessControl , :ComplaintMechanism , :Encryption , :HumanOversight , :IncidentResponsePlan , :Pseudonymisation , :StaffTraining ;
     :hasRisk :EmploymentHarm , :PrivacyBreach , :WorkplaceSafetyRisk .
 
 :R065 rdf:type :Obligation ;
@@ -1821,6 +1899,7 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 24-28" ;
     :noteText "Charter Mapping: Art 8" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R066 rdf:type :Obligation ;
@@ -1833,6 +1912,7 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 35" ;
     :noteText "Charter Mapping: Art 8" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R067 rdf:type :Obligation ;
@@ -1845,6 +1925,7 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 9" ;
     :noteText "Charter Mapping: Art 8" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R068 rdf:type :Obligation ;
@@ -1857,6 +1938,7 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 9-10" ;
     :noteText "Charter Mapping: Art 8; Art 21 Non-discrimination" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R069 rdf:type :Obligation ;
@@ -1870,6 +1952,7 @@
     :legalBasis "GDPR Art 5(1)(b)" ;
     :noteText "Charter Mapping: Art 8" ;
     :noteText "If yes: name units and justify" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R070 rdf:type :Obligation ;
@@ -1883,6 +1966,7 @@
     :legalBasis "GDPR Art 26, 28" ;
     :noteText "Charter Mapping: Art 8" ;
     :noteText "If yes: name orgs, justify, IT due diligence" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R071 rdf:type :Obligation ;
@@ -1909,6 +1993,7 @@
     :legalBasis "GDPR Ch V" ;
     :noteText "Charter Mapping: Art 8" ;
     :noteText "If yes: must contact DPO" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R073 rdf:type :Obligation ;
@@ -1921,6 +2006,7 @@
     :hasTier :Tier1_Mandatory ;
     :legalBasis "GDPR Art 5(1)(e)" ;
     :noteText "Charter Mapping: Art 8" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R074 rdf:type :Obligation ;
@@ -1945,6 +2031,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "System-generated list" ;
     :noteText "Submission blocked until all uploaded" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :StaffTraining ;
     :hasRisk :Discrimination , :EmploymentHarm .
 
 :R076 rdf:type :Obligation ;
@@ -1959,6 +2046,7 @@
     :legalBasis "GDPR Art 12-13" ;
     :noteText "Charter Mapping: Art 8; Art 11 Freedom of expression (access to info)" ;
     :noteText "Must match application form details" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R077 rdf:type :Obligation ;
@@ -1969,6 +2057,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R078 rdf:type :Obligation ;
@@ -1979,6 +2068,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R079 rdf:type :Obligation ;
@@ -1989,6 +2079,7 @@
     :isMandatory true ;
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R080 rdf:type :Obligation ;
@@ -2002,6 +2093,7 @@
     :legalBasis "EU Dual Use Regulation" ;
     :noteText "Charter Mapping: Art 1 Human dignity" ;
     :noteText "Reflective prompt for researcher awareness" ;
+    :hasMitigation :EthicsReviewBoard , :HumanOversight ;
     :hasRisk :PsychologicalHarm .
 
 :R081 rdf:type :Obligation ;
@@ -2013,6 +2105,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier2_Reflective ;
     :noteText "Charter Mapping: Art 21 Non-discrimination; Art 26 Disability" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :StaffTraining ;
     :hasRisk :Discrimination , :EmploymentHarm .
 
 :R082 rdf:type :Obligation ;
@@ -2024,6 +2117,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier2_Reflective ;
     :noteText "Best practice prompt" ;
+    :hasMitigation :EthicsReviewBoard , :HumanOversight ;
     :hasRisk :PsychologicalHarm .
 
 :R083 rdf:type :Obligation ;
@@ -2035,6 +2129,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier2_Reflective ;
     :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :R084 rdf:type :Obligation ;
@@ -2048,6 +2143,7 @@
     :legalBasis "GDPR Recital 26" ;
     :noteText "Charter Mapping: Art 8" ;
     :noteText "Pseudonymised ≠ anonymised" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :R085 rdf:type :Obligation ;
@@ -2074,6 +2170,7 @@
     :legalBasis "EU AI Act" ;
     :noteText "Charter Mapping: Art 6 Right to liberty; Art 1 Human dignity" ;
     :noteText "Key gap — not in REAMS" ;
+    :hasMitigation :EthicsReviewBoard , :StaffTraining ;
     :hasRisk :Dignity .
 
 :R087 rdf:type :Obligation ;
@@ -2086,6 +2183,7 @@
     :hasTier :Tier2_Reflective ;
     :noteText "Charter Mapping: Art 37 Environmental protection" ;
     :noteText "Key gap — not in REAMS" ;
+    :hasMitigation :EnvironmentalSafeguard ;
     :hasRisk :EnvironmentalHarm .
 
 :AI001 rdf:type :Obligation ;
@@ -2099,6 +2197,7 @@
     :requiresEvidence "Necessity determination document" ;
     :legalBasis "AI Act Art 27-1" ;
     :noteText "Charter Mapping: All Charter rights potentially" ;
+    :hasMitigation :AccessControl , :Anonymisation , :AuditLog , :Encryption , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :Pseudonymisation , :StaffTraining ;
     :hasRisk :DataBreach , :Dignity , :FalseIdentification , :FunctionCreep , :PsychologicalHarm .
 
 :AI002 rdf:type :Obligation ;
@@ -2111,6 +2210,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Written determination" ;
     :legalBasis "AI Act Art 27-1" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :AI003 rdf:type :Obligation ;
@@ -2123,6 +2223,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Dated documentation" ;
     :legalBasis "AI Act Art 27-2" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :AI004 rdf:type :Obligation ;
@@ -2135,6 +2236,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Named roles" ;
     :legalBasis "AI Act Art 27-2" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :AI005 rdf:type :Obligation ;
@@ -2147,6 +2249,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Version tracking" ;
     :legalBasis "AI Act Art 27-2" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :AI006 rdf:type :Obligation ;
@@ -2159,6 +2262,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Code of conduct reference" ;
     :legalBasis "AI Act Art 27-2" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :AI007 rdf:type :Obligation ;
@@ -2171,6 +2275,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Process description" ;
     :legalBasis "AI Act Art 27-1a" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :AI008 rdf:type :Obligation ;
@@ -2183,6 +2288,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Purpose statement" ;
     :legalBasis "AI Act Art 27-1a" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight ;
     :hasRisk :Accountability , :AddictionRisk , :Manipulation .
 
 :AI009 rdf:type :Obligation ;
@@ -2195,6 +2301,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Duration/frequency declaration" ;
     :legalBasis "AI Act Art 27-1b" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :AI010 rdf:type :Obligation ;
@@ -2207,6 +2314,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Use-case descriptions" ;
     :legalBasis "AI Act Art 27-1b" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :AI011 rdf:type :Obligation ;
@@ -2220,6 +2328,7 @@
     :requiresEvidence "Affected population description" ;
     :legalBasis "AI Act Art 27-1c" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination; Art 24 Rights of child" ;
+    :hasMitigation :AccessControl , :Anonymisation , :AuditLog , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :Pseudonymisation ;
     :hasRisk :Accountability , :FalseIdentification , :FunctionCreep , :Surveillance .
 
 :AI012 rdf:type :Obligation ;
@@ -2232,6 +2341,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Likelihood assessment" ;
     :legalBasis "AI Act Art 27-1c" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability , :DataGovernance .
 
 :AI013 rdf:type :Obligation ;
@@ -2245,6 +2355,7 @@
     :requiresEvidence "Impact description" ;
     :legalBasis "AI Act Art 27-1c" ;
     :noteText "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :AI014 rdf:type :Obligation ;
@@ -2258,6 +2369,7 @@
     :requiresEvidence "Risk register" ;
     :legalBasis "AI Act Art 27-1d" ;
     :noteText "Charter Mapping: Map each risk to specific Charter article" ;
+    :hasMitigation :EthicsReviewBoard , :HumanOversight ;
     :hasRisk :PsychologicalHarm .
 
 :AI015 rdf:type :Obligation ;
@@ -2270,6 +2382,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Oversight documentation" ;
     :legalBasis "AI Act Art 27-1e" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :AI016 rdf:type :Obligation ;
@@ -2283,6 +2396,7 @@
     :requiresEvidence "Permissions/restrictions list" ;
     :legalBasis "AI Act Art 27-1e" ;
     :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :IncidentResponsePlan , :StaffTraining ;
     :hasRisk :Accountability , :EmploymentHarm , :GenderHarm , :WorkplaceSafetyRisk .
 
 :AI017 rdf:type :Obligation ;
@@ -2295,6 +2409,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Provider documentation" ;
     :legalBasis "AI Act Art 27-1e" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :Accountability , :Deception .
 
 :AI018 rdf:type :Obligation ;
@@ -2308,6 +2423,7 @@
     :requiresEvidence "Mitigation plan + incident procedures" ;
     :legalBasis "AI Act Art 27-1f" ;
     :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
+    :hasMitigation :EthicsReviewBoard , :HumanOversight ;
     :hasRisk :PsychologicalHarm .
 
 :AI019 rdf:type :Obligation ;
@@ -2320,6 +2436,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Prior FRIA reference" ;
     :legalBasis "AI Act Art 27-2" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :AI020 rdf:type :Obligation ;
@@ -2333,6 +2450,7 @@
     :requiresEvidence "DPIA cross-reference" ;
     :legalBasis "AI Act Art 27-4; GDPR Art 35" ;
     :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :AI021 rdf:type :Obligation ;
@@ -2345,6 +2463,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Outcome determination" ;
     :legalBasis "AI Act Art 27-1" ;
+    :hasMitigation :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :ResponsibleReleasePolicy ;
     :hasRisk :DemocraticProcessHarm , :EconomicHarm , :LibertyViolation , :PsychologicalHarm .
 
 :AI022 rdf:type :Obligation ;
@@ -2358,6 +2477,7 @@
     :requiresEvidence "Rights impact matrix" ;
     :legalBasis "AI Act Art 27-1" ;
     :noteText "Charter Mapping: Each Charter article individually" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight ;
     :hasRisk :Accountability , :LibertyViolation .
 
 :AI023 rdf:type :Obligation ;
@@ -2371,6 +2491,7 @@
     :requiresEvidence "Granular impact detail" ;
     :legalBasis "AI Act Art 27-1" ;
     :noteText "Charter Mapping: Art 21 subcategories" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :StaffTraining ;
     :hasRisk :Discrimination , :GenderHarm .
 
 :AI024 rdf:type :Obligation ;
@@ -2383,6 +2504,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Notification status determination" ;
     :legalBasis "AI Act Art 27-3" ;
+    :hasMitigation :AccessControl , :Encryption , :GovernanceProcedure , :HumanOversight , :Pseudonymisation ;
     :hasRisk :PrivacyBreach , :Surveillance .
 
 :AI025 rdf:type :Obligation ;
@@ -2395,6 +2517,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Notification record / proof of submission" ;
     :legalBasis "AI Act Art 27-3" ;
+    :hasMitigation :AccessControl , :Encryption , :GovernanceProcedure , :HumanOversight , :Pseudonymisation ;
     :hasRisk :PrivacyBreach , :Surveillance .
 
 :AI026 rdf:type :Obligation ;
@@ -2407,6 +2530,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Completed questionnaire" ;
     :legalBasis "AI Act Art 27-5" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :AI027 rdf:type :Obligation ;
@@ -2419,6 +2543,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Tool documentation" ;
     :legalBasis "AI Act Art 27-5" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :AI028 rdf:type :Obligation ;
@@ -2431,6 +2556,7 @@
     :hasTier :Tier2_Reflective ;
     :legalBasis "Paper discussion" ;
     :noteText "Charter Mapping: Art 21; Art 1" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :AI029 rdf:type :Obligation ;
@@ -2443,6 +2569,7 @@
     :hasTier :Tier2_Reflective ;
     :legalBasis "Paper + GDPR Recital 26" ;
     :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :AI030 rdf:type :Obligation ;
@@ -2455,6 +2582,7 @@
     :hasTier :Tier2_Reflective ;
     :legalBasis "Paper discussion" ;
     :noteText "Charter Mapping: Art 21 subcategories" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :StaffTraining ;
     :hasRisk :Discrimination .
 
 :HE001 rdf:type :Obligation ;
@@ -2468,6 +2596,7 @@
     :requiresEvidence "Ethics self-assessment" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 6 Right to liberty; Art 1 Human dignity" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure , :StaffTraining ;
     :hasRisk :Accountability , :Dignity .
 
 :HE002 rdf:type :Obligation ;
@@ -2481,6 +2610,7 @@
     :requiresEvidence "Ethics self-assessment" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 1 Human dignity; Art 47 Right to effective remedy" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure , :StaffTraining ;
     :hasRisk :Accountability , :Dignity .
 
 :HE003 rdf:type :Obligation ;
@@ -2494,6 +2624,7 @@
     :requiresEvidence "Ethics self-assessment" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :StaffTraining ;
     :hasRisk :Accountability , :AddictionRisk , :ChildrenRights , :Dignity , :Manipulation .
 
 :HE004 rdf:type :Obligation ;
@@ -2507,6 +2638,7 @@
     :requiresEvidence "Ethics self-assessment" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 3 Integrity of person" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :StaffTraining ;
     :hasRisk :Accountability , :AddictionRisk , :Dignity .
 
 :HE005 rdf:type :Obligation ;
@@ -2520,6 +2652,7 @@
     :requiresEvidence "Design documentation" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 6 Right to liberty" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :ResponsibleReleasePolicy , :StaffTraining ;
     :hasRisk :Accountability , :Dignity , :DualUseMisuse , :LibertyViolation .
 
 :HE006 rdf:type :Obligation ;
@@ -2533,6 +2666,7 @@
     :requiresEvidence "User-facing documentation" ;
     :legalBasis "GDPR Art 13-14" ;
     :noteText "Charter Mapping: Art 8 Data protection; Art 11 Freedom of expression" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure , :StaffTraining ;
     :hasRisk :Accountability , :Dignity .
 
 :HE007 rdf:type :Obligation ;
@@ -2546,6 +2680,7 @@
     :requiresEvidence "GDPR compliance documentation" ;
     :legalBasis "GDPR Art 5-6" ;
     :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :Anonymisation , :AuditLog , :ComplaintMechanism , :Encryption , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :Pseudonymisation , :ResponsibleReleasePolicy ;
     :hasRisk :Accountability , :DataBreach , :Deception , :FalseIdentification , :FunctionCreep , :PrivacyBreach , :Surveillance .
 
 :HE008 rdf:type :Obligation ;
@@ -2559,6 +2694,7 @@
     :requiresEvidence "Design documentation" ;
     :legalBasis "GDPR Art 25" ;
     :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :HE009 rdf:type :Obligation ;
@@ -2572,6 +2708,7 @@
     :requiresEvidence "Security documentation" ;
     :legalBasis "GDPR Art 32" ;
     :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :HE010 rdf:type :Obligation ;
@@ -2585,6 +2722,7 @@
     :requiresEvidence "Security audit / logging" ;
     :legalBasis "GDPR Art 32-34; Cybersecurity Act" ;
     :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :HE011 rdf:type :Obligation ;
@@ -2598,6 +2736,7 @@
     :requiresEvidence "Audit trail" ;
     :legalBasis "GDPR" ;
     :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :HE012 rdf:type :Obligation ;
@@ -2612,6 +2751,7 @@
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination" ;
     :noteText "MUST requirement" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure , :StaffTraining ;
     :hasRisk :DataGovernance , :Discrimination .
 
 :HE013 rdf:type :Obligation ;
@@ -2625,6 +2765,7 @@
     :requiresEvidence "Bias assessment report" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination; Art 23 Equality" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :HumanOversight , :IncidentResponsePlan , :StaffTraining ;
     :hasRisk :Discrimination , :EmploymentHarm , :GenderHarm , :WorkplaceSafetyRisk .
 
 :HE014 rdf:type :Obligation ;
@@ -2639,6 +2780,7 @@
     :legalBasis "Accessibility guidelines" ;
     :noteText "Charter Mapping: Art 26 Integration of persons with disabilities" ;
     :noteText "Encouraged not mandatory" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :StaffTraining ;
     :hasRisk :Discrimination .
 
 :HE015 rdf:type :Obligation ;
@@ -2653,6 +2795,7 @@
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination; Art 20 Equality before law" ;
     :noteText "MUST requirement" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :IncidentResponsePlan , :StaffTraining ;
     :hasRisk :Discrimination , :EconomicHarm , :WorkplaceSafetyRisk .
 
 :HE016 rdf:type :Obligation ;
@@ -2666,6 +2809,7 @@
     :requiresEvidence "Proposal text" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :StaffTraining ;
     :hasRisk :Discrimination .
 
 :HE017 rdf:type :Obligation ;
@@ -2679,6 +2823,7 @@
     :requiresEvidence "Well-being assessment" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" ;
+    :hasMitigation :ComplaintMechanism , :EnvironmentalSafeguard , :EthicsReviewBoard , :HumanOversight ;
     :hasRisk :AddictionRisk , :EnvironmentalHarm , :Manipulation , :PsychologicalHarm .
 
 :HE018 rdf:type :Obligation ;
@@ -2693,6 +2838,7 @@
     :legalBasis "Sustainable Development Objectives" ;
     :noteText "Charter Mapping: Art 37 Environmental protection" ;
     :noteText "MUST requirement" ;
+    :hasMitigation :EnvironmentalSafeguard , :EthicsReviewBoard , :HumanOversight ;
     :hasRisk :EnvironmentalHarm , :PsychologicalHarm .
 
 :HE019 rdf:type :Obligation ;
@@ -2706,6 +2852,7 @@
     :requiresEvidence "Social impact assessment" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 11 Freedom of expression; Art 12 Freedom of assembly" ;
+    :hasMitigation :ComplaintMechanism , :EnvironmentalSafeguard , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :ResponsibleReleasePolicy ;
     :hasRisk :DemocraticProcessHarm , :DualUseMisuse , :EnvironmentalHarm , :ExpressionHarm , :PsychologicalHarm .
 
 :HE020 rdf:type :Obligation ;
@@ -2719,6 +2866,7 @@
     :requiresEvidence "Safety compliance" ;
     :legalBasis "IEEE P1228" ;
     :noteText "Charter Mapping: Art 31 Fair working conditions" ;
+    :hasMitigation :ComplaintMechanism , :EnvironmentalSafeguard , :EthicsReviewBoard , :HumanOversight , :IncidentResponsePlan , :StaffTraining ;
     :hasRisk :EmploymentHarm , :EnvironmentalHarm , :PsychologicalHarm , :WorkplaceSafetyRisk .
 
 :HE021 rdf:type :Obligation ;
@@ -2733,6 +2881,7 @@
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 11 Freedom of expression" ;
     :noteText "Especially chatbots" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :Accountability , :Deception , :DemocraticProcessHarm , :ExpressionHarm , :Transparency .
 
 :HE022 rdf:type :Obligation ;
@@ -2746,6 +2895,7 @@
     :requiresEvidence "User documentation" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 11 Freedom of expression" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :Accountability , :Deception , :Transparency .
 
 :HE023 rdf:type :Obligation ;
@@ -2758,6 +2908,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Traceability documentation" ;
     :legalBasis "EU Charter" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :Accountability , :Deception , :IntellectualProperty , :Transparency .
 
 :HE024 rdf:type :Obligation ;
@@ -2771,6 +2922,7 @@
     :requiresEvidence "Explainability documentation" ;
     :legalBasis "EU Charter" ;
     :noteText "Particularly for high-impact decisions" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :Accountability , :Deception , :Transparency .
 
 :HE025 rdf:type :Obligation ;
@@ -2784,6 +2936,7 @@
     :requiresEvidence "Ethics decision log" ;
     :legalBasis "EU Charter" ;
     :noteText "MUST requirement" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :Accountability , :Deception , :Transparency .
 
 :HE026 rdf:type :Obligation ;
@@ -2797,6 +2950,7 @@
     :requiresEvidence "Detection/remediation plan" ;
     :legalBasis "EU Charter" ;
     :noteText "MUST requirement" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :HE027 rdf:type :Obligation ;
@@ -2810,6 +2964,7 @@
     :requiresEvidence "Oversight documentation" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :HE028 rdf:type :Obligation ;
@@ -2823,6 +2978,7 @@
     :requiresEvidence "Risk assessment" ;
     :legalBasis "EU Charter" ;
     :noteText "Scaled to research type" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :HE029 rdf:type :Obligation ;
@@ -2836,6 +2992,7 @@
     :requiresEvidence "Complaint mechanism" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :HE030 rdf:type :Obligation ;
@@ -2848,6 +3005,7 @@
     :hasTier :Tier2_Reflective ;
     :requiresEvidence "Audit logs" ;
     :legalBasis "EU Charter" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :HE031 rdf:type :Obligation ;
@@ -2861,6 +3019,7 @@
     :requiresEvidence "Data protection policy" ;
     :legalBasis "GDPR" ;
     :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :HE032 rdf:type :Obligation ;
@@ -2874,6 +3033,7 @@
     :requiresEvidence "Bias assessment" ;
     :legalBasis "GDPR; EU Charter" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasMitigation :AccessControl , :AuditLog , :Encryption , :EthicsReviewBoard , :HumanOversight , :IncidentResponsePlan , :Pseudonymisation , :StaffTraining ;
     :hasRisk :Discrimination , :GenderHarm , :PhysicalHarm , :PrivacyBreach .
 
 :HE033 rdf:type :Obligation ;
@@ -2887,6 +3047,7 @@
     :requiresEvidence "Data quality report" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure , :StaffTraining ;
     :hasRisk :DataGovernance , :Discrimination .
 
 :HE034 rdf:type :Obligation ;
@@ -2900,6 +3061,7 @@
     :requiresEvidence "Versioning / provenance system" ;
     :legalBasis "EU Charter" ;
     :noteText "Whenever possible" ;
+    :hasMitigation :AuditLog , :GovernanceProcedure ;
     :hasRisk :DataGovernance .
 
 :HE035 rdf:type :Obligation ;
@@ -2913,6 +3075,7 @@
     :requiresEvidence "Data governance documentation" ;
     :legalBasis "GDPR" ;
     :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :AuditLog , :Encryption , :GovernanceProcedure , :Pseudonymisation ;
     :hasRisk :DataGovernance , :PrivacyBreach .
 
 :HE036 rdf:type :Obligation ;
@@ -2926,6 +3089,7 @@
     :requiresEvidence "Data minimisation documentation" ;
     :legalBasis "GDPR Art 5(1)(c)" ;
     :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :HE037 rdf:type :Obligation ;
@@ -2939,6 +3103,7 @@
     :requiresEvidence "Bias testing report" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :StaffTraining ;
     :hasRisk :Discrimination .
 
 :HE038 rdf:type :Obligation ;
@@ -2952,6 +3117,7 @@
     :requiresEvidence "Accessibility review" ;
     :legalBasis "Accessibility guidelines" ;
     :noteText "Charter Mapping: Art 26 Integration of persons with disabilities" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :HE039 rdf:type :Obligation ;
@@ -2964,6 +3130,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Traceability documentation" ;
     :legalBasis "EU Charter" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :HE040 rdf:type :Obligation ;
@@ -2976,6 +3143,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Code documentation" ;
     :legalBasis "EU Charter" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :HE041 rdf:type :Obligation ;
@@ -2988,6 +3156,7 @@
     :hasTier :Tier2_Reflective ;
     :requiresEvidence "Explainability artefacts" ;
     :legalBasis "EU Charter" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :Accountability , :Deception .
 
 :HE042 rdf:type :Obligation ;
@@ -3001,6 +3170,7 @@
     :requiresEvidence "User comprehension test" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 1 Human dignity" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :HE043 rdf:type :Obligation ;
@@ -3013,6 +3183,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Audit report" ;
     :legalBasis "EU Charter" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :HE044 rdf:type :Obligation ;
@@ -3026,6 +3197,7 @@
     :requiresEvidence "Stakeholder communication" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 11 Freedom of expression" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :HE045 rdf:type :Obligation ;
@@ -3038,6 +3210,7 @@
     :hasTier :Tier2_Reflective ;
     :requiresEvidence "Feedback mechanism" ;
     :legalBasis "EU Charter" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :HE046 rdf:type :Obligation ;
@@ -3050,6 +3223,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Compliance plan" ;
     :legalBasis "EU Charter" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :HE047 rdf:type :Obligation ;
@@ -3063,6 +3237,7 @@
     :requiresEvidence "Updated policies" ;
     :legalBasis "GDPR" ;
     :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :HE048 rdf:type :Obligation ;
@@ -3075,6 +3250,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Monitoring dashboard / reports" ;
     :legalBasis "EU Charter" ;
+    :hasMitigation :AccessControl , :Encryption , :GovernanceProcedure , :HumanOversight , :Pseudonymisation ;
     :hasRisk :PrivacyBreach , :Surveillance .
 
 :HE049 rdf:type :Obligation ;
@@ -3088,6 +3264,7 @@
     :requiresEvidence "Complaint channel" ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
+    :hasMitigation :AccessControl , :Encryption , :GovernanceProcedure , :HumanOversight , :Pseudonymisation ;
     :hasRisk :PrivacyBreach , :Surveillance .
 
 :HE050 rdf:type :Obligation ;
@@ -3100,6 +3277,7 @@
     :hasTier :Tier2_Reflective ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 1 Human dignity" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :DualUseMisuse , :FunctionCreep .
 
 :HE051 rdf:type :Obligation ;
@@ -3112,6 +3290,7 @@
     :hasTier :Tier2_Reflective ;
     :legalBasis "EU Charter" ;
     :noteText "Charter Mapping: Art 11 Freedom of expression; Art 12 Freedom of assembly" ;
+    :hasMitigation :EnvironmentalSafeguard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :DemocraticProcessHarm , :EnvironmentalHarm .
 
 :HE052 rdf:type :Obligation ;
@@ -3124,6 +3303,7 @@
     :hasTier :Tier2_Reflective ;
     :legalBasis "Sustainable Development Objectives" ;
     :noteText "Charter Mapping: Art 37 Environmental protection" ;
+    :hasMitigation :EnvironmentalSafeguard ;
     :hasRisk :EnvironmentalHarm .
 
 :ACM001 rdf:type :Obligation ;
@@ -3137,6 +3317,7 @@
     :requiresEvidence "Ethics statement in paper" ;
     :legalBasis "ACL Code of Ethics §1.1" ;
     :noteText "Charter Mapping: Art 1 Human dignity" ;
+    :hasMitigation :EthicsReviewBoard , :HumanOversight , :StaffTraining ;
     :hasRisk :Dignity , :PsychologicalHarm .
 
 :ACM002 rdf:type :Obligation ;
@@ -3150,6 +3331,7 @@
     :requiresEvidence "Ethics statement in paper" ;
     :legalBasis "ACL Code of Ethics §1.2" ;
     :noteText "Charter Mapping: Art 3 Integrity of person" ;
+    :hasMitigation :AccessControl , :Anonymisation , :AuditLog , :Encryption , :GovernanceProcedure , :HumanOversight , :Pseudonymisation ;
     :hasRisk :DataBreach , :FalseIdentification , :FunctionCreep , :PrivacyBreach , :Surveillance .
 
 :ACM003 rdf:type :Obligation ;
@@ -3163,6 +3345,7 @@
     :requiresEvidence "Bias analysis section" ;
     :legalBasis "ACL Code of Ethics §1.4" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure , :StaffTraining ;
     :hasRisk :DataGovernance , :Discrimination .
 
 :ACM004 rdf:type :Obligation ;
@@ -3176,6 +3359,7 @@
     :requiresEvidence "Data statement / bias assessment" ;
     :legalBasis "ACL Code of Ethics §1.4" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :StaffTraining ;
     :hasRisk :AddictionRisk , :ChildrenRights , :Discrimination , :Manipulation .
 
 :ACM005 rdf:type :Obligation ;
@@ -3189,6 +3373,7 @@
     :requiresEvidence "Citation and licence compliance" ;
     :legalBasis "ACL Code of Ethics §1.5" ;
     :noteText "Charter Mapping: Art 17 Right to property" ;
+    :hasMitigation :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight ;
     :hasRisk :AddictionRisk , :ChildrenRights , :IntellectualProperty .
 
 :ACM006 rdf:type :Obligation ;
@@ -3202,6 +3387,7 @@
     :requiresEvidence "IRB/ethics approval; consent forms" ;
     :legalBasis "ACL Code of Ethics §1.6" ;
     :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :ACM007 rdf:type :Obligation ;
@@ -3215,6 +3401,7 @@
     :requiresEvidence "Risk analysis section in paper" ;
     :legalBasis "ACL Code of Ethics §2.5" ;
     :noteText "Charter Mapping: Art 1 Human dignity" ;
+    :hasMitigation :EthicsReviewBoard , :HumanOversight ;
     :hasRisk :PsychologicalHarm .
 
 :ACM008 rdf:type :Obligation ;
@@ -3227,6 +3414,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Method risk discussion" ;
     :legalBasis "ACL Code of Ethics §2.5" ;
+    :hasMitigation :EthicsReviewBoard , :HumanOversight ;
     :hasRisk :PsychologicalHarm .
 
 :ACM009 rdf:type :Obligation ;
@@ -3240,6 +3428,7 @@
     :requiresEvidence "Data access documentation" ;
     :legalBasis "ACL Code of Ethics §2.8" ;
     :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :ACM010 rdf:type :Obligation ;
@@ -3252,6 +3441,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Security assessment" ;
     :legalBasis "ACL Code of Ethics §2.9" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :ACM011 rdf:type :Obligation ;
@@ -3265,6 +3455,7 @@
     :requiresEvidence "Annotator welfare documentation" ;
     :legalBasis "ACL Code of Ethics §3.3" ;
     :noteText "Charter Mapping: Art 31 Fair working conditions" ;
+    :hasMitigation :ComplaintMechanism , :HumanOversight , :IncidentResponsePlan , :StaffTraining ;
     :hasRisk :EmploymentHarm , :WorkplaceSafetyRisk .
 
 :ACM012 rdf:type :Obligation ;
@@ -3278,6 +3469,7 @@
     :requiresEvidence "Environmental/social impact statement" ;
     :legalBasis "ACL Code of Ethics §1.1" ;
     :noteText "Charter Mapping: Art 37 Environmental protection" ;
+    :hasMitigation :ComplaintMechanism , :EnvironmentalSafeguard , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :IncidentResponsePlan , :StaffTraining ;
     :hasRisk :EconomicHarm , :EmploymentHarm , :EnvironmentalHarm , :GenderHarm , :WorkplaceSafetyRisk .
 
 :ACM013 rdf:type :Obligation ;
@@ -3291,6 +3483,7 @@
     :requiresEvidence "Dual use discussion" ;
     :legalBasis "ACL Code of Ethics §1.2, §2.5" ;
     :noteText "Charter Mapping: Art 1 Human dignity" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :Accountability , :Deception , :DualUseMisuse .
 
 :ACM014 rdf:type :Obligation ;
@@ -3304,6 +3497,7 @@
     :requiresEvidence "Payment documentation" ;
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 31 Fair working conditions" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :ACM015 rdf:type :Obligation ;
@@ -3317,6 +3511,7 @@
     :requiresEvidence "IRB/ethics approval or peer review" ;
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 1 Human dignity" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :ACM016 rdf:type :Obligation ;
@@ -3330,6 +3525,7 @@
     :requiresEvidence "Data anonymisation documentation" ;
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :AuditLog , :Encryption , :GovernanceProcedure , :Pseudonymisation ;
     :hasRisk :DataGovernance , :PrivacyBreach .
 
 :ACM017 rdf:type :Obligation ;
@@ -3343,6 +3539,7 @@
     :requiresEvidence "Consent documentation" ;
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasMitigation :AuditLog , :GovernanceProcedure ;
     :hasRisk :DataGovernance .
 
 :ACM018 rdf:type :Obligation ;
@@ -3355,6 +3552,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Dataset status verification" ;
     :legalBasis "NeurIPS Code of Ethics" ;
+    :hasMitigation :AuditLog , :GovernanceProcedure ;
     :hasRisk :DataGovernance , :IntellectualProperty .
 
 :ACM019 rdf:type :Obligation ;
@@ -3368,6 +3566,7 @@
     :requiresEvidence "Licence compliance" ;
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 17 Right to property" ;
+    :hasMitigation :AuditLog , :GovernanceProcedure ;
     :hasRisk :DataGovernance , :IntellectualProperty .
 
 :ACM020 rdf:type :Obligation ;
@@ -3381,6 +3580,7 @@
     :requiresEvidence "Representativeness statement" ;
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :DataGovernance , :DualUseMisuse , :ExpressionHarm .
 
 :ACM021 rdf:type :Obligation ;
@@ -3395,6 +3595,7 @@
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 2 Right to life; Art 3 Integrity" ;
     :noteText "No weapons research accepted" ;
+    :hasMitigation :EthicsReviewBoard , :ResponsibleReleasePolicy ;
     :hasRisk :DualUseMisuse .
 
 :ACM022 rdf:type :Obligation ;
@@ -3407,6 +3608,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Security risk assessment" ;
     :legalBasis "NeurIPS Code of Ethics" ;
+    :hasMitigation :EthicsReviewBoard , :HumanOversight ;
     :hasRisk :PsychologicalHarm .
 
 :ACM023 rdf:type :Obligation ;
@@ -3420,6 +3622,7 @@
     :requiresEvidence "Discrimination impact assessment" ;
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination; Art 35 Health care" ;
+    :hasMitigation :AccessControl , :AuditLog , :Encryption , :EthicsReviewBoard , :HumanOversight , :IncidentResponsePlan , :Pseudonymisation , :StaffTraining ;
     :hasRisk :Discrimination , :PhysicalHarm , :PrivacyBreach .
 
 :ACM024 rdf:type :Obligation ;
@@ -3433,6 +3636,7 @@
     :requiresEvidence "Legal compliance check" ;
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :Encryption , :EthicsReviewBoard , :GovernanceProcedure , :HumanOversight , :Pseudonymisation ;
     :hasRisk :PrivacyBreach , :PsychologicalHarm , :Surveillance .
 
 :ACM025 rdf:type :Obligation ;
@@ -3446,6 +3650,7 @@
     :requiresEvidence "Misuse risk statement" ;
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 1 Human dignity; Art 11 Freedom of expression" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :Accountability , :Deception , :DemocraticProcessHarm , :DualUseMisuse , :EconomicHarm , :ExpressionHarm , :FinancialHarm .
 
 :ACM026 rdf:type :Obligation ;
@@ -3459,6 +3664,7 @@
     :requiresEvidence "Environmental impact statement" ;
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 37 Environmental protection" ;
+    :hasMitigation :EnvironmentalSafeguard ;
     :hasRisk :EnvironmentalHarm .
 
 :ACM027 rdf:type :Obligation ;
@@ -3472,6 +3678,7 @@
     :requiresEvidence "Human rights compliance" ;
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 1-50 (multiple)" ;
+    :hasMitigation :AccessControl , :ComplaintMechanism , :Encryption , :GovernanceProcedure , :HumanOversight , :IncidentResponsePlan , :Pseudonymisation ;
     :hasRisk :ExpressionHarm , :LibertyViolation , :PhysicalHarm , :PrivacyBreach .
 
 :ACM028 rdf:type :Obligation ;
@@ -3485,6 +3692,7 @@
     :requiresEvidence "Bias audit" ;
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 21 Non-discrimination; Art 23 Equality" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure , :StaffTraining ;
     :hasRisk :DataGovernance , :Discrimination , :GenderHarm .
 
 :ACM029 rdf:type :Obligation ;
@@ -3497,6 +3705,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Model Card / Datasheet" ;
     :legalBasis "NeurIPS Code of Ethics" ;
+    :hasMitigation :AuditLog , :GovernanceProcedure ;
     :hasRisk :DataGovernance , :IntellectualProperty .
 
 :ACM030 rdf:type :Obligation ;
@@ -3509,6 +3718,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Licence document" ;
     :legalBasis "NeurIPS Code of Ethics" ;
+    :hasMitigation :GovernanceProcedure ;
     :hasRisk :IntellectualProperty .
 
 :ACM031 rdf:type :Obligation ;
@@ -3522,6 +3732,7 @@
     :requiresEvidence "Security documentation" ;
     :legalBasis "NeurIPS Code of Ethics" ;
     :noteText "Charter Mapping: Art 8 Data protection" ;
+    :hasMitigation :AccessControl , :Encryption , :Pseudonymisation ;
     :hasRisk :PrivacyBreach .
 
 :ACM032 rdf:type :Obligation ;
@@ -3534,6 +3745,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Release policy" ;
     :legalBasis "NeurIPS Code of Ethics" ;
+    :hasMitigation :EthicsReviewBoard , :HumanOversight ;
     :hasRisk :PsychologicalHarm .
 
 :ACM033 rdf:type :Obligation ;
@@ -3546,6 +3758,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Reproducibility package" ;
     :legalBasis "NeurIPS Code of Ethics" ;
+    :hasMitigation :EnvironmentalSafeguard ;
     :hasRisk :EnvironmentalHarm .
 
 :ACM034 rdf:type :Obligation ;
@@ -3558,6 +3771,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Reproducibility statement" ;
     :legalBasis "NeurIPS Code of Ethics" ;
+    :hasMitigation :AuditLog , :ComplaintMechanism , :EthicsReviewBoard , :GovernanceProcedure , :ResponsibleReleasePolicy ;
     :hasRisk :Accountability , :Deception .
 
 :ACM035 rdf:type :Obligation ;
@@ -3570,6 +3784,7 @@
     :hasTier :Tier1_Mandatory ;
     :requiresEvidence "Legal compliance statement" ;
     :legalBasis "NeurIPS Code of Ethics" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :ACM036 rdf:type :Obligation ;
@@ -3582,6 +3797,7 @@
     :hasTier :Tier2_Reflective ;
     :legalBasis "ACL example review" ;
     :noteText "Charter Mapping: Art 1 Human dignity; Art 7 Private life" ;
+    :hasMitigation :AuditLog , :EthicsReviewBoard , :GovernanceProcedure ;
     :hasRisk :Accountability .
 
 :ACM037 rdf:type :Obligation ;
@@ -3594,6 +3810,7 @@
     :hasTier :Tier2_Reflective ;
     :legalBasis "NeurIPS + ACL §3.3" ;
     :noteText "Charter Mapping: Art 31 Fair working conditions" ;
+    :hasMitigation :ComplaintMechanism , :HumanOversight , :IncidentResponsePlan , :StaffTraining ;
     :hasRisk :EmploymentHarm , :WorkplaceSafetyRisk .
 
 :ACM038 rdf:type :Obligation ;
@@ -3606,6 +3823,7 @@
     :hasTier :Tier2_Reflective ;
     :legalBasis "NeurIPS environment guidance" ;
     :noteText "Charter Mapping: Art 37 Environmental protection" ;
+    :hasMitigation :EnvironmentalSafeguard ;
     :hasRisk :EnvironmentalHarm .
 
 

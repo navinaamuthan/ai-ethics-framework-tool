@@ -2,11 +2,19 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix : <https://w3id.org/aief/> .
 
 <https://w3id.org/aief/> rdf:type owl:Ontology ;
-    rdfs:label "AI-Assisted Ethics Assessment Framework" ;
-    rdfs:comment "Ontology for multi-framework AI ethics compliance assessment" .
+    rdfs:label "AI-Assisted Ethics Assessment Framework"@en ;
+    rdfs:comment "Ontology for multi-framework AI ethics compliance assessment"@en ;
+    dcterms:title "AI Ethics Assessment Framework (AIEF) Ontology"@en ;
+    dcterms:description "An OWL ontology and RDF knowledge graph harmonising 207 governance requirements drawn from the TCD REAMS research-ethics process, the EU AI Act, Horizon Europe ethics guidance, and the ACM/NeurIPS professional codes, mapped to the EU Charter of Fundamental Rights and linked to documented AI-incident precedents. Developed as part of an MSc dissertation at Trinity College Dublin."@en ;
+    dcterms:creator "Navina Ganapathy Amuthan" ;
+    dcterms:created "2026-06-26"^^xsd:date ;
+    dcterms:modified "2026-08-06"^^xsd:date ;
+    owl:versionInfo "2.1.2" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
 
 # ===== TOP-LEVEL CLASSES =====
 
@@ -91,17 +99,17 @@
 
 # ===== STAKEHOLDER SUBCLASSES =====
 
-:Researcher rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:Supervisor rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:PrincipalInvestigator rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:EthicsCommittee rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:DataSubject rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:Participant rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:Annotator rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:AIDeployer rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:MarketSurveillanceAuthority rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:DataProtectionOfficer rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
-:FundingBody rdf:type owl:Class ; rdfs:subClassOf :Stakeholder .
+:Researcher rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Researcher"@en .
+:Supervisor rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Supervisor"@en .
+:PrincipalInvestigator rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Principal Investigator"@en .
+:EthicsCommittee rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Ethics Committee"@en .
+:DataSubject rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Data Subject"@en .
+:Participant rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Participant"@en .
+:Annotator rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Annotator"@en .
+:AIDeployer rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "AI Deployer"@en .
+:MarketSurveillanceAuthority rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Market Surveillance Authority"@en .
+:DataProtectionOfficer rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Data Protection Officer"@en .
+:FundingBody rdf:type owl:Class ; rdfs:subClassOf :Stakeholder ; rdfs:label "Funding Body"@en .
 
 # ===== EVIDENCE SUBCLASSES =====
 
@@ -114,11 +122,11 @@
 :FRIA rdf:type owl:Class ; rdfs:subClassOf :Evidence .
 :ModelCard rdf:type owl:Class ; rdfs:subClassOf :Evidence .
 :DataSheet rdf:type owl:Class ; rdfs:subClassOf :Evidence .
-:PIL_ParticipantInfoLeaflet rdf:type owl:Class ; rdfs:subClassOf :Evidence .
+:PIL_ParticipantInfoLeaflet rdf:type owl:Class ; rdfs:subClassOf :Evidence ; rdfs:label "Participant Information Leaflet"@en .
 :EthicsApproval rdf:type owl:Class ; rdfs:subClassOf :Evidence .
-:GardaVettingCertificate rdf:type owl:Class ; rdfs:subClassOf :Evidence .
-:RecruitmentMaterial rdf:type owl:Class ; rdfs:subClassOf :Evidence .
-:DPOLetterOfCompletion rdf:type owl:Class ; rdfs:subClassOf :Evidence .
+:GardaVettingCertificate rdf:type owl:Class ; rdfs:subClassOf :Evidence ; rdfs:label "Garda Vetting Certificate"@en .
+:RecruitmentMaterial rdf:type owl:Class ; rdfs:subClassOf :Evidence ; rdfs:label "Recruitment Material"@en .
+:DPOLetterOfCompletion rdf:type owl:Class ; rdfs:subClassOf :Evidence ; rdfs:label "DPO Letter of Completion"@en .
 
 # ===== RISK CATEGORY SUBCLASSES =====
 
@@ -153,32 +161,32 @@
 
 # ===== DATA CATEGORY SUBCLASSES =====
 
-:PersonalData rdf:type owl:Class ; rdfs:subClassOf :DataCategory .
-:SpecialCategoryData rdf:type owl:Class ; rdfs:subClassOf :DataCategory .
-:PseudonymisedData rdf:type owl:Class ; rdfs:subClassOf :DataCategory .
-:AnonymisedData rdf:type owl:Class ; rdfs:subClassOf :DataCategory .
-:TrainingData rdf:type owl:Class ; rdfs:subClassOf :DataCategory .
-:InferredData rdf:type owl:Class ; rdfs:subClassOf :DataCategory .
-:SurveillanceData rdf:type owl:Class ; rdfs:subClassOf :DataCategory .
+:PersonalData rdf:type owl:Class ; rdfs:subClassOf :DataCategory ; rdfs:label "Personal Data"@en .
+:SpecialCategoryData rdf:type owl:Class ; rdfs:subClassOf :DataCategory ; rdfs:label "Special Category Data"@en .
+:PseudonymisedData rdf:type owl:Class ; rdfs:subClassOf :DataCategory ; rdfs:label "Pseudonymised Data"@en .
+:AnonymisedData rdf:type owl:Class ; rdfs:subClassOf :DataCategory ; rdfs:label "Anonymised Data"@en .
+:TrainingData rdf:type owl:Class ; rdfs:subClassOf :DataCategory ; rdfs:label "Training Data"@en .
+:InferredData rdf:type owl:Class ; rdfs:subClassOf :DataCategory ; rdfs:label "Inferred Data"@en .
+:SurveillanceData rdf:type owl:Class ; rdfs:subClassOf :DataCategory ; rdfs:label "Surveillance Data"@en .
 
 # ===== MITIGATION SUBCLASSES =====
 
-:TechnicalMeasure rdf:type owl:Class ; rdfs:subClassOf :Mitigation .
-:Encryption rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure .
-:Pseudonymisation rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure .
-:Anonymisation rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure .
-:AccessControl rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure .
-:AuditLog rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure .
+:TechnicalMeasure rdf:type owl:Class ; rdfs:subClassOf :Mitigation ; rdfs:label "Technical Measure"@en .
+:Encryption rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure ; rdfs:label "Encryption"@en .
+:Pseudonymisation rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure ; rdfs:label "Pseudonymisation"@en .
+:Anonymisation rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure ; rdfs:label "Anonymisation"@en .
+:AccessControl rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure ; rdfs:label "Access Control"@en .
+:AuditLog rdf:type owl:Class ; rdfs:subClassOf :TechnicalMeasure ; rdfs:label "Audit Log"@en .
 
-:OrganisationalMeasure rdf:type owl:Class ; rdfs:subClassOf :Mitigation .
-:StaffTraining rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
-:GovernanceProcedure rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
-:ComplaintMechanism rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
-:IncidentResponsePlan rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
-:EthicsReviewBoard rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
-:HumanOversight rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
-:ResponsibleReleasePolicy rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
-:EnvironmentalSafeguard rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure .
+:OrganisationalMeasure rdf:type owl:Class ; rdfs:subClassOf :Mitigation ; rdfs:label "Organisational Measure"@en .
+:StaffTraining rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Staff Training"@en .
+:GovernanceProcedure rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Governance Procedure"@en .
+:ComplaintMechanism rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Complaint Mechanism"@en .
+:IncidentResponsePlan rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Incident Response Plan"@en .
+:EthicsReviewBoard rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Ethics Review Board"@en .
+:HumanOversight rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Human Oversight"@en .
+:ResponsibleReleasePolicy rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Responsible Release Policy"@en .
+:EnvironmentalSafeguard rdf:type owl:Class ; rdfs:subClassOf :OrganisationalMeasure ; rdfs:label "Environmental Safeguard"@en .
 
 # ===== ASSESSMENT PROCESS SUBCLASSES =====
 
@@ -504,21 +512,24 @@
 
 :impactsRight rdf:type owl:ObjectProperty ;
     rdfs:domain :Incident ;
-    rdfs:range :EUCharterRight .
+    rdfs:range :EUCharterRight ;
+    rdfs:label "impacts right"@en .
 
 :demonstratesRisk rdf:type owl:ObjectProperty ;
     rdfs:domain :Incident ;
-    rdfs:range :RiskCategory .
+    rdfs:range :RiskCategory ;
+    rdfs:label "demonstrates risk"@en .
 
 :supportsRequirement rdf:type owl:ObjectProperty ;
     rdfs:domain :Incident ;
-    rdfs:range :Requirement .
+    rdfs:range :Requirement ;
+    rdfs:label "supports requirement"@en .
 
-:incidentID rdf:type owl:DatatypeProperty .
-:incidentTitle rdf:type owl:DatatypeProperty .
-:incidentYear rdf:type owl:DatatypeProperty .
-:aiCapability rdf:type owl:DatatypeProperty .
-:coderAgreement rdf:type owl:DatatypeProperty .
+:incidentID rdf:type owl:DatatypeProperty ; rdfs:label "incident ID"@en .
+:incidentTitle rdf:type owl:DatatypeProperty ; rdfs:label "incident title"@en .
+:incidentYear rdf:type owl:DatatypeProperty ; rdfs:label "incident year"@en .
+:aiCapability rdf:type owl:DatatypeProperty ; rdfs:label "AI capability"@en .
+:coderAgreement rdf:type owl:DatatypeProperty ; rdfs:label "coder agreement"@en .
 
 :AIAAIC_001 rdf:type :Incident ;
  :incidentID "AIAAIC-001" ; :incidentTitle "Amazon Hiring Algorithm Gender Bias" ; :incidentYear "2018" ;
