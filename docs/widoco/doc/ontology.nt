@@ -182,11 +182,6 @@
 <https://w3id.org/aief/mitigates> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aief/RiskCategory> .
 <https://w3id.org/aief/mitigates> <http://www.w3.org/2000/01/rdf-schema#label> "mitigates" .
 # 
-# https://w3id.org/aief/requiresEvidence
-<https://w3id.org/aief/requiresEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/aief/requiresEvidence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aief/Requirement> .
-<https://w3id.org/aief/requiresEvidence> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aief/Evidence> .
-# 
 # https://w3id.org/aief/supportsRequirement
 <https://w3id.org/aief/supportsRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/aief/supportsRequirement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aief/Incident> .
@@ -268,6 +263,12 @@
 <https://w3id.org/aief/requirementText> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aief/Requirement> .
 <https://w3id.org/aief/requirementText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/aief/requirementText> <http://www.w3.org/2000/01/rdf-schema#label> "requirement text" .
+# 
+# https://w3id.org/aief/requiresEvidence
+<https://w3id.org/aief/requiresEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/aief/requiresEvidence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aief/Requirement> .
+<https://w3id.org/aief/requiresEvidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/aief/requiresEvidence> <http://www.w3.org/2000/01/rdf-schema#label> "requires evidence" .
 # 
 # https://w3id.org/aief/sectionReference
 <https://w3id.org/aief/sectionReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -564,6 +565,8 @@
 # https://w3id.org/aief/Certificate
 <https://w3id.org/aief/Certificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/aief/Certificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aief/Evidence> .
+<https://w3id.org/aief/Certificate> <http://www.w3.org/2000/01/rdf-schema#comment> "A formal certificate demonstrating completion of a required training or qualification." .
+<https://w3id.org/aief/Certificate> <http://www.w3.org/2000/01/rdf-schema#label> "Certificate" .
 # 
 # https://w3id.org/aief/ChildrenRights
 <https://w3id.org/aief/ChildrenRights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -587,6 +590,8 @@
 # https://w3id.org/aief/ConsentForm
 <https://w3id.org/aief/ConsentForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/aief/ConsentForm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aief/Evidence> .
+<https://w3id.org/aief/ConsentForm> <http://www.w3.org/2000/01/rdf-schema#comment> "A document through which research participants provide informed consent to participate." .
+<https://w3id.org/aief/ConsentForm> <http://www.w3.org/2000/01/rdf-schema#label> "Consent Form" .
 # 
 # https://w3id.org/aief/DPIA
 <https://w3id.org/aief/DPIA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1109,9 +1114,9 @@
 <https://w3id.org/aief/ACM001> <https://w3id.org/aief/noteText> "Charter Mapping: Art 1 Human dignity" .
 <https://w3id.org/aief/ACM001> <https://w3id.org/aief/requirementID> "ACM001" .
 <https://w3id.org/aief/ACM001> <https://w3id.org/aief/requirementText> "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms" .
+<https://w3id.org/aief/ACM001> <https://w3id.org/aief/requiresEvidence> "Ethics statement in paper" .
 <https://w3id.org/aief/ACM001> <https://w3id.org/aief/sectionReference> "ACL §1.1" .
 <https://w3id.org/aief/ACM001> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM001> <https://w3id.org/aief/requiresEvidence> "Ethics statement in paper" .
 # 
 # https://w3id.org/aief/ACM002
 <https://w3id.org/aief/ACM002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1149,9 +1154,9 @@
 <https://w3id.org/aief/ACM002> <https://w3id.org/aief/noteText> "Charter Mapping: Art 3 Integrity of person" .
 <https://w3id.org/aief/ACM002> <https://w3id.org/aief/requirementID> "ACM002" .
 <https://w3id.org/aief/ACM002> <https://w3id.org/aief/requirementText> "Avoid harm — consider how data, code or other outcomes of research may cause harm" .
+<https://w3id.org/aief/ACM002> <https://w3id.org/aief/requiresEvidence> "Ethics statement in paper" .
 <https://w3id.org/aief/ACM002> <https://w3id.org/aief/sectionReference> "ACL §1.2" .
 <https://w3id.org/aief/ACM002> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM002> <https://w3id.org/aief/requiresEvidence> "Ethics statement in paper" .
 # 
 # https://w3id.org/aief/ACM003
 <https://w3id.org/aief/ACM003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1175,9 +1180,9 @@
 <https://w3id.org/aief/ACM003> <https://w3id.org/aief/noteText> "Charter Mapping: Art 21 Non-discrimination" .
 <https://w3id.org/aief/ACM003> <https://w3id.org/aief/requirementID> "ACM003" .
 <https://w3id.org/aief/ACM003> <https://w3id.org/aief/requirementText> "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate" .
+<https://w3id.org/aief/ACM003> <https://w3id.org/aief/requiresEvidence> "Bias analysis section" .
 <https://w3id.org/aief/ACM003> <https://w3id.org/aief/sectionReference> "ACL §1.4" .
 <https://w3id.org/aief/ACM003> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM003> <https://w3id.org/aief/requiresEvidence> "Bias analysis section" .
 # 
 # https://w3id.org/aief/ACM004
 <https://w3id.org/aief/ACM004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1206,9 +1211,9 @@
 <https://w3id.org/aief/ACM004> <https://w3id.org/aief/noteText> "Charter Mapping: Art 21 Non-discrimination" .
 <https://w3id.org/aief/ACM004> <https://w3id.org/aief/requirementID> "ACM004" .
 <https://w3id.org/aief/ACM004> <https://w3id.org/aief/requirementText> "Consider and ameliorate biases in data and biased code/model outputs" .
+<https://w3id.org/aief/ACM004> <https://w3id.org/aief/requiresEvidence> "Data statement / bias assessment" .
 <https://w3id.org/aief/ACM004> <https://w3id.org/aief/sectionReference> "ACL §1.4" .
 <https://w3id.org/aief/ACM004> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM004> <https://w3id.org/aief/requiresEvidence> "Data statement / bias assessment" .
 # 
 # https://w3id.org/aief/ACM005
 <https://w3id.org/aief/ACM005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1232,9 +1237,9 @@
 <https://w3id.org/aief/ACM005> <https://w3id.org/aief/noteText> "Charter Mapping: Art 17 Right to property" .
 <https://w3id.org/aief/ACM005> <https://w3id.org/aief/requirementID> "ACM005" .
 <https://w3id.org/aief/ACM005> <https://w3id.org/aief/requirementText> "Respect intellectual property and data/code ownership — cite creators of artefacts used and use them as intended (respect licences)" .
+<https://w3id.org/aief/ACM005> <https://w3id.org/aief/requiresEvidence> "Citation and licence compliance" .
 <https://w3id.org/aief/ACM005> <https://w3id.org/aief/sectionReference> "ACL §1.5" .
 <https://w3id.org/aief/ACM005> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM005> <https://w3id.org/aief/requiresEvidence> "Citation and licence compliance" .
 # 
 # https://w3id.org/aief/ACM006
 <https://w3id.org/aief/ACM006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1252,9 +1257,9 @@
 <https://w3id.org/aief/ACM006> <https://w3id.org/aief/noteText> "Charter Mapping: Art 7 Private life; Art 8 Data protection" .
 <https://w3id.org/aief/ACM006> <https://w3id.org/aief/requirementID> "ACM006" .
 <https://w3id.org/aief/ACM006> <https://w3id.org/aief/requirementText> "Respect privacy — obtain informed consent where required and protect personally identifiable information" .
+<https://w3id.org/aief/ACM006> <https://w3id.org/aief/requiresEvidence> "IRB/ethics approval; consent forms" .
 <https://w3id.org/aief/ACM006> <https://w3id.org/aief/sectionReference> "ACL §1.6" .
 <https://w3id.org/aief/ACM006> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM006> <https://w3id.org/aief/requiresEvidence> "IRB/ethics approval; consent forms" .
 # 
 # https://w3id.org/aief/ACM007
 <https://w3id.org/aief/ACM007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1271,9 +1276,9 @@
 <https://w3id.org/aief/ACM007> <https://w3id.org/aief/noteText> "Charter Mapping: Art 1 Human dignity" .
 <https://w3id.org/aief/ACM007> <https://w3id.org/aief/requirementID> "ACM007" .
 <https://w3id.org/aief/ACM007> <https://w3id.org/aief/requirementText> "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications" .
+<https://w3id.org/aief/ACM007> <https://w3id.org/aief/requiresEvidence> "Risk analysis section in paper" .
 <https://w3id.org/aief/ACM007> <https://w3id.org/aief/sectionReference> "ACL §2.5" .
 <https://w3id.org/aief/ACM007> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM007> <https://w3id.org/aief/requiresEvidence> "Risk analysis section in paper" .
 # 
 # https://w3id.org/aief/ACM008
 <https://w3id.org/aief/ACM008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1289,9 +1294,9 @@
 <https://w3id.org/aief/ACM008> <https://w3id.org/aief/legalBasis> "ACL Code of Ethics §2.5" .
 <https://w3id.org/aief/ACM008> <https://w3id.org/aief/requirementID> "ACM008" .
 <https://w3id.org/aief/ACM008> <https://w3id.org/aief/requirementText> "Consider possible risks and impacts of the research approach itself (not just applications)" .
+<https://w3id.org/aief/ACM008> <https://w3id.org/aief/requiresEvidence> "Method risk discussion" .
 <https://w3id.org/aief/ACM008> <https://w3id.org/aief/sectionReference> "ACL §2.5" .
 <https://w3id.org/aief/ACM008> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM008> <https://w3id.org/aief/requiresEvidence> "Method risk discussion" .
 # 
 # https://w3id.org/aief/ACM009
 <https://w3id.org/aief/ACM009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1309,9 +1314,9 @@
 <https://w3id.org/aief/ACM009> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 <https://w3id.org/aief/ACM009> <https://w3id.org/aief/requirementID> "ACM009" .
 <https://w3id.org/aief/ACM009> <https://w3id.org/aief/requirementText> "Access computing and communication resources only when authorised or compelled by public good" .
+<https://w3id.org/aief/ACM009> <https://w3id.org/aief/requiresEvidence> "Data access documentation" .
 <https://w3id.org/aief/ACM009> <https://w3id.org/aief/sectionReference> "ACL §2.8" .
 <https://w3id.org/aief/ACM009> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM009> <https://w3id.org/aief/requiresEvidence> "Data access documentation" .
 # 
 # https://w3id.org/aief/ACM010
 <https://w3id.org/aief/ACM010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1328,9 +1333,9 @@
 <https://w3id.org/aief/ACM010> <https://w3id.org/aief/legalBasis> "ACL Code of Ethics §2.9" .
 <https://w3id.org/aief/ACM010> <https://w3id.org/aief/requirementID> "ACM010" .
 <https://w3id.org/aief/ACM010> <https://w3id.org/aief/requirementText> "Design and implement systems that are robustly and usably secure — especially systems close to production deployment" .
+<https://w3id.org/aief/ACM010> <https://w3id.org/aief/requiresEvidence> "Security assessment" .
 <https://w3id.org/aief/ACM010> <https://w3id.org/aief/sectionReference> "ACL §2.9" .
 <https://w3id.org/aief/ACM010> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM010> <https://w3id.org/aief/requiresEvidence> "Security assessment" .
 # 
 # https://w3id.org/aief/ACM011
 <https://w3id.org/aief/ACM011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1354,9 +1359,9 @@
 <https://w3id.org/aief/ACM011> <https://w3id.org/aief/noteText> "Charter Mapping: Art 31 Fair working conditions" .
 <https://w3id.org/aief/ACM011> <https://w3id.org/aief/requirementID> "ACM011" .
 <https://w3id.org/aief/ACM011> <https://w3id.org/aief/requirementText> "Manage personnel and resources to enhance quality of working life — consider how participation of annotators/crowdworkers may cause benefits or harms" .
+<https://w3id.org/aief/ACM011> <https://w3id.org/aief/requiresEvidence> "Annotator welfare documentation" .
 <https://w3id.org/aief/ACM011> <https://w3id.org/aief/sectionReference> "ACL §3.3" .
 <https://w3id.org/aief/ACM011> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM011> <https://w3id.org/aief/requiresEvidence> "Annotator welfare documentation" .
 # 
 # https://w3id.org/aief/ACM012
 <https://w3id.org/aief/ACM012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1388,9 +1393,9 @@
 <https://w3id.org/aief/ACM012> <https://w3id.org/aief/noteText> "Charter Mapping: Art 37 Environmental protection" .
 <https://w3id.org/aief/ACM012> <https://w3id.org/aief/requirementID> "ACM012" .
 <https://w3id.org/aief/ACM012> <https://w3id.org/aief/requirementText> "Consider and ameliorate negative impacts of approach on political, social or natural environment" .
+<https://w3id.org/aief/ACM012> <https://w3id.org/aief/requiresEvidence> "Environmental/social impact statement" .
 <https://w3id.org/aief/ACM012> <https://w3id.org/aief/sectionReference> "ACL §1.1" .
 <https://w3id.org/aief/ACM012> <https://w3id.org/aief/tierLevel> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM012> <https://w3id.org/aief/requiresEvidence> "Environmental/social impact statement" .
 # 
 # https://w3id.org/aief/ACM013
 <https://w3id.org/aief/ACM013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1415,9 +1420,9 @@
 <https://w3id.org/aief/ACM013> <https://w3id.org/aief/noteText> "Charter Mapping: Art 1 Human dignity" .
 <https://w3id.org/aief/ACM013> <https://w3id.org/aief/requirementID> "ACM013" .
 <https://w3id.org/aief/ACM013> <https://w3id.org/aief/requirementText> "Discuss dual use potential — ways research could be misused and mitigations" .
+<https://w3id.org/aief/ACM013> <https://w3id.org/aief/requiresEvidence> "Dual use discussion" .
 <https://w3id.org/aief/ACM013> <https://w3id.org/aief/sectionReference> "ACL Dual Use" .
 <https://w3id.org/aief/ACM013> <https://w3id.org/aief/tierLevel> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM013> <https://w3id.org/aief/requiresEvidence> "Dual use discussion" .
 # 
 # https://w3id.org/aief/ACM014
 <https://w3id.org/aief/ACM014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1435,9 +1440,9 @@
 <https://w3id.org/aief/ACM014> <https://w3id.org/aief/noteText> "Charter Mapping: Art 31 Fair working conditions" .
 <https://w3id.org/aief/ACM014> <https://w3id.org/aief/requirementID> "ACM014" .
 <https://w3id.org/aief/ACM014> <https://w3id.org/aief/requirementText> "All human research subjects or participants must receive appropriate compensation — respect minimum hourly rate in region where work is carried out" .
+<https://w3id.org/aief/ACM014> <https://w3id.org/aief/requiresEvidence> "Payment documentation" .
 <https://w3id.org/aief/ACM014> <https://w3id.org/aief/sectionReference> "NeurIPS Human Subjects" .
 <https://w3id.org/aief/ACM014> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM014> <https://w3id.org/aief/requiresEvidence> "Payment documentation" .
 # 
 # https://w3id.org/aief/ACM015
 <https://w3id.org/aief/ACM015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1455,9 +1460,9 @@
 <https://w3id.org/aief/ACM015> <https://w3id.org/aief/noteText> "Charter Mapping: Art 1 Human dignity" .
 <https://w3id.org/aief/ACM015> <https://w3id.org/aief/requirementID> "ACM015" .
 <https://w3id.org/aief/ACM015> <https://w3id.org/aief/requirementText> "Research involving human participants must follow existing institutional protocols (IRB or equivalent) — if no formal process exists, undergo equivalent informal ethics review" .
+<https://w3id.org/aief/ACM015> <https://w3id.org/aief/requiresEvidence> "IRB/ethics approval or peer review" .
 <https://w3id.org/aief/ACM015> <https://w3id.org/aief/sectionReference> "NeurIPS Human Subjects" .
 <https://w3id.org/aief/ACM015> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM015> <https://w3id.org/aief/requiresEvidence> "IRB/ethics approval or peer review" .
 # 
 # https://w3id.org/aief/ACM016
 <https://w3id.org/aief/ACM016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1479,9 +1484,9 @@
 <https://w3id.org/aief/ACM016> <https://w3id.org/aief/noteText> "Charter Mapping: Art 7 Private life; Art 8 Data protection" .
 <https://w3id.org/aief/ACM016> <https://w3id.org/aief/requirementID> "ACM016" .
 <https://w3id.org/aief/ACM016> <https://w3id.org/aief/requirementText> "Datasets should minimise exposure of personally identifiable information unless informed consent is provided" .
+<https://w3id.org/aief/ACM016> <https://w3id.org/aief/requiresEvidence> "Data anonymisation documentation" .
 <https://w3id.org/aief/ACM016> <https://w3id.org/aief/sectionReference> "NeurIPS Privacy" .
 <https://w3id.org/aief/ACM016> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM016> <https://w3id.org/aief/requiresEvidence> "Data anonymisation documentation" .
 # 
 # https://w3id.org/aief/ACM017
 <https://w3id.org/aief/ACM017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1498,9 +1503,9 @@
 <https://w3id.org/aief/ACM017> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 <https://w3id.org/aief/ACM017> <https://w3id.org/aief/requirementID> "ACM017" .
 <https://w3id.org/aief/ACM017> <https://w3id.org/aief/requirementText> "Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained" .
+<https://w3id.org/aief/ACM017> <https://w3id.org/aief/requiresEvidence> "Consent documentation" .
 <https://w3id.org/aief/ACM017> <https://w3id.org/aief/sectionReference> "NeurIPS Consent" .
 <https://w3id.org/aief/ACM017> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM017> <https://w3id.org/aief/requiresEvidence> "Consent documentation" .
 # 
 # https://w3id.org/aief/ACM018
 <https://w3id.org/aief/ACM018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1516,9 +1521,9 @@
 <https://w3id.org/aief/ACM018> <https://w3id.org/aief/legalBasis> "NeurIPS Code of Ethics" .
 <https://w3id.org/aief/ACM018> <https://w3id.org/aief/requirementID> "ACM018" .
 <https://w3id.org/aief/ACM018> <https://w3id.org/aief/requirementText> "Authors must confirm datasets are still available for use — deprecated datasets should not be used except for audit or critical assessment" .
+<https://w3id.org/aief/ACM018> <https://w3id.org/aief/requiresEvidence> "Dataset status verification" .
 <https://w3id.org/aief/ACM018> <https://w3id.org/aief/sectionReference> "NeurIPS Deprecated Data" .
 <https://w3id.org/aief/ACM018> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM018> <https://w3id.org/aief/requiresEvidence> "Dataset status verification" .
 # 
 # https://w3id.org/aief/ACM019
 <https://w3id.org/aief/ACM019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1536,9 +1541,9 @@
 <https://w3id.org/aief/ACM019> <https://w3id.org/aief/noteText> "Charter Mapping: Art 17 Right to property" .
 <https://w3id.org/aief/ACM019> <https://w3id.org/aief/requirementID> "ACM019" .
 <https://w3id.org/aief/ACM019> <https://w3id.org/aief/requirementText> "Respect terms of datasets with defined licences (CC 4.0, MIT etc)" .
+<https://w3id.org/aief/ACM019> <https://w3id.org/aief/requiresEvidence> "Licence compliance" .
 <https://w3id.org/aief/ACM019> <https://w3id.org/aief/sectionReference> "NeurIPS Copyright" .
 <https://w3id.org/aief/ACM019> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM019> <https://w3id.org/aief/requiresEvidence> "Licence compliance" .
 # 
 # https://w3id.org/aief/ACM020
 <https://w3id.org/aief/ACM020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1562,9 +1567,9 @@
 <https://w3id.org/aief/ACM020> <https://w3id.org/aief/noteText> "Charter Mapping: Art 21 Non-discrimination" .
 <https://w3id.org/aief/ACM020> <https://w3id.org/aief/requirementID> "ACM020" .
 <https://w3id.org/aief/ACM020> <https://w3id.org/aief/requirementText> "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated" .
+<https://w3id.org/aief/ACM020> <https://w3id.org/aief/requiresEvidence> "Representativeness statement" .
 <https://w3id.org/aief/ACM020> <https://w3id.org/aief/sectionReference> "NeurIPS Representation" .
 <https://w3id.org/aief/ACM020> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM020> <https://w3id.org/aief/requiresEvidence> "Representativeness statement" .
 # 
 # https://w3id.org/aief/ACM021
 <https://w3id.org/aief/ACM021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1582,9 +1587,9 @@
 <https://w3id.org/aief/ACM021> <https://w3id.org/aief/noteText> "No weapons research accepted" .
 <https://w3id.org/aief/ACM021> <https://w3id.org/aief/requirementID> "ACM021" .
 <https://w3id.org/aief/ACM021> <https://w3id.org/aief/requirementText> "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse" .
+<https://w3id.org/aief/ACM021> <https://w3id.org/aief/requiresEvidence> "Safety assessment" .
 <https://w3id.org/aief/ACM021> <https://w3id.org/aief/sectionReference> "NeurIPS Safety" .
 <https://w3id.org/aief/ACM021> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM021> <https://w3id.org/aief/requiresEvidence> "Safety assessment" .
 # 
 # https://w3id.org/aief/ACM022
 <https://w3id.org/aief/ACM022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1600,9 +1605,9 @@
 <https://w3id.org/aief/ACM022> <https://w3id.org/aief/legalBasis> "NeurIPS Code of Ethics" .
 <https://w3id.org/aief/ACM022> <https://w3id.org/aief/requirementID> "ACM022" .
 <https://w3id.org/aief/ACM022> <https://w3id.org/aief/requirementText> "Consider risk that applications could open security vulnerabilities or cause serious accidents — recommend or implement protections" .
+<https://w3id.org/aief/ACM022> <https://w3id.org/aief/requiresEvidence> "Security risk assessment" .
 <https://w3id.org/aief/ACM022> <https://w3id.org/aief/sectionReference> "NeurIPS Security" .
 <https://w3id.org/aief/ACM022> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM022> <https://w3id.org/aief/requiresEvidence> "Security risk assessment" .
 # 
 # https://w3id.org/aief/ACM023
 <https://w3id.org/aief/ACM023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1629,9 +1634,9 @@
 <https://w3id.org/aief/ACM023> <https://w3id.org/aief/noteText> "Charter Mapping: Art 21 Non-discrimination; Art 35 Health care" .
 <https://w3id.org/aief/ACM023> <https://w3id.org/aief/requirementID> "ACM023" .
 <https://w3id.org/aief/ACM023> <https://w3id.org/aief/requirementText> "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access" .
+<https://w3id.org/aief/ACM023> <https://w3id.org/aief/requiresEvidence> "Discrimination impact assessment" .
 <https://w3id.org/aief/ACM023> <https://w3id.org/aief/sectionReference> "NeurIPS Discrimination" .
 <https://w3id.org/aief/ACM023> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM023> <https://w3id.org/aief/requiresEvidence> "Discrimination impact assessment" .
 # 
 # https://w3id.org/aief/ACM024
 <https://w3id.org/aief/ACM024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1655,9 +1660,9 @@
 <https://w3id.org/aief/ACM024> <https://w3id.org/aief/noteText> "Charter Mapping: Art 7 Private life; Art 8 Data protection" .
 <https://w3id.org/aief/ACM024> <https://w3id.org/aief/requirementID> "ACM024" .
 <https://w3id.org/aief/ACM024> <https://w3id.org/aief/requirementText> "Consult local laws before collecting or analysing bulk surveillance data — surveillance must not predict protected categories or endanger individual well-being" .
+<https://w3id.org/aief/ACM024> <https://w3id.org/aief/requiresEvidence> "Legal compliance check" .
 <https://w3id.org/aief/ACM024> <https://w3id.org/aief/sectionReference> "NeurIPS Surveillance" .
 <https://w3id.org/aief/ACM024> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM024> <https://w3id.org/aief/requiresEvidence> "Legal compliance check" .
 # 
 # https://w3id.org/aief/ACM025
 <https://w3id.org/aief/ACM025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1685,9 +1690,9 @@
 <https://w3id.org/aief/ACM025> <https://w3id.org/aief/noteText> "Charter Mapping: Art 1 Human dignity; Art 11 Freedom of expression" .
 <https://w3id.org/aief/ACM025> <https://w3id.org/aief/requirementID> "ACM025" .
 <https://w3id.org/aief/ACM025> <https://w3id.org/aief/requirementText> "Communicate whether approach could facilitate deceptive interactions causing harm (theft, fraud, harassment), impersonate public figures, influence political processes, or promote hate speech" .
+<https://w3id.org/aief/ACM025> <https://w3id.org/aief/requiresEvidence> "Misuse risk statement" .
 <https://w3id.org/aief/ACM025> <https://w3id.org/aief/sectionReference> "NeurIPS Deception" .
 <https://w3id.org/aief/ACM025> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM025> <https://w3id.org/aief/requiresEvidence> "Misuse risk statement" .
 # 
 # https://w3id.org/aief/ACM026
 <https://w3id.org/aief/ACM026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1703,9 +1708,9 @@
 <https://w3id.org/aief/ACM026> <https://w3id.org/aief/noteText> "Charter Mapping: Art 37 Environmental protection" .
 <https://w3id.org/aief/ACM026> <https://w3id.org/aief/requirementID> "ACM026" .
 <https://w3id.org/aief/ACM026> <https://w3id.org/aief/requirementText> "Consider whether research negatively impacts environment — fossil fuel extraction, consumption, greenhouse gas production" .
+<https://w3id.org/aief/ACM026> <https://w3id.org/aief/requiresEvidence> "Environmental impact statement" .
 <https://w3id.org/aief/ACM026> <https://w3id.org/aief/sectionReference> "NeurIPS Environment" .
 <https://w3id.org/aief/ACM026> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM026> <https://w3id.org/aief/requiresEvidence> "Environmental impact statement" .
 # 
 # https://w3id.org/aief/ACM027
 <https://w3id.org/aief/ACM027> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1734,9 +1739,9 @@
 <https://w3id.org/aief/ACM027> <https://w3id.org/aief/noteText> "Charter Mapping: Art 1-50 (multiple)" .
 <https://w3id.org/aief/ACM027> <https://w3id.org/aief/requirementID> "ACM027" .
 <https://w3id.org/aief/ACM027> <https://w3id.org/aief/requirementText> "Research must not build upon or facilitate illegal activity — strongly discourage work that denies rights to privacy, speech, health, liberty, security, legal personhood, freedom of conscience/religion" .
+<https://w3id.org/aief/ACM027> <https://w3id.org/aief/requiresEvidence> "Human rights compliance" .
 <https://w3id.org/aief/ACM027> <https://w3id.org/aief/sectionReference> "NeurIPS Human Rights" .
 <https://w3id.org/aief/ACM027> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM027> <https://w3id.org/aief/requiresEvidence> "Human rights compliance" .
 # 
 # https://w3id.org/aief/ACM028
 <https://w3id.org/aief/ACM028> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1759,9 +1764,9 @@
 <https://w3id.org/aief/ACM028> <https://w3id.org/aief/noteText> "Charter Mapping: Art 21 Non-discrimination; Art 23 Equality" .
 <https://w3id.org/aief/ACM028> <https://w3id.org/aief/requirementID> "ACM028" .
 <https://w3id.org/aief/ACM028> <https://w3id.org/aief/requirementText> "Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics" .
+<https://w3id.org/aief/ACM028> <https://w3id.org/aief/requiresEvidence> "Bias audit" .
 <https://w3id.org/aief/ACM028> <https://w3id.org/aief/sectionReference> "NeurIPS Bias" .
 <https://w3id.org/aief/ACM028> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM028> <https://w3id.org/aief/requiresEvidence> "Bias audit" .
 # 
 # https://w3id.org/aief/ACM029
 <https://w3id.org/aief/ACM029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1777,9 +1782,9 @@
 <https://w3id.org/aief/ACM029> <https://w3id.org/aief/legalBasis> "NeurIPS Code of Ethics" .
 <https://w3id.org/aief/ACM029> <https://w3id.org/aief/requirementID> "ACM029" .
 <https://w3id.org/aief/ACM029> <https://w3id.org/aief/requirementText> "Provide data and model documentation via structured templates (Model Cards, Datasheets for Datasets)" .
+<https://w3id.org/aief/ACM029> <https://w3id.org/aief/requiresEvidence> "Model Card / Datasheet" .
 <https://w3id.org/aief/ACM029> <https://w3id.org/aief/sectionReference> "NeurIPS Mitigation" .
 <https://w3id.org/aief/ACM029> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM029> <https://w3id.org/aief/requiresEvidence> "Model Card / Datasheet" .
 # 
 # https://w3id.org/aief/ACM030
 <https://w3id.org/aief/ACM030> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1793,9 +1798,9 @@
 <https://w3id.org/aief/ACM030> <https://w3id.org/aief/legalBasis> "NeurIPS Code of Ethics" .
 <https://w3id.org/aief/ACM030> <https://w3id.org/aief/requirementID> "ACM030" .
 <https://w3id.org/aief/ACM030> <https://w3id.org/aief/requirementText> "Provide licences for released data or models including intended use and limitations" .
+<https://w3id.org/aief/ACM030> <https://w3id.org/aief/requiresEvidence> "Licence document" .
 <https://w3id.org/aief/ACM030> <https://w3id.org/aief/sectionReference> "NeurIPS Mitigation" .
 <https://w3id.org/aief/ACM030> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM030> <https://w3id.org/aief/requiresEvidence> "Licence document" .
 # 
 # https://w3id.org/aief/ACM031
 <https://w3id.org/aief/ACM031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1813,9 +1818,9 @@
 <https://w3id.org/aief/ACM031> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 <https://w3id.org/aief/ACM031> <https://w3id.org/aief/requirementID> "ACM031" .
 <https://w3id.org/aief/ACM031> <https://w3id.org/aief/requirementText> "Use privacy protocols, encryption and anonymisation to reduce risk of data leakage — stronger measures for sensitive data" .
+<https://w3id.org/aief/ACM031> <https://w3id.org/aief/requiresEvidence> "Security documentation" .
 <https://w3id.org/aief/ACM031> <https://w3id.org/aief/sectionReference> "NeurIPS Mitigation" .
 <https://w3id.org/aief/ACM031> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM031> <https://w3id.org/aief/requiresEvidence> "Security documentation" .
 # 
 # https://w3id.org/aief/ACM032
 <https://w3id.org/aief/ACM032> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1831,9 +1836,9 @@
 <https://w3id.org/aief/ACM032> <https://w3id.org/aief/legalBasis> "NeurIPS Code of Ethics" .
 <https://w3id.org/aief/ACM032> <https://w3id.org/aief/requirementID> "ACM032" .
 <https://w3id.org/aief/ACM032> <https://w3id.org/aief/requirementText> "High-risk models must be released with safeguards for controlled use (e.g. code of conduct for access)" .
+<https://w3id.org/aief/ACM032> <https://w3id.org/aief/requiresEvidence> "Release policy" .
 <https://w3id.org/aief/ACM032> <https://w3id.org/aief/sectionReference> "NeurIPS Mitigation" .
 <https://w3id.org/aief/ACM032> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM032> <https://w3id.org/aief/requiresEvidence> "Release policy" .
 # 
 # https://w3id.org/aief/ACM033
 <https://w3id.org/aief/ACM033> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1847,9 +1852,9 @@
 <https://w3id.org/aief/ACM033> <https://w3id.org/aief/legalBasis> "NeurIPS Code of Ethics" .
 <https://w3id.org/aief/ACM033> <https://w3id.org/aief/requirementID> "ACM033" .
 <https://w3id.org/aief/ACM033> <https://w3id.org/aief/requirementText> "Make accessible all information required to understand research artefacts (code, environment, weights, hyperparameters) to enable external scrutiny" .
+<https://w3id.org/aief/ACM033> <https://w3id.org/aief/requiresEvidence> "Reproducibility package" .
 <https://w3id.org/aief/ACM033> <https://w3id.org/aief/sectionReference> "NeurIPS Mitigation" .
 <https://w3id.org/aief/ACM033> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM033> <https://w3id.org/aief/requiresEvidence> "Reproducibility package" .
 # 
 # https://w3id.org/aief/ACM034
 <https://w3id.org/aief/ACM034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1868,9 +1873,9 @@
 <https://w3id.org/aief/ACM034> <https://w3id.org/aief/legalBasis> "NeurIPS Code of Ethics" .
 <https://w3id.org/aief/ACM034> <https://w3id.org/aief/requirementID> "ACM034" .
 <https://w3id.org/aief/ACM034> <https://w3id.org/aief/requirementText> "Disclose information sufficient for reproduction of results" .
+<https://w3id.org/aief/ACM034> <https://w3id.org/aief/requiresEvidence> "Reproducibility statement" .
 <https://w3id.org/aief/ACM034> <https://w3id.org/aief/sectionReference> "NeurIPS Mitigation" .
 <https://w3id.org/aief/ACM034> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM034> <https://w3id.org/aief/requiresEvidence> "Reproducibility statement" .
 # 
 # https://w3id.org/aief/ACM035
 <https://w3id.org/aief/ACM035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1887,9 +1892,9 @@
 <https://w3id.org/aief/ACM035> <https://w3id.org/aief/legalBasis> "NeurIPS Code of Ethics" .
 <https://w3id.org/aief/ACM035> <https://w3id.org/aief/requirementID> "ACM035" .
 <https://w3id.org/aief/ACM035> <https://w3id.org/aief/requirementText> "Ensure adequate awareness of regional legal requirements — additional justification required where compliance could not be met due to human rights issues" .
+<https://w3id.org/aief/ACM035> <https://w3id.org/aief/requiresEvidence> "Legal compliance statement" .
 <https://w3id.org/aief/ACM035> <https://w3id.org/aief/sectionReference> "NeurIPS Mitigation" .
 <https://w3id.org/aief/ACM035> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/ACM035> <https://w3id.org/aief/requiresEvidence> "Legal compliance statement" .
 # 
 # https://w3id.org/aief/ACM036
 <https://w3id.org/aief/ACM036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1976,9 +1981,9 @@
 <https://w3id.org/aief/AI001> <https://w3id.org/aief/noteText> "Charter Mapping: All Charter rights potentially" .
 <https://w3id.org/aief/AI001> <https://w3id.org/aief/requirementID> "AI001" .
 <https://w3id.org/aief/AI001> <https://w3id.org/aief/requirementText> "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)" .
+<https://w3id.org/aief/AI001> <https://w3id.org/aief/requiresEvidence> "Necessity determination document" .
 <https://w3id.org/aief/AI001> <https://w3id.org/aief/sectionReference> "Art 27-1" .
 <https://w3id.org/aief/AI001> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI001> <https://w3id.org/aief/requiresEvidence> "Necessity determination document" .
 # 
 # https://w3id.org/aief/AI002
 <https://w3id.org/aief/AI002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1995,9 +2000,9 @@
 <https://w3id.org/aief/AI002> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1" .
 <https://w3id.org/aief/AI002> <https://w3id.org/aief/requirementID> "AI002" .
 <https://w3id.org/aief/AI002> <https://w3id.org/aief/requirementText> "Record necessity status: FRIA Required or FRIA Not Required" .
+<https://w3id.org/aief/AI002> <https://w3id.org/aief/requiresEvidence> "Written determination" .
 <https://w3id.org/aief/AI002> <https://w3id.org/aief/sectionReference> "Art 27-1" .
 <https://w3id.org/aief/AI002> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI002> <https://w3id.org/aief/requiresEvidence> "Written determination" .
 # 
 # https://w3id.org/aief/AI003
 <https://w3id.org/aief/AI003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2013,9 +2018,9 @@
 <https://w3id.org/aief/AI003> <https://w3id.org/aief/legalBasis> "AI Act Art 27-2" .
 <https://w3id.org/aief/AI003> <https://w3id.org/aief/requirementID> "AI003" .
 <https://w3id.org/aief/AI003> <https://w3id.org/aief/requirementText> "Record when FRIA was created, modified, submitted, accepted" .
+<https://w3id.org/aief/AI003> <https://w3id.org/aief/requiresEvidence> "Dated documentation" .
 <https://w3id.org/aief/AI003> <https://w3id.org/aief/sectionReference> "Art 27-2" .
 <https://w3id.org/aief/AI003> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI003> <https://w3id.org/aief/requiresEvidence> "Dated documentation" .
 # 
 # https://w3id.org/aief/AI004
 <https://w3id.org/aief/AI004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2031,9 +2036,9 @@
 <https://w3id.org/aief/AI004> <https://w3id.org/aief/legalBasis> "AI Act Art 27-2" .
 <https://w3id.org/aief/AI004> <https://w3id.org/aief/requirementID> "AI004" .
 <https://w3id.org/aief/AI004> <https://w3id.org/aief/requirementText> "Record who conducted the FRIA (organisation, personnel, contributors)" .
+<https://w3id.org/aief/AI004> <https://w3id.org/aief/requiresEvidence> "Named roles" .
 <https://w3id.org/aief/AI004> <https://w3id.org/aief/sectionReference> "Art 27-2" .
 <https://w3id.org/aief/AI004> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI004> <https://w3id.org/aief/requiresEvidence> "Named roles" .
 # 
 # https://w3id.org/aief/AI005
 <https://w3id.org/aief/AI005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2049,9 +2054,9 @@
 <https://w3id.org/aief/AI005> <https://w3id.org/aief/legalBasis> "AI Act Art 27-2" .
 <https://w3id.org/aief/AI005> <https://w3id.org/aief/requirementID> "AI005" .
 <https://w3id.org/aief/AI005> <https://w3id.org/aief/requirementText> "Record identifier/version of FRIA — must be regularly updated" .
+<https://w3id.org/aief/AI005> <https://w3id.org/aief/requiresEvidence> "Version tracking" .
 <https://w3id.org/aief/AI005> <https://w3id.org/aief/sectionReference> "Art 27-2" .
 <https://w3id.org/aief/AI005> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI005> <https://w3id.org/aief/requiresEvidence> "Version tracking" .
 # 
 # https://w3id.org/aief/AI006
 <https://w3id.org/aief/AI006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2067,9 +2072,9 @@
 <https://w3id.org/aief/AI006> <https://w3id.org/aief/legalBasis> "AI Act Art 27-2" .
 <https://w3id.org/aief/AI006> <https://w3id.org/aief/requirementID> "AI006" .
 <https://w3id.org/aief/AI006> <https://w3id.org/aief/requirementText> "Record conformance to any codes of conduct" .
+<https://w3id.org/aief/AI006> <https://w3id.org/aief/requiresEvidence> "Code of conduct reference" .
 <https://w3id.org/aief/AI006> <https://w3id.org/aief/sectionReference> "Art 27-2" .
 <https://w3id.org/aief/AI006> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI006> <https://w3id.org/aief/requiresEvidence> "Code of conduct reference" .
 # 
 # https://w3id.org/aief/AI007
 <https://w3id.org/aief/AI007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2085,9 +2090,9 @@
 <https://w3id.org/aief/AI007> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1a" .
 <https://w3id.org/aief/AI007> <https://w3id.org/aief/requirementID> "AI007" .
 <https://w3id.org/aief/AI007> <https://w3id.org/aief/requirementText> "Describe deployer's processes in which the AI system will be used" .
+<https://w3id.org/aief/AI007> <https://w3id.org/aief/requiresEvidence> "Process description" .
 <https://w3id.org/aief/AI007> <https://w3id.org/aief/sectionReference> "Art 27-1a" .
 <https://w3id.org/aief/AI007> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI007> <https://w3id.org/aief/requiresEvidence> "Process description" .
 # 
 # https://w3id.org/aief/AI008
 <https://w3id.org/aief/AI008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2108,9 +2113,9 @@
 <https://w3id.org/aief/AI008> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1a" .
 <https://w3id.org/aief/AI008> <https://w3id.org/aief/requirementID> "AI008" .
 <https://w3id.org/aief/AI008> <https://w3id.org/aief/requirementText> "State the intended purpose of the AI system" .
+<https://w3id.org/aief/AI008> <https://w3id.org/aief/requiresEvidence> "Purpose statement" .
 <https://w3id.org/aief/AI008> <https://w3id.org/aief/sectionReference> "Art 27-1a" .
 <https://w3id.org/aief/AI008> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI008> <https://w3id.org/aief/requiresEvidence> "Purpose statement" .
 # 
 # https://w3id.org/aief/AI009
 <https://w3id.org/aief/AI009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2126,9 +2131,9 @@
 <https://w3id.org/aief/AI009> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1b" .
 <https://w3id.org/aief/AI009> <https://w3id.org/aief/requirementID> "AI009" .
 <https://w3id.org/aief/AI009> <https://w3id.org/aief/requirementText> "Specify the period of time and frequency the AI system is intended to be used" .
+<https://w3id.org/aief/AI009> <https://w3id.org/aief/requiresEvidence> "Duration/frequency declaration" .
 <https://w3id.org/aief/AI009> <https://w3id.org/aief/sectionReference> "Art 27-1b" .
 <https://w3id.org/aief/AI009> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI009> <https://w3id.org/aief/requiresEvidence> "Duration/frequency declaration" .
 # 
 # https://w3id.org/aief/AI010
 <https://w3id.org/aief/AI010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2145,9 +2150,9 @@
 <https://w3id.org/aief/AI010> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1b" .
 <https://w3id.org/aief/AI010> <https://w3id.org/aief/requirementID> "AI010" .
 <https://w3id.org/aief/AI010> <https://w3id.org/aief/requirementText> "Describe the intended use — specific deployment scenarios distinct from intended purpose" .
+<https://w3id.org/aief/AI010> <https://w3id.org/aief/requiresEvidence> "Use-case descriptions" .
 <https://w3id.org/aief/AI010> <https://w3id.org/aief/sectionReference> "Art 27-1b" .
 <https://w3id.org/aief/AI010> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI010> <https://w3id.org/aief/requiresEvidence> "Use-case descriptions" .
 # 
 # https://w3id.org/aief/AI011
 <https://w3id.org/aief/AI011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2172,9 +2177,9 @@
 <https://w3id.org/aief/AI011> <https://w3id.org/aief/noteText> "Charter Mapping: Art 21 Non-discrimination; Art 24 Rights of child" .
 <https://w3id.org/aief/AI011> <https://w3id.org/aief/requirementID> "AI011" .
 <https://w3id.org/aief/AI011> <https://w3id.org/aief/requirementText> "Identify categories of natural persons and groups likely to be affected by the AI system in the specific context" .
+<https://w3id.org/aief/AI011> <https://w3id.org/aief/requiresEvidence> "Affected population description" .
 <https://w3id.org/aief/AI011> <https://w3id.org/aief/sectionReference> "Art 27-1c" .
 <https://w3id.org/aief/AI011> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI011> <https://w3id.org/aief/requiresEvidence> "Affected population description" .
 # 
 # https://w3id.org/aief/AI012
 <https://w3id.org/aief/AI012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2192,9 +2197,9 @@
 <https://w3id.org/aief/AI012> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1c" .
 <https://w3id.org/aief/AI012> <https://w3id.org/aief/requirementID> "AI012" .
 <https://w3id.org/aief/AI012> <https://w3id.org/aief/requirementText> "Assess the likelihood that those persons/groups will be affected" .
+<https://w3id.org/aief/AI012> <https://w3id.org/aief/requiresEvidence> "Likelihood assessment" .
 <https://w3id.org/aief/AI012> <https://w3id.org/aief/sectionReference> "Art 27-1c" .
 <https://w3id.org/aief/AI012> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI012> <https://w3id.org/aief/requiresEvidence> "Likelihood assessment" .
 # 
 # https://w3id.org/aief/AI013
 <https://w3id.org/aief/AI013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2212,9 +2217,9 @@
 <https://w3id.org/aief/AI013> <https://w3id.org/aief/noteText> "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" .
 <https://w3id.org/aief/AI013> <https://w3id.org/aief/requirementID> "AI013" .
 <https://w3id.org/aief/AI013> <https://w3id.org/aief/requirementText> "Identify consequences and impacts on affected persons/groups" .
+<https://w3id.org/aief/AI013> <https://w3id.org/aief/requiresEvidence> "Impact description" .
 <https://w3id.org/aief/AI013> <https://w3id.org/aief/sectionReference> "Art 27-1c" .
 <https://w3id.org/aief/AI013> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI013> <https://w3id.org/aief/requiresEvidence> "Impact description" .
 # 
 # https://w3id.org/aief/AI014
 <https://w3id.org/aief/AI014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2230,9 +2235,9 @@
 <https://w3id.org/aief/AI014> <https://w3id.org/aief/noteText> "Charter Mapping: Map each risk to specific Charter article" .
 <https://w3id.org/aief/AI014> <https://w3id.org/aief/requirementID> "AI014" .
 <https://w3id.org/aief/AI014> <https://w3id.org/aief/requirementText> "Identify specific risks of harm to fundamental rights" .
+<https://w3id.org/aief/AI014> <https://w3id.org/aief/requiresEvidence> "Risk register" .
 <https://w3id.org/aief/AI014> <https://w3id.org/aief/sectionReference> "Art 27-1d" .
 <https://w3id.org/aief/AI014> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI014> <https://w3id.org/aief/requiresEvidence> "Risk register" .
 # 
 # https://w3id.org/aief/AI015
 <https://w3id.org/aief/AI015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2249,9 +2254,9 @@
 <https://w3id.org/aief/AI015> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1e" .
 <https://w3id.org/aief/AI015> <https://w3id.org/aief/requirementID> "AI015" .
 <https://w3id.org/aief/AI015> <https://w3id.org/aief/requirementText> "Describe human oversight measures in place" .
+<https://w3id.org/aief/AI015> <https://w3id.org/aief/requiresEvidence> "Oversight documentation" .
 <https://w3id.org/aief/AI015> <https://w3id.org/aief/sectionReference> "Art 27-1e" .
 <https://w3id.org/aief/AI015> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI015> <https://w3id.org/aief/requiresEvidence> "Oversight documentation" .
 # 
 # https://w3id.org/aief/AI016
 <https://w3id.org/aief/AI016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2277,9 +2282,9 @@
 <https://w3id.org/aief/AI016> <https://w3id.org/aief/noteText> "Charter Mapping: Art 47 Right to effective remedy" .
 <https://w3id.org/aief/AI016> <https://w3id.org/aief/requirementID> "AI016" .
 <https://w3id.org/aief/AI016> <https://w3id.org/aief/requirementText> "Specify what humans can and cannot do — ability to correct outputs, ability to opt out, override capability" .
+<https://w3id.org/aief/AI016> <https://w3id.org/aief/requiresEvidence> "Permissions/restrictions list" .
 <https://w3id.org/aief/AI016> <https://w3id.org/aief/sectionReference> "Art 27-1e" .
 <https://w3id.org/aief/AI016> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI016> <https://w3id.org/aief/requiresEvidence> "Permissions/restrictions list" .
 # 
 # https://w3id.org/aief/AI017
 <https://w3id.org/aief/AI017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2299,9 +2304,9 @@
 <https://w3id.org/aief/AI017> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1e" .
 <https://w3id.org/aief/AI017> <https://w3id.org/aief/requirementID> "AI017" .
 <https://w3id.org/aief/AI017> <https://w3id.org/aief/requirementText> "Reference instructions for use provided by the AI system provider" .
+<https://w3id.org/aief/AI017> <https://w3id.org/aief/requiresEvidence> "Provider documentation" .
 <https://w3id.org/aief/AI017> <https://w3id.org/aief/sectionReference> "Art 27-1e" .
 <https://w3id.org/aief/AI017> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI017> <https://w3id.org/aief/requiresEvidence> "Provider documentation" .
 # 
 # https://w3id.org/aief/AI018
 <https://w3id.org/aief/AI018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2318,9 +2323,9 @@
 <https://w3id.org/aief/AI018> <https://w3id.org/aief/noteText> "Charter Mapping: Art 47 Right to effective remedy" .
 <https://w3id.org/aief/AI018> <https://w3id.org/aief/requirementID> "AI018" .
 <https://w3id.org/aief/AI018> <https://w3id.org/aief/requirementText> "Specify measures to be taken if risks materialise — internal governance arrangements and complaint mechanisms" .
+<https://w3id.org/aief/AI018> <https://w3id.org/aief/requiresEvidence> "Mitigation plan + incident procedures" .
 <https://w3id.org/aief/AI018> <https://w3id.org/aief/sectionReference> "Art 27-1f" .
 <https://w3id.org/aief/AI018> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI018> <https://w3id.org/aief/requiresEvidence> "Mitigation plan + incident procedures" .
 # 
 # https://w3id.org/aief/AI019
 <https://w3id.org/aief/AI019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2336,9 +2341,9 @@
 <https://w3id.org/aief/AI019> <https://w3id.org/aief/legalBasis> "AI Act Art 27-2" .
 <https://w3id.org/aief/AI019> <https://w3id.org/aief/requirementID> "AI019" .
 <https://w3id.org/aief/AI019> <https://w3id.org/aief/requirementText> "If relying on a previously conducted FRIA, document which prior FRIA is being reused and what has changed" .
+<https://w3id.org/aief/AI019> <https://w3id.org/aief/requiresEvidence> "Prior FRIA reference" .
 <https://w3id.org/aief/AI019> <https://w3id.org/aief/sectionReference> "Art 27-2" .
 <https://w3id.org/aief/AI019> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI019> <https://w3id.org/aief/requiresEvidence> "Prior FRIA reference" .
 # 
 # https://w3id.org/aief/AI020
 <https://w3id.org/aief/AI020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2356,9 +2361,9 @@
 <https://w3id.org/aief/AI020> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 <https://w3id.org/aief/AI020> <https://w3id.org/aief/requirementID> "AI020" .
 <https://w3id.org/aief/AI020> <https://w3id.org/aief/requirementText> "If a DPIA already exists under GDPR, document how it complements the FRIA — what it covers and what gaps remain" .
+<https://w3id.org/aief/AI020> <https://w3id.org/aief/requiresEvidence> "DPIA cross-reference" .
 <https://w3id.org/aief/AI020> <https://w3id.org/aief/sectionReference> "Art 27-4" .
 <https://w3id.org/aief/AI020> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI020> <https://w3id.org/aief/requiresEvidence> "DPIA cross-reference" .
 # 
 # https://w3id.org/aief/AI021
 <https://w3id.org/aief/AI021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2380,9 +2385,9 @@
 <https://w3id.org/aief/AI021> <https://w3id.org/aief/legalBasis> "AI Act Art 27-1" .
 <https://w3id.org/aief/AI021> <https://w3id.org/aief/requirementID> "AI021" .
 <https://w3id.org/aief/AI021> <https://w3id.org/aief/requirementText> "Determine FRIA outcome status: Unacceptable Risk / High Residual Risk / Risks Acceptable / Risks Mitigated" .
+<https://w3id.org/aief/AI021> <https://w3id.org/aief/requiresEvidence> "Outcome determination" .
 <https://w3id.org/aief/AI021> <https://w3id.org/aief/sectionReference> "Art 27-1" .
 <https://w3id.org/aief/AI021> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI021> <https://w3id.org/aief/requiresEvidence> "Outcome determination" .
 # 
 # https://w3id.org/aief/AI022
 <https://w3id.org/aief/AI022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2403,9 +2408,9 @@
 <https://w3id.org/aief/AI022> <https://w3id.org/aief/noteText> "Charter Mapping: Each Charter article individually" .
 <https://w3id.org/aief/AI022> <https://w3id.org/aief/requirementID> "AI022" .
 <https://w3id.org/aief/AI022> <https://w3id.org/aief/requirementText> "For each affected fundamental right, state whether there is an impact and its severity" .
+<https://w3id.org/aief/AI022> <https://w3id.org/aief/requiresEvidence> "Rights impact matrix" .
 <https://w3id.org/aief/AI022> <https://w3id.org/aief/sectionReference> "Art 27-1" .
 <https://w3id.org/aief/AI022> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI022> <https://w3id.org/aief/requiresEvidence> "Rights impact matrix" .
 # 
 # https://w3id.org/aief/AI023
 <https://w3id.org/aief/AI023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2424,9 +2429,9 @@
 <https://w3id.org/aief/AI023> <https://w3id.org/aief/noteText> "Charter Mapping: Art 21 subcategories" .
 <https://w3id.org/aief/AI023> <https://w3id.org/aief/requirementID> "AI023" .
 <https://w3id.org/aief/AI023> <https://w3id.org/aief/requirementText> "For granular impacts (e.g. discrimination based on sex, race, gender under Art 21), specify the category of impact" .
+<https://w3id.org/aief/AI023> <https://w3id.org/aief/requiresEvidence> "Granular impact detail" .
 <https://w3id.org/aief/AI023> <https://w3id.org/aief/sectionReference> "Art 27-1" .
 <https://w3id.org/aief/AI023> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI023> <https://w3id.org/aief/requiresEvidence> "Granular impact detail" .
 # 
 # https://w3id.org/aief/AI024
 <https://w3id.org/aief/AI024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2446,9 +2451,9 @@
 <https://w3id.org/aief/AI024> <https://w3id.org/aief/legalBasis> "AI Act Art 27-3" .
 <https://w3id.org/aief/AI024> <https://w3id.org/aief/requirementID> "AI024" .
 <https://w3id.org/aief/AI024> <https://w3id.org/aief/requirementText> "Assess whether notification to market surveillance authority is required or exempt under Art 46-1" .
+<https://w3id.org/aief/AI024> <https://w3id.org/aief/requiresEvidence> "Notification status determination" .
 <https://w3id.org/aief/AI024> <https://w3id.org/aief/sectionReference> "Art 27-3" .
 <https://w3id.org/aief/AI024> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI024> <https://w3id.org/aief/requiresEvidence> "Notification status determination" .
 # 
 # https://w3id.org/aief/AI025
 <https://w3id.org/aief/AI025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2468,9 +2473,9 @@
 <https://w3id.org/aief/AI025> <https://w3id.org/aief/legalBasis> "AI Act Art 27-3" .
 <https://w3id.org/aief/AI025> <https://w3id.org/aief/requirementID> "AI025" .
 <https://w3id.org/aief/AI025> <https://w3id.org/aief/requirementText> "If required: notify market surveillance authority of FRIA results" .
+<https://w3id.org/aief/AI025> <https://w3id.org/aief/requiresEvidence> "Notification record / proof of submission" .
 <https://w3id.org/aief/AI025> <https://w3id.org/aief/sectionReference> "Art 27-3" .
 <https://w3id.org/aief/AI025> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI025> <https://w3id.org/aief/requiresEvidence> "Notification record / proof of submission" .
 # 
 # https://w3id.org/aief/AI026
 <https://w3id.org/aief/AI026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2487,9 +2492,9 @@
 <https://w3id.org/aief/AI026> <https://w3id.org/aief/legalBasis> "AI Act Art 27-5" .
 <https://w3id.org/aief/AI026> <https://w3id.org/aief/requirementID> "AI026" .
 <https://w3id.org/aief/AI026> <https://w3id.org/aief/requirementText> "Complete the FRIA questionnaire template provided by the AI Office" .
+<https://w3id.org/aief/AI026> <https://w3id.org/aief/requiresEvidence> "Completed questionnaire" .
 <https://w3id.org/aief/AI026> <https://w3id.org/aief/sectionReference> "Art 27-5" .
 <https://w3id.org/aief/AI026> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI026> <https://w3id.org/aief/requiresEvidence> "Completed questionnaire" .
 # 
 # https://w3id.org/aief/AI027
 <https://w3id.org/aief/AI027> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2505,9 +2510,9 @@
 <https://w3id.org/aief/AI027> <https://w3id.org/aief/legalBasis> "AI Act Art 27-5" .
 <https://w3id.org/aief/AI027> <https://w3id.org/aief/requirementID> "AI027" .
 <https://w3id.org/aief/AI027> <https://w3id.org/aief/requirementText> "Document whether an automated tool was used to support the FRIA process" .
+<https://w3id.org/aief/AI027> <https://w3id.org/aief/requiresEvidence> "Tool documentation" .
 <https://w3id.org/aief/AI027> <https://w3id.org/aief/sectionReference> "Art 27-5" .
 <https://w3id.org/aief/AI027> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/AI027> <https://w3id.org/aief/requiresEvidence> "Tool documentation" .
 # 
 # https://w3id.org/aief/AI028
 <https://w3id.org/aief/AI028> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3703,15 +3708,9 @@
 # 
 # https://w3id.org/aief/AuditLog
 # 
-# https://w3id.org/aief/Certificate
-<https://w3id.org/aief/Certificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-# 
 # https://w3id.org/aief/ChildrenRights
 # 
 # https://w3id.org/aief/ComplaintMechanism
-# 
-# https://w3id.org/aief/ConsentForm
-<https://w3id.org/aief/ConsentForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
 # https://w3id.org/aief/DataBreach
 # 
@@ -3775,9 +3774,9 @@
 <https://w3id.org/aief/HE001> <https://w3id.org/aief/noteText> "Charter Mapping: Art 6 Right to liberty; Art 1 Human dignity" .
 <https://w3id.org/aief/HE001> <https://w3id.org/aief/requirementID> "HE001" .
 <https://w3id.org/aief/HE001> <https://w3id.org/aief/requirementText> "AI system must not deprive end-users or affected persons of ability to make decisions about their own lives or remove basic freedoms" .
+<https://w3id.org/aief/HE001> <https://w3id.org/aief/requiresEvidence> "Ethics self-assessment" .
 <https://w3id.org/aief/HE001> <https://w3id.org/aief/sectionReference> "Human Agency" .
 <https://w3id.org/aief/HE001> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE001> <https://w3id.org/aief/requiresEvidence> "Ethics self-assessment" .
 # 
 # https://w3id.org/aief/HE002
 <https://w3id.org/aief/HE002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3798,9 +3797,9 @@
 <https://w3id.org/aief/HE002> <https://w3id.org/aief/noteText> "Charter Mapping: Art 1 Human dignity; Art 47 Right to effective remedy" .
 <https://w3id.org/aief/HE002> <https://w3id.org/aief/requirementID> "HE002" .
 <https://w3id.org/aief/HE002> <https://w3id.org/aief/requirementText> "AI system must not autonomously make decisions about fundamental personal, economic, social or political issues normally decided by humans, without human oversight and redress" .
+<https://w3id.org/aief/HE002> <https://w3id.org/aief/requiresEvidence> "Ethics self-assessment" .
 <https://w3id.org/aief/HE002> <https://w3id.org/aief/sectionReference> "Human Agency" .
 <https://w3id.org/aief/HE002> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE002> <https://w3id.org/aief/requiresEvidence> "Ethics self-assessment" .
 # 
 # https://w3id.org/aief/HE003
 <https://w3id.org/aief/HE003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3825,9 +3824,9 @@
 <https://w3id.org/aief/HE003> <https://w3id.org/aief/noteText> "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" .
 <https://w3id.org/aief/HE003> <https://w3id.org/aief/requirementID> "HE003" .
 <https://w3id.org/aief/HE003> <https://w3id.org/aief/requirementText> "AI system must not subordinate, coerce, deceive, manipulate, objectify or dehumanize end-users or affected persons" .
+<https://w3id.org/aief/HE003> <https://w3id.org/aief/requiresEvidence> "Ethics self-assessment" .
 <https://w3id.org/aief/HE003> <https://w3id.org/aief/sectionReference> "Human Agency" .
 <https://w3id.org/aief/HE003> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE003> <https://w3id.org/aief/requiresEvidence> "Ethics self-assessment" .
 # 
 # https://w3id.org/aief/HE004
 <https://w3id.org/aief/HE004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3849,9 +3848,9 @@
 <https://w3id.org/aief/HE004> <https://w3id.org/aief/noteText> "Charter Mapping: Art 3 Integrity of person" .
 <https://w3id.org/aief/HE004> <https://w3id.org/aief/requirementID> "HE004" .
 <https://w3id.org/aief/HE004> <https://w3id.org/aief/requirementText> "AI system must not purposely stimulate attachment or addiction" .
+<https://w3id.org/aief/HE004> <https://w3id.org/aief/requiresEvidence> "Ethics self-assessment" .
 <https://w3id.org/aief/HE004> <https://w3id.org/aief/sectionReference> "Human Agency" .
 <https://w3id.org/aief/HE004> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE004> <https://w3id.org/aief/requiresEvidence> "Ethics self-assessment" .
 # 
 # https://w3id.org/aief/HE005
 <https://w3id.org/aief/HE005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3877,9 +3876,9 @@
 <https://w3id.org/aief/HE005> <https://w3id.org/aief/noteText> "Charter Mapping: Art 6 Right to liberty" .
 <https://w3id.org/aief/HE005> <https://w3id.org/aief/requirementID> "HE005" .
 <https://w3id.org/aief/HE005> <https://w3id.org/aief/requirementText> "AI system should give operators and end-users ability to control, direct and intervene in basic operations" .
+<https://w3id.org/aief/HE005> <https://w3id.org/aief/requiresEvidence> "Design documentation" .
 <https://w3id.org/aief/HE005> <https://w3id.org/aief/sectionReference> "Human Agency" .
 <https://w3id.org/aief/HE005> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE005> <https://w3id.org/aief/requiresEvidence> "Design documentation" .
 # 
 # https://w3id.org/aief/HE006
 <https://w3id.org/aief/HE006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3900,9 +3899,9 @@
 <https://w3id.org/aief/HE006> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection; Art 11 Freedom of expression" .
 <https://w3id.org/aief/HE006> <https://w3id.org/aief/requirementID> "HE006" .
 <https://w3id.org/aief/HE006> <https://w3id.org/aief/requirementText> "End-users and affected persons must receive comprehensible information about the AI logic, significance and envisaged consequences" .
+<https://w3id.org/aief/HE006> <https://w3id.org/aief/requiresEvidence> "User-facing documentation" .
 <https://w3id.org/aief/HE006> <https://w3id.org/aief/sectionReference> "Human Agency" .
 <https://w3id.org/aief/HE006> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE006> <https://w3id.org/aief/requiresEvidence> "User-facing documentation" .
 # 
 # https://w3id.org/aief/HE007
 <https://w3id.org/aief/HE007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3933,9 +3932,9 @@
 <https://w3id.org/aief/HE007> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 <https://w3id.org/aief/HE007> <https://w3id.org/aief/requirementID> "HE007" .
 <https://w3id.org/aief/HE007> <https://w3id.org/aief/requirementText> "AI system must process personal data lawfully, fairly and transparently" .
+<https://w3id.org/aief/HE007> <https://w3id.org/aief/requiresEvidence> "GDPR compliance documentation" .
 <https://w3id.org/aief/HE007> <https://w3id.org/aief/sectionReference> "Privacy & Data" .
 <https://w3id.org/aief/HE007> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE007> <https://w3id.org/aief/requiresEvidence> "GDPR compliance documentation" .
 # 
 # https://w3id.org/aief/HE008
 <https://w3id.org/aief/HE008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3953,9 +3952,9 @@
 <https://w3id.org/aief/HE008> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 <https://w3id.org/aief/HE008> <https://w3id.org/aief/requirementID> "HE008" .
 <https://w3id.org/aief/HE008> <https://w3id.org/aief/requirementText> "Data minimisation and data protection by design and by default must be integrated" .
+<https://w3id.org/aief/HE008> <https://w3id.org/aief/requiresEvidence> "Design documentation" .
 <https://w3id.org/aief/HE008> <https://w3id.org/aief/sectionReference> "Privacy & Data" .
 <https://w3id.org/aief/HE008> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE008> <https://w3id.org/aief/requiresEvidence> "Design documentation" .
 # 
 # https://w3id.org/aief/HE009
 <https://w3id.org/aief/HE009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3973,9 +3972,9 @@
 <https://w3id.org/aief/HE009> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 <https://w3id.org/aief/HE009> <https://w3id.org/aief/requirementID> "HE009" .
 <https://w3id.org/aief/HE009> <https://w3id.org/aief/requirementText> "Appropriate technical and organisational measures must be in place to safeguard rights of data subjects (anonymisation, pseudonymisation, encryption, aggregation)" .
+<https://w3id.org/aief/HE009> <https://w3id.org/aief/requiresEvidence> "Security documentation" .
 <https://w3id.org/aief/HE009> <https://w3id.org/aief/sectionReference> "Privacy & Data" .
 <https://w3id.org/aief/HE009> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE009> <https://w3id.org/aief/requiresEvidence> "Security documentation" .
 # 
 # https://w3id.org/aief/HE010
 <https://w3id.org/aief/HE010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3992,9 +3991,9 @@
 <https://w3id.org/aief/HE010> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 <https://w3id.org/aief/HE010> <https://w3id.org/aief/requirementID> "HE010" .
 <https://w3id.org/aief/HE010> <https://w3id.org/aief/requirementText> "Strong security measures must prevent data breaches and leakages" .
+<https://w3id.org/aief/HE010> <https://w3id.org/aief/requiresEvidence> "Security audit / logging" .
 <https://w3id.org/aief/HE010> <https://w3id.org/aief/sectionReference> "Privacy & Data" .
 <https://w3id.org/aief/HE010> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE010> <https://w3id.org/aief/requiresEvidence> "Security audit / logging" .
 # 
 # https://w3id.org/aief/HE011
 <https://w3id.org/aief/HE011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4012,9 +4011,9 @@
 <https://w3id.org/aief/HE011> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 <https://w3id.org/aief/HE011> <https://w3id.org/aief/requirementID> "HE011" .
 <https://w3id.org/aief/HE011> <https://w3id.org/aief/requirementText> "Data must be acquired, stored and used in a manner auditable by humans" .
+<https://w3id.org/aief/HE011> <https://w3id.org/aief/requiresEvidence> "Audit trail" .
 <https://w3id.org/aief/HE011> <https://w3id.org/aief/sectionReference> "Privacy & Data" .
 <https://w3id.org/aief/HE011> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE011> <https://w3id.org/aief/requiresEvidence> "Audit trail" .
 # 
 # https://w3id.org/aief/HE012
 <https://w3id.org/aief/HE012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4035,9 +4034,9 @@
 <https://w3id.org/aief/HE012> <https://w3id.org/aief/noteText> "MUST requirement" .
 <https://w3id.org/aief/HE012> <https://w3id.org/aief/requirementID> "HE012" .
 <https://w3id.org/aief/HE012> <https://w3id.org/aief/requirementText> "Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity or is sufficiently neutral" .
+<https://w3id.org/aief/HE012> <https://w3id.org/aief/requiresEvidence> "Proposal text / data statement" .
 <https://w3id.org/aief/HE012> <https://w3id.org/aief/sectionReference> "Fairness" .
 <https://w3id.org/aief/HE012> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE012> <https://w3id.org/aief/requiresEvidence> "Proposal text / data statement" .
 # 
 # https://w3id.org/aief/HE013
 <https://w3id.org/aief/HE013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4061,9 +4060,9 @@
 <https://w3id.org/aief/HE013> <https://w3id.org/aief/noteText> "Charter Mapping: Art 21 Non-discrimination; Art 23 Equality" .
 <https://w3id.org/aief/HE013> <https://w3id.org/aief/requirementID> "HE013" .
 <https://w3id.org/aief/HE013> <https://w3id.org/aief/requirementText> "Document how bias in input data and algorithmic design will be identified and avoided" .
+<https://w3id.org/aief/HE013> <https://w3id.org/aief/requiresEvidence> "Bias assessment report" .
 <https://w3id.org/aief/HE013> <https://w3id.org/aief/sectionReference> "Fairness" .
 <https://w3id.org/aief/HE013> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE013> <https://w3id.org/aief/requiresEvidence> "Bias assessment report" .
 # 
 # https://w3id.org/aief/HE014
 <https://w3id.org/aief/HE014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4082,9 +4081,9 @@
 <https://w3id.org/aief/HE014> <https://w3id.org/aief/noteText> "Encouraged not mandatory" .
 <https://w3id.org/aief/HE014> <https://w3id.org/aief/requirementID> "HE014" .
 <https://w3id.org/aief/HE014> <https://w3id.org/aief/requirementText> "AI system should be designed for universal accessibility — usable by end-users with different abilities" .
+<https://w3id.org/aief/HE014> <https://w3id.org/aief/requiresEvidence> "Accessibility compliance" .
 <https://w3id.org/aief/HE014> <https://w3id.org/aief/sectionReference> "Fairness" .
 <https://w3id.org/aief/HE014> <https://w3id.org/aief/tierLevel> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE014> <https://w3id.org/aief/requiresEvidence> "Accessibility compliance" .
 # 
 # https://w3id.org/aief/HE015
 <https://w3id.org/aief/HE015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4109,9 +4108,9 @@
 <https://w3id.org/aief/HE015> <https://w3id.org/aief/noteText> "MUST requirement" .
 <https://w3id.org/aief/HE015> <https://w3id.org/aief/requirementID> "HE015" .
 <https://w3id.org/aief/HE015> <https://w3id.org/aief/requirementText> "Possible negative social impacts on certain groups must be mitigated, including impacts beyond algorithmic bias" .
+<https://w3id.org/aief/HE015> <https://w3id.org/aief/requiresEvidence> "Impact assessment" .
 <https://w3id.org/aief/HE015> <https://w3id.org/aief/sectionReference> "Fairness" .
 <https://w3id.org/aief/HE015> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE015> <https://w3id.org/aief/requiresEvidence> "Impact assessment" .
 # 
 # https://w3id.org/aief/HE016
 <https://w3id.org/aief/HE016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4129,9 +4128,9 @@
 <https://w3id.org/aief/HE016> <https://w3id.org/aief/noteText> "Charter Mapping: Art 21 Non-discrimination" .
 <https://w3id.org/aief/HE016> <https://w3id.org/aief/requirementID> "HE016" .
 <https://w3id.org/aief/HE016> <https://w3id.org/aief/requirementText> "Methods to identify and mitigate negative social impacts in medium and longer term must be documented in proposal" .
+<https://w3id.org/aief/HE016> <https://w3id.org/aief/requiresEvidence> "Proposal text" .
 <https://w3id.org/aief/HE016> <https://w3id.org/aief/sectionReference> "Fairness" .
 <https://w3id.org/aief/HE016> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE016> <https://w3id.org/aief/requiresEvidence> "Proposal text" .
 # 
 # https://w3id.org/aief/HE017
 <https://w3id.org/aief/HE017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4153,9 +4152,9 @@
 <https://w3id.org/aief/HE017> <https://w3id.org/aief/noteText> "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" .
 <https://w3id.org/aief/HE017> <https://w3id.org/aief/requirementID> "HE017" .
 <https://w3id.org/aief/HE017> <https://w3id.org/aief/requirementText> "AI system must not unduly or unfairly reduce psychological and emotional well-being of end-users and stakeholders" .
+<https://w3id.org/aief/HE017> <https://w3id.org/aief/requiresEvidence> "Well-being assessment" .
 <https://w3id.org/aief/HE017> <https://w3id.org/aief/sectionReference> "Well-being" .
 <https://w3id.org/aief/HE017> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE017> <https://w3id.org/aief/requiresEvidence> "Well-being assessment" .
 # 
 # https://w3id.org/aief/HE018
 <https://w3id.org/aief/HE018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4174,9 +4173,9 @@
 <https://w3id.org/aief/HE018> <https://w3id.org/aief/noteText> "MUST requirement" .
 <https://w3id.org/aief/HE018> <https://w3id.org/aief/requirementID> "HE018" .
 <https://w3id.org/aief/HE018> <https://w3id.org/aief/requirementText> "AI development must be mindful of environmental sustainability — document environmental impact and mitigation steps" .
+<https://w3id.org/aief/HE018> <https://w3id.org/aief/requiresEvidence> "Environmental impact statement" .
 <https://w3id.org/aief/HE018> <https://w3id.org/aief/sectionReference> "Well-being" .
 <https://w3id.org/aief/HE018> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE018> <https://w3id.org/aief/requiresEvidence> "Environmental impact statement" .
 # 
 # https://w3id.org/aief/HE019
 <https://w3id.org/aief/HE019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4201,9 +4200,9 @@
 <https://w3id.org/aief/HE019> <https://w3id.org/aief/noteText> "Charter Mapping: Art 11 Freedom of expression; Art 12 Freedom of assembly" .
 <https://w3id.org/aief/HE019> <https://w3id.org/aief/requirementID> "HE019" .
 <https://w3id.org/aief/HE019> <https://w3id.org/aief/requirementText> "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations" .
+<https://w3id.org/aief/HE019> <https://w3id.org/aief/requiresEvidence> "Social impact assessment" .
 <https://w3id.org/aief/HE019> <https://w3id.org/aief/sectionReference> "Well-being" .
 <https://w3id.org/aief/HE019> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE019> <https://w3id.org/aief/requiresEvidence> "Social impact assessment" .
 # 
 # https://w3id.org/aief/HE020
 <https://w3id.org/aief/HE020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4226,9 +4225,9 @@
 <https://w3id.org/aief/HE020> <https://w3id.org/aief/noteText> "Charter Mapping: Art 31 Fair working conditions" .
 <https://w3id.org/aief/HE020> <https://w3id.org/aief/requirementID> "HE020" .
 <https://w3id.org/aief/HE020> <https://w3id.org/aief/requirementText> "AI and robotics systems must not reduce safety in the workplace" .
+<https://w3id.org/aief/HE020> <https://w3id.org/aief/requiresEvidence> "Safety compliance" .
 <https://w3id.org/aief/HE020> <https://w3id.org/aief/sectionReference> "Well-being" .
 <https://w3id.org/aief/HE020> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE020> <https://w3id.org/aief/requiresEvidence> "Safety compliance" .
 # 
 # https://w3id.org/aief/HE021
 <https://w3id.org/aief/HE021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4254,9 +4253,9 @@
 <https://w3id.org/aief/HE021> <https://w3id.org/aief/noteText> "Especially chatbots" .
 <https://w3id.org/aief/HE021> <https://w3id.org/aief/requirementID> "HE021" .
 <https://w3id.org/aief/HE021> <https://w3id.org/aief/requirementText> "It must be made clear to end-users they are interacting with an AI system" .
+<https://w3id.org/aief/HE021> <https://w3id.org/aief/requiresEvidence> "User notification / disclosure" .
 <https://w3id.org/aief/HE021> <https://w3id.org/aief/sectionReference> "Transparency" .
 <https://w3id.org/aief/HE021> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE021> <https://w3id.org/aief/requiresEvidence> "User notification / disclosure" .
 # 
 # https://w3id.org/aief/HE022
 <https://w3id.org/aief/HE022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4278,9 +4277,9 @@
 <https://w3id.org/aief/HE022> <https://w3id.org/aief/noteText> "Charter Mapping: Art 11 Freedom of expression" .
 <https://w3id.org/aief/HE022> <https://w3id.org/aief/requirementID> "HE022" .
 <https://w3id.org/aief/HE022> <https://w3id.org/aief/requirementText> "Purpose, capabilities, limitations, benefits and risks of AI system must be openly communicated to end-users and stakeholders" .
+<https://w3id.org/aief/HE022> <https://w3id.org/aief/requiresEvidence> "User documentation" .
 <https://w3id.org/aief/HE022> <https://w3id.org/aief/sectionReference> "Transparency" .
 <https://w3id.org/aief/HE022> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE022> <https://w3id.org/aief/requiresEvidence> "User documentation" .
 # 
 # https://w3id.org/aief/HE023
 <https://w3id.org/aief/HE023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4301,9 +4300,9 @@
 <https://w3id.org/aief/HE023> <https://w3id.org/aief/legalBasis> "EU Charter" .
 <https://w3id.org/aief/HE023> <https://w3id.org/aief/requirementID> "HE023" .
 <https://w3id.org/aief/HE023> <https://w3id.org/aief/requirementText> "Traceability measures must be considered for the AI system's entire lifecycle" .
+<https://w3id.org/aief/HE023> <https://w3id.org/aief/requiresEvidence> "Traceability documentation" .
 <https://w3id.org/aief/HE023> <https://w3id.org/aief/sectionReference> "Transparency" .
 <https://w3id.org/aief/HE023> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE023> <https://w3id.org/aief/requiresEvidence> "Traceability documentation" .
 # 
 # https://w3id.org/aief/HE024
 <https://w3id.org/aief/HE024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4325,9 +4324,9 @@
 <https://w3id.org/aief/HE024> <https://w3id.org/aief/noteText> "Particularly for high-impact decisions" .
 <https://w3id.org/aief/HE024> <https://w3id.org/aief/requirementID> "HE024" .
 <https://w3id.org/aief/HE024> <https://w3id.org/aief/requirementText> "Research proposal should explain how decisions made by system will be explainable to users, including reasons for decisions" .
+<https://w3id.org/aief/HE024> <https://w3id.org/aief/requiresEvidence> "Explainability documentation" .
 <https://w3id.org/aief/HE024> <https://w3id.org/aief/sectionReference> "Transparency" .
 <https://w3id.org/aief/HE024> <https://w3id.org/aief/tierLevel> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE024> <https://w3id.org/aief/requiresEvidence> "Explainability documentation" .
 # 
 # https://w3id.org/aief/HE025
 <https://w3id.org/aief/HE025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4348,9 +4347,9 @@
 <https://w3id.org/aief/HE025> <https://w3id.org/aief/noteText> "MUST requirement" .
 <https://w3id.org/aief/HE025> <https://w3id.org/aief/requirementID> "HE025" .
 <https://w3id.org/aief/HE025> <https://w3id.org/aief/requirementText> "Development processes must keep records of all relevant decisions regarding ethical compliance" .
+<https://w3id.org/aief/HE025> <https://w3id.org/aief/requiresEvidence> "Ethics decision log" .
 <https://w3id.org/aief/HE025> <https://w3id.org/aief/sectionReference> "Transparency" .
 <https://w3id.org/aief/HE025> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE025> <https://w3id.org/aief/requiresEvidence> "Ethics decision log" .
 # 
 # https://w3id.org/aief/HE026
 <https://w3id.org/aief/HE026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4368,9 +4367,9 @@
 <https://w3id.org/aief/HE026> <https://w3id.org/aief/noteText> "MUST requirement" .
 <https://w3id.org/aief/HE026> <https://w3id.org/aief/requirementID> "HE026" .
 <https://w3id.org/aief/HE026> <https://w3id.org/aief/requirementText> "Document how ethically and socially undesirable effects will be detected, stopped and prevented from reoccurring" .
+<https://w3id.org/aief/HE026> <https://w3id.org/aief/requiresEvidence> "Detection/remediation plan" .
 <https://w3id.org/aief/HE026> <https://w3id.org/aief/sectionReference> "Accountability" .
 <https://w3id.org/aief/HE026> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE026> <https://w3id.org/aief/requiresEvidence> "Detection/remediation plan" .
 # 
 # https://w3id.org/aief/HE027
 <https://w3id.org/aief/HE027> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4388,9 +4387,9 @@
 <https://w3id.org/aief/HE027> <https://w3id.org/aief/noteText> "Charter Mapping: Art 47 Right to effective remedy" .
 <https://w3id.org/aief/HE027> <https://w3id.org/aief/requirementID> "HE027" .
 <https://w3id.org/aief/HE027> <https://w3id.org/aief/requirementText> "AI system must allow for human oversight and control over decision cycles and operation, unless compelling justification provided" .
+<https://w3id.org/aief/HE027> <https://w3id.org/aief/requiresEvidence> "Oversight documentation" .
 <https://w3id.org/aief/HE027> <https://w3id.org/aief/sectionReference> "Accountability" .
 <https://w3id.org/aief/HE027> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE027> <https://w3id.org/aief/requiresEvidence> "Oversight documentation" .
 # 
 # https://w3id.org/aief/HE028
 <https://w3id.org/aief/HE028> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4408,9 +4407,9 @@
 <https://w3id.org/aief/HE028> <https://w3id.org/aief/noteText> "Scaled to research type" .
 <https://w3id.org/aief/HE028> <https://w3id.org/aief/requirementID> "HE028" .
 <https://w3id.org/aief/HE028> <https://w3id.org/aief/requirementText> "Research proposal should include evaluation of possible ethics risks including risk assessment procedures and post-deployment mitigation" .
+<https://w3id.org/aief/HE028> <https://w3id.org/aief/requiresEvidence> "Risk assessment" .
 <https://w3id.org/aief/HE028> <https://w3id.org/aief/sectionReference> "Accountability" .
 <https://w3id.org/aief/HE028> <https://w3id.org/aief/tierLevel> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE028> <https://w3id.org/aief/requiresEvidence> "Risk assessment" .
 # 
 # https://w3id.org/aief/HE029
 <https://w3id.org/aief/HE029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4427,9 +4426,9 @@
 <https://w3id.org/aief/HE029> <https://w3id.org/aief/noteText> "Charter Mapping: Art 47 Right to effective remedy" .
 <https://w3id.org/aief/HE029> <https://w3id.org/aief/requirementID> "HE029" .
 <https://w3id.org/aief/HE029> <https://w3id.org/aief/requirementText> "Consider how end-users, data subjects and third parties can report complaints, ethical concerns or adverse events" .
+<https://w3id.org/aief/HE029> <https://w3id.org/aief/requiresEvidence> "Complaint mechanism" .
 <https://w3id.org/aief/HE029> <https://w3id.org/aief/sectionReference> "Accountability" .
 <https://w3id.org/aief/HE029> <https://w3id.org/aief/tierLevel> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE029> <https://w3id.org/aief/requiresEvidence> "Complaint mechanism" .
 # 
 # https://w3id.org/aief/HE030
 <https://w3id.org/aief/HE030> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4445,9 +4444,9 @@
 <https://w3id.org/aief/HE030> <https://w3id.org/aief/legalBasis> "EU Charter" .
 <https://w3id.org/aief/HE030> <https://w3id.org/aief/requirementID> "HE030" .
 <https://w3id.org/aief/HE030> <https://w3id.org/aief/requirementText> "All AI systems should be auditable by independent third parties — system should generate human-accessible logs" .
+<https://w3id.org/aief/HE030> <https://w3id.org/aief/requiresEvidence> "Audit logs" .
 <https://w3id.org/aief/HE030> <https://w3id.org/aief/sectionReference> "Accountability" .
 <https://w3id.org/aief/HE030> <https://w3id.org/aief/tierLevel> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE030> <https://w3id.org/aief/requiresEvidence> "Audit logs" .
 # 
 # https://w3id.org/aief/HE031
 <https://w3id.org/aief/HE031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4465,9 +4464,9 @@
 <https://w3id.org/aief/HE031> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 <https://w3id.org/aief/HE031> <https://w3id.org/aief/requirementID> "HE031" .
 <https://w3id.org/aief/HE031> <https://w3id.org/aief/requirementText> "Ensure processing of personal data complies with GDPR — prepare specific data protection policy" .
+<https://w3id.org/aief/HE031> <https://w3id.org/aief/requiresEvidence> "Data protection policy" .
 <https://w3id.org/aief/HE031> <https://w3id.org/aief/sectionReference> "Data Collection" .
 <https://w3id.org/aief/HE031> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE031> <https://w3id.org/aief/requiresEvidence> "Data protection policy" .
 # 
 # https://w3id.org/aief/HE032
 <https://w3id.org/aief/HE032> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4494,9 +4493,9 @@
 <https://w3id.org/aief/HE032> <https://w3id.org/aief/noteText> "Charter Mapping: Art 21 Non-discrimination" .
 <https://w3id.org/aief/HE032> <https://w3id.org/aief/requirementID> "HE032" .
 <https://w3id.org/aief/HE032> <https://w3id.org/aief/requirementText> "Input, training and output data must all be analysed for bias — verify data accounts for diversity in gender, race, age, sexual orientation, national origin, religion, health, disability" .
+<https://w3id.org/aief/HE032> <https://w3id.org/aief/requiresEvidence> "Bias assessment" .
 <https://w3id.org/aief/HE032> <https://w3id.org/aief/sectionReference> "Data Collection" .
 <https://w3id.org/aief/HE032> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE032> <https://w3id.org/aief/requiresEvidence> "Bias assessment" .
 # 
 # https://w3id.org/aief/HE033
 <https://w3id.org/aief/HE033> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4516,9 +4515,9 @@
 <https://w3id.org/aief/HE033> <https://w3id.org/aief/noteText> "Charter Mapping: Art 21 Non-discrimination" .
 <https://w3id.org/aief/HE033> <https://w3id.org/aief/requirementID> "HE033" .
 <https://w3id.org/aief/HE033> <https://w3id.org/aief/requirementText> "Analyse training data for relevance and representativeness — undertake formal bias assessment" .
+<https://w3id.org/aief/HE033> <https://w3id.org/aief/requiresEvidence> "Data quality report" .
 <https://w3id.org/aief/HE033> <https://w3id.org/aief/sectionReference> "Data Collection" .
 <https://w3id.org/aief/HE033> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE033> <https://w3id.org/aief/requiresEvidence> "Data quality report" .
 # 
 # https://w3id.org/aief/HE034
 <https://w3id.org/aief/HE034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4535,9 +4534,9 @@
 <https://w3id.org/aief/HE034> <https://w3id.org/aief/noteText> "Whenever possible" .
 <https://w3id.org/aief/HE034> <https://w3id.org/aief/requirementID> "HE034" .
 <https://w3id.org/aief/HE034> <https://w3id.org/aief/requirementText> "Ensure ability to go back to each state the system has been in to determine training data used at any point" .
+<https://w3id.org/aief/HE034> <https://w3id.org/aief/requiresEvidence> "Versioning / provenance system" .
 <https://w3id.org/aief/HE034> <https://w3id.org/aief/sectionReference> "Data Collection" .
 <https://w3id.org/aief/HE034> <https://w3id.org/aief/tierLevel> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE034> <https://w3id.org/aief/requiresEvidence> "Versioning / provenance system" .
 # 
 # https://w3id.org/aief/HE035
 <https://w3id.org/aief/HE035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4557,9 +4556,9 @@
 <https://w3id.org/aief/HE035> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 <https://w3id.org/aief/HE035> <https://w3id.org/aief/requirementID> "HE035" .
 <https://w3id.org/aief/HE035> <https://w3id.org/aief/requirementText> "If creating inferred personal data or aggregating datasets, new data must receive same protection level as original data" .
+<https://w3id.org/aief/HE035> <https://w3id.org/aief/requiresEvidence> "Data governance documentation" .
 <https://w3id.org/aief/HE035> <https://w3id.org/aief/sectionReference> "Design & Build" .
 <https://w3id.org/aief/HE035> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE035> <https://w3id.org/aief/requiresEvidence> "Data governance documentation" .
 # 
 # https://w3id.org/aief/HE036
 <https://w3id.org/aief/HE036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4577,9 +4576,9 @@
 <https://w3id.org/aief/HE036> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 <https://w3id.org/aief/HE036> <https://w3id.org/aief/requirementID> "HE036" .
 <https://w3id.org/aief/HE036> <https://w3id.org/aief/requirementText> "Ensure no new personal data collected or created during development or use unless necessary" .
+<https://w3id.org/aief/HE036> <https://w3id.org/aief/requiresEvidence> "Data minimisation documentation" .
 <https://w3id.org/aief/HE036> <https://w3id.org/aief/sectionReference> "Design & Build" .
 <https://w3id.org/aief/HE036> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE036> <https://w3id.org/aief/requiresEvidence> "Data minimisation documentation" .
 # 
 # https://w3id.org/aief/HE037
 <https://w3id.org/aief/HE037> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4596,9 +4595,9 @@
 <https://w3id.org/aief/HE037> <https://w3id.org/aief/noteText> "Charter Mapping: Art 21 Non-discrimination" .
 <https://w3id.org/aief/HE037> <https://w3id.org/aief/requirementID> "HE037" .
 <https://w3id.org/aief/HE037> <https://w3id.org/aief/requirementText> "Check for algorithmic bias during detailed development phase using methods such as counterfactual evaluation" .
+<https://w3id.org/aief/HE037> <https://w3id.org/aief/requiresEvidence> "Bias testing report" .
 <https://w3id.org/aief/HE037> <https://w3id.org/aief/sectionReference> "Design & Build" .
 <https://w3id.org/aief/HE037> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE037> <https://w3id.org/aief/requiresEvidence> "Bias testing report" .
 # 
 # https://w3id.org/aief/HE038
 <https://w3id.org/aief/HE038> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4616,9 +4615,9 @@
 <https://w3id.org/aief/HE038> <https://w3id.org/aief/noteText> "Charter Mapping: Art 26 Integration of persons with disabilities" .
 <https://w3id.org/aief/HE038> <https://w3id.org/aief/requirementID> "HE038" .
 <https://w3id.org/aief/HE038> <https://w3id.org/aief/requirementText> "Ensure interface design honours universal accessibility principles" .
+<https://w3id.org/aief/HE038> <https://w3id.org/aief/requiresEvidence> "Accessibility review" .
 <https://w3id.org/aief/HE038> <https://w3id.org/aief/sectionReference> "Design & Build" .
 <https://w3id.org/aief/HE038> <https://w3id.org/aief/tierLevel> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE038> <https://w3id.org/aief/requiresEvidence> "Accessibility review" .
 # 
 # https://w3id.org/aief/HE039
 <https://w3id.org/aief/HE039> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4635,9 +4634,9 @@
 <https://w3id.org/aief/HE039> <https://w3id.org/aief/legalBasis> "EU Charter" .
 <https://w3id.org/aief/HE039> <https://w3id.org/aief/requirementID> "HE039" .
 <https://w3id.org/aief/HE039> <https://w3id.org/aief/requirementText> "Establish traceability and accountability measures covering: design methods, testing methods, system outcomes, and alternative decision scenarios" .
+<https://w3id.org/aief/HE039> <https://w3id.org/aief/requiresEvidence> "Traceability documentation" .
 <https://w3id.org/aief/HE039> <https://w3id.org/aief/sectionReference> "Design & Build" .
 <https://w3id.org/aief/HE039> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE039> <https://w3id.org/aief/requiresEvidence> "Traceability documentation" .
 # 
 # https://w3id.org/aief/HE040
 <https://w3id.org/aief/HE040> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4653,9 +4652,9 @@
 <https://w3id.org/aief/HE040> <https://w3id.org/aief/legalBasis> "EU Charter" .
 <https://w3id.org/aief/HE040> <https://w3id.org/aief/requirementID> "HE040" .
 <https://w3id.org/aief/HE040> <https://w3id.org/aief/requirementText> "Code must be documented and explained within software and ancillary documentation" .
+<https://w3id.org/aief/HE040> <https://w3id.org/aief/requiresEvidence> "Code documentation" .
 <https://w3id.org/aief/HE040> <https://w3id.org/aief/sectionReference> "Design & Build" .
 <https://w3id.org/aief/HE040> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE040> <https://w3id.org/aief/requiresEvidence> "Code documentation" .
 # 
 # https://w3id.org/aief/HE041
 <https://w3id.org/aief/HE041> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4675,9 +4674,9 @@
 <https://w3id.org/aief/HE041> <https://w3id.org/aief/legalBasis> "EU Charter" .
 <https://w3id.org/aief/HE041> <https://w3id.org/aief/requirementID> "HE041" .
 <https://w3id.org/aief/HE041> <https://w3id.org/aief/requirementText> "Use formal methodologies for explainability where possible (XAI, Transparency by Design, Model Cards)" .
+<https://w3id.org/aief/HE041> <https://w3id.org/aief/requiresEvidence> "Explainability artefacts" .
 <https://w3id.org/aief/HE041> <https://w3id.org/aief/sectionReference> "Design & Build" .
 <https://w3id.org/aief/HE041> <https://w3id.org/aief/tierLevel> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE041> <https://w3id.org/aief/requiresEvidence> "Explainability artefacts" .
 # 
 # https://w3id.org/aief/HE042
 <https://w3id.org/aief/HE042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4695,9 +4694,9 @@
 <https://w3id.org/aief/HE042> <https://w3id.org/aief/noteText> "Charter Mapping: Art 1 Human dignity" .
 <https://w3id.org/aief/HE042> <https://w3id.org/aief/requirementID> "HE042" .
 <https://w3id.org/aief/HE042> <https://w3id.org/aief/requirementText> "Test whether users understand they are interacting with non-human agent" .
+<https://w3id.org/aief/HE042> <https://w3id.org/aief/requiresEvidence> "User comprehension test" .
 <https://w3id.org/aief/HE042> <https://w3id.org/aief/sectionReference> "Testing" .
 <https://w3id.org/aief/HE042> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE042> <https://w3id.org/aief/requiresEvidence> "User comprehension test" .
 # 
 # https://w3id.org/aief/HE043
 <https://w3id.org/aief/HE043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4713,9 +4712,9 @@
 <https://w3id.org/aief/HE043> <https://w3id.org/aief/legalBasis> "EU Charter" .
 <https://w3id.org/aief/HE043> <https://w3id.org/aief/requirementID> "HE043" .
 <https://w3id.org/aief/HE043> <https://w3id.org/aief/requirementText> "Ensure audit controls check performance and record decisions about system purpose and functioning" .
+<https://w3id.org/aief/HE043> <https://w3id.org/aief/requiresEvidence> "Audit report" .
 <https://w3id.org/aief/HE043> <https://w3id.org/aief/sectionReference> "Testing" .
 <https://w3id.org/aief/HE043> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE043> <https://w3id.org/aief/requiresEvidence> "Audit report" .
 # 
 # https://w3id.org/aief/HE044
 <https://w3id.org/aief/HE044> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4733,9 +4732,9 @@
 <https://w3id.org/aief/HE044> <https://w3id.org/aief/noteText> "Charter Mapping: Art 11 Freedom of expression" .
 <https://w3id.org/aief/HE044> <https://w3id.org/aief/requirementID> "HE044" .
 <https://w3id.org/aief/HE044> <https://w3id.org/aief/requirementText> "Communicate system capabilities and limitations to stakeholders in clear, understandable and proactive manner" .
+<https://w3id.org/aief/HE044> <https://w3id.org/aief/requiresEvidence> "Stakeholder communication" .
 <https://w3id.org/aief/HE044> <https://w3id.org/aief/sectionReference> "Testing" .
 <https://w3id.org/aief/HE044> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE044> <https://w3id.org/aief/requiresEvidence> "Stakeholder communication" .
 # 
 # https://w3id.org/aief/HE045
 <https://w3id.org/aief/HE045> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4751,9 +4750,9 @@
 <https://w3id.org/aief/HE045> <https://w3id.org/aief/legalBasis> "EU Charter" .
 <https://w3id.org/aief/HE045> <https://w3id.org/aief/requirementID> "HE045" .
 <https://w3id.org/aief/HE045> <https://w3id.org/aief/requirementText> "Establish processes to obtain user feedback and mechanisms to adapt system in response" .
+<https://w3id.org/aief/HE045> <https://w3id.org/aief/requiresEvidence> "Feedback mechanism" .
 <https://w3id.org/aief/HE045> <https://w3id.org/aief/sectionReference> "Testing" .
 <https://w3id.org/aief/HE045> <https://w3id.org/aief/tierLevel> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE045> <https://w3id.org/aief/requiresEvidence> "Feedback mechanism" .
 # 
 # https://w3id.org/aief/HE046
 <https://w3id.org/aief/HE046> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4770,9 +4769,9 @@
 <https://w3id.org/aief/HE046> <https://w3id.org/aief/legalBasis> "EU Charter" .
 <https://w3id.org/aief/HE046> <https://w3id.org/aief/requirementID> "HE046" .
 <https://w3id.org/aief/HE046> <https://w3id.org/aief/requirementText> "Establish and implement plans supporting operational compliance with ethical requirements" .
+<https://w3id.org/aief/HE046> <https://w3id.org/aief/requiresEvidence> "Compliance plan" .
 <https://w3id.org/aief/HE046> <https://w3id.org/aief/sectionReference> "Deployment" .
 <https://w3id.org/aief/HE046> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE046> <https://w3id.org/aief/requiresEvidence> "Compliance plan" .
 # 
 # https://w3id.org/aief/HE047
 <https://w3id.org/aief/HE047> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4790,9 +4789,9 @@
 <https://w3id.org/aief/HE047> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Data protection" .
 <https://w3id.org/aief/HE047> <https://w3id.org/aief/requirementID> "HE047" .
 <https://w3id.org/aief/HE047> <https://w3id.org/aief/requirementText> "Update data, access, security and risk management policies to account for ethical requirements" .
+<https://w3id.org/aief/HE047> <https://w3id.org/aief/requiresEvidence> "Updated policies" .
 <https://w3id.org/aief/HE047> <https://w3id.org/aief/sectionReference> "Deployment" .
 <https://w3id.org/aief/HE047> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE047> <https://w3id.org/aief/requiresEvidence> "Updated policies" .
 # 
 # https://w3id.org/aief/HE048
 <https://w3id.org/aief/HE048> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4811,9 +4810,9 @@
 <https://w3id.org/aief/HE048> <https://w3id.org/aief/legalBasis> "EU Charter" .
 <https://w3id.org/aief/HE048> <https://w3id.org/aief/requirementID> "HE048" .
 <https://w3id.org/aief/HE048> <https://w3id.org/aief/requirementText> "Establish monitoring goals and metrics for ethics compliance — periodically monitor and improve" .
+<https://w3id.org/aief/HE048> <https://w3id.org/aief/requiresEvidence> "Monitoring dashboard / reports" .
 <https://w3id.org/aief/HE048> <https://w3id.org/aief/sectionReference> "Monitoring" .
 <https://w3id.org/aief/HE048> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE048> <https://w3id.org/aief/requiresEvidence> "Monitoring dashboard / reports" .
 # 
 # https://w3id.org/aief/HE049
 <https://w3id.org/aief/HE049> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4834,9 +4833,9 @@
 <https://w3id.org/aief/HE049> <https://w3id.org/aief/noteText> "Charter Mapping: Art 47 Right to effective remedy" .
 <https://w3id.org/aief/HE049> <https://w3id.org/aief/requirementID> "HE049" .
 <https://w3id.org/aief/HE049> <https://w3id.org/aief/requirementText> "Ensure AI stakeholders, users and subjects have ethical complaint communication channels" .
+<https://w3id.org/aief/HE049> <https://w3id.org/aief/requiresEvidence> "Complaint channel" .
 <https://w3id.org/aief/HE049> <https://w3id.org/aief/sectionReference> "Monitoring" .
 <https://w3id.org/aief/HE049> <https://w3id.org/aief/tierLevel> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/HE049> <https://w3id.org/aief/requiresEvidence> "Complaint channel" .
 # 
 # https://w3id.org/aief/HE050
 <https://w3id.org/aief/HE050> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4944,10 +4943,10 @@
 <https://w3id.org/aief/R001> <https://w3id.org/aief/noteText> "Mandatory for all" .
 <https://w3id.org/aief/R001> <https://w3id.org/aief/requirementID> "R001" .
 <https://w3id.org/aief/R001> <https://w3id.org/aief/requirementText> "Applicant must be identified with name, staff/student number, email, school/department" .
+<https://w3id.org/aief/R001> <https://w3id.org/aief/requiresEvidence> "Auto-populated from TCD records" .
 <https://w3id.org/aief/R001> <https://w3id.org/aief/sectionReference> "REAMS §2.2.1" .
 <https://w3id.org/aief/R001> <https://w3id.org/aief/sectionReference> "§2.2.1" .
 <https://w3id.org/aief/R001> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/R001> <https://w3id.org/aief/requiresEvidence> "Auto-populated from TCD records" .
 # 
 # https://w3id.org/aief/R002
 <https://w3id.org/aief/R002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4980,9 +4979,9 @@
 <https://w3id.org/aief/R003> <https://w3id.org/aief/legalBasis> "Research integrity" .
 <https://w3id.org/aief/R003> <https://w3id.org/aief/requirementID> "R003" .
 <https://w3id.org/aief/R003> <https://w3id.org/aief/requirementText> "Applicant must have read and understood Trinity Policy on Good Research Practice" .
+<https://w3id.org/aief/R003> <https://w3id.org/aief/requiresEvidence> "Declaration (Yes/No)" .
 <https://w3id.org/aief/R003> <https://w3id.org/aief/sectionReference> "§2.2.1" .
 <https://w3id.org/aief/R003> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/R003> <https://w3id.org/aief/requiresEvidence> "Declaration (Yes/No)" .
 # 
 # https://w3id.org/aief/R004
 <https://w3id.org/aief/R004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4999,9 +4998,9 @@
 <https://w3id.org/aief/R004> <https://w3id.org/aief/noteText> "PhD: CA7000; Staff: Epigeum" .
 <https://w3id.org/aief/R004> <https://w3id.org/aief/requirementID> "R004" .
 <https://w3id.org/aief/R004> <https://w3id.org/aief/requirementText> "Applicant must have completed Research Integrity Training Module" .
+<https://w3id.org/aief/R004> <https://w3id.org/aief/requiresEvidence> "Certificate upload required" .
 <https://w3id.org/aief/R004> <https://w3id.org/aief/sectionReference> "§2.2.1" .
 <https://w3id.org/aief/R004> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/R004> <https://w3id.org/aief/requiresEvidence> "Certificate upload required" .
 # 
 # https://w3id.org/aief/R005
 <https://w3id.org/aief/R005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -5017,15 +5016,15 @@
 <https://w3id.org/aief/R005> <https://w3id.org/aief/hasRisk> <https://w3id.org/aief/ReputationalHarm> .
 <https://w3id.org/aief/R005> <https://w3id.org/aief/hasTier> <https://w3id.org/aief/Tier1_Mandatory> .
 <https://w3id.org/aief/R005> <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection> .
-<https://w3id.org/aief/R005> <https://w3id.org/aief/requiresEvidence> <https://w3id.org/aief/Certificate> .
 <https://w3id.org/aief/R005> <https://w3id.org/aief/isMandatory> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/aief/R005> <https://w3id.org/aief/legalBasis> "GDPR Art 39(1)(b)" .
 <https://w3id.org/aief/R005> <https://w3id.org/aief/requirementID> "R005" .
 <https://w3id.org/aief/R005> <https://w3id.org/aief/requirementText> "Applicant must have completed Data Protection Training within last 24 months" .
+<https://w3id.org/aief/R005> <https://w3id.org/aief/requiresEvidence> "Certificate" .
+<https://w3id.org/aief/R005> <https://w3id.org/aief/requiresEvidence> "Certificate upload required" .
 <https://w3id.org/aief/R005> <https://w3id.org/aief/sectionReference> "REAMS §2.2.1" .
 <https://w3id.org/aief/R005> <https://w3id.org/aief/sectionReference> "§2.2.1" .
 <https://w3id.org/aief/R005> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/R005> <https://w3id.org/aief/requiresEvidence> "Certificate upload required" .
 # 
 # https://w3id.org/aief/R006
 <https://w3id.org/aief/R006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -5283,16 +5282,16 @@
 <https://w3id.org/aief/R019> <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art3_RightToIntegrity> .
 <https://w3id.org/aief/R019> <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art7_PrivateLife> .
 <https://w3id.org/aief/R019> <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection> .
-<https://w3id.org/aief/R019> <https://w3id.org/aief/requiresEvidence> <https://w3id.org/aief/ConsentForm> .
 <https://w3id.org/aief/R019> <https://w3id.org/aief/isMandatory> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/aief/R019> <https://w3id.org/aief/legalBasis> "GDPR Art 6-7" .
 <https://w3id.org/aief/R019> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8 Protection of personal data" .
 <https://w3id.org/aief/R019> <https://w3id.org/aief/requirementID> "R019" .
 <https://w3id.org/aief/R019> <https://w3id.org/aief/requirementText> "Will consent be obtained from participants (or proxy/guardian)?" .
+<https://w3id.org/aief/R019> <https://w3id.org/aief/requiresEvidence> "Consent form attachment" .
+<https://w3id.org/aief/R019> <https://w3id.org/aief/requiresEvidence> "Consent form attachment if yes" .
 <https://w3id.org/aief/R019> <https://w3id.org/aief/sectionReference> "REAMS §2.3.2" .
 <https://w3id.org/aief/R019> <https://w3id.org/aief/sectionReference> "§2.3.2" .
 <https://w3id.org/aief/R019> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/R019> <https://w3id.org/aief/requiresEvidence> "Consent form attachment if yes" .
 # 
 # https://w3id.org/aief/R020
 <https://w3id.org/aief/R020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -5518,9 +5517,9 @@
 <https://w3id.org/aief/R030> <https://w3id.org/aief/isMandatory> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/aief/R030> <https://w3id.org/aief/requirementID> "R030" .
 <https://w3id.org/aief/R030> <https://w3id.org/aief/requirementText> "For each site: licence, permission, or ethics approval status" .
+<https://w3id.org/aief/R030> <https://w3id.org/aief/requiresEvidence> "Permission documentation upload" .
 <https://w3id.org/aief/R030> <https://w3id.org/aief/sectionReference> "§2.3.3" .
 <https://w3id.org/aief/R030> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/R030> <https://w3id.org/aief/requiresEvidence> "Permission documentation upload" .
 # 
 # https://w3id.org/aief/R031
 <https://w3id.org/aief/R031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -5537,9 +5536,9 @@
 <https://w3id.org/aief/R031> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8" .
 <https://w3id.org/aief/R031> <https://w3id.org/aief/requirementID> "R031" .
 <https://w3id.org/aief/R031> <https://w3id.org/aief/requirementText> "Was a DPIA required at each site/source?" .
+<https://w3id.org/aief/R031> <https://w3id.org/aief/requiresEvidence> "DPIA attachment if yes" .
 <https://w3id.org/aief/R031> <https://w3id.org/aief/sectionReference> "§2.3.3" .
 <https://w3id.org/aief/R031> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/R031> <https://w3id.org/aief/requiresEvidence> "DPIA attachment if yes" .
 # 
 # https://w3id.org/aief/R032
 <https://w3id.org/aief/R032> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -5709,9 +5708,9 @@
 <https://w3id.org/aief/R041> <https://w3id.org/aief/isMandatory> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/aief/R041> <https://w3id.org/aief/requirementID> "R041" .
 <https://w3id.org/aief/R041> <https://w3id.org/aief/requirementText> "Step-by-step description of participant recruitment process" .
+<https://w3id.org/aief/R041> <https://w3id.org/aief/requiresEvidence> "Recruitment material attachment" .
 <https://w3id.org/aief/R041> <https://w3id.org/aief/sectionReference> "§2.4" .
 <https://w3id.org/aief/R041> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/R041> <https://w3id.org/aief/requiresEvidence> "Recruitment material attachment" .
 # 
 # https://w3id.org/aief/R042
 <https://w3id.org/aief/R042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/aief/Obligation> .
@@ -5728,16 +5727,15 @@
 <https://w3id.org/aief/R042> <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art3_RightToIntegrity> .
 <https://w3id.org/aief/R042> <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art7_PrivateLife> .
 <https://w3id.org/aief/R042> <https://w3id.org/aief/mapsToRight> <https://w3id.org/aief/Art8_DataProtection> .
-<https://w3id.org/aief/R042> <https://w3id.org/aief/requiresEvidence> <https://w3id.org/aief/ConsentForm> .
 <https://w3id.org/aief/R042> <https://w3id.org/aief/isMandatory> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/aief/R042> <https://w3id.org/aief/legalBasis> "GDPR Art 7" .
 <https://w3id.org/aief/R042> <https://w3id.org/aief/noteText> "Charter Mapping: Art 8; Art 7 Respect for private life" .
 <https://w3id.org/aief/R042> <https://w3id.org/aief/requirementID> "R042" .
 <https://w3id.org/aief/R042> <https://w3id.org/aief/requirementText> "How will consent be obtained and by whom?" .
+<https://w3id.org/aief/R042> <https://w3id.org/aief/requiresEvidence> "Consent form attachment" .
 <https://w3id.org/aief/R042> <https://w3id.org/aief/sectionReference> "REAMS §2.7" .
 <https://w3id.org/aief/R042> <https://w3id.org/aief/sectionReference> "§2.7" .
 <https://w3id.org/aief/R042> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/R042> <https://w3id.org/aief/requiresEvidence> "Consent form attachment" .
 # 
 # https://w3id.org/aief/R043
 <https://w3id.org/aief/R043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -5791,9 +5789,9 @@
 <https://w3id.org/aief/R045> <https://w3id.org/aief/noteText> "Required for contact with children" .
 <https://w3id.org/aief/R045> <https://w3id.org/aief/requirementID> "R045" .
 <https://w3id.org/aief/R045> <https://w3id.org/aief/requirementText> "Is Garda vetting required?" .
+<https://w3id.org/aief/R045> <https://w3id.org/aief/requiresEvidence> "Garda vetting certificate" .
 <https://w3id.org/aief/R045> <https://w3id.org/aief/sectionReference> "§2.7" .
 <https://w3id.org/aief/R045> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/R045> <https://w3id.org/aief/requiresEvidence> "Garda vetting certificate" .
 # 
 # https://w3id.org/aief/R046
 <https://w3id.org/aief/R046> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -6367,9 +6365,9 @@
 <https://w3id.org/aief/R075> <https://w3id.org/aief/noteText> "Submission blocked until all uploaded" .
 <https://w3id.org/aief/R075> <https://w3id.org/aief/requirementID> "R075" .
 <https://w3id.org/aief/R075> <https://w3id.org/aief/requirementText> "All required attachments uploaded (consent forms, certificates, PIL, recruitment material, methods instruments, DPO letter)" .
+<https://w3id.org/aief/R075> <https://w3id.org/aief/requiresEvidence> "System-generated list" .
 <https://w3id.org/aief/R075> <https://w3id.org/aief/sectionReference> "§2.12" .
 <https://w3id.org/aief/R075> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/R075> <https://w3id.org/aief/requiresEvidence> "System-generated list" .
 # 
 # https://w3id.org/aief/R076
 <https://w3id.org/aief/R076> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -6388,9 +6386,9 @@
 <https://w3id.org/aief/R076> <https://w3id.org/aief/noteText> "Must match application form details" .
 <https://w3id.org/aief/R076> <https://w3id.org/aief/requirementID> "R076" .
 <https://w3id.org/aief/R076> <https://w3id.org/aief/requirementText> "Participant Information Leaflet appropriate for target audience (plain English, accessible format)" .
+<https://w3id.org/aief/R076> <https://w3id.org/aief/requiresEvidence> "PIL attachment" .
 <https://w3id.org/aief/R076> <https://w3id.org/aief/sectionReference> "§2.12.3" .
 <https://w3id.org/aief/R076> <https://w3id.org/aief/tierLevel> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/aief/R076> <https://w3id.org/aief/requiresEvidence> "PIL attachment" .
 # 
 # https://w3id.org/aief/R077
 <https://w3id.org/aief/R077> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -6723,16 +6721,10 @@
 # 
 <https://w3id.org/aief/AuditLog> <http://www.w3.org/2000/01/rdf-schema#label> "Audit Log"@en .
 # 
-<https://w3id.org/aief/Certificate> <http://www.w3.org/2000/01/rdf-schema#comment> "A formal certificate demonstrating completion of a required training or qualification." .
-<https://w3id.org/aief/Certificate> <http://www.w3.org/2000/01/rdf-schema#label> "Certificate" .
-# 
 <https://w3id.org/aief/ChildrenRights> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk of harm to children's rights, development, or best interests arising from AI systems affecting minors." .
 <https://w3id.org/aief/ChildrenRights> <http://www.w3.org/2000/01/rdf-schema#label> "Children Rights" .
 # 
 <https://w3id.org/aief/ComplaintMechanism> <http://www.w3.org/2000/01/rdf-schema#label> "Complaint Mechanism"@en .
-# 
-<https://w3id.org/aief/ConsentForm> <http://www.w3.org/2000/01/rdf-schema#comment> "A document through which research participants provide informed consent to participate." .
-<https://w3id.org/aief/ConsentForm> <http://www.w3.org/2000/01/rdf-schema#label> "Consent Form" .
 # 
 <https://w3id.org/aief/DataBreach> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk of unauthorised access to or leakage of personal data held or processed by an AI system." .
 <https://w3id.org/aief/DataBreach> <http://www.w3.org/2000/01/rdf-schema#label> "Data Breach" .
@@ -6851,7 +6843,5 @@
 # 
 <https://w3id.org/aief/WorkplaceSafetyRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk of harm to workers arising from AI system deployment in occupational settings." .
 <https://w3id.org/aief/WorkplaceSafetyRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Workplace Safety Risk" .
-# 
-<https://w3id.org/aief/requiresEvidence> <http://www.w3.org/2000/01/rdf-schema#label> "requires evidence" .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

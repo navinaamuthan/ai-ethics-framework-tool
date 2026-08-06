@@ -337,16 +337,6 @@
     
 
 
-    <!-- https://w3id.org/aief/requiresEvidence -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/aief/requiresEvidence">
-        <rdfs:domain rdf:resource="https://w3id.org/aief/Requirement"/>
-        <rdfs:range rdf:resource="https://w3id.org/aief/Evidence"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/aief/supportsRequirement -->
 
 
@@ -498,6 +488,17 @@
         <rdfs:domain rdf:resource="https://w3id.org/aief/Requirement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>requirement text</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/aief/requiresEvidence -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/aief/requiresEvidence">
+        <rdfs:domain rdf:resource="https://w3id.org/aief/Requirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>requires evidence</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1114,6 +1115,8 @@
 
     <owl:Class rdf:about="https://w3id.org/aief/Certificate">
         <rdfs:subClassOf rdf:resource="https://w3id.org/aief/Evidence"/>
+        <rdfs:comment>A formal certificate demonstrating completion of a required training or qualification.</rdfs:comment>
+        <rdfs:label>Certificate</rdfs:label>
     </owl:Class>
     
 
@@ -1162,6 +1165,8 @@
 
     <owl:Class rdf:about="https://w3id.org/aief/ConsentForm">
         <rdfs:subClassOf rdf:resource="https://w3id.org/aief/Evidence"/>
+        <rdfs:comment>A document through which research participants provide informed consent to participate.</rdfs:comment>
+        <rdfs:label>Consent Form</rdfs:label>
     </owl:Class>
     
 
@@ -2162,9 +2167,9 @@
         <noteText>Charter Mapping: Art 1 Human dignity</noteText>
         <requirementID>ACM001</requirementID>
         <requirementText>Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms</requirementText>
+        <requiresEvidence>Ethics statement in paper</requiresEvidence>
         <sectionReference>ACL §1.1</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Ethics statement in paper</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2195,9 +2200,9 @@
         <noteText>Charter Mapping: Art 3 Integrity of person</noteText>
         <requirementID>ACM002</requirementID>
         <requirementText>Avoid harm — consider how data, code or other outcomes of research may cause harm</requirementText>
+        <requiresEvidence>Ethics statement in paper</requiresEvidence>
         <sectionReference>ACL §1.2</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Ethics statement in paper</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2222,9 +2227,9 @@
         <noteText>Charter Mapping: Art 21 Non-discrimination</noteText>
         <requirementID>ACM003</requirementID>
         <requirementText>Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate</requirementText>
+        <requiresEvidence>Bias analysis section</requiresEvidence>
         <sectionReference>ACL §1.4</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Bias analysis section</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2253,9 +2258,9 @@
         <noteText>Charter Mapping: Art 21 Non-discrimination</noteText>
         <requirementID>ACM004</requirementID>
         <requirementText>Consider and ameliorate biases in data and biased code/model outputs</requirementText>
+        <requiresEvidence>Data statement / bias assessment</requiresEvidence>
         <sectionReference>ACL §1.4</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Data statement / bias assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2282,9 +2287,9 @@
         <noteText>Charter Mapping: Art 17 Right to property</noteText>
         <requirementID>ACM005</requirementID>
         <requirementText>Respect intellectual property and data/code ownership — cite creators of artefacts used and use them as intended (respect licences)</requirementText>
+        <requiresEvidence>Citation and licence compliance</requiresEvidence>
         <sectionReference>ACL §1.5</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Citation and licence compliance</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2307,9 +2312,9 @@
         <noteText>Charter Mapping: Art 7 Private life; Art 8 Data protection</noteText>
         <requirementID>ACM006</requirementID>
         <requirementText>Respect privacy — obtain informed consent where required and protect personally identifiable information</requirementText>
+        <requiresEvidence>IRB/ethics approval; consent forms</requiresEvidence>
         <sectionReference>ACL §1.6</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>IRB/ethics approval; consent forms</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2331,9 +2336,9 @@
         <noteText>Charter Mapping: Art 1 Human dignity</noteText>
         <requirementID>ACM007</requirementID>
         <requirementText>Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications</requirementText>
+        <requiresEvidence>Risk analysis section in paper</requiresEvidence>
         <sectionReference>ACL §2.5</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Risk analysis section in paper</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2354,9 +2359,9 @@
         <legalBasis>ACL Code of Ethics §2.5</legalBasis>
         <requirementID>ACM008</requirementID>
         <requirementText>Consider possible risks and impacts of the research approach itself (not just applications)</requirementText>
+        <requiresEvidence>Method risk discussion</requiresEvidence>
         <sectionReference>ACL §2.5</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Method risk discussion</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2378,9 +2383,9 @@
         <noteText>Charter Mapping: Art 8 Data protection</noteText>
         <requirementID>ACM009</requirementID>
         <requirementText>Access computing and communication resources only when authorised or compelled by public good</requirementText>
+        <requiresEvidence>Data access documentation</requiresEvidence>
         <sectionReference>ACL §2.8</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Data access documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2402,9 +2407,9 @@
         <legalBasis>ACL Code of Ethics §2.9</legalBasis>
         <requirementID>ACM010</requirementID>
         <requirementText>Design and implement systems that are robustly and usably secure — especially systems close to production deployment</requirementText>
+        <requiresEvidence>Security assessment</requiresEvidence>
         <sectionReference>ACL §2.9</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Security assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2429,9 +2434,9 @@
         <noteText>Charter Mapping: Art 31 Fair working conditions</noteText>
         <requirementID>ACM011</requirementID>
         <requirementText>Manage personnel and resources to enhance quality of working life — consider how participation of annotators/crowdworkers may cause benefits or harms</requirementText>
+        <requiresEvidence>Annotator welfare documentation</requiresEvidence>
         <sectionReference>ACL §3.3</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Annotator welfare documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2462,9 +2467,9 @@
         <noteText>Charter Mapping: Art 37 Environmental protection</noteText>
         <requirementID>ACM012</requirementID>
         <requirementText>Consider and ameliorate negative impacts of approach on political, social or natural environment</requirementText>
+        <requiresEvidence>Environmental/social impact statement</requiresEvidence>
         <sectionReference>ACL §1.1</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</tierLevel>
-        <requiresEvidence>Environmental/social impact statement</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2491,9 +2496,9 @@
         <noteText>Charter Mapping: Art 1 Human dignity</noteText>
         <requirementID>ACM013</requirementID>
         <requirementText>Discuss dual use potential — ways research could be misused and mitigations</requirementText>
+        <requiresEvidence>Dual use discussion</requiresEvidence>
         <sectionReference>ACL Dual Use</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</tierLevel>
-        <requiresEvidence>Dual use discussion</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2516,9 +2521,9 @@
         <noteText>Charter Mapping: Art 31 Fair working conditions</noteText>
         <requirementID>ACM014</requirementID>
         <requirementText>All human research subjects or participants must receive appropriate compensation — respect minimum hourly rate in region where work is carried out</requirementText>
+        <requiresEvidence>Payment documentation</requiresEvidence>
         <sectionReference>NeurIPS Human Subjects</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Payment documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2541,9 +2546,9 @@
         <noteText>Charter Mapping: Art 1 Human dignity</noteText>
         <requirementID>ACM015</requirementID>
         <requirementText>Research involving human participants must follow existing institutional protocols (IRB or equivalent) — if no formal process exists, undergo equivalent informal ethics review</requirementText>
+        <requiresEvidence>IRB/ethics approval or peer review</requiresEvidence>
         <sectionReference>NeurIPS Human Subjects</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>IRB/ethics approval or peer review</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2569,9 +2574,9 @@
         <noteText>Charter Mapping: Art 7 Private life; Art 8 Data protection</noteText>
         <requirementID>ACM016</requirementID>
         <requirementText>Datasets should minimise exposure of personally identifiable information unless informed consent is provided</requirementText>
+        <requiresEvidence>Data anonymisation documentation</requiresEvidence>
         <sectionReference>NeurIPS Privacy</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Data anonymisation documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2593,9 +2598,9 @@
         <noteText>Charter Mapping: Art 8 Data protection</noteText>
         <requirementID>ACM017</requirementID>
         <requirementText>Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained</requirementText>
+        <requiresEvidence>Consent documentation</requiresEvidence>
         <sectionReference>NeurIPS Consent</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Consent documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2616,9 +2621,9 @@
         <legalBasis>NeurIPS Code of Ethics</legalBasis>
         <requirementID>ACM018</requirementID>
         <requirementText>Authors must confirm datasets are still available for use — deprecated datasets should not be used except for audit or critical assessment</requirementText>
+        <requiresEvidence>Dataset status verification</requiresEvidence>
         <sectionReference>NeurIPS Deprecated Data</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Dataset status verification</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2641,9 +2646,9 @@
         <noteText>Charter Mapping: Art 17 Right to property</noteText>
         <requirementID>ACM019</requirementID>
         <requirementText>Respect terms of datasets with defined licences (CC 4.0, MIT etc)</requirementText>
+        <requiresEvidence>Licence compliance</requiresEvidence>
         <sectionReference>NeurIPS Copyright</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Licence compliance</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2670,9 +2675,9 @@
         <noteText>Charter Mapping: Art 21 Non-discrimination</noteText>
         <requirementID>ACM020</requirementID>
         <requirementText>Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated</requirementText>
+        <requiresEvidence>Representativeness statement</requiresEvidence>
         <sectionReference>NeurIPS Representation</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Representativeness statement</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2695,9 +2700,9 @@
         <noteText>No weapons research accepted</noteText>
         <requirementID>ACM021</requirementID>
         <requirementText>Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse</requirementText>
+        <requiresEvidence>Safety assessment</requiresEvidence>
         <sectionReference>NeurIPS Safety</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Safety assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2718,9 +2723,9 @@
         <legalBasis>NeurIPS Code of Ethics</legalBasis>
         <requirementID>ACM022</requirementID>
         <requirementText>Consider risk that applications could open security vulnerabilities or cause serious accidents — recommend or implement protections</requirementText>
+        <requiresEvidence>Security risk assessment</requiresEvidence>
         <sectionReference>NeurIPS Security</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Security risk assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2750,9 +2755,9 @@
         <noteText>Charter Mapping: Art 21 Non-discrimination; Art 35 Health care</noteText>
         <requirementID>ACM023</requirementID>
         <requirementText>Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access</requirementText>
+        <requiresEvidence>Discrimination impact assessment</requiresEvidence>
         <sectionReference>NeurIPS Discrimination</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Discrimination impact assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2780,9 +2785,9 @@
         <noteText>Charter Mapping: Art 7 Private life; Art 8 Data protection</noteText>
         <requirementID>ACM024</requirementID>
         <requirementText>Consult local laws before collecting or analysing bulk surveillance data — surveillance must not predict protected categories or endanger individual well-being</requirementText>
+        <requiresEvidence>Legal compliance check</requiresEvidence>
         <sectionReference>NeurIPS Surveillance</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Legal compliance check</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2813,9 +2818,9 @@
         <noteText>Charter Mapping: Art 1 Human dignity; Art 11 Freedom of expression</noteText>
         <requirementID>ACM025</requirementID>
         <requirementText>Communicate whether approach could facilitate deceptive interactions causing harm (theft, fraud, harassment), impersonate public figures, influence political processes, or promote hate speech</requirementText>
+        <requiresEvidence>Misuse risk statement</requiresEvidence>
         <sectionReference>NeurIPS Deception</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Misuse risk statement</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2835,9 +2840,9 @@
         <noteText>Charter Mapping: Art 37 Environmental protection</noteText>
         <requirementID>ACM026</requirementID>
         <requirementText>Consider whether research negatively impacts environment — fossil fuel extraction, consumption, greenhouse gas production</requirementText>
+        <requiresEvidence>Environmental impact statement</requiresEvidence>
         <sectionReference>NeurIPS Environment</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Environmental impact statement</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2869,9 +2874,9 @@
         <noteText>Charter Mapping: Art 1-50 (multiple)</noteText>
         <requirementID>ACM027</requirementID>
         <requirementText>Research must not build upon or facilitate illegal activity — strongly discourage work that denies rights to privacy, speech, health, liberty, security, legal personhood, freedom of conscience/religion</requirementText>
+        <requiresEvidence>Human rights compliance</requiresEvidence>
         <sectionReference>NeurIPS Human Rights</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Human rights compliance</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2898,9 +2903,9 @@
         <noteText>Charter Mapping: Art 21 Non-discrimination; Art 23 Equality</noteText>
         <requirementID>ACM028</requirementID>
         <requirementText>Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics</requirementText>
+        <requiresEvidence>Bias audit</requiresEvidence>
         <sectionReference>NeurIPS Bias</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Bias audit</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2921,9 +2926,9 @@
         <legalBasis>NeurIPS Code of Ethics</legalBasis>
         <requirementID>ACM029</requirementID>
         <requirementText>Provide data and model documentation via structured templates (Model Cards, Datasheets for Datasets)</requirementText>
+        <requiresEvidence>Model Card / Datasheet</requiresEvidence>
         <sectionReference>NeurIPS Mitigation</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Model Card / Datasheet</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2942,9 +2947,9 @@
         <legalBasis>NeurIPS Code of Ethics</legalBasis>
         <requirementID>ACM030</requirementID>
         <requirementText>Provide licences for released data or models including intended use and limitations</requirementText>
+        <requiresEvidence>Licence document</requiresEvidence>
         <sectionReference>NeurIPS Mitigation</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Licence document</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2967,9 +2972,9 @@
         <noteText>Charter Mapping: Art 8 Data protection</noteText>
         <requirementID>ACM031</requirementID>
         <requirementText>Use privacy protocols, encryption and anonymisation to reduce risk of data leakage — stronger measures for sensitive data</requirementText>
+        <requiresEvidence>Security documentation</requiresEvidence>
         <sectionReference>NeurIPS Mitigation</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Security documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -2990,9 +2995,9 @@
         <legalBasis>NeurIPS Code of Ethics</legalBasis>
         <requirementID>ACM032</requirementID>
         <requirementText>High-risk models must be released with safeguards for controlled use (e.g. code of conduct for access)</requirementText>
+        <requiresEvidence>Release policy</requiresEvidence>
         <sectionReference>NeurIPS Mitigation</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Release policy</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3011,9 +3016,9 @@
         <legalBasis>NeurIPS Code of Ethics</legalBasis>
         <requirementID>ACM033</requirementID>
         <requirementText>Make accessible all information required to understand research artefacts (code, environment, weights, hyperparameters) to enable external scrutiny</requirementText>
+        <requiresEvidence>Reproducibility package</requiresEvidence>
         <sectionReference>NeurIPS Mitigation</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Reproducibility package</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3037,9 +3042,9 @@
         <legalBasis>NeurIPS Code of Ethics</legalBasis>
         <requirementID>ACM034</requirementID>
         <requirementText>Disclose information sufficient for reproduction of results</requirementText>
+        <requiresEvidence>Reproducibility statement</requiresEvidence>
         <sectionReference>NeurIPS Mitigation</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Reproducibility statement</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3061,9 +3066,9 @@
         <legalBasis>NeurIPS Code of Ethics</legalBasis>
         <requirementID>ACM035</requirementID>
         <requirementText>Ensure adequate awareness of regional legal requirements — additional justification required where compliance could not be met due to human rights issues</requirementText>
+        <requiresEvidence>Legal compliance statement</requiresEvidence>
         <sectionReference>NeurIPS Mitigation</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Legal compliance statement</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3174,9 +3179,9 @@
         <noteText>Charter Mapping: All Charter rights potentially</noteText>
         <requirementID>AI001</requirementID>
         <requirementText>Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)</requirementText>
+        <requiresEvidence>Necessity determination document</requiresEvidence>
         <sectionReference>Art 27-1</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Necessity determination document</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3198,9 +3203,9 @@
         <legalBasis>AI Act Art 27-1</legalBasis>
         <requirementID>AI002</requirementID>
         <requirementText>Record necessity status: FRIA Required or FRIA Not Required</requirementText>
+        <requiresEvidence>Written determination</requiresEvidence>
         <sectionReference>Art 27-1</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Written determination</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3221,9 +3226,9 @@
         <legalBasis>AI Act Art 27-2</legalBasis>
         <requirementID>AI003</requirementID>
         <requirementText>Record when FRIA was created, modified, submitted, accepted</requirementText>
+        <requiresEvidence>Dated documentation</requiresEvidence>
         <sectionReference>Art 27-2</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Dated documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3244,9 +3249,9 @@
         <legalBasis>AI Act Art 27-2</legalBasis>
         <requirementID>AI004</requirementID>
         <requirementText>Record who conducted the FRIA (organisation, personnel, contributors)</requirementText>
+        <requiresEvidence>Named roles</requiresEvidence>
         <sectionReference>Art 27-2</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Named roles</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3267,9 +3272,9 @@
         <legalBasis>AI Act Art 27-2</legalBasis>
         <requirementID>AI005</requirementID>
         <requirementText>Record identifier/version of FRIA — must be regularly updated</requirementText>
+        <requiresEvidence>Version tracking</requiresEvidence>
         <sectionReference>Art 27-2</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Version tracking</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3290,9 +3295,9 @@
         <legalBasis>AI Act Art 27-2</legalBasis>
         <requirementID>AI006</requirementID>
         <requirementText>Record conformance to any codes of conduct</requirementText>
+        <requiresEvidence>Code of conduct reference</requiresEvidence>
         <sectionReference>Art 27-2</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Code of conduct reference</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3313,9 +3318,9 @@
         <legalBasis>AI Act Art 27-1a</legalBasis>
         <requirementID>AI007</requirementID>
         <requirementText>Describe deployer&apos;s processes in which the AI system will be used</requirementText>
+        <requiresEvidence>Process description</requiresEvidence>
         <sectionReference>Art 27-1a</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Process description</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3341,9 +3346,9 @@
         <legalBasis>AI Act Art 27-1a</legalBasis>
         <requirementID>AI008</requirementID>
         <requirementText>State the intended purpose of the AI system</requirementText>
+        <requiresEvidence>Purpose statement</requiresEvidence>
         <sectionReference>Art 27-1a</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Purpose statement</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3364,9 +3369,9 @@
         <legalBasis>AI Act Art 27-1b</legalBasis>
         <requirementID>AI009</requirementID>
         <requirementText>Specify the period of time and frequency the AI system is intended to be used</requirementText>
+        <requiresEvidence>Duration/frequency declaration</requiresEvidence>
         <sectionReference>Art 27-1b</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Duration/frequency declaration</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3388,9 +3393,9 @@
         <legalBasis>AI Act Art 27-1b</legalBasis>
         <requirementID>AI010</requirementID>
         <requirementText>Describe the intended use — specific deployment scenarios distinct from intended purpose</requirementText>
+        <requiresEvidence>Use-case descriptions</requiresEvidence>
         <sectionReference>Art 27-1b</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Use-case descriptions</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3420,9 +3425,9 @@
         <noteText>Charter Mapping: Art 21 Non-discrimination; Art 24 Rights of child</noteText>
         <requirementID>AI011</requirementID>
         <requirementText>Identify categories of natural persons and groups likely to be affected by the AI system in the specific context</requirementText>
+        <requiresEvidence>Affected population description</requiresEvidence>
         <sectionReference>Art 27-1c</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Affected population description</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3445,9 +3450,9 @@
         <legalBasis>AI Act Art 27-1c</legalBasis>
         <requirementID>AI012</requirementID>
         <requirementText>Assess the likelihood that those persons/groups will be affected</requirementText>
+        <requiresEvidence>Likelihood assessment</requiresEvidence>
         <sectionReference>Art 27-1c</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Likelihood assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3470,9 +3475,9 @@
         <noteText>Charter Mapping: Art 1 Human dignity; Art 3 Integrity</noteText>
         <requirementID>AI013</requirementID>
         <requirementText>Identify consequences and impacts on affected persons/groups</requirementText>
+        <requiresEvidence>Impact description</requiresEvidence>
         <sectionReference>Art 27-1c</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Impact description</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3493,9 +3498,9 @@
         <noteText>Charter Mapping: Map each risk to specific Charter article</noteText>
         <requirementID>AI014</requirementID>
         <requirementText>Identify specific risks of harm to fundamental rights</requirementText>
+        <requiresEvidence>Risk register</requiresEvidence>
         <sectionReference>Art 27-1d</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Risk register</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3517,9 +3522,9 @@
         <legalBasis>AI Act Art 27-1e</legalBasis>
         <requirementID>AI015</requirementID>
         <requirementText>Describe human oversight measures in place</requirementText>
+        <requiresEvidence>Oversight documentation</requiresEvidence>
         <sectionReference>Art 27-1e</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Oversight documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3550,9 +3555,9 @@
         <noteText>Charter Mapping: Art 47 Right to effective remedy</noteText>
         <requirementID>AI016</requirementID>
         <requirementText>Specify what humans can and cannot do — ability to correct outputs, ability to opt out, override capability</requirementText>
+        <requiresEvidence>Permissions/restrictions list</requiresEvidence>
         <sectionReference>Art 27-1e</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Permissions/restrictions list</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3577,9 +3582,9 @@
         <legalBasis>AI Act Art 27-1e</legalBasis>
         <requirementID>AI017</requirementID>
         <requirementText>Reference instructions for use provided by the AI system provider</requirementText>
+        <requiresEvidence>Provider documentation</requiresEvidence>
         <sectionReference>Art 27-1e</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Provider documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3601,9 +3606,9 @@
         <noteText>Charter Mapping: Art 47 Right to effective remedy</noteText>
         <requirementID>AI018</requirementID>
         <requirementText>Specify measures to be taken if risks materialise — internal governance arrangements and complaint mechanisms</requirementText>
+        <requiresEvidence>Mitigation plan + incident procedures</requiresEvidence>
         <sectionReference>Art 27-1f</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Mitigation plan + incident procedures</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3624,9 +3629,9 @@
         <legalBasis>AI Act Art 27-2</legalBasis>
         <requirementID>AI019</requirementID>
         <requirementText>If relying on a previously conducted FRIA, document which prior FRIA is being reused and what has changed</requirementText>
+        <requiresEvidence>Prior FRIA reference</requiresEvidence>
         <sectionReference>Art 27-2</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Prior FRIA reference</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3649,9 +3654,9 @@
         <noteText>Charter Mapping: Art 8 Data protection</noteText>
         <requirementID>AI020</requirementID>
         <requirementText>If a DPIA already exists under GDPR, document how it complements the FRIA — what it covers and what gaps remain</requirementText>
+        <requiresEvidence>DPIA cross-reference</requiresEvidence>
         <sectionReference>Art 27-4</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>DPIA cross-reference</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3678,9 +3683,9 @@
         <legalBasis>AI Act Art 27-1</legalBasis>
         <requirementID>AI021</requirementID>
         <requirementText>Determine FRIA outcome status: Unacceptable Risk / High Residual Risk / Risks Acceptable / Risks Mitigated</requirementText>
+        <requiresEvidence>Outcome determination</requiresEvidence>
         <sectionReference>Art 27-1</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Outcome determination</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3706,9 +3711,9 @@
         <noteText>Charter Mapping: Each Charter article individually</noteText>
         <requirementID>AI022</requirementID>
         <requirementText>For each affected fundamental right, state whether there is an impact and its severity</requirementText>
+        <requiresEvidence>Rights impact matrix</requiresEvidence>
         <sectionReference>Art 27-1</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Rights impact matrix</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3732,9 +3737,9 @@
         <noteText>Charter Mapping: Art 21 subcategories</noteText>
         <requirementID>AI023</requirementID>
         <requirementText>For granular impacts (e.g. discrimination based on sex, race, gender under Art 21), specify the category of impact</requirementText>
+        <requiresEvidence>Granular impact detail</requiresEvidence>
         <sectionReference>Art 27-1</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Granular impact detail</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3759,9 +3764,9 @@
         <legalBasis>AI Act Art 27-3</legalBasis>
         <requirementID>AI024</requirementID>
         <requirementText>Assess whether notification to market surveillance authority is required or exempt under Art 46-1</requirementText>
+        <requiresEvidence>Notification status determination</requiresEvidence>
         <sectionReference>Art 27-3</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Notification status determination</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3786,9 +3791,9 @@
         <legalBasis>AI Act Art 27-3</legalBasis>
         <requirementID>AI025</requirementID>
         <requirementText>If required: notify market surveillance authority of FRIA results</requirementText>
+        <requiresEvidence>Notification record / proof of submission</requiresEvidence>
         <sectionReference>Art 27-3</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Notification record / proof of submission</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3810,9 +3815,9 @@
         <legalBasis>AI Act Art 27-5</legalBasis>
         <requirementID>AI026</requirementID>
         <requirementText>Complete the FRIA questionnaire template provided by the AI Office</requirementText>
+        <requiresEvidence>Completed questionnaire</requiresEvidence>
         <sectionReference>Art 27-5</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Completed questionnaire</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -3833,9 +3838,9 @@
         <legalBasis>AI Act Art 27-5</legalBasis>
         <requirementID>AI027</requirementID>
         <requirementText>Document whether an automated tool was used to support the FRIA process</requirementText>
+        <requiresEvidence>Tool documentation</requiresEvidence>
         <sectionReference>Art 27-5</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Tool documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -5536,13 +5541,6 @@
     
 
 
-    <!-- https://w3id.org/aief/Certificate -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/aief/Certificate"/>
-    
-
-
     <!-- https://w3id.org/aief/ChildrenRights -->
 
 
@@ -5554,13 +5552,6 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/aief/ComplaintMechanism"/>
-    
-
-
-    <!-- https://w3id.org/aief/ConsentForm -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/aief/ConsentForm"/>
     
 
 
@@ -5731,9 +5722,9 @@
         <noteText>Charter Mapping: Art 6 Right to liberty; Art 1 Human dignity</noteText>
         <requirementID>HE001</requirementID>
         <requirementText>AI system must not deprive end-users or affected persons of ability to make decisions about their own lives or remove basic freedoms</requirementText>
+        <requiresEvidence>Ethics self-assessment</requiresEvidence>
         <sectionReference>Human Agency</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Ethics self-assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -5759,9 +5750,9 @@
         <noteText>Charter Mapping: Art 1 Human dignity; Art 47 Right to effective remedy</noteText>
         <requirementID>HE002</requirementID>
         <requirementText>AI system must not autonomously make decisions about fundamental personal, economic, social or political issues normally decided by humans, without human oversight and redress</requirementText>
+        <requiresEvidence>Ethics self-assessment</requiresEvidence>
         <sectionReference>Human Agency</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Ethics self-assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -5791,9 +5782,9 @@
         <noteText>Charter Mapping: Art 1 Human dignity; Art 3 Integrity</noteText>
         <requirementID>HE003</requirementID>
         <requirementText>AI system must not subordinate, coerce, deceive, manipulate, objectify or dehumanize end-users or affected persons</requirementText>
+        <requiresEvidence>Ethics self-assessment</requiresEvidence>
         <sectionReference>Human Agency</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Ethics self-assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -5820,9 +5811,9 @@
         <noteText>Charter Mapping: Art 3 Integrity of person</noteText>
         <requirementID>HE004</requirementID>
         <requirementText>AI system must not purposely stimulate attachment or addiction</requirementText>
+        <requiresEvidence>Ethics self-assessment</requiresEvidence>
         <sectionReference>Human Agency</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Ethics self-assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -5853,9 +5844,9 @@
         <noteText>Charter Mapping: Art 6 Right to liberty</noteText>
         <requirementID>HE005</requirementID>
         <requirementText>AI system should give operators and end-users ability to control, direct and intervene in basic operations</requirementText>
+        <requiresEvidence>Design documentation</requiresEvidence>
         <sectionReference>Human Agency</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Design documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -5881,9 +5872,9 @@
         <noteText>Charter Mapping: Art 8 Data protection; Art 11 Freedom of expression</noteText>
         <requirementID>HE006</requirementID>
         <requirementText>End-users and affected persons must receive comprehensible information about the AI logic, significance and envisaged consequences</requirementText>
+        <requiresEvidence>User-facing documentation</requiresEvidence>
         <sectionReference>Human Agency</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>User-facing documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -5919,9 +5910,9 @@
         <noteText>Charter Mapping: Art 8 Data protection</noteText>
         <requirementID>HE007</requirementID>
         <requirementText>AI system must process personal data lawfully, fairly and transparently</requirementText>
+        <requiresEvidence>GDPR compliance documentation</requiresEvidence>
         <sectionReference>Privacy &amp; Data</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>GDPR compliance documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -5944,9 +5935,9 @@
         <noteText>Charter Mapping: Art 8 Data protection</noteText>
         <requirementID>HE008</requirementID>
         <requirementText>Data minimisation and data protection by design and by default must be integrated</requirementText>
+        <requiresEvidence>Design documentation</requiresEvidence>
         <sectionReference>Privacy &amp; Data</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Design documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -5969,9 +5960,9 @@
         <noteText>Charter Mapping: Art 8 Data protection</noteText>
         <requirementID>HE009</requirementID>
         <requirementText>Appropriate technical and organisational measures must be in place to safeguard rights of data subjects (anonymisation, pseudonymisation, encryption, aggregation)</requirementText>
+        <requiresEvidence>Security documentation</requiresEvidence>
         <sectionReference>Privacy &amp; Data</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Security documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -5993,9 +5984,9 @@
         <noteText>Charter Mapping: Art 8 Data protection</noteText>
         <requirementID>HE010</requirementID>
         <requirementText>Strong security measures must prevent data breaches and leakages</requirementText>
+        <requiresEvidence>Security audit / logging</requiresEvidence>
         <sectionReference>Privacy &amp; Data</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Security audit / logging</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6018,9 +6009,9 @@
         <noteText>Charter Mapping: Art 8 Data protection</noteText>
         <requirementID>HE011</requirementID>
         <requirementText>Data must be acquired, stored and used in a manner auditable by humans</requirementText>
+        <requiresEvidence>Audit trail</requiresEvidence>
         <sectionReference>Privacy &amp; Data</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Audit trail</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6046,9 +6037,9 @@
         <noteText>MUST requirement</noteText>
         <requirementID>HE012</requirementID>
         <requirementText>Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity or is sufficiently neutral</requirementText>
+        <requiresEvidence>Proposal text / data statement</requiresEvidence>
         <sectionReference>Fairness</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Proposal text / data statement</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6077,9 +6068,9 @@
         <noteText>Charter Mapping: Art 21 Non-discrimination; Art 23 Equality</noteText>
         <requirementID>HE013</requirementID>
         <requirementText>Document how bias in input data and algorithmic design will be identified and avoided</requirementText>
+        <requiresEvidence>Bias assessment report</requiresEvidence>
         <sectionReference>Fairness</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Bias assessment report</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6103,9 +6094,9 @@
         <noteText>Encouraged not mandatory</noteText>
         <requirementID>HE014</requirementID>
         <requirementText>AI system should be designed for universal accessibility — usable by end-users with different abilities</requirementText>
+        <requiresEvidence>Accessibility compliance</requiresEvidence>
         <sectionReference>Fairness</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</tierLevel>
-        <requiresEvidence>Accessibility compliance</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6135,9 +6126,9 @@
         <noteText>MUST requirement</noteText>
         <requirementID>HE015</requirementID>
         <requirementText>Possible negative social impacts on certain groups must be mitigated, including impacts beyond algorithmic bias</requirementText>
+        <requiresEvidence>Impact assessment</requiresEvidence>
         <sectionReference>Fairness</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Impact assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6160,9 +6151,9 @@
         <noteText>Charter Mapping: Art 21 Non-discrimination</noteText>
         <requirementID>HE016</requirementID>
         <requirementText>Methods to identify and mitigate negative social impacts in medium and longer term must be documented in proposal</requirementText>
+        <requiresEvidence>Proposal text</requiresEvidence>
         <sectionReference>Fairness</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Proposal text</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6189,9 +6180,9 @@
         <noteText>Charter Mapping: Art 1 Human dignity; Art 3 Integrity</noteText>
         <requirementID>HE017</requirementID>
         <requirementText>AI system must not unduly or unfairly reduce psychological and emotional well-being of end-users and stakeholders</requirementText>
+        <requiresEvidence>Well-being assessment</requiresEvidence>
         <sectionReference>Well-being</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Well-being assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6215,9 +6206,9 @@
         <noteText>MUST requirement</noteText>
         <requirementID>HE018</requirementID>
         <requirementText>AI development must be mindful of environmental sustainability — document environmental impact and mitigation steps</requirementText>
+        <requiresEvidence>Environmental impact statement</requiresEvidence>
         <sectionReference>Well-being</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Environmental impact statement</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6247,9 +6238,9 @@
         <noteText>Charter Mapping: Art 11 Freedom of expression; Art 12 Freedom of assembly</noteText>
         <requirementID>HE019</requirementID>
         <requirementText>AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations</requirementText>
+        <requiresEvidence>Social impact assessment</requiresEvidence>
         <sectionReference>Well-being</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Social impact assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6277,9 +6268,9 @@
         <noteText>Charter Mapping: Art 31 Fair working conditions</noteText>
         <requirementID>HE020</requirementID>
         <requirementText>AI and robotics systems must not reduce safety in the workplace</requirementText>
+        <requiresEvidence>Safety compliance</requiresEvidence>
         <sectionReference>Well-being</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Safety compliance</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6309,9 +6300,9 @@
         <noteText>Especially chatbots</noteText>
         <requirementID>HE021</requirementID>
         <requirementText>It must be made clear to end-users they are interacting with an AI system</requirementText>
+        <requiresEvidence>User notification / disclosure</requiresEvidence>
         <sectionReference>Transparency</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>User notification / disclosure</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6338,9 +6329,9 @@
         <noteText>Charter Mapping: Art 11 Freedom of expression</noteText>
         <requirementID>HE022</requirementID>
         <requirementText>Purpose, capabilities, limitations, benefits and risks of AI system must be openly communicated to end-users and stakeholders</requirementText>
+        <requiresEvidence>User documentation</requiresEvidence>
         <sectionReference>Transparency</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>User documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6366,9 +6357,9 @@
         <legalBasis>EU Charter</legalBasis>
         <requirementID>HE023</requirementID>
         <requirementText>Traceability measures must be considered for the AI system&apos;s entire lifecycle</requirementText>
+        <requiresEvidence>Traceability documentation</requiresEvidence>
         <sectionReference>Transparency</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Traceability documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6395,9 +6386,9 @@
         <noteText>Particularly for high-impact decisions</noteText>
         <requirementID>HE024</requirementID>
         <requirementText>Research proposal should explain how decisions made by system will be explainable to users, including reasons for decisions</requirementText>
+        <requiresEvidence>Explainability documentation</requiresEvidence>
         <sectionReference>Transparency</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</tierLevel>
-        <requiresEvidence>Explainability documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6423,9 +6414,9 @@
         <noteText>MUST requirement</noteText>
         <requirementID>HE025</requirementID>
         <requirementText>Development processes must keep records of all relevant decisions regarding ethical compliance</requirementText>
+        <requiresEvidence>Ethics decision log</requiresEvidence>
         <sectionReference>Transparency</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Ethics decision log</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6448,9 +6439,9 @@
         <noteText>MUST requirement</noteText>
         <requirementID>HE026</requirementID>
         <requirementText>Document how ethically and socially undesirable effects will be detected, stopped and prevented from reoccurring</requirementText>
+        <requiresEvidence>Detection/remediation plan</requiresEvidence>
         <sectionReference>Accountability</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Detection/remediation plan</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6473,9 +6464,9 @@
         <noteText>Charter Mapping: Art 47 Right to effective remedy</noteText>
         <requirementID>HE027</requirementID>
         <requirementText>AI system must allow for human oversight and control over decision cycles and operation, unless compelling justification provided</requirementText>
+        <requiresEvidence>Oversight documentation</requiresEvidence>
         <sectionReference>Accountability</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Oversight documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6498,9 +6489,9 @@
         <noteText>Scaled to research type</noteText>
         <requirementID>HE028</requirementID>
         <requirementText>Research proposal should include evaluation of possible ethics risks including risk assessment procedures and post-deployment mitigation</requirementText>
+        <requiresEvidence>Risk assessment</requiresEvidence>
         <sectionReference>Accountability</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</tierLevel>
-        <requiresEvidence>Risk assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6522,9 +6513,9 @@
         <noteText>Charter Mapping: Art 47 Right to effective remedy</noteText>
         <requirementID>HE029</requirementID>
         <requirementText>Consider how end-users, data subjects and third parties can report complaints, ethical concerns or adverse events</requirementText>
+        <requiresEvidence>Complaint mechanism</requiresEvidence>
         <sectionReference>Accountability</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</tierLevel>
-        <requiresEvidence>Complaint mechanism</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6545,9 +6536,9 @@
         <legalBasis>EU Charter</legalBasis>
         <requirementID>HE030</requirementID>
         <requirementText>All AI systems should be auditable by independent third parties — system should generate human-accessible logs</requirementText>
+        <requiresEvidence>Audit logs</requiresEvidence>
         <sectionReference>Accountability</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</tierLevel>
-        <requiresEvidence>Audit logs</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6570,9 +6561,9 @@
         <noteText>Charter Mapping: Art 8 Data protection</noteText>
         <requirementID>HE031</requirementID>
         <requirementText>Ensure processing of personal data complies with GDPR — prepare specific data protection policy</requirementText>
+        <requiresEvidence>Data protection policy</requiresEvidence>
         <sectionReference>Data Collection</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Data protection policy</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6604,9 +6595,9 @@
         <noteText>Charter Mapping: Art 21 Non-discrimination</noteText>
         <requirementID>HE032</requirementID>
         <requirementText>Input, training and output data must all be analysed for bias — verify data accounts for diversity in gender, race, age, sexual orientation, national origin, religion, health, disability</requirementText>
+        <requiresEvidence>Bias assessment</requiresEvidence>
         <sectionReference>Data Collection</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Bias assessment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6631,9 +6622,9 @@
         <noteText>Charter Mapping: Art 21 Non-discrimination</noteText>
         <requirementID>HE033</requirementID>
         <requirementText>Analyse training data for relevance and representativeness — undertake formal bias assessment</requirementText>
+        <requiresEvidence>Data quality report</requiresEvidence>
         <sectionReference>Data Collection</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Data quality report</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6655,9 +6646,9 @@
         <noteText>Whenever possible</noteText>
         <requirementID>HE034</requirementID>
         <requirementText>Ensure ability to go back to each state the system has been in to determine training data used at any point</requirementText>
+        <requiresEvidence>Versioning / provenance system</requiresEvidence>
         <sectionReference>Data Collection</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</tierLevel>
-        <requiresEvidence>Versioning / provenance system</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6682,9 +6673,9 @@
         <noteText>Charter Mapping: Art 8 Data protection</noteText>
         <requirementID>HE035</requirementID>
         <requirementText>If creating inferred personal data or aggregating datasets, new data must receive same protection level as original data</requirementText>
+        <requiresEvidence>Data governance documentation</requiresEvidence>
         <sectionReference>Design &amp; Build</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Data governance documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6707,9 +6698,9 @@
         <noteText>Charter Mapping: Art 8 Data protection</noteText>
         <requirementID>HE036</requirementID>
         <requirementText>Ensure no new personal data collected or created during development or use unless necessary</requirementText>
+        <requiresEvidence>Data minimisation documentation</requiresEvidence>
         <sectionReference>Design &amp; Build</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Data minimisation documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6731,9 +6722,9 @@
         <noteText>Charter Mapping: Art 21 Non-discrimination</noteText>
         <requirementID>HE037</requirementID>
         <requirementText>Check for algorithmic bias during detailed development phase using methods such as counterfactual evaluation</requirementText>
+        <requiresEvidence>Bias testing report</requiresEvidence>
         <sectionReference>Design &amp; Build</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Bias testing report</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6756,9 +6747,9 @@
         <noteText>Charter Mapping: Art 26 Integration of persons with disabilities</noteText>
         <requirementID>HE038</requirementID>
         <requirementText>Ensure interface design honours universal accessibility principles</requirementText>
+        <requiresEvidence>Accessibility review</requiresEvidence>
         <sectionReference>Design &amp; Build</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</tierLevel>
-        <requiresEvidence>Accessibility review</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6780,9 +6771,9 @@
         <legalBasis>EU Charter</legalBasis>
         <requirementID>HE039</requirementID>
         <requirementText>Establish traceability and accountability measures covering: design methods, testing methods, system outcomes, and alternative decision scenarios</requirementText>
+        <requiresEvidence>Traceability documentation</requiresEvidence>
         <sectionReference>Design &amp; Build</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Traceability documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6803,9 +6794,9 @@
         <legalBasis>EU Charter</legalBasis>
         <requirementID>HE040</requirementID>
         <requirementText>Code must be documented and explained within software and ancillary documentation</requirementText>
+        <requiresEvidence>Code documentation</requiresEvidence>
         <sectionReference>Design &amp; Build</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Code documentation</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6830,9 +6821,9 @@
         <legalBasis>EU Charter</legalBasis>
         <requirementID>HE041</requirementID>
         <requirementText>Use formal methodologies for explainability where possible (XAI, Transparency by Design, Model Cards)</requirementText>
+        <requiresEvidence>Explainability artefacts</requiresEvidence>
         <sectionReference>Design &amp; Build</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</tierLevel>
-        <requiresEvidence>Explainability artefacts</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6855,9 +6846,9 @@
         <noteText>Charter Mapping: Art 1 Human dignity</noteText>
         <requirementID>HE042</requirementID>
         <requirementText>Test whether users understand they are interacting with non-human agent</requirementText>
+        <requiresEvidence>User comprehension test</requiresEvidence>
         <sectionReference>Testing</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>User comprehension test</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6878,9 +6869,9 @@
         <legalBasis>EU Charter</legalBasis>
         <requirementID>HE043</requirementID>
         <requirementText>Ensure audit controls check performance and record decisions about system purpose and functioning</requirementText>
+        <requiresEvidence>Audit report</requiresEvidence>
         <sectionReference>Testing</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Audit report</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6903,9 +6894,9 @@
         <noteText>Charter Mapping: Art 11 Freedom of expression</noteText>
         <requirementID>HE044</requirementID>
         <requirementText>Communicate system capabilities and limitations to stakeholders in clear, understandable and proactive manner</requirementText>
+        <requiresEvidence>Stakeholder communication</requiresEvidence>
         <sectionReference>Testing</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Stakeholder communication</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6926,9 +6917,9 @@
         <legalBasis>EU Charter</legalBasis>
         <requirementID>HE045</requirementID>
         <requirementText>Establish processes to obtain user feedback and mechanisms to adapt system in response</requirementText>
+        <requiresEvidence>Feedback mechanism</requiresEvidence>
         <sectionReference>Testing</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</tierLevel>
-        <requiresEvidence>Feedback mechanism</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6950,9 +6941,9 @@
         <legalBasis>EU Charter</legalBasis>
         <requirementID>HE046</requirementID>
         <requirementText>Establish and implement plans supporting operational compliance with ethical requirements</requirementText>
+        <requiresEvidence>Compliance plan</requiresEvidence>
         <sectionReference>Deployment</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Compliance plan</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -6975,9 +6966,9 @@
         <noteText>Charter Mapping: Art 8 Data protection</noteText>
         <requirementID>HE047</requirementID>
         <requirementText>Update data, access, security and risk management policies to account for ethical requirements</requirementText>
+        <requiresEvidence>Updated policies</requiresEvidence>
         <sectionReference>Deployment</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Updated policies</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -7001,9 +6992,9 @@
         <legalBasis>EU Charter</legalBasis>
         <requirementID>HE048</requirementID>
         <requirementText>Establish monitoring goals and metrics for ethics compliance — periodically monitor and improve</requirementText>
+        <requiresEvidence>Monitoring dashboard / reports</requiresEvidence>
         <sectionReference>Monitoring</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Monitoring dashboard / reports</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -7029,9 +7020,9 @@
         <noteText>Charter Mapping: Art 47 Right to effective remedy</noteText>
         <requirementID>HE049</requirementID>
         <requirementText>Ensure AI stakeholders, users and subjects have ethical complaint communication channels</requirementText>
+        <requiresEvidence>Complaint channel</requiresEvidence>
         <sectionReference>Monitoring</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</tierLevel>
-        <requiresEvidence>Complaint channel</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -7211,10 +7202,10 @@
         <noteText>Mandatory for all</noteText>
         <requirementID>R001</requirementID>
         <requirementText>Applicant must be identified with name, staff/student number, email, school/department</requirementText>
+        <requiresEvidence>Auto-populated from TCD records</requiresEvidence>
         <sectionReference>REAMS §2.2.1</sectionReference>
         <sectionReference>§2.2.1</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Auto-populated from TCD records</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -7257,9 +7248,9 @@
         <legalBasis>Research integrity</legalBasis>
         <requirementID>R003</requirementID>
         <requirementText>Applicant must have read and understood Trinity Policy on Good Research Practice</requirementText>
+        <requiresEvidence>Declaration (Yes/No)</requiresEvidence>
         <sectionReference>§2.2.1</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Declaration (Yes/No)</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -7281,9 +7272,9 @@
         <noteText>PhD: CA7000; Staff: Epigeum</noteText>
         <requirementID>R004</requirementID>
         <requirementText>Applicant must have completed Research Integrity Training Module</requirementText>
+        <requiresEvidence>Certificate upload required</requiresEvidence>
         <sectionReference>§2.2.1</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Certificate upload required</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -7304,15 +7295,15 @@
         <hasRisk rdf:resource="https://w3id.org/aief/ReputationalHarm"/>
         <hasTier rdf:resource="https://w3id.org/aief/Tier1_Mandatory"/>
         <mapsToRight rdf:resource="https://w3id.org/aief/Art8_DataProtection"/>
-        <requiresEvidence rdf:resource="https://w3id.org/aief/Certificate"/>
         <isMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMandatory>
         <legalBasis>GDPR Art 39(1)(b)</legalBasis>
         <requirementID>R005</requirementID>
         <requirementText>Applicant must have completed Data Protection Training within last 24 months</requirementText>
+        <requiresEvidence>Certificate</requiresEvidence>
+        <requiresEvidence>Certificate upload required</requiresEvidence>
         <sectionReference>REAMS §2.2.1</sectionReference>
         <sectionReference>§2.2.1</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Certificate upload required</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -7642,16 +7633,16 @@
         <mapsToRight rdf:resource="https://w3id.org/aief/Art3_RightToIntegrity"/>
         <mapsToRight rdf:resource="https://w3id.org/aief/Art7_PrivateLife"/>
         <mapsToRight rdf:resource="https://w3id.org/aief/Art8_DataProtection"/>
-        <requiresEvidence rdf:resource="https://w3id.org/aief/ConsentForm"/>
         <isMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMandatory>
         <legalBasis>GDPR Art 6-7</legalBasis>
         <noteText>Charter Mapping: Art 8 Protection of personal data</noteText>
         <requirementID>R019</requirementID>
         <requirementText>Will consent be obtained from participants (or proxy/guardian)?</requirementText>
+        <requiresEvidence>Consent form attachment</requiresEvidence>
+        <requiresEvidence>Consent form attachment if yes</requiresEvidence>
         <sectionReference>REAMS §2.3.2</sectionReference>
         <sectionReference>§2.3.2</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Consent form attachment if yes</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -7933,9 +7924,9 @@
         <isMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMandatory>
         <requirementID>R030</requirementID>
         <requirementText>For each site: licence, permission, or ethics approval status</requirementText>
+        <requiresEvidence>Permission documentation upload</requiresEvidence>
         <sectionReference>§2.3.3</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Permission documentation upload</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -7957,9 +7948,9 @@
         <noteText>Charter Mapping: Art 8</noteText>
         <requirementID>R031</requirementID>
         <requirementText>Was a DPIA required at each site/source?</requirementText>
+        <requiresEvidence>DPIA attachment if yes</requiresEvidence>
         <sectionReference>§2.3.3</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>DPIA attachment if yes</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -8179,9 +8170,9 @@
         <isMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMandatory>
         <requirementID>R041</requirementID>
         <requirementText>Step-by-step description of participant recruitment process</requirementText>
+        <requiresEvidence>Recruitment material attachment</requiresEvidence>
         <sectionReference>§2.4</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Recruitment material attachment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -8204,16 +8195,15 @@
         <mapsToRight rdf:resource="https://w3id.org/aief/Art3_RightToIntegrity"/>
         <mapsToRight rdf:resource="https://w3id.org/aief/Art7_PrivateLife"/>
         <mapsToRight rdf:resource="https://w3id.org/aief/Art8_DataProtection"/>
-        <requiresEvidence rdf:resource="https://w3id.org/aief/ConsentForm"/>
         <isMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMandatory>
         <legalBasis>GDPR Art 7</legalBasis>
         <noteText>Charter Mapping: Art 8; Art 7 Respect for private life</noteText>
         <requirementID>R042</requirementID>
         <requirementText>How will consent be obtained and by whom?</requirementText>
+        <requiresEvidence>Consent form attachment</requiresEvidence>
         <sectionReference>REAMS §2.7</sectionReference>
         <sectionReference>§2.7</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Consent form attachment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -8282,9 +8272,9 @@
         <noteText>Required for contact with children</noteText>
         <requirementID>R045</requirementID>
         <requirementText>Is Garda vetting required?</requirementText>
+        <requiresEvidence>Garda vetting certificate</requiresEvidence>
         <sectionReference>§2.7</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>Garda vetting certificate</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -9010,9 +9000,9 @@
         <noteText>Submission blocked until all uploaded</noteText>
         <requirementID>R075</requirementID>
         <requirementText>All required attachments uploaded (consent forms, certificates, PIL, recruitment material, methods instruments, DPO letter)</requirementText>
+        <requiresEvidence>System-generated list</requiresEvidence>
         <sectionReference>§2.12</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>System-generated list</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -9036,9 +9026,9 @@
         <noteText>Must match application form details</noteText>
         <requirementID>R076</requirementID>
         <requirementText>Participant Information Leaflet appropriate for target audience (plain English, accessible format)</requirementText>
+        <requiresEvidence>PIL attachment</requiresEvidence>
         <sectionReference>§2.12.3</sectionReference>
         <tierLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tierLevel>
-        <requiresEvidence>PIL attachment</requiresEvidence>
     </owl:NamedIndividual>
     
 
@@ -9508,20 +9498,12 @@
     <rdf:Description rdf:about="https://w3id.org/aief/AuditLog">
         <rdfs:label xml:lang="en">Audit Log</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/aief/Certificate">
-        <rdfs:comment>A formal certificate demonstrating completion of a required training or qualification.</rdfs:comment>
-        <rdfs:label>Certificate</rdfs:label>
-    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/aief/ChildrenRights">
         <rdfs:comment>Risk of harm to children&apos;s rights, development, or best interests arising from AI systems affecting minors.</rdfs:comment>
         <rdfs:label>Children Rights</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/aief/ComplaintMechanism">
         <rdfs:label xml:lang="en">Complaint Mechanism</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/aief/ConsentForm">
-        <rdfs:comment>A document through which research participants provide informed consent to participate.</rdfs:comment>
-        <rdfs:label>Consent Form</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/aief/DataBreach">
         <rdfs:comment>Risk of unauthorised access to or leakage of personal data held or processed by an AI system.</rdfs:comment>
@@ -9682,9 +9664,6 @@
     <rdf:Description rdf:about="https://w3id.org/aief/WorkplaceSafetyRisk">
         <rdfs:comment>Risk of harm to workers arising from AI system deployment in occupational settings.</rdfs:comment>
         <rdfs:label>Workplace Safety Risk</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/aief/requiresEvidence">
-        <rdfs:label>requires evidence</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 

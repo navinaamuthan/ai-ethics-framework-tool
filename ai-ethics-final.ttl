@@ -231,11 +231,26 @@
     rdfs:domain :Requirement ;
     rdfs:range :Evidence ;
     rdfs:label "has evidence" .
+    # Declared for the structured Requirement->Evidence-subclass link but has
+    # zero instance usages in this graph; :requiresEvidence, below, carries
+    # that role in practice, as a free-text description rather than a
+    # structured reference. Left in place as a modelled but unpopulated
+    # relation rather than removed, since retiring it is a separate,
+    # lower-priority cleanup from the requiresEvidence fix it is adjacent to.
 
-:requiresEvidence rdf:type owl:ObjectProperty ;
+:requiresEvidence rdf:type owl:DatatypeProperty ;
     rdfs:domain :Requirement ;
-    rdfs:range :Evidence ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#string> ;
     rdfs:label "requires evidence" .
+    # Was declared owl:ObjectProperty with range :Evidence, but 123 of 126
+    # assertions use a free-text description of the expected evidence
+    # artefact (e.g. "Bias audit", "Consent documentation") rather than a
+    # reference to an :Evidence subclass; only 3 assertions used the
+    # declared structured form (see below). Retyped to match the dominant,
+    # substantively correct usage rather than forcing 123 free-text
+    # descriptions into a 6-class Evidence taxonomy most of them do not fit
+    # (e.g. "Audit logs" is not a Certificate, ConsentForm, PIL, Garda
+    # Vetting Certificate, DPO Letter, or Recruitment Material).
 
 :assignedTo rdf:type owl:ObjectProperty ;
     rdfs:domain :Requirement ;
@@ -390,7 +405,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :assignedTo :Researcher ;
-    :requiresEvidence :Certificate ;
+    :requiresEvidence "Certificate" ;
     :mapsToRight :Art8_DataProtection ;
     :legalBasis "GDPR Art 39(1)(b)" ;
     :hasMitigation :AccessControl , :Encryption , :GovernanceProcedure , :Pseudonymisation , :ResponsibleReleasePolicy ;
@@ -419,7 +434,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :assignedTo :Researcher ;
-    :requiresEvidence :ConsentForm ;
+    :requiresEvidence "Consent form attachment" ;
     :mapsToRight :Art8_DataProtection ;
     :legalBasis "GDPR Art 6-7" ;
     :appliesTo :DataSubject ;
@@ -449,7 +464,7 @@
     :belongsToFramework :REAMS ;
     :hasTier :Tier1_Mandatory ;
     :assignedTo :Researcher ;
-    :requiresEvidence :ConsentForm ;
+    :requiresEvidence "Consent form attachment" ;
     :mapsToRight :Art8_DataProtection , :Art7_PrivateLife ;
     :legalBasis "GDPR Art 7" ;
     :hasMitigation :AccessControl , :Encryption , :GovernanceProcedure , :HumanOversight , :Pseudonymisation ;

@@ -204,12 +204,6 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "mitigates" .
 
 
-###  https://w3id.org/aief/requiresEvidence
-:requiresEvidence rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Requirement ;
-                  rdfs:range :Evidence .
-
-
 ###  https://w3id.org/aief/supportsRequirement
 :supportsRequirement rdf:type owl:ObjectProperty ;
                      rdfs:domain :Incident ;
@@ -299,6 +293,13 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:domain :Requirement ;
                  rdfs:range xsd:string ;
                  rdfs:label "requirement text" .
+
+
+###  https://w3id.org/aief/requiresEvidence
+:requiresEvidence rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Requirement ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "requires evidence" .
 
 
 ###  https://w3id.org/aief/sectionReference
@@ -653,7 +654,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/aief/Certificate
 :Certificate rdf:type owl:Class ;
-             rdfs:subClassOf :Evidence .
+             rdfs:subClassOf :Evidence ;
+             rdfs:comment "A formal certificate demonstrating completion of a required training or qualification." ;
+             rdfs:label "Certificate" .
 
 
 ###  https://w3id.org/aief/ChildrenRights
@@ -681,7 +684,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/aief/ConsentForm
 :ConsentForm rdf:type owl:Class ;
-             rdfs:subClassOf :Evidence .
+             rdfs:subClassOf :Evidence ;
+             rdfs:comment "A document through which research participants provide informed consent to participate." ;
+             rdfs:label "Consent Form" .
 
 
 ###  https://w3id.org/aief/DPIA
@@ -1286,9 +1291,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 1 Human dignity" ;
         :requirementID "ACM001" ;
         :requirementText "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms" ;
+        :requiresEvidence "Ethics statement in paper" ;
         :sectionReference "ACL §1.1" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Ethics statement in paper" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM002
@@ -1315,9 +1320,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 3 Integrity of person" ;
         :requirementID "ACM002" ;
         :requirementText "Avoid harm — consider how data, code or other outcomes of research may cause harm" ;
+        :requiresEvidence "Ethics statement in paper" ;
         :sectionReference "ACL §1.2" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Ethics statement in paper" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM003
@@ -1338,9 +1343,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 21 Non-discrimination" ;
         :requirementID "ACM003" ;
         :requirementText "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate" ;
+        :requiresEvidence "Bias analysis section" ;
         :sectionReference "ACL §1.4" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Bias analysis section" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM004
@@ -1365,9 +1370,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 21 Non-discrimination" ;
         :requirementID "ACM004" ;
         :requirementText "Consider and ameliorate biases in data and biased code/model outputs" ;
+        :requiresEvidence "Data statement / bias assessment" ;
         :sectionReference "ACL §1.4" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Data statement / bias assessment" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM005
@@ -1390,9 +1395,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 17 Right to property" ;
         :requirementID "ACM005" ;
         :requirementText "Respect intellectual property and data/code ownership — cite creators of artefacts used and use them as intended (respect licences)" ;
+        :requiresEvidence "Citation and licence compliance" ;
         :sectionReference "ACL §1.5" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Citation and licence compliance" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM006
@@ -1411,9 +1416,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" ;
         :requirementID "ACM006" ;
         :requirementText "Respect privacy — obtain informed consent where required and protect personally identifiable information" ;
+        :requiresEvidence "IRB/ethics approval; consent forms" ;
         :sectionReference "ACL §1.6" ;
-        :tierLevel 1 ;
-        :requiresEvidence "IRB/ethics approval; consent forms" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM007
@@ -1431,9 +1436,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 1 Human dignity" ;
         :requirementID "ACM007" ;
         :requirementText "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications" ;
+        :requiresEvidence "Risk analysis section in paper" ;
         :sectionReference "ACL §2.5" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Risk analysis section in paper" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM008
@@ -1450,9 +1455,9 @@ xsd:date rdf:type rdfs:Datatype .
         :legalBasis "ACL Code of Ethics §2.5" ;
         :requirementID "ACM008" ;
         :requirementText "Consider possible risks and impacts of the research approach itself (not just applications)" ;
+        :requiresEvidence "Method risk discussion" ;
         :sectionReference "ACL §2.5" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Method risk discussion" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM009
@@ -1470,9 +1475,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 8 Data protection" ;
         :requirementID "ACM009" ;
         :requirementText "Access computing and communication resources only when authorised or compelled by public good" ;
+        :requiresEvidence "Data access documentation" ;
         :sectionReference "ACL §2.8" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Data access documentation" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM010
@@ -1490,9 +1495,9 @@ xsd:date rdf:type rdfs:Datatype .
         :legalBasis "ACL Code of Ethics §2.9" ;
         :requirementID "ACM010" ;
         :requirementText "Design and implement systems that are robustly and usably secure — especially systems close to production deployment" ;
+        :requiresEvidence "Security assessment" ;
         :sectionReference "ACL §2.9" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Security assessment" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM011
@@ -1513,9 +1518,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 31 Fair working conditions" ;
         :requirementID "ACM011" ;
         :requirementText "Manage personnel and resources to enhance quality of working life — consider how participation of annotators/crowdworkers may cause benefits or harms" ;
+        :requiresEvidence "Annotator welfare documentation" ;
         :sectionReference "ACL §3.3" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Annotator welfare documentation" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM012
@@ -1542,9 +1547,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 37 Environmental protection" ;
         :requirementID "ACM012" ;
         :requirementText "Consider and ameliorate negative impacts of approach on political, social or natural environment" ;
+        :requiresEvidence "Environmental/social impact statement" ;
         :sectionReference "ACL §1.1" ;
-        :tierLevel 2 ;
-        :requiresEvidence "Environmental/social impact statement" .
+        :tierLevel 2 .
 
 
 ###  https://w3id.org/aief/ACM013
@@ -1567,9 +1572,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 1 Human dignity" ;
         :requirementID "ACM013" ;
         :requirementText "Discuss dual use potential — ways research could be misused and mitigations" ;
+        :requiresEvidence "Dual use discussion" ;
         :sectionReference "ACL Dual Use" ;
-        :tierLevel 2 ;
-        :requiresEvidence "Dual use discussion" .
+        :tierLevel 2 .
 
 
 ###  https://w3id.org/aief/ACM014
@@ -1588,9 +1593,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 31 Fair working conditions" ;
         :requirementID "ACM014" ;
         :requirementText "All human research subjects or participants must receive appropriate compensation — respect minimum hourly rate in region where work is carried out" ;
+        :requiresEvidence "Payment documentation" ;
         :sectionReference "NeurIPS Human Subjects" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Payment documentation" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM015
@@ -1609,9 +1614,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 1 Human dignity" ;
         :requirementID "ACM015" ;
         :requirementText "Research involving human participants must follow existing institutional protocols (IRB or equivalent) — if no formal process exists, undergo equivalent informal ethics review" ;
+        :requiresEvidence "IRB/ethics approval or peer review" ;
         :sectionReference "NeurIPS Human Subjects" ;
-        :tierLevel 1 ;
-        :requiresEvidence "IRB/ethics approval or peer review" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM016
@@ -1633,9 +1638,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" ;
         :requirementID "ACM016" ;
         :requirementText "Datasets should minimise exposure of personally identifiable information unless informed consent is provided" ;
+        :requiresEvidence "Data anonymisation documentation" ;
         :sectionReference "NeurIPS Privacy" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Data anonymisation documentation" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM017
@@ -1653,9 +1658,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 8 Data protection" ;
         :requirementID "ACM017" ;
         :requirementText "Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained" ;
+        :requiresEvidence "Consent documentation" ;
         :sectionReference "NeurIPS Consent" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Consent documentation" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM018
@@ -1672,9 +1677,9 @@ xsd:date rdf:type rdfs:Datatype .
         :legalBasis "NeurIPS Code of Ethics" ;
         :requirementID "ACM018" ;
         :requirementText "Authors must confirm datasets are still available for use — deprecated datasets should not be used except for audit or critical assessment" ;
+        :requiresEvidence "Dataset status verification" ;
         :sectionReference "NeurIPS Deprecated Data" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Dataset status verification" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM019
@@ -1693,9 +1698,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 17 Right to property" ;
         :requirementID "ACM019" ;
         :requirementText "Respect terms of datasets with defined licences (CC 4.0, MIT etc)" ;
+        :requiresEvidence "Licence compliance" ;
         :sectionReference "NeurIPS Copyright" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Licence compliance" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM020
@@ -1718,9 +1723,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 21 Non-discrimination" ;
         :requirementID "ACM020" ;
         :requirementText "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated" ;
+        :requiresEvidence "Representativeness statement" ;
         :sectionReference "NeurIPS Representation" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Representativeness statement" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM021
@@ -1739,9 +1744,9 @@ xsd:date rdf:type rdfs:Datatype .
                   "No weapons research accepted" ;
         :requirementID "ACM021" ;
         :requirementText "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse" ;
+        :requiresEvidence "Safety assessment" ;
         :sectionReference "NeurIPS Safety" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Safety assessment" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM022
@@ -1758,9 +1763,9 @@ xsd:date rdf:type rdfs:Datatype .
         :legalBasis "NeurIPS Code of Ethics" ;
         :requirementID "ACM022" ;
         :requirementText "Consider risk that applications could open security vulnerabilities or cause serious accidents — recommend or implement protections" ;
+        :requiresEvidence "Security risk assessment" ;
         :sectionReference "NeurIPS Security" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Security risk assessment" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM023
@@ -1786,9 +1791,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 21 Non-discrimination; Art 35 Health care" ;
         :requirementID "ACM023" ;
         :requirementText "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access" ;
+        :requiresEvidence "Discrimination impact assessment" ;
         :sectionReference "NeurIPS Discrimination" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Discrimination impact assessment" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM024
@@ -1812,9 +1817,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 7 Private life; Art 8 Data protection" ;
         :requirementID "ACM024" ;
         :requirementText "Consult local laws before collecting or analysing bulk surveillance data — surveillance must not predict protected categories or endanger individual well-being" ;
+        :requiresEvidence "Legal compliance check" ;
         :sectionReference "NeurIPS Surveillance" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Legal compliance check" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM025
@@ -1841,9 +1846,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 1 Human dignity; Art 11 Freedom of expression" ;
         :requirementID "ACM025" ;
         :requirementText "Communicate whether approach could facilitate deceptive interactions causing harm (theft, fraud, harassment), impersonate public figures, influence political processes, or promote hate speech" ;
+        :requiresEvidence "Misuse risk statement" ;
         :sectionReference "NeurIPS Deception" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Misuse risk statement" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM026
@@ -1859,9 +1864,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 37 Environmental protection" ;
         :requirementID "ACM026" ;
         :requirementText "Consider whether research negatively impacts environment — fossil fuel extraction, consumption, greenhouse gas production" ;
+        :requiresEvidence "Environmental impact statement" ;
         :sectionReference "NeurIPS Environment" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Environmental impact statement" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM027
@@ -1889,9 +1894,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 1-50 (multiple)" ;
         :requirementID "ACM027" ;
         :requirementText "Research must not build upon or facilitate illegal activity — strongly discourage work that denies rights to privacy, speech, health, liberty, security, legal personhood, freedom of conscience/religion" ;
+        :requiresEvidence "Human rights compliance" ;
         :sectionReference "NeurIPS Human Rights" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Human rights compliance" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM028
@@ -1914,9 +1919,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 21 Non-discrimination; Art 23 Equality" ;
         :requirementID "ACM028" ;
         :requirementText "Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics" ;
+        :requiresEvidence "Bias audit" ;
         :sectionReference "NeurIPS Bias" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Bias audit" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM029
@@ -1933,9 +1938,9 @@ xsd:date rdf:type rdfs:Datatype .
         :legalBasis "NeurIPS Code of Ethics" ;
         :requirementID "ACM029" ;
         :requirementText "Provide data and model documentation via structured templates (Model Cards, Datasheets for Datasets)" ;
+        :requiresEvidence "Model Card / Datasheet" ;
         :sectionReference "NeurIPS Mitigation" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Model Card / Datasheet" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM030
@@ -1950,9 +1955,9 @@ xsd:date rdf:type rdfs:Datatype .
         :legalBasis "NeurIPS Code of Ethics" ;
         :requirementID "ACM030" ;
         :requirementText "Provide licences for released data or models including intended use and limitations" ;
+        :requiresEvidence "Licence document" ;
         :sectionReference "NeurIPS Mitigation" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Licence document" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM031
@@ -1971,9 +1976,9 @@ xsd:date rdf:type rdfs:Datatype .
         :noteText "Charter Mapping: Art 8 Data protection" ;
         :requirementID "ACM031" ;
         :requirementText "Use privacy protocols, encryption and anonymisation to reduce risk of data leakage — stronger measures for sensitive data" ;
+        :requiresEvidence "Security documentation" ;
         :sectionReference "NeurIPS Mitigation" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Security documentation" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM032
@@ -1990,9 +1995,9 @@ xsd:date rdf:type rdfs:Datatype .
         :legalBasis "NeurIPS Code of Ethics" ;
         :requirementID "ACM032" ;
         :requirementText "High-risk models must be released with safeguards for controlled use (e.g. code of conduct for access)" ;
+        :requiresEvidence "Release policy" ;
         :sectionReference "NeurIPS Mitigation" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Release policy" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM033
@@ -2007,9 +2012,9 @@ xsd:date rdf:type rdfs:Datatype .
         :legalBasis "NeurIPS Code of Ethics" ;
         :requirementID "ACM033" ;
         :requirementText "Make accessible all information required to understand research artefacts (code, environment, weights, hyperparameters) to enable external scrutiny" ;
+        :requiresEvidence "Reproducibility package" ;
         :sectionReference "NeurIPS Mitigation" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Reproducibility package" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM034
@@ -2029,9 +2034,9 @@ xsd:date rdf:type rdfs:Datatype .
         :legalBasis "NeurIPS Code of Ethics" ;
         :requirementID "ACM034" ;
         :requirementText "Disclose information sufficient for reproduction of results" ;
+        :requiresEvidence "Reproducibility statement" ;
         :sectionReference "NeurIPS Mitigation" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Reproducibility statement" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM035
@@ -2049,9 +2054,9 @@ xsd:date rdf:type rdfs:Datatype .
         :legalBasis "NeurIPS Code of Ethics" ;
         :requirementID "ACM035" ;
         :requirementText "Ensure adequate awareness of regional legal requirements — additional justification required where compliance could not be met due to human rights issues" ;
+        :requiresEvidence "Legal compliance statement" ;
         :sectionReference "NeurIPS Mitigation" ;
-        :tierLevel 1 ;
-        :requiresEvidence "Legal compliance statement" .
+        :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/ACM036
@@ -2143,9 +2148,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: All Charter rights potentially" ;
        :requirementID "AI001" ;
        :requirementText "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)" ;
+       :requiresEvidence "Necessity determination document" ;
        :sectionReference "Art 27-1" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Necessity determination document" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI002
@@ -2163,9 +2168,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-1" ;
        :requirementID "AI002" ;
        :requirementText "Record necessity status: FRIA Required or FRIA Not Required" ;
+       :requiresEvidence "Written determination" ;
        :sectionReference "Art 27-1" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Written determination" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI003
@@ -2182,9 +2187,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-2" ;
        :requirementID "AI003" ;
        :requirementText "Record when FRIA was created, modified, submitted, accepted" ;
+       :requiresEvidence "Dated documentation" ;
        :sectionReference "Art 27-2" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Dated documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI004
@@ -2201,9 +2206,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-2" ;
        :requirementID "AI004" ;
        :requirementText "Record who conducted the FRIA (organisation, personnel, contributors)" ;
+       :requiresEvidence "Named roles" ;
        :sectionReference "Art 27-2" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Named roles" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI005
@@ -2220,9 +2225,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-2" ;
        :requirementID "AI005" ;
        :requirementText "Record identifier/version of FRIA — must be regularly updated" ;
+       :requiresEvidence "Version tracking" ;
        :sectionReference "Art 27-2" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Version tracking" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI006
@@ -2239,9 +2244,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-2" ;
        :requirementID "AI006" ;
        :requirementText "Record conformance to any codes of conduct" ;
+       :requiresEvidence "Code of conduct reference" ;
        :sectionReference "Art 27-2" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Code of conduct reference" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI007
@@ -2258,9 +2263,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-1a" ;
        :requirementID "AI007" ;
        :requirementText "Describe deployer's processes in which the AI system will be used" ;
+       :requiresEvidence "Process description" ;
        :sectionReference "Art 27-1a" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Process description" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI008
@@ -2282,9 +2287,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-1a" ;
        :requirementID "AI008" ;
        :requirementText "State the intended purpose of the AI system" ;
+       :requiresEvidence "Purpose statement" ;
        :sectionReference "Art 27-1a" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Purpose statement" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI009
@@ -2301,9 +2306,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-1b" ;
        :requirementID "AI009" ;
        :requirementText "Specify the period of time and frequency the AI system is intended to be used" ;
+       :requiresEvidence "Duration/frequency declaration" ;
        :sectionReference "Art 27-1b" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Duration/frequency declaration" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI010
@@ -2321,9 +2326,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-1b" ;
        :requirementID "AI010" ;
        :requirementText "Describe the intended use — specific deployment scenarios distinct from intended purpose" ;
+       :requiresEvidence "Use-case descriptions" ;
        :sectionReference "Art 27-1b" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Use-case descriptions" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI011
@@ -2349,9 +2354,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 21 Non-discrimination; Art 24 Rights of child" ;
        :requirementID "AI011" ;
        :requirementText "Identify categories of natural persons and groups likely to be affected by the AI system in the specific context" ;
+       :requiresEvidence "Affected population description" ;
        :sectionReference "Art 27-1c" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Affected population description" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI012
@@ -2370,9 +2375,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-1c" ;
        :requirementID "AI012" ;
        :requirementText "Assess the likelihood that those persons/groups will be affected" ;
+       :requiresEvidence "Likelihood assessment" ;
        :sectionReference "Art 27-1c" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Likelihood assessment" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI013
@@ -2391,9 +2396,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" ;
        :requirementID "AI013" ;
        :requirementText "Identify consequences and impacts on affected persons/groups" ;
+       :requiresEvidence "Impact description" ;
        :sectionReference "Art 27-1c" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Impact description" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI014
@@ -2410,9 +2415,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Map each risk to specific Charter article" ;
        :requirementID "AI014" ;
        :requirementText "Identify specific risks of harm to fundamental rights" ;
+       :requiresEvidence "Risk register" ;
        :sectionReference "Art 27-1d" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Risk register" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI015
@@ -2430,9 +2435,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-1e" ;
        :requirementID "AI015" ;
        :requirementText "Describe human oversight measures in place" ;
+       :requiresEvidence "Oversight documentation" ;
        :sectionReference "Art 27-1e" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Oversight documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI016
@@ -2459,9 +2464,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
        :requirementID "AI016" ;
        :requirementText "Specify what humans can and cannot do — ability to correct outputs, ability to opt out, override capability" ;
+       :requiresEvidence "Permissions/restrictions list" ;
        :sectionReference "Art 27-1e" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Permissions/restrictions list" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI017
@@ -2482,9 +2487,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-1e" ;
        :requirementID "AI017" ;
        :requirementText "Reference instructions for use provided by the AI system provider" ;
+       :requiresEvidence "Provider documentation" ;
        :sectionReference "Art 27-1e" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Provider documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI018
@@ -2502,9 +2507,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
        :requirementID "AI018" ;
        :requirementText "Specify measures to be taken if risks materialise — internal governance arrangements and complaint mechanisms" ;
+       :requiresEvidence "Mitigation plan + incident procedures" ;
        :sectionReference "Art 27-1f" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Mitigation plan + incident procedures" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI019
@@ -2521,9 +2526,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-2" ;
        :requirementID "AI019" ;
        :requirementText "If relying on a previously conducted FRIA, document which prior FRIA is being reused and what has changed" ;
+       :requiresEvidence "Prior FRIA reference" ;
        :sectionReference "Art 27-2" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Prior FRIA reference" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI020
@@ -2542,9 +2547,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 8 Data protection" ;
        :requirementID "AI020" ;
        :requirementText "If a DPIA already exists under GDPR, document how it complements the FRIA — what it covers and what gaps remain" ;
+       :requiresEvidence "DPIA cross-reference" ;
        :sectionReference "Art 27-4" ;
-       :tierLevel 1 ;
-       :requiresEvidence "DPIA cross-reference" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI021
@@ -2567,9 +2572,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-1" ;
        :requirementID "AI021" ;
        :requirementText "Determine FRIA outcome status: Unacceptable Risk / High Residual Risk / Risks Acceptable / Risks Mitigated" ;
+       :requiresEvidence "Outcome determination" ;
        :sectionReference "Art 27-1" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Outcome determination" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI022
@@ -2591,9 +2596,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Each Charter article individually" ;
        :requirementID "AI022" ;
        :requirementText "For each affected fundamental right, state whether there is an impact and its severity" ;
+       :requiresEvidence "Rights impact matrix" ;
        :sectionReference "Art 27-1" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Rights impact matrix" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI023
@@ -2613,9 +2618,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 21 subcategories" ;
        :requirementID "AI023" ;
        :requirementText "For granular impacts (e.g. discrimination based on sex, race, gender under Art 21), specify the category of impact" ;
+       :requiresEvidence "Granular impact detail" ;
        :sectionReference "Art 27-1" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Granular impact detail" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI024
@@ -2636,9 +2641,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-3" ;
        :requirementID "AI024" ;
        :requirementText "Assess whether notification to market surveillance authority is required or exempt under Art 46-1" ;
+       :requiresEvidence "Notification status determination" ;
        :sectionReference "Art 27-3" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Notification status determination" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI025
@@ -2659,9 +2664,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-3" ;
        :requirementID "AI025" ;
        :requirementText "If required: notify market surveillance authority of FRIA results" ;
+       :requiresEvidence "Notification record / proof of submission" ;
        :sectionReference "Art 27-3" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Notification record / proof of submission" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI026
@@ -2679,9 +2684,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-5" ;
        :requirementID "AI026" ;
        :requirementText "Complete the FRIA questionnaire template provided by the AI Office" ;
+       :requiresEvidence "Completed questionnaire" ;
        :sectionReference "Art 27-5" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Completed questionnaire" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI027
@@ -2698,9 +2703,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "AI Act Art 27-5" ;
        :requirementID "AI027" ;
        :requirementText "Document whether an automated tool was used to support the FRIA process" ;
+       :requiresEvidence "Tool documentation" ;
        :sectionReference "Art 27-5" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Tool documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/AI028
@@ -4014,20 +4019,12 @@ xsd:date rdf:type rdfs:Datatype .
 :AuditLog rdf:type owl:NamedIndividual .
 
 
-###  https://w3id.org/aief/Certificate
-:Certificate rdf:type owl:NamedIndividual .
-
-
 ###  https://w3id.org/aief/ChildrenRights
 :ChildrenRights rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/aief/ComplaintMechanism
 :ComplaintMechanism rdf:type owl:NamedIndividual .
-
-
-###  https://w3id.org/aief/ConsentForm
-:ConsentForm rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/aief/DataBreach
@@ -4132,9 +4129,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 6 Right to liberty; Art 1 Human dignity" ;
        :requirementID "HE001" ;
        :requirementText "AI system must not deprive end-users or affected persons of ability to make decisions about their own lives or remove basic freedoms" ;
+       :requiresEvidence "Ethics self-assessment" ;
        :sectionReference "Human Agency" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Ethics self-assessment" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE002
@@ -4156,9 +4153,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 1 Human dignity; Art 47 Right to effective remedy" ;
        :requirementID "HE002" ;
        :requirementText "AI system must not autonomously make decisions about fundamental personal, economic, social or political issues normally decided by humans, without human oversight and redress" ;
+       :requiresEvidence "Ethics self-assessment" ;
        :sectionReference "Human Agency" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Ethics self-assessment" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE003
@@ -4184,9 +4181,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" ;
        :requirementID "HE003" ;
        :requirementText "AI system must not subordinate, coerce, deceive, manipulate, objectify or dehumanize end-users or affected persons" ;
+       :requiresEvidence "Ethics self-assessment" ;
        :sectionReference "Human Agency" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Ethics self-assessment" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE004
@@ -4209,9 +4206,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 3 Integrity of person" ;
        :requirementID "HE004" ;
        :requirementText "AI system must not purposely stimulate attachment or addiction" ;
+       :requiresEvidence "Ethics self-assessment" ;
        :sectionReference "Human Agency" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Ethics self-assessment" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE005
@@ -4238,9 +4235,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 6 Right to liberty" ;
        :requirementID "HE005" ;
        :requirementText "AI system should give operators and end-users ability to control, direct and intervene in basic operations" ;
+       :requiresEvidence "Design documentation" ;
        :sectionReference "Human Agency" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Design documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE006
@@ -4262,9 +4259,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 8 Data protection; Art 11 Freedom of expression" ;
        :requirementID "HE006" ;
        :requirementText "End-users and affected persons must receive comprehensible information about the AI logic, significance and envisaged consequences" ;
+       :requiresEvidence "User-facing documentation" ;
        :sectionReference "Human Agency" ;
-       :tierLevel 1 ;
-       :requiresEvidence "User-facing documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE007
@@ -4296,9 +4293,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 8 Data protection" ;
        :requirementID "HE007" ;
        :requirementText "AI system must process personal data lawfully, fairly and transparently" ;
+       :requiresEvidence "GDPR compliance documentation" ;
        :sectionReference "Privacy & Data" ;
-       :tierLevel 1 ;
-       :requiresEvidence "GDPR compliance documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE008
@@ -4317,9 +4314,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 8 Data protection" ;
        :requirementID "HE008" ;
        :requirementText "Data minimisation and data protection by design and by default must be integrated" ;
+       :requiresEvidence "Design documentation" ;
        :sectionReference "Privacy & Data" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Design documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE009
@@ -4338,9 +4335,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 8 Data protection" ;
        :requirementID "HE009" ;
        :requirementText "Appropriate technical and organisational measures must be in place to safeguard rights of data subjects (anonymisation, pseudonymisation, encryption, aggregation)" ;
+       :requiresEvidence "Security documentation" ;
        :sectionReference "Privacy & Data" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Security documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE010
@@ -4358,9 +4355,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 8 Data protection" ;
        :requirementID "HE010" ;
        :requirementText "Strong security measures must prevent data breaches and leakages" ;
+       :requiresEvidence "Security audit / logging" ;
        :sectionReference "Privacy & Data" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Security audit / logging" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE011
@@ -4379,9 +4376,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 8 Data protection" ;
        :requirementID "HE011" ;
        :requirementText "Data must be acquired, stored and used in a manner auditable by humans" ;
+       :requiresEvidence "Audit trail" ;
        :sectionReference "Privacy & Data" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Audit trail" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE012
@@ -4403,9 +4400,9 @@ xsd:date rdf:type rdfs:Datatype .
                  "MUST requirement" ;
        :requirementID "HE012" ;
        :requirementText "Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity or is sufficiently neutral" ;
+       :requiresEvidence "Proposal text / data statement" ;
        :sectionReference "Fairness" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Proposal text / data statement" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE013
@@ -4430,9 +4427,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 21 Non-discrimination; Art 23 Equality" ;
        :requirementID "HE013" ;
        :requirementText "Document how bias in input data and algorithmic design will be identified and avoided" ;
+       :requiresEvidence "Bias assessment report" ;
        :sectionReference "Fairness" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Bias assessment report" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE014
@@ -4452,9 +4449,9 @@ xsd:date rdf:type rdfs:Datatype .
                  "Encouraged not mandatory" ;
        :requirementID "HE014" ;
        :requirementText "AI system should be designed for universal accessibility — usable by end-users with different abilities" ;
+       :requiresEvidence "Accessibility compliance" ;
        :sectionReference "Fairness" ;
-       :tierLevel 2 ;
-       :requiresEvidence "Accessibility compliance" .
+       :tierLevel 2 .
 
 
 ###  https://w3id.org/aief/HE015
@@ -4480,9 +4477,9 @@ xsd:date rdf:type rdfs:Datatype .
                  "MUST requirement" ;
        :requirementID "HE015" ;
        :requirementText "Possible negative social impacts on certain groups must be mitigated, including impacts beyond algorithmic bias" ;
+       :requiresEvidence "Impact assessment" ;
        :sectionReference "Fairness" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Impact assessment" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE016
@@ -4501,9 +4498,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 21 Non-discrimination" ;
        :requirementID "HE016" ;
        :requirementText "Methods to identify and mitigate negative social impacts in medium and longer term must be documented in proposal" ;
+       :requiresEvidence "Proposal text" ;
        :sectionReference "Fairness" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Proposal text" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE017
@@ -4526,9 +4523,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 1 Human dignity; Art 3 Integrity" ;
        :requirementID "HE017" ;
        :requirementText "AI system must not unduly or unfairly reduce psychological and emotional well-being of end-users and stakeholders" ;
+       :requiresEvidence "Well-being assessment" ;
        :sectionReference "Well-being" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Well-being assessment" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE018
@@ -4548,9 +4545,9 @@ xsd:date rdf:type rdfs:Datatype .
                  "MUST requirement" ;
        :requirementID "HE018" ;
        :requirementText "AI development must be mindful of environmental sustainability — document environmental impact and mitigation steps" ;
+       :requiresEvidence "Environmental impact statement" ;
        :sectionReference "Well-being" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Environmental impact statement" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE019
@@ -4576,9 +4573,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 11 Freedom of expression; Art 12 Freedom of assembly" ;
        :requirementID "HE019" ;
        :requirementText "AI systems in media, communications, politics, social analytics must be assessed for potential to negatively impact democratic processes and social relations" ;
+       :requiresEvidence "Social impact assessment" ;
        :sectionReference "Well-being" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Social impact assessment" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE020
@@ -4602,9 +4599,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 31 Fair working conditions" ;
        :requirementID "HE020" ;
        :requirementText "AI and robotics systems must not reduce safety in the workplace" ;
+       :requiresEvidence "Safety compliance" ;
        :sectionReference "Well-being" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Safety compliance" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE021
@@ -4630,9 +4627,9 @@ xsd:date rdf:type rdfs:Datatype .
                  "Especially chatbots" ;
        :requirementID "HE021" ;
        :requirementText "It must be made clear to end-users they are interacting with an AI system" ;
+       :requiresEvidence "User notification / disclosure" ;
        :sectionReference "Transparency" ;
-       :tierLevel 1 ;
-       :requiresEvidence "User notification / disclosure" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE022
@@ -4655,9 +4652,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 11 Freedom of expression" ;
        :requirementID "HE022" ;
        :requirementText "Purpose, capabilities, limitations, benefits and risks of AI system must be openly communicated to end-users and stakeholders" ;
+       :requiresEvidence "User documentation" ;
        :sectionReference "Transparency" ;
-       :tierLevel 1 ;
-       :requiresEvidence "User documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE023
@@ -4679,9 +4676,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "EU Charter" ;
        :requirementID "HE023" ;
        :requirementText "Traceability measures must be considered for the AI system's entire lifecycle" ;
+       :requiresEvidence "Traceability documentation" ;
        :sectionReference "Transparency" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Traceability documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE024
@@ -4704,9 +4701,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Particularly for high-impact decisions" ;
        :requirementID "HE024" ;
        :requirementText "Research proposal should explain how decisions made by system will be explainable to users, including reasons for decisions" ;
+       :requiresEvidence "Explainability documentation" ;
        :sectionReference "Transparency" ;
-       :tierLevel 2 ;
-       :requiresEvidence "Explainability documentation" .
+       :tierLevel 2 .
 
 
 ###  https://w3id.org/aief/HE025
@@ -4728,9 +4725,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "MUST requirement" ;
        :requirementID "HE025" ;
        :requirementText "Development processes must keep records of all relevant decisions regarding ethical compliance" ;
+       :requiresEvidence "Ethics decision log" ;
        :sectionReference "Transparency" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Ethics decision log" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE026
@@ -4749,9 +4746,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "MUST requirement" ;
        :requirementID "HE026" ;
        :requirementText "Document how ethically and socially undesirable effects will be detected, stopped and prevented from reoccurring" ;
+       :requiresEvidence "Detection/remediation plan" ;
        :sectionReference "Accountability" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Detection/remediation plan" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE027
@@ -4770,9 +4767,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
        :requirementID "HE027" ;
        :requirementText "AI system must allow for human oversight and control over decision cycles and operation, unless compelling justification provided" ;
+       :requiresEvidence "Oversight documentation" ;
        :sectionReference "Accountability" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Oversight documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE028
@@ -4791,9 +4788,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Scaled to research type" ;
        :requirementID "HE028" ;
        :requirementText "Research proposal should include evaluation of possible ethics risks including risk assessment procedures and post-deployment mitigation" ;
+       :requiresEvidence "Risk assessment" ;
        :sectionReference "Accountability" ;
-       :tierLevel 2 ;
-       :requiresEvidence "Risk assessment" .
+       :tierLevel 2 .
 
 
 ###  https://w3id.org/aief/HE029
@@ -4811,9 +4808,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
        :requirementID "HE029" ;
        :requirementText "Consider how end-users, data subjects and third parties can report complaints, ethical concerns or adverse events" ;
+       :requiresEvidence "Complaint mechanism" ;
        :sectionReference "Accountability" ;
-       :tierLevel 2 ;
-       :requiresEvidence "Complaint mechanism" .
+       :tierLevel 2 .
 
 
 ###  https://w3id.org/aief/HE030
@@ -4830,9 +4827,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "EU Charter" ;
        :requirementID "HE030" ;
        :requirementText "All AI systems should be auditable by independent third parties — system should generate human-accessible logs" ;
+       :requiresEvidence "Audit logs" ;
        :sectionReference "Accountability" ;
-       :tierLevel 2 ;
-       :requiresEvidence "Audit logs" .
+       :tierLevel 2 .
 
 
 ###  https://w3id.org/aief/HE031
@@ -4851,9 +4848,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 8 Data protection" ;
        :requirementID "HE031" ;
        :requirementText "Ensure processing of personal data complies with GDPR — prepare specific data protection policy" ;
+       :requiresEvidence "Data protection policy" ;
        :sectionReference "Data Collection" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Data protection policy" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE032
@@ -4881,9 +4878,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 21 Non-discrimination" ;
        :requirementID "HE032" ;
        :requirementText "Input, training and output data must all be analysed for bias — verify data accounts for diversity in gender, race, age, sexual orientation, national origin, religion, health, disability" ;
+       :requiresEvidence "Bias assessment" ;
        :sectionReference "Data Collection" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Bias assessment" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE033
@@ -4904,9 +4901,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 21 Non-discrimination" ;
        :requirementID "HE033" ;
        :requirementText "Analyse training data for relevance and representativeness — undertake formal bias assessment" ;
+       :requiresEvidence "Data quality report" ;
        :sectionReference "Data Collection" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Data quality report" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE034
@@ -4924,9 +4921,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Whenever possible" ;
        :requirementID "HE034" ;
        :requirementText "Ensure ability to go back to each state the system has been in to determine training data used at any point" ;
+       :requiresEvidence "Versioning / provenance system" ;
        :sectionReference "Data Collection" ;
-       :tierLevel 2 ;
-       :requiresEvidence "Versioning / provenance system" .
+       :tierLevel 2 .
 
 
 ###  https://w3id.org/aief/HE035
@@ -4947,9 +4944,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 8 Data protection" ;
        :requirementID "HE035" ;
        :requirementText "If creating inferred personal data or aggregating datasets, new data must receive same protection level as original data" ;
+       :requiresEvidence "Data governance documentation" ;
        :sectionReference "Design & Build" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Data governance documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE036
@@ -4968,9 +4965,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 8 Data protection" ;
        :requirementID "HE036" ;
        :requirementText "Ensure no new personal data collected or created during development or use unless necessary" ;
+       :requiresEvidence "Data minimisation documentation" ;
        :sectionReference "Design & Build" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Data minimisation documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE037
@@ -4988,9 +4985,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 21 Non-discrimination" ;
        :requirementID "HE037" ;
        :requirementText "Check for algorithmic bias during detailed development phase using methods such as counterfactual evaluation" ;
+       :requiresEvidence "Bias testing report" ;
        :sectionReference "Design & Build" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Bias testing report" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE038
@@ -5009,9 +5006,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 26 Integration of persons with disabilities" ;
        :requirementID "HE038" ;
        :requirementText "Ensure interface design honours universal accessibility principles" ;
+       :requiresEvidence "Accessibility review" ;
        :sectionReference "Design & Build" ;
-       :tierLevel 2 ;
-       :requiresEvidence "Accessibility review" .
+       :tierLevel 2 .
 
 
 ###  https://w3id.org/aief/HE039
@@ -5029,9 +5026,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "EU Charter" ;
        :requirementID "HE039" ;
        :requirementText "Establish traceability and accountability measures covering: design methods, testing methods, system outcomes, and alternative decision scenarios" ;
+       :requiresEvidence "Traceability documentation" ;
        :sectionReference "Design & Build" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Traceability documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE040
@@ -5048,9 +5045,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "EU Charter" ;
        :requirementID "HE040" ;
        :requirementText "Code must be documented and explained within software and ancillary documentation" ;
+       :requiresEvidence "Code documentation" ;
        :sectionReference "Design & Build" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Code documentation" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE041
@@ -5071,9 +5068,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "EU Charter" ;
        :requirementID "HE041" ;
        :requirementText "Use formal methodologies for explainability where possible (XAI, Transparency by Design, Model Cards)" ;
+       :requiresEvidence "Explainability artefacts" ;
        :sectionReference "Design & Build" ;
-       :tierLevel 2 ;
-       :requiresEvidence "Explainability artefacts" .
+       :tierLevel 2 .
 
 
 ###  https://w3id.org/aief/HE042
@@ -5092,9 +5089,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 1 Human dignity" ;
        :requirementID "HE042" ;
        :requirementText "Test whether users understand they are interacting with non-human agent" ;
+       :requiresEvidence "User comprehension test" ;
        :sectionReference "Testing" ;
-       :tierLevel 1 ;
-       :requiresEvidence "User comprehension test" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE043
@@ -5111,9 +5108,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "EU Charter" ;
        :requirementID "HE043" ;
        :requirementText "Ensure audit controls check performance and record decisions about system purpose and functioning" ;
+       :requiresEvidence "Audit report" ;
        :sectionReference "Testing" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Audit report" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE044
@@ -5132,9 +5129,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 11 Freedom of expression" ;
        :requirementID "HE044" ;
        :requirementText "Communicate system capabilities and limitations to stakeholders in clear, understandable and proactive manner" ;
+       :requiresEvidence "Stakeholder communication" ;
        :sectionReference "Testing" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Stakeholder communication" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE045
@@ -5151,9 +5148,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "EU Charter" ;
        :requirementID "HE045" ;
        :requirementText "Establish processes to obtain user feedback and mechanisms to adapt system in response" ;
+       :requiresEvidence "Feedback mechanism" ;
        :sectionReference "Testing" ;
-       :tierLevel 2 ;
-       :requiresEvidence "Feedback mechanism" .
+       :tierLevel 2 .
 
 
 ###  https://w3id.org/aief/HE046
@@ -5171,9 +5168,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "EU Charter" ;
        :requirementID "HE046" ;
        :requirementText "Establish and implement plans supporting operational compliance with ethical requirements" ;
+       :requiresEvidence "Compliance plan" ;
        :sectionReference "Deployment" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Compliance plan" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE047
@@ -5192,9 +5189,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 8 Data protection" ;
        :requirementID "HE047" ;
        :requirementText "Update data, access, security and risk management policies to account for ethical requirements" ;
+       :requiresEvidence "Updated policies" ;
        :sectionReference "Deployment" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Updated policies" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE048
@@ -5214,9 +5211,9 @@ xsd:date rdf:type rdfs:Datatype .
        :legalBasis "EU Charter" ;
        :requirementID "HE048" ;
        :requirementText "Establish monitoring goals and metrics for ethics compliance — periodically monitor and improve" ;
+       :requiresEvidence "Monitoring dashboard / reports" ;
        :sectionReference "Monitoring" ;
-       :tierLevel 1 ;
-       :requiresEvidence "Monitoring dashboard / reports" .
+       :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/HE049
@@ -5238,9 +5235,9 @@ xsd:date rdf:type rdfs:Datatype .
        :noteText "Charter Mapping: Art 47 Right to effective remedy" ;
        :requirementID "HE049" ;
        :requirementText "Ensure AI stakeholders, users and subjects have ethical complaint communication channels" ;
+       :requiresEvidence "Complaint channel" ;
        :sectionReference "Monitoring" ;
-       :tierLevel 2 ;
-       :requiresEvidence "Complaint channel" .
+       :tierLevel 2 .
 
 
 ###  https://w3id.org/aief/HE050
@@ -5371,10 +5368,10 @@ xsd:date rdf:type rdfs:Datatype .
       :noteText "Mandatory for all" ;
       :requirementID "R001" ;
       :requirementText "Applicant must be identified with name, staff/student number, email, school/department" ;
+      :requiresEvidence "Auto-populated from TCD records" ;
       :sectionReference "REAMS §2.2.1" ,
                         "§2.2.1" ;
-      :tierLevel 1 ;
-      :requiresEvidence "Auto-populated from TCD records" .
+      :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/R002
@@ -5409,9 +5406,9 @@ xsd:date rdf:type rdfs:Datatype .
       :legalBasis "Research integrity" ;
       :requirementID "R003" ;
       :requirementText "Applicant must have read and understood Trinity Policy on Good Research Practice" ;
+      :requiresEvidence "Declaration (Yes/No)" ;
       :sectionReference "§2.2.1" ;
-      :tierLevel 1 ;
-      :requiresEvidence "Declaration (Yes/No)" .
+      :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/R004
@@ -5429,9 +5426,9 @@ xsd:date rdf:type rdfs:Datatype .
       :noteText "PhD: CA7000; Staff: Epigeum" ;
       :requirementID "R004" ;
       :requirementText "Applicant must have completed Research Integrity Training Module" ;
+      :requiresEvidence "Certificate upload required" ;
       :sectionReference "§2.2.1" ;
-      :tierLevel 1 ;
-      :requiresEvidence "Certificate upload required" .
+      :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/R005
@@ -5448,15 +5445,15 @@ xsd:date rdf:type rdfs:Datatype .
                :ReputationalHarm ;
       :hasTier :Tier1_Mandatory ;
       :mapsToRight :Art8_DataProtection ;
-      :requiresEvidence :Certificate ;
       :isMandatory "true"^^xsd:boolean ;
       :legalBasis "GDPR Art 39(1)(b)" ;
       :requirementID "R005" ;
       :requirementText "Applicant must have completed Data Protection Training within last 24 months" ;
+      :requiresEvidence "Certificate" ,
+                        "Certificate upload required" ;
       :sectionReference "REAMS §2.2.1" ,
                         "§2.2.1" ;
-      :tierLevel 1 ;
-      :requiresEvidence "Certificate upload required" .
+      :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/R006
@@ -5730,16 +5727,16 @@ xsd:date rdf:type rdfs:Datatype .
       :mapsToRight :Art3_RightToIntegrity ,
                    :Art7_PrivateLife ,
                    :Art8_DataProtection ;
-      :requiresEvidence :ConsentForm ;
       :isMandatory "true"^^xsd:boolean ;
       :legalBasis "GDPR Art 6-7" ;
       :noteText "Charter Mapping: Art 8 Protection of personal data" ;
       :requirementID "R019" ;
       :requirementText "Will consent be obtained from participants (or proxy/guardian)?" ;
+      :requiresEvidence "Consent form attachment" ,
+                        "Consent form attachment if yes" ;
       :sectionReference "REAMS §2.3.2" ,
                         "§2.3.2" ;
-      :tierLevel 1 ;
-      :requiresEvidence "Consent form attachment if yes" .
+      :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/R020
@@ -5977,9 +5974,9 @@ xsd:date rdf:type rdfs:Datatype .
       :isMandatory "true"^^xsd:boolean ;
       :requirementID "R030" ;
       :requirementText "For each site: licence, permission, or ethics approval status" ;
+      :requiresEvidence "Permission documentation upload" ;
       :sectionReference "§2.3.3" ;
-      :tierLevel 1 ;
-      :requiresEvidence "Permission documentation upload" .
+      :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/R031
@@ -5997,9 +5994,9 @@ xsd:date rdf:type rdfs:Datatype .
       :noteText "Charter Mapping: Art 8" ;
       :requirementID "R031" ;
       :requirementText "Was a DPIA required at each site/source?" ;
+      :requiresEvidence "DPIA attachment if yes" ;
       :sectionReference "§2.3.3" ;
-      :tierLevel 1 ;
-      :requiresEvidence "DPIA attachment if yes" .
+      :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/R032
@@ -6179,9 +6176,9 @@ xsd:date rdf:type rdfs:Datatype .
       :isMandatory "true"^^xsd:boolean ;
       :requirementID "R041" ;
       :requirementText "Step-by-step description of participant recruitment process" ;
+      :requiresEvidence "Recruitment material attachment" ;
       :sectionReference "§2.4" ;
-      :tierLevel 1 ;
-      :requiresEvidence "Recruitment material attachment" .
+      :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/R042
@@ -6200,16 +6197,15 @@ xsd:date rdf:type rdfs:Datatype .
       :mapsToRight :Art3_RightToIntegrity ,
                    :Art7_PrivateLife ,
                    :Art8_DataProtection ;
-      :requiresEvidence :ConsentForm ;
       :isMandatory "true"^^xsd:boolean ;
       :legalBasis "GDPR Art 7" ;
       :noteText "Charter Mapping: Art 8; Art 7 Respect for private life" ;
       :requirementID "R042" ;
       :requirementText "How will consent be obtained and by whom?" ;
+      :requiresEvidence "Consent form attachment" ;
       :sectionReference "REAMS §2.7" ,
                         "§2.7" ;
-      :tierLevel 1 ;
-      :requiresEvidence "Consent form attachment" .
+      :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/R043
@@ -6266,9 +6262,9 @@ xsd:date rdf:type rdfs:Datatype .
                 "Required for contact with children" ;
       :requirementID "R045" ;
       :requirementText "Is Garda vetting required?" ;
+      :requiresEvidence "Garda vetting certificate" ;
       :sectionReference "§2.7" ;
-      :tierLevel 1 ;
-      :requiresEvidence "Garda vetting certificate" .
+      :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/R046
@@ -6874,9 +6870,9 @@ xsd:date rdf:type rdfs:Datatype .
       :noteText "Submission blocked until all uploaded" ;
       :requirementID "R075" ;
       :requirementText "All required attachments uploaded (consent forms, certificates, PIL, recruitment material, methods instruments, DPO letter)" ;
+      :requiresEvidence "System-generated list" ;
       :sectionReference "§2.12" ;
-      :tierLevel 1 ;
-      :requiresEvidence "System-generated list" .
+      :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/R076
@@ -6896,9 +6892,9 @@ xsd:date rdf:type rdfs:Datatype .
                 "Must match application form details" ;
       :requirementID "R076" ;
       :requirementText "Participant Information Leaflet appropriate for target audience (plain English, accessible format)" ;
+      :requiresEvidence "PIL attachment" ;
       :sectionReference "§2.12.3" ;
-      :tierLevel 1 ;
-      :requiresEvidence "PIL attachment" .
+      :tierLevel 1 .
 
 
 ###  https://w3id.org/aief/R077
@@ -7287,19 +7283,11 @@ xsd:date rdf:type rdfs:Datatype .
 :AuditLog rdfs:label "Audit Log"@en .
 
 
-:Certificate rdfs:comment "A formal certificate demonstrating completion of a required training or qualification." ;
-             rdfs:label "Certificate" .
-
-
 :ChildrenRights rdfs:comment "Risk of harm to children's rights, development, or best interests arising from AI systems affecting minors." ;
                 rdfs:label "Children Rights" .
 
 
 :ComplaintMechanism rdfs:label "Complaint Mechanism"@en .
-
-
-:ConsentForm rdfs:comment "A document through which research participants provide informed consent to participate." ;
-             rdfs:label "Consent Form" .
 
 
 :DataBreach rdfs:comment "Risk of unauthorised access to or leakage of personal data held or processed by an AI system." ;
@@ -7460,9 +7448,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 :WorkplaceSafetyRisk rdfs:comment "Risk of harm to workers arising from AI system deployment in occupational settings." ;
                      rdfs:label "Workplace Safety Risk" .
-
-
-:requiresEvidence rdfs:label "requires evidence" .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -6882,7 +6882,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/aief/Certificate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A formal certificate demonstrating completion of a required training or qualification."
   } ],
@@ -6937,7 +6937,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/aief/ConsentForm",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A document through which research participants provide informed consent to participate."
   } ],
@@ -10949,7 +10949,7 @@
     "@value" : "Applicant must have completed Data Protection Training within last 24 months"
   } ],
   "https://w3id.org/aief/requiresEvidence" : [ {
-    "@id" : "https://w3id.org/aief/Certificate"
+    "@value" : "Certificate"
   }, {
     "@value" : "Certificate upload required"
   } ],
@@ -11644,7 +11644,7 @@
     "@value" : "Will consent be obtained from participants (or proxy/guardian)?"
   } ],
   "https://w3id.org/aief/requiresEvidence" : [ {
-    "@id" : "https://w3id.org/aief/ConsentForm"
+    "@value" : "Consent form attachment"
   }, {
     "@value" : "Consent form attachment if yes"
   } ],
@@ -12800,8 +12800,6 @@
     "@value" : "How will consent be obtained and by whom?"
   } ],
   "https://w3id.org/aief/requiresEvidence" : [ {
-    "@id" : "https://w3id.org/aief/ConsentForm"
-  }, {
     "@value" : "Consent form attachment"
   } ],
   "https://w3id.org/aief/sectionReference" : [ {
@@ -15750,7 +15748,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/aief/requiresEvidence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/aief/Requirement"
   } ],
@@ -15758,7 +15756,7 @@
     "@value" : "requires evidence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/aief/Evidence"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://w3id.org/aief/sectionReference",
