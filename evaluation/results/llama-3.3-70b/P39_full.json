@@ -2,9 +2,9 @@
   "proposal_id": "P39",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-21T01:22:04.876111",
+  "timestamp": "2026-08-03T22:13:46.184662",
   "proposal_text": "This project scores neighbourhoods in a coastal EU city for 'climate-migration pressure' using flood models, housing tenure, and demographic composition, to prioritise adaptation spending. Scores are public. Housing advocates warn publication will accelerate insurance retreat and stigmatise migrant-heavy districts; planners argue transparency is required for democratic budgeting. Whether Art.21 non-discrimination, Art.37 environment, Art.1 dignity, or primarily environmental policy applies is contested. No individual decisions are automated. The demographic features make disparate neighbourhood effects likely.",
-  "context_max_requirements": 10,
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "environment",
@@ -112,40 +112,107 @@
       "df": 5
     }
   ],
-  "rights_disambiguation": "individual_treatment\u2192Art21",
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "individual_treatment→Art21",
   "assessment": {
-    "risk_summary": "The proposed project to score neighbourhoods for 'climate-migration pressure' poses significant ethical risks, including discrimination, psychological harm, and reputational harm, particularly for migrant-heavy districts. The use of demographic features in the scoring model may lead to disparate neighbourhood effects, exacerbating existing social and economic inequalities. Furthermore, the publication of scores may accelerate insurance retreat and stigmatize certain areas, potentially causing financial harm to residents. The project also raises concerns about transparency, accountability, and environmental harm, as the scoring model may not adequately consider the environmental impact of climate migration.",
+    "risk_summary": "The research proposal poses risks related to discrimination, environmental harm, and dignity, as the scoring system may stigmatize migrant-heavy districts and accelerate insurance retreat. The use of demographic features may lead to disparate neighborhood effects, and the publication of scores may have unintended consequences. The project also raises concerns about transparency, accountability, and the potential for psychological harm. The risk of environmental harm is also present, as the project's focus on climate-migration pressure may lead to negative environmental impacts.",
     "overall_risk_level": "Medium",
     "identified_risks": [
       {
         "risk": "Discrimination against migrant-heavy districts",
         "risk_category": "Discrimination",
         "severity": "Medium",
-        "explanation": "The use of demographic features in the scoring model may lead to disparate neighbourhood effects, exacerbating existing social and economic inequalities."
+        "explanation": "The scoring system may perpetuate existing biases and stigmatize certain neighborhoods"
       },
       {
-        "risk": "Psychological harm to residents of stigmatized areas",
-        "risk_category": "PsychologicalHarm",
-        "severity": "Medium",
-        "explanation": "The publication of scores may lead to increased stress, anxiety, and feelings of shame among residents of areas deemed 'high-risk'."
-      },
-      {
-        "risk": "Reputational harm to neighbourhoods",
-        "risk_category": "ReputationalHarm",
-        "severity": "Medium",
-        "explanation": "The publication of scores may damage the reputation of certain neighbourhoods, making it harder for residents to sell their properties or attract businesses and investment."
-      },
-      {
-        "risk": "Lack of transparency in the scoring model",
-        "risk_category": "Transparency",
-        "severity": "Low",
-        "explanation": "The project may not provide adequate information about the scoring model, making it difficult for stakeholders to understand the methodology and potential biases."
-      },
-      {
-        "risk": "Environmental harm due to climate migration",
+        "risk": "Environmental harm due to climate-migration pressure",
         "risk_category": "EnvironmentalHarm",
         "severity": "Low",
-        "explanation": "The project may not fully consider the environmental impact of climate migration, potentially leading to inadequate adaptation measures and increased environmental harm."
+        "explanation": "The project's focus on climate-migration pressure may lead to negative environmental impacts"
+      },
+      {
+        "risk": "Psychological harm to individuals and communities",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Medium",
+        "explanation": "The publication of scores may lead to mental distress, anxiety, or feelings of marginalization"
+      },
+      {
+        "risk": "Lack of transparency and accountability",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The project's methodology and decision-making processes may not be transparent, leading to concerns about accountability"
+      },
+      {
+        "risk": "Reputational harm to individuals and organizations",
+        "risk_category": "ReputationalHarm",
+        "severity": "Low",
+        "explanation": "The publication of scores may damage the reputation of individuals or organizations associated with certain neighborhoods"
       }
     ],
     "applicable_requirements": [
@@ -154,134 +221,123 @@
         "requirement_text": "Research must contribute to society and human well-being",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough impact assessment to identify potential harms and benefits of the project"
-      },
-      {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to mitigate potential harms, such as discrimination and psychological harm"
-      },
-      {
-        "requirement_id": "ACM017",
-        "requirement_text": "Datasets with real data of real people must have explicit consent of participants",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain explicit consent from participants or explain why consent was not obtained"
+        "action_needed": "Conduct a thorough impact assessment to identify potential harms and benefits"
       },
       {
         "requirement_id": "ACM023",
         "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of potential biases in the scoring model and implement measures to mitigate them"
-      },
-      {
-        "requirement_id": "ACM026",
-        "requirement_text": "Consider whether research negatively impacts environment",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct an environmental impact assessment to identify potential harms and implement measures to mitigate them"
+        "action_needed": "Implement measures to prevent discrimination and ensure fairness in the scoring system"
       },
       {
         "requirement_id": "AI001",
         "requirement_text": "Assess whether organisation is obligated to conduct a FRIA",
         "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a FRIA to assess the potential risks and benefits of the project"
+        "action_needed": "Conduct a FRIA to identify and mitigate potential risks"
       },
       {
-        "requirement_id": "ACM035",
-        "requirement_text": "Ensure adequate awareness of regional legal requirements",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Conduct a review of regional legal requirements and ensure compliance"
+        "requirement_id": "HE002",
+        "requirement_text": "AI system must not autonomously make decisions about fundamental personal, economic, social or political issues",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that human oversight and review processes are in place to prevent autonomous decision-making"
       },
       {
-        "requirement_id": "ACM028",
-        "requirement_text": "Inspect suspected biases or limitations in models/datasets",
+        "requirement_id": "ACM026",
+        "requirement_text": "Consider whether research negatively impacts environment",
         "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Conduct regular audits to identify and address potential biases in the scoring model"
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct an environmental impact assessment to identify potential risks and mitigation strategies"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The project may discriminate against migrant-heavy districts, potentially violating the right to non-discrimination"
+        "relevance": "The scoring system may perpetuate existing biases and stigmatize certain neighborhoods"
       },
       {
         "article": "Article 37",
         "right_name": "Environmental Protection",
-        "relevance": "The project may not fully consider the environmental impact of climate migration, potentially violating the right to environmental protection"
+        "relevance": "The project's focus on climate-migration pressure may lead to negative environmental impacts"
       },
       {
         "article": "Article 47",
         "right_name": "Right to Effective Remedy",
-        "relevance": "The project may not provide adequate transparency and accountability, potentially violating the right to effective remedy"
+        "relevance": "Individuals and communities may not have access to effective remedies for potential harms caused by the project"
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of auditing and addressing potential biases in AI systems"
+        "lesson": "The importance of ensuring fairness and preventing discrimination in AI systems"
       },
       {
         "incident_id": "AIAAIC-002",
         "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The need for transparency and accountability in AI-powered decision-making systems"
+        "lesson": "The need for transparency and accountability in AI decision-making processes"
       },
       {
         "incident_id": "AIAAIC-003",
         "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The importance of considering potential harms and mitigating them in AI system design"
+        "lesson": "The potential for AI systems to cause psychological harm and the need for robust testing and evaluation"
       },
       {
         "incident_id": "AIAAIC-004",
         "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
-        "lesson": "The need for regular audits and addressing potential biases in AI systems"
+        "lesson": "The importance of addressing bias and ensuring fairness in AI systems"
       },
       {
         "incident_id": "AIAAIC-008",
         "incident_title": "PredPol Predictive Policing Algorithmic Bias",
-        "lesson": "The importance of considering potential biases and mitigating them in AI-powered decision-making systems"
+        "lesson": "The need for transparency and accountability in AI decision-making processes, particularly in high-stakes applications"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct a thorough impact assessment to identify potential harms and benefits of the project",
-        "priority": "High"
+        "mitigation": "Ethics Review Board",
+        "mitigation_id": "EthicsReviewBoard",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Implement measures to mitigate potential harms, such as discrimination and psychological harm",
-        "priority": "High"
+        "mitigation": "Human Oversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Obtain explicit consent from participants or explain why consent was not obtained",
-        "priority": "Medium"
+        "mitigation": "Staff Training",
+        "mitigation_id": "StaffTraining",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct regular audits to identify and address potential biases in the scoring model",
-        "priority": "Medium"
+        "mitigation": "Access Control",
+        "mitigation_id": "AccessControl",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Implement measures to ensure transparency and accountability in the project",
-        "priority": "Medium"
+        "mitigation": "Environmental Safeguard",
+        "mitigation_id": "EnvironmentalSafeguard",
+        "priority": "Low",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough impact assessment to identify potential harms and benefits of the project",
-      "Implement measures to mitigate potential harms, such as discrimination and psychological harm",
-      "Obtain explicit consent from participants or explain why consent was not obtained",
-      "Conduct a FRIA to assess the potential risks and benefits of the project"
+      "Conduct a thorough impact assessment to identify potential harms and benefits",
+      "Implement measures to prevent discrimination and ensure fairness in the scoring system",
+      "Conduct a FRIA to identify and mitigate potential risks",
+      "Ensure that human oversight and review processes are in place to prevent autonomous decision-making"
     ],
     "tier2_reflective_prompts": [
-      "What are the potential biases in the scoring model and how can they be addressed?",
-      "How can the project ensure transparency and accountability in its decision-making processes?",
-      "What are the potential environmental impacts of the project and how can they be mitigated?"
+      "How might the project's methodology and decision-making processes be made more transparent and accountable?",
+      "What measures can be taken to prevent psychological harm and ensure the well-being of individuals and communities affected by the project?",
+      "How can the project's environmental impact be minimized and mitigated?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -296,6 +352,21 @@
       "rights_matched": 3,
       "requirements_retrieved": 59,
       "incidents_retrieved": 5,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM002",
         "ACM012",
@@ -371,13 +442,10 @@
       ],
       "requirements_cited": [
         "ACM001",
-        "ACM002",
-        "ACM017",
         "ACM023",
-        "ACM026",
         "AI001",
-        "ACM035",
-        "ACM028"
+        "HE002",
+        "ACM026"
       ],
       "incidents_sample": [
         "AIAAIC-001",
@@ -387,6 +455,5 @@
         "AIAAIC-008"
       ]
     }
-  },
-  "compact_prompt": false
+  }
 }

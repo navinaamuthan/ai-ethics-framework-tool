@@ -1,0 +1,96 @@
+============================================================
+Step 5 — property evaluator
+============================================================
+Stability...
+  LLM-8B P01 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P02 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P03 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P04 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P05 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P06 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P07 risks=['Medium', 'Medium', 'Low', 'Medium', 'Medium'] flip=0.20
+  LLM-8B P08 risks=['High', 'High', 'High', 'High', 'Medium'] flip=0.20
+  LLM-8B P09 risks=['Medium', 'High', 'High', 'High', 'High'] flip=0.20
+  LLM-8B P10 risks=['High', 'Medium', 'High', 'High', 'Medium'] flip=0.40
+  LLM-8B P11 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P12 risks=['High', 'Medium', 'High', 'High', 'High'] flip=0.20
+  LLM-8B P13 risks=['Low', 'Low', 'Low', 'Low', 'Low'] flip=0.00
+  LLM-8B P14 risks=['Low', 'Low', 'Low', 'Low', 'Low'] flip=0.00
+  LLM-8B P15 risks=['Low', 'Low', 'Low', 'Low', 'Low'] flip=0.00
+  LLM-8B P16 risks=['Low', 'Low', 'Low', 'Low', 'Low'] flip=0.00
+  LLM-8B P17 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P18 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P19 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P20 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P21 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P22 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P23 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P24 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P25 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P26 risks=['Medium', 'Medium', 'Medium', 'Medium', 'Medium'] flip=0.00
+  LLM-8B P27 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P28 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P29 risks=['Medium', 'Medium', 'Medium', 'High', 'High'] flip=0.40
+  LLM-8B P30 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P31 risks=['High', 'Medium', 'Medium', 'Medium', 'Medium'] flip=0.20
+  LLM-8B P32 risks=['Medium', 'Medium', 'Medium', 'Medium', 'Medium'] flip=0.00
+  LLM-8B P33 risks=['High', 'High', 'Medium', 'High', 'Medium'] flip=0.40
+  LLM-8B P34 risks=['Medium', 'High', 'Medium', 'Medium', 'Medium'] flip=0.20
+  LLM-8B P35 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P36 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P37 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P38 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-8B P39 risks=['High', 'High', 'Medium', 'High', 'High'] flip=0.20
+  LLM-8B P40 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P01 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P02 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P03 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P04 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P05 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P06 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P07 risks=['Medium', 'Medium', 'Medium', 'Medium', 'Medium'] flip=0.00
+  LLM-70B P08 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P09 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P10 risks=['Medium', 'High', 'High', 'Medium', 'Medium'] flip=0.40
+  LLM-70B P11 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P12 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P13 risks=['Low', 'Low', 'Low', 'Low', 'Low'] flip=0.00
+  LLM-70B P14 risks=['Low', 'Low', 'Low', 'Low', 'Low'] flip=0.00
+  LLM-70B P15 risks=['Low', 'Low', 'Low', 'Low', 'Low'] flip=0.00
+  LLM-70B P16 risks=['Low', 'Low', 'Low', 'Low', 'Low'] flip=0.00
+  LLM-70B P17 risks=['Medium', 'Medium', 'Medium', 'Medium', 'Medium'] flip=0.00
+  LLM-70B P18 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P19 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P20 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P21 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P22 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P23 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P24 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P25 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P26 risks=['Medium', 'Medium', 'Medium', 'Medium', 'Medium'] flip=0.00
+  LLM-70B P27 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P28 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P29 risks=['Medium', 'Medium', 'Medium', 'Medium', 'Medium'] flip=0.00
+  LLM-70B P30 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P31 risks=['Medium', 'Medium', 'Medium', 'Medium', 'Medium'] flip=0.00
+  LLM-70B P32 risks=['Medium', 'Medium', 'Medium', 'Medium', 'Medium'] flip=0.00
+  LLM-70B P33 risks=['Medium', 'Medium', 'Medium', 'Medium', 'Medium'] flip=0.00
+  LLM-70B P34 risks=['Medium', 'Medium', 'Medium', 'Medium', 'Medium'] flip=0.00
+  LLM-70B P35 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P36 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P37 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P38 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P39 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+  LLM-70B P40 risks=['High', 'High', 'High', 'High', 'High'] flip=0.00
+Traceability...
+  [SPARQL] GraphDB unreachable — falling back to local ontology TTL
+  [OK] Loaded local ontology: /Users/navinaamuthan/Dissertation/main/ai-ethics-framework-tool/ontology/ai-ethics-final.ttl (5163 triples)
+Amendability...
+Comprehensibility...
+  comprehensibility LLM-8B: 2.83
+  comprehensibility LLM-70B: 2.90
+  comprehensibility SHACL: 2.15
+  comprehensibility keyword-baseline: 2.75
+Keyword baseline does NOT clearly show the expected degenerate pattern (near-ceiling stability/traceability with worse amendability/comprehensibility). Report this as a finding: the property suite may be insufficiently discriminating for this assessor set (aligned with kill condition 3).
+kill3 {'triggered': False, 'note': 'At least one property discriminates among assessors.'}
+Wrote /Users/navinaamuthan/Dissertation/main/ai-ethics-framework-tool/diagnostic/property_scores.json /Users/navinaamuthan/Dissertation/main/ai-ethics-framework-tool/diagnostic/results/property_report.json

@@ -2,9 +2,9 @@
   "proposal_id": "P28",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-21T01:18:31.638216",
-  "proposal_text": "This research proposes a Spanish-language LLM chatbot that guides Bogot\u00e1 residents through business-permit and construction-licence applications. The bot classifies query intent, retrieves municipal code passages, and drafts application forms. In a pilot ward, incomplete answers that the bot labels 'likely ineligible' will auto-close the digital ticket without human review to reduce backlog. Residents with limited literacy or non-standard Spanish dialects may be disproportionately auto-closed. Conversation logs retain national ID numbers entered into forms. The city asserts the bot is 'advisory only,' yet ticket closure has the practical effect of a refusal. No administrative-appeal pathway specific to bot closures is described.",
-  "context_max_requirements": 10,
+  "timestamp": "2026-08-03T14:48:26.066252",
+  "proposal_text": "This research proposes a Spanish-language LLM chatbot that guides Bogotá residents through business-permit and construction-licence applications. The bot classifies query intent, retrieves municipal code passages, and drafts application forms. In a pilot ward, incomplete answers that the bot labels 'likely ineligible' will auto-close the digital ticket without human review to reduce backlog. Residents with limited literacy or non-standard Spanish dialects may be disproportionately auto-closed. Conversation logs retain national ID numbers entered into forms. The city asserts the bot is 'advisory only,' yet ticket closure has the practical effect of a refusal. No administrative-appeal pathway specific to bot closures is described.",
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "administrative",
@@ -108,210 +108,264 @@
       "df": 5
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed Spanish-language LLM chatbot for guiding Bogot\u00e1 residents through business-permit and construction-licence applications poses several ethical risks, including potential biases in auto-closing digital tickets, lack of transparency in decision-making, and risks to human dignity. The chatbot's ability to classify query intent and draft application forms may also lead to errors or inconsistencies, potentially causing harm to residents. Furthermore, the retention of national ID numbers in conversation logs raises concerns about data privacy and potential misuse. The absence of an administrative-appeal pathway for bot closures also raises concerns about accountability and transparency.",
+    "risk_summary": "The proposed Spanish-language LLM chatbot for guiding Bogotá residents through business-permit and construction-licence applications poses several ethical risks, including potential biases in query intent classification, disproportionate auto-closure of digital tickets for residents with limited literacy or non-standard Spanish dialects, and the retention of national ID numbers in conversation logs. These risks may lead to PsychologicalHarm, Dignity violations, and Accountability concerns. Furthermore, the lack of administrative-appeal pathways for bot closures and the potential for deceptive interactions may exacerbate these risks.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Bias in auto-closing digital tickets",
+        "risk": "Bias in query intent classification",
+        "risk_category": "PsychologicalHarm",
+        "severity": "High",
+        "explanation": "The chatbot's classification of query intent may be biased, leading to incorrect or unfair treatment of certain groups of residents."
+      },
+      {
+        "risk": "Disproportionate auto-closure of digital tickets",
         "risk_category": "Dignity",
         "severity": "High",
-        "explanation": "The chatbot's auto-closing feature may disproportionately affect residents with limited literacy or non-standard Spanish dialects, potentially leading to unfair outcomes."
+        "explanation": "The auto-closure of digital tickets without human review may disproportionately affect residents with limited literacy or non-standard Spanish dialects, potentially violating their dignity and rights."
       },
       {
-        "risk": "Lack of transparency in decision-making",
-        "risk_category": "Transparency",
-        "severity": "High",
-        "explanation": "The chatbot's decision-making process is not transparent, making it difficult for residents to understand the rationale behind the auto-closing of their digital tickets."
-      },
-      {
-        "risk": "Data privacy concerns",
-        "risk_category": "PsychologicalHarm",
+        "risk": "Retention of national ID numbers in conversation logs",
+        "risk_category": "Accountability",
         "severity": "Medium",
-        "explanation": "The retention of national ID numbers in conversation logs raises concerns about data privacy and potential misuse."
+        "explanation": "The retention of national ID numbers in conversation logs may pose a risk to residents' privacy and accountability, particularly if the data is not properly protected or anonymized."
       },
       {
-        "risk": "Accountability concerns",
+        "risk": "Lack of administrative-appeal pathways for bot closures",
         "risk_category": "Accountability",
         "severity": "High",
-        "explanation": "The absence of an administrative-appeal pathway for bot closures raises concerns about accountability and transparency."
+        "explanation": "The absence of administrative-appeal pathways for bot closures may leave residents without recourse or remedy for potentially unfair or incorrect decisions."
       },
       {
-        "risk": "Potential for deceptive interactions",
+        "risk": "Deceptive interactions",
         "risk_category": "Deception",
         "severity": "Medium",
-        "explanation": "The chatbot's ability to classify query intent and draft application forms may lead to errors or inconsistencies, potentially causing harm to residents."
+        "explanation": "The chatbot's interactions may be deceptive or misleading, particularly if residents are not aware that they are interacting with a machine rather than a human."
       },
       {
-        "risk": "Risk of false identification",
-        "risk_category": "FalseIdentification",
+        "risk": "Transparency concerns",
+        "risk_category": "Transparency",
         "severity": "Medium",
-        "explanation": "The chatbot's use of national ID numbers may lead to errors in identification, potentially causing harm to residents."
+        "explanation": "The chatbot's operation, capabilities, limitations, and decision rationale may not be adequately disclosed to residents, potentially leading to transparency concerns."
       },
       {
-        "risk": "Risk of reputational harm",
-        "risk_category": "ReputationalHarm",
-        "severity": "Medium",
-        "explanation": "The chatbot's errors or inconsistencies may damage the reputation of the city or its residents."
+        "risk": "Environmental impact",
+        "risk_category": "EnvironmentalHarm",
+        "severity": "Low",
+        "explanation": "The chatbot's environmental impact may be minimal, but it is still important to consider the potential effects of the technology on the environment and to implement measures to mitigate any harm."
       },
       {
-        "risk": "Risk of economic harm",
-        "risk_category": "EconomicHarm",
-        "severity": "Medium",
-        "explanation": "The chatbot's errors or inconsistencies may lead to economic losses for residents or the city."
-      },
-      {
-        "risk": "Risk of dual-use misuse",
+        "risk": "Dual-use misuse",
         "risk_category": "DualUseMisuse",
         "severity": "Low",
-        "explanation": "The chatbot's technology may be repurposed for harmful applications, although this is unlikely."
+        "explanation": "The chatbot's technology may be repurposed for harmful applications, but this risk is relatively low given the specific use case and context."
       }
     ],
     "applicable_requirements": [
       {
         "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being \u2014 discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "requirement_text": "Research must contribute to society and human well-being",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the chatbot's potential harms and develop strategies to mitigate them."
+        "action_needed": "Conduct a thorough impact assessment to identify potential benefits and harms"
       },
       {
         "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm \u2014 consider how data, code or other outcomes of research may cause harm",
+        "requirement_text": "Avoid harm",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop guidelines for the responsible use of the chatbot and ensure that it is designed with safety and security in mind."
+        "action_needed": "Implement measures to prevent or mitigate potential harms, such as bias or deceptive interactions"
       },
       {
-        "requirement_id": "ACM011",
-        "requirement_text": "Manage personnel and resources to enhance quality of working life \u2014 consider how participation of annotators/crowdworkers may cause benefits or harms",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider the potential impacts of the chatbot on the working lives of city employees and residents."
-      },
-      {
-        "requirement_id": "ACM014",
-        "requirement_text": "All human research subjects or participants must receive appropriate compensation \u2014 respect minimum hourly rate in region where work is carried out",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that all individuals involved in the development and testing of the chatbot receive fair compensation for their work."
-      },
-      {
-        "requirement_id": "ACM019",
-        "requirement_text": "Respect terms of datasets with defined licences (CC 4.0, MIT etc)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that all datasets used in the development of the chatbot are properly licensed and that the terms of those licenses are respected."
-      },
-      {
-        "requirement_id": "ACM020",
-        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population \u2014 claims of diverse representation must be substantiated",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Conduct an analysis of the datasets used in the development of the chatbot to ensure that they are representative of the intended population."
-      },
-      {
-        "requirement_id": "ACM024",
-        "requirement_text": "Consult local laws before collecting or analysing bulk surveillance data \u2014 surveillance must not predict protected categories or endanger individual well-being",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Consult with local authorities to ensure that the chatbot complies with all relevant laws and regulations regarding surveillance and data collection."
-      },
-      {
-        "requirement_id": "ACM025",
-        "requirement_text": "Communicate whether approach could facilitate deceptive interactions causing harm (theft, fraud, harassment), impersonate public figures, influence political processes, or promote hate speech",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Develop guidelines for the responsible use of the chatbot and ensure that it is designed with safety and security in mind."
-      },
-      {
-        "requirement_id": "AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "requirement_id": "EUAIAct AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA",
         "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis to determine whether the chatbot is considered a high-risk AI system and whether a FRIA is required."
+        "action_needed": "Conduct a FRIA to identify and mitigate potential risks associated with the chatbot"
       },
       {
-        "requirement_id": "ACM032",
-        "requirement_text": "High-risk models must be released with safeguards for controlled use (e.g. code of conduct for access)",
-        "framework": "ACMConference",
+        "requirement_id": "HorizonEurope HE001",
+        "requirement_text": "AI system must not deprive end-users or affected persons of ability to make decisions about their own lives",
+        "framework": "HorizonEurope",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop and implement safeguards for the controlled use of the chatbot, including a code of conduct for access."
+        "action_needed": "Ensure that the chatbot does not undermine residents' autonomy or decision-making capacity"
+      },
+      {
+        "requirement_id": "HorizonEurope HE021",
+        "requirement_text": "It must be made clear to end-users they are interacting with an AI system",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Clearly disclose to residents that they are interacting with a machine rather than a human"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 1",
         "right_name": "Human Dignity",
-        "relevance": "The chatbot's auto-closing feature may disproportionately affect residents with limited literacy or non-standard Spanish dialects, potentially leading to unfair outcomes and undermining their human dignity."
+        "relevance": "The chatbot's potential biases and disproportionate auto-closure of digital tickets may violate residents' dignity and rights"
       },
       {
         "article": "Article 8",
         "right_name": "Protection of Personal Data",
-        "relevance": "The retention of national ID numbers in conversation logs raises concerns about data privacy and potential misuse."
-      },
-      {
-        "article": "Article 21",
-        "right_name": "Non-Discrimination",
-        "relevance": "The chatbot's potential biases may lead to discriminatory outcomes, potentially violating the right to non-discrimination."
+        "relevance": "The retention of national ID numbers in conversation logs may pose a risk to residents' right to protection of their personal data"
       },
       {
         "article": "Article 41",
         "right_name": "Right to Good Administration",
-        "relevance": "The absence of an administrative-appeal pathway for bot closures raises concerns about accountability and transparency, potentially violating the right to good administration."
+        "relevance": "The lack of administrative-appeal pathways for bot closures may undermine residents' right to good administration and effective remedy"
+      },
+      {
+        "article": "Article 47",
+        "right_name": "Right to an Effective Remedy",
+        "relevance": "The absence of administrative-appeal pathways for bot closures may leave residents without an effective remedy for potentially unfair or incorrect decisions"
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-003",
         "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The importance of designing AI systems with safety and security in mind, including guidelines for responsible use and safeguards for controlled use."
+        "lesson": "The importance of careful design and testing to prevent AI systems from producing harmful or offensive outputs"
       },
       {
         "incident_id": "AIAAIC-005",
         "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The potential for AI systems to perpetuate biases and discriminatory outcomes, highlighting the need for diverse and representative datasets."
+        "lesson": "The need for diverse and representative training data to prevent AI systems from perpetuating biases and stereotypes"
       },
       {
         "incident_id": "AIAAIC-009",
         "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The importance of ensuring that AI systems are designed and tested with safety and security in mind, including the need for human oversight and accountability mechanisms."
+        "lesson": "The importance of careful testing and validation of AI systems in real-world contexts to prevent accidents and ensure safety"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Develop and implement safeguards for the controlled use of the chatbot",
-        "priority": "High"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct a thorough analysis of the chatbot's potential harms and develop strategies to mitigate them",
-        "priority": "High"
+        "mitigation": "AuditLog",
+        "mitigation_id": "AuditLog",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Ensure that all datasets used in the development of the chatbot are properly licensed and that the terms of those licenses are respected",
-        "priority": "Medium"
+        "mitigation": "ComplaintMechanism",
+        "mitigation_id": "ComplaintMechanism",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Develop guidelines for the responsible use of the chatbot and ensure that it is designed with safety and security in mind",
-        "priority": "Medium"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct an analysis of the datasets used in the development of the chatbot to ensure that they are representative of the intended population",
-        "priority": "Low"
+        "mitigation": "Pseudonymisation",
+        "mitigation_id": "Pseudonymisation",
+        "priority": "Low",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "StaffTraining",
+        "mitigation_id": "StaffTraining",
+        "priority": "Low",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "EnvironmentalSafeguard",
+        "mitigation_id": "EnvironmentalSafeguard",
+        "priority": "Low",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "ResponsibleReleasePolicy",
+        "mitigation_id": "ResponsibleReleasePolicy",
+        "priority": "Low",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough analysis of the chatbot's potential harms and develop strategies to mitigate them",
-      "Ensure that all datasets used in the development of the chatbot are properly licensed and that the terms of those licenses are respected",
-      "Develop and implement safeguards for the controlled use of the chatbot",
-      "Consult with local authorities to ensure that the chatbot complies with all relevant laws and regulations regarding surveillance and data collection",
-      "Conduct a thorough analysis to determine whether the chatbot is considered a high-risk AI system and whether a FRIA is required"
+      "Conduct a thorough impact assessment to identify potential benefits and harms",
+      "Implement measures to prevent or mitigate potential harms, such as bias or deceptive interactions",
+      "Conduct a FRIA to identify and mitigate potential risks associated with the chatbot",
+      "Ensure that the chatbot does not undermine residents' autonomy or decision-making capacity",
+      "Clearly disclose to residents that they are interacting with a machine rather than a human"
     ],
     "tier2_reflective_prompts": [
-      "Consider the potential impacts of the chatbot on the working lives of city employees and residents",
-      "Conduct an analysis of the datasets used in the development of the chatbot to ensure that they are representative of the intended population",
-      "Develop guidelines for the responsible use of the chatbot and ensure that it is designed with safety and security in mind"
+      "How might the chatbot's design and functionality be improved to better serve the needs of residents with limited literacy or non-standard Spanish dialects?",
+      "What measures can be taken to ensure that the chatbot's decision-making processes are transparent and accountable?",
+      "How can the chatbot be designed to minimize its environmental impact and ensure that it is used in a responsible and sustainable manner?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "LOW",
@@ -324,6 +378,21 @@
       "rights_matched": 1,
       "requirements_retrieved": 47,
       "incidents_retrieved": 3,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM001",
         "ACM002",
@@ -388,14 +457,9 @@
       "requirements_cited": [
         "ACM001",
         "ACM002",
-        "ACM011",
-        "ACM014",
-        "ACM019",
-        "ACM020",
-        "ACM024",
-        "ACM025",
-        "AI001",
-        "ACM032"
+        "EUAIAct AI001",
+        "HorizonEurope HE001",
+        "HorizonEurope HE021"
       ],
       "incidents_sample": [
         "AIAAIC-003",
@@ -403,6 +467,5 @@
         "AIAAIC-009"
       ]
     }
-  },
-  "compact_prompt": false
+  }
 }

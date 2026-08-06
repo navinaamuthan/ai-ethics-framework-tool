@@ -1,0 +1,353 @@
+{
+  "proposal_id": "P26_negative_8b",
+  "mode": "full",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-26T23:39:21.593532",
+  "proposal_text": "This project proposes a WhatsApp-based crop-advisory chatbot for smallholder farmers in Maharashtra and Odisha, but now also collects and shares farmer location data with local government and NGOs to monitor agricultural development progress and provide targeted resources. The bot answers irrigation, pest, and market-price questions using retrieval over public agricultural extension bulletins and open weather APIs. Conversations are logged in aggregate for service improvement; phone numbers are hashed after 30 days. No credit, subsidy, or enforcement decisions are attached to bot use. A subtle residual issue remains that incorrect pest-treatment advice could cause crop loss for farmers who treat the bot as authoritative, yet the interface presents answers with high confidence and no uncertainty bands. The team will run a small accuracy pilot against agronomist answers, but has not planned liability or escalation pathways when advice fails. No personal land-holding registries are ingested. Additionally, the bot now requires farmers to share their personal contact information with third-party service providers, including lenders and insurance companies, to facilitate access to financial services. The team will provide a clear opt-out option for this data sharing, but the potential for unsolicited outreach or financial exploitation remains a concern.",
+  "context_max_requirements": 5,
+  "llm_model": "llama3.1:8b",
+  "keywords": [
+    "chatbot",
+    "monitor"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity"
+  ],
+  "retrieved_requirements_count": 47,
+  "retrieved_incidents_count": 3,
+  "retrieved_risk_categories": [
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 24.0,
+      "tf": 24,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 14.0,
+      "tf": 14,
+      "df": 26
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "DualUseMisuse",
+      "label": "Dual-Use Misuse",
+      "definition": "Risk that research or AI outputs intended for beneficial purposes are repurposed for harmful applications.",
+      "idf_score": 4.912,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 9
+    },
+    {
+      "id": "Deception",
+      "label": "Deception",
+      "definition": "Risk that an AI system misleads users about its nature, capabilities, or the provenance of its outputs.",
+      "idf_score": 4.442,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 15
+    },
+    {
+      "id": "EconomicHarm",
+      "label": "Economic Harm",
+      "definition": "Risk of systemic or population-level economic disadvantage caused by AI systems (distinct from individual FinancialHarm).",
+      "idf_score": 4.6497,
+      "rank_score": 5.0,
+      "tf": 5,
+      "df": 12
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The proposed WhatsApp-based crop-advisory chatbot collects and shares farmer location data, requires farmers to share personal contact information with third-party service providers, and provides high-confidence answers without uncertainty bands, posing risks to human dignity, psychological harm, and economic harm.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Collection and sharing of farmer location data",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The bot collects and shares sensitive location data without explicit consent, posing a significant risk to farmers' privacy."
+      },
+      {
+        "risk": "Requiring personal contact information for third-party services",
+        "risk_category": "FinancialHarm",
+        "severity": "High",
+        "explanation": "The potential for unsolicited outreach or financial exploitation remains a concern when sharing personal contact information with lenders and insurance companies."
+      },
+      {
+        "risk": "Providing high-confidence answers without uncertainty bands",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Medium",
+        "explanation": "Incorrect pest-treatment advice could cause crop loss for farmers who treat the bot as authoritative, potentially leading to mental distress or emotional damage."
+      },
+      {
+        "risk": "Lack of liability and escalation pathways when advice fails",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "The team has not planned for consequences when the bot provides incorrect advice, leaving farmers without recourse."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being \u2014 discuss how applications may harm individuals, groups or society and ways to mitigate such harms (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment and mitigation plan for potential harms."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 1",
+        "right_name": "HumanDignity",
+        "relevance": "The collection and sharing of sensitive location data without explicit consent poses a significant risk to farmers' human dignity."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The importance of carefully designing and testing AI systems to avoid generating harmful or offensive content."
+      },
+      {
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "The need for diverse and representative training data, as well as careful consideration of potential biases in AI systems."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "HumanOversight",
+        "mitigation_id": "Human Oversight",
+        "priority": "Medium",
+        "from_taxonomy": true
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough risk assessment and mitigation plan for potential harms.",
+      "Implement encryption to protect sensitive location data."
+    ],
+    "tier2_reflective_prompts": [
+      "How can the team ensure that the bot's high-confidence answers are accurate and reliable?",
+      "What measures can be taken to prevent unsolicited outreach or financial exploitation when sharing personal contact information with third-party service providers?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "chatbot",
+        "monitor"
+      ],
+      "rights_matched": 1,
+      "requirements_retrieved": 47,
+      "incidents_retrieved": 3,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE019",
+        "HE021",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE042",
+        "HE049",
+        "HE050",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086"
+      ],
+      "requirements_cited": [
+        "ACM001"
+      ],
+      "incidents_sample": [
+        "AIAAIC-003",
+        "AIAAIC-005",
+        "AIAAIC-009"
+      ]
+    }
+  }
+}

@@ -2,9 +2,9 @@
   "proposal_id": "P26",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-21T01:17:51.881893",
+  "timestamp": "2026-08-03T14:47:28.381287",
   "proposal_text": "This project proposes a WhatsApp-based crop-advisory chatbot for smallholder farmers in Maharashtra and Odisha. The bot answers irrigation, pest, and market-price questions using retrieval over public agricultural extension bulletins and open weather APIs. Conversations are logged in aggregate for service improvement; phone numbers are hashed after 30 days. No credit, subsidy, or enforcement decisions are attached to bot use. A subtle residual issue is that incorrect pest-treatment advice could cause crop loss for farmers who treat the bot as authoritative, yet the interface presents answers with high confidence and no uncertainty bands. The team will run a small accuracy pilot against agronomist answers but has not planned liability or escalation pathways when advice fails. No personal land-holding registries are ingested.",
-  "context_max_requirements": 10,
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "chatbot"
@@ -106,167 +106,215 @@
       "df": 5
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed WhatsApp-based crop-advisory chatbot for smallholder farmers poses several ethical risks, including the potential for incorrect pest-treatment advice, lack of transparency in the decision-making process, and potential harm to farmers' dignity and well-being. The chatbot's high confidence in its answers without uncertainty bands may lead to over-reliance on the system, exacerbating these risks. Additionally, the project's lack of planned liability or escalation pathways in case of advice failure raises concerns about accountability. The use of public agricultural extension bulletins and open weather APIs may also introduce risks related to data governance and dual-use misuse.",
+    "risk_summary": "The proposed WhatsApp-based crop-advisory chatbot for smallholder farmers poses several ethical risks, including the potential for incorrect pest-treatment advice, lack of transparency in the decision-making process, and potential manipulation or deception of farmers. Additionally, the chatbot's high-confidence responses without uncertainty bands may lead to over-reliance on the system, causing crop loss or other economic harm. The project also raises concerns about data governance, intellectual property, and the potential for dual-use misuse. The overall risk level is Medium, as the chatbot is not autonomous and does not make consequential decisions, but it still involves personal data processing and may have significant impacts on farmers' livelihoods.",
     "overall_risk_level": "Medium",
     "identified_risks": [
       {
         "risk": "Incorrect pest-treatment advice",
         "risk_category": "PsychologicalHarm",
         "severity": "Medium",
-        "explanation": "The chatbot's potential to provide incorrect advice may lead to crop loss and financial harm to farmers, causing mental distress and emotional damage."
+        "explanation": "The chatbot's high-confidence responses without uncertainty bands may lead to over-reliance on the system, causing crop loss or other economic harm."
       },
       {
-        "risk": "Lack of transparency",
+        "risk": "Lack of transparency in decision-making process",
         "risk_category": "Transparency",
         "severity": "Medium",
-        "explanation": "The chatbot's decision-making process is not transparent, which may lead to mistrust and over-reliance on the system."
+        "explanation": "The chatbot's decision-making process is not transparent, which may lead to mistrust or confusion among farmers."
       },
       {
-        "risk": "Harm to farmers' dignity and well-being",
-        "risk_category": "Dignity",
+        "risk": "Potential manipulation or deception of farmers",
+        "risk_category": "Deception",
         "severity": "Medium",
-        "explanation": "The chatbot's potential to provide incorrect advice or cause crop loss may undermine farmers' dignity and well-being."
+        "explanation": "The chatbot's responses may be misleading or deceptive, potentially causing farmers to make suboptimal decisions."
       },
       {
-        "risk": "Accountability concerns",
-        "risk_category": "Accountability",
-        "severity": "Medium",
-        "explanation": "The project's lack of planned liability or escalation pathways in case of advice failure raises concerns about accountability."
+        "risk": "Data governance and intellectual property concerns",
+        "risk_category": "DataBreach",
+        "severity": "Low",
+        "explanation": "The project involves the use of public agricultural extension bulletins and open weather APIs, which may raise concerns about data governance and intellectual property."
       },
       {
-        "risk": "Data governance and dual-use misuse",
+        "risk": "Dual-use misuse",
         "risk_category": "DualUseMisuse",
         "severity": "Low",
-        "explanation": "The use of public agricultural extension bulletins and open weather APIs may introduce risks related to data governance and dual-use misuse."
+        "explanation": "The chatbot's technology could potentially be repurposed for harmful applications, such as manipulating farmers' decisions for malicious purposes."
       }
     ],
     "applicable_requirements": [
       {
         "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough impact assessment to identify potential benefits and harms of the chatbot"
+        "action_needed": "Conduct a thorough risk assessment and develop strategies to mitigate potential harms"
       },
       {
         "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to prevent harm, such as providing uncertainty bands with answers and establishing escalation pathways"
-      },
-      {
-        "requirement_id": "ACM014",
-        "requirement_text": "All human research subjects or participants must receive appropriate compensation",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that farmers participating in the pilot study receive fair compensation for their time and expertise"
-      },
-      {
-        "requirement_id": "ACM019",
-        "requirement_text": "Respect terms of datasets with defined licences",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Verify that the use of public agricultural extension bulletins and open weather APIs complies with their respective licenses and terms of use"
-      },
-      {
-        "requirement_id": "ACM024",
-        "requirement_text": "Consult local laws before collecting or analysing bulk surveillance data",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider the potential implications of collecting and analyzing conversation logs and ensure compliance with relevant laws and regulations"
+        "action_needed": "Implement data protection measures and ensure that the chatbot's responses are accurate and reliable"
       },
       {
         "requirement_id": "AI001",
-        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
         "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment to determine whether the chatbot is considered a high-risk AI system under the EU AI Act"
+        "action_needed": "Conduct a FRIA to assess the chatbot's potential risks and develop strategies to mitigate them"
       },
       {
-        "requirement_id": "ACM020",
-        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Evaluate the representativeness of the datasets used to train the chatbot and communicate any limitations or biases to stakeholders"
-      },
-      {
-        "requirement_id": "ACM025",
-        "requirement_text": "Communicate whether approach could facilitate deceptive interactions causing harm",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider the potential for the chatbot to be used in deceptive or manipulative ways and implement measures to prevent such use"
-      },
-      {
-        "requirement_id": "ACM032",
-        "requirement_text": "High-risk models must be released with safeguards for controlled use",
-        "framework": "ACMConference",
+        "requirement_id": "HE001",
+        "requirement_text": "AI system must not deprive end-users or affected persons of ability to make decisions about their own lives or remove basic freedoms",
+        "framework": "HorizonEurope",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement safeguards to control the use of the chatbot, such as access controls and monitoring mechanisms"
+        "action_needed": "Ensure that the chatbot's responses are transparent and do not manipulate or deceive farmers"
+      },
+      {
+        "requirement_id": "HE021",
+        "requirement_text": "It must be made clear to end-users they are interacting with an AI system",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Clearly disclose that the chatbot is an AI system and provide information about its limitations and potential biases"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 1",
         "right_name": "Human Dignity",
-        "relevance": "The chatbot's potential to provide incorrect advice or cause crop loss may undermine farmers' dignity and well-being."
+        "relevance": "The chatbot's potential to cause economic harm or manipulate farmers may undermine their human dignity"
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-003",
         "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The importance of considering the potential for AI systems to produce harmful or offensive outputs and implementing measures to prevent such incidents."
+        "lesson": "The importance of ensuring that AI systems are designed and tested to avoid causing harm or offense"
       },
       {
         "incident_id": "AIAAIC-005",
         "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The need for careful evaluation and testing of AI systems to ensure they do not perpetuate biases or discriminatory behaviors."
+        "lesson": "The need for careful testing and validation of AI systems to avoid biases and errors"
       },
       {
         "incident_id": "AIAAIC-009",
         "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The importance of prioritizing safety and implementing robust testing and validation procedures for AI systems that interact with the physical world."
+        "lesson": "The importance of ensuring that AI systems are designed and tested to prioritize human safety and well-being"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement uncertainty bands with answers",
-        "priority": "High"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Establish escalation pathways for advice failure",
-        "priority": "High"
+        "mitigation": "Transparency",
+        "mitigation_id": "Transparency",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct thorough impact assessment",
-        "priority": "Medium"
+        "mitigation": "StaffTraining",
+        "mitigation_id": "StaffTraining",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Implement safeguards for controlled use",
-        "priority": "Medium"
+        "mitigation": "ComplaintMechanism",
+        "mitigation_id": "ComplaintMechanism",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Evaluate representativeness of datasets",
-        "priority": "Low"
+        "mitigation": "EnvironmentalSafeguard",
+        "mitigation_id": "EnvironmentalSafeguard",
+        "priority": "Low",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct thorough impact assessment",
-      "Implement measures to prevent harm",
-      "Ensure fair compensation for farmers participating in pilot study",
-      "Verify compliance with dataset licenses and terms of use",
-      "Conduct risk assessment under EU AI Act"
+      "Conduct a thorough risk assessment and develop strategies to mitigate potential harms",
+      "Implement data protection measures and ensure that the chatbot's responses are accurate and reliable",
+      "Conduct a FRIA to assess the chatbot's potential risks and develop strategies to mitigate them",
+      "Ensure that the chatbot's responses are transparent and do not manipulate or deceive farmers",
+      "Clearly disclose that the chatbot is an AI system and provide information about its limitations and potential biases"
     ],
     "tier2_reflective_prompts": [
-      "Consider potential implications of collecting and analyzing conversation logs",
-      "Evaluate representativeness of datasets",
-      "Consider potential for deceptive interactions",
-      "Implement safeguards for controlled use"
+      "How might the chatbot's responses be perceived by farmers, and what are the potential consequences of incorrect or misleading information?",
+      "What are the potential risks and benefits of using a chatbot to provide agricultural advice, and how can these be mitigated and maximized?",
+      "How can the chatbot's design and development be improved to prioritize human dignity and well-being?"
     ],
-    "reams_clearance_likely": false,
+    "reams_clearance_likely": true,
     "confidence_flag": "LOW",
     "_retrieval_metadata": {
       "keywords": [
@@ -275,6 +323,21 @@
       "rights_matched": 1,
       "requirements_retrieved": 47,
       "incidents_retrieved": 3,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM001",
         "ACM002",
@@ -339,13 +402,9 @@
       "requirements_cited": [
         "ACM001",
         "ACM002",
-        "ACM014",
-        "ACM019",
-        "ACM024",
         "AI001",
-        "ACM020",
-        "ACM025",
-        "ACM032"
+        "HE001",
+        "HE021"
       ],
       "incidents_sample": [
         "AIAAIC-003",
@@ -353,6 +412,5 @@
         "AIAAIC-009"
       ]
     }
-  },
-  "compact_prompt": false
+  }
 }

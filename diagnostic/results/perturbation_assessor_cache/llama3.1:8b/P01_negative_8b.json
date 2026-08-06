@@ -1,0 +1,362 @@
+{
+  "proposal_id": "P01_negative_8b",
+  "mode": "full",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-26T22:03:12.096081",
+  "proposal_text": "Algorithm prioritises patients who have opted out of Medicare or Medicaid without considering potential systemic issues.",
+  "context_max_requirements": 5,
+  "llm_model": "llama3.1:8b",
+  "keywords": [
+    "patient"
+  ],
+  "matched_rights": [
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 57,
+  "retrieved_incidents_count": 3,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 40.0,
+      "tf": 40,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 101
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 15
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 6.0,
+      "tf": 6,
+      "df": 48
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 5.0,
+      "tf": 5,
+      "df": 19
+    },
+    {
+      "id": "EmploymentHarm",
+      "label": "Employment Harm",
+      "definition": "Risk of unfair exclusion, surveillance, or adverse treatment of workers or job applicants by AI systems.",
+      "idf_score": 4.1701,
+      "rank_score": 4.0,
+      "tf": 4,
+      "df": 20
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "DataBreach",
+      "label": "Data Breach",
+      "definition": "Risk of unauthorised access to or leakage of personal data held or processed by an AI system.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 2,
+      "df": 6
+    },
+    {
+      "id": "FunctionCreep",
+      "label": "Function Creep",
+      "definition": "Risk that an AI system is used beyond its originally defined and ethically approved purpose.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 2,
+      "df": 6
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The proposed algorithm prioritizes patients who have opted out of Medicare or Medicaid without considering potential systemic issues, posing risks to fairness and discrimination.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The algorithm may unfairly prioritize patients who have opted out of Medicare or Medicaid, perpetuating biases and discrimination."
+      },
+      {
+        "risk": "DataGovernance",
+        "risk_category": "Data Governance",
+        "severity": "Medium",
+        "explanation": "Inadequate data stewardship and provenance controls in the AI pipeline may lead to biased decision-making."
+      },
+      {
+        "risk": "FunctionCreep",
+        "risk_category": "Function Creep",
+        "severity": "High",
+        "explanation": "The algorithm's purpose may expand beyond its originally defined scope, leading to unintended consequences."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate \u2014 consider and ameliorate biases the approach may perpetuate (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement bias mitigation strategies to ensure fairness in decision-making."
+      },
+      {
+        "requirement_id": "ACM005",
+        "requirement_text": "Respect intellectual property and data/code ownership \u2014 cite creators of artefacts used and use them as intended (respect licences) (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure proper citation and usage of external artefacts to avoid intellectual property issues."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "8",
+        "right_name": "DataProtection",
+        "relevance": "The algorithm's handling of patient data may infringe on the right to data protection."
+      },
+      {
+        "article": "21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The algorithm's prioritization of patients who have opted out of Medicare or Medicaid may discriminate against certain groups."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
+        "lesson": "The importance of considering systemic issues and biases in AI decision-making."
+      },
+      {
+        "incident_id": "AIAAIC-007",
+        "incident_title": "Clearview AI Mass Facial Recognition Scraping",
+        "lesson": "The risks associated with mass data collection and potential misuse of facial recognition technology."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "EthicsReviewBoard",
+        "mitigation_id": "EthicsReviewBoard",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "StaffTraining",
+        "mitigation_id": "StaffTraining",
+        "priority": "Medium",
+        "from_taxonomy": true
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Implement bias mitigation strategies to ensure fairness in decision-making.",
+      "Ensure proper citation and usage of external artefacts to avoid intellectual property issues."
+    ],
+    "tier2_reflective_prompts": [
+      "How can the algorithm be designed to consider systemic issues and biases?",
+      "What measures can be taken to prevent Function Creep and ensure the algorithm's purpose remains aligned with its original scope?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "patient"
+      ],
+      "rights_matched": 1,
+      "requirements_retrieved": 57,
+      "incidents_retrieved": 3,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
+      "requirements_sample": [
+        "ACM003",
+        "ACM005",
+        "ACM006",
+        "ACM008",
+        "ACM009",
+        "ACM010",
+        "ACM015",
+        "ACM016",
+        "ACM022",
+        "ACM031"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM003",
+        "ACM005",
+        "ACM006",
+        "ACM008",
+        "ACM009",
+        "ACM010",
+        "ACM015",
+        "ACM016",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI012",
+        "AI013",
+        "AI014",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE010",
+        "HE011",
+        "HE013",
+        "HE031",
+        "HE033",
+        "HE034",
+        "HE035",
+        "HE036",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R019",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R042",
+        "R047",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R067",
+        "R068",
+        "R069",
+        "R070",
+        "R071",
+        "R072",
+        "R073",
+        "R074",
+        "R083",
+        "R084"
+      ],
+      "requirements_cited": [
+        "ACM003",
+        "ACM005"
+      ],
+      "incidents_sample": [
+        "AIAAIC-006",
+        "AIAAIC-007",
+        "AIAAIC-011"
+      ]
+    }
+  }
+}

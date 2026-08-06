@@ -2,60 +2,215 @@
   "proposal_id": "P19",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-19T19:57:28.982403",
+  "timestamp": "2026-08-02T19:02:13.303987",
   "proposal_text": "This research proposes a collaboration between Trinity College Dublin and Johns Hopkins University to develop an AI diagnostic model for rare genetic conditions. The project requires sharing patient genomic data and medical imaging between Ireland and the United States. The Irish dataset of 2,000 patients was collected under GDPR with consent for domestic research use only. The US dataset was collected under HIPAA regulations. The researchers propose to use federated learning to train the model without raw data leaving each jurisdiction, but the federated learning protocol requires sharing model gradient updates which have been shown in recent research to be vulnerable to reconstruction attacks that can recover individual patient data. The project has received funding approval but cross-border data transfer impact assessments have not been completed. The rare disease patient population is small enough that anonymisation may not prevent re-identification. No patient advisory group has been consulted on the data sharing arrangements.",
   "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
-    "data",
-    "consent",
-    "medical",
-    "diagnos",
     "patient",
-    "vulnerable",
+    "consent",
     "cross-border",
-    "transfer"
+    "diagnos",
+    "medical",
+    "transfer",
+    "vulnerable"
   ],
   "matched_rights": [
-    "Art1_HumanDignity",
-    "Art24_RightsOfChild",
     "Art2_RightToLife",
     "Art35_HealthCare",
-    "Art3_RightToIntegrity",
-    "Art41_GoodAdministration",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 181,
+  "retrieved_requirements_count": 71,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 46.0,
+      "tf": 46,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 14.0,
+      "tf": 14,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 26
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 19
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 15
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "FunctionCreep",
+      "label": "Function Creep",
+      "definition": "Risk that an AI system is used beyond its originally defined and ethically approved purpose.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 3,
+      "df": 6
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed research project involves sharing patient genomic data and medical imaging between Ireland and the United States, which poses significant risks to patient privacy and data protection. The use of federated learning to train the model may not be sufficient to prevent reconstruction attacks, and the small size of the rare disease patient population may make anonymisation ineffective. Additionally, the project lacks consultation with a patient advisory group and has not completed cross-border data transfer impact assessments. The project's potential to contribute to the diagnosis of rare genetic conditions must be weighed against these risks.",
+    "risk_summary": "The proposed AI diagnostic model for rare genetic conditions poses significant risks to patient privacy, data protection, and potential discrimination. The sharing of patient genomic data and medical imaging between Ireland and the United States increases the risk of unauthorised data disclosure and potential re-identification of patients. The use of federated learning, while intended to mitigate these risks, may not be sufficient to prevent data breaches. Furthermore, the lack of consultation with a patient advisory group and incomplete cross-border data transfer impact assessments exacerbate these concerns.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Reconstruction attacks on model gradient updates",
+        "risk": "Unauthorised data disclosure",
+        "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "Recent research has shown that model gradient updates can be vulnerable to reconstruction attacks, which could compromise patient data"
+        "explanation": "The sharing of patient genomic data and medical imaging between Ireland and the United States increases the risk of unauthorised data disclosure."
       },
       {
-        "risk": "Ineffective anonymisation",
+        "risk": "Re-identification of patients",
+        "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "The small size of the rare disease patient population may make anonymisation ineffective, potentially leading to re-identification of patients"
+        "explanation": "The small patient population and potential vulnerabilities in the federated learning protocol may enable re-identification of patients."
       },
       {
-        "risk": "Lack of patient advisory group consultation",
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
         "severity": "Medium",
-        "explanation": "The project has not consulted with a patient advisory group on the data sharing arrangements, which may lead to inadequate consideration of patient concerns"
+        "explanation": "The use of AI in diagnosis may perpetuate existing biases in the data, leading to discriminatory outcomes."
       },
       {
-        "risk": "Insufficient cross-border data transfer impact assessments",
+        "risk": "Lack of transparency",
+        "risk_category": "DataGovernance",
         "severity": "Medium",
-        "explanation": "The project has not completed cross-border data transfer impact assessments, which may lead to inadequate consideration of data protection risks"
+        "explanation": "The incomplete cross-border data transfer impact assessments and lack of consultation with a patient advisory group raise concerns about transparency and accountability."
       },
       {
-        "risk": "Potential for biased model outputs",
-        "severity": "Medium",
-        "explanation": "The project may perpetuate biases in the data or model outputs, which could lead to unfair or discriminatory outcomes"
+        "risk": "Psychological harm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Low",
+        "explanation": "The potential for inaccurate or delayed diagnoses may cause psychological harm to patients."
       }
     ],
     "applicable_requirements": [
@@ -64,317 +219,230 @@
         "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain informed consent from patients and implement robust privacy protections"
+        "action_needed": "Obtain informed consent from patients and implement robust privacy protections."
       },
       {
-        "requirement_id": "ACM007",
-        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
-        "framework": "ACMConference",
+        "requirement_id": "AI011",
+        "requirement_text": "Identify categories of natural persons and groups likely to be affected by the AI system in the specific context",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a comprehensive evaluation of the project's potential risks and impacts"
+        "action_needed": "Conduct a thorough impact assessment to identify potential risks and affected groups."
       },
       {
-        "requirement_id": "ACM008",
-        "requirement_text": "Consider possible risks and impacts of the research approach itself (not just applications)",
+        "requirement_id": "HE007",
+        "requirement_text": "AI system must process personal data lawfully, fairly and transparently",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the AI system is designed and implemented to process personal data in accordance with EU data protection regulations."
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Consider the potential risks and impacts of the federated learning approach"
+        "action_needed": "Implement measures to detect and mitigate biases in the AI system."
       },
       {
         "requirement_id": "ACM016",
         "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Minimise exposure of personally identifiable information in the datasets"
+        "action_needed": "Minimise the collection and use of personally identifiable information and ensure that patients provide informed consent."
       },
       {
-        "requirement_id": "ACM017",
-        "requirement_text": "Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained",
-        "framework": "ACMConference",
+        "requirement_id": "EUAIAct AI024",
+        "requirement_text": "Assess whether notification to market surveillance authority is required or exempt under Art 46-1",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain explicit consent from patients or explain why consent was not obtained"
+        "action_needed": "Conduct a thorough assessment to determine whether notification to the market surveillance authority is required."
       },
       {
-        "requirement_id": "ACM022",
-        "requirement_text": "Consider risk that applications could open security vulnerabilities or cause serious accidents — recommend or implement protections",
-        "framework": "ACMConference",
+        "requirement_id": "HE008",
+        "requirement_text": "Data minimisation and data protection by design and by default must be integrated",
+        "framework": "HorizonEurope",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Consider the potential risks of security vulnerabilities or serious accidents and implement protections"
+        "action_needed": "Implement data minimisation and data protection by design and by default principles in the AI system."
       },
       {
-        "requirement_id": "ACM024",
-        "requirement_text": "Consult local laws before collecting or analysing bulk surveillance data — surveillance must not predict protected categories or endanger individual well-being",
+        "requirement_id": "ACM031",
+        "requirement_text": "Use privacy protocols, encryption and anonymisation to reduce risk of data leakage — stronger measures for sensitive data",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Consult local laws and ensure that the project does not predict protected categories or endanger individual well-being"
-      },
-      {
-        "requirement_id": "ACM029",
-        "requirement_text": "Provide data and model documentation via structured templates (Model Cards, Datasheets for Datasets)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Provide data and model documentation via structured templates"
+        "action_needed": "Implement robust privacy protocols, encryption, and anonymisation measures to protect sensitive patient data."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 1",
-        "right_name": "Human Dignity",
-        "relevance": "The project's potential to compromise patient data and privacy may infringe on the right to human dignity"
-      },
-      {
-        "article": "Article 3",
-        "right_name": "Right to Integrity",
-        "relevance": "The project's potential to compromise patient data and privacy may infringe on the right to integrity"
+        "article": "Article 2",
+        "right_name": "RightToLife",
+        "relevance": "The AI diagnostic model may have a significant impact on patients' right to life, particularly if it fails to provide accurate diagnoses or delays treatment."
       },
       {
         "article": "Article 7",
-        "right_name": "Private Life",
-        "relevance": "The project's potential to compromise patient data and privacy may infringe on the right to private life"
+        "right_name": "PrivateLife",
+        "relevance": "The collection and processing of patient genomic data and medical imaging may infringe on patients' right to private life."
       },
       {
         "article": "Article 8",
-        "right_name": "Data Protection",
-        "relevance": "The project's potential to compromise patient data and privacy may infringe on the right to data protection"
+        "right_name": "DataProtection",
+        "relevance": "The AI system's processing of personal data must comply with EU data protection regulations to protect patients' right to data protection."
       },
       {
         "article": "Article 35",
-        "right_name": "Health Care",
-        "relevance": "The project's potential to contribute to the diagnosis of rare genetic conditions may impact the right to health care"
+        "right_name": "HealthCare",
+        "relevance": "The AI diagnostic model may have a significant impact on patients' right to healthcare, particularly if it fails to provide accurate diagnoses or delays treatment."
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-003",
-        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The importance of considering the potential risks and impacts of AI systems"
-      },
-      {
-        "incident_id": "AIAAIC-005",
-        "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The potential for AI systems to perpetuate biases and discriminatory outcomes"
-      },
-      {
-        "incident_id": "AIAAIC-009",
-        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The importance of considering the potential risks and impacts of AI systems in real-world applications"
-      },
-      {
         "incident_id": "AIAAIC-017",
         "incident_title": "IBM Watson Oncology Unsafe Recommendations",
-        "lesson": "The potential for AI systems to provide unsafe or inaccurate recommendations in high-stakes applications"
+        "lesson": "The use of AI in diagnosis can lead to unsafe recommendations if the system is not properly designed or validated."
       },
       {
-        "incident_id": "AIAAIC-018",
-        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
-        "lesson": "The potential for AI systems to amplify harmful or discriminatory content"
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
+        "lesson": "AI systems can perpetuate existing biases in the data, leading to discriminatory outcomes."
+      },
+      {
+        "incident_id": "AIAAIC-043",
+        "incident_title": "NHS UK Sepsis Algorithm Racial Bias",
+        "lesson": "AI systems can perpetuate existing biases in the data, leading to discriminatory outcomes."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The use of AI in identification and diagnosis can lead to false positives and wrongful arrests if the system is not properly designed or validated."
+      },
+      {
+        "incident_id": "AIAAIC-007",
+        "incident_title": "Clearview AI Mass Facial Recognition Scraping",
+        "lesson": "The collection and processing of biometric data without consent can infringe on individuals' right to privacy and data protection."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Obtain informed consent from patients",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Implement robust privacy protections",
-        "priority": "High"
+        "mitigation": "AccessControl",
+        "mitigation_id": "AccessControl",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct a comprehensive evaluation of the project's potential risks and impacts",
-        "priority": "High"
+        "mitigation": "Pseudonymisation",
+        "mitigation_id": "Pseudonymisation",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Consider the potential risks and impacts of the federated learning approach",
-        "priority": "Medium"
+        "mitigation": "EthicsReviewBoard",
+        "mitigation_id": "EthicsReviewBoard",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Minimise exposure of personally identifiable information in the datasets",
-        "priority": "Medium"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "Medium",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "StaffTraining",
+        "mitigation_id": "StaffTraining",
+        "priority": "Low",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "ComplaintMechanism",
+        "mitigation_id": "ComplaintMechanism",
+        "priority": "Low",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "IncidentResponsePlan",
+        "mitigation_id": "IncidentResponsePlan",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
       "Obtain informed consent from patients",
       "Implement robust privacy protections",
-      "Conduct a comprehensive evaluation of the project's potential risks and impacts",
-      "Consider the potential risks and impacts of the federated learning approach",
-      "Minimise exposure of personally identifiable information in the datasets"
+      "Conduct a thorough impact assessment to identify potential risks and affected groups",
+      "Ensure that the AI system is designed and implemented to process personal data in accordance with EU data protection regulations",
+      "Implement measures to detect and mitigate biases in the AI system"
     ],
     "tier2_reflective_prompts": [
-      "What are the potential risks and impacts of the project on patient data and privacy?",
-      "How can the project ensure that it does not perpetuate biases or discriminatory outcomes?",
-      "What are the potential risks and impacts of the federated learning approach on patient data and privacy?",
-      "How can the project ensure that it is transparent and accountable in its use of patient data and AI systems?"
+      "How will the AI system ensure that patients' right to private life is respected?",
+      "What measures will be taken to prevent the AI system from perpetuating existing biases in the data?",
+      "How will the AI system ensure that patients' right to data protection is respected?",
+      "What measures will be taken to prevent the AI system from causing psychological harm to patients?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
-        "data",
-        "consent",
-        "medical",
-        "diagnos",
         "patient",
-        "vulnerable",
+        "consent",
         "cross-border",
-        "transfer"
+        "diagnos",
+        "medical",
+        "transfer",
+        "vulnerable"
       ],
-      "rights_matched": 8,
-      "requirements_retrieved": 181,
+      "rights_matched": 4,
+      "requirements_retrieved": 71,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM001",
-        "ACM002",
-        "ACM011",
-        "ACM013",
         "ACM014",
-        "ACM019",
-        "ACM020",
-        "ACM024",
-        "ACM025",
-        "ACM032"
-      ],
-      "requirements_retrieved_ids": [
-        "ACM001",
-        "ACM002",
-        "ACM011",
-        "ACM013",
-        "ACM014",
-        "ACM019",
-        "ACM020",
-        "ACM024",
-        "ACM025",
         "ACM032",
-        "ACM036",
-        "AI001",
-        "AI008",
-        "AI010",
-        "AI017",
-        "AI021",
-        "HE001",
-        "HE002",
-        "HE003",
-        "HE004",
-        "HE005",
-        "HE006",
-        "HE015",
-        "HE016",
-        "HE017",
-        "HE019",
-        "HE021",
-        "HE022",
-        "HE027",
-        "HE041",
-        "HE042",
         "HE049",
-        "HE050",
-        "R010",
-        "R011",
-        "R027",
-        "R040",
-        "R050",
-        "R051",
-        "R053",
-        "R054",
-        "R056",
-        "R076",
         "R080",
-        "R081",
-        "R082",
-        "R086",
-        "R043",
-        "R044",
-        "R045",
-        "R055",
         "ACM027",
         "AI024",
         "R021",
+        "ACM003",
+        "ACM004"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM014",
+        "ACM032",
+        "HE049",
+        "R080",
+        "ACM027",
+        "AI024",
+        "R021",
+        "ACM003",
         "ACM004",
         "ACM005",
-        "ACM006",
         "ACM007",
-        "R009",
-        "R015",
-        "R019",
-        "R022",
-        "R034",
-        "R039",
-        "R042",
-        "R046",
-        "R048",
-        "ACM016",
-        "ACM017",
-        "ACM018",
-        "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
-        "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI009",
-        "AI012",
-        "AI015",
-        "AI018",
-        "AI020",
-        "AI026",
-        "AI027",
-        "AI028",
-        "AI029",
-        "AI030",
-        "HE011",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM003",
         "ACM008",
         "ACM010",
         "ACM015",
         "ACM022",
         "ACM031",
+        "ACM036",
         "AI011",
         "AI013",
         "AI025",
@@ -383,27 +451,40 @@
         "HE009",
         "HE031",
         "HE036",
+        "R019",
         "R023",
         "R026",
+        "R040",
+        "R042",
         "R047",
+        "R048",
         "R049",
+        "R054",
         "R067",
         "R068",
         "R071",
         "R083",
         "R084",
+        "ACM006",
         "ACM009",
+        "ACM016",
+        "AI012",
         "AI014",
         "HE010",
+        "HE011",
         "HE013",
         "HE033",
+        "HE034",
         "HE035",
+        "HE046",
         "R005",
         "R014",
         "R018",
+        "R022",
         "R024",
         "R025",
         "R029",
+        "R030",
         "R031",
         "R033",
         "R063",
@@ -418,20 +499,20 @@
       ],
       "requirements_cited": [
         "ACM006",
-        "ACM007",
-        "ACM008",
+        "AI011",
+        "HE007",
+        "ACM003",
         "ACM016",
-        "ACM017",
-        "ACM022",
-        "ACM024",
-        "ACM029"
+        "EUAIAct AI024",
+        "HE008",
+        "ACM031"
       ],
       "incidents_sample": [
-        "AIAAIC-003",
-        "AIAAIC-005",
         "AIAAIC-009",
-        "AIAAIC-025",
-        "AIAAIC-026"
+        "AIAAIC-017",
+        "AIAAIC-018",
+        "AIAAIC-006",
+        "AIAAIC-043"
       ]
     }
   }

@@ -1,0 +1,34 @@
+{
+  "proposal_id": "P25",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This research proposes an Arabic-dialect NLP classifier to detect extremist recruitment and glorification of violence on public Telegram channels and X/Twitter accounts across Egypt, Jordan, and Morocco. Training data mix annotated jihadist propaganda with posts from secular activists, Islamist electoral campaigns, and satire. The classifier will output a risk score used by platform trust-and-safety teams to prioritise human review; scores above 0.85 will auto-suspend accounts for 48 hours pending review. Civil-society partners warn that dialectal sarcasm and anti-regime protest slogans are frequently mislabelled. The team plans open-source release of the model weights. No engagement with journalists' unions or minority-rights groups is scheduled. Whether Art.11 freedom of expression or public-security limitations should dominate the rights analysis is deliberately left open in the protocol\u2014experts disagree.",
+  "assessment": {
+    "overall_risk_level": "High",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art11_FreedomOfExpression",
+        "right_name": "Freedom of Expression",
+        "relevance": "The proposed classifier may mislabel dialectal sarcasm and anti-regime protest slogans as extremist content, potentially leading to unjustified account suspensions and limitations on freedom of expression."
+      },
+      {
+        "article": "Art7_PrivateLife",
+        "right_name": "Private Life",
+        "relevance": "The collection and analysis of social media posts may infringe on users' right to private life, particularly if the classifier is not transparent or accurate in its assessments."
+      },
+      {
+        "article": "Art8_DataProtection",
+        "right_name": "Data Protection",
+        "relevance": "The use of annotated jihadist propaganda and other social media posts as training data raises concerns about the protection of personal data and potential biases in the classifier."
+      },
+      {
+        "article": "Art21_NonDiscrimination",
+        "right_name": "Non-Discrimination",
+        "relevance": "The classifier's potential to mislabel certain types of content may disproportionately affect specific groups, such as secular activists or minority groups, leading to discriminatory outcomes."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

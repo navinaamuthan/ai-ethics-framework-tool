@@ -2,246 +2,445 @@
   "proposal_id": "P08",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-19T19:53:43.831911",
+  "timestamp": "2026-08-02T14:52:07.373186",
   "proposal_text": "This project proposes to develop a conversational AI chatbot to provide initial mental health support triage for university students. The chatbot will conduct a structured conversational assessment to evaluate symptoms of anxiety and depression using validated clinical screening instruments (PHQ-9, GAD-7) adapted into conversational format. Based on the assessment, the chatbot will recommend one of three pathways: self-help resources, a scheduled counselling appointment, or immediate crisis intervention referral. The chatbot will store conversation logs for quality improvement purposes. Student data will be pseudonymised but linked to student records to enable follow-up. The chatbot will include a disclaimer that it is not a substitute for professional mental health care. The system has not been validated against clinical assessments performed by qualified professionals. Conversations will be processed by an external cloud-based NLP service.",
   "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
-    "data",
-    "health",
+    "chatbot",
     "student",
-    "recommend",
-    "chatbot"
+    "health",
+    "recommend"
   ],
   "matched_rights": [
-    "Art11_FreedomOfExpression",
     "Art1_HumanDignity",
     "Art24_RightsOfChild",
     "Art2_RightToLife",
     "Art35_HealthCare",
-    "Art41_GoodAdministration",
-    "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 176,
+  "retrieved_requirements_count": 110,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 48.0,
+      "tf": 48,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 37.0,
+      "tf": 37,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 19.0,
+      "tf": 19,
+      "df": 26
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 16
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 48
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed conversational AI chatbot for mental health support triage poses significant ethical risks, including potential harm to vulnerable individuals, biased decision-making, and privacy concerns. The chatbot's ability to collect and store sensitive mental health information, albeit pseudonymised, raises concerns about data protection and confidentiality. Furthermore, the lack of validation against clinical assessments performed by qualified professionals and the potential for misdiagnosis or inappropriate referrals are significant risks. The use of an external cloud-based NLP service also introduces additional security and data protection risks.",
+    "risk_summary": "The proposed conversational AI chatbot for mental health support triage poses several ethical risks, including potential privacy breaches, psychological harm, and dignity concerns. The system's use of pseudonymised student data and external cloud-based NLP services increases the risk of data leakage and unauthorised access. Additionally, the chatbot's ability to recommend pathways for mental health support may lead to accountability issues and potential discrimination. The overall risk level is considered high due to the sensitive nature of the data being processed and the potential consequences of incorrect or biased recommendations.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Harm to vulnerable individuals",
+        "risk": "Privacy breach due to data leakage or unauthorised access",
+        "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "The chatbot may provide inadequate or inappropriate support, leading to harm or worsening of mental health conditions."
+        "explanation": "The use of pseudonymised student data and external cloud-based NLP services increases the risk of data leakage and unauthorised access."
       },
       {
-        "risk": "Biased decision-making",
+        "risk": "Psychological harm due to incorrect or biased recommendations",
+        "risk_category": "PsychologicalHarm",
         "severity": "High",
-        "explanation": "The chatbot's algorithms and training data may perpetuate biases, leading to discriminatory outcomes or unequal access to resources."
+        "explanation": "The chatbot's ability to recommend pathways for mental health support may lead to psychological harm if the recommendations are incorrect or biased."
       },
       {
-        "risk": "Privacy concerns",
-        "severity": "High",
-        "explanation": "The collection and storage of sensitive mental health information, even if pseudonymised, poses significant risks to individuals' privacy and confidentiality."
-      },
-      {
-        "risk": "Misdiagnosis or inappropriate referrals",
-        "severity": "High",
-        "explanation": "The chatbot's lack of validation against clinical assessments performed by qualified professionals increases the risk of misdiagnosis or inappropriate referrals."
-      },
-      {
-        "risk": "Security risks",
+        "risk": "Dignity concerns due to objectification or degradation",
+        "risk_category": "Dignity",
         "severity": "Medium",
-        "explanation": "The use of an external cloud-based NLP service introduces additional security risks, including data breaches or unauthorised access to sensitive information."
+        "explanation": "The chatbot's use of structured conversational assessments may lead to dignity concerns if the assessments are perceived as objectifying or degrading."
+      },
+      {
+        "risk": "Accountability issues due to lack of transparency or explainability",
+        "risk_category": "Accountability",
+        "severity": "Medium",
+        "explanation": "The chatbot's decision-making process may not be transparent or explainable, leading to accountability issues if the recommendations are incorrect or biased."
+      },
+      {
+        "risk": "Discrimination due to biased algorithms or data",
+        "risk_category": "Discrimination",
+        "severity": "Medium",
+        "explanation": "The chatbot's algorithms or training data may be biased, leading to discriminatory recommendations or outcomes."
+      },
+      {
+        "risk": "Lack of transparency in the chatbot's operation and decision-making process",
+        "risk_category": "Transparency",
+        "severity": "Low",
+        "explanation": "The chatbot's operation and decision-making process may not be transparent, leading to a lack of trust or understanding among users."
       }
     ],
     "applicable_requirements": [
       {
         "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "requirement_text": "Research must contribute to society and human well-being",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment and develop strategies to mitigate potential harms."
+        "action_needed": "Conduct a thorough impact assessment to identify potential risks and benefits"
       },
       {
         "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "requirement_text": "Avoid harm",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to prevent harm, such as robust testing and validation of the chatbot's decision-making algorithms."
-      },
-      {
-        "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop and implement strategies to address potential biases in the chatbot's decision-making algorithms and training data."
+        "action_needed": "Implement measures to prevent harm, such as data encryption and access controls"
       },
       {
         "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "requirement_text": "Respect privacy",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain informed consent from users and implement robust measures to protect their personally identifiable information."
+        "action_needed": "Obtain informed consent from users and protect personally identifiable information"
       },
       {
-        "requirement_id": "ACM007",
-        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
+        "requirement_id": "ACM008",
+        "requirement_text": "Consider possible risks and impacts of the research approach itself",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a comprehensive evaluation of the chatbot's potential impacts and risks, including analysis of its decision-making algorithms and data protection measures."
-      },
-      {
-        "requirement_id": "ACM015",
-        "requirement_text": "Research involving human participants must follow existing institutional protocols (IRB or equivalent) — if no formal process exists, undergo equivalent informal ethics review",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain approval from the relevant institutional review board (IRB) or equivalent ethics committee before commencing the research."
+        "action_needed": "Conduct a thorough risk assessment to identify potential risks and impacts"
       },
       {
         "requirement_id": "ACM016",
-        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to minimise the exposure of personally identifiable information in the chatbot's datasets, such as pseudonymisation or anonymisation."
+        "action_needed": "Implement measures to protect personally identifiable information, such as pseudonymisation and data encryption"
       },
       {
-        "requirement_id": "ACM021",
-        "requirement_text": "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse",
-        "framework": "ACMConference",
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the potential risks and harms associated with the chatbot's use, including direct application, side effects, or misuse."
+        "action_needed": "Conduct a FRIA to assess the risks and impacts of the AI system"
+      },
+      {
+        "requirement_id": "AI008",
+        "requirement_text": "State the intended purpose of the AI system",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Clearly define the intended purpose of the AI system and ensure it aligns with the organisation's goals and values"
+      },
+      {
+        "requirement_id": "AI011",
+        "requirement_text": "Identify categories of natural persons and groups likely to be affected by the AI system",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Identify the categories of natural persons and groups that may be affected by the AI system and assess the potential risks and impacts"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 1",
         "right_name": "Human Dignity",
-        "relevance": "The chatbot's potential to provide inadequate or inappropriate support may compromise individuals' human dignity."
+        "relevance": "The chatbot's use of structured conversational assessments may lead to dignity concerns if the assessments are perceived as objectifying or degrading."
       },
       {
         "article": "Article 2",
         "right_name": "Right to Life",
-        "relevance": "The chatbot's potential to provide inadequate or inappropriate support may compromise individuals' right to life, particularly in cases where mental health conditions are severe or life-threatening."
-      },
-      {
-        "article": "Article 7",
-        "right_name": "Private Life",
-        "relevance": "The collection and storage of sensitive mental health information, even if pseudonymised, poses significant risks to individuals' right to private life."
+        "relevance": "The chatbot's ability to recommend pathways for mental health support may lead to life-threatening consequences if the recommendations are incorrect or biased."
       },
       {
         "article": "Article 8",
         "right_name": "Data Protection",
-        "relevance": "The chatbot's collection and storage of sensitive mental health information, even if pseudonymised, poses significant risks to individuals' right to data protection."
+        "relevance": "The chatbot's use of pseudonymised student data and external cloud-based NLP services increases the risk of data leakage and unauthorised access."
       },
       {
         "article": "Article 35",
         "right_name": "Health Care",
-        "relevance": "The chatbot's potential to provide inadequate or inappropriate support may compromise individuals' right to health care, particularly in cases where mental health conditions are severe or life-threatening."
+        "relevance": "The chatbot's ability to recommend pathways for mental health support may lead to health care consequences if the recommendations are incorrect or biased."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-003",
         "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The importance of robust testing and validation of AI systems to prevent harm or offensive outputs."
+        "lesson": "The importance of ensuring that AI systems are designed and tested to prevent harmful outputs"
       },
       {
         "incident_id": "AIAAIC-005",
         "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The need for diverse and representative training data to prevent biases and discriminatory outcomes."
-      },
-      {
-        "incident_id": "AIAAIC-009",
-        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The importance of prioritising human safety and well-being in the development and deployment of AI systems."
-      },
-      {
-        "incident_id": "AIAAIC-014",
-        "incident_title": "YouTube Recommendation Radicalisation",
-        "lesson": "The potential for AI systems to perpetuate biases and discriminatory outcomes, and the need for robust measures to prevent harm or radicalisation."
+        "lesson": "The importance of ensuring that AI systems are designed and tested to prevent biased or discriminatory outputs"
       },
       {
         "incident_id": "AIAAIC-025",
         "incident_title": "Amazon Alexa Recording Children Without Consent",
-        "lesson": "The importance of obtaining informed consent from users, particularly in cases where sensitive information is being collected or stored."
+        "lesson": "The importance of ensuring that AI systems are designed and tested to protect user privacy and obtain informed consent"
+      },
+      {
+        "incident_id": "AIAAIC-026",
+        "incident_title": "Facial Recognition in UK Schools",
+        "lesson": "The importance of ensuring that AI systems are designed and tested to protect user privacy and obtain informed consent"
+      },
+      {
+        "incident_id": "AIAAIC-017",
+        "incident_title": "IBM Watson Oncology Unsafe Recommendations",
+        "lesson": "The importance of ensuring that AI systems are designed and tested to prevent harmful or unsafe recommendations"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct a thorough risk assessment and develop strategies to mitigate potential harms",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Implement measures to prevent harm, such as robust testing and validation of the chatbot's decision-making algorithms",
-        "priority": "High"
+        "mitigation": "Access Control",
+        "mitigation_id": "AccessControl",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Develop and implement strategies to address potential biases in the chatbot's decision-making algorithms and training data",
-        "priority": "High"
+        "mitigation": "Pseudonymisation",
+        "mitigation_id": "Pseudonymisation",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Obtain informed consent from users and implement robust measures to protect their personally identifiable information",
-        "priority": "High"
+        "mitigation": "Human Oversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct a comprehensive evaluation of the chatbot's potential impacts and risks, including analysis of its decision-making algorithms and data protection measures",
-        "priority": "Medium"
+        "mitigation": "Ethics Review Board",
+        "mitigation_id": "EthicsReviewBoard",
+        "priority": "Medium",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Staff Training",
+        "mitigation_id": "StaffTraining",
+        "priority": "Low",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Regular Auditing and Testing",
+        "mitigation_id": "AuditLog",
+        "priority": "Low",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Transparency and Explainability",
+        "mitigation_id": "Transparency",
+        "priority": "Low",
+        "from_taxonomy": false
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough risk assessment and develop strategies to mitigate potential harms",
-      "Implement measures to prevent harm, such as robust testing and validation of the chatbot's decision-making algorithms",
-      "Develop and implement strategies to address potential biases in the chatbot's decision-making algorithms and training data",
-      "Obtain informed consent from users and implement robust measures to protect their personally identifiable information",
-      "Conduct a comprehensive evaluation of the chatbot's potential impacts and risks, including analysis of its decision-making algorithms and data protection measures"
+      "Conduct a thorough impact assessment to identify potential risks and benefits",
+      "Implement measures to prevent harm, such as data encryption and access controls",
+      "Obtain informed consent from users and protect personally identifiable information",
+      "Conduct a thorough risk assessment to identify potential risks and impacts",
+      "Clearly define the intended purpose of the AI system and ensure it aligns with the organisation's goals and values"
     ],
     "tier2_reflective_prompts": [
       "What are the potential risks and benefits of using a conversational AI chatbot for mental health support triage?",
-      "How can we ensure that the chatbot's decision-making algorithms are fair, transparent, and unbiased?",
-      "What measures can we take to protect users' personally identifiable information and maintain their trust in the chatbot?",
-      "How can we evaluate the effectiveness and impact of the chatbot, and make improvements to its decision-making algorithms and user experience?"
+      "How can we ensure that the chatbot is designed and tested to prevent harmful or biased outputs?",
+      "What measures can we implement to protect user privacy and obtain informed consent?",
+      "How can we ensure that the chatbot is transparent and explainable in its decision-making process?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
-        "data",
-        "health",
+        "chatbot",
         "student",
-        "recommend",
-        "chatbot"
+        "health",
+        "recommend"
       ],
-      "rights_matched": 8,
-      "requirements_retrieved": 176,
+      "rights_matched": 5,
+      "requirements_retrieved": 110,
       "incidents_retrieved": 8,
-      "requirements_sample": [
-        "ACM020",
-        "ACM025",
-        "ACM027",
-        "HE019",
-        "HE021",
-        "HE042",
-        "HE050",
-        "ACM001",
-        "ACM002",
-        "ACM011"
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
       ],
-      "requirements_retrieved_ids": [
-        "ACM020",
-        "ACM025",
-        "ACM027",
-        "HE019",
-        "HE021",
-        "HE042",
-        "HE050",
+      "requirements_sample": [
         "ACM001",
         "ACM002",
         "ACM011",
         "ACM013",
         "ACM014",
         "ACM019",
+        "ACM020",
         "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
         "ACM032",
         "ACM036",
         "AI001",
@@ -258,10 +457,14 @@
         "HE015",
         "HE016",
         "HE017",
+        "HE019",
+        "HE021",
         "HE022",
         "HE027",
         "HE041",
+        "HE042",
         "HE049",
+        "HE050",
         "R010",
         "R011",
         "R027",
@@ -280,147 +483,82 @@
         "R044",
         "R045",
         "R055",
+        "ACM027",
         "AI024",
         "R021",
-        "ACM016",
-        "ACM017",
-        "ACM018",
-        "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
-        "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI009",
-        "AI012",
-        "AI015",
-        "AI018",
-        "AI020",
-        "AI026",
-        "AI027",
-        "AI028",
-        "AI029",
-        "AI030",
-        "HE011",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
         "ACM003",
-        "ACM004",
         "ACM005",
-        "ACM007",
+        "ACM006",
         "ACM008",
+        "ACM009",
         "ACM010",
         "ACM015",
+        "ACM016",
         "ACM022",
         "ACM031",
         "AI011",
+        "AI012",
         "AI013",
+        "AI014",
         "AI025",
         "HE007",
         "HE008",
         "HE009",
-        "HE031",
-        "HE036",
-        "R019",
-        "R023",
-        "R026",
-        "R042",
-        "R047",
-        "R048",
-        "R049",
-        "R067",
-        "R068",
-        "R071",
-        "R083",
-        "R084",
-        "ACM006",
-        "ACM009",
-        "AI014",
         "HE010",
+        "HE011",
         "HE013",
+        "HE031",
         "HE033",
+        "HE034",
         "HE035",
+        "HE036",
+        "HE046",
         "R005",
         "R014",
         "R018",
+        "R019",
         "R022",
+        "R023",
         "R024",
         "R025",
+        "R026",
         "R029",
+        "R030",
         "R031",
         "R033",
+        "R042",
+        "R047",
         "R063",
         "R064",
         "R065",
         "R066",
+        "R067",
+        "R068",
         "R069",
         "R070",
+        "R071",
         "R072",
         "R073",
-        "R074"
+        "R074",
+        "R083",
+        "R084"
       ],
       "requirements_cited": [
         "ACM001",
         "ACM002",
-        "ACM003",
         "ACM006",
-        "ACM007",
-        "ACM015",
+        "ACM008",
         "ACM016",
-        "ACM021"
+        "AI001",
+        "AI008",
+        "AI011"
       ],
       "incidents_sample": [
-        "AIAAIC-014",
-        "AIAAIC-018",
-        "AIAAIC-027",
         "AIAAIC-003",
-        "AIAAIC-005"
+        "AIAAIC-005",
+        "AIAAIC-009",
+        "AIAAIC-025",
+        "AIAAIC-026"
       ]
     }
   }

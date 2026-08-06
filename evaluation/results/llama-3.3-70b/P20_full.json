@@ -2,55 +2,220 @@
   "proposal_id": "P20",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-19T19:57:48.074750",
+  "timestamp": "2026-08-02T20:53:34.476047",
   "proposal_text": "This research proposes to study the relationship between digital workplace behaviours and productivity by monitoring 200 consenting employees at a Dublin technology company over six months. The monitoring system will track application usage, email response times, meeting attendance, keyboard activity patterns, and break frequency. All participants will provide written informed consent and can withdraw at any time without workplace consequences. Data will be stored on encrypted university servers and destroyed after the study period. However, the monitoring software will also incidentally capture screen content including potentially sensitive communications. Aggregate productivity patterns will be shared with the employer in a format that does not identify individual employees, but the small team sizes of 5-8 people within departments may enable indirect identification. The employer has stated that monitoring results will not influence performance reviews, but this commitment is not legally binding. The research does not address the power imbalance between employer and employee that may compromise the voluntariness of consent.",
   "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
-    "data",
-    "consent",
+    "employ",
     "monitor",
-    "track",
-    "employ"
+    "consent",
+    "employee",
+    "workplace",
+    "track"
   ],
   "matched_rights": [
     "Art15_FreedomOfOccupation",
     "Art31_FairWorkingConditions",
     "Art3_RightToIntegrity",
-    "Art41_GoodAdministration",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 150,
+  "retrieved_requirements_count": 82,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 49.0,
+      "tf": 49,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 21.0,
+      "tf": 21,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 48
+    },
+    {
+      "id": "EmploymentHarm",
+      "label": "Employment Harm",
+      "definition": "Risk of unfair exclusion, surveillance, or adverse treatment of workers or job applicants by AI systems.",
+      "idf_score": 4.1701,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 20
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 26
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 15
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "AddictionRisk",
+      "label": "Addiction Risk",
+      "definition": "Risk that AI system design exploits psychological vulnerabilities to create compulsive usage patterns.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 5,
+      "df": 6
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The research proposal poses several ethical risks, including the potential for biased monitoring, indirect identification of employees, and the power imbalance between employer and employee that may compromise the voluntariness of consent. The monitoring system may also incidentally capture sensitive communications, and the sharing of aggregate productivity patterns with the employer may lead to unintended consequences. Furthermore, the research does not address the potential risks of the monitoring system itself, such as the potential for discrimination or the impact on employee well-being.",
+    "risk_summary": "The research proposal poses significant risks related to employee privacy, data governance, and potential discrimination. The monitoring system may capture sensitive communications, and the small team sizes may enable indirect identification of individual employees. The proposal also raises concerns about the power imbalance between employer and employee, which may compromise the voluntariness of consent. Furthermore, the incidental capture of screen content and potential sharing of aggregate productivity patterns with the employer may lead to reputational harm or employment harm.",
     "overall_risk_level": "Medium",
     "identified_risks": [
       {
-        "risk": "Bias in monitoring system",
+        "risk": "Employee privacy and data protection",
+        "risk_category": "PrivacyBreach",
         "severity": "Medium",
-        "explanation": "The monitoring system may perpetuate biases and discriminate against certain employees"
+        "explanation": "The monitoring system may capture sensitive communications, and the small team sizes may enable indirect identification of individual employees."
       },
       {
-        "risk": "Indirect identification of employees",
+        "risk": "Discrimination and bias",
+        "risk_category": "Discrimination",
         "severity": "Medium",
-        "explanation": "The sharing of aggregate productivity patterns with the employer may lead to indirect identification of employees, particularly in small team sizes"
+        "explanation": "The proposal may perpetuate biases and discriminate against certain employees, particularly if the monitoring system is not designed to account for individual differences."
       },
       {
-        "risk": "Power imbalance between employer and employee",
+        "risk": "Employment harm and reputational damage",
+        "risk_category": "EmploymentHarm",
         "severity": "Medium",
-        "explanation": "The employer's commitment not to use monitoring results in performance reviews is not legally binding, and employees may feel pressured to participate"
+        "explanation": "The incidental capture of screen content and potential sharing of aggregate productivity patterns with the employer may lead to reputational harm or employment harm."
       },
       {
-        "risk": "Incidental capture of sensitive communications",
+        "risk": "Data governance and quality control",
+        "risk_category": "DataGovernance",
         "severity": "Medium",
-        "explanation": "The monitoring system may incidentally capture sensitive communications, such as personal or confidential information"
+        "explanation": "The proposal may be affected by inadequate data stewardship, provenance, or quality controls in AI pipelines."
       },
       {
-        "risk": "Impact on employee well-being",
+        "risk": "Lack of transparency and accountability",
+        "risk_category": "Accountability",
         "severity": "Medium",
-        "explanation": "The monitoring system may have a negative impact on employee well-being, particularly if employees feel that their privacy is being invaded"
+        "explanation": "The proposal may not provide sufficient transparency and accountability measures to ensure that employees are aware of the monitoring system and its potential consequences."
       }
     ],
     "applicable_requirements": [
@@ -59,160 +224,165 @@
         "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain explicit informed consent from employees and protect their personally identifiable information"
+        "action_needed": "Obtain explicit informed consent from employees and ensure that personally identifiable information is protected."
       },
       {
         "requirement_id": "ACM015",
         "requirement_text": "Research involving human participants must follow existing institutional protocols (IRB or equivalent)",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Follow existing institutional protocols for research involving human participants"
+        "action_needed": "Follow existing institutional protocols for research involving human participants."
       },
       {
-        "requirement_id": "ACM016",
-        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Minimise exposure of personally identifiable information in datasets"
-      },
-      {
-        "requirement_id": "ACM017",
-        "requirement_text": "Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain explicit consent from participants or explain why consent was not obtained"
-      },
-      {
-        "requirement_id": "ACM031",
-        "requirement_text": "Use privacy protocols, encryption and anonymisation to reduce risk of data leakage — stronger measures for sensitive data",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Use privacy protocols, encryption, and anonymisation to reduce the risk of data leakage"
-      },
-      {
-        "requirement_id": "EUAIAct AI002",
-        "requirement_text": "Record necessity status: FRIA Required or FRIA Not Required",
+        "requirement_id": "EUAIAct AI011",
+        "requirement_text": "Identify categories of natural persons and groups likely to be affected by the AI system in the specific context",
         "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Record the necessity status of the research"
+        "action_needed": "Identify categories of natural persons and groups likely to be affected by the AI system."
       },
       {
-        "requirement_id": "EUAIAct AI003",
-        "requirement_text": "Record when FRIA was created, modified, submitted, accepted",
-        "framework": "EUAIAct",
+        "requirement_id": "HE007",
+        "requirement_text": "AI system must process personal data lawfully, fairly and transparently",
+        "framework": "HorizonEurope",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Record the creation, modification, submission, and acceptance of the FRIA"
+        "action_needed": "Ensure that the AI system processes personal data lawfully, fairly, and transparently."
       },
       {
-        "requirement_id": "EUAIAct AI004",
-        "requirement_text": "Record who conducted the FRIA (organisation, personnel, contributors)",
-        "framework": "EUAIAct",
+        "requirement_id": "HE008",
+        "requirement_text": "Data minimisation and data protection by design and by default must be integrated",
+        "framework": "HorizonEurope",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Record the organisation, personnel, and contributors involved in the FRIA"
-      },
-      {
-        "requirement_id": "EUAIAct AI005",
-        "requirement_text": "Record identifier/version of FRIA — must be regularly updated",
-        "framework": "EUAIAct",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Record the identifier and version of the FRIA and regularly update it"
+        "action_needed": "Integrate data minimisation and data protection by design and by default into the AI system."
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 7",
-        "right_name": "Private Life",
-        "relevance": "The monitoring system may invade employees' private lives by capturing sensitive communications"
+        "right_name": "PrivateLife",
+        "relevance": "The monitoring system may capture sensitive communications and compromise employees' right to private life."
       },
       {
         "article": "Article 8",
-        "right_name": "Data Protection",
-        "relevance": "The research may not adequately protect employees' personal data"
+        "right_name": "DataProtection",
+        "relevance": "The proposal may affect employees' right to data protection, particularly if the monitoring system is not designed to account for individual differences."
       },
       {
         "article": "Article 15",
-        "right_name": "Freedom of Occupation",
-        "relevance": "The monitoring system may affect employees' freedom of occupation by creating a hostile work environment"
+        "right_name": "FreedomOfOccupation",
+        "relevance": "The proposal may affect employees' freedom of occupation, particularly if the monitoring system is used to make decisions about employment or promotion."
       },
       {
         "article": "Article 31",
-        "right_name": "Fair Working Conditions",
-        "relevance": "The research may not ensure fair working conditions for employees, particularly in terms of privacy and data protection"
+        "right_name": "FairWorkingConditions",
+        "relevance": "The proposal may affect employees' right to fair working conditions, particularly if the monitoring system is used to monitor and control employees' work."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-015",
         "incident_title": "Uber Surge Pricing Discrimination",
-        "lesson": "The importance of ensuring that AI systems do not perpetuate biases and discriminate against certain groups"
+        "lesson": "The importance of ensuring that AI systems do not perpetuate biases and discriminate against certain groups."
       },
       {
         "incident_id": "AIAAIC-021",
         "incident_title": "HireVue Automated Video Interview Bias",
-        "lesson": "The need to ensure that AI systems used in hiring processes do not discriminate against certain groups"
+        "lesson": "The need for transparency and accountability in AI systems, particularly in high-stakes decision-making contexts."
       },
       {
         "incident_id": "AIAAIC-022",
         "incident_title": "Deliveroo Algorithmic Dismissal",
-        "lesson": "The importance of ensuring that AI systems used in employment decisions do not unfairly discriminate against employees"
+        "lesson": "The potential risks of using AI systems to make decisions about employment or promotion, particularly if the systems are not designed to account for individual differences."
       },
       {
-        "incident_id": "AIAAIC-034",
-        "incident_title": "China Social Credit System AI Scoring",
-        "lesson": "The potential risks of using AI systems to score and monitor individuals, particularly in terms of privacy and data protection"
+        "incident_id": "AIAAIC-016",
+        "incident_title": "Palantir ICE Surveillance System",
+        "lesson": "The importance of ensuring that AI systems are not used to compromise individuals' rights to privacy and data protection."
       },
       {
-        "incident_id": "AIAAIC-036",
-        "incident_title": "Netherlands SyRI Welfare Surveillance System",
-        "lesson": "The importance of ensuring that AI systems used in surveillance and monitoring do not infringe on individuals' right to privacy"
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
+        "lesson": "The need for diverse and representative data sets to ensure that AI systems do not perpetuate biases and discriminate against certain groups."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Obtain explicit informed consent from employees",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Use privacy protocols, encryption, and anonymisation to reduce the risk of data leakage",
-        "priority": "High"
+        "mitigation": "AccessControl",
+        "mitigation_id": "AccessControl",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Minimise exposure of personally identifiable information in datasets",
-        "priority": "Medium"
+        "mitigation": "Pseudonymisation",
+        "mitigation_id": "Pseudonymisation",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Ensure that the monitoring system does not perpetuate biases and discriminate against certain groups",
-        "priority": "Medium"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Regularly update the FRIA and record the identifier and version",
-        "priority": "Low"
+        "mitigation": "StaffTraining",
+        "mitigation_id": "StaffTraining",
+        "priority": "Low",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Regular audits and monitoring of the AI system",
+        "mitigation_id": "Custom",
+        "priority": "Medium",
+        "from_taxonomy": false
       }
     ],
     "tier1_mandatory_actions": [
       "Obtain explicit informed consent from employees",
-      "Use privacy protocols, encryption, and anonymisation to reduce the risk of data leakage",
-      "Minimise exposure of personally identifiable information in datasets",
-      "Ensure that the monitoring system does not perpetuate biases and discriminate against certain groups"
+      "Ensure that personally identifiable information is protected",
+      "Follow existing institutional protocols for research involving human participants",
+      "Integrate data minimisation and data protection by design and by default into the AI system"
     ],
     "tier2_reflective_prompts": [
-      "How may the monitoring system affect employees' well-being and privacy?",
-      "What measures can be taken to ensure that the monitoring system does not perpetuate biases and discriminate against certain groups?",
-      "How can the research ensure that employees' personal data is protected and that their right to privacy is respected?"
+      "How might the AI system perpetuate biases and discriminate against certain employees?",
+      "What measures can be taken to ensure that the AI system is transparent and accountable?",
+      "How might the AI system affect employees' right to private life and data protection?",
+      "What measures can be taken to ensure that the AI system is fair and does not compromise employees' freedom of occupation?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
-        "data",
-        "consent",
+        "employ",
         "monitor",
-        "track",
-        "employ"
+        "consent",
+        "employee",
+        "workplace",
+        "track"
       ],
-      "rights_matched": 6,
-      "requirements_retrieved": 150,
+      "rights_matched": 5,
+      "requirements_retrieved": 82,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM011",
         "ACM037",
@@ -252,80 +422,6 @@
         "R048",
         "R054",
         "R076",
-        "ACM016",
-        "ACM017",
-        "ACM018",
-        "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
-        "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI008",
-        "AI009",
-        "AI010",
-        "AI012",
-        "AI015",
-        "AI018",
-        "AI020",
-        "AI026",
-        "AI027",
-        "AI028",
-        "AI029",
-        "AI030",
-        "HE002",
-        "HE006",
-        "HE011",
-        "HE022",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE041",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
         "ACM003",
         "ACM008",
         "ACM010",
@@ -353,11 +449,16 @@
         "R083",
         "R084",
         "ACM009",
+        "ACM016",
+        "AI012",
         "AI014",
         "HE010",
+        "HE011",
         "HE013",
         "HE033",
+        "HE034",
         "HE035",
+        "HE046",
         "R005",
         "R014",
         "R018",
@@ -365,6 +466,7 @@
         "R024",
         "R025",
         "R029",
+        "R030",
         "R031",
         "R033",
         "R063",
@@ -380,20 +482,16 @@
       "requirements_cited": [
         "ACM006",
         "ACM015",
-        "ACM016",
-        "ACM017",
-        "ACM031",
-        "EUAIAct AI002",
-        "EUAIAct AI003",
-        "EUAIAct AI004",
-        "EUAIAct AI005"
+        "EUAIAct AI011",
+        "HE007",
+        "HE008"
       ],
       "incidents_sample": [
         "AIAAIC-015",
         "AIAAIC-021",
         "AIAAIC-022",
-        "AIAAIC-034",
-        "AIAAIC-036"
+        "AIAAIC-002",
+        "AIAAIC-007"
       ]
     }
   }

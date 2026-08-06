@@ -1,0 +1,358 @@
+{
+  "proposal_id": "P05_positive_8b",
+  "mode": "full",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-26T22:19:36.009506",
+  "proposal_text": "NHS Sepsis Prediction Algorithm with Added Bias Audit and Clinician Escalation Mechanism",
+  "context_max_requirements": 5,
+  "llm_model": "llama3.1:8b",
+  "keywords": [
+    "bias",
+    "predict",
+    "prediction"
+  ],
+  "matched_rights": [
+    "Art21_NonDiscrimination",
+    "Art47_RightToEffectiveRemedy"
+  ],
+  "retrieved_requirements_count": 53,
+  "retrieved_incidents_count": 5,
+  "retrieved_risk_categories": [
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 23.0,
+      "tf": 23,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 13.0,
+      "tf": 13,
+      "df": 48
+    },
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 77
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 26
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 16
+    },
+    {
+      "id": "GenderHarm",
+      "label": "Gender Harm",
+      "definition": "Risk of gender-based disadvantage, stereotyping, or exclusion produced or amplified by an AI system.",
+      "idf_score": 4.8167,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 10
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "individual_treatment\u2192Art21",
+  "assessment": {
+    "risk_summary": "The proposed NHS Sepsis Prediction Algorithm with Added Bias Audit and Clinician Escalation Mechanism poses risks related to bias, transparency, and accountability. The algorithm's potential for biased decision-making and lack of transparency in its operation may lead to harm or injury to individuals.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "Bias in AI decision-making",
+        "risk_category": "Discrimination",
+        "severity": "High",
+        "explanation": "The algorithm's potential for biased decision-making may lead to unfair differential treatment of individuals or groups based on protected characteristics."
+      },
+      {
+        "risk": "Lack of transparency in AI operation",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The algorithm's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders."
+      },
+      {
+        "risk": "Accountability for AI-mediated decisions",
+        "risk_category": "Accountability",
+        "severity": "Medium",
+        "explanation": "Affected persons may not be able to obtain explanation, contestation, or remedy for AI-mediated decisions."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being \u2014 discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment of the algorithm's potential harms and develop strategies for mitigation."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The algorithm's potential for biased decision-making may infringe on the right to non-discrimination."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of regular auditing and testing for bias in AI systems."
+      },
+      {
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The need for transparency and accountability in AI decision-making."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Bias audit and testing",
+        "mitigation_id": "EthicsReviewBoard",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Transparency measures (e.g. explainability, model interpretability)",
+        "mitigation_id": "HumanOversight",
+        "priority": "Medium",
+        "from_taxonomy": true
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough risk assessment of the algorithm's potential harms and develop strategies for mitigation.",
+      "Implement bias audit and testing procedures."
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential long-term consequences of biased AI decision-making?",
+      "How can we ensure that the algorithm is transparent in its operation and decision-making?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "bias",
+        "predict",
+        "prediction"
+      ],
+      "rights_matched": 2,
+      "requirements_retrieved": 53,
+      "incidents_retrieved": 5,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
+      "requirements_sample": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "R028",
+        "R085",
+        "ACM001",
+        "ACM017",
+        "ACM021",
+        "ACM035",
+        "AI002",
+        "AI015",
+        "AI017",
+        "AI018",
+        "AI019",
+        "AI020",
+        "AI022",
+        "AI026",
+        "AI028",
+        "AI030",
+        "HE002",
+        "HE005",
+        "HE006",
+        "HE024",
+        "HE026",
+        "HE027",
+        "HE028",
+        "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
+        "HE048",
+        "HE052",
+        "R010",
+        "R054",
+        "R055",
+        "R074",
+        "R082"
+      ],
+      "requirements_cited": [
+        "ACM001"
+      ],
+      "incidents_sample": [
+        "AIAAIC-001",
+        "AIAAIC-002",
+        "AIAAIC-003",
+        "AIAAIC-004",
+        "AIAAIC-008"
+      ]
+    }
+  }
+}

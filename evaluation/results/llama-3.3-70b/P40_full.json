@@ -2,9 +2,9 @@
   "proposal_id": "P40",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-21T01:22:23.980765",
+  "timestamp": "2026-08-03T22:14:05.090366",
   "proposal_text": "This research pilots camera-based emotion analytics in a Lagos business-process outsourcing centre, framed as employee wellbeing support. Aggregated mood dashboards go to team leads; individuals scoring repeatedly 'distressed' are offered counselling referrals. Participation is described as voluntary but tied to a wellness bonus. Labour advocates call it surveillance that chills union organising; HR calls it duty-of-care. Consent voluntariness under wage pressure is disputed. The system was validated on Western face sets only. Expected Charter mapping (private life, data protection, fair working conditions, dignity) is reasonably contested in weight even when articles are listed.",
-  "context_max_requirements": 10,
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "consent",
@@ -118,220 +118,290 @@
       "df": 5
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed research on camera-based emotion analytics in a Lagos business-process outsourcing centre poses significant ethical risks, including potential breaches of privacy, dignity, and fair working conditions. The use of facial recognition technology and the collection of sensitive emotional data raise concerns about surveillance, manipulation, and psychological harm. Furthermore, the system's validation on Western face sets only may perpetuate biases and discrimination against non-Western individuals. The voluntariness of consent is also disputed due to the tie to a wellness bonus, which may exert pressure on employees to participate.",
+    "risk_summary": "The proposed research on camera-based emotion analytics in a Lagos business-process outsourcing centre poses significant ethical risks, including potential breaches of privacy, psychological harm, and discrimination. The use of facial recognition technology and the collection of sensitive emotional data raise concerns about the dignity and well-being of employees. The system's validation on Western face sets only may also lead to biased outcomes, exacerbating existing social inequalities. Furthermore, the tying of participation to a wellness bonus may undermine the voluntariness of consent, particularly in a context where employees may feel pressured to participate.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Privacy breach",
+        "risk": "Privacy breach due to unauthorised collection, processing, or disclosure of personal data",
         "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "The collection and processing of sensitive emotional data may lead to unauthorised disclosure or misuse."
+        "explanation": "The collection and processing of emotional data using facial recognition technology may lead to unauthorised disclosure or misuse of personal data, particularly if adequate safeguards are not in place."
       },
       {
-        "risk": "Dignity violation",
-        "risk_category": "Dignity",
-        "severity": "High",
-        "explanation": "The use of facial recognition technology may objectify or undermine human dignity, particularly if the system is not transparent or fair."
-      },
-      {
-        "risk": "Psychological harm",
+        "risk": "Psychological harm due to mental distress, manipulation, or emotional damage",
         "risk_category": "PsychologicalHarm",
         "severity": "High",
-        "explanation": "The system's potential to cause mental distress, manipulation, or emotional damage is significant, particularly if the counselling referrals are not adequate or accessible."
+        "explanation": "The use of emotion analytics may lead to mental distress or emotional damage, particularly if employees are not provided with adequate support or if the system is not designed with their well-being in mind."
       },
       {
-        "risk": "Discrimination",
+        "risk": "Discrimination due to biased outcomes or unfair differential treatment",
         "risk_category": "Discrimination",
         "severity": "Medium",
-        "explanation": "The system's validation on Western face sets only may perpetuate biases and discrimination against non-Western individuals."
+        "explanation": "The system's validation on Western face sets only may lead to biased outcomes, which could result in discriminatory treatment of employees from diverse backgrounds."
       },
       {
-        "risk": "Lack of transparency",
+        "risk": "Lack of transparency due to inadequate disclosure of the system's operation, capabilities, or limitations",
         "risk_category": "Transparency",
         "severity": "Medium",
-        "explanation": "The system's operation, capabilities, and limitations may not be adequately disclosed to end-users and stakeholders, leading to mistrust or misuse."
+        "explanation": "The proposal does not provide sufficient information about the system's design, operation, or limitations, which may undermine trust and transparency in the use of emotion analytics."
       },
       {
-        "risk": "Employment harm",
+        "risk": "Employment harm due to unfair exclusion, surveillance, or adverse treatment of workers",
         "risk_category": "EmploymentHarm",
         "severity": "Medium",
-        "explanation": "The system's potential to surveil or unfairly treat workers may lead to adverse employment outcomes or harm."
-      },
-      {
-        "risk": "Accountability gap",
-        "risk_category": "Accountability",
-        "severity": "Medium",
-        "explanation": "The system's decision-making process and potential biases may not be explainable or contestable, leading to a lack of accountability."
+        "explanation": "The tying of participation to a wellness bonus may create pressure on employees to participate, potentially leading to unfair exclusion or adverse treatment of those who opt out."
       }
     ],
     "applicable_requirements": [
       {
         "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough impact assessment to identify potential harms and benefits"
+        "action_needed": "Conduct a thorough impact assessment to identify potential harms and develop strategies to mitigate them"
       },
       {
         "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to prevent or mitigate potential harms, such as data breaches or psychological harm"
-      },
-      {
-        "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Validate the system on diverse face sets and implement measures to prevent biases and discrimination"
-      },
-      {
-        "requirement_id": "ACM004",
-        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct regular audits to detect and address potential biases in the system"
+        "action_needed": "Implement robust safeguards to prevent harm, including data protection measures and human oversight"
       },
       {
         "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain informed consent from participants and implement measures to protect personally identifiable information"
+        "action_needed": "Obtain explicit, informed consent from employees and implement robust data protection measures to safeguard their personal data"
       },
       {
-        "requirement_id": "ACM007",
-        "requirement_text": "Give comprehensive evaluation of systems and their impacts",
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct regular evaluations to assess the system's performance, impact, and potential risks"
+        "action_needed": "Minimise the collection and processing of personally identifiable information and ensure that datasets are anonymised or pseudonymised where possible"
       },
       {
-        "requirement_id": "ACM008",
-        "requirement_text": "Consider possible risks and impacts of the research approach itself",
-        "framework": "ACMConference",
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment to identify potential risks and impacts of the research approach"
+        "action_needed": "Conduct a thorough risk assessment to determine whether the proposed system constitutes a high-risk AI system under the EU AI Act"
       },
       {
-        "requirement_id": "ACM009",
-        "requirement_text": "Access computing and communication resources only when authorised or compelled by public good",
+        "requirement_id": "AI008",
+        "requirement_text": "State the intended purpose of the AI system",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Clearly define the intended purpose of the emotion analytics system and ensure that it aligns with the organisation's values and policies"
+      },
+      {
+        "requirement_id": "AI010",
+        "requirement_text": "Describe the intended use — specific deployment scenarios distinct from intended purpose",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Provide a detailed description of the intended use of the emotion analytics system, including specific deployment scenarios and potential risks or benefits"
+      },
+      {
+        "requirement_id": "ACM024",
+        "requirement_text": "Consult local laws before collecting or analysing bulk surveillance data — surveillance must not predict protected categories or endanger individual well-being",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the system is accessed and used only by authorised personnel and for legitimate purposes"
+        "action_needed": "Consult with local authorities and ensure that the proposed system complies with relevant laws and regulations regarding surveillance and data protection"
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 1",
-        "right_name": "HumanDignity",
-        "relevance": "The system's potential to objectify or undermine human dignity is significant"
-      },
-      {
         "article": "Article 7",
         "right_name": "PrivateLife",
-        "relevance": "The collection and processing of sensitive emotional data may infringe on the right to private life"
+        "relevance": "The collection and processing of emotional data using facial recognition technology may infringe on employees' right to private life"
       },
       {
         "article": "Article 8",
         "right_name": "DataProtection",
-        "relevance": "The system's potential to breach data protection principles is significant"
-      },
-      {
-        "article": "Article 15",
-        "right_name": "FreedomOfOccupation",
-        "relevance": "The system's potential to surveil or unfairly treat workers may infringe on the right to freedom of occupation"
+        "relevance": "The proposed system may compromise employees' right to data protection, particularly if adequate safeguards are not in place"
       },
       {
         "article": "Article 31",
         "right_name": "FairWorkingConditions",
-        "relevance": "The system's potential to create unfair working conditions is significant"
+        "relevance": "The tying of participation to a wellness bonus may create unfair working conditions, potentially infringing on employees' right to fair working conditions"
+      },
+      {
+        "article": "Article 1",
+        "right_name": "HumanDignity",
+        "relevance": "The use of emotion analytics may undermine employees' human dignity, particularly if the system is not designed with their well-being in mind"
+      },
+      {
+        "article": "Article 15",
+        "right_name": "FreedomOfOccupation",
+        "relevance": "The proposed system may infringe on employees' freedom of occupation, particularly if it creates pressure to participate or leads to unfair exclusion"
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-015",
         "incident_title": "Uber Surge Pricing Discrimination",
-        "lesson": "The importance of ensuring that AI systems do not perpetuate biases or discrimination"
+        "lesson": "The use of AI systems can perpetuate existing social inequalities and lead to discriminatory outcomes"
       },
       {
         "incident_id": "AIAAIC-021",
         "incident_title": "HireVue Automated Video Interview Bias",
-        "lesson": "The need to validate AI systems on diverse datasets to prevent biases and discrimination"
+        "lesson": "AI systems can be biased and lead to unfair treatment of individuals, particularly in high-stakes decision-making contexts"
       },
       {
         "incident_id": "AIAAIC-022",
         "incident_title": "Deliveroo Algorithmic Dismissal",
-        "lesson": "The importance of ensuring that AI systems are transparent and explainable in their decision-making processes"
+        "lesson": "AI systems can lead to unfair exclusion or adverse treatment of workers, particularly in contexts where human oversight is limited"
       },
       {
         "incident_id": "AIAAIC-003",
         "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The need to ensure that AI systems are designed and tested to prevent harmful outputs or behaviors"
+        "lesson": "AI systems can cause harm or perpetuate existing social problems, particularly if they are not designed with human values and well-being in mind"
       },
       {
         "incident_id": "AIAAIC-005",
         "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The importance of ensuring that AI systems are validated on diverse datasets to prevent biases and discrimination"
-      },
-      {
-        "incident_id": "AIAAIC-009",
-        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The need to ensure that AI systems are designed and tested to prevent harm to humans"
-      },
-      {
-        "incident_id": "AIAAIC-002",
-        "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The importance of ensuring that AI systems are accurate and reliable in their decision-making processes"
-      },
-      {
-        "incident_id": "AIAAIC-007",
-        "incident_title": "Clearview AI Mass Facial Recognition Scraping",
-        "lesson": "The need to ensure that AI systems are transparent and respectful of human rights and dignity"
+        "lesson": "AI systems can perpetuate existing social biases and lead to discriminatory outcomes, particularly if they are not designed with diversity and inclusion in mind"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct a thorough impact assessment to identify potential harms and benefits",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Implement measures to prevent or mitigate potential harms, such as data breaches or psychological harm",
-        "priority": "High"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Validate the system on diverse face sets and implement measures to prevent biases and discrimination",
-        "priority": "High"
+        "mitigation": "AccessControl",
+        "mitigation_id": "AccessControl",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Obtain informed consent from participants and implement measures to protect personally identifiable information",
-        "priority": "High"
+        "mitigation": "Anonymisation",
+        "mitigation_id": "Anonymisation",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct regular evaluations to assess the system's performance, impact, and potential risks",
-        "priority": "Medium"
+        "mitigation": "ComplaintMechanism",
+        "mitigation_id": "ComplaintMechanism",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Ensure that the system is accessed and used only by authorised personnel and for legitimate purposes",
-        "priority": "Medium"
+        "mitigation": "EthicsReviewBoard",
+        "mitigation_id": "EthicsReviewBoard",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "GovernanceProcedure",
+        "mitigation_id": "GovernanceProcedure",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Pseudonymisation",
+        "mitigation_id": "Pseudonymisation",
+        "priority": "Medium",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "StaffTraining",
+        "mitigation_id": "StaffTraining",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough impact assessment to identify potential harms and benefits",
-      "Implement measures to prevent or mitigate potential harms, such as data breaches or psychological harm",
-      "Validate the system on diverse face sets and implement measures to prevent biases and discrimination",
-      "Obtain informed consent from participants and implement measures to protect personally identifiable information",
-      "Conduct regular evaluations to assess the system's performance, impact, and potential risks"
+      "Conduct a thorough impact assessment to identify potential harms and develop strategies to mitigate them",
+      "Implement robust safeguards to prevent harm, including data protection measures and human oversight",
+      "Obtain explicit, informed consent from employees and implement robust data protection measures to safeguard their personal data",
+      "Minimise the collection and processing of personally identifiable information and ensure that datasets are anonymised or pseudonymised where possible",
+      "Conduct a thorough risk assessment to determine whether the proposed system constitutes a high-risk AI system under the EU AI Act"
     ],
     "tier2_reflective_prompts": [
-      "What are the potential risks and benefits of using camera-based emotion analytics in a business-process outsourcing centre?",
-      "How can we ensure that the system is transparent and explainable in its decision-making processes?",
-      "What measures can we take to prevent or mitigate potential harms, such as data breaches or psychological harm?",
-      "How can we validate the system on diverse face sets and implement measures to prevent biases and discrimination?",
-      "What are the potential consequences of using AI systems that are not transparent or fair?"
+      "How might the proposed system perpetuate existing social inequalities or lead to discriminatory outcomes?",
+      "What measures can be taken to ensure that the system is designed with human values and well-being in mind?",
+      "How can the system be designed to promote transparency, accountability, and fairness in decision-making?",
+      "What are the potential risks and benefits of using emotion analytics in the workplace, and how can they be mitigated?",
+      "How can the system be designed to respect employees' right to private life, data protection, and human dignity?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -349,6 +419,21 @@
       "rights_matched": 6,
       "requirements_retrieved": 119,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM001",
         "ACM002",
@@ -485,12 +570,12 @@
       "requirements_cited": [
         "ACM001",
         "ACM002",
-        "ACM003",
-        "ACM004",
         "ACM006",
-        "ACM007",
-        "ACM008",
-        "ACM009"
+        "ACM016",
+        "AI001",
+        "AI008",
+        "AI010",
+        "ACM024"
       ],
       "incidents_sample": [
         "AIAAIC-015",
@@ -500,6 +585,5 @@
         "AIAAIC-005"
       ]
     }
-  },
-  "compact_prompt": false
+  }
 }

@@ -1,0 +1,492 @@
+{
+  "proposal_id": "P27",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-21T01:18:10.877745",
+  "proposal_text": "This Horizon Europe consortium proposes a multi-site study of gait-and-face biometrics to recognise patients with rare neurological disorders across clinics in Ireland, Germany, and Spain. The technical work package will train a multimodal recognition model on clinic video and release model checkpoints and a 'de-identified' embedding database under an open-science deliverable required by the grant agreement. A parallel ethics work package notes that the same system may qualify as high-risk biometric categorisation under the EU AI Act, triggering an Art.27-style fundamental-rights impact assessment (FRIA) and possibly restricting public release of embeddings. The consortium has not resolved whether open deliverables or FRIA containment wins when they conflict. Patient consent forms mention research use but not public model release. No independent FRIA has been completed before the first data freeze.",
+  "context_max_requirements": 10,
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "biometric",
+    "patient",
+    "consent"
+  ],
+  "matched_rights": [
+    "Art1_HumanDignity",
+    "Art2_RightToLife",
+    "Art35_HealthCare",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 110,
+  "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 47.0,
+      "tf": 47,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 35.0,
+      "tf": 35,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 19.0,
+      "tf": 19,
+      "df": 26
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 48
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The proposed research project involves high-risk biometric data processing, including gait-and-face biometrics, which may lead to potential risks such as FalseIdentification, PrivacyBreach, and Discrimination. The project's use of sensitive patient data and potential public release of embeddings raises concerns about patient consent, data protection, and transparency. The lack of independent fundamental-rights impact assessment (FRIA) and unresolved conflict between open deliverables and FRIA containment further exacerbate these risks. The project's impact on human dignity, privacy, and healthcare rights is significant, and careful consideration of these risks is necessary to ensure the project's ethical integrity.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Biometric data processing",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The project involves processing sensitive biometric data, which poses a high risk of unauthorised collection, processing, or disclosure of personal data."
+      },
+      {
+        "risk": "Lack of patient consent",
+        "risk_category": "Dignity",
+        "severity": "High",
+        "explanation": "Patient consent forms do not mention public model release, which may lead to a violation of patients' dignity and autonomy."
+      },
+      {
+        "risk": "False identification",
+        "risk_category": "FalseIdentification",
+        "severity": "High",
+        "explanation": "The project's use of gait-and-face biometrics may lead to incorrect identity attribution, which can have severe consequences for patients."
+      },
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
+        "severity": "Medium",
+        "explanation": "The project's use of biometric data may perpetuate biases and discriminate against certain groups of patients."
+      },
+      {
+        "risk": "Lack of transparency",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The project's operation, capabilities, limitations, and decision rationale may not be adequately disclosed to end-users and stakeholders, which can lead to a lack of trust and accountability."
+      },
+      {
+        "risk": "Psychological harm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "Medium",
+        "explanation": "The project's use of biometric data and potential public release of embeddings may cause mental distress or emotional damage to patients."
+      },
+      {
+        "risk": "Surveillance",
+        "risk_category": "Surveillance",
+        "severity": "Low",
+        "explanation": "The project's use of biometric data may lead to pervasive or disproportionate observation, tracking, or monitoring of patients, although this risk is relatively low compared to other risks."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being \u2014 discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough impact assessment to identify potential harms and develop strategies to mitigate them"
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm \u2014 consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement measures to prevent harm, such as data anonymization and secure data storage"
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate \u2014 consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop and implement strategies to address biases and ensure fairness in the project's outcomes"
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct regular audits to identify and address biases in the project's data and outcomes"
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy \u2014 obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from patients for the use of their biometric data and ensure that their personal information is protected"
+      },
+      {
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a comprehensive evaluation of the project's systems and outcomes to identify potential risks and develop strategies to mitigate them"
+      },
+      {
+        "requirement_id": "ACM008",
+        "requirement_text": "Consider possible risks and impacts of the research approach itself (not just applications)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Regularly assess the project's research approach to identify potential risks and develop strategies to address them"
+      },
+      {
+        "requirement_id": "ACM009",
+        "requirement_text": "Access computing and communication resources only when authorised or compelled by public good",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the project's use of computing and communication resources is authorized and aligned with the public good"
+      },
+      {
+        "requirement_id": "ACM010",
+        "requirement_text": "Design and implement systems that are robustly and usably secure \u2014 especially systems close to production deployment",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement robust security measures to protect the project's systems and data"
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 1",
+        "right_name": "HumanDignity",
+        "relevance": "The project's use of biometric data and potential public release of embeddings may violate patients' right to dignity and autonomy"
+      },
+      {
+        "article": "Article 7",
+        "right_name": "PrivateLife",
+        "relevance": "The project's use of biometric data may infringe on patients' right to private life"
+      },
+      {
+        "article": "Article 8",
+        "right_name": "DataProtection",
+        "relevance": "The project's use of biometric data and potential public release of embeddings may violate patients' right to data protection"
+      },
+      {
+        "article": "Article 35",
+        "right_name": "HealthCare",
+        "relevance": "The project's use of biometric data may impact patients' right to healthcare and access to medical services"
+      },
+      {
+        "article": "Article 2",
+        "right_name": "RightToLife",
+        "relevance": "The project's use of biometric data may have implications for patients' right to life, particularly in cases where false identification or misdiagnosis may occur"
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The use of facial recognition technology can lead to false arrests and misidentification, highlighting the need for robust testing and validation of biometric systems"
+      },
+      {
+        "incident_id": "AIAAIC-005",
+        "incident_title": "Google Photos Labeled Black People as Gorillas",
+        "lesson": "Biometric systems can perpetuate biases and discrimination, emphasizing the importance of diverse and representative training data"
+      },
+      {
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
+        "lesson": "Biometric systems can exacerbate existing healthcare disparities, highlighting the need for careful consideration of biases and fairness in healthcare applications"
+      },
+      {
+        "incident_id": "AIAAIC-009",
+        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
+        "lesson": "The use of biometric data and autonomous systems can have severe consequences, emphasizing the need for rigorous testing and validation of these systems"
+      },
+      {
+        "incident_id": "AIAAIC-017",
+        "incident_title": "IBM Watson Oncology Unsafe Recommendations",
+        "lesson": "The use of biometric data and AI systems in healthcare can lead to unsafe recommendations, highlighting the need for careful consideration of these systems' limitations and potential biases"
+      },
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "The use of biometric data and AI systems can perpetuate harmful content and amplify biases, emphasizing the need for careful consideration of these systems' potential impacts on society"
+      },
+      {
+        "incident_id": "AIAAIC-043",
+        "incident_title": "NHS UK Sepsis Algorithm Racial Bias",
+        "lesson": "Biometric systems can perpetuate biases and discrimination in healthcare, highlighting the need for diverse and representative training data and careful consideration of these systems' potential biases"
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct a thorough impact assessment to identify potential harms and develop strategies to mitigate them",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Implement measures to prevent harm, such as data anonymization and secure data storage",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop and implement strategies to address biases and ensure fairness in the project's outcomes",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Obtain explicit consent from patients for the use of their biometric data and ensure that their personal information is protected",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Regularly assess the project's research approach to identify potential risks and develop strategies to address them",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Implement robust security measures to protect the project's systems and data",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Conduct regular audits to identify and address biases in the project's data and outcomes",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough impact assessment to identify potential harms and develop strategies to mitigate them",
+      "Implement measures to prevent harm, such as data anonymization and secure data storage",
+      "Develop and implement strategies to address biases and ensure fairness in the project's outcomes",
+      "Obtain explicit consent from patients for the use of their biometric data and ensure that their personal information is protected",
+      "Regularly assess the project's research approach to identify potential risks and develop strategies to address them"
+    ],
+    "tier2_reflective_prompts": [
+      "How might the project's use of biometric data impact patients' right to dignity and autonomy?",
+      "What strategies can be implemented to address biases and ensure fairness in the project's outcomes?",
+      "How can the project ensure that patients' personal information is protected and their right to data protection is respected?",
+      "What are the potential consequences of false identification or misdiagnosis in the project, and how can these risks be mitigated?",
+      "How can the project ensure that its use of biometric data and AI systems is transparent, accountable, and aligned with the public good?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "biometric",
+        "patient",
+        "consent"
+      ],
+      "rights_matched": 5,
+      "requirements_retrieved": 110,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM001",
+        "ACM002",
+        "ACM011",
+        "ACM013",
+        "ACM014",
+        "ACM019",
+        "ACM020",
+        "ACM024",
+        "ACM025",
+        "ACM032",
+        "ACM036",
+        "AI001",
+        "AI008",
+        "AI010",
+        "AI017",
+        "AI021",
+        "HE001",
+        "HE002",
+        "HE003",
+        "HE004",
+        "HE005",
+        "HE006",
+        "HE015",
+        "HE016",
+        "HE017",
+        "HE019",
+        "HE021",
+        "HE022",
+        "HE027",
+        "HE041",
+        "HE042",
+        "HE049",
+        "HE050",
+        "R010",
+        "R011",
+        "R027",
+        "R040",
+        "R050",
+        "R051",
+        "R053",
+        "R054",
+        "R056",
+        "R076",
+        "R080",
+        "R081",
+        "R082",
+        "R086",
+        "ACM027",
+        "AI024",
+        "R021",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "ACM016",
+        "AI012",
+        "AI014",
+        "HE010",
+        "HE011",
+        "HE013",
+        "HE033",
+        "HE034",
+        "HE035",
+        "HE046",
+        "R005",
+        "R014",
+        "R018",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R030",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073",
+        "R074"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM003",
+        "ACM004",
+        "ACM006",
+        "ACM007",
+        "ACM008",
+        "ACM009",
+        "ACM010"
+      ],
+      "incidents_sample": [
+        "AIAAIC-003",
+        "AIAAIC-005",
+        "AIAAIC-009",
+        "AIAAIC-017",
+        "AIAAIC-018"
+      ]
+    }
+  },
+  "compact_prompt": false
+}

@@ -1,0 +1,22 @@
+{
+  "run_timestamp": "2026-07-20T18:41:51.062912",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "max_requirements": null,
+  "output_dir": "../evaluation/results/llama-3.3-70b",
+  "total_proposals": 1,
+  "results": [
+    {
+      "id": "P19",
+      "title": "Cross-Border EU/US Medical Data Sharing for Rare Disease AI",
+      "expected_risk": "High",
+      "predicted_risk": "N/A",
+      "risk_match": "MISMATCH",
+      "confidence_flag": "N/A",
+      "requirements_cited": 0,
+      "rights_flagged": 0,
+      "precedents_cited": 0,
+      "mitigations": 0
+    }
+  ]
+}

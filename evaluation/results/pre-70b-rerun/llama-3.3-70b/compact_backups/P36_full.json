@@ -1,0 +1,29 @@
+{
+  "proposal_id": "P36",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This research estimates 'attention' during online university exams from webcam head-pose and gaze proxies, producing a per-student attention timeline for instructor review after the exam. Timelines are not auto-fail triggers. Students must enable the webcam to sit the exam. Disability advocates argue gaze proxies discriminate against neurodivergent students; the exam board argues attention analytics are ordinary pedagogy. Whether Art.21 non-discrimination, Art.7 private life, Art.1 dignity, or primarily education-policy rather than Charter law applies is contested among reasonable experts. No demographic validation is reported.",
+  "assessment": {
+    "overall_risk_level": "High",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art21_NonDiscrimination",
+        "right_name": "Non-Discrimination",
+        "relevance": "The use of gaze proxies may discriminate against neurodivergent students."
+      },
+      {
+        "article": "Art7_PrivateLife",
+        "right_name": "Private Life",
+        "relevance": "The collection of webcam data, including head-pose and gaze, may infringe on students' right to private life."
+      },
+      {
+        "article": "Art1_HumanDignity",
+        "right_name": "Human Dignity",
+        "relevance": "The potential for discrimination and privacy infringement may affect students' human dignity."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

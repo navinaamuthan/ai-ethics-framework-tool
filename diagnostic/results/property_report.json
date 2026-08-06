@@ -43,7 +43,7 @@
       "note": "Fraction of identified_risks whose risk_category maps to a cited requirement ID via ontology :hasRisk."
     },
     "LLM-70B": {
-      "mean_traceable_fraction": 0.3714980158730159,
+      "mean_traceable_fraction": 0.7236607142857143,
       "note": "Fraction of identified_risks whose risk_category maps to a cited requirement ID via ontology :hasRisk."
     }
   },
@@ -166,6 +166,12 @@
           "collateral_count": 2
         },
         {
+          "proposal_id": "P17",
+          "edit_size": 12,
+          "edit_size_lines": 1,
+          "collateral_count": 2
+        },
+        {
           "proposal_id": "P21",
           "edit_size": 12,
           "edit_size_lines": 1,
@@ -173,12 +179,6 @@
         },
         {
           "proposal_id": "P23",
-          "edit_size": 12,
-          "edit_size_lines": 1,
-          "collateral_count": 2
-        },
-        {
-          "proposal_id": "P24",
           "edit_size": 12,
           "edit_size_lines": 1,
           "collateral_count": 2
@@ -390,6 +390,5 @@
   "kill_condition_3": {
     "triggered": false,
     "note": "At least one property discriminates among assessors."
-  },
-  "week3_note": "Traceability/amendability recomputed on post-mitigation LLM-8B assessments. Stability and comprehensibility caches reused (compact-risk / judge paths unchanged by taxonomy wiring; LLM-8B comprehensibility not re-judged while Ollama was busy with perturbation refill)."
+  }
 }

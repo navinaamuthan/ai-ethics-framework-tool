@@ -2,9 +2,9 @@
   "proposal_id": "P31",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-21T01:19:41.436188",
+  "timestamp": "2026-08-03T15:43:10.306162",
   "proposal_text": "This project will release an open speech corpus of 400 hours across Yoruba, Igbo, and Swahili for ASR research. Speakers are paid volunteers who record scripted sentences and optional two-minute personal stories about family and work. Scripts are public-domain; personal stories may contain names, employers, and locations. Release includes raw audio under CC-BY with speaker IDs replaced by codes. A subtle issue: re-identification via voice biometrics plus story content is possible for well-known community members, but the datasheet treats the corpus as anonymised. No voice-biometric risk assessment is planned. Otherwise the project is standard open-science language resource work with no downstream decision system.",
-  "context_max_requirements": 10,
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "biometric",
@@ -109,183 +109,240 @@
       "df": 5
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed open speech corpus project poses risks related to privacy breach, re-identification, and potential psychological harm, particularly for well-known community members who may be identifiable through their voice biometrics and personal stories. The project's treatment of the corpus as anonymized may be insufficient, and the lack of a voice-biometric risk assessment is a concern. Additionally, the project may perpetuate biases and discrimination if the data collection and processing are not carefully considered. The project's use of personal data, such as names, employers, and locations, also raises concerns about data protection and privacy.",
+    "risk_summary": "The proposed research project involves the release of an open speech corpus of 400 hours across Yoruba, Igbo, and Swahili languages, which may pose risks related to privacy breach, dignity, and psychological harm due to the potential for re-identification of speakers through voice biometrics and story content. The project's treatment of the corpus as anonymized despite these risks is a concern. Additionally, the lack of a voice-biometric risk assessment and the potential for biased or discriminatory outcomes in downstream applications using this corpus are notable risks. The project's standard open-science approach and lack of downstream decision systems mitigate some risks but do not eliminate them.",
     "overall_risk_level": "Medium",
     "identified_risks": [
       {
-        "risk": "Re-identification of speakers through voice biometrics and personal stories",
+        "risk": "Re-identification of speakers through voice biometrics and story content",
         "risk_category": "PrivacyBreach",
         "severity": "Medium",
-        "explanation": "The project's use of voice recordings and personal stories may allow for re-identification of speakers, particularly well-known community members."
+        "explanation": "The corpus contains personal stories that may include identifiable information, and the use of voice biometrics could potentially reveal the identities of the speakers."
       },
       {
-        "risk": "Insufficient anonymization of the corpus",
-        "risk_category": "PrivacyBreach",
+        "risk": "Lack of voice-biometric risk assessment",
+        "risk_category": "PsychologicalHarm",
         "severity": "Medium",
-        "explanation": "The project's treatment of the corpus as anonymized may be insufficient, given the potential for re-identification through voice biometrics and personal stories."
+        "explanation": "The project does not plan to conduct a risk assessment for voice biometrics, which could lead to unforeseen psychological harm to the speakers."
       },
       {
-        "risk": "Perpetuation of biases and discrimination",
+        "risk": "Potential for biased or discriminatory outcomes in downstream applications",
         "risk_category": "Discrimination",
         "severity": "Medium",
-        "explanation": "The project's data collection and processing may perpetuate biases and discrimination if not carefully considered."
+        "explanation": "The corpus may contain biases or discriminatory content that could be perpetuated in downstream applications, leading to unfair treatment of individuals or groups."
       },
       {
-        "risk": "Psychological harm to speakers",
-        "risk_category": "PsychologicalHarm",
-        "severity": "Low",
-        "explanation": "The project's use of personal stories may cause psychological harm to speakers, particularly if they are identifiable."
+        "risk": "Inadequate anonymization of the corpus",
+        "risk_category": "Dignity",
+        "severity": "Medium",
+        "explanation": "The project's treatment of the corpus as anonymized may not be sufficient to protect the dignity of the speakers, particularly if re-identification is possible."
       },
       {
-        "risk": "Lack of transparency in data collection and processing",
+        "risk": "Lack of transparency in the project's approach to privacy and security",
         "risk_category": "Transparency",
         "severity": "Low",
-        "explanation": "The project's lack of transparency in data collection and processing may lead to mistrust and concerns about data protection and privacy."
+        "explanation": "The project could benefit from more transparent communication about its approach to privacy and security, particularly regarding the potential risks associated with the corpus."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment and consider the potential impacts of the project on speakers and the community."
-      },
-      {
         "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to prevent re-identification and ensure the anonymity of speakers."
-      },
-      {
-        "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the data collection and processing are fair and do not perpetuate biases and discrimination."
-      },
-      {
-        "requirement_id": "ACM004",
-        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the data and processing to identify and mitigate biases."
+        "action_needed": "Conduct a thorough risk assessment for the corpus, including voice biometrics and potential biases."
       },
       {
         "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the project respects the privacy of speakers and implements measures to protect their personal data."
+        "action_needed": "Obtain informed consent from speakers and ensure that personally identifiable information is protected."
       },
       {
-        "requirement_id": "ACM007",
-        "requirement_text": "Give comprehensive evaluation of systems and their impacts",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Conduct a comprehensive evaluation of the project's impacts on speakers and the community."
-      },
-      {
-        "requirement_id": "ACM008",
-        "requirement_text": "Consider possible risks and impacts of the research approach itself",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider the potential risks and impacts of the project's research approach and implement measures to mitigate them."
-      },
-      {
-        "requirement_id": "ACM009",
-        "requirement_text": "Access computing and communication resources only when authorised or compelled by public good",
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the project only accesses computing and communication resources when authorised or compelled by public good."
+        "action_needed": "Minimize the exposure of personally identifiable information in the corpus and ensure that informed consent is obtained from speakers."
       },
       {
-        "requirement_id": "ACM010",
-        "requirement_text": "Design and implement systems that are robustly and usably secure",
-        "framework": "ACMConference",
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the project's systems are robustly and usably secure to protect the personal data of speakers."
+        "action_needed": "Assess whether the project is obligated to conduct a FRIA and take necessary steps to ensure compliance."
+      },
+      {
+        "requirement_id": "AI008",
+        "requirement_text": "State the intended purpose of the AI system",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Clearly state the intended purpose of the corpus and ensure that it aligns with the project's goals and objectives."
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 1",
-        "right_name": "Human Dignity",
-        "relevance": "The project's use of personal stories and voice recordings may raise concerns about human dignity, particularly if speakers are identifiable."
+        "right_name": "HumanDignity",
+        "relevance": "The project's treatment of the corpus as anonymized may not be sufficient to protect the dignity of the speakers, particularly if re-identification is possible."
       },
       {
         "article": "Article 7",
-        "right_name": "Private Life",
-        "relevance": "The project's use of personal data, such as names, employers, and locations, may raise concerns about the right to private life."
+        "right_name": "PrivateLife",
+        "relevance": "The corpus contains personal stories that may include identifiable information, and the use of voice biometrics could potentially reveal the identities of the speakers."
       },
       {
         "article": "Article 8",
-        "right_name": "Data Protection",
-        "relevance": "The project's use of personal data and voice recordings may raise concerns about data protection, particularly if the data is not anonymized or secured properly."
+        "right_name": "DataProtection",
+        "relevance": "The project must ensure that personally identifiable information is protected and that the corpus is handled in accordance with data protection principles."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-002",
         "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The importance of ensuring that biometric data is handled and processed carefully to prevent false identification and arrest."
+        "lesson": "The use of biometric data, such as voice biometrics, can lead to false identifications and serious consequences for individuals."
       },
       {
         "incident_id": "AIAAIC-005",
         "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The importance of ensuring that AI systems are fair and do not perpetuate biases and discrimination."
+        "lesson": "Biased or discriminatory outcomes can occur in AI systems, particularly when they are not designed or tested with diverse datasets."
       },
       {
         "incident_id": "AIAAIC-006",
         "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
-        "lesson": "The importance of ensuring that AI systems are fair and do not perpetuate biases and discrimination, particularly in healthcare."
+        "lesson": "AI systems can perpetuate biases and discriminatory outcomes, particularly in high-stakes applications such as healthcare."
       },
       {
         "incident_id": "AIAAIC-011",
         "incident_title": "Facebook Discriminatory Ad Targeting",
-        "lesson": "The importance of ensuring that AI systems are fair and do not perpetuate biases and discrimination, particularly in advertising."
+        "lesson": "AI systems can be used to discriminate against individuals or groups, particularly in targeted advertising."
       },
       {
         "incident_id": "AIAAIC-016",
         "incident_title": "Palantir ICE Surveillance System",
-        "lesson": "The importance of ensuring that AI systems are used responsibly and do not perpetuate surveillance or discrimination."
+        "lesson": "AI systems can be used for surveillance and tracking, particularly in contexts where human rights and dignity are at risk."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct a thorough risk assessment and consider the potential impacts of the project on speakers and the community",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Implement measures to prevent re-identification and ensure the anonymity of speakers",
-        "priority": "High"
+        "mitigation": "Anonymisation",
+        "mitigation_id": "Anonymisation",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Ensure that the data collection and processing are fair and do not perpetuate biases and discrimination",
-        "priority": "Medium"
+        "mitigation": "Pseudonymisation",
+        "mitigation_id": "Pseudonymisation",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct a comprehensive evaluation of the project's impacts on speakers and the community",
-        "priority": "Medium"
+        "mitigation": "AccessControl",
+        "mitigation_id": "AccessControl",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Ensure that the project respects the privacy of speakers and implements measures to protect their personal data",
-        "priority": "Medium"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "Low",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Regular audits and risk assessments",
+        "mitigation_id": "RegularAudits",
+        "priority": "Medium",
+        "from_taxonomy": false
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough risk assessment and consider the potential impacts of the project on speakers and the community",
-      "Implement measures to prevent re-identification and ensure the anonymity of speakers",
-      "Ensure that the data collection and processing are fair and do not perpetuate biases and discrimination",
-      "Ensure that the project respects the privacy of speakers and implements measures to protect their personal data"
+      "Conduct a thorough risk assessment for the corpus, including voice biometrics and potential biases.",
+      "Obtain informed consent from speakers and ensure that personally identifiable information is protected.",
+      "Minimize the exposure of personally identifiable information in the corpus and ensure that informed consent is obtained from speakers.",
+      "Assess whether the project is obligated to conduct a FRIA and take necessary steps to ensure compliance.",
+      "Clearly state the intended purpose of the corpus and ensure that it aligns with the project's goals and objectives."
     ],
     "tier2_reflective_prompts": [
-      "Consider the potential risks and impacts of the project's research approach and implement measures to mitigate them",
-      "Conduct a comprehensive evaluation of the project's impacts on speakers and the community",
-      "Ensure that the project's systems are robustly and usably secure to protect the personal data of speakers"
+      "How might the project's approach to privacy and security impact the dignity and well-being of the speakers?",
+      "What steps can be taken to minimize the risk of biased or discriminatory outcomes in downstream applications using the corpus?",
+      "How can the project ensure that the corpus is handled in accordance with data protection principles and that personally identifiable information is protected?",
+      "What are the potential consequences of re-identification of speakers through voice biometrics and story content, and how can these risks be mitigated?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "LOW",
@@ -297,6 +354,21 @@
       "rights_matched": 3,
       "requirements_retrieved": 109,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM001",
         "ACM002",
@@ -421,15 +493,11 @@
         "R074"
       ],
       "requirements_cited": [
-        "ACM001",
         "ACM002",
-        "ACM003",
-        "ACM004",
         "ACM006",
-        "ACM007",
-        "ACM008",
-        "ACM009",
-        "ACM010"
+        "ACM016",
+        "AI001",
+        "AI008"
       ],
       "incidents_sample": [
         "AIAAIC-003",
@@ -439,6 +507,5 @@
         "AIAAIC-007"
       ]
     }
-  },
-  "compact_prompt": false
+  }
 }

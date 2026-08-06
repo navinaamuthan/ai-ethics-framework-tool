@@ -1,0 +1,39 @@
+{
+  "proposal_id": "P28",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This research proposes a Spanish-language LLM chatbot that guides Bogot\u00e1 residents through business-permit and construction-licence applications. The bot classifies query intent, retrieves municipal code passages, and drafts application forms. In a pilot ward, incomplete answers that the bot labels 'likely ineligible' will auto-close the digital ticket without human review to reduce backlog. Residents with limited literacy or non-standard Spanish dialects may be disproportionately auto-closed. Conversation logs retain national ID numbers entered into forms. The city asserts the bot is 'advisory only,' yet ticket closure has the practical effect of a refusal. No administrative-appeal pathway specific to bot closures is described.",
+  "assessment": {
+    "overall_risk_level": "High",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art7_PrivateLife",
+        "right_name": "Right to Private Life",
+        "relevance": "Conversation logs retain national ID numbers entered into forms, potentially compromising residents' private information."
+      },
+      {
+        "article": "Art8_DataProtection",
+        "right_name": "Right to Data Protection",
+        "relevance": "The storage of national ID numbers in conversation logs may violate data protection principles."
+      },
+      {
+        "article": "Art21_NonDiscrimination",
+        "right_name": "Right to Non-Discrimination",
+        "relevance": "Residents with limited literacy or non-standard Spanish dialects may be disproportionately auto-closed, potentially leading to discriminatory outcomes."
+      },
+      {
+        "article": "Art41_GoodAdministration",
+        "right_name": "Right to Good Administration",
+        "relevance": "The lack of administrative-appeal pathway specific to bot closures may result in unfair treatment of residents."
+      },
+      {
+        "article": "Art47_RightToEffectiveRemedy",
+        "right_name": "Right to Effective Remedy",
+        "relevance": "The absence of a specific appeal process for bot closures may deny residents an effective remedy for potential errors or injustices."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

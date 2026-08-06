@@ -1,0 +1,29 @@
+{
+  "proposal_id": "P38",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This research builds a classifier that flags potentially entrapment-related profiles and messages on a dating app used by LGBTQ+ people in jurisdictions where same-sex intimacy is criminalised. Flagged chats are queued for voluntary user warnings; the app does not notify police. False positives may chill legitimate intimate speech (Art.11 / private life); false negatives may enable harm. Community advisory board members disagree whether the dominant frame is safety, expression, privacy, or non-discrimination. Training labels come from moderator decisions in EU markets and may not transfer. The proposal leaves the primary Charter article intentionally under-determined.",
+  "assessment": {
+    "overall_risk_level": "Medium",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art11_FreedomOfExpression",
+        "right_name": "Freedom of Expression",
+        "relevance": "False positives may chill legitimate intimate speech."
+      },
+      {
+        "article": "Art7_PrivateLife",
+        "right_name": "Right to Private Life",
+        "relevance": "False positives may chill legitimate intimate speech."
+      },
+      {
+        "article": "Art21_NonDiscrimination",
+        "right_name": "Right to Non-Discrimination",
+        "relevance": "The classifier aims to protect LGBTQ+ users from entrapment in hostile jurisdictions."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

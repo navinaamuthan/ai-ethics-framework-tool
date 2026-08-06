@@ -1,0 +1,24 @@
+{
+  "proposal_id": "P33",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This project proposes an on-campus FAQ chatbot answering timetable, fee, and library questions for undergraduate students. Queries are answered from a curated knowledge base. For 'service improvement,' the system stores raw query text linked to student ID for twelve months. Most queries are mundane, but logs will inevitably include questions about mitigating circumstances, disability supports, and mental-health services. Students see a cookie-style banner but no granular opt-out from identifiable logging while still using the bot. No model makes academic decisions. The subtle issue is purpose creep and sensitive-query retention rather than high-stakes automation.",
+  "assessment": {
+    "overall_risk_level": "Medium",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art7_PrivateLife",
+        "right_name": "Right to Private Life",
+        "relevance": "The project's storage of raw query text linked to student ID for twelve months may infringe on students' right to private life."
+      },
+      {
+        "article": "Art8_DataProtection",
+        "right_name": "Right to Data Protection",
+        "relevance": "The lack of granular opt-out from identifiable logging may violate students' right to data protection."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

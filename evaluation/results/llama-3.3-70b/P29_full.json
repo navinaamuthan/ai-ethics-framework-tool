@@ -2,9 +2,9 @@
   "proposal_id": "P29",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-21T01:18:52.591463",
+  "timestamp": "2026-08-03T14:48:55.279889",
   "proposal_text": "This project proposes a 'community safety analytics' dashboard for a mid-sized EU city police service. The model forecasts week-ahead geographic concentrations of emergency calls using historical CAD data, weather, and event calendars. Outputs are heat maps for patrol allocation, not individual risk scores. Civil-liberties groups argue the system recapitulates predictive policing by intensifying presence in already over-policed neighbourhoods; the police service argues it only allocates scarce ambulances and officers to call volume. No individual surveillance cameras or stop-and-search recommendations are generated. Historical call data embed prior discriminatory deployment patterns. Whether Art.6 liberty, Art.21 non-discrimination, or neither is primarily engaged is contested among reasonable experts given the aggregate-only design.",
-  "context_max_requirements": 10,
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "polic",
@@ -120,40 +120,113 @@
       "df": 5
     }
   ],
-  "rights_disambiguation": "individual_treatment\u2192Art21",
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "individual_treatment→Art21",
   "assessment": {
-    "risk_summary": "The proposed community safety analytics dashboard poses significant ethical risks, including perpetuating discriminatory policing patterns, infringing on individual liberties, and potentially causing psychological harm to marginalized communities. The system's reliance on historical CAD data, which may embed prior discriminatory deployment patterns, raises concerns about fairness and accountability. Furthermore, the dashboard's outputs, although aggregate, may still contribute to over-policing in certain neighborhoods, exacerbating existing social issues. The project's potential impact on human dignity, privacy, and non-discrimination rights is substantial.",
+    "risk_summary": "The proposed community safety analytics dashboard poses significant ethical risks, including the potential for discriminatory policing, privacy breaches, and psychological harm. The system's use of historical CAD data, weather, and event calendars to forecast emergency calls may perpetuate existing biases and disproportionately affect already over-policed neighborhoods. Furthermore, the lack of transparency and accountability in the system's decision-making process raises concerns about the potential for unexplained or unjust outcomes. The project also involves the processing of sensitive personal data, which increases the risk of data breaches and other privacy-related harms.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Perpetuation of discriminatory policing patterns",
+        "risk": "Discriminatory policing",
         "risk_category": "Discrimination",
         "severity": "High",
-        "explanation": "The system's use of historical CAD data may perpetuate existing biases and discriminatory patterns in policing, leading to unfair treatment of certain communities."
+        "explanation": "The system's use of historical CAD data may perpetuate existing biases and disproportionately affect already over-policed neighborhoods."
       },
       {
-        "risk": "Infringement on individual liberties",
-        "risk_category": "Dignity",
+        "risk": "Privacy breaches",
+        "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "The dashboard's outputs may contribute to over-policing in certain neighborhoods, potentially infringing on individuals' right to liberty and freedom from undue surveillance."
+        "explanation": "The project involves the processing of sensitive personal data, which increases the risk of data breaches and other privacy-related harms."
       },
       {
-        "risk": "Psychological harm to marginalized communities",
+        "risk": "Psychological harm",
         "risk_category": "PsychologicalHarm",
         "severity": "Medium",
-        "explanation": "The system's potential to exacerbate existing social issues, such as over-policing, may cause mental distress and emotional damage to individuals and communities."
+        "explanation": "The system's use of predictive analytics may cause mental distress or emotional damage to individuals or communities."
       },
       {
         "risk": "Lack of transparency and accountability",
-        "risk_category": "Transparency",
-        "severity": "Medium",
-        "explanation": "The project's use of aggregate data and lack of individual risk scores may make it difficult for individuals to understand how the system's outputs are generated and to contest decisions made based on those outputs."
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "The system's decision-making process lacks transparency and accountability, which raises concerns about the potential for unexplained or unjust outcomes."
       },
       {
-        "risk": "Privacy concerns",
-        "risk_category": "PrivacyBreach",
-        "severity": "Low",
-        "explanation": "Although the system does not generate individual risk scores, it still processes personal data, which may raise concerns about privacy and data protection."
+        "risk": "Data governance",
+        "risk_category": "DataGovernance",
+        "severity": "Medium",
+        "explanation": "The project involves the collection and processing of large amounts of data, which increases the risk of data governance issues."
+      },
+      {
+        "risk": "Transparency",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders."
       }
     ],
     "applicable_requirements": [
@@ -162,153 +235,175 @@
         "requirement_text": "Research must contribute to society and human well-being",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough impact assessment to identify potential harms and benefits of the system"
+        "action_needed": "Conduct a thorough impact assessment to identify potential harms and benefits"
       },
       {
         "requirement_id": "ACM002",
         "requirement_text": "Avoid harm",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to mitigate the risk of perpetuating discriminatory policing patterns and infringing on individual liberties"
+        "action_needed": "Implement measures to prevent or mitigate potential harms"
       },
       {
         "requirement_id": "ACM003",
         "requirement_text": "Be fair and take action not to discriminate",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the system's design and deployment prioritize fairness, accountability, and transparency"
-      },
-      {
-        "requirement_id": "ACM004",
-        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Regularly audit the system's data and outputs to detect and address potential biases"
+        "action_needed": "Conduct regular audits to detect and address potential biases"
       },
       {
         "requirement_id": "ACM006",
         "requirement_text": "Respect privacy",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement robust data protection measures to safeguard individuals' personal data"
+        "action_needed": "Implement robust privacy measures to protect sensitive personal data"
       },
       {
-        "requirement_id": "ACM007",
-        "requirement_text": "Give comprehensive evaluation of systems and their impacts",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Conduct regular evaluations of the system's performance and impact on communities"
-      },
-      {
-        "requirement_id": "ACM008",
-        "requirement_text": "Consider possible risks and impacts of the research approach itself",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Reflect on the potential risks and impacts of the research approach and adjust the methodology as needed"
-      },
-      {
-        "requirement_id": "ACM009",
-        "requirement_text": "Access computing and communication resources only when authorised or compelled by public good",
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the system's deployment is authorized and aligned with the public good"
+        "action_needed": "Use anonymization or pseudonymization techniques to protect personal data"
       },
       {
-        "requirement_id": "ACM010",
-        "requirement_text": "Design and implement systems that are robustly and usably secure",
+        "requirement_id": "ACM023",
+        "requirement_text": "Consider whether technology can be used to discriminate",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement robust security measures to protect the system and its data from potential threats"
+        "action_needed": "Conduct regular assessments to detect and address potential discriminatory effects"
+      },
+      {
+        "requirement_id": "ACM024",
+        "requirement_text": "Consult local laws before collecting or analysing bulk surveillance data",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure compliance with relevant laws and regulations"
+      },
+      {
+        "requirement_id": "ACM027",
+        "requirement_text": "Research must not build upon or facilitate illegal activity",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the research does not facilitate or perpetuate illegal activities"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The system's potential to perpetuate discriminatory policing patterns raises concerns about non-discrimination"
+        "relevance": "The system's potential to perpetuate discriminatory policing practices raises concerns about the right to non-discrimination"
       },
       {
         "article": "Article 6",
         "right_name": "Right to Liberty",
-        "relevance": "The dashboard's outputs may contribute to over-policing in certain neighborhoods, potentially infringing on individuals' right to liberty"
-      },
-      {
-        "article": "Article 1",
-        "right_name": "Human Dignity",
-        "relevance": "The system's potential impact on human dignity, particularly in marginalized communities, is a significant concern"
+        "relevance": "The system's use of predictive analytics may raise concerns about the right to liberty, particularly if it leads to unjust or unexplained outcomes"
       },
       {
         "article": "Article 7",
         "right_name": "Private Life",
-        "relevance": "The system's processing of personal data raises concerns about privacy and the right to private life"
+        "relevance": "The project's involvement in the processing of sensitive personal data raises concerns about the right to private life"
       },
       {
         "article": "Article 8",
         "right_name": "Data Protection",
-        "relevance": "The system's use of personal data requires robust data protection measures to safeguard individuals' rights"
+        "relevance": "The project's involvement in the processing of sensitive personal data raises concerns about the right to data protection"
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of auditing and addressing biases in AI systems"
+        "lesson": "The importance of auditing and addressing potential biases in AI systems"
       },
       {
         "incident_id": "AIAAIC-002",
         "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The potential risks of AI-powered surveillance systems, particularly in the context of law enforcement"
+        "lesson": "The potential risks and consequences of using AI systems for law enforcement purposes"
       },
       {
         "incident_id": "AIAAIC-005",
         "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The need for diverse and representative training data to prevent biases in AI systems"
-      },
-      {
-        "incident_id": "AIAAIC-009",
-        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The importance of prioritizing human safety and well-being in the development and deployment of AI systems"
+        "lesson": "The importance of ensuring that AI systems are fair, transparent, and free from bias"
       },
       {
         "incident_id": "AIAAIC-011",
         "incident_title": "Facebook Discriminatory Ad Targeting",
-        "lesson": "The potential risks of AI-powered advertising systems, particularly in terms of discrimination and bias"
+        "lesson": "The potential risks and consequences of using AI systems for targeted advertising purposes"
+      },
+      {
+        "incident_id": "AIAAIC-013",
+        "incident_title": "Apple Card Gender Discrimination",
+        "lesson": "The importance of ensuring that AI systems are fair, transparent, and free from bias"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Regular auditing and testing for biases in the system",
-        "priority": "High"
+        "mitigation": "AccessControl",
+        "mitigation_id": "AccessControl",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Implementation of robust data protection measures",
-        "priority": "High"
+        "mitigation": "Anonymisation",
+        "mitigation_id": "Anonymisation",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Development of a comprehensive evaluation framework to assess the system's impact",
-        "priority": "Medium"
+        "mitigation": "AuditLog",
+        "mitigation_id": "AuditLog",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Establishment of a transparent and accountable decision-making process",
-        "priority": "Medium"
+        "mitigation": "ComplaintMechanism",
+        "mitigation_id": "ComplaintMechanism",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Prioritization of human-centered design principles in the development of the system",
-        "priority": "Low"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "EthicsReviewBoard",
+        "mitigation_id": "EthicsReviewBoard",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "HumanOversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Pseudonymisation",
+        "mitigation_id": "Pseudonymisation",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "StaffTraining",
+        "mitigation_id": "StaffTraining",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough impact assessment to identify potential harms and benefits of the system",
-      "Implement measures to mitigate the risk of perpetuating discriminatory policing patterns and infringing on individual liberties",
-      "Ensure that the system's design and deployment prioritize fairness, accountability, and transparency",
-      "Regularly audit the system's data and outputs to detect and address potential biases",
-      "Implement robust data protection measures to safeguard individuals' personal data"
+      "Conduct a thorough impact assessment to identify potential harms and benefits",
+      "Implement measures to prevent or mitigate potential harms",
+      "Conduct regular audits to detect and address potential biases",
+      "Implement robust privacy measures to protect sensitive personal data",
+      "Use anonymization or pseudonymization techniques to protect personal data"
     ],
     "tier2_reflective_prompts": [
-      "What are the potential risks and impacts of the research approach itself?",
-      "How can the system's design and deployment be improved to prioritize fairness, accountability, and transparency?",
-      "What are the potential consequences of the system's outputs on marginalized communities?",
-      "How can the system's evaluation framework be developed to assess its impact on human dignity and well-being?"
+      "How might the system's use of predictive analytics perpetuate or exacerbate existing social inequalities?",
+      "What measures can be taken to ensure that the system is fair, transparent, and free from bias?",
+      "How can the system's decision-making process be made more transparent and accountable?",
+      "What are the potential risks and consequences of using AI systems for law enforcement purposes?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -326,6 +421,21 @@
       "rights_matched": 8,
       "requirements_retrieved": 144,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM001",
         "ACM002",
@@ -488,12 +598,11 @@
         "ACM001",
         "ACM002",
         "ACM003",
-        "ACM004",
         "ACM006",
-        "ACM007",
-        "ACM008",
-        "ACM009",
-        "ACM010"
+        "ACM016",
+        "ACM023",
+        "ACM024",
+        "ACM027"
       ],
       "incidents_sample": [
         "AIAAIC-003",
@@ -503,6 +612,5 @@
         "AIAAIC-002"
       ]
     }
-  },
-  "compact_prompt": false
+  }
 }

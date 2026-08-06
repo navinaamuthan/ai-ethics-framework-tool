@@ -1,0 +1,29 @@
+{
+  "proposal_id": "P22",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This research proposes to deploy a resume-ranking and interview-shortlisting model across three large technology employers in Bengaluru and Hyderabad. The model scores applicants using educational institution prestige, pin-code of permanent address, parental occupation fields scraped from optional profile forms, English-fluency estimates from writing samples, and historical hire outcomes. Caste is not an explicit feature. Independent auditors have previously shown that pin-code and institution features correlate strongly with Scheduled-Caste and Scheduled-Tribe membership in several Indian metros. The system will auto-reject the bottom 60% of applicants before any human recruiter sees the file. Candidates will not be told that an algorithmic gate was used. No caste-disaggregated fairness evaluation is included in the deployment plan, and the employers assert that Indian constitutional protections against caste discrimination do not require algorithmic audits. The research team has not consulted Dalit or Adivasi employee resource groups.",
+  "assessment": {
+    "overall_risk_level": "High",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art21_NonDiscrimination",
+        "right_name": "Right to Non-Discrimination",
+        "relevance": "The use of caste-correlated proxies in the hiring model may lead to discriminatory outcomes against certain groups, such as Scheduled-Caste and Scheduled-Tribe members."
+      },
+      {
+        "article": "Art7_PrivateLife",
+        "right_name": "Right to Private Life",
+        "relevance": "The collection and use of personal data, such as pin-code and institution information, without transparency and consent, may infringe on applicants' right to private life."
+      },
+      {
+        "article": "Art8_DataProtection",
+        "right_name": "Right to Data Protection",
+        "relevance": "The processing of sensitive personal data, such as parental occupation fields and English-fluency estimates, without adequate safeguards and transparency, may violate applicants' right to data protection."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

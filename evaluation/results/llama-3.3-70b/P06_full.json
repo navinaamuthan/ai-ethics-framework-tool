@@ -2,230 +2,423 @@
   "proposal_id": "P06",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-19T19:53:04.022069",
+  "timestamp": "2026-08-02T14:51:12.139566",
   "proposal_text": "This project proposes to install camera-based emotion recognition systems in six secondary school classrooms in Dublin to study the relationship between student emotional engagement and learning outcomes. The system will use computer vision to classify student facial expressions into six emotional categories (happy, sad, angry, surprised, fearful, neutral) at 5-second intervals throughout lessons. Data will be collected over one academic term covering approximately 180 students aged 13-17. Parental consent will be obtained but students will not be given an individual opt-out mechanism that allows them to remain in the classroom without being monitored. The emotion recognition system has been validated primarily on adult Western faces and has not been tested for accuracy on adolescent faces or faces from diverse ethnic backgrounds. Aggregated emotional engagement scores will be shared with teachers to inform pedagogical adjustments.",
   "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
-    "data",
-    "consent",
+    "emotion",
     "student",
-    "school",
-    "monitor",
     "classif",
-    "scor",
-    "emotion"
+    "consent",
+    "monitor",
+    "school",
+    "scor"
   ],
   "matched_rights": [
     "Art1_HumanDignity",
     "Art21_NonDiscrimination",
     "Art24_RightsOfChild",
     "Art3_RightToIntegrity",
-    "Art41_GoodAdministration",
     "Art47_RightToEffectiveRemedy",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 196,
+  "retrieved_requirements_count": 150,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 58.0,
+      "tf": 58,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 54.0,
+      "tf": 54,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 21.0,
+      "tf": 21,
+      "df": 26
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 18.0,
+      "tf": 18,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 15
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 16
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 3,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed research project involves installing camera-based emotion recognition systems in secondary school classrooms, which raises significant ethical concerns. The use of facial recognition technology on minors without individual opt-out mechanisms and the potential for biased outcomes due to the system's limited validation on diverse faces are major risks. Additionally, the sharing of aggregated emotional engagement scores with teachers may lead to unintended consequences, such as stigma or labeling of students. The project's impact on students' right to privacy, data protection, and non-discrimination is a significant concern.",
+    "risk_summary": "This project poses significant ethical risks due to the use of camera-based emotion recognition systems in secondary school classrooms, potentially infringing on students' rights to privacy, dignity, and non-discrimination. The system's lack of validation on adolescent faces and diverse ethnic backgrounds raises concerns about accuracy and potential biases. Furthermore, the absence of an individual opt-out mechanism for students may lead to psychological harm and reputational damage. The project's overall risk level is high due to the potential for privacy breaches, discrimination, and psychological harm.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
-        "risk": "Biased emotion recognition outcomes",
+        "risk": "Privacy Breach",
+        "risk_category": "PrivacyBreach",
         "severity": "High",
-        "explanation": "The system's limited validation on diverse faces may lead to inaccurate or biased results, particularly for students from diverse ethnic backgrounds."
+        "explanation": "The use of camera-based emotion recognition systems in classrooms may lead to the unauthorized collection, processing, or disclosure of personal data, particularly if adequate security measures are not in place."
       },
       {
-        "risk": "Invasion of students' privacy",
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
         "severity": "High",
-        "explanation": "The use of camera-based emotion recognition systems in classrooms may be perceived as an invasion of students' privacy, particularly if they are not given an individual opt-out mechanism."
+        "explanation": "The system's potential biases and lack of validation on diverse faces may result in unfair differential treatment of students based on their emotional expressions, ethnicity, or other protected characteristics."
       },
       {
-        "risk": "Potential for stigma or labeling",
+        "risk": "Psychological Harm",
+        "risk_category": "PsychologicalHarm",
+        "severity": "High",
+        "explanation": "The constant monitoring of students' emotional states may cause mental distress, anxiety, or emotional damage, particularly if they are not provided with adequate support or opt-out mechanisms."
+      },
+      {
+        "risk": "Lack of Transparency",
+        "risk_category": "Transparency",
         "severity": "Medium",
-        "explanation": "The sharing of aggregated emotional engagement scores with teachers may lead to unintended consequences, such as stigma or labeling of students."
+        "explanation": "The project's failure to provide clear information about the system's capabilities, limitations, and potential biases may undermine trust and lead to reputational harm."
       },
       {
-        "risk": "Lack of transparency and accountability",
+        "risk": "Dignity",
+        "risk_category": "Dignity",
         "severity": "Medium",
-        "explanation": "The project's methodology and outcomes may not be transparent, and there may be a lack of accountability for any adverse consequences."
-      },
-      {
-        "risk": "Insufficient consideration of students' rights",
-        "severity": "High",
-        "explanation": "The project may not adequately consider students' rights, including their right to privacy, data protection, and non-discrimination."
+        "explanation": "The use of emotion recognition systems may objectify or degrade students, particularly if their emotional states are used to inform pedagogical decisions without their consent or input."
       }
     ],
     "applicable_requirements": [
       {
-        "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain individual opt-out mechanisms for students and ensure that parental consent is informed and explicit."
+        "action_needed": "Conduct a thorough impact assessment to ensure the project contributes to the well-being of students and society"
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement robust security measures to prevent data breaches and ensure the system's accuracy and fairness"
       },
       {
         "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "requirement_text": "Be fair and take action not to discriminate",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Validate the emotion recognition system on diverse faces and consider potential biases in the system's outcomes."
+        "action_needed": "Validate the system on diverse faces and implement measures to prevent biases and discriminatory outcomes"
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain informed consent from students and parents, and provide adequate opt-out mechanisms"
       },
       {
         "requirement_id": "ACM016",
-        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the project's dataset is anonymized and that personally identifiable information is protected."
-      },
-      {
-        "requirement_id": "ACM021",
-        "requirement_text": "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Consider the potential risks and consequences of using emotion recognition technology in classrooms."
+        "action_needed": "Implement data anonymization and pseudonymization techniques to protect students' personal data"
       },
       {
         "requirement_id": "ACM024",
-        "requirement_text": "Consult local laws before collecting or analysing bulk surveillance data — surveillance must not predict protected categories or endanger individual well-being",
+        "requirement_text": "Consult local laws before collecting or analysing bulk surveillance data",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Consult local laws and regulations regarding surveillance and data collection in schools."
+        "action_needed": "Ensure compliance with relevant data protection regulations and laws"
       },
       {
         "requirement_id": "ACM027",
-        "requirement_text": "Research must not build upon or facilitate illegal activity — strongly discourage work that denies rights to privacy, speech, health, liberty, security, legal personhood, freedom of conscience/religion",
+        "requirement_text": "Research must not build upon or facilitate illegal activity",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the project does not facilitate or contribute to any illegal activity or human rights violations."
+        "action_needed": "Ensure the project does not infringe on students' rights to privacy, dignity, and non-discrimination"
       },
       {
-        "requirement_id": "ACM028",
-        "requirement_text": "Inspect suspected biases or limitations in models/datasets — ascertain whether they encode bias against gender, race, sexuality or other protected characteristics",
+        "requirement_id": "ACM031",
+        "requirement_text": "Use privacy protocols, encryption and anonymisation to reduce risk of data leakage",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Inspect the emotion recognition system for potential biases and limitations, particularly with regards to diverse faces and protected characteristics."
-      },
-      {
-        "requirement_id": "ACM014",
-        "requirement_text": "All human research subjects or participants must receive appropriate compensation — respect minimum hourly rate in region where work is carried out",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider providing compensation or incentives to students who participate in the project."
-      },
-      {
-        "requirement_id": "ACM015",
-        "requirement_text": "Research involving human participants must follow existing institutional protocols (IRB or equivalent) — if no formal process exists, undergo equivalent informal ethics review",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Follow existing institutional protocols for research involving human participants, or undergo an equivalent informal ethics review."
+        "action_needed": "Implement robust privacy protocols and encryption measures to protect students' personal data"
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 7",
-        "right_name": "Private Life",
-        "relevance": "The use of camera-based emotion recognition systems in classrooms may infringe on students' right to private life."
-      },
-      {
-        "article": "Article 8",
-        "right_name": "Data Protection",
-        "relevance": "The project's collection and processing of students' emotional engagement data may infringe on their right to data protection."
+        "article": "Article 1",
+        "right_name": "Human Dignity",
+        "relevance": "The use of emotion recognition systems may objectify or degrade students, potentially infringing on their right to human dignity"
       },
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The project's potential biases in emotion recognition outcomes may lead to discrimination against certain students."
+        "relevance": "The system's potential biases and lack of validation on diverse faces may result in discriminatory outcomes, infringing on students' right to non-discrimination"
       },
       {
         "article": "Article 24",
         "right_name": "Rights of the Child",
-        "relevance": "The project's impact on students' well-being and education may infringe on their rights as children."
+        "relevance": "The project's failure to provide adequate opt-out mechanisms and potential biases may infringe on students' rights as children, including their right to protection and care"
       },
       {
-        "article": "Article 1",
-        "right_name": "Human Dignity",
-        "relevance": "The project's use of emotion recognition technology may infringe on students' human dignity and autonomy."
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The use of camera-based emotion recognition systems may infringe on students' right to private life, particularly if their emotional states are monitored and used to inform pedagogical decisions"
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The project's handling of students' personal data, including their emotional states, may infringe on their right to data protection if adequate security measures are not in place"
       }
     ],
     "historical_precedents": [
       {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of validating AI systems on diverse data to prevent biases and discriminatory outcomes"
+      },
+      {
         "incident_id": "AIAAIC-002",
         "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The use of facial recognition technology can lead to false arrests and misidentification, particularly if the technology is not validated on diverse faces."
-      },
-      {
-        "incident_id": "AIAAIC-005",
-        "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The use of AI systems can perpetuate biases and discrimination, particularly if the systems are not designed and validated to avoid such biases."
-      },
-      {
-        "incident_id": "AIAAIC-009",
-        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The use of AI systems can have significant consequences, particularly if the systems are not designed and validated to ensure safety and accountability."
+        "lesson": "The potential for AI systems to produce false positives and the need for human oversight to prevent wrongful outcomes"
       },
       {
         "incident_id": "AIAAIC-025",
         "incident_title": "Amazon Alexa Recording Children Without Consent",
-        "lesson": "The use of AI systems can infringe on individuals' right to privacy, particularly if the systems are not designed and validated to obtain informed consent."
+        "lesson": "The importance of obtaining informed consent from individuals, particularly children, before collecting and processing their personal data"
       },
       {
         "incident_id": "AIAAIC-026",
         "incident_title": "Facial Recognition in UK Schools",
-        "lesson": "The use of facial recognition technology in schools can raise significant ethical concerns, particularly with regards to students' right to privacy and data protection."
+        "lesson": "The need for transparency and accountability when using AI systems in educational settings, particularly when it comes to students' personal data and emotional states"
+      },
+      {
+        "incident_id": "AIAAIC-044",
+        "incident_title": "Stable Diffusion CSAM Generation",
+        "lesson": "The potential for AI systems to produce harmful or unethical content and the need for robust safeguards to prevent such outcomes"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Obtain individual opt-out mechanisms for students",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Validate the emotion recognition system on diverse faces",
-        "priority": "High"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Ensure that the project's dataset is anonymized and that personally identifiable information is protected",
-        "priority": "High"
+        "mitigation": "AccessControl",
+        "mitigation_id": "AccessControl",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Consult local laws and regulations regarding surveillance and data collection in schools",
-        "priority": "Medium"
+        "mitigation": "Pseudonymisation",
+        "mitigation_id": "Pseudonymisation",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Provide compensation or incentives to students who participate in the project",
-        "priority": "Low"
+        "mitigation": "StaffTraining",
+        "mitigation_id": "StaffTraining",
+        "priority": "Medium",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "ComplaintMechanism",
+        "mitigation_id": "ComplaintMechanism",
+        "priority": "Low",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Regular audits and impact assessments to ensure the system's fairness and accuracy",
+        "mitigation_id": "Custom Mitigation",
+        "priority": "High",
+        "from_taxonomy": false
       }
     ],
     "tier1_mandatory_actions": [
-      "Obtain individual opt-out mechanisms for students",
-      "Validate the emotion recognition system on diverse faces",
-      "Ensure that the project's dataset is anonymized and that personally identifiable information is protected",
-      "Consult local laws and regulations regarding surveillance and data collection in schools"
+      "Conduct a thorough impact assessment to ensure the project contributes to the well-being of students and society",
+      "Implement robust security measures to prevent data breaches and ensure the system's accuracy and fairness",
+      "Validate the system on diverse faces and implement measures to prevent biases and discriminatory outcomes",
+      "Obtain informed consent from students and parents, and provide adequate opt-out mechanisms",
+      "Ensure compliance with relevant data protection regulations and laws"
     ],
     "tier2_reflective_prompts": [
-      "Consider the potential risks and consequences of using emotion recognition technology in classrooms",
-      "Inspect the emotion recognition system for potential biases and limitations, particularly with regards to diverse faces and protected characteristics",
-      "Consider providing compensation or incentives to students who participate in the project"
+      "How might the use of emotion recognition systems in classrooms impact students' emotional well-being and mental health?",
+      "What measures can be taken to prevent biases and discriminatory outcomes in the system's decision-making processes?",
+      "How can the project ensure transparency and accountability in its use of AI systems and handling of students' personal data?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
-        "data",
-        "consent",
+        "emotion",
         "student",
-        "school",
-        "monitor",
         "classif",
-        "scor",
-        "emotion"
+        "consent",
+        "monitor",
+        "school",
+        "scor"
       ],
-      "rights_matched": 8,
-      "requirements_retrieved": 196,
+      "rights_matched": 7,
+      "requirements_retrieved": 150,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM001",
         "ACM002",
@@ -316,79 +509,27 @@
         "R042",
         "R046",
         "R048",
-        "ACM016",
         "ACM017",
-        "ACM018",
         "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
+        "ACM035",
         "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI009",
-        "AI012",
         "AI015",
         "AI018",
+        "AI019",
         "AI020",
+        "AI022",
         "AI026",
-        "AI027",
         "AI028",
-        "AI029",
         "AI030",
-        "HE011",
-        "HE023",
         "HE024",
-        "HE025",
         "HE026",
         "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM035",
-        "AI019",
-        "AI022",
         "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
         "HE048",
+        "HE052",
         "R074",
         "ACM003",
         "ACM008",
@@ -415,9 +556,14 @@
         "R083",
         "R084",
         "ACM009",
+        "ACM016",
+        "AI012",
         "AI014",
         "HE010",
+        "HE011",
+        "HE034",
         "HE035",
+        "HE046",
         "R005",
         "R014",
         "R018",
@@ -425,6 +571,7 @@
         "R024",
         "R025",
         "R029",
+        "R030",
         "R031",
         "R033",
         "R063",
@@ -437,15 +584,14 @@
         "R073"
       ],
       "requirements_cited": [
-        "ACM006",
+        "ACM001",
+        "ACM002",
         "ACM003",
+        "ACM006",
         "ACM016",
-        "ACM021",
         "ACM024",
         "ACM027",
-        "ACM028",
-        "ACM014",
-        "ACM015"
+        "ACM031"
       ],
       "incidents_sample": [
         "AIAAIC-003",

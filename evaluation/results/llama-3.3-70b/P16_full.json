@@ -2,50 +2,212 @@
   "proposal_id": "P16",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-19T19:56:30.020159",
+  "timestamp": "2026-08-02T15:54:05.856525",
   "proposal_text": "This project proposes to apply statistical machine learning methods to publicly available climate datasets from Met Éireann and the European Centre for Medium-Range Weather Forecasts. The research will analyse temperature, precipitation, and wind patterns across Ireland over the past 50 years to identify statistically significant trends and regional variations. The methodology combines Gaussian process regression with ensemble methods to quantify prediction uncertainty. All datasets are publicly available under open government data licences. No personal data is involved. The computational resources required for model training will be documented including estimated carbon footprint using the ML CO2 Impact calculator. Results will be published as an open-access paper with all code and data made available in a public repository.",
   "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
-    "data",
-    "personal data",
     "carbon",
-    "prediction",
-    "predict"
+    "personal data",
+    "predict",
+    "prediction"
   ],
   "matched_rights": [
     "Art21_NonDiscrimination",
     "Art37_EnvironmentalProtection",
-    "Art41_GoodAdministration",
     "Art47_RightToEffectiveRemedy",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 170,
+  "retrieved_requirements_count": 120,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 51.0,
+      "tf": 51,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 35.0,
+      "tf": 35,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 17.0,
+      "tf": 17,
+      "df": 48
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 15.0,
+      "tf": 15,
+      "df": 26
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 15
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The research proposal involves the analysis of publicly available climate datasets to identify trends and regional variations, which poses minimal risks to individuals or groups. However, the use of machine learning methods and the potential environmental impact of the research require consideration. The primary ethical risks are related to the potential biases in the datasets and models, as well as the environmental impact of the research. The proposal's use of publicly available data and open-access publication mitigates some of these risks.",
+    "risk_summary": "The proposed research project involves the analysis of publicly available climate datasets using statistical machine learning methods, which poses low risks to individuals and society. However, potential risks include environmental harm due to computational resources, data governance issues, and transparency concerns. The project's use of publicly available data and lack of personal data involvement minimize the risk of privacy breaches and discrimination. The primary ethical risks are related to environmental harm, data governance, and transparency.",
     "overall_risk_level": "Low",
     "identified_risks": [
       {
-        "risk": "Bias in datasets and models",
+        "risk": "Environmental harm due to computational resources",
+        "risk_category": "EnvironmentalHarm",
         "severity": "Low",
-        "explanation": "The proposal uses publicly available datasets, which may contain biases that could affect the accuracy of the results."
+        "explanation": "The project's use of computational resources for model training may contribute to environmental harm, such as greenhouse gas emissions."
       },
       {
-        "risk": "Environmental impact of research",
+        "risk": "Data governance issues",
+        "risk_category": "DataGovernance",
         "severity": "Low",
-        "explanation": "The proposal's use of computational resources and potential carbon footprint may have a negative environmental impact."
+        "explanation": "The project's use of publicly available datasets may raise concerns about data stewardship, provenance, and quality controls."
       },
       {
-        "risk": "Lack of transparency in methodology",
+        "risk": "Transparency concerns",
+        "risk_category": "Transparency",
         "severity": "Low",
-        "explanation": "The proposal does not provide detailed information about the methodology used, which may make it difficult to replicate the results."
+        "explanation": "The project's lack of transparency about its methodology, data sources, and potential limitations may affect its credibility and trustworthiness."
       },
       {
-        "risk": "Insufficient consideration of potential applications",
+        "risk": "Accountability issues",
+        "risk_category": "Accountability",
         "severity": "Low",
-        "explanation": "The proposal does not discuss the potential applications of the research, which may lead to unintended consequences."
+        "explanation": "The project's use of automated decision-making processes may raise concerns about accountability and the ability to obtain explanations for the results."
       }
     ],
     "applicable_requirements": [
@@ -54,103 +216,129 @@
         "requirement_text": "Research must contribute to society and human well-being",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the research contributes to the betterment of society and human well-being"
-      },
-      {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Consider the potential harm that the research may cause and take steps to mitigate it"
+        "action_needed": "Ensure that the project's results are made available to the public and that they contribute to the betterment of society"
       },
       {
         "requirement_id": "ACM026",
-        "requirement_text": "Consider whether research negatively impacts environment",
+        "requirement_text": "Consider whether research negatively impacts the environment",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Assess the potential environmental impact of the research and take steps to minimize it"
+        "action_needed": "Assess the project's carbon footprint and implement measures to minimize its environmental impact"
       },
       {
-        "requirement_id": "ACM029",
-        "requirement_text": "Provide data and model documentation via structured templates",
+        "requirement_id": "ACM009",
+        "requirement_text": "Access computing and communication resources only when authorized or compelled by public good",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Use structured templates to document the data and models used in the research"
+        "action_needed": "Ensure that the project's use of computational resources is justified and aligned with the public good"
       },
       {
-        "requirement_id": "ACM033",
-        "requirement_text": "Make accessible all information required to understand research artefacts",
+        "requirement_id": "EUAIAct AI001",
+        "requirement_text": "Assess whether organization is obligated to conduct a FRIA",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Determine whether the project is subject to the EU AI Act and conduct a FRIA if necessary"
+      },
+      {
+        "requirement_id": "ACM015",
+        "requirement_text": "Research involving human participants must follow existing institutional protocols",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Make all information required to understand the research artefacts accessible to others"
+        "action_needed": "Ensure that the project does not involve human participants and that it complies with relevant regulations"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 37",
-        "right_name": "Environmental Protection",
-        "relevance": "The research may have an environmental impact, and the proposal should consider this risk"
+        "right_name": "Environmental protection",
+        "relevance": "The project's use of computational resources may contribute to environmental harm, which is protected by Article 37 of the EU Charter of Fundamental Rights"
       },
       {
-        "article": "Article 41",
-        "right_name": "Good Administration",
-        "relevance": "The proposal should ensure that the research is conducted in a transparent and accountable manner"
+        "article": "Article 47",
+        "right_name": "Right to effective remedy",
+        "relevance": "The project's lack of transparency and accountability may affect the right to effective remedy, which is protected by Article 47 of the EU Charter of Fundamental Rights"
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-036",
-        "incident_title": "Netherlands SyRI Welfare Surveillance System",
-        "lesson": "The use of machine learning models can have unintended consequences, such as perpetuating biases and discriminating against certain groups"
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The use of biased algorithms can lead to discriminatory outcomes, highlighting the need for transparency and accountability in AI decision-making processes"
       },
       {
-        "incident_id": "AIAAIC-022",
-        "incident_title": "Deliveroo Algorithmic Dismissal",
-        "lesson": "The use of algorithms can have significant consequences for individuals, and the proposal should consider the potential impact of the research on workers and communities"
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias",
+        "lesson": "The use of biased algorithms can lead to discriminatory outcomes, highlighting the need for transparency and accountability in AI decision-making processes"
       },
       {
-        "incident_id": "AIAAIC-008",
-        "incident_title": "PredPol Predictive Policing Algorithmic Bias",
-        "lesson": "The use of machine learning models can perpetuate biases and discriminate against certain groups, and the proposal should consider the potential risks of bias in the datasets and models"
+        "incident_id": "AIAAIC-016",
+        "incident_title": "Palantir ICE Surveillance System",
+        "lesson": "The use of AI systems for surveillance can raise concerns about privacy, accountability, and transparency"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct a thorough analysis of the potential biases in the datasets and models",
-        "priority": "Medium"
+        "mitigation": "EnvironmentalSafeguard",
+        "mitigation_id": "EnvironmentalSafeguard",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Assess the potential environmental impact of the research and take steps to minimize it",
-        "priority": "Medium"
+        "mitigation": "GovernanceProcedure",
+        "mitigation_id": "GovernanceProcedure",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Ensure that the research is conducted in a transparent and accountable manner",
-        "priority": "High"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "Low",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Transparency measures",
+        "mitigation_id": "Transparency measures",
+        "priority": "Low",
+        "from_taxonomy": false
       }
     ],
     "tier1_mandatory_actions": [
-      "Ensure that the research contributes to the betterment of society and human well-being",
-      "Consider the potential harm that the research may cause and take steps to mitigate it",
-      "Assess the potential environmental impact of the research and take steps to minimize it"
+      "Conduct an environmental impact assessment",
+      "Develop a governance procedure for the project",
+      "Ensure transparency about the project's methodology and results"
     ],
     "tier2_reflective_prompts": [
-      "What are the potential consequences of the research, and how can they be mitigated?",
-      "How can the research be conducted in a transparent and accountable manner?",
-      "What are the potential risks of bias in the datasets and models, and how can they be addressed?"
+      "How can the project's results be made more accessible to the public?",
+      "What measures can be taken to minimize the project's environmental impact?",
+      "How can the project's accountability and transparency be improved?"
     ],
     "reams_clearance_likely": true,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
-        "data",
-        "personal data",
         "carbon",
-        "prediction",
-        "predict"
+        "personal data",
+        "predict",
+        "prediction"
       ],
-      "rights_matched": 6,
-      "requirements_retrieved": 170,
+      "rights_matched": 5,
+      "requirements_retrieved": 120,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM002",
         "ACM012",
@@ -191,89 +379,33 @@
         "HE051",
         "R052",
         "R087",
-        "ACM016",
+        "ACM001",
         "ACM017",
-        "ACM018",
         "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
+        "ACM035",
         "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI008",
-        "AI009",
-        "AI010",
-        "AI012",
         "AI015",
+        "AI017",
         "AI018",
+        "AI019",
         "AI020",
+        "AI022",
         "AI026",
-        "AI027",
         "AI028",
-        "AI029",
         "AI030",
         "HE002",
-        "HE006",
-        "HE011",
-        "HE022",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE041",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM001",
-        "ACM035",
-        "AI017",
-        "AI019",
-        "AI022",
         "HE005",
+        "HE006",
+        "HE024",
+        "HE026",
         "HE027",
+        "HE028",
         "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
         "HE048",
+        "HE052",
         "R010",
         "R054",
         "R055",
@@ -313,9 +445,14 @@
         "R084",
         "ACM006",
         "ACM009",
+        "ACM016",
+        "AI012",
         "AI014",
         "HE010",
+        "HE011",
+        "HE034",
         "HE035",
+        "HE046",
         "R005",
         "R014",
         "R018",
@@ -324,6 +461,7 @@
         "R024",
         "R025",
         "R029",
+        "R030",
         "R031",
         "R033",
         "R063",
@@ -337,17 +475,17 @@
       ],
       "requirements_cited": [
         "ACM001",
-        "ACM002",
         "ACM026",
-        "ACM029",
-        "ACM033"
+        "ACM009",
+        "EUAIAct AI001",
+        "ACM015"
       ],
       "incidents_sample": [
         "AIAAIC-001",
         "AIAAIC-002",
         "AIAAIC-003",
-        "AIAAIC-022",
-        "AIAAIC-034"
+        "AIAAIC-004",
+        "AIAAIC-008"
       ]
     }
   }

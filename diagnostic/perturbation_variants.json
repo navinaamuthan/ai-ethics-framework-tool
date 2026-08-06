@@ -311,7 +311,7 @@
     "assessor_outputs": {
       "keyword-baseline": "High",
       "SHACL": "Low",
-      "LLM-8B": "High",
+      "LLM-8B": "Medium",
       "LLM-70B": "High"
     },
     "assessor_baselines": {
@@ -730,7 +730,7 @@
     "assessor_baselines": {
       "keyword-baseline": "Medium",
       "SHACL": "High",
-      "LLM-8B": "MEDIUM",
+      "LLM-8B": "Medium",
       "LLM-70B": "Medium"
     }
   },
@@ -775,7 +775,7 @@
     "assessor_baselines": {
       "keyword-baseline": "Medium",
       "SHACL": "High",
-      "LLM-8B": "MEDIUM",
+      "LLM-8B": "Medium",
       "LLM-70B": "Medium"
     }
   },
@@ -820,7 +820,7 @@
     "assessor_baselines": {
       "keyword-baseline": "Medium",
       "SHACL": "High",
-      "LLM-8B": "MEDIUM",
+      "LLM-8B": "Medium",
       "LLM-70B": "Medium"
     }
   },
@@ -859,13 +859,13 @@
     "assessor_outputs": {
       "keyword-baseline": "High",
       "SHACL": "Low",
-      "LLM-8B": "High",
+      "LLM-8B": "Medium",
       "LLM-70B": "Medium"
     },
     "assessor_baselines": {
       "keyword-baseline": "Medium",
       "SHACL": "Low",
-      "LLM-8B": "Medium",
+      "LLM-8B": "High",
       "LLM-70B": "Medium"
     }
   },
@@ -910,7 +910,7 @@
     "assessor_baselines": {
       "keyword-baseline": "Medium",
       "SHACL": "Low",
-      "LLM-8B": "Medium",
+      "LLM-8B": "High",
       "LLM-70B": "Medium"
     }
   },
@@ -955,7 +955,7 @@
     "assessor_baselines": {
       "keyword-baseline": "Medium",
       "SHACL": "Low",
-      "LLM-8B": "Medium",
+      "LLM-8B": "High",
       "LLM-70B": "Medium"
     }
   },
@@ -1087,7 +1087,7 @@
     "assessor_outputs": {
       "keyword-baseline": "Medium",
       "SHACL": "Low",
-      "LLM-8B": "High",
+      "LLM-8B": "Medium",
       "LLM-70B": "Medium"
     },
     "assessor_baselines": {
@@ -1179,7 +1179,7 @@
     "assessor_outputs": {
       "keyword-baseline": "Low",
       "SHACL": "High",
-      "LLM-8B": "High",
+      "LLM-8B": "Medium",
       "LLM-70B": "High"
     },
     "assessor_baselines": {
@@ -1271,7 +1271,7 @@
     "assessor_outputs": {
       "keyword-baseline": "Low",
       "SHACL": "Medium",
-      "LLM-8B": "High",
+      "LLM-8B": "Medium",
       "LLM-70B": "Low"
     },
     "assessor_baselines": {
@@ -1412,7 +1412,7 @@
     "assessor_baselines": {
       "keyword-baseline": "Medium",
       "SHACL": "Low",
-      "LLM-8B": "LOW",
+      "LLM-8B": "Medium",
       "LLM-70B": "Low"
     }
   },
@@ -1455,7 +1455,7 @@
     "assessor_baselines": {
       "keyword-baseline": "Medium",
       "SHACL": "Low",
-      "LLM-8B": "LOW",
+      "LLM-8B": "Medium",
       "LLM-70B": "Low"
     }
   },
@@ -1498,7 +1498,7 @@
     "assessor_baselines": {
       "keyword-baseline": "Medium",
       "SHACL": "Low",
-      "LLM-8B": "LOW",
+      "LLM-8B": "Medium",
       "LLM-70B": "Low"
     }
   },
@@ -1670,7 +1670,7 @@
     "assessor_baselines": {
       "keyword-baseline": "Medium",
       "SHACL": "Low",
-      "LLM-8B": "MEDIUM",
+      "LLM-8B": "Medium",
       "LLM-70B": "Low"
     }
   },
@@ -1713,7 +1713,7 @@
     "assessor_baselines": {
       "keyword-baseline": "Medium",
       "SHACL": "Low",
-      "LLM-8B": "MEDIUM",
+      "LLM-8B": "Medium",
       "LLM-70B": "Low"
     }
   },
@@ -1756,7 +1756,7 @@
     "assessor_baselines": {
       "keyword-baseline": "Medium",
       "SHACL": "Low",
-      "LLM-8B": "MEDIUM",
+      "LLM-8B": "Medium",
       "LLM-70B": "Low"
     }
   },
@@ -2014,7 +2014,7 @@
     "assessor_outputs": {
       "keyword-baseline": "High",
       "SHACL": "High",
-      "LLM-8B": "High",
+      "LLM-8B": "Medium",
       "LLM-70B": "Medium"
     },
     "assessor_baselines": {

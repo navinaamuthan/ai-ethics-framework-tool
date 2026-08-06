@@ -1,0 +1,29 @@
+{
+  "proposal_id": "P39",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This project scores neighbourhoods in a coastal EU city for 'climate-migration pressure' using flood models, housing tenure, and demographic composition, to prioritise adaptation spending. Scores are public. Housing advocates warn publication will accelerate insurance retreat and stigmatise migrant-heavy districts; planners argue transparency is required for democratic budgeting. Whether Art.21 non-discrimination, Art.37 environment, Art.1 dignity, or primarily environmental policy applies is contested. No individual decisions are automated. The demographic features make disparate neighbourhood effects likely.",
+  "assessment": {
+    "overall_risk_level": "High",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art21_NonDiscrimination",
+        "right_name": "Non-Discrimination",
+        "relevance": "The project's use of demographic composition in scoring may lead to disparate neighbourhood effects, potentially discriminating against certain groups."
+      },
+      {
+        "article": "Art1_HumanDignity",
+        "right_name": "Human Dignity",
+        "relevance": "The stigmatisation of migrant-heavy districts due to public scoring may affect the dignity of individuals living in those areas."
+      },
+      {
+        "article": "Art37_EnvironmentalProtection",
+        "right_name": "Environmental Protection",
+        "relevance": "The project's focus on climate-migration pressure and adaptation spending may impact the environmental protection of the affected neighbourhoods."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

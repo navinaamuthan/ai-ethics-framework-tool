@@ -88,6 +88,27 @@ def call_ollama(
     return ""
 
 
+def _groq_retry_wait_seconds(error: Exception) -> int | None:
+    """Parse Groq 429 retry hint. Returns seconds to sleep, or None if not a rate limit."""
+    import re
+
+    msg = str(error)
+    if "rate_limit" not in msg.lower() and "429" not in msg:
+        return None
+    # Formats seen: "1h12m5.184s", "39m35.136s", "22.5s"
+    m = re.search(
+        r"try again in (?:(\d+)h)?(?:(\d+)m)?([\d.]+)s",
+        msg,
+        re.I,
+    )
+    if m:
+        hours = int(m.group(1) or 0)
+        mins = int(m.group(2) or 0)
+        secs = float(m.group(3) or 0)
+        return hours * 3600 + mins * 60 + int(secs) + 30
+    return 60
+
+
 def call_groq(
     prompt: str,
     model: str = None,
@@ -96,6 +117,7 @@ def call_groq(
     max_retries: int = 2,
 ) -> str:
     """Send a prompt to Groq via the OpenAI-compatible client."""
+    import time
     from openai import OpenAI
 
     api_key = os.environ.get("GROQ_API_KEY", "")
@@ -107,9 +129,13 @@ def call_groq(
     client = OpenAI(
         api_key=api_key,
         base_url="https://api.groq.com/openai/v1",
+        timeout=180.0,
     )
 
-    for attempt in range(max_retries + 1):
+    # Allow several TPD waits without abandoning the full-RAG path.
+    tpd_waits = 0
+    attempt = 0
+    while attempt <= max_retries:
         try:
             response = client.chat.completions.create(
                 model=model,
@@ -120,10 +146,22 @@ def call_groq(
             content = response.choices[0].message.content
             return content or ""
         except Exception as e:
-            print(f"  [GROQ ERROR] {e}")
-
-        if attempt < max_retries:
-            print(f"  Retrying... ({attempt + 2}/{max_retries + 1})")
+            print(f"  [GROQ ERROR] {e}", flush=True)
+            wait = _groq_retry_wait_seconds(e)
+            if wait is not None and tpd_waits < 40:
+                tpd_waits += 1
+                print(
+                    f"  [GROQ] TPD/rate-limit — sleeping {wait}s then retrying "
+                    f"(wait {tpd_waits}/40)",
+                    flush=True,
+                )
+                time.sleep(wait)
+                continue
+            if attempt < max_retries:
+                print(f"  Retrying... ({attempt + 2}/{max_retries + 1})", flush=True)
+                attempt += 1
+                continue
+            break
 
     return ""
 

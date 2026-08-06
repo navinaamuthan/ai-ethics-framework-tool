@@ -1,0 +1,121 @@
+[1/45] P01_positive skip (LLM-8B=High)
+[2/45] P01_negative skip (LLM-8B=High)
+[3/45] P01_neutral skip (LLM-8B=High)
+[4/45] P02_positive skip (LLM-8B=High)
+[5/45] P02_negative skip (LLM-8B=High)
+[6/45] P02_neutral skip (LLM-8B=High)
+[7/45] P05_positive skip (LLM-8B=Medium)
+[8/45] P05_negative skip (LLM-8B=High)
+[9/45] P05_neutral skip (LLM-8B=High)
+[10/45] P21_positive skip (LLM-8B=High)
+[11/45] P21_negative skip (LLM-8B=High)
+[12/45] P21_neutral skip (LLM-8B=High)
+[13/45] P25_positive skip (LLM-8B=High)
+[14/45] P25_negative skip (LLM-8B=High)
+[15/45] P25_neutral skip (LLM-8B=High)
+[16/45] P07_positive skip (LLM-8B=Medium)
+[17/45] P07_negative skip (LLM-8B=High)
+[18/45] P07_neutral skip (LLM-8B=Medium)
+[19/45] P11_positive skip (LLM-8B=Medium)
+[20/45] P11_negative skip (LLM-8B=High)
+[21/45] P11_neutral skip (LLM-8B=High)
+[22/45] P20_positive skip (LLM-8B=High)
+[23/45] P20_negative skip (LLM-8B=Medium)
+[24/45] P20_neutral skip (LLM-8B=Medium)
+[25/45] P23_positive ...
+  → {'keyword-baseline': 'High', 'SHACL': 'Medium', 'LLM-8B': 'Medium', 'LLM-70B': 'Medium'}
+[26/45] P23_negative ...
+  → {'keyword-baseline': 'Low', 'SHACL': 'High', 'LLM-8B': 'Medium', 'LLM-70B': 'High'}
+[27/45] P23_neutral skip (LLM-8B=High)
+[28/45] P28_positive skip (LLM-8B=Medium)
+[29/45] P28_negative skip (LLM-8B=High)
+[30/45] P28_neutral skip (LLM-8B=High)
+[31/45] P13_positive ...
+  → {'keyword-baseline': 'Low', 'SHACL': 'Low', 'LLM-8B': 'Medium', 'LLM-70B': 'Low'}
+[32/45] P13_negative ...
+  → {'keyword-baseline': 'Low', 'SHACL': 'Low', 'LLM-8B': 'Medium', 'LLM-70B': 'Medium'}
+[33/45] P13_neutral skip (LLM-8B=Medium)
+[34/45] P15_positive skip (LLM-8B=Medium)
+[35/45] P15_negative skip (LLM-8B=Medium)
+[36/45] P15_neutral ...
+  → {'keyword-baseline': 'Medium', 'SHACL': 'Low', 'LLM-8B': 'Medium', 'LLM-70B': 'Low'}
+[37/45] P16_positive skip (LLM-8B=Medium)
+[38/45] P16_negative skip (LLM-8B=High)
+[39/45] P16_neutral skip (LLM-8B=Medium)
+[40/45] P26_positive skip (LLM-8B=Medium)
+[41/45] P26_negative skip (LLM-8B=High)
+[42/45] P26_neutral skip (LLM-8B=Medium)
+[43/45] P31_positive skip (LLM-8B=Medium)
+[44/45] P31_negative skip (LLM-8B=High)
+[45/45] P31_neutral skip (LLM-8B=Medium)
+{
+  "SHACL": {
+    "positive": {
+      "n": 15,
+      "hits": 15,
+      "rate": 1.0
+    },
+    "negative": {
+      "n": 15,
+      "hits": 11,
+      "rate": 0.7333333333333333
+    },
+    "neutral": {
+      "n": 15,
+      "hits": 15,
+      "rate": 1.0
+    }
+  },
+  "LLM-8B": {
+    "positive": {
+      "n": 15,
+      "hits": 14,
+      "rate": 0.9333333333333333
+    },
+    "negative": {
+      "n": 15,
+      "hits": 14,
+      "rate": 0.9333333333333333
+    },
+    "neutral": {
+      "n": 15,
+      "hits": 14,
+      "rate": 0.9333333333333333
+    }
+  },
+  "LLM-70B": {
+    "positive": {
+      "n": 15,
+      "hits": 14,
+      "rate": 0.9333333333333333
+    },
+    "negative": {
+      "n": 15,
+      "hits": 15,
+      "rate": 1.0
+    },
+    "neutral": {
+      "n": 15,
+      "hits": 14,
+      "rate": 0.9333333333333333
+    }
+  },
+  "keyword-baseline": {
+    "positive": {
+      "n": 15,
+      "hits": 7,
+      "rate": 0.4666666666666667
+    },
+    "negative": {
+      "n": 15,
+      "hits": 12,
+      "rate": 0.8
+    },
+    "neutral": {
+      "n": 15,
+      "hits": 15,
+      "rate": 1.0
+    }
+  }
+}
+DONE /Users/navinaamuthan/Dissertation/main/ai-ethics-framework-tool/diagnostic/results/perturbation_report.json

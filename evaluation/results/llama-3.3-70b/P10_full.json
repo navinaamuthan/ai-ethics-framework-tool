@@ -2,15 +2,14 @@
   "proposal_id": "P10",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-19T19:54:36.422442",
+  "timestamp": "2026-08-02T14:53:02.824576",
   "proposal_text": "This project aims to develop an NLP-based tool for detecting health-related misinformation on Irish social media platforms. The system will collect public posts from Twitter/X, Reddit, and Facebook groups discussing topics including vaccination, cancer treatments, and mental health remedies. The tool will classify posts as verified, unverified, or misleading using a combination of source credibility scoring and claim verification against WHO and HSE published guidelines. The dataset will include approximately 500,000 public posts collected via platform APIs. While posts are publicly available, the tool will process usernames and account metadata to assess source credibility patterns. The researchers plan to publish a list of accounts identified as frequent misinformation sources. The tool does not account for satire, cultural context, or legitimate medical debate where scientific consensus has not been established.",
   "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
-    "data",
     "health",
-    "medical",
     "classif",
+    "medical",
     "scor",
     "social media"
   ],
@@ -19,41 +18,205 @@
     "Art21_NonDiscrimination",
     "Art2_RightToLife",
     "Art35_HealthCare",
-    "Art41_GoodAdministration",
     "Art47_RightToEffectiveRemedy",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 174,
+  "retrieved_requirements_count": 124,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 52.0,
+      "tf": 52,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 40.0,
+      "tf": 40,
+      "df": 101
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 18.0,
+      "tf": 18,
+      "df": 48
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 18.0,
+      "tf": 18,
+      "df": 26
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 12.0,
+      "tf": 12,
+      "df": 15
+    },
+    {
+      "id": "Surveillance",
+      "label": "Surveillance",
+      "definition": "Risk of pervasive or disproportionate observation, tracking, or monitoring of individuals by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 10.0,
+      "tf": 10,
+      "df": 19
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed NLP-based tool for detecting health-related misinformation on Irish social media platforms poses several ethical risks, including potential biases in source credibility scoring, claim verification, and account metadata processing. The tool's inability to account for satire, cultural context, or legitimate medical debate may lead to misclassification of posts, potentially harming individuals or groups. Additionally, the publication of a list of accounts identified as frequent misinformation sources may raise concerns about privacy, reputation, and potential discrimination. The processing of usernames and account metadata also raises concerns about data protection and privacy.",
+    "risk_summary": "The proposed NLP-based tool for detecting health-related misinformation on Irish social media platforms poses several ethical risks, including potential breaches of privacy, discrimination, and psychological harm. The tool's collection and processing of usernames and account metadata may compromise users' anonymity, and its classification of posts as verified, unverified, or misleading may be biased or inaccurate. Furthermore, the publication of a list of accounts identified as frequent misinformation sources may lead to reputational harm or even physical harm. The tool's inability to account for satire, cultural context, or legitimate medical debate may also result in false identifications or misclassifications.",
     "overall_risk_level": "Medium",
     "identified_risks": [
       {
-        "risk": "Bias in source credibility scoring",
+        "risk": "Privacy Breach",
+        "risk_category": "PrivacyBreach",
         "severity": "Medium",
-        "explanation": "The tool's source credibility scoring may perpetuate existing biases, leading to unfair treatment of certain individuals or groups."
-      },
-      {
-        "risk": "Misclassification of posts",
-        "severity": "Medium",
-        "explanation": "The tool's inability to account for satire, cultural context, or legitimate medical debate may lead to misclassification of posts, potentially harming individuals or groups."
-      },
-      {
-        "risk": "Privacy concerns",
-        "severity": "Medium",
-        "explanation": "The processing of usernames and account metadata raises concerns about data protection and privacy, particularly if the tool is not transparent about its data collection and use practices."
+        "explanation": "The tool collects and processes usernames and account metadata, which may compromise users' anonymity."
       },
       {
         "risk": "Discrimination",
+        "risk_category": "Discrimination",
         "severity": "Medium",
-        "explanation": "The publication of a list of accounts identified as frequent misinformation sources may raise concerns about discrimination, particularly if the list is not carefully curated and validated."
+        "explanation": "The tool's classification of posts may be biased or inaccurate, potentially leading to unfair differential treatment of individuals or groups."
       },
       {
-        "risk": "Reputation harm",
+        "risk": "Psychological Harm",
+        "risk_category": "PsychologicalHarm",
         "severity": "Medium",
-        "explanation": "The publication of a list of accounts identified as frequent misinformation sources may also raise concerns about reputation harm, particularly if the list is not accurate or up-to-date."
+        "explanation": "The tool's publication of a list of accounts identified as frequent misinformation sources may lead to mental distress, manipulation, or emotional damage."
+      },
+      {
+        "risk": "Data Governance",
+        "risk_category": "DataGovernance",
+        "severity": "Medium",
+        "explanation": "The tool's collection and processing of data may be inadequate, potentially leading to data breaches or other governance issues."
+      },
+      {
+        "risk": "Transparency",
+        "risk_category": "Transparency",
+        "severity": "Low",
+        "explanation": "The tool's operation, capabilities, and limitations may not be adequately disclosed to end-users and stakeholders."
       }
     ],
     "applicable_requirements": [
@@ -62,155 +225,232 @@
         "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the tool's potential impacts on individuals and groups, and develop strategies to mitigate any negative effects."
+        "action_needed": "Conduct a thorough risk assessment and develop strategies to mitigate potential harms."
       },
       {
         "requirement_id": "ACM002",
         "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop a plan to minimize the risk of harm to individuals or groups, particularly in relation to the processing of usernames and account metadata."
+        "action_needed": "Implement measures to prevent data breaches and ensure the secure processing of data."
       },
       {
         "requirement_id": "ACM003",
         "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct regular audits to ensure that the tool is not perpetuating biases or discriminating against certain individuals or groups."
+        "action_needed": "Develop and implement strategies to detect and mitigate biases in the tool's classification of posts."
       },
       {
         "requirement_id": "ACM006",
         "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop a plan to protect personally identifiable information and obtain informed consent where required, particularly in relation to the processing of usernames and account metadata."
+        "action_needed": "Obtain informed consent from users and protect their personally identifiable information."
       },
       {
         "requirement_id": "ACM016",
         "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop a plan to minimize the exposure of personally identifiable information in the dataset, particularly in relation to the processing of usernames and account metadata."
-      },
-      {
-        "requirement_id": "ACM021",
-        "requirement_text": "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough analysis of the tool's potential risks and develop strategies to mitigate any negative effects."
+        "action_needed": "Minimise the exposure of personally identifiable information in the dataset and obtain informed consent where necessary."
       },
       {
         "requirement_id": "ACM023",
         "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct regular audits to ensure that the tool is not perpetuating biases or discriminating against certain individuals or groups."
+        "action_needed": "Assess the potential impact of the tool on vulnerable groups and develop strategies to mitigate any negative effects."
       },
       {
-        "requirement_id": "ACM025",
-        "requirement_text": "Communicate whether approach could facilitate deceptive interactions causing harm (theft, fraud, harassment), impersonate public figures, influence political processes, or promote hate speech",
+        "requirement_id": "ACM027",
+        "requirement_text": "Research must not build upon or facilitate illegal activity — strongly discourage work that denies rights to privacy, speech, health, liberty, security, legal personhood, freedom of conscience/religion",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Develop a plan to prevent the tool from being used for deceptive interactions or other harmful purposes."
+        "action_needed": "Ensure that the tool does not facilitate or promote illegal activities and respects users' rights to privacy, speech, and other fundamental freedoms."
+      },
+      {
+        "requirement_id": "ACM031",
+        "requirement_text": "Use privacy protocols, encryption and anonymisation to reduce risk of data leakage — stronger measures for sensitive data",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Implement robust privacy protocols, encryption, and anonymisation measures to protect sensitive data."
+      },
+      {
+        "requirement_id": "ACM035",
+        "requirement_text": "Ensure adequate awareness of regional legal requirements — additional justification required where compliance could not be met due to human rights issues",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure compliance with relevant regional legal requirements and develop strategies to address any potential human rights issues."
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 11",
-        "right_name": "Freedom of Expression",
-        "relevance": "The tool's potential to misclassify posts or identify accounts as frequent misinformation sources may raise concerns about freedom of expression, particularly if the tool is not transparent about its decision-making processes."
-      },
-      {
-        "article": "Article 21",
-        "right_name": "Non-Discrimination",
-        "relevance": "The tool's potential to perpetuate biases or discriminate against certain individuals or groups may raise concerns about non-discrimination, particularly if the tool is not regularly audited and validated."
-      },
-      {
         "article": "Article 7",
         "right_name": "Private Life",
-        "relevance": "The processing of usernames and account metadata raises concerns about private life, particularly if the tool is not transparent about its data collection and use practices."
+        "relevance": "The tool's collection and processing of usernames and account metadata may compromise users' right to private life."
       },
       {
         "article": "Article 8",
         "right_name": "Data Protection",
-        "relevance": "The processing of usernames and account metadata raises concerns about data protection, particularly if the tool is not transparent about its data collection and use practices."
+        "relevance": "The tool's processing of personal data may infringe on users' right to data protection."
+      },
+      {
+        "article": "Article 11",
+        "right_name": "Freedom of Expression",
+        "relevance": "The tool's classification of posts as verified, unverified, or misleading may impact users' freedom of expression."
+      },
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The tool's potential biases in classification may lead to discriminatory treatment of individuals or groups."
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of auditing and validating AI systems to prevent biases and discrimination."
+        "lesson": "The importance of detecting and mitigating biases in AI systems to prevent discriminatory outcomes."
       },
       {
         "incident_id": "AIAAIC-002",
         "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The potential risks and consequences of using AI systems in high-stakes decision-making contexts, particularly in relation to law enforcement and public safety."
+        "lesson": "The potential for AI systems to perpetuate existing biases and lead to false identifications or misclassifications."
       },
       {
         "incident_id": "AIAAIC-003",
         "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The importance of designing and testing AI systems to prevent harmful or offensive outputs, particularly in relation to chatbots and other interactive systems."
+        "lesson": "The need for AI systems to be designed and developed with safety and responsibility in mind to prevent harm to users."
       },
       {
         "incident_id": "AIAAIC-009",
         "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The potential risks and consequences of using AI systems in high-stakes decision-making contexts, particularly in relation to autonomous vehicles and public safety."
+        "lesson": "The importance of ensuring that AI systems are thoroughly tested and validated before deployment to prevent accidents or harm."
       },
       {
         "incident_id": "AIAAIC-017",
         "incident_title": "IBM Watson Oncology Unsafe Recommendations",
-        "lesson": "The importance of auditing and validating AI systems to prevent biases and ensure safety, particularly in relation to healthcare and medical decision-making."
+        "lesson": "The potential for AI systems to provide inaccurate or unsafe recommendations, highlighting the need for rigorous testing and validation."
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct regular audits to ensure that the tool is not perpetuating biases or discriminating against certain individuals or groups",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Develop a plan to minimize the exposure of personally identifiable information in the dataset",
-        "priority": "High"
+        "mitigation": "Access Control",
+        "mitigation_id": "AccessControl",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Develop a plan to prevent the tool from being used for deceptive interactions or other harmful purposes",
-        "priority": "Medium"
+        "mitigation": "Anonymisation",
+        "mitigation_id": "Anonymisation",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct a thorough analysis of the tool's potential risks and develop strategies to mitigate any negative effects",
-        "priority": "Medium"
+        "mitigation": "Audit Log",
+        "mitigation_id": "AuditLog",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Develop a plan to protect personally identifiable information and obtain informed consent where required",
-        "priority": "Medium"
+        "mitigation": "Complaint Mechanism",
+        "mitigation_id": "ComplaintMechanism",
+        "priority": "Low",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Ethics Review Board",
+        "mitigation_id": "EthicsReviewBoard",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Governance Procedure",
+        "mitigation_id": "GovernanceProcedure",
+        "priority": "Medium",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Human Oversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Incident Response Plan",
+        "mitigation_id": "IncidentResponsePlan",
+        "priority": "Medium",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Pseudonymisation",
+        "mitigation_id": "Pseudonymisation",
+        "priority": "Medium",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Responsible Release Policy",
+        "mitigation_id": "ResponsibleReleasePolicy",
+        "priority": "Low",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Staff Training",
+        "mitigation_id": "StaffTraining",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct regular audits to ensure that the tool is not perpetuating biases or discriminating against certain individuals or groups",
-      "Develop a plan to minimize the exposure of personally identifiable information in the dataset",
-      "Develop a plan to prevent the tool from being used for deceptive interactions or other harmful purposes",
-      "Conduct a thorough analysis of the tool's potential risks and develop strategies to mitigate any negative effects",
-      "Develop a plan to protect personally identifiable information and obtain informed consent where required"
+      "Conduct a thorough risk assessment and develop strategies to mitigate potential harms.",
+      "Implement measures to prevent data breaches and ensure the secure processing of data.",
+      "Develop and implement strategies to detect and mitigate biases in the tool's classification of posts.",
+      "Obtain informed consent from users and protect their personally identifiable information.",
+      "Minimise the exposure of personally identifiable information in the dataset and obtain informed consent where necessary.",
+      "Assess the potential impact of the tool on vulnerable groups and develop strategies to mitigate any negative effects.",
+      "Ensure that the tool does not facilitate or promote illegal activities and respects users' rights to privacy, speech, and other fundamental freedoms.",
+      "Implement robust privacy protocols, encryption, and anonymisation measures to protect sensitive data."
     ],
     "tier2_reflective_prompts": [
-      "What are the potential risks and consequences of using the tool in different contexts, particularly in relation to public health and safety?",
-      "How can the tool be designed and tested to prevent biases and ensure safety, particularly in relation to healthcare and medical decision-making?",
-      "What are the potential implications of the tool for freedom of expression, non-discrimination, and private life, particularly in relation to the processing of usernames and account metadata?"
+      "What are the potential consequences of the tool's classification of posts as verified, unverified, or misleading?",
+      "How might the tool's potential biases impact vulnerable groups or individuals?",
+      "What measures can be taken to ensure that the tool is transparent and explainable in its decision-making processes?",
+      "How can the tool be designed and developed to respect users' rights to privacy, speech, and other fundamental freedoms?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
-        "data",
         "health",
-        "medical",
         "classif",
+        "medical",
         "scor",
         "social media"
       ],
-      "rights_matched": 8,
-      "requirements_retrieved": 174,
+      "rights_matched": 7,
+      "requirements_retrieved": 124,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM020",
         "ACM025",
@@ -258,88 +498,32 @@
         "HE049",
         "R080",
         "R021",
-        "ACM016",
         "ACM017",
-        "ACM018",
         "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
+        "ACM035",
         "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI008",
-        "AI009",
-        "AI010",
-        "AI012",
         "AI015",
+        "AI017",
         "AI018",
+        "AI019",
         "AI020",
+        "AI022",
         "AI026",
-        "AI027",
         "AI028",
-        "AI029",
         "AI030",
         "HE002",
-        "HE006",
-        "HE011",
-        "HE022",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE041",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM035",
-        "AI017",
-        "AI019",
-        "AI022",
         "HE005",
+        "HE006",
+        "HE024",
+        "HE026",
         "HE027",
+        "HE028",
         "HE029",
+        "HE039",
+        "HE044",
+        "HE047",
         "HE048",
+        "HE052",
         "R010",
         "R054",
         "R055",
@@ -378,9 +562,14 @@
         "R084",
         "ACM006",
         "ACM009",
+        "ACM016",
+        "AI012",
         "AI014",
         "HE010",
+        "HE011",
+        "HE034",
         "HE035",
+        "HE046",
         "R005",
         "R014",
         "R018",
@@ -388,6 +577,7 @@
         "R024",
         "R025",
         "R029",
+        "R030",
         "R031",
         "R033",
         "R063",
@@ -405,9 +595,10 @@
         "ACM003",
         "ACM006",
         "ACM016",
-        "ACM021",
         "ACM023",
-        "ACM025"
+        "ACM027",
+        "ACM031",
+        "ACM035"
       ],
       "incidents_sample": [
         "AIAAIC-014",

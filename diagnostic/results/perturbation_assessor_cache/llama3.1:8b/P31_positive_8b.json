@@ -1,0 +1,316 @@
+{
+  "proposal_id": "P31_positive_8b",
+  "mode": "full",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-26T23:43:34.645227",
+  "proposal_text": "This project will release an open speech corpus of 400 hours across Yoruba, Igbo, and Swahili for ASR research, with a bias audit to ensure the corpus is representative of diverse perspectives and experiences.",
+  "context_max_requirements": 5,
+  "llm_model": "llama3.1:8b",
+  "keywords": [
+    "bias"
+  ],
+  "matched_rights": [
+    "Art11_FreedomOfExpression",
+    "Art22_CulturalDiversity"
+  ],
+  "retrieved_requirements_count": 10,
+  "retrieved_incidents_count": 3,
+  "retrieved_risk_categories": [
+    {
+      "id": "ExpressionHarm",
+      "label": "Expression Harm",
+      "definition": "Risk of chilling, suppressing, or misrepresenting legitimate expression through AI content systems.",
+      "idf_score": 5.0174,
+      "rank_score": 5.0,
+      "tf": 5,
+      "df": 8
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 4.0,
+      "tf": 4,
+      "df": 48
+    },
+    {
+      "id": "DualUseMisuse",
+      "label": "Dual-Use Misuse",
+      "definition": "Risk that research or AI outputs intended for beneficial purposes are repurposed for harmful applications.",
+      "idf_score": 4.912,
+      "rank_score": 4.0,
+      "tf": 4,
+      "df": 9
+    },
+    {
+      "id": "PhysicalHarm",
+      "label": "Physical Harm",
+      "definition": "Risk of bodily injury, death, or physical safety compromise caused by an AI system.",
+      "idf_score": 4.2189,
+      "rank_score": 4.0,
+      "tf": 4,
+      "df": 19
+    },
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 4.0,
+      "tf": 4,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 3.0,
+      "tf": 3,
+      "df": 101
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 1,
+      "df": 3
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    },
+    {
+      "id": "DemocraticProcessHarm",
+      "label": "Democratic Process Harm",
+      "definition": "Risk of undermining democratic institutions, electoral processes, or civic participation through AI systems.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 3,
+      "df": 6
+    },
+    {
+      "id": "FunctionCreep",
+      "label": "Function Creep",
+      "definition": "Risk that an AI system is used beyond its originally defined and ethically approved purpose.",
+      "idf_score": 5.2687,
+      "rank_score": 5.2687,
+      "tf": 1,
+      "df": 6
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "systemic_info\u2192Art11/Art22",
+  "assessment": {
+    "risk_summary": "The proposed research project involves releasing an open speech corpus for ASR research, which raises concerns about data governance, representation, and potential biases. The project also aims to ensure the corpus is representative of diverse perspectives and experiences through a bias audit.",
+    "overall_risk_level": "Medium",
+    "identified_risks": [
+      {
+        "risk": "DataGovernance",
+        "risk_category": "DataGovernance",
+        "severity": "Medium",
+        "explanation": "The project involves processing large amounts of speech data, which requires careful consideration of data governance and representation."
+      },
+      {
+        "risk": "ExpressionHarm",
+        "risk_category": "Expression Harm",
+        "severity": "Low",
+        "explanation": "The project may inadvertently misrepresent or suppress legitimate expression through AI content systems."
+      },
+      {
+        "risk": "Discrimination",
+        "risk_category": "Discrimination",
+        "severity": "Medium",
+        "explanation": "The project's bias audit aims to ensure the corpus is representative of diverse perspectives and experiences, but there is still a risk of unfair differential treatment."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM020",
+        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population \u2014 claims of diverse representation must be substantiated (Mandatory)",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough bias audit to ensure the corpus is representative of diverse perspectives and experiences."
+      },
+      {
+        "requirement_id": "HE012",
+        "requirement_text": "Research proposal must specify steps to ensure data about people is representative of target population and reflects diversity or is sufficiently neutral (Mandatory)",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Specify steps to ensure the corpus is representative of diverse perspectives and experiences."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 11",
+        "right_name": "FreedomOfExpression",
+        "relevance": "The project may inadvertently misrepresent or suppress legitimate expression through AI content systems."
+      },
+      {
+        "article": "Article 22",
+        "right_name": "CulturalDiversity",
+        "relevance": "The project's bias audit aims to ensure the corpus is representative of diverse perspectives and experiences, which aligns with the right to cultural diversity."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-014",
+        "incident_title": "YouTube Recommendation Radicalisation",
+        "lesson": "The incident highlights the risk of AI systems promoting radicalization and manipulation."
+      },
+      {
+        "incident_id": "AIAAIC-018",
+        "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
+        "lesson": "The incident demonstrates the risk of AI systems amplifying hate speech and discrimination."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "AuditLog",
+        "mitigation_id": "AuditLog",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "EthicsReviewBoard",
+        "mitigation_id": "EthicsReviewBoard",
+        "priority": "Medium",
+        "from_taxonomy": true
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough bias audit to ensure the corpus is representative of diverse perspectives and experiences.",
+      "Specify steps to ensure the corpus is representative of diverse perspectives and experiences."
+    ],
+    "tier2_reflective_prompts": [
+      "How will you address potential biases in the corpus?",
+      "What measures will you take to ensure the corpus reflects diversity and cultural sensitivity?"
+    ],
+    "reams_clearance_likely": true,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "bias"
+      ],
+      "rights_matched": 2,
+      "requirements_retrieved": 10,
+      "incidents_retrieved": 3,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
+      "requirements_sample": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM023",
+        "HE012",
+        "HE032"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM020",
+        "ACM025",
+        "ACM027",
+        "HE019",
+        "HE021",
+        "HE042",
+        "HE050",
+        "ACM023",
+        "HE012",
+        "HE032"
+      ],
+      "requirements_cited": [
+        "ACM020",
+        "HE012"
+      ],
+      "incidents_sample": [
+        "AIAAIC-014",
+        "AIAAIC-018",
+        "AIAAIC-027"
+      ]
+    }
+  }
+}

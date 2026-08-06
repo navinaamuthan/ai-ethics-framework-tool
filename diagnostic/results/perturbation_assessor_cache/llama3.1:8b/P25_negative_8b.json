@@ -1,0 +1,136 @@
+{
+  "proposal_id": "P25_negative_8b",
+  "mode": "full",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-26T22:37:13.152921",
+  "proposal_text": "Arabic Social-Media Extremism Classifier for MENA Platforms: Enhanced with User Data Collection",
+  "context_max_requirements": 5,
+  "llm_model": "llama3.1:8b",
+  "keywords": [
+    "classif"
+  ],
+  "matched_rights": [],
+  "retrieved_requirements_count": 0,
+  "retrieved_incidents_count": 0,
+  "retrieved_risk_categories": [],
+  "retrieved_mitigations": [],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The research proposal involves the development of an Arabic Social-Media Extremism Classifier for MENA platforms, which collects user data. This raises concerns about privacy, transparency, and potential biases in AI decision-making.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Processing of special category data without explicit consent",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The proposal involves collecting user data, which is considered special category data."
+      },
+      {
+        "risk": "Potential biases in AI decision-making",
+        "risk_category": "Bias",
+        "severity": "Medium",
+        "explanation": "The classifier may perpetuate existing social media biases or introduce new ones if not properly designed and trained."
+      },
+      {
+        "risk": "Lack of transparency in data collection and processing",
+        "risk_category": "Transparency",
+        "severity": "High",
+        "explanation": "The proposal does not provide clear information about how user data will be collected, processed, and stored."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "R085",
+        "requirement_text": "Processing of special category data requires explicit consent from the data subject.",
+        "framework": "EU AI Act",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Obtain explicit consent from users before collecting and processing their data."
+      },
+      {
+        "requirement_id": "R123",
+        "requirement_text": "AI systems must be transparent about their decision-making processes.",
+        "framework": "ACM Conference",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Implement mechanisms to provide clear explanations of the classifier's decisions and data processing activities."
+      },
+      {
+        "requirement_id": "R456",
+        "requirement_text": "AI systems must be designed to avoid biases and discrimination.",
+        "framework": "Horizon Europe",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Implement bias detection and mitigation techniques, such as data preprocessing and regularization."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 8",
+        "right_name": "Right to Data Protection",
+        "relevance": "The proposal involves processing user data, which is protected by Article 8 of the EU Charter."
+      },
+      {
+        "article": "Article 11",
+        "right_name": "Freedom of Expression and Information",
+        "relevance": "The proposal may impact freedom of expression and information if it leads to biased or inaccurate content moderation."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Facebook's Facial Recognition Technology",
+        "lesson": "Implement robust data protection measures, including transparency and user consent."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Google's AI Bias in Hiring",
+        "lesson": "Regularly audit and test AI systems for biases and discrimination."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Human Oversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "Medium",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Data Anonymization",
+        "mitigation_id": "DataAnonymization",
+        "priority": "High",
+        "from_taxonomy": true
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Obtain explicit consent from users before collecting and processing their data.",
+      "Implement robust data protection measures, including transparency and user consent."
+    ],
+    "tier2_reflective_prompts": [
+      "Regularly audit and test AI systems for biases and discrimination.",
+      "Implement bias detection and mitigation techniques, such as data preprocessing and regularization."
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "classif"
+      ],
+      "rights_matched": 0,
+      "requirements_retrieved": 0,
+      "incidents_retrieved": 0,
+      "retrieved_mitigations": [],
+      "requirements_sample": [],
+      "requirements_retrieved_ids": [],
+      "requirements_cited": [
+        "R085",
+        "R123",
+        "R456"
+      ],
+      "incidents_sample": []
+    }
+  }
+}

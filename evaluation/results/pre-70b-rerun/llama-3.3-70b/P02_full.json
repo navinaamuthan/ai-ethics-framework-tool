@@ -1,0 +1,451 @@
+{
+  "proposal_id": "P02",
+  "mode": "full",
+  "llm_backend": "groq",
+  "timestamp": "2026-07-19T19:51:40.386206",
+  "proposal_text": "This research proposes to deploy the COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) risk assessment tool across criminal courts in Broward County, Florida, to predict defendants' likelihood of recidivism. The system uses a proprietary algorithm trained on a battery of psychological questionnaire responses administered at the time of arrest, combined with criminal history variables including prior arrest count, age at first offence, and charge severity. The algorithm produces three decile scores (1–10) for general recidivism, violent recidivism, and failure to appear, with scores categorised as Low (1–4), Medium (5–7), or High (8–10). These scores will be provided to judges and parole officers at pre-trial hearings and sentencing to inform detention and release decisions. The model is proprietary and its internal weighting is not disclosed to defendants or defence counsel. No mechanism for defendants to challenge the algorithmic risk score is included in the deployment design. An independent analysis of the algorithm's outputs found that Black defendants who did not re-offend were falsely classified as high risk at nearly twice the rate of white defendants who did not re-offend (45% vs 24%).",
+  "context_max_requirements": 25,
+  "llm_model": "llama-3.3-70b-versatile",
+  "keywords": [
+    "predict",
+    "profil",
+    "classif",
+    "scor",
+    "criminal"
+  ],
+  "matched_rights": [
+    "Art21_NonDiscrimination",
+    "Art41_GoodAdministration",
+    "Art47_RightToEffectiveRemedy",
+    "Art48_PresumptionOfInnocence",
+    "Art6_RightToLiberty",
+    "Art7_PrivateLife",
+    "Art8_DataProtection"
+  ],
+  "retrieved_requirements_count": 167,
+  "retrieved_incidents_count": 8,
+  "assessment": {
+    "risk_summary": "The proposed deployment of the COMPAS risk assessment tool in criminal courts poses significant ethical risks, including potential biases in the algorithm's outputs, lack of transparency and explainability, and potential for discriminatory outcomes. The tool's use of proprietary algorithms and lack of mechanisms for defendants to challenge the algorithmic risk score further exacerbate these risks. The research also raises concerns about the potential for the tool to perpetuate existing social inequalities and reinforce harmful stereotypes. The use of the tool may also infringe on the rights of defendants, including their right to a fair trial and their right to privacy.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Algorithmic bias",
+        "severity": "High",
+        "explanation": "The COMPAS tool has been shown to falsely classify Black defendants as high risk at a higher rate than white defendants, which could lead to discriminatory outcomes."
+      },
+      {
+        "risk": "Lack of transparency and explainability",
+        "severity": "High",
+        "explanation": "The proprietary nature of the algorithm and the lack of mechanisms for defendants to challenge the algorithmic risk score make it difficult to understand how the tool arrives at its decisions."
+      },
+      {
+        "risk": "Infringement on defendants' rights",
+        "severity": "High",
+        "explanation": "The use of the tool may infringe on defendants' rights to a fair trial, privacy, and non-discrimination."
+      },
+      {
+        "risk": "Perpetuation of social inequalities",
+        "severity": "Medium",
+        "explanation": "The tool's use of historical data and algorithms may perpetuate existing social inequalities and reinforce harmful stereotypes."
+      },
+      {
+        "risk": "Lack of human oversight and accountability",
+        "severity": "Medium",
+        "explanation": "The tool's automated decision-making process may lack human oversight and accountability, which could lead to errors or biases in the decision-making process."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of the potential harms and benefits of the COMPAS tool and develop strategies to mitigate any negative consequences."
+      },
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop protocols to prevent harm to defendants and ensure that the tool is used in a way that minimizes the risk of harm."
+      },
+      {
+        "requirement_id": "ACM003",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct regular audits to detect and address any biases in the tool's outputs and develop strategies to mitigate any discriminatory effects."
+      },
+      {
+        "requirement_id": "ACM004",
+        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop and implement methods to detect and address biases in the data used to train the tool and in the tool's outputs."
+      },
+      {
+        "requirement_id": "ACM006",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop protocols to ensure that defendants' personally identifiable information is protected and that they provide informed consent for the use of their data."
+      },
+      {
+        "requirement_id": "ACM007",
+        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough evaluation of the tool's impacts and develop strategies to mitigate any negative consequences."
+      },
+      {
+        "requirement_id": "ACM015",
+        "requirement_text": "Research involving human participants must follow existing institutional protocols (IRB or equivalent) — if no formal process exists, undergo equivalent informal ethics review",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the research protocol is approved by an institutional review board (IRB) or equivalent and that the tool is used in accordance with established protocols."
+      },
+      {
+        "requirement_id": "ACM021",
+        "requirement_text": "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Develop protocols to prevent harm to defendants and ensure that the tool is used in a way that minimizes the risk of harm."
+      },
+      {
+        "requirement_id": "ACM023",
+        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct regular audits to detect and address any biases in the tool's outputs and develop strategies to mitigate any discriminatory effects."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "Article 21",
+        "right_name": "Non-Discrimination",
+        "relevance": "The tool's potential for biased outputs and discriminatory effects may infringe on defendants' right to non-discrimination."
+      },
+      {
+        "article": "Article 41",
+        "right_name": "Good Administration",
+        "relevance": "The tool's lack of transparency and explainability may infringe on defendants' right to good administration."
+      },
+      {
+        "article": "Article 47",
+        "right_name": "Right to Effective Remedy",
+        "relevance": "The tool's lack of mechanisms for defendants to challenge the algorithmic risk score may infringe on defendants' right to an effective remedy."
+      },
+      {
+        "article": "Article 48",
+        "right_name": "Presumption of Innocence",
+        "relevance": "The tool's potential for biased outputs and discriminatory effects may infringe on defendants' right to the presumption of innocence."
+      },
+      {
+        "article": "Article 6",
+        "right_name": "Right to Liberty",
+        "relevance": "The tool's potential for biased outputs and discriminatory effects may infringe on defendants' right to liberty."
+      },
+      {
+        "article": "Article 7",
+        "right_name": "Private Life",
+        "relevance": "The tool's use of defendants' personally identifiable information may infringe on their right to private life."
+      },
+      {
+        "article": "Article 8",
+        "right_name": "Data Protection",
+        "relevance": "The tool's use of defendants' personally identifiable information may infringe on their right to data protection."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of auditing and addressing biases in algorithmic decision-making systems."
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The potential for biased outputs and discriminatory effects in facial recognition systems."
+      },
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The importance of developing and implementing protocols to prevent harm and ensure that AI systems are used in a way that minimizes the risk of harm."
+      },
+      {
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The potential for biased outputs and discriminatory effects in recidivism algorithms."
+      },
+      {
+        "incident_id": "AIAAIC-008",
+        "incident_title": "PredPol Predictive Policing Algorithmic Bias",
+        "lesson": "The importance of auditing and addressing biases in algorithmic decision-making systems, particularly in the context of law enforcement."
+      },
+      {
+        "incident_id": "AIAAIC-022",
+        "incident_title": "Deliveroo Algorithmic Dismissal",
+        "lesson": "The potential for biased outputs and discriminatory effects in algorithmic decision-making systems, particularly in the context of employment."
+      },
+      {
+        "incident_id": "AIAAIC-034",
+        "incident_title": "China Social Credit System AI Scoring",
+        "lesson": "The potential for biased outputs and discriminatory effects in AI-powered scoring systems, particularly in the context of social credit systems."
+      },
+      {
+        "incident_id": "AIAAIC-036",
+        "incident_title": "Netherlands SyRI Welfare Surveillance System",
+        "lesson": "The importance of developing and implementing protocols to prevent harm and ensure that AI systems are used in a way that minimizes the risk of harm, particularly in the context of welfare surveillance systems."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "Conduct regular audits to detect and address biases in the tool's outputs",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop and implement protocols to prevent harm and ensure that the tool is used in a way that minimizes the risk of harm",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Ensure that defendants' personally identifiable information is protected and that they provide informed consent for the use of their data",
+        "priority": "High"
+      },
+      {
+        "mitigation": "Develop and implement methods to detect and address biases in the data used to train the tool and in the tool's outputs",
+        "priority": "Medium"
+      },
+      {
+        "mitigation": "Conduct a thorough evaluation of the tool's impacts and develop strategies to mitigate any negative consequences",
+        "priority": "Medium"
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Conduct a thorough analysis of the potential harms and benefits of the COMPAS tool and develop strategies to mitigate any negative consequences",
+      "Develop protocols to prevent harm to defendants and ensure that the tool is used in a way that minimizes the risk of harm",
+      "Ensure that the research protocol is approved by an institutional review board (IRB) or equivalent and that the tool is used in accordance with established protocols",
+      "Conduct regular audits to detect and address biases in the tool's outputs and develop strategies to mitigate any discriminatory effects",
+      "Develop and implement methods to detect and address biases in the data used to train the tool and in the tool's outputs"
+    ],
+    "tier2_reflective_prompts": [
+      "What are the potential consequences of using the COMPAS tool in criminal courts, and how can we mitigate any negative effects?",
+      "How can we ensure that the tool is used in a way that minimizes the risk of harm to defendants and promotes fairness and non-discrimination?",
+      "What are the potential biases and limitations of the tool, and how can we address them?",
+      "How can we ensure that defendants' personally identifiable information is protected and that they provide informed consent for the use of their data?",
+      "What are the potential long-term consequences of using the COMPAS tool, and how can we ensure that it is used in a way that promotes human well-being and respects human rights?"
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "HIGH",
+    "_retrieval_metadata": {
+      "keywords": [
+        "predict",
+        "profil",
+        "classif",
+        "scor",
+        "criminal"
+      ],
+      "rights_matched": 7,
+      "requirements_retrieved": 167,
+      "incidents_retrieved": 8,
+      "requirements_sample": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM002",
+        "ACM012",
+        "ACM013",
+        "ACM019",
+        "ACM023",
+        "ACM028",
+        "AI001",
+        "AI016",
+        "AI021",
+        "AI023",
+        "AI024",
+        "HE012",
+        "HE013",
+        "HE015",
+        "HE016",
+        "HE032",
+        "HE033",
+        "HE037",
+        "R027",
+        "R028",
+        "R085",
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM001",
+        "ACM035",
+        "AI017",
+        "AI019",
+        "AI022",
+        "HE005",
+        "HE027",
+        "HE029",
+        "HE048",
+        "R010",
+        "R054",
+        "R055",
+        "R074",
+        "R082",
+        "ACM024",
+        "ACM027",
+        "HE001",
+        "R086",
+        "ACM003",
+        "ACM004",
+        "ACM005",
+        "ACM007",
+        "ACM008",
+        "ACM010",
+        "ACM015",
+        "ACM022",
+        "ACM031",
+        "ACM036",
+        "AI011",
+        "AI013",
+        "AI025",
+        "HE007",
+        "HE008",
+        "HE009",
+        "HE031",
+        "HE036",
+        "R019",
+        "R023",
+        "R026",
+        "R040",
+        "R042",
+        "R047",
+        "R048",
+        "R049",
+        "R067",
+        "R068",
+        "R071",
+        "R083",
+        "R084",
+        "ACM006",
+        "ACM009",
+        "AI014",
+        "HE010",
+        "HE035",
+        "R005",
+        "R014",
+        "R018",
+        "R021",
+        "R022",
+        "R024",
+        "R025",
+        "R029",
+        "R031",
+        "R033",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R069",
+        "R070",
+        "R072",
+        "R073"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM002",
+        "ACM003",
+        "ACM004",
+        "ACM006",
+        "ACM007",
+        "ACM015",
+        "ACM021",
+        "ACM023"
+      ],
+      "incidents_sample": [
+        "AIAAIC-001",
+        "AIAAIC-002",
+        "AIAAIC-003",
+        "AIAAIC-022",
+        "AIAAIC-034"
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "proposal_id": "P40",
+  "mode": "compact_diagnostic",
+  "llm_backend": "groq",
+  "llm_model": "llama-3.3-70b-versatile",
+  "note": "Compact risk+rights prompt for diagnostic corpus expansion under Groq TPD limits; P01-P20 are full-RAG.",
+  "proposal_text": "This research pilots camera-based emotion analytics in a Lagos business-process outsourcing centre, framed as employee wellbeing support. Aggregated mood dashboards go to team leads; individuals scoring repeatedly 'distressed' are offered counselling referrals. Participation is described as voluntary but tied to a wellness bonus. Labour advocates call it surveillance that chills union organising; HR calls it duty-of-care. Consent voluntariness under wage pressure is disputed. The system was validated on Western face sets only. Expected Charter mapping (private life, data protection, fair working conditions, dignity) is reasonably contested in weight even when articles are listed.",
+  "assessment": {
+    "overall_risk_level": "High",
+    "charter_rights_at_risk": [
+      {
+        "article": "Art7_PrivateLife",
+        "right_name": "Right to Private Life",
+        "relevance": "The use of camera-based emotion analytics may infringe on employees' right to private life."
+      },
+      {
+        "article": "Art8_DataProtection",
+        "right_name": "Right to Data Protection",
+        "relevance": "The collection and processing of emotional data may violate employees' right to data protection."
+      },
+      {
+        "article": "Art31_FairWorkingConditions",
+        "right_name": "Right to Fair Working Conditions",
+        "relevance": "The potential for surveillance and pressure to participate may create unfair working conditions."
+      },
+      {
+        "article": "Art1_HumanDignity",
+        "right_name": "Right to Human Dignity",
+        "relevance": "The use of emotion analytics and potential chilling effect on union organizing may undermine employees' human dignity."
+      }
+    ],
+    "confidence_flag": "LOW"
+  }
+}

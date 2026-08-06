@@ -44,6 +44,12 @@ def main() -> None:
         ao = dict(v.get("assessor_outputs") or {})
         text = v["variant_text"]
         vid = v["variant_id"]
+        existing = pg._normalize_risk(ao.get("LLM-8B"))
+        if existing:
+            ao["LLM-8B"] = existing
+            v["assessor_outputs"] = ao
+            print(f"[{i}/45] {vid} skip (LLM-8B={existing})", flush=True)
+            continue
         print(f"[{i}/45] {vid} ...", flush=True)
         risk = pg.run_llm(
             text, vid + "_8b", model="llama3.1:8b", backend="ollama"

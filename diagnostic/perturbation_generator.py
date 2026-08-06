@@ -189,11 +189,18 @@ VARIANT TEXT:
     return variants
 
 
+def _normalize_risk(r) -> str | None:
+    """Accept title/upper/lower variants of Low|Medium|High."""
+    if not isinstance(r, str):
+        return None
+    key = r.strip().title()
+    if key == "Med":
+        key = "Medium"
+    return key if key in RISK_ORDER else None
+
+
 def _risk_from_assessment(assessment: dict) -> str | None:
-    r = assessment.get("overall_risk_level")
-    if r in RISK_ORDER:
-        return r
-    return None
+    return _normalize_risk(assessment.get("overall_risk_level"))
 
 
 def run_keyword(text: str) -> str:
@@ -251,8 +258,7 @@ def run_llm_compact_risk(text: str, model: str = "llama-3.3-70b-versatile") -> s
     if not raw:
         return None
     parsed = parse_json_response(raw)
-    r = parsed.get("overall_risk_level")
-    return r if r in RISK_ORDER else None
+    return _normalize_risk(parsed.get("overall_risk_level"))
 
 
 def run_llm(text: str, pid: str, model: str, backend: str = "groq") -> str | None:
@@ -263,8 +269,14 @@ def run_llm(text: str, pid: str, model: str, backend: str = "groq") -> str | Non
     cache = out / f"{pid}.json"
     if cache.exists():
         a = json.loads(cache.read_text()).get("assessment") or {}
-        if a.get("overall_risk_level") in RISK_ORDER:
-            return a["overall_risk_level"]
+        risk = _normalize_risk(a.get("overall_risk_level"))
+        if risk:
+            if a.get("overall_risk_level") != risk:
+                a["overall_risk_level"] = risk
+                data = json.loads(cache.read_text())
+                data["assessment"] = a
+                cache.write_text(json.dumps(data, indent=2), encoding="utf-8")
+            return risk
         # stale empty cache
         cache.unlink(missing_ok=True)
     # Prefer compact for 70B to conserve TPD; still same model family.
@@ -284,8 +296,10 @@ def run_llm(text: str, pid: str, model: str, backend: str = "groq") -> str | Non
     if produced.exists():
         produced.rename(cache)
     a = result.get("assessment") or {}
-    risk = a.get("overall_risk_level") if a.get("overall_risk_level") in RISK_ORDER else None
+    risk = _normalize_risk(a.get("overall_risk_level"))
     if risk:
+        a["overall_risk_level"] = risk
+        result["assessment"] = a
         cache.write_text(json.dumps(result, indent=2), encoding="utf-8")
     return risk
 

@@ -2,9 +2,9 @@
   "proposal_id": "P34",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-21T01:20:28.268442",
+  "timestamp": "2026-08-03T22:11:34.349268",
   "proposal_text": "This research proposes clickstream-only 'engagement analytics' for an online continuing-education platform: page dwell time, quiz retries, and forum posts. No webcam or emotion recognition is used. Instructors see per-student engagement scores that may inform outreach emails. Scores are not used for formal grading. A subtle issue is that engagement proxies can disadvantage students with disability-related interaction patterns or shared-device access, and outreach based on low scores may feel surveillant. The proposal does not discuss reasonable-accommodation effects. Data stay on the university LMS.",
-  "context_max_requirements": 10,
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "scor",
@@ -116,169 +116,212 @@
       "df": 5
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed research on clickstream-only 'engagement analytics' for an online continuing-education platform poses risks related to discrimination, privacy breach, and psychological harm. The use of engagement proxies may disadvantage students with disability-related interaction patterns or shared-device access, and outreach based on low scores may feel surveillant. Furthermore, the proposal does not discuss reasonable-accommodation effects, which could exacerbate existing inequalities. The lack of transparency in the system's operation and decision-making process may also contribute to these risks.",
+    "risk_summary": "The proposed research on clickstream-only 'engagement analytics' for an online continuing-education platform poses risks related to privacy, discrimination, and psychological harm. The use of engagement proxies may disadvantage students with disability-related interaction patterns or shared-device access, and outreach based on low scores may feel surveillant. Additionally, the proposal does not discuss reasonable-accommodation effects, which may further exacerbate these risks. The storage of data on the university LMS may also raise concerns about data governance and security.",
     "overall_risk_level": "Medium",
     "identified_risks": [
       {
-        "risk": "Discrimination against students with disabilities",
-        "risk_category": "Discrimination",
-        "severity": "Medium",
-        "explanation": "The use of engagement proxies may disadvantage students with disability-related interaction patterns or shared-device access"
-      },
-      {
-        "risk": "Privacy breach due to collection of personal data",
+        "risk": "Privacy concerns due to collection and analysis of student engagement data",
         "risk_category": "PrivacyBreach",
         "severity": "Medium",
-        "explanation": "The collection of clickstream data may be considered personal data, and its storage on the university LMS may pose a risk of unauthorised disclosure"
+        "explanation": "The proposal involves collecting and analyzing student engagement data, which may include personally identifiable information, posing a risk to students' privacy."
       },
       {
-        "risk": "Psychological harm due to feeling of surveillance",
+        "risk": "Discrimination against students with disability-related interaction patterns or shared-device access",
+        "risk_category": "Discrimination",
+        "severity": "Medium",
+        "explanation": "The use of engagement proxies may disadvantage students with disability-related interaction patterns or shared-device access, potentially leading to discriminatory outcomes."
+      },
+      {
+        "risk": "Psychological harm due to perceived surveillance or stigma associated with low engagement scores",
         "risk_category": "PsychologicalHarm",
         "severity": "Low",
-        "explanation": "Outreach based on low engagement scores may feel surveillant to students, potentially causing mental distress"
+        "explanation": "Outreach based on low scores may feel surveillant or stigmatizing to students, potentially causing psychological harm."
       },
       {
-        "risk": "Lack of transparency in system operation",
-        "risk_category": "Transparency",
+        "risk": "Data governance and security concerns due to storage of data on the university LMS",
+        "risk_category": "DataGovernance",
         "severity": "Low",
-        "explanation": "The proposal does not discuss how the system's operation and decision-making process will be disclosed to students and instructors"
+        "explanation": "The storage of data on the university LMS may raise concerns about data governance and security, particularly if adequate measures are not in place to protect student data."
       }
     ],
     "applicable_requirements": [
       {
         "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being",
+        "requirement_text": "Research must contribute to society and human well-being — discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Discuss how the proposed research may harm individuals or groups and ways to mitigate such harms"
+        "action_needed": "Conduct a thorough analysis of potential harms and mitigation strategies"
       },
       {
         "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Consider how the data and code used in the research may cause harm"
+        "action_needed": "Implement measures to minimize potential harm, such as anonymizing student data"
       },
       {
         "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate",
+        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Consider and ameliorate biases the approach may perpetuate"
-      },
-      {
-        "requirement_id": "ACM004",
-        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Consider and ameliorate biases in the data and code used in the research"
+        "action_needed": "Develop strategies to address potential biases in the engagement proxy metrics"
       },
       {
         "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy",
+        "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain informed consent where required and protect personally identifiable information"
+        "action_needed": "Obtain informed consent from students and implement measures to protect their personally identifiable information"
       },
       {
-        "requirement_id": "ACM007",
-        "requirement_text": "Give comprehensive evaluation of systems and their impacts",
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Provide a comprehensive evaluation of the system's impacts, including analysis of possible risks of applications"
-      },
-      {
-        "requirement_id": "ACM008",
-        "requirement_text": "Consider possible risks and impacts of the research approach itself",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Consider possible risks and impacts of the research approach itself, not just applications"
-      },
-      {
-        "requirement_id": "ACM009",
-        "requirement_text": "Access computing and communication resources only when authorised or compelled by public good",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that access to computing and communication resources is only when authorised or compelled by public good"
-      },
-      {
-        "requirement_id": "ACM010",
-        "requirement_text": "Design and implement systems that are robustly and usably secure",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Design and implement systems that are robustly and usably secure, especially systems close to production deployment"
+        "action_needed": "Minimize the collection and storage of personally identifiable information"
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 21",
-        "right_name": "Non-Discrimination",
-        "relevance": "The use of engagement proxies may disadvantage students with disability-related interaction patterns or shared-device access, potentially violating the right to non-discrimination"
-      },
-      {
         "article": "Article 7",
-        "right_name": "Private Life",
-        "relevance": "The collection of clickstream data may be considered an invasion of students' private life, potentially violating their right to privacy"
+        "right_name": "PrivateLife",
+        "relevance": "The proposal involves collecting and analyzing student engagement data, which may include personally identifiable information, potentially infringing on students' right to private life"
       },
       {
-        "article": "Article 8",
-        "right_name": "Data Protection",
-        "relevance": "The storage of clickstream data on the university LMS may pose a risk of unauthorised disclosure, potentially violating students' right to data protection"
+        "article": "Article 21",
+        "right_name": "NonDiscrimination",
+        "relevance": "The use of engagement proxies may disadvantage students with disability-related interaction patterns or shared-device access, potentially discriminating against them"
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The use of biased algorithms can perpetuate existing inequalities, highlighting the need for careful consideration of biases in the proposed research"
-      },
-      {
-        "incident_id": "AIAAIC-002",
-        "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The use of facial recognition technology can lead to false arrests and violations of human rights, highlighting the need for careful consideration of the potential risks and impacts of the proposed research"
+        "lesson": "The importance of addressing potential biases in algorithmic decision-making systems"
       },
       {
         "incident_id": "AIAAIC-025",
         "incident_title": "Amazon Alexa Recording Children Without Consent",
-        "lesson": "The collection of personal data without consent can violate individuals' right to privacy, highlighting the need for careful consideration of data collection and storage practices in the proposed research"
+        "lesson": "The need for transparent and informed consent mechanisms when collecting and processing personal data, particularly from vulnerable populations"
       },
       {
         "incident_id": "AIAAIC-026",
         "incident_title": "Facial Recognition in UK Schools",
-        "lesson": "The use of facial recognition technology in schools can raise concerns about privacy and surveillance, highlighting the need for careful consideration of the potential risks and impacts of the proposed research"
+        "lesson": "The potential risks and concerns associated with the use of surveillance technologies in educational settings"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement measures to ensure the fairness and transparency of the engagement analytics system",
-        "priority": "High"
+        "mitigation": "AccessControl",
+        "mitigation_id": "AccessControl",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Obtain informed consent from students before collecting and storing their clickstream data",
-        "priority": "High"
+        "mitigation": "Anonymisation",
+        "mitigation_id": "Anonymisation",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Implement measures to protect the privacy and security of students' personal data",
-        "priority": "Medium"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Consider the potential risks and impacts of the research approach itself, not just applications",
-        "priority": "Medium"
+        "mitigation": "EthicsReviewBoard",
+        "mitigation_id": "EthicsReviewBoard",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "HumanOversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "Medium",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Discuss how the proposed research may harm individuals or groups and ways to mitigate such harms",
-      "Consider how the data and code used in the research may cause harm",
-      "Consider and ameliorate biases the approach may perpetuate",
-      "Obtain informed consent where required and protect personally identifiable information",
-      "Provide a comprehensive evaluation of the system's impacts, including analysis of possible risks of applications"
+      "Conduct a thorough analysis of potential harms and mitigation strategies",
+      "Implement measures to minimize potential harm, such as anonymizing student data",
+      "Develop strategies to address potential biases in the engagement proxy metrics",
+      "Obtain informed consent from students and implement measures to protect their personally identifiable information",
+      "Minimize the collection and storage of personally identifiable information"
     ],
     "tier2_reflective_prompts": [
-      "What are the potential risks and impacts of the proposed research on students with disabilities?",
-      "How can the proposed research ensure that it does not perpetuate existing inequalities?",
-      "What measures can be taken to protect the privacy and security of students' personal data?"
+      "How might the proposed research contribute to societal well-being and human flourishing?",
+      "What are the potential risks and benefits associated with the use of engagement analytics in educational settings?",
+      "How can we ensure that the proposed research is fair, transparent, and respectful of students' rights and dignity?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -293,6 +336,21 @@
       "rights_matched": 7,
       "requirements_retrieved": 150,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM001",
         "ACM002",
@@ -461,12 +519,8 @@
         "ACM001",
         "ACM002",
         "ACM003",
-        "ACM004",
         "ACM006",
-        "ACM007",
-        "ACM008",
-        "ACM009",
-        "ACM010"
+        "ACM016"
       ],
       "incidents_sample": [
         "AIAAIC-003",
@@ -476,6 +530,5 @@
         "AIAAIC-002"
       ]
     }
-  },
-  "compact_prompt": false
+  }
 }

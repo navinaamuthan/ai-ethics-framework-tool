@@ -1,0 +1,419 @@
+{
+  "proposal_id": "P02_negative_8b",
+  "mode": "full",
+  "llm_backend": "ollama",
+  "timestamp": "2026-07-26T22:13:18.973091",
+  "proposal_text": "COMPAS Recidivism Risk Assessment Tool with Enhanced Transparency and Accountability",
+  "context_max_requirements": 5,
+  "llm_model": "llama3.1:8b",
+  "keywords": [
+    "accountab",
+    "transparen"
+  ],
+  "matched_rights": [
+    "Art41_GoodAdministration",
+    "Art47_RightToEffectiveRemedy"
+  ],
+  "retrieved_requirements_count": 90,
+  "retrieved_incidents_count": 6,
+  "retrieved_risk_categories": [
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 60.0,
+      "tf": 60,
+      "df": 101
+    },
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 77
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 9.0,
+      "tf": 9,
+      "df": 26
+    },
+    {
+      "id": "Deception",
+      "label": "Deception",
+      "definition": "Risk that an AI system misleads users about its nature, capabilities, or the provenance of its outputs.",
+      "idf_score": 4.442,
+      "rank_score": 8.0,
+      "tf": 8,
+      "df": 15
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 7.0,
+      "tf": 7,
+      "df": 16
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 6.0,
+      "tf": 6,
+      "df": 15
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 1,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
+  "assessment": {
+    "risk_summary": "The COMPAS Recidivism Risk Assessment Tool with Enhanced Transparency and Accountability poses significant risks to individuals, particularly those from vulnerable groups. The tool's use of special category data without explicit consent and its potential for consequential decisions make it a high-risk proposal.",
+    "overall_risk_level": "High",
+    "identified_risks": [
+      {
+        "risk": "Processing of special category data about vulnerable groups without explicit consent",
+        "risk_category": "PrivacyBreach",
+        "severity": "High",
+        "explanation": "The COMPAS tool processes sensitive information about individuals, including their criminal history and demographic data, which is a high-risk activity."
+      },
+      {
+        "risk": "Consequential decisions made by the AI system",
+        "risk_category": "Accountability",
+        "severity": "High",
+        "explanation": "The COMPAS tool's predictions can lead to significant consequences for individuals, including imprisonment or loss of employment."
+      },
+      {
+        "risk": "Lack of transparency in decision-making processes",
+        "risk_category": "Transparency",
+        "severity": "Medium",
+        "explanation": "The proposal does not provide sufficient information about the tool's decision-making mechanisms, which could lead to a lack of understanding and trust among stakeholders."
+      }
+    ],
+    "applicable_requirements": [
+      {
+        "requirement_id": "ACM001",
+        "requirement_text": "Research must contribute to society and human well-being \u2014 discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The proposal should provide a detailed discussion of the potential harms and mitigation strategies."
+      },
+      {
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The proposal should ensure that the dataset used by the COMPAS tool minimises exposure of personally identifiable information and obtain explicit consent from participants."
+      },
+      {
+        "requirement_id": "ACM017",
+        "requirement_text": "Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "The proposal should obtain explicit consent from participants in the dataset used by the COMPAS tool or provide a clear explanation for why consent was not obtained."
+      }
+    ],
+    "charter_rights_at_risk": [
+      {
+        "article": "41",
+        "right_name": "GoodAdministration",
+        "relevance": "The proposal's use of AI to make consequential decisions may impact the right to good administration."
+      },
+      {
+        "article": "47",
+        "right_name": "RightToEffectiveRemedy",
+        "relevance": "The proposal's potential for consequential decisions and processing of special category data without explicit consent may impact the right to an effective remedy."
+      }
+    ],
+    "historical_precedents": [
+      {
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The incident highlights the importance of ensuring that AI systems do not perpetuate biases and discrimination."
+      },
+      {
+        "incident_id": "AIAAIC-008",
+        "incident_title": "PredPol Predictive Policing Algorithmic Bias",
+        "lesson": "The incident demonstrates the need for careful consideration of the potential biases and limitations of AI systems in high-stakes decision-making contexts."
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "mitigation": "HumanOversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "High",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "EthicsReviewBoard",
+        "mitigation_id": "EthicsReviewBoard",
+        "priority": "Medium",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "Low",
+        "from_taxonomy": true
+      }
+    ],
+    "tier1_mandatory_actions": [
+      "Ensure that the dataset used by the COMPAS tool minimises exposure of personally identifiable information and obtain explicit consent from participants."
+    ],
+    "tier2_reflective_prompts": [
+      "Consider the potential biases and limitations of the AI system in high-stakes decision-making contexts.",
+      "Reflect on the importance of transparency in decision-making processes and ensure that stakeholders have a clear understanding of how decisions are made."
+    ],
+    "reams_clearance_likely": false,
+    "confidence_flag": "LOW",
+    "_retrieval_metadata": {
+      "keywords": [
+        "accountab",
+        "transparen"
+      ],
+      "rights_matched": 2,
+      "requirements_retrieved": 90,
+      "incidents_retrieved": 6,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
+      "requirements_sample": [
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003"
+      ],
+      "requirements_retrieved_ids": [
+        "ACM016",
+        "ACM017",
+        "ACM018",
+        "ACM021",
+        "ACM029",
+        "ACM030",
+        "ACM033",
+        "ACM034",
+        "AI002",
+        "AI003",
+        "AI004",
+        "AI005",
+        "AI006",
+        "AI007",
+        "AI008",
+        "AI009",
+        "AI010",
+        "AI012",
+        "AI015",
+        "AI018",
+        "AI020",
+        "AI026",
+        "AI027",
+        "AI028",
+        "AI029",
+        "AI030",
+        "HE002",
+        "HE006",
+        "HE011",
+        "HE022",
+        "HE023",
+        "HE024",
+        "HE025",
+        "HE026",
+        "HE028",
+        "HE030",
+        "HE034",
+        "HE039",
+        "HE040",
+        "HE041",
+        "HE043",
+        "HE044",
+        "HE045",
+        "HE046",
+        "HE047",
+        "HE052",
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R012",
+        "R013",
+        "R016",
+        "R017",
+        "R030",
+        "R032",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R041",
+        "R057",
+        "R058",
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R075",
+        "R077",
+        "R078",
+        "R079",
+        "ACM001",
+        "ACM035",
+        "AI001",
+        "AI017",
+        "AI019",
+        "AI022",
+        "AI023",
+        "HE005",
+        "HE027",
+        "HE029",
+        "HE048",
+        "R010",
+        "R054",
+        "R055",
+        "R074",
+        "R082"
+      ],
+      "requirements_cited": [
+        "ACM001",
+        "ACM016",
+        "ACM017"
+      ],
+      "incidents_sample": [
+        "AIAAIC-022",
+        "AIAAIC-034",
+        "AIAAIC-036",
+        "AIAAIC-002",
+        "AIAAIC-004"
+      ]
+    }
+  }
+}

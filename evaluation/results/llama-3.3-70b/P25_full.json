@@ -2,9 +2,9 @@
   "proposal_id": "P25",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-21T01:17:26.466627",
-  "proposal_text": "This research proposes an Arabic-dialect NLP classifier to detect extremist recruitment and glorification of violence on public Telegram channels and X/Twitter accounts across Egypt, Jordan, and Morocco. Training data mix annotated jihadist propaganda with posts from secular activists, Islamist electoral campaigns, and satire. The classifier will output a risk score used by platform trust-and-safety teams to prioritise human review; scores above 0.85 will auto-suspend accounts for 48 hours pending review. Civil-society partners warn that dialectal sarcasm and anti-regime protest slogans are frequently mislabelled. The team plans open-source release of the model weights. No engagement with journalists' unions or minority-rights groups is scheduled. Whether Art.11 freedom of expression or public-security limitations should dominate the rights analysis is deliberately left open in the protocol\u2014experts disagree.",
-  "context_max_requirements": 10,
+  "timestamp": "2026-08-03T14:46:58.534430",
+  "proposal_text": "This research proposes an Arabic-dialect NLP classifier to detect extremist recruitment and glorification of violence on public Telegram channels and X/Twitter accounts across Egypt, Jordan, and Morocco. Training data mix annotated jihadist propaganda with posts from secular activists, Islamist electoral campaigns, and satire. The classifier will output a risk score used by platform trust-and-safety teams to prioritise human review; scores above 0.85 will auto-suspend accounts for 48 hours pending review. Civil-society partners warn that dialectal sarcasm and anti-regime protest slogans are frequently mislabelled. The team plans open-source release of the model weights. No engagement with journalists' unions or minority-rights groups is scheduled. Whether Art.11 freedom of expression or public-security limitations should dominate the rights analysis is deliberately left open in the protocol—experts disagree.",
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "classif",
@@ -116,58 +116,113 @@
       "df": 5
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed Arabic-dialect NLP classifier for detecting extremist recruitment and glorification of violence on public Telegram channels and X/Twitter accounts poses significant ethical risks, including potential mislabelling of dialectal sarcasm and anti-regime protest slogans, auto-suspension of accounts without human review, and potential biases in the model. The project also raises concerns about freedom of expression, non-discrimination, and the right to effective remedy. The risks of dual-use misuse, dignity, and psychological harm are also relevant. The project's open-source release of the model weights and lack of engagement with journalists' unions or minority-rights groups exacerbate these risks.",
+    "risk_summary": "The proposed Arabic-dialect NLP classifier for detecting extremist recruitment and glorification of violence on public Telegram channels and X/Twitter accounts poses significant ethical risks, including potential mislabelling of dialectal sarcasm and anti-regime protest slogans, risks to freedom of expression, and potential biases in the model. The classifier's auto-suspension feature may also lead to false positives, causing harm to individuals and groups. Furthermore, the lack of engagement with journalists' unions and minority-rights groups raises concerns about the project's potential impact on vulnerable populations. The project's risks are exacerbated by the potential for dual-use misuse, where the technology could be repurposed for harmful applications.",
     "overall_risk_level": "High",
     "identified_risks": [
       {
         "risk": "Mislabelling of dialectal sarcasm and anti-regime protest slogans",
         "risk_category": "Discrimination",
         "severity": "High",
-        "explanation": "The classifier may incorrectly identify sarcastic or satirical content as extremist, leading to unfair treatment of individuals or groups"
+        "explanation": "The classifier may incorrectly identify sarcastic or satirical content as extremist, leading to false positives and potential harm to individuals and groups."
       },
       {
-        "risk": "Auto-suspension of accounts without human review",
-        "risk_category": "Accountability",
+        "risk": "Risks to freedom of expression",
+        "risk_category": "Dignity",
         "severity": "High",
-        "explanation": "The auto-suspension feature may lead to unjustified restrictions on freedom of expression, with no clear mechanism for contesting or appealing the decision"
+        "explanation": "The auto-suspension feature may infringe upon individuals' right to freedom of expression, particularly if the classifier is not transparent or accountable in its decision-making process."
       },
       {
-        "risk": "Biases in the model",
+        "risk": "Potential biases in the model",
         "risk_category": "Discrimination",
         "severity": "Medium",
-        "explanation": "The model may perpetuate existing biases in the training data, leading to unfair differential treatment of individuals or groups"
+        "explanation": "The model may perpetuate existing biases and stereotypes, particularly if the training data is not diverse or representative of the intended population."
       },
       {
         "risk": "Dual-use misuse",
         "risk_category": "DualUseMisuse",
         "severity": "High",
-        "explanation": "The model could be repurposed for harmful applications, such as surveillance or censorship"
-      },
-      {
-        "risk": "Dignity",
-        "risk_category": "Dignity",
-        "severity": "Medium",
-        "explanation": "The model's potential to degrade or objectify individuals or groups, particularly through mislabelling or auto-suspension"
-      },
-      {
-        "risk": "Psychological harm",
-        "risk_category": "PsychologicalHarm",
-        "severity": "Medium",
-        "explanation": "The model's potential to cause mental distress or emotional damage, particularly through mislabelling or auto-suspension"
+        "explanation": "The technology could be repurposed for harmful applications, such as surveillance or censorship, which would have significant ethical implications."
       },
       {
         "risk": "Lack of transparency",
         "risk_category": "Transparency",
         "severity": "Medium",
-        "explanation": "The project's lack of engagement with journalists' unions or minority-rights groups, and the potential for unclear or unexplained decisions"
+        "explanation": "The project's lack of transparency in its decision-making process and potential biases may lead to a lack of trust and accountability."
       },
       {
-        "risk": "Privacy breach",
-        "risk_category": "PrivacyBreach",
+        "risk": "Environmental impact",
+        "risk_category": "EnvironmentalHarm",
         "severity": "Low",
-        "explanation": "The potential for unauthorised collection, processing, or disclosure of personal data, although the project primarily uses public data"
+        "explanation": "The project's computational requirements and energy consumption may have a minor environmental impact, which should be considered and mitigated where possible."
       }
     ],
     "applicable_requirements": [
@@ -183,7 +238,7 @@
         "requirement_text": "Avoid harm",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to prevent or mitigate potential harms, such as mislabelling or auto-suspension"
+        "action_needed": "Implement measures to prevent harm, such as human oversight and review processes"
       },
       {
         "requirement_id": "ACM017",
@@ -193,158 +248,181 @@
         "action_needed": "Obtain explicit consent from participants or explain why consent was not obtained"
       },
       {
-        "requirement_id": "ACM020",
-        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population",
-        "framework": "ACMConference",
+        "requirement_id": "EUAIAct AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough assessment of the dataset's representativeness and communicate the results"
+        "action_needed": "Conduct a FRIA to assess the project's risks and impacts"
       },
       {
-        "requirement_id": "ACM021",
-        "requirement_text": "Consider whether technology can be used to harm, injure or kill people",
-        "framework": "ACMConference",
+        "requirement_id": "EUAIAct AI015",
+        "requirement_text": "Describe human oversight measures in place",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment to identify potential harms and implement measures to prevent or mitigate them"
+        "action_needed": "Implement human oversight measures to review and correct the classifier's decisions"
+      },
+      {
+        "requirement_id": "HorizonEurope HE002",
+        "requirement_text": "AI system must not autonomously make decisions about fundamental personal, economic, social or political issues",
+        "framework": "HorizonEurope",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Ensure that the classifier's decisions are subject to human review and oversight"
       },
       {
         "requirement_id": "ACM023",
         "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to prevent or mitigate potential discrimination or negative impacts"
+        "action_needed": "Conduct a thorough analysis to identify potential biases and discriminatory impacts"
       },
       {
         "requirement_id": "ACM025",
         "requirement_text": "Communicate whether approach could facilitate deceptive interactions causing harm",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough assessment of the potential for deceptive interactions and communicate the results"
-      },
-      {
-        "requirement_id": "ACM027",
-        "requirement_text": "Research must not build upon or facilitate illegal activity",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the research does not facilitate or build upon illegal activity"
-      },
-      {
-        "requirement_id": "ACM028",
-        "requirement_text": "Inspect suspected biases or limitations in models/datasets",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough inspection of the model and dataset for potential biases or limitations"
+        "action_needed": "Implement measures to prevent deceptive interactions and potential harms"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 11",
         "right_name": "Freedom of Expression",
-        "relevance": "The project's potential to restrict freedom of expression, particularly through auto-suspension of accounts"
-      },
-      {
-        "article": "Article 12",
-        "right_name": "Freedom of Assembly",
-        "relevance": "The project's potential to restrict freedom of assembly, particularly through mislabelling of anti-regime protest slogans"
+        "relevance": "The project's auto-suspension feature may infringe upon individuals' right to freedom of expression"
       },
       {
         "article": "Article 21",
         "right_name": "Non-Discrimination",
-        "relevance": "The project's potential to perpetuate discrimination, particularly through biases in the model"
+        "relevance": "The project's potential biases and discriminatory impacts may infringe upon individuals' right to non-discrimination"
       },
       {
         "article": "Article 47",
         "right_name": "Right to Effective Remedy",
-        "relevance": "The project's potential to restrict access to effective remedy, particularly through auto-suspension of accounts without human review"
+        "relevance": "The project's lack of transparency and accountability may limit individuals' access to effective remedies for potential harms"
+      },
+      {
+        "article": "Article 12",
+        "right_name": "Freedom of Assembly",
+        "relevance": "The project's potential impacts on freedom of assembly and association should be considered and mitigated where possible"
       }
     ],
     "historical_precedents": [
       {
-        "incident_id": "AIAAIC-001",
-        "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of ensuring that AI systems do not perpetuate existing biases or discrimination"
-      },
-      {
-        "incident_id": "AIAAIC-002",
-        "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The potential for AI systems to lead to false or unjustified decisions, particularly in high-stakes applications"
-      },
-      {
-        "incident_id": "AIAAIC-003",
-        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The potential for AI systems to generate harmful or offensive content, particularly in applications that involve human interaction"
-      },
-      {
-        "incident_id": "AIAAIC-004",
-        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
-        "lesson": "The importance of ensuring that AI systems do not perpetuate existing biases or discrimination, particularly in applications that involve decision-making about individuals"
-      },
-      {
-        "incident_id": "AIAAIC-008",
-        "incident_title": "PredPol Predictive Policing Algorithmic Bias",
-        "lesson": "The potential for AI systems to perpetuate existing biases or discrimination, particularly in applications that involve decision-making about individuals or groups"
-      },
-      {
         "incident_id": "AIAAIC-014",
         "incident_title": "YouTube Recommendation Radicalisation",
-        "lesson": "The potential for AI systems to lead to the dissemination of harmful or extremist content, particularly in applications that involve recommendation or filtering"
+        "lesson": "The potential for AI systems to perpetuate and amplify harmful content"
       },
       {
         "incident_id": "AIAAIC-018",
         "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
-        "lesson": "The potential for AI systems to amplify or perpetuate harmful or extremist content, particularly in applications that involve social media or online interaction"
+        "lesson": "The importance of considering the potential impacts of AI systems on vulnerable populations"
       },
       {
         "incident_id": "AIAAIC-027",
         "incident_title": "Spotify Mood Inference Patent",
-        "lesson": "The potential for AI systems to collect or process sensitive personal data, particularly in applications that involve human interaction or profiling"
+        "lesson": "The potential risks and implications of using AI systems to infer and manipulate individuals' emotions and preferences"
+      },
+      {
+        "incident_id": "AIAAIC-001",
+        "incident_title": "Amazon Hiring Algorithm Gender Bias",
+        "lesson": "The importance of considering and addressing potential biases in AI systems"
+      },
+      {
+        "incident_id": "AIAAIC-002",
+        "incident_title": "Detroit Police Facial Recognition False Arrest",
+        "lesson": "The potential risks and implications of using AI systems for surveillance and law enforcement"
+      },
+      {
+        "incident_id": "AIAAIC-003",
+        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
+        "lesson": "The importance of considering the potential impacts of AI systems on individuals and society"
+      },
+      {
+        "incident_id": "AIAAIC-004",
+        "incident_title": "COMPAS Recidivism Algorithm Racial Bias",
+        "lesson": "The potential risks and implications of using AI systems to make decisions about individuals' lives and freedoms"
+      },
+      {
+        "incident_id": "AIAAIC-008",
+        "incident_title": "PredPol Predictive Policing Algorithmic Bias",
+        "lesson": "The importance of considering the potential impacts of AI systems on vulnerable populations and communities"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Conduct a thorough impact assessment to identify potential harms and benefits",
-        "priority": "High"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Implement measures to prevent or mitigate potential harms, such as mislabelling or auto-suspension",
-        "priority": "High"
+        "mitigation": "EthicsReviewBoard",
+        "mitigation_id": "EthicsReviewBoard",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Obtain explicit consent from participants or explain why consent was not obtained",
-        "priority": "Medium"
+        "mitigation": "AccessControl",
+        "mitigation_id": "AccessControl",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct a thorough assessment of the dataset's representativeness and communicate the results",
-        "priority": "Medium"
+        "mitigation": "Anonymisation",
+        "mitigation_id": "Anonymisation",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Implement measures to prevent or mitigate potential discrimination or negative impacts",
-        "priority": "Medium"
+        "mitigation": "AuditLog",
+        "mitigation_id": "AuditLog",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct a thorough inspection of the model and dataset for potential biases or limitations",
-        "priority": "Medium"
+        "mitigation": "ComplaintMechanism",
+        "mitigation_id": "ComplaintMechanism",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Ensure that the research does not facilitate or build upon illegal activity",
-        "priority": "Low"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Communicate the potential for deceptive interactions and implement measures to prevent or mitigate them",
-        "priority": "Low"
+        "mitigation": "Pseudonymisation",
+        "mitigation_id": "Pseudonymisation",
+        "priority": "Medium",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "StaffTraining",
+        "mitigation_id": "StaffTraining",
+        "priority": "Medium",
+        "from_taxonomy": true
+      },
+      {
+        "mitigation": "EnvironmentalSafeguard",
+        "mitigation_id": "EnvironmentalSafeguard",
+        "priority": "Low",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
       "Conduct a thorough impact assessment to identify potential harms and benefits",
-      "Implement measures to prevent or mitigate potential harms, such as mislabelling or auto-suspension",
+      "Implement measures to prevent harm, such as human oversight and review processes",
       "Obtain explicit consent from participants or explain why consent was not obtained",
-      "Conduct a thorough assessment of the dataset's representativeness and communicate the results",
-      "Implement measures to prevent or mitigate potential discrimination or negative impacts"
+      "Conduct a FRIA to assess the project's risks and impacts",
+      "Implement human oversight measures to review and correct the classifier's decisions",
+      "Ensure that the classifier's decisions are subject to human review and oversight"
     ],
     "tier2_reflective_prompts": [
-      "What are the potential benefits and harms of the proposed research, and how can they be mitigated?",
-      "How can the research ensure that it does not perpetuate existing biases or discrimination?",
-      "What measures can be taken to ensure that the research is transparent, accountable, and respectful of human rights and dignity?",
-      "How can the research be designed to promote positive social change and minimize potential negative impacts?"
+      "What are the potential biases and discriminatory impacts of the project?",
+      "How can the project's transparency and accountability be improved?",
+      "What are the potential risks and implications of using AI systems for surveillance and law enforcement?",
+      "How can the project's environmental impact be mitigated?",
+      "What are the potential consequences of the project's auto-suspension feature on individuals' right to freedom of expression?"
     ],
     "reams_clearance_likely": false,
     "confidence_flag": "HIGH",
@@ -362,6 +440,21 @@
       "rights_matched": 4,
       "requirements_retrieved": 60,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM020",
         "ACM025",
@@ -440,12 +533,11 @@
         "ACM001",
         "ACM002",
         "ACM017",
-        "ACM020",
-        "ACM021",
+        "EUAIAct AI001",
+        "EUAIAct AI015",
+        "HorizonEurope HE002",
         "ACM023",
-        "ACM025",
-        "ACM027",
-        "ACM028"
+        "ACM025"
       ],
       "incidents_sample": [
         "AIAAIC-014",
@@ -455,6 +547,5 @@
         "AIAAIC-002"
       ]
     }
-  },
-  "compact_prompt": false
+  }
 }

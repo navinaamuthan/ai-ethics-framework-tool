@@ -2,9 +2,9 @@
   "proposal_id": "P33",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-21T01:20:08.554142",
+  "timestamp": "2026-08-03T20:38:25.274032",
   "proposal_text": "This project proposes an on-campus FAQ chatbot answering timetable, fee, and library questions for undergraduate students. Queries are answered from a curated knowledge base. For 'service improvement,' the system stores raw query text linked to student ID for twelve months. Most queries are mundane, but logs will inevitably include questions about mitigating circumstances, disability supports, and mental-health services. Students see a cookie-style banner but no granular opt-out from identifiable logging while still using the bot. No model makes academic decisions. The subtle issue is purpose creep and sensitive-query retention rather than high-stakes automation.",
-  "context_max_requirements": 10,
+  "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
     "student",
@@ -111,184 +111,255 @@
       "df": 5
     }
   ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
   "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The proposed on-campus FAQ chatbot poses ethical risks related to the storage of raw query text linked to student IDs, potential purpose creep, and the lack of granular opt-out options for students. These risks may lead to privacy breaches, psychological harm, and dignity concerns. The system's ability to collect sensitive information about students, such as mitigating circumstances, disability supports, and mental health services, raises concerns about data governance and potential discrimination. The chatbot's design and implementation must prioritize transparency, accountability, and respect for students' rights and dignity.",
+    "risk_summary": "The proposed on-campus FAQ chatbot poses risks related to the storage of raw query text linked to student IDs, potentially including sensitive information about mitigating circumstances, disability supports, and mental health services. The lack of granular opt-out options for identifiable logging while using the bot raises concerns about privacy and data protection. Additionally, the system's potential for purpose creep and retention of sensitive queries may lead to unintended consequences. The project's impact on student dignity, psychological well-being, and data governance must be carefully considered.",
     "overall_risk_level": "Medium",
     "identified_risks": [
       {
-        "risk": "Storage of raw query text linked to student IDs",
+        "risk": "Storage of sensitive student information",
         "risk_category": "PrivacyBreach",
         "severity": "Medium",
-        "explanation": "The chatbot's storage of raw query text linked to student IDs poses a risk of unauthorized collection, processing, or disclosure of personal data."
+        "explanation": "The chatbot's storage of raw query text linked to student IDs may compromise student privacy and data protection."
       },
       {
-        "risk": "Lack of granular opt-out options for students",
-        "risk_category": "Transparency",
+        "risk": "Lack of granular opt-out options",
+        "risk_category": "PrivacyBreach",
         "severity": "Medium",
-        "explanation": "The chatbot's lack of granular opt-out options for students may lead to a lack of transparency and accountability in the system's operation and decision-making processes."
+        "explanation": "Students are not provided with sufficient control over their personal data, which may lead to unintended consequences."
       },
       {
-        "risk": "Potential purpose creep",
+        "risk": "Purpose creep and retention of sensitive queries",
         "risk_category": "DataGovernance",
         "severity": "Medium",
-        "explanation": "The chatbot's potential purpose creep may lead to the use of student data for unintended or unauthorized purposes, posing a risk to data governance and students' rights."
+        "explanation": "The system's potential for purpose creep and retention of sensitive queries may lead to unintended consequences, such as the misuse of student data."
       },
       {
-        "risk": "Collection of sensitive information about students",
+        "risk": "Impact on student dignity and psychological well-being",
         "risk_category": "Dignity",
-        "severity": "Medium",
-        "explanation": "The chatbot's ability to collect sensitive information about students, such as mitigating circumstances, disability supports, and mental health services, raises concerns about dignity and the potential for psychological harm."
+        "severity": "Low",
+        "explanation": "The chatbot's interaction with students may potentially impact their dignity and psychological well-being, particularly if sensitive information is mishandled."
       },
       {
-        "risk": "Potential discrimination",
-        "risk_category": "Discrimination",
+        "risk": "Transparency and explainability of the chatbot's decision-making process",
+        "risk_category": "Transparency",
         "severity": "Low",
-        "explanation": "The chatbot's potential to collect and process sensitive information about students may lead to discrimination or unfair differential treatment of individuals or groups based on protected characteristics."
+        "explanation": "The chatbot's decision-making process may not be transparent or explainable to students, which may lead to mistrust or confusion."
       }
     ],
     "applicable_requirements": [
       {
         "requirement_id": "ACM001",
-        "requirement_text": "Research must contribute to society and human well-being \u2014 discuss how applications may harm individuals, groups or society and ways to mitigate such harms",
+        "requirement_text": "Research must contribute to society and human well-being",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough impact assessment to identify potential harms and develop strategies to mitigate them"
-      },
-      {
-        "requirement_id": "ACM002",
-        "requirement_text": "Avoid harm \u2014 consider how data, code or other outcomes of research may cause harm",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to prevent harm, such as data anonymization and secure storage"
+        "action_needed": "Conduct a thorough impact assessment to ensure the chatbot contributes to student well-being"
       },
       {
         "requirement_id": "ACM006",
-        "requirement_text": "Respect privacy \u2014 obtain informed consent where required and protect personally identifiable information",
+        "requirement_text": "Respect privacy",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain informed consent from students and implement measures to protect their personally identifiable information"
+        "action_needed": "Implement robust privacy measures, such as encryption and access controls, to protect student data"
       },
       {
-        "requirement_id": "ACM008",
-        "requirement_text": "Consider possible risks and impacts of the research approach itself (not just applications)",
+        "requirement_id": "ACM016",
+        "requirement_text": "Datasets should minimise exposure of personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough risk assessment to identify potential risks and develop strategies to mitigate them"
+        "action_needed": "Minimise the collection and storage of personally identifiable information"
       },
       {
-        "requirement_id": "ACM010",
-        "requirement_text": "Design and implement systems that are robustly and usably secure \u2014 especially systems close to production deployment",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement robust security measures to protect the chatbot and its data"
-      },
-      {
-        "requirement_id": "ACM011",
-        "requirement_text": "Manage personnel and resources to enhance quality of working life \u2014 consider how participation of annotators/crowdworkers may cause benefits or harms",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider the potential impact of the chatbot on the working lives of annotators and crowdworkers and develop strategies to enhance their quality of working life"
-      },
-      {
-        "requirement_id": "EUAIAct-1",
-        "requirement_text": "Ensure that AI systems are transparent, explainable, and fair",
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA",
         "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to ensure transparency, explainability, and fairness in the chatbot's decision-making processes"
+        "action_needed": "Conduct a thorough risk assessment to determine if a FRIA is required"
       },
       {
-        "requirement_id": "HorizonEurope-1",
-        "requirement_text": "Ensure that research and innovation activities are conducted in a responsible and ethical manner",
-        "framework": "HorizonEurope",
+        "requirement_id": "AI008",
+        "requirement_text": "State the intended purpose of the AI system",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct research and innovation activities in a responsible and ethical manner, with consideration for the potential impacts on society and the environment"
+        "action_needed": "Clearly define the chatbot's intended purpose and ensure it aligns with the institution's goals"
       },
       {
-        "requirement_id": "TCDREAMS-1",
-        "requirement_text": "Ensure that research activities are conducted in accordance with the principles of respect for persons, beneficence, non-maleficence, and justice",
-        "framework": "TCDREAMS",
+        "requirement_id": "EUAIAct",
+        "requirement_text": "Comply with EU AI Act regulations",
+        "framework": "EUAIAct",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct research activities in accordance with the principles of respect for persons, beneficence, non-maleficence, and justice"
+        "action_needed": "Ensure the chatbot complies with EU AI Act regulations, including transparency and explainability requirements"
+      },
+      {
+        "requirement_id": "ACM022",
+        "requirement_text": "Consider risk that applications could open security vulnerabilities or cause serious accidents",
+        "framework": "ACMConference",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Conduct a thorough security assessment to identify potential vulnerabilities"
+      },
+      {
+        "requirement_id": "ACM031",
+        "requirement_text": "Use privacy protocols, encryption and anonymisation to reduce risk of data leakage",
+        "framework": "ACMConference",
+        "tier": "Tier 2 Reflective",
+        "action_needed": "Implement robust privacy protocols to protect student data"
       }
     ],
     "charter_rights_at_risk": [
       {
         "article": "Article 1",
         "right_name": "Human Dignity",
-        "relevance": "The chatbot's ability to collect sensitive information about students raises concerns about dignity and the potential for psychological harm"
+        "relevance": "The chatbot's potential impact on student dignity and psychological well-being"
       },
       {
         "article": "Article 8",
         "right_name": "Data Protection",
-        "relevance": "The chatbot's storage of raw query text linked to student IDs poses a risk of unauthorized collection, processing, or disclosure of personal data"
+        "relevance": "The chatbot's storage and processing of student personal data"
       },
       {
         "article": "Article 24",
         "right_name": "Rights of the Child",
-        "relevance": "The chatbot's potential to collect and process sensitive information about students, including children, raises concerns about the protection of their rights and dignity"
+        "relevance": "The chatbot's potential impact on student well-being and dignity, particularly for vulnerable students"
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-003",
         "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The importance of considering the potential risks and impacts of AI systems, including the potential for harmful outputs"
-      },
-      {
-        "incident_id": "AIAAIC-005",
-        "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The importance of ensuring that AI systems are fair, transparent, and free from bias"
+        "lesson": "The importance of robust testing and validation to prevent harmful outputs"
       },
       {
         "incident_id": "AIAAIC-025",
         "incident_title": "Amazon Alexa Recording Children Without Consent",
-        "lesson": "The importance of obtaining informed consent from individuals, including children, before collecting and processing their personal data"
+        "lesson": "The need for transparent and explicit consent mechanisms for data collection and processing"
       },
       {
         "incident_id": "AIAAIC-026",
         "incident_title": "Facial Recognition in UK Schools",
-        "lesson": "The importance of considering the potential risks and impacts of AI systems, including the potential for privacy breaches and discrimination"
+        "lesson": "The importance of careful consideration and transparency when implementing AI systems in sensitive environments"
       },
       {
-        "incident_id": "AIAAIC-044",
-        "incident_title": "Stable Diffusion CSAM Generation",
-        "lesson": "The importance of ensuring that AI systems are designed and implemented in a way that prevents harm, including the generation of harmful content"
+        "incident_id": "AIAAIC-006",
+        "incident_title": "Healthcare Algorithm Racial Bias (Optum)",
+        "lesson": "The need for thorough testing and validation to prevent biased outcomes"
+      },
+      {
+        "incident_id": "AIAAIC-007",
+        "incident_title": "Clearview AI Mass Facial Recognition Scraping",
+        "lesson": "The importance of respecting individual privacy and data protection rights"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement measures to prevent harm, such as data anonymization and secure storage",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Obtain informed consent from students and implement measures to protect their personally identifiable information",
-        "priority": "High"
+        "mitigation": "AccessControl",
+        "mitigation_id": "AccessControl",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Conduct a thorough impact assessment to identify potential harms and develop strategies to mitigate them",
-        "priority": "Medium"
+        "mitigation": "Pseudonymisation",
+        "mitigation_id": "Pseudonymisation",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Implement robust security measures to protect the chatbot and its data",
-        "priority": "Medium"
+        "mitigation": "HumanOversight",
+        "mitigation_id": "HumanOversight",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Consider the potential impact of the chatbot on the working lives of annotators and crowdworkers and develop strategies to enhance their quality of working life",
-        "priority": "Low"
+        "mitigation": "Transparency and explainability measures",
+        "mitigation_id": "Transparency",
+        "priority": "Low",
+        "from_taxonomy": false
       }
     ],
     "tier1_mandatory_actions": [
-      "Conduct a thorough impact assessment to identify potential harms and develop strategies to mitigate them",
-      "Implement measures to prevent harm, such as data anonymization and secure storage",
-      "Obtain informed consent from students and implement measures to protect their personally identifiable information",
-      "Implement robust security measures to protect the chatbot and its data"
+      "Conduct a thorough impact assessment to ensure the chatbot contributes to student well-being",
+      "Implement robust privacy measures, such as encryption and access controls, to protect student data",
+      "Minimise the collection and storage of personally identifiable information",
+      "Clearly define the chatbot's intended purpose and ensure it aligns with the institution's goals"
     ],
     "tier2_reflective_prompts": [
-      "Consider the potential impact of the chatbot on the working lives of annotators and crowdworkers and develop strategies to enhance their quality of working life",
-      "Reflect on the potential biases and discrimination that may be present in the chatbot's decision-making processes and develop strategies to mitigate them"
+      "What are the potential risks and benefits of implementing the chatbot, and how can they be mitigated?",
+      "How can the chatbot's decision-making process be made more transparent and explainable to students?",
+      "What measures can be taken to ensure the chatbot is fair, unbiased, and respectful of student dignity and well-being?"
     ],
-    "reams_clearance_likely": false,
+    "reams_clearance_likely": true,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
@@ -300,6 +371,21 @@
       "rights_matched": 3,
       "requirements_retrieved": 108,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM001",
         "ACM002",
@@ -424,14 +510,13 @@
       ],
       "requirements_cited": [
         "ACM001",
-        "ACM002",
         "ACM006",
-        "ACM008",
-        "ACM010",
-        "ACM011",
-        "EUAIAct-1",
-        "HorizonEurope-1",
-        "TCDREAMS-1"
+        "ACM016",
+        "AI001",
+        "AI008",
+        "EUAIAct",
+        "ACM022",
+        "ACM031"
       ],
       "incidents_sample": [
         "AIAAIC-003",
@@ -441,6 +526,5 @@
         "AIAAIC-026"
       ]
     }
-  },
-  "compact_prompt": false
+  }
 }

@@ -2,249 +2,362 @@
   "proposal_id": "P07",
   "mode": "full",
   "llm_backend": "groq",
-  "timestamp": "2026-07-19T19:53:23.491609",
+  "timestamp": "2026-08-02T14:51:39.991262",
   "proposal_text": "This research proposes to apply sentiment analysis and linguistic style detection to a corpus of 5,000 anonymised undergraduate essays submitted to the School of English at Trinity College Dublin. The aim is to investigate whether emotional tone and writing style correlate with academic grade outcomes. Essays will be collected from the past three academic years with student consent obtained retrospectively via email. The NLP pipeline will extract features including sentiment polarity, subjectivity scores, vocabulary complexity, and sentence structure patterns. The researchers will investigate whether detectable stylistic differences correlate with students' first language, gender, or socioeconomic background as indicated by fee status. All analysis will be performed on pseudonymised data with student IDs replaced by random codes. Results will be published in aggregate form only.",
   "context_max_requirements": 25,
   "llm_model": "llama-3.3-70b-versatile",
   "keywords": [
-    "data",
-    "consent",
     "student",
-    "school",
-    "scor",
-    "gender",
+    "sentiment",
+    "consent",
     "emotion",
-    "sentiment"
+    "gender",
+    "school",
+    "scor"
   ],
   "matched_rights": [
     "Art11_FreedomOfExpression",
     "Art1_HumanDignity",
     "Art21_NonDiscrimination",
-    "Art23_GenderEquality",
     "Art24_RightsOfChild",
     "Art3_RightToIntegrity",
-    "Art41_GoodAdministration",
-    "Art47_RightToEffectiveRemedy",
     "Art7_PrivateLife",
     "Art8_DataProtection"
   ],
-  "retrieved_requirements_count": 196,
+  "retrieved_requirements_count": 129,
   "retrieved_incidents_count": 8,
+  "retrieved_risk_categories": [
+    {
+      "id": "PrivacyBreach",
+      "label": "Privacy Breach",
+      "definition": "Risk of unauthorised collection, processing, or disclosure of personal data by an AI system.",
+      "idf_score": 2.8579,
+      "rank_score": 54.0,
+      "tf": 54,
+      "df": 77
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "definition": "Risk that affected persons cannot obtain explanation, contestation, or remedy for AI-mediated decisions.",
+      "idf_score": 2.5896,
+      "rank_score": 41.0,
+      "tf": 41,
+      "df": 101
+    },
+    {
+      "id": "PsychologicalHarm",
+      "label": "Psychological Harm",
+      "definition": "Risk of mental distress, manipulation, coercion, or emotional damage caused by an AI system.",
+      "idf_score": 3.9188,
+      "rank_score": 21.0,
+      "tf": 21,
+      "df": 26
+    },
+    {
+      "id": "Discrimination",
+      "label": "Discrimination",
+      "definition": "Risk of unfair differential treatment of individuals or groups based on protected characteristics by an AI system.",
+      "idf_score": 3.3228,
+      "rank_score": 18.0,
+      "tf": 18,
+      "df": 48
+    },
+    {
+      "id": "DataGovernance",
+      "label": "Data Governance",
+      "definition": "Risk arising from inadequate data stewardship, provenance, or quality controls in AI pipelines.",
+      "idf_score": 4.442,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 15
+    },
+    {
+      "id": "Dignity",
+      "label": "Dignity",
+      "definition": "Risk of degrading, objectifying, or otherwise undermining human dignity through AI system design or use.",
+      "idf_score": 4.3814,
+      "rank_score": 11.0,
+      "tf": 11,
+      "df": 16
+    },
+    {
+      "id": "FinancialHarm",
+      "label": "Financial Harm",
+      "definition": "Risk of economic loss, fraudulent debt, or material deprivation caused by an AI system.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 3,
+      "df": 3
+    },
+    {
+      "id": "ReputationalHarm",
+      "label": "Reputational Harm",
+      "definition": "Risk of damage to an individual's or organisation's reputation through AI-generated outputs or decisions.",
+      "idf_score": 5.8283,
+      "rank_score": 5.8283,
+      "tf": 2,
+      "df": 3
+    },
+    {
+      "id": "FalseIdentification",
+      "label": "False Identification",
+      "definition": "Risk of incorrect identity attribution (e.g. facial-recognition false matches) with consequential harm.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 4,
+      "df": 5
+    },
+    {
+      "id": "Transparency",
+      "label": "Transparency",
+      "definition": "Risk that an AI system's operation, capabilities, limitations, or decision rationale are not adequately disclosed to end-users and stakeholders.",
+      "idf_score": 5.4228,
+      "rank_score": 5.4228,
+      "tf": 2,
+      "df": 5
+    }
+  ],
+  "retrieved_mitigations": [
+    {
+      "id": "AccessControl",
+      "label": "Access Control",
+      "definition": ""
+    },
+    {
+      "id": "Anonymisation",
+      "label": "Anonymisation",
+      "definition": ""
+    },
+    {
+      "id": "AuditLog",
+      "label": "Audit Log",
+      "definition": ""
+    },
+    {
+      "id": "ComplaintMechanism",
+      "label": "Complaint Mechanism",
+      "definition": ""
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "definition": ""
+    },
+    {
+      "id": "EnvironmentalSafeguard",
+      "label": "Environmental Safeguard",
+      "definition": ""
+    },
+    {
+      "id": "EthicsReviewBoard",
+      "label": "Ethics Review Board",
+      "definition": ""
+    },
+    {
+      "id": "GovernanceProcedure",
+      "label": "Governance Procedure",
+      "definition": ""
+    },
+    {
+      "id": "HumanOversight",
+      "label": "Human Oversight",
+      "definition": ""
+    },
+    {
+      "id": "IncidentResponsePlan",
+      "label": "Incident Response Plan",
+      "definition": ""
+    },
+    {
+      "id": "Pseudonymisation",
+      "label": "Pseudonymisation",
+      "definition": ""
+    },
+    {
+      "id": "ResponsibleReleasePolicy",
+      "label": "Responsible Release Policy",
+      "definition": ""
+    },
+    {
+      "id": "StaffTraining",
+      "label": "Staff Training",
+      "definition": ""
+    }
+  ],
+  "rights_disambiguation": "not_applicable",
   "assessment": {
-    "risk_summary": "The research proposal involves the analysis of anonymised undergraduate essays to investigate correlations between emotional tone, writing style, and academic grade outcomes. However, the use of sentiment analysis and linguistic style detection may raise concerns about potential biases in the NLP pipeline, particularly with regards to students' first language, gender, or socioeconomic background. Additionally, the collection of essays from students with retrospective consent via email may pose risks to student privacy and data protection. The research may also inadvertently perpetuate existing biases in the education system, potentially affecting students' future academic and career prospects.",
+    "risk_summary": "The proposed research involves sentiment analysis and linguistic style detection on a corpus of undergraduate essays, which may pose risks related to data governance, privacy, and potential biases in the analysis. The use of pseudonymised data and retrospective consent may mitigate some risks, but careful consideration of data protection, transparency, and potential discrimination is necessary. The research may also have implications for the dignity and well-being of students, particularly if the analysis reveals correlations between writing style and socioeconomic background. Furthermore, the potential for biased models or discriminatory outcomes must be addressed through appropriate mitigations.",
     "overall_risk_level": "Medium",
     "identified_risks": [
       {
-        "risk": "Bias in NLP pipeline",
+        "risk": "Data leakage or unauthorised access",
+        "risk_category": "PrivacyBreach",
         "severity": "Medium",
-        "explanation": "The use of sentiment analysis and linguistic style detection may introduce biases in the NLP pipeline, particularly with regards to students' first language, gender, or socioeconomic background."
+        "explanation": "Although the data is pseudonymised, there is still a risk of data leakage or unauthorised access, particularly if the pseudonymisation process is not robust."
       },
       {
-        "risk": "Student privacy and data protection",
+        "risk": "Biased models or discriminatory outcomes",
+        "risk_category": "Discrimination",
         "severity": "Medium",
-        "explanation": "The collection of essays from students with retrospective consent via email may pose risks to student privacy and data protection, particularly if the anonymisation process is not robust."
+        "explanation": "The analysis may reveal biases in the data or models, which could lead to discriminatory outcomes or perpetuate existing inequalities."
       },
       {
-        "risk": "Perpetuation of existing biases",
-        "severity": "Medium",
-        "explanation": "The research may inadvertently perpetuate existing biases in the education system, potentially affecting students' future academic and career prospects."
-      },
-      {
-        "risk": "Lack of transparency and accountability",
+        "risk": "Lack of transparency in the analysis or results",
+        "risk_category": "Transparency",
         "severity": "Low",
-        "explanation": "The research may lack transparency and accountability in its methods and findings, potentially leading to misunderstandings or misinterpretations of the results."
+        "explanation": "The research may not provide sufficient transparency in the analysis or results, which could lead to misunderstandings or misinterpretations of the findings."
       },
       {
-        "risk": "Inadequate consideration of contextual factors",
+        "risk": "Potential impact on student dignity or well-being",
+        "risk_category": "Dignity",
         "severity": "Low",
-        "explanation": "The research may not adequately consider contextual factors that may influence the correlations between emotional tone, writing style, and academic grade outcomes, such as student motivation or teaching quality."
+        "explanation": "The analysis may reveal correlations between writing style and socioeconomic background, which could have implications for student dignity or well-being if not handled sensitively."
       }
     ],
     "applicable_requirements": [
+      {
+        "requirement_id": "ACM002",
+        "requirement_text": "Avoid harm — consider how data, code or other outcomes of research may cause harm",
+        "framework": "ACMConference",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough risk assessment and implement measures to mitigate potential harms"
+      },
       {
         "requirement_id": "ACM006",
         "requirement_text": "Respect privacy — obtain informed consent where required and protect personally identifiable information",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that student consent is obtained through a robust and transparent process, and that personally identifiable information is protected throughout the research."
-      },
-      {
-        "requirement_id": "ACM003",
-        "requirement_text": "Be fair and take action not to discriminate — consider and ameliorate biases the approach may perpetuate",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Implement measures to detect and mitigate biases in the NLP pipeline, such as data preprocessing techniques or fairness metrics."
-      },
-      {
-        "requirement_id": "ACM004",
-        "requirement_text": "Consider and ameliorate biases in data and biased code/model outputs",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Regularly audit the NLP pipeline for biases and take corrective action to address any issues that arise."
-      },
-      {
-        "requirement_id": "ACM007",
-        "requirement_text": "Give comprehensive evaluation of systems and their impacts including analysis of possible risks of applications",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Conduct a thorough evaluation of the research's potential impacts and risks, including the potential for biases or discrimination."
-      },
-      {
-        "requirement_id": "ACM008",
-        "requirement_text": "Consider possible risks and impacts of the research approach itself (not just applications)",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Regularly reflect on the research approach and its potential risks and impacts, and make adjustments as needed to mitigate any negative consequences."
+        "action_needed": "Ensure that retrospective consent is obtained from students and that pseudonymisation is robust"
       },
       {
         "requirement_id": "ACM016",
         "requirement_text": "Datasets should minimise exposure of personally identifiable information unless informed consent is provided",
         "framework": "ACMConference",
         "tier": "Tier 1 Mandatory",
-        "action_needed": "Ensure that the dataset is anonymised and that personally identifiable information is minimised, unless informed consent is obtained from students."
-      },
-      {
-        "requirement_id": "ACM017",
-        "requirement_text": "Datasets with real data of real people must have explicit consent of participants, or explain why consent was not obtained",
-        "framework": "ACMConference",
-        "tier": "Tier 1 Mandatory",
-        "action_needed": "Obtain explicit consent from students for the use of their essays in the research, or provide a clear explanation for why consent was not obtained."
-      },
-      {
-        "requirement_id": "ACM020",
-        "requirement_text": "Assess and communicate degree to which datasets are representative of intended population — claims of diverse representation must be substantiated",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Assess the representativeness of the dataset and communicate the results, including any limitations or biases in the data."
-      },
-      {
-        "requirement_id": "ACM021",
-        "requirement_text": "Consider whether technology can be used to harm, injure or kill people through direct application, side effects or misuse",
-        "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider the potential risks and consequences of the research, including the potential for harm or injury to students or others."
+        "action_needed": "Implement measures to minimise exposure of personally identifiable information"
       },
       {
         "requirement_id": "ACM023",
-        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people including healthcare, education or credit access",
+        "requirement_text": "Consider whether technology can be used to discriminate, exclude or negatively impact people",
         "framework": "ACMConference",
-        "tier": "Tier 2 Reflective",
-        "action_needed": "Consider the potential for the research to perpetuate or exacerbate existing biases or discrimination in the education system."
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a thorough analysis of potential biases and implement measures to mitigate them"
+      },
+      {
+        "requirement_id": "AI001",
+        "requirement_text": "Assess whether organisation is obligated to conduct a FRIA (deployer of high-risk AI system)",
+        "framework": "EUAIAct",
+        "tier": "Tier 1 Mandatory",
+        "action_needed": "Conduct a FRIA assessment to determine if the research is subject to additional requirements"
       }
     ],
     "charter_rights_at_risk": [
       {
-        "article": "Article 21",
-        "right_name": "Non-Discrimination",
-        "relevance": "The research may inadvertently perpetuate existing biases in the education system, potentially affecting students' future academic and career prospects."
-      },
-      {
         "article": "Article 7",
-        "right_name": "Private Life",
-        "relevance": "The collection of essays from students with retrospective consent via email may pose risks to student privacy and data protection."
+        "right_name": "PrivateLife",
+        "relevance": "The research involves the analysis of personal data, which may implicate the right to private life"
       },
       {
         "article": "Article 8",
-        "right_name": "Data Protection",
-        "relevance": "The research may involve the processing of personal data, including student essays and demographic information, which must be protected in accordance with data protection regulations."
+        "right_name": "DataProtection",
+        "relevance": "The research involves the processing of personal data, which may implicate the right to data protection"
       },
       {
-        "article": "Article 23",
-        "right_name": "Gender Equality",
-        "relevance": "The research may inadvertently perpetuate existing biases in the education system, potentially affecting students' future academic and career prospects, particularly for female students."
+        "article": "Article 21",
+        "right_name": "NonDiscrimination",
+        "relevance": "The research may reveal biases or discriminatory outcomes, which could implicate the right to non-discrimination"
       }
     ],
     "historical_precedents": [
       {
         "incident_id": "AIAAIC-001",
         "incident_title": "Amazon Hiring Algorithm Gender Bias",
-        "lesson": "The importance of auditing and testing AI systems for biases and discrimination, particularly in high-stakes applications such as hiring and education."
+        "lesson": "The importance of addressing biases in AI systems to prevent discriminatory outcomes"
       },
       {
         "incident_id": "AIAAIC-005",
         "incident_title": "Google Photos Labeled Black People as Gorillas",
-        "lesson": "The need for diverse and representative training data to avoid perpetuating existing biases and stereotypes in AI systems."
-      },
-      {
-        "incident_id": "AIAAIC-009",
-        "incident_title": "Uber Self-Driving Car Fatal Pedestrian Crash",
-        "lesson": "The importance of prioritizing human safety and well-being in the development and deployment of AI systems, particularly in applications that involve physical interactions with humans."
-      },
-      {
-        "incident_id": "AIAAIC-014",
-        "incident_title": "YouTube Recommendation Radicalisation",
-        "lesson": "The potential for AI systems to perpetuate and amplify existing biases and prejudices, particularly in applications that involve recommendation or filtering of content."
+        "lesson": "The need for robust testing and validation to prevent errors or biases in AI systems"
       },
       {
         "incident_id": "AIAAIC-018",
         "incident_title": "Facebook Sri Lanka Hate Speech Amplification",
-        "lesson": "The importance of considering the potential social and cultural impacts of AI systems, particularly in applications that involve the dissemination of information or the facilitation of social interactions."
-      },
-      {
-        "incident_id": "AIAAIC-027",
-        "incident_title": "Spotify Mood Inference Patent",
-        "lesson": "The potential for AI systems to infer and exploit sensitive personal information, particularly in applications that involve the collection and analysis of user data."
-      },
-      {
-        "incident_id": "AIAAIC-003",
-        "incident_title": "Microsoft Tay Chatbot Harmful Outputs",
-        "lesson": "The importance of designing and testing AI systems to avoid perpetuating or amplifying harmful or discriminatory content, particularly in applications that involve human-AI interaction."
-      },
-      {
-        "incident_id": "AIAAIC-002",
-        "incident_title": "Detroit Police Facial Recognition False Arrest",
-        "lesson": "The potential for AI systems to perpetuate and amplify existing biases and prejudices, particularly in applications that involve law enforcement or the administration of justice."
+        "lesson": "The potential for AI systems to amplify or perpetuate harmful or discriminatory content"
       }
     ],
     "recommended_mitigations": [
       {
-        "mitigation": "Implement measures to detect and mitigate biases in the NLP pipeline",
-        "priority": "High"
+        "mitigation": "Encryption",
+        "mitigation_id": "Encryption",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Ensure that student consent is obtained through a robust and transparent process",
-        "priority": "High"
+        "mitigation": "Pseudonymisation",
+        "mitigation_id": "Pseudonymisation",
+        "priority": "High",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Regularly audit the NLP pipeline for biases and take corrective action to address any issues that arise",
-        "priority": "Medium"
+        "mitigation": "AccessControl",
+        "mitigation_id": "AccessControl",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Assess the representativeness of the dataset and communicate the results, including any limitations or biases in the data",
-        "priority": "Medium"
+        "mitigation": "EthicsReviewBoard",
+        "mitigation_id": "EthicsReviewBoard",
+        "priority": "Medium",
+        "from_taxonomy": true
       },
       {
-        "mitigation": "Consider the potential risks and consequences of the research, including the potential for harm or injury to students or others",
-        "priority": "Low"
+        "mitigation": "StaffTraining",
+        "mitigation_id": "StaffTraining",
+        "priority": "Low",
+        "from_taxonomy": true
       }
     ],
     "tier1_mandatory_actions": [
-      "Ensure that student consent is obtained through a robust and transparent process",
-      "Implement measures to detect and mitigate biases in the NLP pipeline",
-      "Regularly audit the NLP pipeline for biases and take corrective action to address any issues that arise",
-      "Assess the representativeness of the dataset and communicate the results, including any limitations or biases in the data"
+      "Conduct a thorough risk assessment and implement measures to mitigate potential harms",
+      "Ensure that retrospective consent is obtained from students and that pseudonymisation is robust",
+      "Implement measures to minimise exposure of personally identifiable information"
     ],
     "tier2_reflective_prompts": [
-      "Consider the potential risks and consequences of the research, including the potential for harm or injury to students or others",
-      "Reflect on the potential for the research to perpetuate or exacerbate existing biases or discrimination in the education system",
-      "Consider the potential for the research to have unintended consequences or impacts, particularly in the context of education and student outcomes"
+      "How might the research be designed to promote transparency and accountability?",
+      "What measures can be taken to address potential biases or discriminatory outcomes?",
+      "How can the research be conducted in a way that respects the dignity and well-being of students?"
     ],
     "reams_clearance_likely": true,
     "confidence_flag": "HIGH",
     "_retrieval_metadata": {
       "keywords": [
-        "data",
-        "consent",
         "student",
-        "school",
-        "scor",
-        "gender",
+        "sentiment",
+        "consent",
         "emotion",
-        "sentiment"
+        "gender",
+        "school",
+        "scor"
       ],
-      "rights_matched": 10,
-      "requirements_retrieved": 196,
+      "rights_matched": 7,
+      "requirements_retrieved": 129,
       "incidents_retrieved": 8,
+      "retrieved_mitigations": [
+        "AccessControl",
+        "Anonymisation",
+        "AuditLog",
+        "ComplaintMechanism",
+        "Encryption",
+        "EnvironmentalSafeguard",
+        "EthicsReviewBoard",
+        "GovernanceProcedure",
+        "HumanOversight",
+        "IncidentResponsePlan",
+        "Pseudonymisation",
+        "ResponsibleReleasePolicy",
+        "StaffTraining"
+      ],
       "requirements_sample": [
         "ACM020",
         "ACM025",
@@ -336,80 +449,6 @@
         "R042",
         "R046",
         "R048",
-        "ACM016",
-        "ACM017",
-        "ACM018",
-        "ACM021",
-        "ACM029",
-        "ACM030",
-        "ACM033",
-        "ACM034",
-        "AI002",
-        "AI003",
-        "AI004",
-        "AI005",
-        "AI006",
-        "AI007",
-        "AI009",
-        "AI012",
-        "AI015",
-        "AI018",
-        "AI020",
-        "AI026",
-        "AI027",
-        "AI028",
-        "AI029",
-        "AI030",
-        "HE011",
-        "HE023",
-        "HE024",
-        "HE025",
-        "HE026",
-        "HE028",
-        "HE030",
-        "HE034",
-        "HE039",
-        "HE040",
-        "HE043",
-        "HE044",
-        "HE045",
-        "HE046",
-        "HE047",
-        "HE052",
-        "R001",
-        "R002",
-        "R003",
-        "R004",
-        "R006",
-        "R007",
-        "R008",
-        "R012",
-        "R013",
-        "R016",
-        "R017",
-        "R030",
-        "R032",
-        "R035",
-        "R036",
-        "R037",
-        "R038",
-        "R041",
-        "R057",
-        "R058",
-        "R059",
-        "R060",
-        "R061",
-        "R062",
-        "R075",
-        "R077",
-        "R078",
-        "R079",
-        "ACM035",
-        "AI019",
-        "AI022",
-        "HE029",
-        "HE048",
-        "R074",
         "ACM003",
         "ACM008",
         "ACM010",
@@ -434,9 +473,14 @@
         "R083",
         "R084",
         "ACM009",
+        "ACM016",
+        "AI012",
         "AI014",
         "HE010",
+        "HE011",
+        "HE034",
         "HE035",
+        "HE046",
         "R005",
         "R014",
         "R018",
@@ -444,6 +488,7 @@
         "R024",
         "R025",
         "R029",
+        "R030",
         "R031",
         "R033",
         "R063",
@@ -453,19 +498,15 @@
         "R069",
         "R070",
         "R072",
-        "R073"
+        "R073",
+        "R074"
       ],
       "requirements_cited": [
+        "ACM002",
         "ACM006",
-        "ACM003",
-        "ACM004",
-        "ACM007",
-        "ACM008",
         "ACM016",
-        "ACM017",
-        "ACM020",
-        "ACM021",
-        "ACM023"
+        "ACM023",
+        "AI001"
       ],
       "incidents_sample": [
         "AIAAIC-014",
