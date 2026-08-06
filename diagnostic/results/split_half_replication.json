@@ -1,0 +1,200 @@
+{
+  "full_corpus": {
+    "n_proposals": 40,
+    "within_by_perspective": {
+      "technical": 0.4663,
+      "legal": 0.7507,
+      "ethics": 0.5818,
+      "lay": 0.659
+    },
+    "mean_within": 0.6144,
+    "mean_cross": 0.434,
+    "ceiling": 0.7507,
+    "noise_band": 0.2493,
+    "ceiling_perspective": "legal",
+    "assessor_kappa": {
+      "LLM-8B": 0.1235,
+      "LLM-70B": 0.3359,
+      "keyword-baseline": 0.0926,
+      "SHACL": 0.1544
+    },
+    "pairs": [
+      {
+        "a": "LLM-70B",
+        "b": "LLM-8B",
+        "gap": 0.2124,
+        "discriminable": false
+      },
+      {
+        "a": "LLM-70B",
+        "b": "SHACL",
+        "gap": 0.1815,
+        "discriminable": false
+      },
+      {
+        "a": "LLM-70B",
+        "b": "keyword-baseline",
+        "gap": 0.2433,
+        "discriminable": false
+      },
+      {
+        "a": "LLM-8B",
+        "b": "SHACL",
+        "gap": 0.0309,
+        "discriminable": false
+      },
+      {
+        "a": "LLM-8B",
+        "b": "keyword-baseline",
+        "gap": 0.0309,
+        "discriminable": false
+      },
+      {
+        "a": "SHACL",
+        "b": "keyword-baseline",
+        "gap": 0.0618,
+        "discriminable": false
+      }
+    ],
+    "n_discriminable": 0,
+    "n_pairs": 6
+  },
+  "halves": {
+    "P01-P20": {
+      "n_proposals": 20,
+      "within_by_perspective": {
+        "technical": 0.3856,
+        "legal": 0.7069,
+        "ethics": 0.6419,
+        "lay": 0.731
+      },
+      "mean_within": 0.6163,
+      "mean_cross": 0.5001,
+      "ceiling": 0.731,
+      "noise_band": 0.269,
+      "ceiling_perspective": "lay",
+      "risk_distribution": {
+        "High": 9,
+        "Medium": 7,
+        "Low": 4
+      },
+      "assessor_kappa": {
+        "LLM-8B": 0.2241,
+        "LLM-70B": 0.7619,
+        "keyword-baseline": 0.0909,
+        "SHACL": 0.3478
+      },
+      "pairs": [
+        {
+          "a": "LLM-70B",
+          "b": "LLM-8B",
+          "gap": 0.5378,
+          "discriminable": true
+        },
+        {
+          "a": "LLM-70B",
+          "b": "SHACL",
+          "gap": 0.4141,
+          "discriminable": true
+        },
+        {
+          "a": "LLM-70B",
+          "b": "keyword-baseline",
+          "gap": 0.671,
+          "discriminable": true
+        },
+        {
+          "a": "LLM-8B",
+          "b": "SHACL",
+          "gap": 0.1237,
+          "discriminable": false
+        },
+        {
+          "a": "LLM-8B",
+          "b": "keyword-baseline",
+          "gap": 0.1332,
+          "discriminable": false
+        },
+        {
+          "a": "SHACL",
+          "b": "keyword-baseline",
+          "gap": 0.2569,
+          "discriminable": false
+        }
+      ],
+      "n_discriminable": 3,
+      "n_pairs": 6
+    },
+    "P21-P40": {
+      "n_proposals": 20,
+      "within_by_perspective": {
+        "technical": 0.5271,
+        "legal": 0.7979,
+        "ethics": 0.4686,
+        "lay": 0.5217
+      },
+      "mean_within": 0.5788,
+      "mean_cross": 0.3334,
+      "ceiling": 0.7979,
+      "noise_band": 0.2021,
+      "ceiling_perspective": "legal",
+      "risk_distribution": {
+        "Medium": 10,
+        "High": 5,
+        "Low": 5
+      },
+      "assessor_kappa": {
+        "LLM-8B": 0.037,
+        "LLM-70B": -0.037,
+        "keyword-baseline": 0.1724,
+        "SHACL": -0.037
+      },
+      "pairs": [
+        {
+          "a": "LLM-70B",
+          "b": "LLM-8B",
+          "gap": 0.0741,
+          "discriminable": false
+        },
+        {
+          "a": "LLM-70B",
+          "b": "SHACL",
+          "gap": 0.0,
+          "discriminable": false
+        },
+        {
+          "a": "LLM-70B",
+          "b": "keyword-baseline",
+          "gap": 0.2095,
+          "discriminable": true
+        },
+        {
+          "a": "LLM-8B",
+          "b": "SHACL",
+          "gap": 0.0741,
+          "discriminable": false
+        },
+        {
+          "a": "LLM-8B",
+          "b": "keyword-baseline",
+          "gap": 0.1354,
+          "discriminable": false
+        },
+        {
+          "a": "SHACL",
+          "b": "keyword-baseline",
+          "gap": 0.2095,
+          "discriminable": true
+        }
+      ],
+      "n_discriminable": 2,
+      "n_pairs": 6
+    }
+  },
+  "replication": {
+    "within_exceeds_cross_both_halves": true,
+    "zero_discriminable_both_halves": false,
+    "ceiling_difference_between_halves": 0.0669,
+    "ceiling_perspective_agrees": false
+  }
+}

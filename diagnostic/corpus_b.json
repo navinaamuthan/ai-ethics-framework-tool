@@ -1,0 +1,304 @@
+[
+  {
+    "id": "B01",
+    "domain": "education technology",
+    "population": "children under 13",
+    "data_sensitivity": "biometric",
+    "safeguards": "none",
+    "scale": "national",
+    "risk_level": "High",
+    "risk_score": 8,
+    "score_rationale": [
+      "vulnerable population (children under 13) [+2]",
+      "sensitive data (biometric) [+2]",
+      "safeguards none [+2]",
+      "scale national [+2]"
+    ],
+    "proposal_text": "The proposed AI system is designed for education technology and utilizes biometric data from children under 13 years old to enhance learning experiences. The system collects pupil heart rate, skin conductance, and facial recognition data to monitor engagement and cognitive load. This information will be stored on a centralized server and accessed by educators and administrators nationwide. No specific safeguards are in place to protect the collected biometric data or limit its use. The AI algorithm will analyze the data to provide personalized recommendations for lesson planning and teacher support. Deployment of this system would enable real-time monitoring and data-driven decision-making across all educational institutions in the country, allowing for potential improvements in learning outcomes."
+  },
+  {
+    "id": "B02",
+    "domain": "education technology",
+    "population": "university students",
+    "data_sensitivity": "behavioural",
+    "safeguards": "partial",
+    "scale": "institutional",
+    "risk_level": "Low",
+    "risk_score": 2,
+    "score_rationale": [
+      "safeguards partial [+1]",
+      "scale institutional [+1]"
+    ],
+    "proposal_text": "The proposed AI system, titled \"Student Engagement Monitor,\" aims to provide personalized learning recommendations to university students through behavioral data analysis. The system will collect student interaction data with digital educational materials, including login history, time spent on assignments, and navigation patterns within online platforms.\n\nCollected data includes device information, IP addresses, and geolocation data. While the system has implemented some safeguards, such as encryption for data storage and transmission, it does not employ real-time facial recognition or biometric analysis. Additionally, students will not be able to opt-out of data collection entirely, although they can choose to limit its scope.\n\nDeployment will occur at the institutional level, with implementation planned in conjunction with university IT departments. The system's primary function is to provide actionable insights for instructors and administrators, enabling targeted interventions to support student success."
+  },
+  {
+    "id": "B03",
+    "domain": "education technology",
+    "population": "adult learners",
+    "data_sensitivity": "performance",
+    "safeguards": "full",
+    "scale": "single-site",
+    "risk_level": "Low",
+    "risk_score": 0,
+    "score_rationale": [],
+    "proposal_text": "The proposed AI system for education technology will utilize performance data from adult learners to provide personalized learning recommendations and feedback. The system will collect learners' assessment scores, completion rates, and time spent on tasks, as well as demographic information such as age and prior educational attainment.\n\nData is stored securely in a cloud-based database with access controls in place to limit unauthorized access. Data encryption protocols are used for data transmission and storage, and regular backups are performed to ensure data integrity. The system will also implement audit trails and logging mechanisms to track all data access and modifications.\n\nThe single-site deployment at XYZ University will be used as a pilot to refine the system before potential expansion to other institutions."
+  },
+  {
+    "id": "B04",
+    "domain": "scientific research tooling",
+    "population": "researchers",
+    "data_sensitivity": "publication metadata",
+    "safeguards": "full",
+    "scale": "single-site",
+    "risk_level": "Low",
+    "risk_score": 0,
+    "score_rationale": [],
+    "proposal_text": "The proposed AI system is designed to assist researchers in identifying relevant scientific publications based on metadata such as author names, keywords, and publication dates. The system will utilize natural language processing (NLP) and machine learning algorithms to analyze publication data from various sources.\n\nData collection involves harvesting publication metadata from online databases and repositories, including but not limited to PubMed, arXiv, and Google Scholar. Collected data includes titles, abstracts, authors, keywords, and citation information.\n\nSafeguards in place include data encryption during transmission and storage, secure authentication protocols for user access, and strict control over data retention periods. No personally identifiable information (PII) will be collected or stored. The system will operate within a single-site deployment, with no plans for cloud-based or multi-site configurations at this time."
+  },
+  {
+    "id": "B05",
+    "domain": "scientific research tooling",
+    "population": "clinical trial participants",
+    "data_sensitivity": "health",
+    "safeguards": "partial",
+    "scale": "multi-site",
+    "risk_level": "High",
+    "risk_score": 6,
+    "score_rationale": [
+      "vulnerable population (clinical trial participants) [+2]",
+      "sensitive data (health) [+2]",
+      "safeguards partial [+1]",
+      "scale multi-site [+1]"
+    ],
+    "proposal_text": "This AI system is designed to support scientific research in clinical trials by analyzing health data from participants across multiple sites. The system will collect and process participant data, including medical history, treatment outcomes, and physiological measurements. Data collection will occur through electronic health records (EHRs) and wearable devices. Currently, partial safeguards are in place to protect participant data, which include encryption of transmitted data and access controls for authorized personnel. However, no additional measures have been implemented to detect or prevent potential biases in the AI's decision-making processes. Deployment is planned across multiple clinical trial sites, with a phased rollout strategy to ensure system reliability and performance."
+  },
+  {
+    "id": "B06",
+    "domain": "scientific research tooling",
+    "population": "researchers",
+    "data_sensitivity": "code and text",
+    "safeguards": "full",
+    "scale": "open release",
+    "risk_level": "Low",
+    "risk_score": 1,
+    "score_rationale": [
+      "scale open release [+1]"
+    ],
+    "proposal_text": "The proposed AI system, \"Research Assistant,\" is a software tool designed to aid researchers in various scientific domains. It utilizes natural language processing and machine learning algorithms to analyze code and text data provided by users. The system collects input data, which includes user-submitted code snippets, research papers, and other relevant texts, as well as metadata such as user IDs and interaction logs. Safeguards in place include end-to-end encryption for data transmission, secure storage on cloud servers with access controls, and regular software updates to address potential vulnerabilities. The system is designed for open release, allowing researchers worldwide to utilize its features without restrictions."
+  },
+  {
+    "id": "B07",
+    "domain": "workplace systems",
+    "population": "warehouse workers",
+    "data_sensitivity": "location and productivity",
+    "safeguards": "none",
+    "scale": "national",
+    "risk_level": "High",
+    "risk_score": 6,
+    "score_rationale": [
+      "sensitive data (location and productivity) [+2]",
+      "safeguards none [+2]",
+      "scale national [+2]"
+    ],
+    "proposal_text": "We propose the development and deployment of an AI-powered workplace optimization system for warehouse workers nationwide. The system will utilize location data from wearable devices to monitor worker movement and productivity metrics, such as task completion rates and efficiency. This data will be collected and analyzed to identify areas for process improvement and optimize workflow. No specific safeguards are in place to protect the privacy or security of the collected data. Deployment is planned at a national scale, with plans for integration into existing warehouse management systems. The system's primary goal is to increase productivity and reduce operational costs through AI-driven decision-making."
+  },
+  {
+    "id": "B08",
+    "domain": "workplace systems",
+    "population": "office employees",
+    "data_sensitivity": "communication metadata",
+    "safeguards": "partial",
+    "scale": "institutional",
+    "risk_level": "Low",
+    "risk_score": 2,
+    "score_rationale": [
+      "safeguards partial [+1]",
+      "scale institutional [+1]"
+    ],
+    "proposal_text": "This AI system, \"Workplace Insights,\" will analyze communication metadata from office employees' digital platforms to provide institutional-level insights on collaboration and productivity. Collected data includes email headers, calendar events, instant messaging transcripts, and mobile app usage patterns. The system's architecture separates user data into identifiable and anonymized pools for analysis. However, partial safeguards are in place: user consent is not required for metadata collection, and access controls may be subject to institutional policies rather than explicit regulations. Deployment will target institutional settings, with potential for expansion to larger-scale applications. The system's primary function is to facilitate workplace optimization through data-driven recommendations and analytics."
+  },
+  {
+    "id": "B09",
+    "domain": "workplace systems",
+    "population": "job applicants",
+    "data_sensitivity": "video and speech",
+    "safeguards": "none",
+    "scale": "national",
+    "risk_level": "High",
+    "risk_score": 6,
+    "score_rationale": [
+      "sensitive data (video and speech) [+2]",
+      "safeguards none [+2]",
+      "scale national [+2]"
+    ],
+    "proposal_text": "The proposed AI system will be integrated into national workplace systems to evaluate job applicants through video and speech analysis. The system's primary function is to assess candidates' communication skills, tone, and body language during virtual interviews. Collected data includes video and audio recordings of applicant interactions, which will be processed using machine learning algorithms to generate performance metrics.\n\nThe system does not currently have implemented safeguards to ensure data protection or prevent potential biases in evaluation results. Deployment at a national scale is intended to integrate the AI tool into existing hiring processes for various industries."
+  },
+  {
+    "id": "B10",
+    "domain": "workplace systems",
+    "population": "employees",
+    "data_sensitivity": "aggregate wellbeing",
+    "safeguards": "full",
+    "scale": "single-site",
+    "risk_level": "Low",
+    "risk_score": 0,
+    "score_rationale": [],
+    "proposal_text": "The proposed AI system, \"Wellbeing Insights,\" will be deployed in a single-site workplace setting to analyze aggregate employee wellbeing data. The system collects and processes anonymous, aggregated metrics on employee engagement, stress levels, and productivity. Data sources include existing HR systems, performance management software, and electronic health records. Safeguards in place include encryption, secure access controls, and regular audits by external auditors. Additionally, a dedicated team will monitor the system's performance and address any issues that arise. The AI component of the system uses machine learning algorithms to identify trends and patterns within the data, providing actionable insights for HR decision-makers. A comprehensive change management plan is in place to ensure smooth integration with existing systems and minimize disruptions to employee workflows."
+  },
+  {
+    "id": "B11",
+    "domain": "consumer products",
+    "population": "general public",
+    "data_sensitivity": "purchase history",
+    "safeguards": "partial",
+    "scale": "national",
+    "risk_level": "Medium",
+    "risk_score": 3,
+    "score_rationale": [
+      "safeguards partial [+1]",
+      "scale national [+2]"
+    ],
+    "proposal_text": "The proposed AI system will be deployed nationwide to analyze purchase history data from consumer products. The system will utilize machine learning algorithms to identify patterns and trends in purchasing behavior, which can inform product development and marketing strategies. Data collection will occur through partnerships with major retailers and online marketplaces, capturing individual-level transactional data. Partial safeguards are implemented, including encryption of personal identifiable information and implementation of basic data minimization practices. However, the system does not currently include provisions for transparency or opt-out mechanisms, nor does it incorporate independent review processes to assess the accuracy of its outputs. Deployment will occur through cloud-based infrastructure, with plans for continuous monitoring and evaluation post-launch."
+  },
+  {
+    "id": "B12",
+    "domain": "consumer products",
+    "population": "children under 13",
+    "data_sensitivity": "voice",
+    "safeguards": "none",
+    "scale": "international",
+    "risk_level": "High",
+    "risk_score": 8,
+    "score_rationale": [
+      "vulnerable population (children under 13) [+2]",
+      "sensitive data (voice) [+2]",
+      "safeguards none [+2]",
+      "scale international [+2]"
+    ],
+    "proposal_text": "The proposed AI system will be deployed in the consumer products domain to interact with children under 13 through voice-based interfaces. The system will collect and process voice data from users, which may include personal information such as names, ages, and preferences. No specific safeguards are currently implemented to protect user data or ensure accountability for potential misuses. The proposed deployment is planned on an international scale, allowing the AI system to reach a global audience of children under 13. The collected voice data will be used to personalize product recommendations and improve the overall user experience. Further development and implementation should consider the incorporation of safeguards to address data protection and accountability concerns."
+  },
+  {
+    "id": "B13",
+    "domain": "consumer products",
+    "population": "general public",
+    "data_sensitivity": "anonymised telemetry",
+    "safeguards": "full",
+    "scale": "national",
+    "risk_level": "Low",
+    "risk_score": 2,
+    "score_rationale": [
+      "scale national [+2]"
+    ],
+    "proposal_text": "A nationwide AI-powered consumer product monitoring system will be deployed to collect anonymised telemetry data from a range of products, including household appliances and electronics. This data will be collected through embedded sensors and transmitted to a centralised server for analysis. The system will utilise machine learning algorithms to identify trends and patterns in product usage, enabling manufacturers to optimise product design and improve customer satisfaction. Anonymisation methods will ensure that individual identities are not linked to the collected data. Safeguards include encryption, access controls, and regular security audits. Data will be stored on secure servers within European Union borders. The system's architecture is designed for scalability, allowing for expansion to other domains as needed."
+  },
+  {
+    "id": "B14",
+    "domain": "civic infrastructure",
+    "population": "residents",
+    "data_sensitivity": "location",
+    "safeguards": "none",
+    "scale": "municipal",
+    "risk_level": "High",
+    "risk_score": 5,
+    "score_rationale": [
+      "sensitive data (location) [+2]",
+      "safeguards none [+2]",
+      "scale municipal [+1]"
+    ],
+    "proposal_text": "The proposed AI system, dubbed \"Smart City Navigator,\" will be deployed at a municipal scale to optimize civic infrastructure management. It will utilize location data collected from residents' mobile devices to route emergency services and prioritize maintenance tasks for city facilities. The system will also provide real-time traffic updates and parking guidance to reduce congestion and promote efficient use of public spaces.\n\nLocation data is the sole type of information collected by the system, which does not incorporate any safeguards to protect this data."
+  },
+  {
+    "id": "B15",
+    "domain": "civic infrastructure",
+    "population": "residents",
+    "data_sensitivity": "aggregate utility usage",
+    "safeguards": "full",
+    "scale": "municipal",
+    "risk_level": "Low",
+    "risk_score": 1,
+    "score_rationale": [
+      "scale municipal [+1]"
+    ],
+    "proposal_text": "The proposed AI system will be deployed in a municipal setting to analyze aggregate utility usage data for civic infrastructure management purposes. The system will collect and process data on energy consumption, water usage, and waste management from various sources, including meters and sensors installed throughout the municipality.\n\nThe collected data will include but is not limited to: residential address, account information, time-series data of utility usage, and demographic statistics. Safeguards in place for data handling and processing include encryption at rest and in transit, secure authentication protocols, and regular audits by third-party experts. No data sharing or transfer with external parties will occur without explicit consent from the municipality."
+  },
+  {
+    "id": "B16",
+    "domain": "civic infrastructure",
+    "population": "welfare applicants",
+    "data_sensitivity": "financial and household",
+    "safeguards": "none",
+    "scale": "national",
+    "risk_level": "High",
+    "risk_score": 8,
+    "score_rationale": [
+      "vulnerable population (welfare applicants) [+2]",
+      "sensitive data (financial and household) [+2]",
+      "safeguards none [+2]",
+      "scale national [+2]"
+    ],
+    "proposal_text": "We propose deploying an AI system to assist in processing welfare applications. The system will utilize financial and household data from applicants to determine eligibility and allocate resources efficiently across the country. Data collection includes income levels, employment status, and household composition. It is noted that this deployment does not include any specific safeguards for handling sensitive information. The system's output will be based on predetermined algorithms applied to the input data. Deployment at a national scale is anticipated."
+  },
+  {
+    "id": "B17",
+    "domain": "civic infrastructure",
+    "population": "public transport users",
+    "data_sensitivity": "anonymised counts",
+    "safeguards": "full",
+    "scale": "municipal",
+    "risk_level": "Low",
+    "risk_score": 1,
+    "score_rationale": [
+      "scale municipal [+1]"
+    ],
+    "proposal_text": "This AI system will monitor and analyze anonymized passenger counts on municipal public transportation networks to optimize route planning and resource allocation. The system will utilize machine learning algorithms to identify trends and patterns in passenger flow, enabling data-driven decision-making to improve service efficiency. Data collection will occur through existing passenger counting infrastructure, with no additional sensors or surveillance equipment being installed.\n\nThe data collected will be anonymized and aggregated, ensuring that individual passengers cannot be identified. Safeguards include end-to-end encryption for data transmission, secure storage in a cloud-based platform, and regular audits to detect potential vulnerabilities. Access controls are implemented at multiple levels, restricting access to authorized personnel only."
+  },
+  {
+    "id": "B18",
+    "domain": "education technology",
+    "population": "students with disabilities",
+    "data_sensitivity": "assistive-use data",
+    "safeguards": "partial",
+    "scale": "institutional",
+    "risk_level": "Medium",
+    "risk_score": 4,
+    "score_rationale": [
+      "vulnerable population (students with disabilities) [+2]",
+      "safeguards partial [+1]",
+      "scale institutional [+1]"
+    ],
+    "proposal_text": "The proposed AI system, named Adaptive Learning Platform (ALP), aims to support students with disabilities in educational settings by analyzing assistive-use data. The platform collects user data on student interactions with digital materials, including typing speed, navigation patterns, and device usage. This data is stored on institutional servers for analysis and algorithmic adaptation of learning content. Partial safeguards are implemented, including data encryption during transmission and de-identification upon storage. However, access controls and audit trails for data use are not fully established. Institutional deployment will involve integrating ALP with existing Learning Management Systems (LMS) to provide tailored support for students with disabilities. Pilot implementation will occur in a select group of schools, allowing for evaluation and refinement prior to broader adoption."
+  },
+  {
+    "id": "B19",
+    "domain": "consumer products",
+    "population": "older adults",
+    "data_sensitivity": "health and activity",
+    "safeguards": "partial",
+    "scale": "national",
+    "risk_level": "High",
+    "risk_score": 7,
+    "score_rationale": [
+      "vulnerable population (older adults) [+2]",
+      "sensitive data (health and activity) [+2]",
+      "safeguards partial [+1]",
+      "scale national [+2]"
+    ],
+    "proposal_text": "This AI system, designed for consumer products targeting older adults, utilizes health and activity data collected through wearable devices and mobile applications. The system's primary function is to analyze user behavior and provide personalized recommendations on product usage. Collected data includes vital signs, physical activity levels, and sleep patterns.\n\nThe system stores this data in a cloud-based repository, accessible via secure web interfaces. Partial safeguards are implemented, including encryption of transmitted data and password protection for account access. However, certain aspects of data processing and storage remain unregulated. The proposed deployment scale is national, with the goal of reaching 20% market penetration within two years."
+  },
+  {
+    "id": "B20",
+    "domain": "workplace systems",
+    "population": "gig-economy drivers",
+    "data_sensitivity": "location and rating",
+    "safeguards": "none",
+    "scale": "international",
+    "risk_level": "High",
+    "risk_score": 6,
+    "score_rationale": [
+      "sensitive data (location and rating) [+2]",
+      "safeguards none [+2]",
+      "scale international [+2]"
+    ],
+    "proposal_text": "The proposed AI system will be deployed in workplace systems to analyze location and rating data from gig-economy drivers on a global scale. The system will utilize machine learning algorithms to process driver behavior and performance metrics. Data collection includes GPS coordinates and user ratings provided through the platform. No additional safeguards beyond standard platform policies are implemented to protect sensitive information.\n\nThe system's primary function is to optimize route planning and dynamic pricing for gig-economy services. It will provide real-time analytics and insights to drivers, clients, and logistics managers. International deployment is planned to facilitate global scalability and integration with existing workplace systems."
+  }
+]
