@@ -1,6 +1,6 @@
 import type { AssessmentResponse } from "@/lib/types"
 
-/** Sample payload for UI preview (`?preview=1`) — not used in production assessments. */
+/** Sample payload for UI preview (`?preview=1`) - not used in production assessments. */
 export const PREVIEW_ASSESSMENT: AssessmentResponse = {
   llm_backend: "preview",
   llm_model: "llama-3.3-70b-versatile",

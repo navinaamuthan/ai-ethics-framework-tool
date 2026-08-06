@@ -8,7 +8,7 @@ const MODELS = [
 ]
 
 /** Optum-style health risk stratification case (evaluation P01). */
-export const SAMPLE_PROPOSAL = `This research proposes to develop a commercial health risk stratification algorithm to identify high-need patients for enrolment in care management programmes across a network of US hospital systems. The algorithm will use insurance claims data as a proxy for health need, predicting which patients require additional clinical resources based on historical healthcare costs, prior diagnoses, medication use, and utilisation patterns from electronic health records covering approximately 200 million patients annually. Patients scoring in the top 3 percentile will automatically be referred to care management; those in the top 45 percentile will be assessed for referral. The algorithm will not explicitly use race as a predictive variable. However, because Black patients have historically incurred lower healthcare costs than white patients with equivalent chronic disease burden — due to structural barriers to healthcare access including cost, discrimination, and geographic distance — the cost proxy will systematically underestimate the health needs of Black patients. The algorithm has not undergone independent bias auditing prior to deployment. No mechanism for algorithmic review or patient appeal of care management non-referral decisions is planned.`
+export const SAMPLE_PROPOSAL = `This research proposes to develop a commercial health risk stratification algorithm to identify high-need patients for enrolment in care management programmes across a network of US hospital systems. The algorithm will use insurance claims data as a proxy for health need, predicting which patients require additional clinical resources based on historical healthcare costs, prior diagnoses, medication use, and utilisation patterns from electronic health records covering approximately 200 million patients annually. Patients scoring in the top 3 percentile will automatically be referred to care management; those in the top 45 percentile will be assessed for referral. The algorithm will not explicitly use race as a predictive variable. However, because Black patients have historically incurred lower healthcare costs than white patients with equivalent chronic disease burden - due to structural barriers to healthcare access including cost, discrimination, and geographic distance - the cost proxy will systematically underestimate the health needs of Black patients. The algorithm has not undergone independent bias auditing prior to deployment. No mechanism for algorithmic review or patient appeal of care management non-referral decisions is planned.`
 
 export default function ProposalInput({
   onSubmit,
@@ -93,7 +93,7 @@ export default function ProposalInput({
         {text.length === 0 && (
           <p className="mt-2 text-xs text-stone-500">
             Press <kbd className="rounded border border-stone-300 bg-stone-100 px-1 font-mono text-[10px]">Tab</kbd>{" "}
-            in the empty box to load a sample proposal and run — or click Try sample.
+            in the empty box to load a sample proposal and run - or click Try sample.
           </p>
         )}
         {tooShort && text.length > 0 && (

@@ -28,7 +28,7 @@ export default function RetrievalPanel({ meta }: { meta: RetrievalMetadata }) {
           <p className="leading-snug text-stone-600">
             Retrieved <strong>{meta.requirements_retrieved}</strong> requirements,{" "}
             <strong>{meta.incidents_retrieved}</strong> incidents, <strong>{meta.rights_matched}</strong> Charter
-            rights. Model cited <strong>{meta.requirements_cited.length}</strong> — pills show the retrieval/generation gap.
+            rights. Model cited <strong>{meta.requirements_cited.length}</strong> - pills show the retrieval/generation gap.
           </p>
           <div>
             <div className="mb-1 text-[9px] font-semibold uppercase tracking-wide text-stone-500">
@@ -56,7 +56,7 @@ export default function RetrievalPanel({ meta }: { meta: RetrievalMetadata }) {
               {notCited.length > 40 && (
                 <span className="text-[10px] text-stone-400">+{notCited.length - 40} more</span>
               )}
-              {notCited.length === 0 && <span className="text-[10px] text-stone-400">None — full coverage</span>}
+              {notCited.length === 0 && <span className="text-[10px] text-stone-400">None - full coverage</span>}
             </div>
           </div>
         </div>

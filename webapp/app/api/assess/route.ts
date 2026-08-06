@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
 
   if (!proposalText || proposalText.trim().length < 50) {
     return NextResponse.json(
-      { error: "Proposal text too short — enter at least 50 characters." },
+      { error: "Proposal text too short - enter at least 50 characters." },
       { status: 400 }
     )
   }

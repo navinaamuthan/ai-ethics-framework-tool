@@ -1,11 +1,11 @@
-// lib/kg-retrieval.ts — static KG lookup against lib/kg-snapshot.json.
+// lib/kg-retrieval.ts - static KG lookup against lib/kg-snapshot.json.
 // Set USE_LIVE_KG=true + GRAPHDB_ENDPOINT to query GraphDB via SPARQL instead.
 import rawSnapshot from "./kg-snapshot.json"
 import type { KGSnapshot, KGRequirement, KGIncident, CharterRight } from "./types"
 
 const snapshot = rawSnapshot as KGSnapshot
 
-// Mirror of Python extract_keywords() — extend to stay consistent with the pipeline.
+// Mirror of Python extract_keywords() - extend to stay consistent with the pipeline.
 const KEYWORDS_MAP: Record<string, string[]> = {
   bias: ["bias", "discriminat", "fairness", "racial", "gender", "protected group"],
   health: ["health", "medical", "patient", "diagnos", "clinical", "mental health"],
@@ -53,7 +53,7 @@ export async function retrieveFromKG(proposalText: string): Promise<{
   matchedRights: CharterRight[]
 }> {
   if (process.env.USE_LIVE_KG === "true") {
-    // Live GraphDB path — same shape, SPARQL-backed.
+    // Live GraphDB path - same shape, SPARQL-backed.
     return retrieveFromGraphDB(proposalText)
   }
 

@@ -60,7 +60,7 @@ export default function Home() {
         body: JSON.stringify({ proposalText, model }),
       })
       const data = await res.json()
-      if (!res.ok) throw new Error(data.error + (data.detail ? ` — ${data.detail}` : ""))
+      if (!res.ok) throw new Error(data.error + (data.detail ? ` - ${data.detail}` : ""))
       setResult(data)
       setState("results")
     } catch (e) {
@@ -223,7 +223,7 @@ export default function Home() {
                 AIEF
               </h2>
               <p className="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-stone-700">
-                From free-text proposal to structured ethics assessment — 207 requirements, 70 AI incidents, and EU
+                From free-text proposal to structured ethics assessment - 207 requirements, 70 AI incidents, and EU
                 Charter rights mappings.
               </p>
             </div>

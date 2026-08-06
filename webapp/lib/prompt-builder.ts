@@ -1,4 +1,4 @@
-// lib/prompt-builder.ts — mirror of Python prompt_builder.py.
+// lib/prompt-builder.ts - mirror of Python prompt_builder.py.
 // If you change the prompt in the dissertation pipeline, change it here too.
 import type { KGRequirement, KGIncident } from "./types"
 
@@ -20,10 +20,10 @@ export function buildPrompt(
 RESEARCH PROPOSAL:
 ${proposalText}
 
-RETRIEVED REQUIREMENTS (from the AIEF knowledge graph — cite requirement IDs verbatim):
+RETRIEVED REQUIREMENTS (from the AIEF knowledge graph - cite requirement IDs verbatim):
 ${reqBlock}
 
-RETRIEVED HISTORICAL AI INCIDENTS (AIAAIC registry — cite incident IDs verbatim):
+RETRIEVED HISTORICAL AI INCIDENTS (AIAAIC registry - cite incident IDs verbatim):
 ${incBlock}
 
 TASK:

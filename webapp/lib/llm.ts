@@ -1,4 +1,4 @@
-// lib/llm.ts — the ONLY file that talks to an LLM provider.
+// lib/llm.ts - the ONLY file that talks to an LLM provider.
 // Currently Groq (OpenAI-compatible). See bottom for swap instructions.
 import OpenAI from "openai"
 
@@ -17,7 +17,7 @@ function getClient(): OpenAI {
 
 export async function callLLM(prompt: string, model: string): Promise<string> {
   if (!process.env.GROQ_API_KEY) {
-    throw new Error("GROQ_API_KEY is not set — add it in Vercel project settings.")
+    throw new Error("GROQ_API_KEY is not set - add it in Vercel project settings.")
   }
   const response = await getClient().chat.completions.create({
     model,
