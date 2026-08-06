@@ -1,0 +1,37 @@
+{
+  "corpus_a": {
+    "n_proposals": 40,
+    "n_annotations": 480,
+    "mean_within": 0.6144,
+    "mean_cross": 0.434,
+    "ceiling": 0.7507,
+    "noise_band": 0.2493
+  },
+  "corpus_b": {
+    "n_proposals": 20,
+    "n_annotations": 240,
+    "within_by_perspective": {
+      "technical": 0.6293,
+      "legal": 0.5575,
+      "ethics": 0.6609,
+      "lay": 0.6672
+    },
+    "mean_within": 0.6287,
+    "mean_cross": 0.4763,
+    "ceiling": 0.6672,
+    "noise_band": 0.3328,
+    "within_exceeds_cross": true,
+    "perspective_vs_reference_kappa": {
+      "technical": 0.1304,
+      "legal": 0.313,
+      "ethics": 0.4052,
+      "lay": 0.1935
+    },
+    "reference_label_provenance": "rule-derived from published feature scoring"
+  },
+  "replication": {
+    "within_exceeds_cross_in_both": true,
+    "ceiling_difference": -0.0835,
+    "band_difference": 0.0835
+  }
+}

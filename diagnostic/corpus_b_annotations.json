@@ -1,0 +1,2560 @@
+[
+  {
+    "proposal_id": "B01",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B01",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art11_FreedomOfExpression"
+    ],
+    "info_sufficiency": 1
+  },
+  {
+    "proposal_id": "B01",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B01",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B01",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife",
+      "Art14_RightToEducation"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B01",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife",
+      "Art1_HumanDignity"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B01",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art24_RightsOfChild"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B01",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art24_RightsOfChild"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B01",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art24_RightsOfChild"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B01",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art24_RightsOfChild"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B01",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art6_RightToLiberty",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B01",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B02",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B02",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B02",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B02",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B02",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B02",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B02",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B02",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B02",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B02",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art6_RightToLiberty",
+      "Art8_DataProtection",
+      "Art15_FreedomOfOccupation",
+      "Art35_HealthCare",
+      "Art41_GoodAdministration"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B02",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art15_FreedomOfOccupation"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B02",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art14_RightToEducation"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B03",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B03",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B03",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B03",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B03",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B03",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B03",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B03",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B03",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B03",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B03",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art41_GoodAdministration"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B03",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B04",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B04",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "Low",
+    "charter_articles": [],
+    "info_sufficiency": 5
+  },
+  {
+    "proposal_id": "B04",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art41_GoodAdministration"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B04",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B04",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B04",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B04",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "Low",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 5
+  },
+  {
+    "proposal_id": "B04",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "Low",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 5
+  },
+  {
+    "proposal_id": "B04",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "Low",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B04",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "Low",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 5
+  },
+  {
+    "proposal_id": "B04",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "Low",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 5
+  },
+  {
+    "proposal_id": "B04",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "Low",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B05",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B05",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art47_RightToEffectiveRemedy"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B05",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B05",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B05",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B05",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B05",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B05",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art15_FreedomOfOccupation"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B05",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B05",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B05",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B05",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare",
+      "Art47_RightToEffectiveRemedy"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B06",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art47_RightToEffectiveRemedy"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B06",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B06",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B06",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B06",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B06",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B06",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B06",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B06",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B06",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B06",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B06",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B07",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B07",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B07",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B07",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B07",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B07",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B07",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B07",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B07",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art24_RightsOfChild"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B07",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B07",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B07",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B08",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B08",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B08",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B08",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B08",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B08",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B08",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art47_RightToEffectiveRemedy"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B08",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B08",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B08",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art6_RightToLiberty",
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B08",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art41_GoodAdministration"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B08",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art15_FreedomOfOccupation"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B09",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art11_FreedomOfExpression"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B09",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art11_FreedomOfExpression"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B09",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art11_FreedomOfExpression"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B09",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B09",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B09",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B09",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B09",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B09",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B09",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife",
+      "Art15_FreedomOfOccupation"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B09",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art15_FreedomOfOccupation"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B09",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B10",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B10",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B10",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B10",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B10",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B10",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "Low",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B10",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B10",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B10",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B10",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B10",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B10",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B11",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art6_RightToLiberty",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B11",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art15_FreedomOfOccupation"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B11",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art11_FreedomOfExpression"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B11",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B11",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B11",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B11",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B11",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B11",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art41_GoodAdministration"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B11",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare",
+      "Art41_GoodAdministration"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B11",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B11",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B12",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B12",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B12",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B12",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art47_RightToEffectiveRemedy"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B12",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art24_RightsOfChild"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B12",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B12",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art24_RightsOfChild"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B12",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art24_RightsOfChild"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B12",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art24_RightsOfChild"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B12",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B12",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B12",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B13",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B13",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B13",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B13",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B13",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B13",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B13",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B13",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art38_ConsumerProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B13",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art38_ConsumerProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B13",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B13",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B13",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B14",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B14",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B14",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B14",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B14",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B14",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B14",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B14",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B14",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B14",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B14",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art6_RightToLiberty",
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B14",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B15",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art41_GoodAdministration"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B15",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B15",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art41_GoodAdministration"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B15",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B15",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B15",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B15",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B15",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art41_GoodAdministration"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B15",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B15",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B15",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B15",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art31_WorkingConditions"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B16",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B16",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B16",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B16",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B16",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B16",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B16",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B16",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B16",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art15_FreedomOfOccupation"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B16",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B16",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B16",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art15_FreedomOfOccupation"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B17",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B17",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "Low",
+    "charter_articles": [],
+    "info_sufficiency": 5
+  },
+  {
+    "proposal_id": "B17",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B17",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "Low",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 5
+  },
+  {
+    "proposal_id": "B17",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B17",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "Low",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 5
+  },
+  {
+    "proposal_id": "B17",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "Low",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B17",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "Low",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 5
+  },
+  {
+    "proposal_id": "B17",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "Low",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B17",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art6_RightToLiberty"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B17",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B17",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B18",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B18",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B18",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B18",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B18",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B18",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B18",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art24_RightsOfChild"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B18",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art14_RightToEducation",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B18",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B18",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art41_GoodAdministration"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B18",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art14_RightToEducation"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B18",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B19",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art38_ConsumerProtection"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B19",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art41_GoodAdministration"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B19",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B19",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B19",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B19",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B19",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B19",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B19",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "Medium",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B19",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B19",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art15_FreedomOfOccupation"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B19",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art35_HealthCare",
+      "Art41_GoodAdministration"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B20",
+    "perspective": "technical",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B20",
+    "perspective": "technical",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B20",
+    "perspective": "technical",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B20",
+    "perspective": "legal",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B20",
+    "perspective": "legal",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 4
+  },
+  {
+    "proposal_id": "B20",
+    "perspective": "legal",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B20",
+    "perspective": "ethics",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B20",
+    "perspective": "ethics",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B20",
+    "perspective": "ethics",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 2
+  },
+  {
+    "proposal_id": "B20",
+    "perspective": "lay",
+    "run": 1,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art21_NonDiscrimination"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B20",
+    "perspective": "lay",
+    "run": 2,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art7_PrivateLife"
+    ],
+    "info_sufficiency": 3
+  },
+  {
+    "proposal_id": "B20",
+    "perspective": "lay",
+    "run": 3,
+    "risk_level": "High",
+    "charter_articles": [
+      "Art8_DataProtection",
+      "Art15_FreedomOfOccupation",
+      "Art35_HealthCare"
+    ],
+    "info_sufficiency": 3
+  }
+]
