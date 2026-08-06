@@ -44,15 +44,34 @@ Keep the root and ontology copies in sync when editing:
 cp ontology/ai-ethics-final.ttl ai-ethics-final.ttl
 ```
 
-## Running the RAG Pipeline
+## Setup
 
-Requirements: Python 3, and either [Ollama](https://ollama.com) (local inference) or a Groq API key (hosted inference). For live SPARQL retrieval, load `ai-ethics-final.ttl` into a triple store (e.g. GraphDB). For offline use, load `kg-export/` into `rdflib` or any store — see `kg-export/README.md`.
+Python 3.11+ is required. All dependencies for the ontology, RAG pipeline,
+SHACL layer, and diagnostic scripts are pinned in `requirements.txt` at the
+repository root:
+
+```bash
+python3 -m venv .venv
+./.venv/bin/pip install -r requirements.txt
+```
+
+An LLM backend is also needed to regenerate assessments or annotations:
+either a Groq API key (hosted) or [Ollama](https://ollama.com) serving
+`llama3.1:8b` (local).
+
+```bash
+export GROQ_API_KEY=...            # for the Groq backend
+```
+
+For live SPARQL retrieval, load `ai-ethics-final.ttl` into a triple store
+(e.g. GraphDB). For offline use, load `kg-export/` into `rdflib` or any store
+— see `kg-export/README.md`.
+
+## Running the RAG Pipeline
 
 ```bash
 cd rag-pipeline
-pip install -r requirements.txt   # if present; otherwise: requests python-dotenv
-export GROQ_API_KEY=...           # only for the Groq backend
-python run_evaluation.py
+../.venv/bin/python run_evaluation.py
 ```
 
 ## Running the Diagnostic Pipeline
@@ -61,6 +80,9 @@ python run_evaluation.py
 cd diagnostic
 make all
 ```
+
+The `Makefile` defaults to the repository-local `.venv` created above. To use
+a different interpreter, override it: `make PYTHON=/path/to/python all`.
 
 This regenerates, in order: the proposal corpus, the perspective-stratified annotation set, the reliability analysis and decision-rule verdicts, the perturbation study, the property evaluation, and LaTeX result tables under `diagnostic/results/tables/`.
 

@@ -1,5 +1,9 @@
 # Diagnostic methodology pipeline — Steps 1–6
-PYTHON ?= /Users/navinaamuthan/Dissertation/venv/bin/python
+#
+# Defaults to the repository-local virtualenv created by:
+#   python3 -m venv .venv && ./.venv/bin/pip install -r requirements.txt
+# Override for a different interpreter with:  make PYTHON=/path/to/python all
+PYTHON ?= ../.venv/bin/python
 export PYTHONPATH := ../rag-pipeline:.
 
 .PHONY: all step1 step2 step3 step4 step5 step6

@@ -1,0 +1,28 @@
+# AIEF: Python dependencies for the ontology, RAG pipeline, SHACL layer,
+# and the diagnostic/evaluation scripts.
+#
+# Versions are those the reported results were generated under. Install with:
+#   python3 -m venv .venv && ./.venv/bin/pip install -r requirements.txt
+#
+# An LLM backend is also required to regenerate assessments or annotations:
+# either a GROQ_API_KEY in the environment (see rag-pipeline/.env) or a local
+# Ollama instance serving llama3.1:8b.
+
+# --- RDF, ontology, and SHACL ---
+rdflib==7.6.0
+pyshacl==0.40.1
+
+# --- LLM access (Groq is served over the OpenAI-compatible API) ---
+openai==2.52.0
+requests==2.34.2
+
+# --- numerical / statistical analysis (kappa, bootstrap CIs, Spearman-Brown) ---
+numpy==2.4.1
+scipy==1.17.0
+scikit-learn==1.8.0
+
+# --- retrieval baselines (BM25 comparison in rag-pipeline/retrieval_baselines.py) ---
+rank-bm25==0.2.2
+
+# --- configuration parsing (rag-pipeline/docgen_templates.yaml) ---
+PyYAML==6.0.2
