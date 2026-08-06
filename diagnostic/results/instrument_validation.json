@@ -1,0 +1,226 @@
+{
+  "manipulation_check": {
+    "per_persona": {
+      "technical": {
+        "n": 120,
+        "risk_distribution": {
+          "Low": 7,
+          "Medium": 53,
+          "High": 60
+        },
+        "pct_high": 50.0,
+        "mean_articles_per_annotation": 4.49,
+        "mean_info_sufficiency": 3.38,
+        "top_articles": [
+          "Art7_PrivateLife",
+          "Art8_DataProtection",
+          "Art6_RightToLiberty"
+        ]
+      },
+      "legal": {
+        "n": 120,
+        "risk_distribution": {
+          "Low": 7,
+          "Medium": 45,
+          "High": 68
+        },
+        "pct_high": 56.7,
+        "mean_articles_per_annotation": 3.64,
+        "mean_info_sufficiency": 3.88,
+        "top_articles": [
+          "Art8_DataProtection",
+          "Art7_PrivateLife",
+          "Art21_NonDiscrimination"
+        ]
+      },
+      "ethics": {
+        "n": 120,
+        "risk_distribution": {
+          "Low": 14,
+          "Medium": 52,
+          "High": 54
+        },
+        "pct_high": 45.0,
+        "mean_articles_per_annotation": 5.66,
+        "mean_info_sufficiency": 3.57,
+        "top_articles": [
+          "Art7_PrivateLife",
+          "Art8_DataProtection",
+          "Art2_RightToLife"
+        ]
+      },
+      "lay": {
+        "n": 120,
+        "risk_distribution": {
+          "Low": 13,
+          "Medium": 21,
+          "High": 86
+        },
+        "pct_high": 71.7,
+        "mean_articles_per_annotation": 5.7,
+        "mean_info_sufficiency": 3.25,
+        "top_articles": [
+          "Art6_RightToLiberty",
+          "Art7_PrivateLife",
+          "Art35_HealthCare"
+        ]
+      }
+    },
+    "chi2_persona_by_risk": 28.47,
+    "chi2_df": 6,
+    "chi2_critical_p01": 16.81,
+    "chi2_significant_at_p01": true,
+    "cramers_v": 0.172,
+    "articles_per_annotation_range": [
+      3.64,
+      5.7
+    ],
+    "info_sufficiency_range": [
+      3.25,
+      3.88
+    ],
+    "interpretation": "Personas differ systematically in risk profile, in how many Charter articles they engage, and in how much information they report needing. The manipulation produced four distinguishable frames rather than four samples of one."
+  },
+  "positive_control": {
+    "ceiling_used": 0.751,
+    "noise_band": 0.249,
+    "n_repetitions": 200,
+    "kappa_by_corruption_rate": {
+      "0.0": 1.0,
+      "0.1": 0.844,
+      "0.2": 0.692,
+      "0.4": 0.384,
+      "0.7": -0.051,
+      "1.0": -0.477
+    },
+    "pairs": [
+      {
+        "rate_a": 0.0,
+        "rate_b": 0.1,
+        "kappa_a": 1.0,
+        "kappa_b": 0.844,
+        "gap": 0.156,
+        "verdict": "not discriminable"
+      },
+      {
+        "rate_a": 0.0,
+        "rate_b": 0.2,
+        "kappa_a": 1.0,
+        "kappa_b": 0.692,
+        "gap": 0.308,
+        "verdict": "discriminable"
+      },
+      {
+        "rate_a": 0.0,
+        "rate_b": 0.4,
+        "kappa_a": 1.0,
+        "kappa_b": 0.384,
+        "gap": 0.616,
+        "verdict": "discriminable"
+      },
+      {
+        "rate_a": 0.0,
+        "rate_b": 0.7,
+        "kappa_a": 1.0,
+        "kappa_b": -0.051,
+        "gap": 1.051,
+        "verdict": "discriminable"
+      },
+      {
+        "rate_a": 0.0,
+        "rate_b": 1.0,
+        "kappa_a": 1.0,
+        "kappa_b": -0.477,
+        "gap": 1.477,
+        "verdict": "discriminable"
+      },
+      {
+        "rate_a": 0.1,
+        "rate_b": 0.2,
+        "kappa_a": 0.844,
+        "kappa_b": 0.692,
+        "gap": 0.153,
+        "verdict": "not discriminable"
+      },
+      {
+        "rate_a": 0.1,
+        "rate_b": 0.4,
+        "kappa_a": 0.844,
+        "kappa_b": 0.384,
+        "gap": 0.46,
+        "verdict": "discriminable"
+      },
+      {
+        "rate_a": 0.1,
+        "rate_b": 0.7,
+        "kappa_a": 0.844,
+        "kappa_b": -0.051,
+        "gap": 0.895,
+        "verdict": "discriminable"
+      },
+      {
+        "rate_a": 0.1,
+        "rate_b": 1.0,
+        "kappa_a": 0.844,
+        "kappa_b": -0.477,
+        "gap": 1.321,
+        "verdict": "discriminable"
+      },
+      {
+        "rate_a": 0.2,
+        "rate_b": 0.4,
+        "kappa_a": 0.692,
+        "kappa_b": 0.384,
+        "gap": 0.308,
+        "verdict": "discriminable"
+      },
+      {
+        "rate_a": 0.2,
+        "rate_b": 0.7,
+        "kappa_a": 0.692,
+        "kappa_b": -0.051,
+        "gap": 0.742,
+        "verdict": "discriminable"
+      },
+      {
+        "rate_a": 0.2,
+        "rate_b": 1.0,
+        "kappa_a": 0.692,
+        "kappa_b": -0.477,
+        "gap": 1.168,
+        "verdict": "discriminable"
+      },
+      {
+        "rate_a": 0.4,
+        "rate_b": 0.7,
+        "kappa_a": 0.384,
+        "kappa_b": -0.051,
+        "gap": 0.435,
+        "verdict": "discriminable"
+      },
+      {
+        "rate_a": 0.4,
+        "rate_b": 1.0,
+        "kappa_a": 0.384,
+        "kappa_b": -0.477,
+        "gap": 0.861,
+        "verdict": "discriminable"
+      },
+      {
+        "rate_a": 0.7,
+        "rate_b": 1.0,
+        "kappa_a": -0.051,
+        "kappa_b": -0.477,
+        "gap": 0.426,
+        "verdict": "discriminable"
+      }
+    ],
+    "n_pairs": 15,
+    "n_certified_discriminable": 13,
+    "n_declined": 2,
+    "min_certified_gap": 0.308,
+    "max_declined_gap": 0.156,
+    "monotone_in_quality": true,
+    "interpretation": "The rule returns both verdicts on constructed assessors and does so monotonically in true quality: it certifies every pair separated by more than the noise band and declines every pair separated by less. The all-declined result on the real corpus is therefore a property of that corpus, not a constant output of the rule."
+  }
+}
