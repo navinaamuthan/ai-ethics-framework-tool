@@ -47,8 +47,23 @@ def _get_local_graph():
         if path.exists():
             g = Graph()
             g.parse(path, format="turtle")
+            n_asserted = len(g)
+            # GraphDB Desktop's default ruleset materialises RDFS entailment
+            # (rdfs:subClassOf etc.), so :Obligation/:Prohibition/:Permission
+            # individuals are inferred type :Requirement there. This fallback
+            # graph previously did not apply that closure, so any query using
+            # "?x a :Requirement" silently matched only individuals with that
+            # exact asserted type and missed the 207 typed via a subclass,
+            # degrading retrieval whenever this fallback is used (e.g. GraphDB
+            # unreachable). Applying the same closure here keeps fallback
+            # behaviour equivalent to the primary backend rather than a silent
+            # degradation. See analysis/competency_questions_local.py for the
+            # verification that this closure is required for parity.
+            import owlrl
+            owlrl.DeductiveClosure(owlrl.RDFS_Semantics).expand(g)
             _local_graph = g
-            print(f"  [OK] Loaded local ontology: {path} ({len(g)} triples)")
+            print(f"  [OK] Loaded local ontology: {path} "
+                  f"({n_asserted} asserted -> {len(g)} triples after RDFS closure)")
             return _local_graph
     raise FileNotFoundError("No local ai-ethics-final.ttl found for SPARQL fallback")
 

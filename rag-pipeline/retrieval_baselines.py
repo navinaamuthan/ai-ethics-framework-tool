@@ -8,7 +8,6 @@ to the SPARQL set size for that proposal (recall@|SPARQL|).
 """
 import json, sys, re
 from pathlib import Path
-import requests as rq
 
 sys.path.insert(0, str(Path(__file__).parent))
 from synthetic_proposals import PROPOSALS
@@ -18,23 +17,41 @@ from rank_bm25 import BM25Okapi
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-EP = "http://localhost:7200/repositories/ai-ethics-kg"
+_ONTOLOGY = Path(__file__).resolve().parent.parent / "ontology" / "ai-ethics-final.ttl"
 
 def fetch_requirements():
-    r = rq.post(EP, data={"query": """PREFIX : <https://w3id.org/aief/>
-        SELECT ?id ?text WHERE { ?r a :Requirement ; :requirementID ?id ; :requirementText ?text }"""},
-        headers={"Accept": "application/sparql-results+json"})
-    rows = r.json()["results"]["bindings"]
+    # Reads the ontology file directly rather than querying GraphDB. A
+    # GraphDB instance, when running, cannot be trusted to hold the current
+    # ontology without an explicit reload after every edit -- verified stale
+    # here on 2026-08-07 (the loaded repository lacked dcterms:title, added
+    # to the file in this session) -- so this benchmark is defined against
+    # the file, the single source of truth, rather than against whichever
+    # snapshot happens to be loaded in a running triple store.
+    from rdflib import Graph, RDF, URIRef
+    import owlrl
+    g = Graph()
+    g.parse(_ONTOLOGY, format="turtle")
+    owlrl.DeductiveClosure(owlrl.RDFS_Semantics).expand(g)
+    A = "https://w3id.org/aief/"
     seen, out = set(), []
-    for b in rows:
-        rid = b["id"]["value"]
+    for r in g.subjects(RDF.type, URIRef(A + "Requirement")):
+        rid = g.value(r, URIRef(A + "requirementID"))
+        text = g.value(r, URIRef(A + "requirementText"))
+        if rid is None or text is None:
+            continue
+        rid = str(rid)
         if rid not in seen:
-            seen.add(rid); out.append((rid, b["text"]["value"]))
+            seen.add(rid); out.append((rid, str(text)))
     return out
 
 def tok(s): return re.findall(r"[a-z]+", s.lower())
 
 def main():
+    from sparql_retrieval import set_retrieval_backend
+    # Force the file-backed path on both sides of this comparison. GraphDB,
+    # when running, is not guaranteed current (see fetch_requirements) and
+    # "auto" mode would otherwise prefer it silently.
+    set_retrieval_backend("local")
     reqs = fetch_requirements()
     ids = [r[0] for r in reqs]
     texts = [r[1] for r in reqs]
